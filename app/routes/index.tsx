@@ -14,8 +14,6 @@ import { MagicLogoIcon, MagicTextIcon } from "~/components/Icons";
 import classNames from "clsx";
 import { Link } from "@remix-run/react";
 
-import styles from "../styles/mask.css";
-
 const navigation = [
   {
     name: "Learn",
@@ -162,7 +160,6 @@ export const links: LinksFunction = () => {
       href: "/img/union.svg",
       as: "image",
     },
-    { rel: "stylesheet", href: styles },
   ];
 };
 
@@ -172,7 +169,7 @@ export default function Home() {
       <div className="relative overflow-hidden">
         <Popover as="header" className="relative">
           <div className="bg-honey-100 pt-6">
-            <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-6">
+            <div className="relative mx-auto flex max-w-[96rem] items-center justify-between px-4 lg:px-6">
               <div className="flex w-full items-center justify-between lg:w-auto">
                 <Link to="#">
                   <span className="sr-only">Treasure</span>
@@ -245,7 +242,7 @@ export default function Home() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-base font-medium text-night-900 hover:text-gray-300"
+                      className="text-base font-medium text-night-900 hover:text-night-700"
                     >
                       {item.name}
                     </a>
@@ -276,7 +273,7 @@ export default function Home() {
           >
             <Popover.Panel
               focus
-              className="absolute inset-x-0 top-0 origin-top transform p-2 transition lg:hidden"
+              className="absolute inset-x-0 top-0 origin-top transform transition lg:hidden"
             >
               <div className="overflow-hidden rounded-lg bg-honey-50 shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
@@ -359,9 +356,9 @@ export default function Home() {
         </Popover>
         <main>
           <div className="bg-honey-100 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8">
-            <div className="mx-auto max-w-7xl lg:px-8">
-              <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-                <div className="mx-auto max-w-md px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
+            <div className="mx-auto max-w-[96rem] lg:px-8">
+              <div className="lg:grid lg:grid-cols-7 lg:gap-8">
+                <div className="col-span-3 mx-auto max-w-lg px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
                   <div className="lg:py-24">
                     <h1 className="mt-4 text-7xl font-bold tracking-tight text-ruby-900 sm:mt-5 lg:mt-6 xl:text-8xl">
                       The magic of play.
@@ -376,7 +373,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="m-0 mt-12 lg:relative lg:-mb-36 xl:-mb-20">
+                <div className="col-span-4 m-0 mt-12 lg:relative lg:-mb-20 xl:-mb-2">
                   <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0">
                     <img
                       className="w-full object-contain lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:max-w-none"
@@ -425,11 +422,11 @@ export default function Home() {
           <div className="relative bg-night-900 pt-16 sm:pt-24 lg:pt-32">
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
               <div className="inline-block rounded-2xl bg-night-800 px-3 py-2">
-                <h2 className="text-base font-semibold tracking-wider text-night-200">
+                <h2 className="font-mono text-base font-medium text-night-200">
                   Core Cartridges
                 </h2>
               </div>
-              <p className="mt-12 text-3xl font-extrabold tracking-tight text-honey-200 sm:text-5xl">
+              <p className="mx-auto mt-12 max-w-xl text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
                 Games and worlds that delight the masses
               </p>
               <div className="mt-12 flex flex-col justify-center sm:flex-row">
@@ -486,7 +483,7 @@ export default function Home() {
                           className="space-y-6 text-center sm:text-left"
                         >
                           <div className="inline-block rounded-xl bg-honey-100 px-2.5 py-1.5">
-                            <h3 className="text-lg font-bold text-ruby-900">
+                            <h3 className="font-mono text-sm font-medium tracking-wider text-ruby-900">
                               {name}
                             </h3>
                           </div>
@@ -499,14 +496,14 @@ export default function Home() {
                                 {isExternal ? (
                                   <a
                                     href={href}
-                                    className="text-sm text-night-800 hover:text-night-700"
+                                    className="text-night-800 hover:text-night-700"
                                   >
                                     {name}
                                   </a>
                                 ) : (
                                   <Link
                                     to={href}
-                                    className="text-sm text-night-800 hover:text-night-700"
+                                    className="text-night-800 hover:text-night-700"
                                   >
                                     {name}
                                   </Link>
@@ -529,7 +526,7 @@ export default function Home() {
                   href="#"
                   className="inline-flex w-full items-center justify-center space-x-2 rounded-2xl border border-transparent bg-ruby-900 py-4 px-7 text-base font-medium text-white sm:w-auto"
                 >
-                  <span className="font-semibold">Buy</span>
+                  <span className="font- font-semibold">Buy</span>
                   <span className="inline-flex space-x-1">
                     <MagicLogoIcon />
                     <MagicTextIcon />
@@ -544,7 +541,7 @@ export default function Home() {
               <div className="inline-block">
                 <a
                   href="/#top"
-                  className="inline-flex items-center space-x-2 rounded-xl bg-honey-100 px-3 py-2.5 font-medium text-ruby-900"
+                  className="inline-flex items-center space-x-2 rounded-xl bg-honey-100 px-3 py-2.5 font-mono font-medium text-ruby-900"
                 >
                   <span>To the surface</span>{" "}
                   <ArrowUpIcon className="h-3 w-3 stroke-current stroke-1" />

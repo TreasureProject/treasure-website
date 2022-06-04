@@ -1,7 +1,14 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Whyte", ...defaultTheme.fontFamily.sans],
+        mono: ["GroteskSemi", ...defaultTheme.fontFamily.mono],
+      },
       colors: {
         night: {
           100: "#E7E8E9",
