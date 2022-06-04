@@ -438,15 +438,16 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="relative overflow-hidden lg:-ml-24">
-                  <div className="mask relative h-96 w-96 bg-[url('/img/bridgeworld.png')] bg-cover bg-no-repeat before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent lg:h-[28rem] lg:w-[28rem] before:lg:h-[28rem]">
+                  <div className="mask relative h-96 w-96 bg-[url('/img/smolverse.png')] bg-[length:310px_500px] bg-center bg-no-repeat before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent lg:h-[28rem] lg:w-[28rem] before:lg:h-[28rem]">
                     <div className="absolute bottom-0 left-0 right-0 pb-24 text-white">
-                      Bridgeworld
+                      Smolverse
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="relative bg-night-900 pt-16 sm:pt-24 lg:pt-32"></div>
         </main>
         <footer className="bg-honey-50" aria-labelledby="footer-heading">
           <h2 id="footer-heading" className="sr-only">
