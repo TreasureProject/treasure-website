@@ -220,7 +220,7 @@ export default function Home() {
                                       <a
                                         key={link.name}
                                         href={link.href}
-                                        className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-50"
+                                        className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
                                       >
                                         <p className="text-base font-medium text-night-900">
                                           {link.name}
