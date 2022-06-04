@@ -363,7 +363,7 @@ export default function Home() {
                     <h1 className="mt-4 text-7xl font-bold tracking-tight text-ruby-900 sm:mt-5 lg:mt-6 xl:text-8xl">
                       The magic of play.
                     </h1>
-                    <div className="mt-12 rounded-3xl border border-honey-200 bg-honey-50 p-4 lg:max-w-xs">
+                    <div className="mt-12 rounded-3xl border border-honey-200 bg-honey-50 px-12 py-11 lg:max-w-sm">
                       <p className="text-night-700">
                         Treasure is a decentralized video game console
                         connecting games and communities together through
