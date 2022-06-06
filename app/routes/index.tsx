@@ -11,11 +11,25 @@ import HeroImg from "../../public/img/hero.png";
 import LogoImg from "../../public/img/logo.png";
 import BattleFlyImg from "../../public/img/battlefly.png";
 
+import AcadArenaImg from "../../public/img/AcadArena.png";
+import AndrewGreenImg from "../../public/img/AndrewGreen.png";
+import BlackPoolImg from "../../public/img/BlackPool.png";
+import DefiVaderImg from "../../public/img/DefiVader.png";
+import IncentiveDesignTheoryImg from "../../public/img/IncentiveDesignTheory.png";
+import JasonChoiImg from "../../public/img/JasonChoi.png";
+import JihoImg from "../../public/img/Jiho.png";
+import MeritCircleImg from "../../public/img/MeritCircle.png";
+import ReadyPlayerImg from "../../public/img/ReadyPlayer.png";
+
 import {
+  AMMIcon,
+  BridgeIcon,
   BWTextIcon,
   DiscordIcon,
+  EconomyIcon,
   MagicLogoIcon,
   MagicTextIcon,
+  MarketplaceIcon,
   SmolverseTextIcon,
   TwitterIcon,
 } from "~/components/Icons";
@@ -52,6 +66,80 @@ const communities = [
     description:
       "Showcasing projects and initiatives built by and with the community.",
     buttonDescription: "View Initiatives",
+    href: "#",
+  },
+];
+
+const partners = [
+  {
+    name: "Acad Arena",
+    image: AcadArenaImg,
+  },
+  {
+    name: "Andrew Green",
+    image: AndrewGreenImg,
+  },
+  {
+    name: "Black Pool",
+    image: BlackPoolImg,
+  },
+  {
+    name: "Defi Vader",
+    image: DefiVaderImg,
+  },
+  {
+    name: "Incentive Design Theory",
+    image: IncentiveDesignTheoryImg,
+  },
+  {
+    name: "Jason Choi",
+    image: JasonChoiImg,
+  },
+  {
+    name: "Jiho",
+    image: JihoImg,
+  },
+  {
+    name: "Merit Circle",
+    image: MeritCircleImg,
+  },
+  {
+    name: "Ready Player",
+    image: ReadyPlayerImg,
+  },
+];
+
+const Infrastructures = [
+  {
+    name: "Marketplace",
+    icon: <MarketplaceIcon className="h-10 w-10" aria-hidden="true" />,
+    description:
+      "Showcasing projects and initiatives built by and with the community.",
+    buttonDescription: "View Marketplace",
+    href: "#",
+  },
+  {
+    name: "AMM",
+    icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
+    description:
+      "Showcasing projects and initiatives built by and with the community.",
+    buttonDescription: "Button CTA",
+    href: "#",
+  },
+  {
+    name: "Economy",
+    icon: <EconomyIcon className="h-10 w-10" aria-hidden="true" />,
+    description:
+      "Showcasing projects and initiatives built by and with the community.",
+    buttonDescription: "Button CTA",
+    href: "#",
+  },
+  {
+    name: "Bridging",
+    icon: <BridgeIcon className="h-10 w-10" aria-hidden="true" />,
+    description:
+      "Showcasing projects and initiatives built by and with the community.",
+    buttonDescription: "Button CTA",
     href: "#",
   },
 ];
@@ -518,10 +606,10 @@ export default function Home() {
               <p className="mx-auto mt-12 max-w-xl text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
                 Games and worlds that delight the masses
               </p>
-              <div className="mt-12 flex flex-col justify-center lg:flex-row">
-                <div className="group relative overflow-hidden">
-                  <div className="relative h-96 bg-[url('/img/bridgeworld.png')] bg-cover bg-no-repeat [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 motion-reduce:before:transition-none lg:h-[28rem] lg:w-[28rem] before:lg:h-[28rem]">
-                    <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4">
+              <div className="mt-12 flex flex-col justify-center xl:flex-row">
+                <div className="group relative overflow-hidden md:flex md:justify-center">
+                  <div className="relative h-96 bg-[url('/img/bridgeworld.png')] bg-cover bg-no-repeat [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 motion-reduce:before:transition-none md:h-[46rem] md:w-[34rem] md:[mask-image:url('/img/union-big.svg')] before:md:h-[46rem]">
+                    <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
                       <BWTextIcon className="w-48 lg:w-60" />
                       <div className="mt-2 flex space-x-3 rounded-xl bg-night-900 p-2">
                         <a
@@ -550,9 +638,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="group relative overflow-hidden lg:-ml-24">
-                  <div className="relative h-96 bg-[url('/img/smolverse.png')] bg-[length:310px_470px] bg-bottom bg-no-repeat [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 motion-reduce:before:transition-none lg:h-[28rem] lg:w-[28rem] before:lg:h-[28rem]">
-                    <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4">
+                <div className="group relative mt-20 overflow-hidden md:flex md:justify-center xl:mt-0">
+                  <div className="relative h-96 bg-[url('/img/smolverse.png')] bg-[length:550px_750px] bg-bottom bg-no-repeat [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 motion-reduce:before:transition-none md:h-[46rem] md:w-[34rem] md:[mask-image:url('/img/union-big.svg')] before:md:h-[46rem]">
+                    <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
                       <SmolverseTextIcon className="w-48 lg:w-60" />
                       <div className="mt-2 flex space-x-3 rounded-xl bg-night-900 p-2">
                         <a
@@ -666,6 +754,78 @@ export default function Home() {
                     <div className="flex-1">
                       <img className="h-full" src={HeroImg} />
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="relative bg-honey-900 pt-16 pb-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+              <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
+                <p className="mt-12 max-w-lg text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
+                  We provide the tools to make your imagination a reality.
+                </p>
+                <Badge name="Infrastructure" />
+              </div>
+              <div className="mx-auto mt-12 grid max-w-3xl gap-x-11 gap-y-12 sm:grid-cols-2">
+                {Infrastructures.map((Infrastructure) => (
+                  <div
+                    key={Infrastructure.name}
+                    className="rounded-2xl bg-honey-700 p-12"
+                  >
+                    {Infrastructure.icon}
+                    <div className="my-6 flex flex-col space-y-2">
+                      <p className="text-2xl font-semibold text-night-800">
+                        {Infrastructure.name}
+                      </p>
+                      <p className="text-night-700">
+                        {Infrastructure.description}
+                      </p>
+                    </div>
+                    <div>
+                      <CTAButton>
+                        <div className="flex items-center space-x-1">
+                          <span>{Infrastructure.buttonDescription}</span>
+                          <ExternalLinkIcon className="h-4 w-4 text-ruby-900" />
+                        </div>
+                      </CTAButton>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="relative bg-night-900 pt-16 pb-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+              <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
+                <p className="mt-12 max-w-lg text-center text-2xl font-bold text-honey-25 sm:mt-0 sm:text-left sm:text-4xl">
+                  We provide the tools to make your imagination a reality.
+                </p>
+                <div className="inline-block w-min rounded-xl bg-night-800 px-2.5 py-1.5">
+                  <h3 className="font-mono text-sm font-medium tracking-wider text-night-200">
+                    Partners
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div className="relative mt-12 flex overflow-x-hidden">
+              <div className="flex animate-marquee whitespace-nowrap">
+                {partners.map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="mx-4 flex w-48 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
+                  >
+                    <img src={partner.image} alt={partner.name} />
+                  </div>
+                ))}
+              </div>
+              <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap">
+                {partners.map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="mx-4 flex w-48 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
+                  >
+                    <img src={partner.image} alt={partner.name} />
                   </div>
                 ))}
               </div>
