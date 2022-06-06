@@ -5,6 +5,9 @@ module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
     extend: {
+      maxWidth: {
+        "9xl": "96rem",
+      },
       fontFamily: {
         sans: ["Whyte", ...defaultTheme.fontFamily.sans],
         mono: ["GroteskSemi", ...defaultTheme.fontFamily.mono],
@@ -31,6 +34,7 @@ module.exports = {
           700: "#E76767",
           800: "#E03C3C",
           900: "#DC2626",
+          1000: "#C62222",
           1400: "#841717",
         },
         honey: {

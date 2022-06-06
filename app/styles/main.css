@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.mask {
-  mask-image: url("/img/union.svg");
-  -webkit-mask-image: url("/img/union.svg");
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-}
-
 @font-face {
   font-family: "GroteskSemi";
   font-weight: 500;
