@@ -332,7 +332,7 @@ export default function Home() {
                 <Link to="#">
                   <span className="sr-only">Treasure</span>
                   <img
-                    className="h-6 w-auto sm:h-8 xl:h-10"
+                    className="h-8 w-auto xl:h-10"
                     src={LogoImg}
                     alt="Logo"
                   />
@@ -452,7 +452,11 @@ export default function Home() {
               <div className="overflow-hidden bg-honey-50 shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                    <img className="h-8 w-auto" src={LogoImg} alt="Treasure" />
+                    <img
+                      className="h-8 w-auto xl:h-10"
+                      src={LogoImg}
+                      alt="Treasure"
+                    />
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-honey-50">
@@ -752,7 +756,7 @@ export default function Home() {
                       </CTAButton>
                     </div>
                     <div className="flex-1">
-                      <img className="h-full" src={HeroImg} />
+                      <img className="xl:h-full" src={HeroImg} />
                     </div>
                   </div>
                 ))}
@@ -813,17 +817,18 @@ export default function Home() {
                 {partners.map((partner) => (
                   <div
                     key={partner.name}
-                    className="mx-4 flex w-48 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
+                    className="mx-4 flex w-56 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
                   >
                     <img src={partner.image} alt={partner.name} />
                   </div>
                 ))}
               </div>
+              {/* Needed for infinity loop */}
               <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap">
                 {partners.map((partner) => (
                   <div
                     key={partner.name}
-                    className="mx-4 flex w-48 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
+                    className="mx-4 flex w-56 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
                   >
                     <img src={partner.image} alt={partner.name} />
                   </div>
