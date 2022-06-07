@@ -9,17 +9,26 @@ import {
 import type { LinksFunction } from "@remix-run/cloudflare";
 import HeroImg from "../../public/img/hero.png";
 import LogoImg from "../../public/img/logo.png";
-import BattleFlyImg from "../../public/img/battlefly.png";
 
-import AcadArenaImg from "../../public/img/AcadArena.png";
-import AndrewGreenImg from "../../public/img/AndrewGreen.png";
-import BlackPoolImg from "../../public/img/BlackPool.png";
-import DefiVaderImg from "../../public/img/DefiVader.png";
-import IncentiveDesignTheoryImg from "../../public/img/IncentiveDesignTheory.png";
-import JasonChoiImg from "../../public/img/JasonChoi.png";
-import JihoImg from "../../public/img/Jiho.png";
-import MeritCircleImg from "../../public/img/MeritCircle.png";
-import ReadyPlayerImg from "../../public/img/ReadyPlayer.png";
+import BattleFlyImg from "../../public/img/projects/battlefly.jpg";
+import BridgeworldImg from "../../public/img/projects/bridgeworld.jpg";
+import KnightsOfTheEtherImg from "../../public/img/projects/knightsofether.jpg";
+import LifeImg from "../../public/img/projects/life.jpg";
+import LostSamuriseImg from "../../public/img/projects/lostsamurise.jpg";
+import PeekABooImg from "../../public/img/projects/peekaboo.jpg";
+import RealmImg from "../../public/img/projects/realm.jpg";
+import SmithyDaoImg from "../../public/img/projects/smithydao.jpg";
+import ToadStoolzImg from "../../public/img/projects/toadstoolz.jpg";
+
+import AcadArenaImg from "../../public/img/partners/AcadArena.svg";
+import AndrewGreenImg from "../../public/img/partners/AndrewGreen.svg";
+import BlackPoolImg from "../../public/img/partners/BlackPool.svg";
+import DefiVaderImg from "../../public/img/partners/DefiVader.svg";
+import IncentiveDesignTheoryImg from "../../public/img/partners/IncentiveDesignTheory.svg";
+import JasonChoiImg from "../../public/img/partners/JasonChoi.svg";
+import JihoImg from "../../public/img/partners/Jiho.svg";
+import MeritCircleImg from "../../public/img/partners/MeritCircle.svg";
+import ReadyPlayerImg from "../../public/img/partners/ReadyPlayer.svg";
 
 import {
   AMMIcon,
@@ -38,6 +47,64 @@ import classNames from "clsx";
 import { Link } from "@remix-run/react";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
+import { TwitterCard } from "~/components/TwitterCard";
+
+const tweets = [
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
+    username: "Dizzy",
+    handle: "@dizzie.xyz",
+    tweet:
+      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
+    date: "11:56 AM · 27 Apr 2022",
+  },
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
+    username: "Zak",
+    handle: "@dizzie.xyz",
+    tweet:
+      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam.",
+    date: "11:56 AM · 27 Apr 2022",
+  },
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
+    username: "John Patten",
+    handle: "@jpatten__",
+    tweet:
+      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur.",
+    date: "11:56 AM · 27 Apr 2022",
+  },
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
+    username: "Dizzy",
+    handle: "@dizzie.xyz",
+    tweet:
+      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
+    date: "11:56 AM · 27 Apr 2022",
+  },
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
+    username: "Berchy.smol",
+    handle: "@DanielBerchtold",
+    tweet:
+      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
+    date: "11:56 AM · 27 Apr 2022",
+  },
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
+    username: "Dizzy",
+    handle: "@dizzie.xyz",
+    tweet:
+      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam.",
+    date: "11:56 AM · 27 Apr 2022",
+  },
+];
 
 const communities = [
   {
@@ -259,25 +326,55 @@ const partnerCartridges = [
   },
   {
     name: "Toadstoolz",
-    image: BattleFlyImg,
+    image: ToadStoolzImg,
     discordLink: "#",
     twitterLink: "#",
   },
   {
     name: "Peek-A-Boo!",
-    image: BattleFlyImg,
+    image: PeekABooImg,
     discordLink: "#",
     twitterLink: "#",
   },
   {
     name: "The Lost Samurise",
-    image: BattleFlyImg,
+    image: LostSamuriseImg,
     discordLink: "#",
     twitterLink: "#",
   },
   {
     name: "Tales of Elleria",
     image: BattleFlyImg,
+    discordLink: "#",
+    twitterLink: "#",
+  },
+  {
+    name: "Bridgeworld",
+    image: BridgeworldImg,
+    discordLink: "#",
+    twitterLink: "#",
+  },
+  {
+    name: "Knights of the Ether",
+    image: KnightsOfTheEtherImg,
+    discordLink: "#",
+    twitterLink: "#",
+  },
+  {
+    name: "LifeDAO",
+    image: LifeImg,
+    discordLink: "#",
+    twitterLink: "#",
+  },
+  {
+    name: "SmithyDAO",
+    image: SmithyDaoImg,
+    discordLink: "#",
+    twitterLink: "#",
+  },
+  {
+    name: "Realm",
+    image: RealmImg,
     discordLink: "#",
     twitterLink: "#",
   },
@@ -600,7 +697,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative bg-night-900 pt-16 sm:pt-24 lg:pt-32">
+          <div className="relative bg-night-900 py-16 sm:py-24 lg:py-32">
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
               <div className="inline-block rounded-2xl bg-night-800 px-3 py-2">
                 <h2 className="font-mono text-base font-medium text-night-200">
@@ -680,17 +777,17 @@ export default function Home() {
                 </h2>
               </div>
             </div>
-            <div className="relative mt-12 before:absolute before:left-0 before:bottom-0 before:top-0 before:bg-gradient-to-r before:from-night-900 before:to-night-900/10 after:absolute after:right-0 after:bottom-0 after:top-0 after:bg-gradient-to-l after:from-night-900 after:to-night-900/10 before:sm:w-6 after:sm:w-6">
+            <div className="relative mt-12 px-6 before:absolute before:left-0 before:bottom-0 before:top-0 before:bg-gradient-to-r before:from-night-900 before:to-night-900/10 after:absolute after:right-0 after:bottom-0 after:top-0 after:bg-gradient-to-l after:from-night-900 after:to-night-900/10 before:sm:w-6 after:sm:w-6">
               <div className="flex w-full snap-x snap-mandatory gap-6 overflow-x-auto pb-12">
-                <div className="shrink-0 snap-center">
-                  <div></div>
-                </div>
                 {partnerCartridges.map((cartridge) => (
                   <div
                     key={cartridge.name}
-                    className="relative shrink-0 snap-center overflow-hidden rounded-xl before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:hover:bg-night-900/30 motion-reduce:before:transition-none"
+                    className="relative h-48 w-full shrink-0 snap-center overflow-hidden rounded-xl before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:hover:bg-night-900/30 motion-reduce:before:transition-none sm:w-80"
                   >
-                    <img className="object-contain" src={cartridge.image} />
+                    <img
+                      className="h-full w-full object-cover"
+                      src={cartridge.image}
+                    />
                     <div className="absolute bottom-0 left-0 right-0 flex h-full flex-col items-center justify-center">
                       <div className="rounded-xl bg-ruby-900 px-2.5 py-1.5 font-mono text-white">
                         {cartridge.name}
@@ -722,9 +819,6 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-                <div className="shrink-0 snap-center">
-                  <div></div>
-                </div>
               </div>
             </div>
           </div>
@@ -751,7 +845,7 @@ export default function Home() {
                       <CTAButton>
                         <div className="flex items-center space-x-1">
                           <span>{community.buttonDescription}</span>
-                          <ExternalLinkIcon className="h-4 w-4 text-ruby-900" />
+                          <ExternalLinkIcon className="h-4 w-4" />
                         </div>
                       </CTAButton>
                     </div>
@@ -790,7 +884,7 @@ export default function Home() {
                       <CTAButton>
                         <div className="flex items-center space-x-1">
                           <span>{Infrastructure.buttonDescription}</span>
-                          <ExternalLinkIcon className="h-4 w-4 text-ruby-900" />
+                          <ExternalLinkIcon className="h-4 w-4" />
                         </div>
                       </CTAButton>
                     </div>
@@ -799,11 +893,26 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="relative bg-honey-25 pt-16 pb-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+              <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
+                <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
+                  Enjoyed by many (and counting)
+                </p>
+                <Badge name="Wall Of Love" />
+              </div>
+              <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto pb-12 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
+                {tweets.map((tweet, i) => (
+                  <TwitterCard {...tweet} key={i} />
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="relative bg-night-900 pt-16 pb-24">
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
               <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
                 <p className="mt-12 max-w-lg text-center text-2xl font-bold text-honey-25 sm:mt-0 sm:text-left sm:text-4xl">
-                  We provide the tools to make your imagination a reality.
+                  An evergrowing roster of partners and supporters
                 </p>
                 <div className="inline-block w-min rounded-xl bg-night-800 px-2.5 py-1.5">
                   <h3 className="font-mono text-sm font-medium tracking-wider text-night-200">
