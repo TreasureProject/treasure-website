@@ -606,12 +606,12 @@ export default function Home() {
               {data?.map((post) => (
                 <div
                   key={post.title}
-                  className="relative flex h-80 w-full snap-center flex-col justify-between bg-honey-50 p-6 first-of-type:sm:ml-6 last-of-type:sm:mr-12 first-of-type:lg:ml-12 last-of-type:lg:mr-12"
+                  className="relative flex h-56 w-full snap-center flex-col justify-between bg-honey-50 p-6 sm:h-80 first-of-type:sm:ml-6 last-of-type:sm:mr-12 first-of-type:lg:ml-12 last-of-type:lg:mr-12"
                 >
                   <div className="flex flex-1">
-                    <div className="flex w-96 flex-col space-y-5 px-4">
+                    <div className="flex w-64 flex-col space-y-2 px-4 sm:w-96 sm:space-y-5">
                       <span className="text-xs">{post.pubDate}</span>
-                      <p className="break-words text-2xl font-bold leading-none text-night-900">
+                      <p className="break-words text-lg font-bold leading-none text-night-900 line-clamp-2 sm:text-2xl sm:line-clamp-3">
                         <a
                           href={post.link}
                           target="_blank"
@@ -621,11 +621,11 @@ export default function Home() {
                           {post.title}
                         </a>
                       </p>
-                      <p className="text-sm">
-                        {post.description.substring(0, 100)}...
+                      <p className="text-xs line-clamp-2 sm:text-sm sm:line-clamp-3">
+                        {post.description}
                       </p>
                     </div>
-                    <div className="h-48 w-48">
+                    <div className="h-24 w-24 sm:h-48 sm:w-48">
                       <img
                         className="h-full w-full rounded-md object-cover"
                         src={post.thumbnail}
