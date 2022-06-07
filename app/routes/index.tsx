@@ -34,53 +34,15 @@ import {
   socials,
   tweets,
 } from "~/const";
-import { format } from "date-fns";
-
-type ResponseT = {
-  status: string;
-  feed: {
-    url: string;
-    title: string;
-    link: string;
-    author: string;
-    description: string;
-    image: string;
-  };
-  items?: Items[] | null;
-};
-
-type Items = {
-  title: string;
-  pubDate: string;
-  link: string;
-  guid: string;
-  author: string;
-  thumbnail: string;
-  description: string;
-  content: string;
-  categories?: (string | null)[] | null;
-};
+import { getPosts } from "~/utils/posts.server";
 
 type LoaderData = {
-  data: Items[];
+  data: Awaited<ReturnType<typeof getPosts>>;
 };
 
-const stripeHtml = (html: string) => html.replace(/<[^>]+>/g, "").trim();
-
 export const loader: LoaderFunction = async () => {
-  const res = (await (
-    await fetch(
-      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Treasure_DAO"
-    )
-  ).json()) as ResponseT;
-
-  const data = res.items ?? [];
-
   return json<LoaderData>({
-    data: data.map((d) => ({
-      ...d,
-      description: stripeHtml(d.description),
-    })),
+    data: await getPosts(),
   });
 };
 
@@ -536,7 +498,7 @@ export default function Home() {
                       </CTAButton>
                     </div>
                     <div className="flex-1">
-                      <img className="xl:h-full" src={HeroImg} alt="Hero" />
+                      <img src={HeroImg} alt="Hero" />
                     </div>
                   </div>
                 ))}
@@ -641,16 +603,14 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-12 sm:px-0">
-              {data.map((post) => (
+              {data?.map((post) => (
                 <div
                   key={post.title}
                   className="relative flex h-80 w-full snap-center flex-col justify-between bg-honey-50 p-6 first-of-type:sm:ml-6 last-of-type:sm:mr-12 first-of-type:lg:ml-12 last-of-type:lg:mr-12"
                 >
                   <div className="flex flex-1">
                     <div className="flex w-96 flex-col space-y-5 px-4">
-                      <span className="text-xs">
-                        {format(new Date(post.pubDate), "MMM dd")}
-                      </span>
+                      <span className="text-xs">{post.pubDate}</span>
                       <p className="break-words text-2xl font-bold leading-none text-night-900">
                         <a
                           href={post.link}
