@@ -6,392 +6,83 @@ import {
   ChevronDownIcon,
   ArrowUpIcon,
 } from "@heroicons/react/solid";
-import type { LinksFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, LoaderFunction } from "@remix-run/cloudflare";
+import { json } from "@remix-run/cloudflare";
 import HeroImg from "../../public/img/hero.png";
 import LogoImg from "../../public/img/logo.png";
 
-import BattleFlyImg from "../../public/img/projects/battlefly.jpg";
-import BridgeworldImg from "../../public/img/projects/bridgeworld.jpg";
-import KnightsOfTheEtherImg from "../../public/img/projects/knightsofether.jpg";
-import LifeImg from "../../public/img/projects/life.jpg";
-import LostSamuriseImg from "../../public/img/projects/lostsamurise.jpg";
-import PeekABooImg from "../../public/img/projects/peekaboo.jpg";
-import RealmImg from "../../public/img/projects/realm.jpg";
-import SmithyDaoImg from "../../public/img/projects/smithydao.jpg";
-import ToadStoolzImg from "../../public/img/projects/toadstoolz.jpg";
-
-import AcadArenaImg from "../../public/img/partners/AcadArena.svg";
-import AndrewGreenImg from "../../public/img/partners/AndrewGreen.svg";
-import BlackPoolImg from "../../public/img/partners/BlackPool.svg";
-import DefiVaderImg from "../../public/img/partners/DefiVader.svg";
-import IncentiveDesignTheoryImg from "../../public/img/partners/IncentiveDesignTheory.svg";
-import JasonChoiImg from "../../public/img/partners/JasonChoi.svg";
-import JihoImg from "../../public/img/partners/Jiho.svg";
-import MeritCircleImg from "../../public/img/partners/MeritCircle.svg";
-import ReadyPlayerImg from "../../public/img/partners/ReadyPlayer.svg";
-
 import {
-  AMMIcon,
-  BridgeIcon,
   BWTextIcon,
   DiscordIcon,
-  EconomyIcon,
   MagicLogoIcon,
   MagicTextIcon,
-  MarketplaceIcon,
   SmolverseTextIcon,
   TwitterIcon,
 } from "~/components/Icons";
 
 import classNames from "clsx";
-import { Link } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { TwitterCard } from "~/components/TwitterCard";
+import {
+  communities,
+  Infrastructures,
+  navigation,
+  partnerCartridges,
+  partners,
+  socials,
+  tweets,
+} from "~/const";
+import { format } from "date-fns";
 
-const tweets = [
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Dizzy",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Zak",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "John Patten",
-    handle: "@jpatten__",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Dizzy",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Berchy.smol",
-    handle: "@DanielBerchtold",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Dizzy",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-];
+type ResponseT = {
+  status: string;
+  feed: {
+    url: string;
+    title: string;
+    link: string;
+    author: string;
+    description: string;
+    image: string;
+  };
+  items?: Items[] | null;
+};
 
-const communities = [
-  {
-    name: "Governance (DAO)",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-  },
-  {
-    name: "Guilds",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Join a Guild",
-    href: "#",
-  },
-  {
-    name: "Community Initiatives",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-  },
-  {
-    name: "Bounty Board",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "View Initiatives",
-    href: "#",
-  },
-];
+type Items = {
+  title: string;
+  pubDate: string;
+  link: string;
+  guid: string;
+  author: string;
+  thumbnail: string;
+  description: string;
+  content: string;
+  categories?: (string | null)[] | null;
+};
 
-const partners = [
-  {
-    name: "Acad Arena",
-    image: AcadArenaImg,
-  },
-  {
-    name: "Andrew Green",
-    image: AndrewGreenImg,
-  },
-  {
-    name: "Black Pool",
-    image: BlackPoolImg,
-  },
-  {
-    name: "Defi Vader",
-    image: DefiVaderImg,
-  },
-  {
-    name: "Incentive Design Theory",
-    image: IncentiveDesignTheoryImg,
-  },
-  {
-    name: "Jason Choi",
-    image: JasonChoiImg,
-  },
-  {
-    name: "Jiho",
-    image: JihoImg,
-  },
-  {
-    name: "Merit Circle",
-    image: MeritCircleImg,
-  },
-  {
-    name: "Ready Player",
-    image: ReadyPlayerImg,
-  },
-];
+type LoaderData = {
+  data: Items[];
+};
 
-const Infrastructures = [
-  {
-    name: "Marketplace",
-    icon: <MarketplaceIcon className="h-10 w-10" aria-hidden="true" />,
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "View Marketplace",
-    href: "#",
-  },
-  {
-    name: "AMM",
-    icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-  },
-  {
-    name: "Economy",
-    icon: <EconomyIcon className="h-10 w-10" aria-hidden="true" />,
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-  },
-  {
-    name: "Bridging",
-    icon: <BridgeIcon className="h-10 w-10" aria-hidden="true" />,
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-  },
-];
+const stripeHtml = (html: string) => html.replace(/<[^>]+>/g, "").trim();
 
-const navigation = [
-  {
-    name: "Learn",
-    links: [
-      {
-        name: "About",
-        href: "/about",
-        isExternal: false,
-      },
-      {
-        name: "Team",
-        href: "/team",
-        isExternal: false,
-      },
-      {
-        name: "Documentation",
-        href: "#",
-        isExternal: true,
-      },
-    ],
-  },
-  {
-    name: "Discover",
-    links: [
-      {
-        name: "Bridgeworld",
-        href: "#",
-        isExternal: false,
-      },
-      {
-        name: "Cartridges",
-        href: "#",
-        isExternal: false,
-      },
-      {
-        name: "Community",
-        href: "#",
-        isExternal: false,
-      },
-      {
-        name: "Infrastructure",
-        href: "#",
-        isExternal: false,
-      },
-    ],
-  },
-  {
-    name: "Build",
-    links: [
-      {
-        name: "Why Treasure",
-        href: "#",
-        isExternal: false,
-      },
-      {
-        name: "Apply for partnership",
-        href: "#",
-        isExternal: true,
-      },
-    ],
-  },
-  {
-    name: "Contribute",
-    links: [
-      {
-        name: "Forum",
-        href: "https://bridgeworld.treasure.lol",
-        isExternal: true,
-      },
-      {
-        name: "Vote on Snapshot",
-        href: "#",
-        isExternal: true,
-      },
-      {
-        name: "Bounty Board",
-        href: "#",
-        isExternal: true,
-      },
-      {
-        name: "Guilds",
-        href: "#",
-        isExternal: true,
-      },
-      {
-        name: "Initiatives",
-        href: "#",
-        isExternal: true,
-      },
-      {
-        name: "Talent",
-        href: "#",
-        isExternal: true,
-      },
-    ],
-  },
-  { name: "Marketplace", href: "#", isExternal: true },
-  { name: "LP", href: "#", isExternal: true },
-];
+export const loader: LoaderFunction = async () => {
+  const res = (await (
+    await fetch(
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Treasure_DAO"
+    )
+  ).json()) as ResponseT;
 
-const partnerCartridges = [
-  {
-    name: "Battlefly",
-    image: BattleFlyImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "The Lost Donkeys",
-    image: BattleFlyImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "Toadstoolz",
-    image: ToadStoolzImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "Peek-A-Boo!",
-    image: PeekABooImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "The Lost Samurise",
-    image: LostSamuriseImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "Tales of Elleria",
-    image: BattleFlyImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "Bridgeworld",
-    image: BridgeworldImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "Knights of the Ether",
-    image: KnightsOfTheEtherImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "LifeDAO",
-    image: LifeImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "SmithyDAO",
-    image: SmithyDaoImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "Realm",
-    image: RealmImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-];
+  const data = res.items ?? [];
 
-const socials = [
-  {
-    name: "Discord",
-    href: "#",
-    icon: (props: { className?: string }) => <DiscordIcon {...props} />,
-  },
-  {
-    name: "Twitter",
-    href: "#",
-    icon: (props: { className?: string }) => <TwitterIcon {...props} />,
-  },
-];
+  return json<LoaderData>({
+    data: data.map((d) => ({
+      ...d,
+      description: stripeHtml(d.description),
+    })),
+  });
+};
 
 export const links: LinksFunction = () => {
   return [
@@ -405,20 +96,14 @@ export const links: LinksFunction = () => {
       href: "/img/logo.png",
       as: "image",
     },
-    {
-      rel: "preload",
-      href: "/img/battlefly.png",
-      as: "image",
-    },
-    {
-      rel: "preload",
-      href: "/img/union.svg",
-      as: "image",
-    },
   ];
 };
 
 export default function Home() {
+  const { data } = useLoaderData<LoaderData>();
+
+  console.log(data);
+
   return (
     <div className="bg-honey-25" id="top">
       <div className="relative overflow-hidden">
@@ -445,7 +130,7 @@ export default function Home() {
                 {navigation.map((item) => {
                   if (item.links) {
                     return (
-                      <Popover className="relative">
+                      <Popover className="relative" key={item.name}>
                         {({ open }) => (
                           <>
                             <Popover.Button className="group inline-flex items-center rounded-md text-base font-medium text-night-900 focus:outline-none focus:ring-2 focus:ring-honey-500 focus:ring-offset-2">
@@ -567,7 +252,7 @@ export default function Home() {
                     {navigation.map((item) => {
                       if (item.links) {
                         return (
-                          <Disclosure>
+                          <Disclosure key={item.name}>
                             {({ open }) => (
                               <>
                                 <Disclosure.Button
@@ -786,6 +471,7 @@ export default function Home() {
                   >
                     <img
                       className="h-full w-full object-cover"
+                      alt={cartridge.name}
                       src={cartridge.image}
                     />
                     <div className="absolute bottom-0 left-0 right-0 flex h-full flex-col items-center justify-center">
@@ -850,7 +536,7 @@ export default function Home() {
                       </CTAButton>
                     </div>
                     <div className="flex-1">
-                      <img className="xl:h-full" src={HeroImg} />
+                      <img className="xl:h-full" src={HeroImg} alt="Hero" />
                     </div>
                   </div>
                 ))}
@@ -943,6 +629,56 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+          <div className="relative bg-honey-100 pt-16 pb-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+              <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
+                <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
+                  Posts from TreasureDAO
+                </p>
+                <Badge name="Latest" />
+              </div>
+            </div>
+            <div className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-12 sm:px-0">
+              {data.map((post) => (
+                <div
+                  key={post.title}
+                  className="relative flex h-80 w-full snap-center flex-col justify-between bg-honey-50 p-6 first-of-type:sm:ml-6 last-of-type:sm:mr-12 first-of-type:lg:ml-12 last-of-type:lg:mr-12"
+                >
+                  <div className="flex flex-1">
+                    <div className="flex w-96 flex-col space-y-5 px-4">
+                      <span className="text-xs">
+                        {format(new Date(post.pubDate), "MMM dd")}
+                      </span>
+                      <p className="break-words text-2xl font-bold leading-none text-night-900">
+                        <a
+                          href={post.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span className="absolute inset-0 h-full w-full"></span>
+                          {post.title}
+                        </a>
+                      </p>
+                      <p className="text-sm">
+                        {post.description.substring(0, 100)}...
+                      </p>
+                    </div>
+                    <div className="h-48 w-48">
+                      <img
+                        className="h-full w-full rounded-md object-cover"
+                        src={post.thumbnail}
+                        alt={post.title}
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-6 flex items-center justify-between">
+                    <Badge name="Medium Article" />
+                    <ExternalLinkIcon className="h-5 w-5 text-ruby-900" />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </main>

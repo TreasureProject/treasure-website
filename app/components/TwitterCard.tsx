@@ -14,7 +14,11 @@ export const TwitterCard = ({
   <div className="w-full shrink-0 snap-center rounded-xl border-2 border-honey-300 bg-white p-8 lg:max-w-md">
     <div className="flex justify-between">
       <div className="flex items-center">
-        <img className="h-11 w-11 rounded-full" src={profileImage} />
+        <img
+          className="h-11 w-11 rounded-full"
+          src={profileImage}
+          alt={`${username} Profile`}
+        />
         <div className="ml-1.5 text-sm leading-tight">
           <span className="block font-bold text-black">{username}</span>
           <span className="block font-normal text-gray-500">{handle}</span>
