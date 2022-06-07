@@ -497,7 +497,7 @@ export default function Home() {
                         </div>
                       </CTAButton>
                     </div>
-                    <div className="flex-1">
+                    <div className="flex flex-1">
                       <img src={HeroImg} alt="Hero" />
                     </div>
                   </div>
