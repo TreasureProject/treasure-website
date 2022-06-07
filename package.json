@@ -30,8 +30,8 @@
     "graphql": "^16.5.0",
     "graphql-request": "^4.2.0",
     "graphql-tag": "^2.12.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {
@@ -43,8 +43,9 @@
     "@remix-run/dev": "^1.5.1",
     "@remix-run/eslint-config": "^1.5.1",
     "@tailwindcss/forms": "^0.5.2",
-    "@types/react": "^17.0.24",
-    "@types/react-dom": "^17.0.9",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "eslint": "^8.16.0",
