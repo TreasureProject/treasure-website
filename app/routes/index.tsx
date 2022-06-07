@@ -152,11 +152,11 @@ export default function Home() {
                 })}
               </Popover.Group>
               <div className="flex items-center xl:space-x-8">
-                <div className="hidden space-x-4 xl:flex">
+                <div className="hidden divide-x divide-honey-300 xl:flex">
                   {socials.map((social) => (
                     <a
                       key={social.name}
-                      className="text-night-800 hover:text-night-900"
+                      className="px-4 text-night-800 hover:text-night-900"
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -168,7 +168,7 @@ export default function Home() {
                 </div>
                 <a
                   href="#"
-                  className="hidden items-center space-x-2 rounded-2xl border border-transparent bg-ruby-900 py-3.5 px-7 text-base font-medium text-white hover:bg-ruby-1000 lg:inline-flex"
+                  className="hidden items-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 lg:inline-flex"
                 >
                   <span className="font-semibold">Buy</span>
                   <span className="inline-flex space-x-1">
@@ -265,7 +265,7 @@ export default function Home() {
                   <div className="mt-6 px-5">
                     <a
                       href="#"
-                      className="inline-flex w-full items-center justify-center space-x-2 rounded-2xl border border-transparent bg-ruby-900 py-3.5 px-7 text-base font-medium text-white hover:bg-ruby-1000"
+                      className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
                     >
                       <span className="font-semibold">Buy</span>
                       <span className="inline-flex space-x-1">
@@ -316,36 +316,36 @@ export default function Home() {
               <div className="flex items-center space-x-2">
                 <MagicLogoIcon />
                 <div>
-                  <p className="text-xs font-medium">Magic Price</p>
+                  <p className="text-sm font-bold">Magic Price</p>
                   <p className="text-xl font-bold lg:text-2xl">$0.40</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
                 <MagicLogoIcon />
                 <div>
-                  <p className="text-xs font-medium">Total Transactions</p>
+                  <p className="text-sm font-bold">Total Transactions</p>
                   <p className="text-xl font-bold lg:text-2xl">98.8M</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
                 <MagicLogoIcon />
                 <div>
-                  <p className="text-xs font-medium">Total Market Cap</p>
+                  <p className="text-sm font-bold">Total Market Cap</p>
                   <p className="text-xl font-bold lg:text-2xl">$28.5M</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
                 <MagicLogoIcon />
                 <div>
-                  <p className="text-xs font-medium">24 Hour Volume</p>
+                  <p className="text-sm font-bold">24 Hour Volume</p>
                   <p className="text-xl font-bold lg:text-2xl">$2.4M</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative bg-night-900 py-16 sm:py-24 lg:py-32">
-            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="relative bg-night-900 py-16 sm:py-24">
+            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
               <div className="inline-block rounded-2xl bg-night-800 px-3 py-2">
                 <h2 className="font-mono text-base font-medium text-night-200">
                   Core Cartridges
@@ -470,8 +470,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative bg-honey-100 pt-16 pb-24">
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="relative bg-honey-100 py-16 sm:py-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
               <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
                 <p className="mt-12 max-w-lg text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
                   The common thread that connects us all - community and good
@@ -485,7 +485,7 @@ export default function Home() {
                     key={community.name}
                     className="relative flex flex-col rounded-2xl bg-honey-50 px-2 pt-6 xl:flex-row"
                   >
-                    <div className="flex basis-7/12 flex-col items-start justify-between space-y-6 pl-8 pr-20 pt-2 pb-8">
+                    <div className="flex basis-7/12 flex-col items-start justify-between space-y-4 pl-8 pr-20 pt-2 pb-8">
                       <p className="text-2xl font-semibold text-night-800">
                         {community.name}
                       </p>
@@ -505,15 +505,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative bg-honey-900 pt-16 pb-24">
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="relative bg-honey-900 py-16 sm:py-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
               <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
                 <p className="mt-12 max-w-lg text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
                   We provide the tools to make your imagination a reality.
                 </p>
                 <Badge name="Infrastructure" />
               </div>
-              <div className="mx-auto mt-12 grid max-w-3xl gap-x-11 gap-y-12 sm:grid-cols-2">
+              <div className="mx-auto mt-12 grid max-w-3xl gap-x-11 gap-y-12 sm:mt-24 sm:grid-cols-2">
                 {Infrastructures.map((Infrastructure) => (
                   <div
                     key={Infrastructure.name}
@@ -541,35 +541,35 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative bg-honey-25 pt-16 pb-24">
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="relative bg-honey-25 py-16 sm:py-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
               <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
                 <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
                   Enjoyed by many (and counting)
                 </p>
                 <Badge name="Wall Of Love" />
               </div>
-              <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto pb-12 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
+              <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto pb-12 sm:mt-24 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
                 {tweets.map((tweet, i) => (
                   <TwitterCard {...tweet} key={i} />
                 ))}
               </div>
             </div>
           </div>
-          <div className="relative bg-night-900 pt-16 pb-24">
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="relative bg-night-900 py-16 sm:py-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
               <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
                 <p className="mt-12 max-w-lg text-center text-2xl font-bold text-honey-25 sm:mt-0 sm:text-left sm:text-4xl">
                   An evergrowing roster of partners and supporters
                 </p>
-                <div className="inline-block w-min rounded-xl bg-night-800 px-2.5 py-1.5">
+                <div className="inline-block w-max rounded-tag bg-night-800 px-2.5 py-1.5">
                   <h3 className="font-mono text-sm font-medium tracking-wider text-night-200">
                     Partners
                   </h3>
                 </div>
               </div>
             </div>
-            <div className="relative mt-12 flex overflow-x-hidden">
+            <div className="relative mt-12 flex overflow-x-hidden sm:mt-24">
               <div className="flex animate-marquee whitespace-nowrap">
                 {partners.map((partner) => (
                   <div
@@ -593,8 +593,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative bg-honey-100 pt-16 pb-24">
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="relative bg-honey-100 py-16 sm:py-24">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
               <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
                 <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
                   Posts from TreasureDAO
@@ -602,11 +602,11 @@ export default function Home() {
                 <Badge name="Latest" />
               </div>
             </div>
-            <div className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-12 sm:px-0">
+            <div className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-10 sm:mt-24 sm:px-0">
               {data?.map((post) => (
                 <div
                   key={post.title}
-                  className="relative flex h-56 w-full snap-center flex-col justify-between bg-honey-50 p-6 sm:h-80 first-of-type:sm:ml-6 last-of-type:sm:mr-12 first-of-type:lg:ml-12 last-of-type:lg:mr-12"
+                  className="relative flex h-56 w-full snap-center flex-col justify-between rounded-2xl border border-transparent bg-honey-50 p-6 transition-colors duration-500 hover:border-honey-200 sm:h-80 first-of-type:sm:ml-6 last-of-type:sm:mr-6 first-of-type:lg:ml-12 last-of-type:lg:mr-12 first-of-type:xl:ml-16 last-of-type:xl:mr-16"
                 >
                   <div className="flex flex-1">
                     <div className="flex w-64 flex-col space-y-2 px-4 sm:w-96 sm:space-y-5">
@@ -621,7 +621,7 @@ export default function Home() {
                           {post.title}
                         </a>
                       </p>
-                      <p className="text-xs line-clamp-2 sm:text-sm sm:line-clamp-3">
+                      <p className="text-xs text-night-700 line-clamp-2 sm:text-sm sm:line-clamp-2">
                         {post.description}
                       </p>
                     </div>
@@ -714,7 +714,7 @@ export default function Home() {
               <div className="mt-12 text-left xl:mt-0 xl:text-right">
                 <a
                   href="#"
-                  className="inline-flex w-full items-center justify-center space-x-2 rounded-2xl border border-transparent bg-ruby-900 py-3.5 px-7 text-base font-medium text-white hover:bg-ruby-1000 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 sm:w-auto"
                 >
                   <span className="font-semibold">Buy</span>
                   <span className="inline-flex space-x-1">
@@ -731,9 +731,9 @@ export default function Home() {
               <div className="inline-block">
                 <a
                   href="/#top"
-                  className="inline-flex items-center space-x-2 rounded-xl bg-honey-100 px-3 py-2.5 font-mono font-medium text-ruby-900"
+                  className="inline-flex items-center space-x-2 rounded-button bg-honey-100 px-3 py-2.5 font-mono font-medium text-ruby-900 transition-colors duration-500 hover:bg-honey-300"
                 >
-                  <span>To the surface</span>{" "}
+                  <span className="text-xs leading-5">To the surface</span>{" "}
                   <ArrowUpIcon className="h-3 w-3 stroke-current stroke-1" />
                 </a>
               </div>

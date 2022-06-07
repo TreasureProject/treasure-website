@@ -54,7 +54,7 @@ export default function App() {
         <Links />
       </head>
       <body className="antialiased">
-        <div className="border border-t border-ruby-900" />
+        <div className="border-2 border-t border-ruby-900" />
         <Outlet />
         <Scripts />
         {ENV.NODE_ENV === "development" ? <LiveReload /> : null}

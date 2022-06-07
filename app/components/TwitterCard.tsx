@@ -11,7 +11,7 @@ export const TwitterCard = ({
   tweet: string;
   date: string;
 }) => (
-  <div className="w-full shrink-0 snap-center rounded-xl border-2 border-honey-300 bg-white p-8 lg:max-w-md">
+  <div className="w-full shrink-0 snap-center rounded-xl border-2 border-honey-300 bg-honey-25 p-8 transition-colors duration-500 hover:bg-honey-100 lg:max-w-md">
     <div className="flex justify-between">
       <div className="flex items-center">
         <img

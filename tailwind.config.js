@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
+        "8xl": "88rem",
         "9xl": "96rem",
       },
       fontFamily: {
@@ -50,6 +51,14 @@ module.exports = {
           800: "#FBD371",
           900: "#FACE61",
         },
+      },
+      borderRadius: {
+        tag: "0.55rem",
+        button: "0.9rem",
+      },
+      spacing: {
+        6.5: "1.65rem",
+        3.25: "0.775rem",
       },
       animation: {
         marquee: "marquee 80s linear infinite",
