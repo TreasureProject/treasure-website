@@ -64,8 +64,6 @@ export const links: LinksFunction = () => {
 export default function Home() {
   const { data } = useLoaderData<LoaderData>();
 
-  console.log(data);
-
   return (
     <div className="bg-honey-25" id="top">
       <div className="relative overflow-hidden">
@@ -610,7 +608,7 @@ export default function Home() {
                 >
                   <div className="flex flex-1">
                     <div className="flex w-64 flex-col space-y-2 px-4 sm:w-96 sm:space-y-5">
-                      <span className="text-xs">{post.pubDate}</span>
+                      <span className="text-xs">{post.published}</span>
                       <p className="break-words text-lg font-bold leading-none text-night-900 line-clamp-2 sm:text-2xl sm:line-clamp-3">
                         <a
                           href={post.link}
@@ -622,16 +620,18 @@ export default function Home() {
                         </a>
                       </p>
                       <p className="text-xs text-night-700 line-clamp-2 sm:text-sm sm:line-clamp-2">
-                        {post.description}
+                        {post.content}
                       </p>
                     </div>
-                    <div className="h-24 w-24 sm:h-48 sm:w-48">
-                      <img
-                        className="h-full w-full rounded-md object-cover"
-                        src={post.thumbnail}
-                        alt={post.title}
-                      />
-                    </div>
+                    {post.thumbnail ? (
+                      <div className="h-24 w-24 sm:h-48 sm:w-48">
+                        <img
+                          className="h-full w-full rounded-md object-cover"
+                          src={post.thumbnail}
+                          alt={post.title}
+                        />
+                      </div>
+                    ) : null}
                   </div>
                   <div className="mt-6 flex items-center justify-between">
                     <Badge name="Medium Article" />
