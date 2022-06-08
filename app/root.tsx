@@ -19,6 +19,9 @@ import type { CloudFlareEnv, CloudFlareEnvVar } from "./types";
 
 import styles from "./styles/tailwind.css";
 
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+
 type RootLoaderData = {
   ENV: Partial<CloudFlareEnv>;
 };
@@ -83,9 +86,11 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="antialiased">
+      <body className="bg-honey-25 antialiased" id="top">
         <div className="border-2 border-t border-ruby-900" />
+        <Header />
         <Outlet />
+        <Footer />
         <Scripts />
         {ENV.NODE_ENV === "development" ? <LiveReload /> : null}
         {/* env available anywhere on your app */}
