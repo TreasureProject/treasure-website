@@ -18,7 +18,7 @@ export const Footer = () => (
             {socials.map((social) => (
               <a
                 key={social.name}
-                className="text-ruby-900 hover:text-ruby-800"
+                className="text-night-800 hover:text-night-900"
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export const Footer = () => (
             ))}
           </div>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-4 xl:col-span-3 xl:mt-0">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:col-span-3 xl:mt-0">
           {navigation
             .filter((item) => Boolean(item.links))
             .map((item) => {
