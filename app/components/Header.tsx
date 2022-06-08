@@ -8,14 +8,14 @@ import {
 import { Link } from "@remix-run/react";
 import { Fragment } from "react";
 import { navigation, socials } from "~/const";
-import { MagicLogoIcon, MagicTextIcon } from "./Icons";
+import { MagicIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 
 import classNames from "clsx";
 
 export const Header = () => (
   <Popover as="header" className="relative">
-    <div className="bg-honey-100 pt-6">
+    <div className="bg-honey-100 py-6">
       <div className="relative mx-auto flex max-w-9xl items-center justify-between px-4 lg:px-12">
         <div className="flex w-full items-center justify-between lg:w-auto">
           <Link to="#">
@@ -112,10 +112,7 @@ export const Header = () => (
             className="hidden items-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 lg:inline-flex"
           >
             <span className="font-semibold">Buy</span>
-            <span className="inline-flex space-x-1">
-              <MagicLogoIcon />
-              <MagicTextIcon />
-            </span>
+            <MagicIcon />
           </a>
         </div>
       </div>
@@ -209,10 +206,7 @@ export const Header = () => (
                 className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
               >
                 <span className="font-semibold">Buy</span>
-                <span className="inline-flex space-x-1">
-                  <MagicLogoIcon />
-                  <MagicTextIcon />
-                </span>
+                <MagicIcon />
               </a>
             </div>
           </div>

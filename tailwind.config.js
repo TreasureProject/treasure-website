@@ -56,6 +56,7 @@ module.exports = {
       borderRadius: {
         tag: "0.55rem",
         button: "0.9rem",
+        "2.5xl": "1.25rem",
       },
       spacing: {
         6.5: "1.65rem",

@@ -50,7 +50,7 @@ export const TwitterCard = (props: {
                 </svg>
               )}
             </div>
-            <span className="block font-normal text-gray-500">{handle}</span>
+            <span className="block font-normal text-night-600">{handle}</span>
           </div>
         </figcaption>
         <a href={link}>
@@ -66,13 +66,13 @@ export const TwitterCard = (props: {
           </svg>
         </a>
       </div>
-      <blockquote className="mt-8 block text-base leading-snug text-black sm:text-xl">
+      <blockquote className="mt-8 block text-base leading-snug text-night-900 sm:text-xl">
         <props.tweet />
       </blockquote>
       {image ? (
         <img
           className="mt-2 w-full rounded-2xl border border-honey-100 object-contain"
-          alt="Tweet Image"
+          alt={`${username} embed image`}
           src={image}
         />
       ) : null}

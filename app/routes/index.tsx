@@ -1,40 +1,28 @@
-import { Fragment } from "react";
-import { Disclosure, Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import {
-  ExternalLinkIcon,
-  ChevronDownIcon,
-  ArrowUpIcon,
-} from "@heroicons/react/solid";
+import { ExternalLinkIcon } from "@heroicons/react/solid";
 import type { LinksFunction, LoaderFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import HeroImg from "../../public/img/hero.png";
-import LogoImg from "../../public/img/logo.png";
 
 import {
   BWTextIcon,
   DiscordIcon,
-  MagicLogoIcon,
-  MagicTextIcon,
   SmolverseTextIcon,
   TwitterIcon,
 } from "~/components/Icons";
 
-import classNames from "clsx";
-import { Link, useLoaderData } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { TwitterCard } from "~/components/TwitterCard";
 import {
   communities,
   Infrastructures,
-  navigation,
   partnerCartridges,
   partners,
-  socials,
   tweets,
 } from "~/const";
 import { getPosts } from "~/utils/posts.server";
+import { TreasureStats } from "~/components/TreasureStats";
 
 type LoaderData = {
   data: Awaited<ReturnType<typeof getPosts>>;
@@ -95,40 +83,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="relative bg-ruby-900 py-6 text-honey-25 lg:py-8">
-        <div className="mx-auto grid grid-cols-2 place-items-start gap-4 px-8 sm:grid-cols-4 sm:place-items-center lg:max-w-3xl xl:max-w-4xl xl:gap-12">
-          <div className="flex items-center space-x-2">
-            <MagicLogoIcon />
-            <div>
-              <p className="text-sm font-bold">Magic Price</p>
-              <p className="text-xl font-bold lg:text-2xl">$0.40</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <MagicLogoIcon />
-            <div>
-              <p className="text-sm font-bold">Total Transactions</p>
-              <p className="text-xl font-bold lg:text-2xl">98.8M</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <MagicLogoIcon />
-            <div>
-              <p className="text-sm font-bold">Total Market Cap</p>
-              <p className="text-xl font-bold lg:text-2xl">$28.5M</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <MagicLogoIcon />
-            <div>
-              <p className="text-sm font-bold">24 Hour Volume</p>
-              <p className="text-xl font-bold lg:text-2xl">$2.4M</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <TreasureStats />
       <div className="relative bg-night-900 py-16 sm:py-24">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
           <div className="inline-block rounded-2xl bg-night-800 px-3 py-2">
@@ -257,7 +212,7 @@ export default function Home() {
             </p>
             <Badge name="Community" />
           </div>
-          <div className="mt-12 grid gap-x-11 gap-y-12 sm:grid-cols-2">
+          <div className="mt-12 grid gap-8 sm:grid-cols-2">
             {communities.map((community) => (
               <div
                 key={community.name}
@@ -291,7 +246,7 @@ export default function Home() {
             </p>
             <Badge name="Infrastructure" />
           </div>
-          <div className="mx-auto mt-12 grid max-w-3xl gap-x-11 gap-y-12 sm:mt-24 sm:grid-cols-2">
+          <div className="mx-auto mt-12 grid max-w-3xl gap-8 sm:mt-24 sm:grid-cols-2">
             {Infrastructures.map((Infrastructure) => (
               <div
                 key={Infrastructure.name}

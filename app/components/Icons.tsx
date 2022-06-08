@@ -337,3 +337,10 @@ export const MagicTextIcon = ({ className }: { className?: string }) => (
     />
   </svg>
 );
+
+export const MagicIcon = () => (
+  <span className="inline-flex space-x-1">
+    <MagicLogoIcon />
+    <MagicTextIcon />
+  </span>
+);

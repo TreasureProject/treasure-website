@@ -2,7 +2,7 @@ import { ExternalLinkIcon, ArrowUpIcon } from "@heroicons/react/solid";
 import { Link } from "@remix-run/react";
 import { socials, navigation } from "~/const";
 import { Badge } from "./Badge";
-import { MagicLogoIcon, MagicTextIcon } from "./Icons";
+import { MagicIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 
 export const Footer = () => (
@@ -81,10 +81,7 @@ export const Footer = () => (
             className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 sm:w-auto"
           >
             <span className="font-semibold">Buy</span>
-            <span className="inline-flex space-x-1">
-              <MagicLogoIcon />
-              <MagicTextIcon />
-            </span>
+            <MagicIcon />
           </a>
         </div>
       </div>
