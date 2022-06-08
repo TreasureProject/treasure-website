@@ -547,11 +547,34 @@ export default function Home() {
                 </p>
                 <Badge name="Wall Of Love" />
               </div>
-              <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto pb-12 sm:mt-24 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
-                {tweets.map((tweet, i) => (
-                  <TwitterCard {...tweet} key={i} />
-                ))}
+              <div className="mt-12 sm:mt-24">
+                <div className="hidden justify-items-center gap-4 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
+                  <ul className="space-y-4">
+                    {tweets.slice(0, 2).map((tweet) => (
+                      <TwitterCard {...tweet} key={tweet.date} />
+                    ))}
+                  </ul>
+                  <ul className="space-y-4">
+                    {tweets.slice(2, 4).map((tweet) => (
+                      <TwitterCard {...tweet} key={tweet.date} />
+                    ))}
+                  </ul>
+                  <ul className="hidden space-y-4 xl:block">
+                    {tweets.slice(4, 6).map((tweet) => (
+                      <TwitterCard {...tweet} key={tweet.date} />
+                    ))}
+                  </ul>
+                </div>
               </div>
+            </div>
+            <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto px-0 lg:hidden">
+              {tweets.map((tweet) => (
+                <TwitterCard
+                  {...tweet}
+                  key={tweet.date}
+                  className="first-of-type:ml-6 last-of-type:mr-6"
+                />
+              ))}
             </div>
           </div>
           <div className="relative bg-night-900 py-16 sm:py-24">

@@ -27,60 +27,159 @@ import {
   TwitterIcon,
 } from "~/components/Icons";
 
+const TwitterLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
+  <a
+    className="text-twitter decoration-twitter decoration-1 hover:underline"
+    href={href}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    {children}
+  </a>
+);
+
 export const tweets = [
   {
     profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Dizzy",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
-    date: "11:56 AM · 27 Apr 2022",
+      "https://pbs.twimg.com/profile_images/1531228011302989829/_VtNcCUp_200x200.jpg",
+    username: "Square Jordan",
+    handle: "@SquareJordan",
+    link: "https://twitter.com/SquareJordan/status/1532071817556676608",
+    tweet: () => (
+      <>
+        It's really quite incredible what{" "}
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        is buidling during a bear market... The infrastructure, tools and engine
+        to create a sustainable virtual economy powered by{" "}
+        <TwitterLink href="https://twitter.com/search?q=$MAGIC">
+          $MAGIC
+        </TwitterLink>{" "}
+        all while developing an engaging social network and fun gaming ecosystem
+        driven by the community ✨
+      </>
+    ),
+    image: null,
+    isOfficial: false,
+    date: "3:49 AM · June 2, 2022",
   },
   {
     profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Zak",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam.",
-    date: "11:56 AM · 27 Apr 2022",
+      "https://pbs.twimg.com/profile_images/1508930945956601862/CBiWlBZx_200x200.jpg",
+    username: "mariogotze.eth",
+    handle: "@MarioGoetze",
+    link: "https://twitter.com/mariogoetze/status/1478801150883377153",
+    tweet: () => <>Making smol steps in the crypto space</>,
+    image:
+      "https://pbs.twimg.com/media/FIXBzxaXMAwBeB2?format=jpg&name=360x360",
+    isOfficial: true,
+    date: "3:50 AM · Jan 6, 2022",
+  },
+
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1526836155420844033/N8wDSH1E_200x200.jpg",
+    username: "Uncle Pennybags 🦍",
+    handle: "@realpennybags",
+    link: "https://twitter.com/realpennybags/status/1485856084258549762",
+    tweet: () => (
+      <>
+        1/ Many ppl have been asking me why i aped 300+ eth into an illiquid l2
+        nft topping some of the highest sales vs{" "}
+        <TwitterLink href="https://twitter.com/CyberKongz">
+          @CyberKongz
+        </TwitterLink>{" "}
+        and{" "}
+        <TwitterLink href="https://twitter.com/coolcatsnft">
+          @coolcatsnft
+        </TwitterLink>{" "}
+        amidst a bear market that doesnt even have a game out atm
+        <br />
+        <br /> Below is my story 👇
+      </>
+    ),
+    image: "https://pbs.twimg.com/media/FJ7SMgAXMAEsWCU?format=jpg&name=small",
+    isOfficial: false,
+    date: "3:04 PM · Jan 25, 2022",
   },
   {
     profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "John Patten",
-    handle: "@jpatten__",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur.",
-    date: "11:56 AM · 27 Apr 2022",
+      "https://pbs.twimg.com/profile_images/1463417539958951941/H0fwRrw4_200x200.jpg",
+    username: "Mike_Crypto (🪄,🧠)",
+    handle: "@Mike_Crypto",
+    link: "https://twitter.com/Mike_Crypto/status/1506323131077697543",
+    tweet: () => (
+      <>
+        I think the exponential growth of the{" "}
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        network will start to become very clear over the next few months. With
+        dozens of games in progress, it is becoming more and more clear that the
+        TreasureDAO ecosystem can support hundreds of thriving games powered by{" "}
+        <TwitterLink href="https://twitter.com/search?q=$MAGIC">
+          $MAGIC
+        </TwitterLink>
+        .
+      </>
+    ),
+    image: null,
+    isOfficial: false,
+    date: "2:33 AM · Mar 23, 2022",
+  },
+
+  {
+    profileImage:
+      "https://pbs.twimg.com/profile_images/1497859492029288448/4ioYZ3pS_200x200.jpg",
+    username: "OfficialAbenger (3,3) ( 🪄,🌙)",
+    handle: "@officialabenger",
+    link: "https://twitter.com/officialabenger/status/1512088847865495552",
+    tweet: () => (
+      <>
+        I can't find another crypto ecosystem that has as many creative teams
+        building at speed as{" "}
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        does right now. <br />
+        <br /> Decentralized, coordinated and boundless creativity will lead to
+        something very special -- a metaverse that people actually want to spend
+        time in.
+      </>
+    ),
+    image: null,
+    isOfficial: false,
+    date: "12:24 AM · Apr 8, 2022",
   },
   {
     profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Dizzy",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Berchy.smol",
-    handle: "@DanielBerchtold",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam. Aliquam interdum semper lacus a efficitur. Integer a dictum sapien.",
-    date: "11:56 AM · 27 Apr 2022",
-  },
-  {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1287562748562309122/4RLk5A_U_x96.jpg",
-    username: "Dizzy",
-    handle: "@dizzie.xyz",
-    tweet:
-      "@Treasure_DAO Nullam ipsum nisl, molestie in justo consectetur, lobortis dapibus diam.",
-    date: "11:56 AM · 27 Apr 2022",
+      "https://pbs.twimg.com/profile_images/1518546576066547713/5ym8Z942_200x200.jpg",
+    username: "Teng",
+    handle: "@0xPrismatic",
+    link: "https://twitter.com/0xPrismatic/status/1508081582044856326",
+    tweet: () => (
+      <>
+        I’ve spent weeks deep in the weeds in{" "}
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        ($MAGIC). Here’s why I think it's a fascinating socio-economic
+        experiment happening in real-time & something to watch for this year.
+        <br />
+        <br />
+        🧵👇
+      </>
+    ),
+    image: null,
+    isOfficial: false,
+    date: "11:00 PM · Mar 27, 2022",
   },
 ];
 

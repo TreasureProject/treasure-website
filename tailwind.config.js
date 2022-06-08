@@ -14,6 +14,7 @@ module.exports = {
         mono: ["GroteskSemi", ...defaultTheme.fontFamily.mono],
       },
       colors: {
+        twitter: "rgb(29, 155, 240)",
         night: {
           100: "#E7E8E9",
           200: "#CFD1D4",
