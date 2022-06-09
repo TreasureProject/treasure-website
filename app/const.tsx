@@ -21,10 +21,14 @@ import ReadyPlayerImg from "../public/img/partners/ReadyPlayer.svg";
 import {
   AMMIcon,
   BridgeIcon,
+  CartridgesIcon,
   DiscordIcon,
   EconomyIcon,
+  GlobalIcon,
+  GuildsIcon,
   TroveIcon,
   TwitterIcon,
+  UsersIcon,
 } from "~/components/Icons";
 
 const TwitterLink = ({
@@ -288,6 +292,33 @@ export const Infrastructures = [
   },
 ];
 
+export const BridgeworldInfrastructures = [
+  {
+    name: "Users",
+    icon: <UsersIcon className="h-14 w-14 text-ruby-900" aria-hidden="true" />,
+    description:
+      "Individual players explore Bridgeworld and the worlds beyond by questing, crafting, and more.",
+  },
+  {
+    name: "Guilds",
+    icon: <GuildsIcon className="h-14 w-14" aria-hidden="true" />,
+    description:
+      "Collectives of players have formed, allowing for the coordination and competition for emissions between groups.",
+  },
+  {
+    name: "Global",
+    icon: <GlobalIcon className="h-14 w-14" aria-hidden="true" />,
+    description:
+      "Showcasing projects and initiatives built by and with the community.",
+  },
+  {
+    name: "Cartridges",
+    icon: <CartridgesIcon className="h-14 w-14" aria-hidden="true" />,
+    description:
+      "Serving as the interplay between games and guilds, cartridges (games) can form “nations” to exert influence over Bridgeworld.",
+  },
+];
+
 export const navigation = [
   {
     name: "Learn",
@@ -314,7 +345,7 @@ export const navigation = [
     links: [
       {
         name: "Bridgeworld",
-        href: "#",
+        href: "/bridgeworld",
         isExternal: false,
       },
       {

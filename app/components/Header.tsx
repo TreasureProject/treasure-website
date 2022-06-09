@@ -227,7 +227,7 @@ export const Header = () => {
       {/* breadcrumbs only on route other than index */}
       {isLeafPage ? (
         <div className="hidden bg-ruby-900 px-12 py-6 lg:block">
-          <div className="mx-auto flex w-full max-w-9xl justify-between">
+          <div className="mx-auto flex w-full max-w-9xl justify-between px-4 lg:px-12">
             <nav aria-label="Breadcrumb">
               <ol className="flex h-full space-x-4">
                 <li className="flex">
