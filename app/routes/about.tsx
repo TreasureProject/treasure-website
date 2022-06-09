@@ -2,8 +2,8 @@ import { Link } from "@remix-run/react";
 import { MagicIcon } from "~/components/Icons";
 import { TreasurePosts } from "~/components/TreasurePosts";
 import { TreasureStats } from "~/components/TreasureStats";
-import Legion1Img from "../../public/img/legion1.png";
-import Legion2Img from "../../public/img/legion2.png";
+import MagicImg from "../../public/img/magic.png";
+import TreasureImg from "../../public/img/treasures.png";
 
 export default function About() {
   return (
@@ -90,15 +90,15 @@ export default function About() {
             How Treasure Works
           </h2>
 
-          <div className="relative mt-16 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
-            <div className="mb-12 lg:col-start-1 lg:mb-0">
+          <div className="relative mt-16 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
+            <div className="mb-12 flex items-center justify-center lg:col-span-3 lg:col-start-1 lg:mb-0">
               <img
-                className="h-full w-full object-cover"
-                src={Legion1Img}
-                alt="Legion 1"
+                className="h-80 w-80 object-cover"
+                src={MagicImg}
+                alt="Magic"
               />
             </div>
-            <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:col-start-2">
+            <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:col-span-4">
               <h3 className="text-3xl font-extrabold text-ruby-900 sm:text-4xl">
                 $Magic as currency
               </h3>
@@ -122,15 +122,15 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="relative mt-6 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
-            <div className="mb-12 lg:col-start-2 lg:mb-0">
+          <div className="relative mt-12 lg:mt-20 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
+            <div className="mb-12 flex items-center justify-center lg:order-1 lg:col-span-3 lg:col-start-5 lg:mb-0">
               <img
-                className="h-full w-full object-cover"
-                src={Legion2Img}
-                alt="Legion 2"
+                className="h-80 w-80 object-cover"
+                src={TreasureImg}
+                alt="Treasures"
               />
             </div>
-            <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:col-start-1">
+            <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:order-2 lg:col-span-4">
               <h3 className="text-3xl font-semibold text-ruby-900 sm:text-4xl">
                 Treasures as resources
               </h3>
