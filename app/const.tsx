@@ -7,6 +7,8 @@ import PeekABooImg from "../public/img/projects/peekaboo.jpg";
 import RealmImg from "../public/img/projects/realm.jpg";
 import SmithyDaoImg from "../public/img/projects/smithydao.jpg";
 import ToadStoolzImg from "../public/img/projects/toadstoolz.jpg";
+import ToeImg from "../public/img/projects/toe.jpeg";
+import LostDonkeysImg from "../public/img/projects/lostdonkeys.jpeg";
 
 import AcadArenaImg from "../public/img/partners/AcadArena.svg";
 import AndrewGreenImg from "../public/img/partners/AndrewGreen.svg";
@@ -350,12 +352,12 @@ export const navigation = [
       },
       {
         name: "Cartridges",
-        href: "#",
+        href: "/cartridges",
         isExternal: false,
       },
       {
         name: "Community",
-        href: "#",
+        href: "/community",
         isExternal: false,
       },
       {
@@ -428,7 +430,7 @@ export const partnerCartridges = [
   },
   {
     name: "The Lost Donkeys",
-    image: BattleFlyImg,
+    image: LostDonkeysImg,
     discordLink: "#",
     twitterLink: "#",
   },
@@ -452,13 +454,7 @@ export const partnerCartridges = [
   },
   {
     name: "Tales of Elleria",
-    image: BattleFlyImg,
-    discordLink: "#",
-    twitterLink: "#",
-  },
-  {
-    name: "Bridgeworld",
-    image: BridgeworldImg,
+    image: ToeImg,
     discordLink: "#",
     twitterLink: "#",
   },
@@ -487,6 +483,8 @@ export const partnerCartridges = [
     twitterLink: "#",
   },
 ];
+
+export type Cartridge = typeof partnerCartridges[number];
 
 export const socials = [
   {

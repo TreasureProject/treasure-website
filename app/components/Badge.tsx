@@ -13,13 +13,13 @@ export const Badge = ({
     <div
       className={classNames(
         bgColor ?? "bg-honey-200",
-        "inline-block w-max rounded-tag px-2.5 py-1.5"
+        "inline-block w-max rounded-1.9xl px-4 py-2.5"
       )}
     >
       <h3
         className={classNames(
           textColor ?? "text-ruby-900",
-          "font-mono text-sm font-medium tracking-wider"
+          "font-mono font-medium tracking-wider"
         )}
       >
         {name}

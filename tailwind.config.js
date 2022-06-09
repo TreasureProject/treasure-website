@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
+        "4.5xl": "60rem",
         "8xl": "88rem",
         "9xl": "96rem",
       },
@@ -56,7 +57,9 @@ module.exports = {
       borderRadius: {
         tag: "0.55rem",
         button: "0.9rem",
+        "1.9xl": "15px",
         "2.5xl": "1.25rem",
+        "1.5xl": "10px",
       },
       spacing: {
         6.5: "1.65rem",

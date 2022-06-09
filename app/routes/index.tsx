@@ -16,9 +16,9 @@ import {
 } from "~/const";
 import { TreasureStats } from "~/components/TreasureStats";
 import { TreasurePosts } from "~/components/TreasurePosts";
-
-import BWTextSvg from "../../public/img/bridgeworld-text.svg";
-import SmolverseTextSvg from "../../public/img/smolverse-text.svg";
+import { CoreCartridges } from "~/components/CoreCartridges";
+import { PartnerCartridge } from "~/components/PartnerCartridge";
+import { Guilds } from "~/components/Guilds";
 
 export default function Home() {
   return (
@@ -63,69 +63,8 @@ export default function Home() {
           <p className="mx-auto mt-12 max-w-xl text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
             Games and worlds that delight the masses
           </p>
-          <div className="mt-12 flex flex-col justify-center xl:flex-row">
-            <div className="group relative overflow-hidden md:flex md:justify-center">
-              <div className="relative h-96 bg-[url('/img/bridgeworld.png')] bg-cover bg-no-repeat [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 motion-reduce:before:transition-none md:h-[46rem] md:w-[34rem] md:[mask-image:url('/img/union-big.svg')] before:md:h-[46rem]">
-                <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
-                  <img
-                    src={BWTextSvg}
-                    alt="Bridgeworld"
-                    className="w-48 md:w-80"
-                  />
-                  <div className="mt-2 flex space-x-3 rounded-xl bg-night-900 p-2">
-                    <a
-                      className="text-night-600 hover:text-night-700"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="sr-only">Bridgeworld Discord Link</span>
-                      <DiscordIcon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                    <a
-                      className="text-night-600 hover:text-night-700"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="sr-only">Bridgeworld Twitter Link</span>
-                      <TwitterIcon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="group relative mt-20 overflow-hidden md:flex md:justify-center xl:mt-0">
-              <div className="relative h-96 bg-[url('/img/smolverse.png')] bg-[length:550px_750px] bg-bottom bg-no-repeat [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 motion-reduce:before:transition-none md:h-[46rem] md:w-[34rem] md:[mask-image:url('/img/union-big.svg')] before:md:h-[46rem]">
-                <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
-                  <img
-                    src={SmolverseTextSvg}
-                    alt="Bridgeworld"
-                    className="w-48 md:w-80"
-                  />
-                  <div className="mt-2 flex space-x-3 rounded-xl bg-night-900 p-2">
-                    <a
-                      className="text-night-600 hover:text-night-800"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="sr-only">Smolverse Discord Link</span>
-                      <DiscordIcon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                    <a
-                      className="text-night-600 hover:text-night-800"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="sr-only">Smolverse Twitter Link</span>
-                      <TwitterIcon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="mt-12">
+            <CoreCartridges />
           </div>
           <div className="mt-14 inline-block rounded-2xl bg-night-800 px-3 py-2">
             <h2 className="font-mono text-base font-medium text-night-200">
@@ -137,45 +76,11 @@ export default function Home() {
           <div className="flex w-full snap-x snap-mandatory gap-6 overflow-x-auto pb-12">
             <div className="h-48 shrink-0"></div>
             {partnerCartridges.map((cartridge) => (
-              <div
+              <PartnerCartridge
+                cartridge={cartridge}
                 key={cartridge.name}
-                className="relative h-48 w-full shrink-0 snap-center overflow-hidden rounded-xl before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:hover:bg-night-900/30 motion-reduce:before:transition-none sm:w-80"
-              >
-                <img
-                  className="h-full w-full object-cover"
-                  alt={cartridge.name}
-                  src={cartridge.image}
-                />
-                <div className="absolute bottom-0 left-0 right-0 flex h-full flex-col items-center justify-center">
-                  <div className="rounded-xl bg-ruby-900 px-2.5 py-1.5 font-mono text-white">
-                    {cartridge.name}
-                  </div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 mx-auto mb-6 mt-2 flex w-min items-center justify-center space-x-3 rounded-xl bg-night-900 p-2">
-                  <a
-                    className="text-night-600 hover:text-night-800"
-                    href={cartridge.discordLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="sr-only">
-                      {cartridge.name} Discord Link
-                    </span>
-                    <DiscordIcon className="h-6 w-6" aria-hidden="true" />
-                  </a>
-                  <a
-                    className="text-night-600 hover:text-night-800"
-                    href={cartridge.twitterLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="sr-only">
-                      {cartridge.name} Twitter Link
-                    </span>
-                    <TwitterIcon className="h-6 w-6" aria-hidden="true" />
-                  </a>
-                </div>
-              </div>
+                className="h-48 snap-center sm:w-80"
+              />
             ))}
             <div className="h-48 shrink-0"></div>
           </div>
@@ -189,29 +94,8 @@ export default function Home() {
             </p>
             <Badge name="Community" />
           </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2">
-            {communities.map((community) => (
-              <div
-                key={community.name}
-                className="relative flex flex-col rounded-2xl bg-honey-50 px-2 pt-6 xl:flex-row"
-              >
-                <div className="flex basis-7/12 flex-col items-start justify-between space-y-4 pl-8 pr-20 pt-2 pb-8">
-                  <p className="text-2xl font-semibold text-night-800">
-                    {community.name}
-                  </p>
-                  <p className="text-night-700">{community.description}</p>
-                  <CTAButton>
-                    <div className="flex items-center space-x-1">
-                      <span>{community.buttonDescription}</span>
-                      <ExternalLinkIcon className="h-4 w-4" />
-                    </div>
-                  </CTAButton>
-                </div>
-                <div className="flex flex-1">
-                  <img src={HeroImg} alt="Hero" />
-                </div>
-              </div>
-            ))}
+          <div className="mt-12">
+            <Guilds />
           </div>
         </div>
       </div>
@@ -237,12 +121,7 @@ export default function Home() {
                   <p className="text-night-700">{Infrastructure.description}</p>
                 </div>
                 <div>
-                  <CTAButton>
-                    <div className="flex items-center space-x-1">
-                      <span>{Infrastructure.buttonDescription}</span>
-                      <ExternalLinkIcon className="h-4 w-4" />
-                    </div>
-                  </CTAButton>
+                  <CTAButton>{Infrastructure.buttonDescription}</CTAButton>
                 </div>
               </div>
             ))}
@@ -277,14 +156,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto px-0 lg:hidden">
-          {tweets.map((tweet) => (
-            <TwitterCard
-              {...tweet}
-              key={tweet.date}
-              className="first-of-type:ml-6 last-of-type:mr-6"
-            />
-          ))}
+        <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto px-8 sm:px-0 lg:hidden">
+          {tweets
+            .filter((tweet) => !tweet.image)
+            .map((tweet) => (
+              <TwitterCard
+                {...tweet}
+                key={tweet.date}
+                className="first-of-type:ml-6 last-of-type:mr-6"
+              />
+            ))}
         </div>
       </div>
       <div className="relative bg-night-900 py-16 sm:py-24">

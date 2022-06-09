@@ -27,7 +27,7 @@ export default function About() {
       </div>
       <div className="relative bg-night-900 pt-16 pb-72 sm:py-24">
         <div className="mx-auto max-w-sm px-4 text-center sm:max-w-4xl sm:px-28 lg:px-20">
-          <div className="relative rounded-2.5xl border border-night-800 bg-[#131D2E] px-4 pt-20 pb-48 text-night-600 sm:px-14 md:py-20">
+          <div className="relative rounded-2.5xl border-2 border-night-800 bg-[#131D2E] px-4 pt-20 pb-48 text-night-600 sm:px-14 md:py-20">
             <div className="space-y-4">
               <p>
                 <span className="font-semibold text-honey-200">
@@ -145,7 +145,7 @@ export default function About() {
 
 export const handle = {
   breadcrumb: {
-    href: "/about",
-    title: "About",
+    href: "/Bridgeworld",
+    title: "Bridgeworld",
   },
 };
