@@ -46,7 +46,11 @@ export const TreasurePosts = () => {
               ) : null}
             </div>
             <div className="mt-6 flex items-center justify-between">
-              <Badge name="Medium Article" />
+              <div className="inline-block w-max rounded-tag bg-honey-100 px-2.5 py-1.5">
+                <p className="font-mono text-sm font-medium text-ruby-900">
+                  Medium Article
+                </p>
+              </div>
               <ExternalLinkIcon className="h-5 w-5 text-ruby-900" />
             </div>
           </div>
