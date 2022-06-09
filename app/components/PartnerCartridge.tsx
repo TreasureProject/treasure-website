@@ -1,4 +1,4 @@
-import type { Cartridge } from "~/const";
+import type { CartridgeT } from "~/const";
 import { DiscordIcon, TwitterIcon } from "./Icons";
 import classNames from "clsx";
 
@@ -6,7 +6,7 @@ export const PartnerCartridge = ({
   cartridge,
   className,
 }: {
-  cartridge: Cartridge;
+  cartridge: CartridgeT;
   className?: string;
 }) => (
   <div

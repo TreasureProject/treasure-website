@@ -7,18 +7,13 @@ import { DiscordIcon, TwitterIcon } from "~/components/Icons";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { TwitterCard } from "~/components/TwitterCard";
-import {
-  communities,
-  Infrastructures,
-  partnerCartridges,
-  partners,
-  tweets,
-} from "~/const";
+import { partnerCartridges, partners, tweets } from "~/const";
 import { TreasureStats } from "~/components/TreasureStats";
 import { TreasurePosts } from "~/components/TreasurePosts";
 import { CoreCartridges } from "~/components/CoreCartridges";
 import { PartnerCartridge } from "~/components/PartnerCartridge";
 import { Guilds } from "~/components/Guilds";
+import { Infrastructures } from "~/components/Infrastructures";
 
 export default function Home() {
   return (
@@ -107,24 +102,8 @@ export default function Home() {
             </p>
             <Badge name="Infrastructure" />
           </div>
-          <div className="mx-auto mt-12 grid max-w-3xl gap-8 sm:mt-24 sm:grid-cols-2">
-            {Infrastructures.map((Infrastructure) => (
-              <div
-                key={Infrastructure.name}
-                className="rounded-2xl bg-honey-700 p-12"
-              >
-                {Infrastructure.icon}
-                <div className="my-6 flex flex-col space-y-2">
-                  <p className="text-2xl font-semibold text-night-800">
-                    {Infrastructure.name}
-                  </p>
-                  <p className="text-night-700">{Infrastructure.description}</p>
-                </div>
-                <div>
-                  <CTAButton>{Infrastructure.buttonDescription}</CTAButton>
-                </div>
-              </div>
-            ))}
+          <div className="mt-12">
+            <Infrastructures />
           </div>
         </div>
       </div>

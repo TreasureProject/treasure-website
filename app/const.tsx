@@ -189,6 +189,40 @@ export const tweets = [
   },
 ];
 
+export const communityInfrastructure = [
+  {
+    name: "Flywheel",
+    description:
+      "Launched by the Battefly team, Flywheel offers staking-as-a-service for smaller ecosystem projects to help foster growth of the entire ecosystem.",
+    buttonDescription: "Learn more",
+    href: "#",
+  },
+  {
+    name: "Build with us",
+    description:
+      "Treasure is actively working to build infrastructure in partnership with the community",
+    buttonDescription: "Visit the bounty board",
+    href: "#",
+  },
+];
+
+export const WhyTreasureCardList = [
+  {
+    name: "Ecosystem Integration Framework",
+    description:
+      "Providing clarity to projects integrating into and building on top of the Treasure ecosystem.",
+    buttonDescription: "Learn more",
+    href: "#",
+  },
+  {
+    name: "Apply to Partner",
+    description:
+      "Express your interest in becoming a partner cartridge with Treasure.",
+    buttonDescription: "Learn more",
+    href: "#",
+  },
+];
+
 export const communities = [
   {
     name: "Governance (DAO)",
@@ -219,6 +253,8 @@ export const communities = [
     href: "#",
   },
 ];
+
+export type CardT = typeof communities[number];
 
 export const partners = [
   {
@@ -259,7 +295,7 @@ export const partners = [
   },
 ];
 
-export const Infrastructures = [
+export const infrastructures = [
   {
     name: "Marketplace",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
@@ -362,7 +398,7 @@ export const navigation = [
       },
       {
         name: "Infrastructure",
-        href: "#",
+        href: "/infrastructure",
         isExternal: false,
       },
     ],
@@ -372,7 +408,7 @@ export const navigation = [
     links: [
       {
         name: "Why Treasure",
-        href: "#",
+        href: "/why-treasure",
         isExternal: false,
       },
       {
@@ -484,7 +520,7 @@ export const partnerCartridges = [
   },
 ];
 
-export type Cartridge = typeof partnerCartridges[number];
+export type CartridgeT = typeof partnerCartridges[number];
 
 export const socials = [
   {

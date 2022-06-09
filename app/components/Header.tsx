@@ -11,7 +11,7 @@ import {
 import { Link, useLocation, useMatches } from "@remix-run/react";
 import { Fragment } from "react";
 import { navigation, socials } from "~/const";
-import { MagicIcon, TroveIcon } from "./Icons";
+import { MagicIcon, TroveRevertedIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 
 import classNames from "clsx";
@@ -227,7 +227,7 @@ export const Header = () => {
       </Popover>
       {/* breadcrumbs only on route other than index */}
       {isLeafPage ? (
-        <div className="sticky top-0 z-10 hidden bg-ruby-900 py-6 lg:block">
+        <div className="sticky top-0 z-10 hidden bg-ruby-900 py-3.5 lg:block">
           <div className="mx-auto flex w-full max-w-9xl justify-between px-4 lg:px-12">
             <nav aria-label="Breadcrumb">
               <ol className="flex h-full space-x-4">
@@ -275,10 +275,16 @@ export const Header = () => {
                   })}
               </ol>
             </nav>
-            <TroveIcon
-              className="h-10 w-10 text-ruby-1000"
-              aria-hidden="true"
-            />
+            <a
+              href="#"
+              className="inline-flex items-center rounded-button bg-ruby-1000 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1400/50 focus:outline-none focus:ring-2 focus:ring-ruby-900 focus:ring-offset-2 sm:text-base"
+            >
+              Marketplace
+              <TroveRevertedIcon
+                className="ml-4 h-6 w-6 text-white"
+                aria-hidden="true"
+              />
+            </a>
           </div>
         </div>
       ) : null}
