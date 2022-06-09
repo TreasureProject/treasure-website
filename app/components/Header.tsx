@@ -23,8 +23,8 @@ export const Header = () => {
 
   return (
     <>
-      <Popover as="header" className="relative">
-        <div className="bg-honey-100 py-6">
+      <Popover as="header" className="sticky top-0 z-20 lg:relative">
+        <div className="bg-honey-100 py-4 sm:py-6">
           <div className="relative mx-auto flex max-w-9xl items-center justify-between px-4 lg:px-12">
             <div className="flex w-full items-center justify-between lg:w-auto">
               <Link to="/">

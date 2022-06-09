@@ -1,9 +1,4 @@
-import { Link } from "@remix-run/react";
-import { MagicIcon } from "~/components/Icons";
-import { TreasurePosts } from "~/components/TreasurePosts";
-import { TreasureStats } from "~/components/TreasureStats";
 import Legion1Img from "../../public/img/legion1.png";
-import Legion2Img from "../../public/img/legion2.png";
 
 import BWTextSvg from "../../public/img/bridgeworld-text.svg";
 import { CTAButton, InternalCTAButton } from "~/components/Button";

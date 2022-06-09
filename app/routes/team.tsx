@@ -4,7 +4,7 @@ import { TwitterIcon } from "~/components/Icons";
 
 const TeamCard = () => {
   return (
-    <div className="border-2 border-honey-300 bg-honey-50 px-9 py-8">
+    <div className="rounded-lg border-2 border-honey-300 bg-honey-50 px-9 py-8">
       <img
         className="w-full object-contain"
         src="https://via.placeholder.com/150"

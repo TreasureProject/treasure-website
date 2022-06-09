@@ -94,13 +94,13 @@ export const Footer = () => (
           &copy; 2021-2022 TreasureDAO
         </p>
         <div className="inline-block">
-          <a
-            href="/#top"
+          <button
             className="inline-flex items-center space-x-2 rounded-button bg-honey-100 px-3 py-2.5 font-mono font-medium text-ruby-900 transition-colors duration-500 hover:bg-honey-300"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <span className="text-xs leading-5">To the surface</span>{" "}
             <ArrowUpIcon className="h-3 w-3 stroke-current stroke-1" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
