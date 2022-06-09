@@ -102,7 +102,7 @@ export default function Home() {
             </p>
             <Badge name="Infrastructure" />
           </div>
-          <div className="mt-12">
+          <div className="mx-auto mt-12 max-w-3xl">
             <Infrastructures />
           </div>
         </div>

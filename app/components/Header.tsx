@@ -4,8 +4,6 @@ import {
   ChevronDownIcon,
   XIcon,
   ExternalLinkIcon,
-  HomeIcon,
-  ArrowRightIcon,
   ChevronRightIcon,
 } from "@heroicons/react/solid";
 import { Link, useLocation, useMatches } from "@remix-run/react";
@@ -29,7 +27,7 @@ export const Header = () => {
         <div className="bg-honey-100 py-6">
           <div className="relative mx-auto flex max-w-9xl items-center justify-between px-4 lg:px-12">
             <div className="flex w-full items-center justify-between lg:w-auto">
-              <Link to="#">
+              <Link to="/">
                 <span className="sr-only">Treasure</span>
                 <img className="h-8 w-auto xl:h-10" src={LogoImg} alt="Logo" />
               </Link>
@@ -237,7 +235,7 @@ export const Header = () => {
                       to="/"
                       className="inline-block w-max rounded-tag bg-ruby-1000 px-2.5 py-1.5 transition-colors hover:bg-ruby-1400"
                     >
-                      <h3 className="font-mono text-sm font-medium tracking-wider text-ruby-100">
+                      <h3 className="font-mono text-sm font-medium text-ruby-100">
                         Home
                       </h3>
                     </Link>
@@ -265,7 +263,7 @@ export const Header = () => {
                             className="ml-4 inline-block w-max rounded-tag bg-honey-100 px-2.5 py-1.5 transition-colors hover:bg-honey-200"
                             aria-current={currentPath ? "page" : undefined}
                           >
-                            <h3 className="font-mono text-sm font-medium tracking-wider text-ruby-900">
+                            <h3 className="font-mono text-sm font-medium text-ruby-900">
                               {title}
                             </h3>
                           </Link>

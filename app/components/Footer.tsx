@@ -40,7 +40,11 @@ export const Footer = () => (
                     key={name}
                     className="space-y-6 text-center sm:text-left"
                   >
-                    <Badge name={name} />
+                    <div className="inline-block w-max rounded-tag bg-honey-200 px-2.5 py-1.5">
+                      <p className="font-mono text-sm font-medium text-ruby-900">
+                        {name}
+                      </p>
+                    </div>
                     <ul className="space-y-4">
                       {links.map(({ name, isExternal, href }) => (
                         <li

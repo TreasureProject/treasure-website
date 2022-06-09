@@ -44,13 +44,13 @@ export default function About() {
               All connected by a dual resource model:
             </p>
             <div className="mx-auto mt-10 block w-full rounded-tag bg-night-800 px-2.5 py-1.5 sm:w-max">
-              <h3 className="flex items-center justify-center space-x-2 text-lg font-semibold tracking-wider text-white">
+              <h3 className="flex items-center justify-center space-x-2 text-lg font-semibold text-white">
                 <MagicIcon />
                 <span>Powers everything</span>
               </h3>
             </div>
             <div className="mx-auto mt-5 block rounded-tag bg-night-800 px-2.5 py-1.5 sm:w-max">
-              <h3 className="text-lg font-semibold tracking-wider text-honey-50">
+              <h3 className="text-lg font-semibold text-honey-50">
                 Treasures as composable resources
               </h3>
             </div>

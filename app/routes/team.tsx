@@ -13,7 +13,7 @@ const TeamCard = () => {
       <div className="mt-7 space-y-2 text-center">
         <p className="text-black-900 font-mono text-3xl font-semibold">t1dev</p>
         <div className="inline-block rounded-1.5xl bg-honey-100 px-4 py-2.5">
-          <h3 className="font-mono font-medium tracking-wider text-ruby-900">
+          <h3 className="font-mono font-medium text-ruby-900">
             Economist | Product, Bridgeworld
           </h3>
         </div>
