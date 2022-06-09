@@ -11,6 +11,7 @@ import {
   Outlet,
   Scripts,
   useLoaderData,
+  useMatches,
 } from "@remix-run/react";
 
 import { getEnvVariable } from "./utils/env";
@@ -21,8 +22,11 @@ import styles from "./styles/tailwind.css";
 
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { getPosts } from "./utils/posts.server";
+import type { Posts } from "./utils/posts.server";
 
-type RootLoaderData = {
+export type RootLoaderData = {
+  data: Posts;
   ENV: Partial<CloudFlareEnv>;
 };
 
@@ -54,6 +58,11 @@ export const links: LinksFunction = () => [
     href: "/safari-pinned-tab.svg",
     color: "#dc2626",
   },
+  {
+    rel: "preload",
+    href: "/img/bridgeworld-bg.png",
+    as: "image",
+  },
 ];
 
 export const meta: MetaFunction = () => ({
@@ -67,6 +76,7 @@ export const meta: MetaFunction = () => ({
 export const loader: LoaderFunction = async ({ context }) => {
   const env = context as CloudFlareEnv;
   return json<RootLoaderData>({
+    data: await getPosts(),
     ENV: Object.keys(env).reduce(
       (envVars, key) => ({
         ...envVars,

@@ -71,3 +71,5 @@ export const getPosts = async () => {
     }
   }
 };
+
+export type Posts = Awaited<ReturnType<typeof getPosts>>;

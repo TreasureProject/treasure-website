@@ -1,4 +1,6 @@
+import { Link } from "@remix-run/react";
 import { MagicIcon } from "~/components/Icons";
+import { TreasurePosts } from "~/components/TreasurePosts";
 import { TreasureStats } from "~/components/TreasureStats";
 import Legion1Img from "../../public/img/legion1.png";
 import Legion2Img from "../../public/img/legion2.png";
@@ -150,6 +152,14 @@ export default function About() {
           </div>
         </div>
       </div>
+      <TreasurePosts />
     </main>
   );
 }
+
+export const handle = {
+  breadcrumb: {
+    href: "/about",
+    title: "About",
+  },
+};

@@ -23,7 +23,7 @@ import {
   BridgeIcon,
   DiscordIcon,
   EconomyIcon,
-  MarketplaceIcon,
+  TroveIcon,
   TwitterIcon,
 } from "~/components/Icons";
 
@@ -256,7 +256,7 @@ export const partners = [
 export const Infrastructures = [
   {
     name: "Marketplace",
-    icon: <MarketplaceIcon className="h-10 w-10" aria-hidden="true" />,
+    icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
     description:
       "Showcasing projects and initiatives built by and with the community.",
     buttonDescription: "View Marketplace",
