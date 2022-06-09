@@ -10,8 +10,8 @@ import {
   Meta,
   Outlet,
   Scripts,
+  ScrollRestoration,
   useLoaderData,
-  useMatches,
 } from "@remix-run/react";
 
 import { getEnvVariable } from "./utils/env";
@@ -102,6 +102,7 @@ export default function App() {
         <Outlet />
         <Footer />
         <Scripts />
+        <ScrollRestoration />
         {ENV.NODE_ENV === "development" ? <LiveReload /> : null}
         {/* env available anywhere on your app */}
         <script
