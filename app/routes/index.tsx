@@ -22,23 +22,23 @@ export default function Home() {
         <div className="mx-auto max-w-9xl lg:px-12">
           <div className="lg:grid lg:grid-cols-7 lg:gap-8">
             <div className="col-span-3 mx-auto max-w-lg px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
-              <div className="lg:py-12 xl:py-24">
-                <h1 className="mt-4 text-7xl font-bold tracking-tight text-ruby-900 sm:mt-5 lg:mt-6 xl:text-8xl">
+              <div className="lg:py-12 xl:pb-24 xl:pt-16">
+                <h1 className="mt-4 text-7xl font-bold tracking-tight text-ruby-900 sm:mt-0 xl:text-8xl">
                   The magic of play.
                 </h1>
-                <div className="mt-12 rounded-3xl border border-honey-200 bg-honey-50 px-12 py-11 lg:max-w-sm">
+                <div className="mt-12 lg:max-w-xs">
                   <p className="text-night-700">
                     Treasure is a decentralized video game console connecting
                     games and communities together through imagination,{" "}
-                    <span className="font-bold">$MAGIC</span>, and NFTs
+                    <span className="font-bold">$MAGIC</span>, and NFTs.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-span-4 m-0 mt-12 lg:relative lg:-mb-12 xl:-mb-2">
-              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0">
+            <div className="col-span-4 m-0 mt-12 lg:relative">
+              <div className="mx-auto flex max-w-md px-4 sm:max-w-4xl sm:px-6 lg:px-0">
                 <img
-                  className="w-full object-contain lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:max-w-none"
+                  className="w-full object-contain"
                   src={HeroImg}
                   alt="Hero"
                 />
@@ -50,21 +50,23 @@ export default function Home() {
       <TreasureStats />
       <div className="relative bg-night-900 py-16 sm:py-24">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-          <div className="inline-block rounded-2xl bg-night-800 px-3 py-2">
-            <h2 className="font-mono text-base font-medium text-night-200">
-              Core Cartridges
-            </h2>
-          </div>
+          <Badge
+            name="Core Cartridges"
+            bgColor="bg-night-800"
+            textColor="text-night-200"
+          />
           <p className="mx-auto mt-12 max-w-xl text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
             Games and worlds that delight the masses
           </p>
           <div className="mt-12">
             <CoreCartridges />
           </div>
-          <div className="mt-14 inline-block rounded-2xl bg-night-800 px-3 py-2">
-            <h2 className="font-mono text-base font-medium text-night-200">
-              Partner Cartridges
-            </h2>
+          <div className="mt-14">
+            <Badge
+              name="Partner Cartridges"
+              bgColor="bg-night-800"
+              textColor="text-night-200"
+            />
           </div>
         </div>
         <div className="relative mt-12 px-6 before:absolute before:left-0 before:bottom-0 before:top-0 before:bg-gradient-to-r before:from-night-900 before:to-night-900/10 after:absolute after:right-0 after:bottom-0 after:top-0 after:bg-gradient-to-l after:from-night-900 after:to-night-900/10 sm:px-0 before:sm:w-6 after:sm:w-6">
@@ -116,18 +118,18 @@ export default function Home() {
             <Badge name="Wall Of Love" />
           </div>
           <div className="mt-12 sm:mt-24">
-            <div className="hidden justify-items-center gap-4 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
-              <ul className="space-y-4">
+            <div className="hidden justify-items-center gap-8 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
+              <ul className="space-y-8">
                 {tweets.slice(0, 2).map((tweet) => (
                   <TwitterCard {...tweet} key={tweet.date} />
                 ))}
               </ul>
-              <ul className="space-y-4">
+              <ul className="space-y-8">
                 {tweets.slice(2, 4).map((tweet) => (
                   <TwitterCard {...tweet} key={tweet.date} />
                 ))}
               </ul>
-              <ul className="hidden space-y-4 xl:block">
+              <ul className="hidden space-y-8 xl:block">
                 {tweets.slice(4, 6).map((tweet) => (
                   <TwitterCard {...tweet} key={tweet.date} />
                 ))}

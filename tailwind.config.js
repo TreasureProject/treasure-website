@@ -8,7 +8,7 @@ module.exports = {
       maxWidth: {
         "4.5xl": "60rem",
         "8xl": "88rem",
-        "9xl": "96rem",
+        "9xl": "100rem",
       },
       fontFamily: {
         sans: ["Whyte", ...defaultTheme.fontFamily.sans],

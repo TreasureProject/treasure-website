@@ -13,7 +13,10 @@ export const Footer = () => (
     <div className="mx-auto max-w-9xl px-4 pt-12 sm:px-6 lg:px-12 lg:pt-16">
       <div className="xl:grid xl:grid-cols-5 xl:gap-8">
         <div className="flex flex-col items-center justify-center space-y-8 sm:block xl:col-span-1">
-          <img className="h-10" src={LogoImg} alt="Treasure" />
+          <Link to="/">
+            <span className="sr-only">Treasure</span>
+            <img className="h-10" src={LogoImg} alt="Treasure" />
+          </Link>
           <div className="flex space-x-6">
             {socials.map((social) => (
               <a
@@ -40,11 +43,12 @@ export const Footer = () => (
                     key={name}
                     className="space-y-6 text-center sm:text-left"
                   >
-                    <div className="inline-block w-max rounded-tag bg-honey-200 px-2.5 py-1.5">
-                      <p className="font-mono text-sm font-medium text-ruby-900">
-                        {name}
-                      </p>
-                    </div>
+                    <Badge
+                      name={name}
+                      bgColor="bg-honey-100"
+                      textColor="text-ruby-900"
+                      size="sm"
+                    />
                     <ul className="space-y-4">
                       {links.map(({ name, isExternal, href }) => (
                         <li
@@ -95,7 +99,7 @@ export const Footer = () => (
         </p>
         <div className="inline-block">
           <button
-            className="inline-flex items-center space-x-2 rounded-button bg-honey-100 px-3 py-2.5 font-mono font-medium text-ruby-900 transition-colors duration-500 hover:bg-honey-300"
+            className="inline-flex items-center space-x-2 rounded-button bg-honey-100 px-4 py-2.5 font-mono font-medium text-ruby-900 transition-colors duration-500 hover:bg-honey-300"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <span className="text-xs leading-5">To the surface</span>{" "}

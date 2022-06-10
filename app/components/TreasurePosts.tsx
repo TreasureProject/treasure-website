@@ -2,6 +2,7 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { Badge } from "./Badge";
 import type { RootLoaderData } from "~/root";
 import { useRouteData } from "remix-utils";
+import classNames from "clsx";
 
 export const TreasurePosts = () => {
   const routeData = useRouteData<RootLoaderData>("root");
@@ -16,15 +17,20 @@ export const TreasurePosts = () => {
           <Badge name="Latest" />
         </div>
       </div>
-      <div className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-10 sm:mt-24 sm:px-0">
+      <div className="mt-12 flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-10 sm:mt-24 sm:px-0">
         {routeData?.data?.map((post) => (
           <div
             key={post.title}
-            className="relative flex h-56 w-full snap-center flex-col justify-between rounded-2xl border border-transparent bg-honey-50 p-6 transition-colors duration-500 hover:border-honey-200 sm:h-80 first-of-type:sm:ml-6 last-of-type:sm:mr-6 first-of-type:lg:ml-12 last-of-type:lg:mr-12 first-of-type:xl:ml-16 last-of-type:xl:mr-16"
+            className="relative flex h-full w-full snap-center flex-col justify-between rounded-2xl border border-transparent bg-honey-50 p-6 transition-colors duration-500 hover:border-honey-200 sm:h-80 first-of-type:sm:ml-6 last-of-type:sm:mr-6 first-of-type:lg:ml-12 last-of-type:lg:mr-12 first-of-type:xl:ml-16 last-of-type:xl:mr-16"
           >
-            <div className="flex flex-1">
-              <div className="flex w-64 flex-col space-y-2 px-4 sm:w-96 sm:space-y-5">
-                <span className="text-xs">{post.published}</span>
+            <div className="flex flex-1 flex-col-reverse sm:flex-row">
+              <div
+                className={classNames(
+                  post.thumbnail ? "sm:pr-14" : null,
+                  "mt-5 flex w-64 flex-col space-y-5 sm:mt-0 sm:w-96"
+                )}
+              >
+                <span className="text-xs text-night-700">{post.published}</span>
                 <p className="break-words text-lg font-bold leading-none text-night-900 line-clamp-2 sm:text-2xl sm:line-clamp-3">
                   <a href={post.link} target="_blank" rel="noopener noreferrer">
                     <span className="absolute inset-0 h-full w-full"></span>
@@ -36,7 +42,7 @@ export const TreasurePosts = () => {
                 </p>
               </div>
               {post.thumbnail ? (
-                <div className="h-24 w-24 sm:h-48 sm:w-48">
+                <div className="sm:h-48 sm:w-48">
                   <img
                     className="h-full w-full rounded-md object-cover"
                     src={post.thumbnail}
@@ -46,11 +52,12 @@ export const TreasurePosts = () => {
               ) : null}
             </div>
             <div className="mt-6 flex items-center justify-between">
-              <div className="inline-block w-max rounded-tag bg-honey-100 px-2.5 py-1.5">
-                <p className="font-mono text-sm font-medium text-ruby-900">
-                  Medium Article
-                </p>
-              </div>
+              <Badge
+                name="Medium Article"
+                bgColor="bg-honey-100"
+                textColor="text-ruby-900"
+                size="sm"
+              />
               <ExternalLinkIcon className="h-5 w-5 text-ruby-900" />
             </div>
           </div>

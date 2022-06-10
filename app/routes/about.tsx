@@ -62,7 +62,7 @@ export default function About() {
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
           <div className="grid gap-8 xl:grid-cols-2">
             <div className="rounded-2.5xl border-2 border-honey-100 bg-honey-50 p-14">
-              <h3 className="text-3xl font-semibold text-ruby-900 sm:text-5xl">
+              <h3 className="text-3xl font-bold text-ruby-900 sm:text-5xl">
                 The Problem
               </h3>
               <p className="mt-5 text-lg text-night-700 sm:mt-10">
@@ -75,7 +75,7 @@ export default function About() {
               </p>
             </div>
             <div className="rounded-2.5xl border-2 border-honey-100 bg-honey-50 p-14">
-              <h3 className="text-3xl font-semibold text-ruby-900 sm:text-5xl">
+              <h3 className="text-3xl font-bold text-ruby-900 sm:text-5xl">
                 The Solution
               </h3>
               <p className="mt-5 text-lg text-night-700 sm:mt-10">
@@ -99,16 +99,16 @@ export default function About() {
           <div className="relative mt-16 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
             <div className="mb-12 flex items-center justify-center lg:col-span-3 lg:col-start-1 lg:mb-0">
               <img
-                className="h-80 w-80 object-cover"
+                className="h-48 w-48 object-cover md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem]"
                 src={MagicImg}
                 alt="Magic"
               />
             </div>
             <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:col-span-4">
-              <h3 className="text-3xl font-extrabold text-ruby-900 sm:text-4xl">
+              <h3 className="text-xl font-extrabold text-ruby-900 sm:text-4xl">
                 $Magic as currency
               </h3>
-              <div className="mt-6 space-y-4 text-night-700">
+              <div className="mt-6 space-y-4 text-sm text-night-700 sm:text-base">
                 <p>
                   MAGIC is the currency of Treasure that serves as
                   cross-metaverse monies within the common economic layer.
@@ -128,19 +128,19 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="relative mt-12 lg:mt-20 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
+          <div className="relative mt-12 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
             <div className="mb-12 flex items-center justify-center lg:order-1 lg:col-span-3 lg:col-start-5 lg:mb-0">
               <img
-                className="h-80 w-80 object-cover"
+                className="h-48 w-48 object-cover md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem]"
                 src={TreasureImg}
                 alt="Treasures"
               />
             </div>
             <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:order-2 lg:col-span-4">
-              <h3 className="text-3xl font-semibold text-ruby-900 sm:text-4xl">
+              <h3 className="text-xl font-semibold text-ruby-900 sm:text-4xl">
                 Treasures as resources
               </h3>
-              <div className="mt-6 space-y-4 text-night-700">
+              <div className="mt-6 space-y-4 text-sm text-night-700 sm:text-base">
                 <p>
                   Treasures (NFTs) are a set of economic resources shared across
                   metaverses. As such, each NFT carries with them a unique story

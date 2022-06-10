@@ -35,33 +35,25 @@ export default function Community() {
       <div className="relative bg-honey-200 py-16 sm:py-20">
         <div className="mx-auto grid grid-cols-2 place-items-center gap-8 px-8 lg:max-w-4xl lg:grid-cols-4 lg:gap-20">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-4xl font-semibold text-ruby-900 sm:text-5xl">
-              30+
-            </p>
+            <p className="text-4xl font-bold text-ruby-900 sm:text-5xl">30+</p>
             <p className="mt-2.5 text-center text-xl text-night-900">
               Community Initiatives
             </p>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <p className="text-4xl font-semibold text-ruby-900 sm:text-5xl">
-              10+
-            </p>
+            <p className="text-4xl font-bold text-ruby-900 sm:text-5xl">10+</p>
             <p className="mt-2.5 text-center text-xl text-night-900">
               Guilds playing Bridgeworld
             </p>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <p className="text-4xl font-semibold text-ruby-900 sm:text-5xl">
-              83K
-            </p>
+            <p className="text-4xl font-bold text-ruby-900 sm:text-5xl">83K</p>
             <p className="mt-2.5 text-center text-xl text-night-900">
               Twitter Followers
             </p>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <p className="text-4xl font-semibold text-ruby-900 sm:text-5xl">
-              26K
-            </p>
+            <p className="text-4xl font-bold text-ruby-900 sm:text-5xl">26K</p>
             <p className="mt-2.5 text-center text-xl text-night-900">
               Twitter Followers
             </p>
@@ -79,18 +71,18 @@ export default function Community() {
             Enjoyed by many (and counting)
           </h2>
           <div className="mt-12 sm:mt-24">
-            <div className="hidden justify-items-center gap-4 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
-              <ul className="space-y-4">
+            <div className="hidden justify-items-center gap-8 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
+              <ul className="space-y-8">
                 {tweets.slice(0, 2).map((tweet) => (
                   <TwitterCard {...tweet} key={tweet.date} />
                 ))}
               </ul>
-              <ul className="space-y-4">
+              <ul className="space-y-8">
                 {tweets.slice(2, 4).map((tweet) => (
                   <TwitterCard {...tweet} key={tweet.date} />
                 ))}
               </ul>
-              <ul className="hidden space-y-4 xl:block">
+              <ul className="hidden space-y-8 xl:block">
                 {tweets.slice(4, 6).map((tweet) => (
                   <TwitterCard {...tweet} key={tweet.date} />
                 ))}
