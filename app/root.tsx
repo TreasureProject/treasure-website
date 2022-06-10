@@ -95,7 +95,7 @@ export const loader: LoaderFunction = async ({ context }) => {
 export default function App() {
   const { ENV } = useLoaderData<RootLoaderData>();
   const [openPurchaseMagicModal, setOpenPurchaseMagicModal] =
-    React.useState(true);
+    React.useState(false);
 
   const openModal = () => setOpenPurchaseMagicModal(true);
   const closeModal = () => setOpenPurchaseMagicModal(false);
