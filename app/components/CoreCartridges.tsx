@@ -10,7 +10,6 @@ export const CoreCartridges = () => {
     "smol" | "bw" | null
   >(null);
 
-  console.log(hoveredCartridge);
   return (
     <div className="mt-12 flex flex-col justify-center xl:flex-row">
       <div
