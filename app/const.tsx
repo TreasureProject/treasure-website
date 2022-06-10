@@ -505,35 +505,52 @@ export const WhyTreasureCardList = [
 export const communities = [
   {
     name: "Governance (DAO)",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
+    description: "Participate and decide on the future of TreasureDAO.",
+    buttons: [
+      {
+        buttonDescription: "Forum",
+        href: "https://treasuredao.freeflarum.com/",
+      },
+      {
+        buttonDescription: "Vote",
+        href: "https://snapshot.org/#/treasuredao.eth",
+      },
+    ],
     image: GovernanceImg,
-  },
-  {
-    name: "Guilds",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Join a Guild",
-    href: "#",
-    image: GuildsImg,
-  },
-  {
-    name: "Community Initiatives",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-    image: CommunityInitiativesImg,
   },
   {
     name: "Bounty Board",
     description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "View Initiatives",
-    href: "#",
+      "Supporting builders through Treasure’s official grants program.",
+    buttons: [
+      {
+        buttonDescription: "Build with us",
+        href: "https://app.dework.xyz/treasuredao/board",
+      },
+    ],
     image: BountyBoardImg,
+  },
+  {
+    name: "Community Initiatives",
+    description: "Projects and initiatives built by and with the community.",
+    buttons: [
+      {
+        buttonDescription: "Discover now",
+        href: "https://treasure-dao.notion.site/3d135199cadd4f05baab4bce8c792ebe?v=f2ab00c41ab9457193632042ce682e00",
+      },
+    ],
+    image: CommunityInitiativesImg,
+  },
+  {
+    name: "Guilds",
+    description: "Bringing people together through social coordination.",
+    buttons: [
+      {
+        buttonDescription: "Explore guilds",
+        href: "https://treasure-dao.notion.site/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
+      },
+    ],
+    image: GuildsImg,
   },
 ];
 
@@ -583,32 +600,24 @@ export const infrastructures = [
     name: "Marketplace",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
     description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "View Marketplace",
+      "Trove is a gamified NFT marketplace on Arbitrum, denominated in MAGIC and ETH.",
+    buttonDescription: "Visit Trove",
     href: "#",
   },
   {
     name: "AMM",
     icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
     description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
+      "Magicswap will support trading of native tokens for cartridges with each liquidity pool using MAGIC as the base pair.",
+    buttonDescription: "Coming Soon",
     href: "#",
   },
   {
     name: "Economy",
     icon: <EconomyIcon className="h-10 w-10" aria-hidden="true" />,
     description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-  },
-  {
-    name: "Bridging",
-    icon: <BridgeIcon className="h-10 w-10" aria-hidden="true" />,
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
+      "Bridgeworld provides the shared economy for Treasure, enabled through cross-metaverse relationships and resource sharing.",
+    buttonDescription: "Discover Bridgeworld",
     href: "#",
   },
 ];

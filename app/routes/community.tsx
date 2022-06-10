@@ -1,6 +1,6 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
-import { Guilds } from "~/components/Guilds";
+import { Communities } from "~/components/Communities";
 import { GuildsIcon } from "~/components/Icons";
 import { TwitterCard } from "~/components/TwitterCard";
 import { tweets } from "~/const";
@@ -62,7 +62,7 @@ export default function Community() {
       </div>
       <div className="relative bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-          <Guilds />
+          <Community />
         </div>
       </div>
       <div className="relative bg-honey-25 py-16 sm:py-24">
