@@ -7,7 +7,7 @@ import { TreasureStats } from "~/components/TreasureStats";
 import { TreasurePosts } from "~/components/TreasurePosts";
 import { CoreCartridges } from "~/components/CoreCartridges";
 import { PartnerCartridge } from "~/components/PartnerCartridge";
-import { Communities } from "~/components/Communities";
+import { Guilds } from "~/components/Guilds";
 import { Infrastructures } from "~/components/Infrastructures";
 
 export default function Home() {
@@ -85,7 +85,7 @@ export default function Home() {
             <Badge name="Community" />
           </div>
           <div className="mt-12">
-            <Communities />
+            <Guilds />
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function Home() {
             </p>
             <Badge name="Infrastructure" />
           </div>
-          <div className="mx-auto mt-12 max-w-6xl">
+          <div className="mx-auto mt-12 max-w-3xl">
             <Infrastructures />
           </div>
         </div>

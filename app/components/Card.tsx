@@ -1,4 +1,5 @@
 import type { CardT } from "~/const";
+import HeroImg from "../../public/img/hero.png";
 import { CTAButton } from "./Button";
 
 export const Card = ({ card }: { card: CardT }) => (
@@ -9,12 +10,7 @@ export const Card = ({ card }: { card: CardT }) => (
     <div className="flex basis-7/12 flex-col items-start justify-between space-y-3 py-8 pl-8 pr-14">
       <p className="text-2xl font-semibold text-night-800">{card.name}</p>
       <p className="text-sm text-night-700 xl:text-base">{card.description}</p>
-
-      <div className="flex gap-4">
-        {card.buttons.map((Button) => (
-          <CTAButton>{Button.buttonDescription}</CTAButton>
-        ))}
-      </div>
+      <CTAButton>{card.buttonDescription}</CTAButton>
     </div>
     <div className="flex items-end">
       <img

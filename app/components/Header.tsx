@@ -310,13 +310,16 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                   })}
               </ol>
             </nav>
-            <button className="inline-flex items-center rounded-button bg-ruby-1000 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1400/50 focus:outline-none focus:ring-2 focus:ring-ruby-900 focus:ring-offset-2 sm:text-base">
+            <a
+              href="#"
+              className="inline-flex items-center rounded-button bg-ruby-1000 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1400/50 focus:outline-none focus:ring-2 focus:ring-ruby-900 focus:ring-offset-2 sm:text-base"
+            >
               Marketplace
               <TroveRevertedIcon
                 className="ml-4 h-6 w-6 text-white"
                 aria-hidden="true"
               />
-            </button>
+            </a>
           </div>
         </div>
       ) : null}
