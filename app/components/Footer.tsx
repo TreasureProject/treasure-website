@@ -5,7 +5,7 @@ import { Badge } from "./Badge";
 import { MagicIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 
-export const Footer = () => (
+export const Footer = ({ openModal }: { openModal: () => void }) => (
   <footer className="bg-honey-50" aria-labelledby="footer-heading">
     <h2 id="footer-heading" className="sr-only">
       Footer
@@ -84,13 +84,13 @@ export const Footer = () => (
             })}
         </div>
         <div className="mt-12 text-left xl:mt-0 xl:text-right">
-          <a
-            href="#"
+          <button
+            onClick={openModal}
             className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 sm:w-auto"
           >
             <span className="font-semibold">Buy</span>
             <MagicIcon />
-          </a>
+          </button>
         </div>
       </div>
       <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 sm:flex-row">

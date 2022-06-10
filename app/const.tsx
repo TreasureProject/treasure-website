@@ -1,5 +1,4 @@
 import BattleFlyImg from "../public/img/projects/battlefly.jpg";
-import BridgeworldImg from "../public/img/projects/bridgeworld.jpg";
 import KnightsOfTheEtherImg from "../public/img/projects/knightsofether.jpg";
 import LifeImg from "../public/img/projects/life.jpg";
 import LostSamuriseImg from "../public/img/projects/lostsamurise.jpg";
@@ -20,6 +19,12 @@ import JihoImg from "../public/img/partners/Jiho.svg";
 import MeritCircleImg from "../public/img/partners/MeritCircle.svg";
 import ReadyPlayerImg from "../public/img/partners/ReadyPlayer.svg";
 
+import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
+import OkxImg from "../public/img/magic-list/okx.svg";
+import LBankImg from "../public/img/magic-list/lBank.svg";
+import BitgetImg from "../public/img/magic-list/bitget.svg";
+import MexcGlobalImg from "../public/img/magic-list/mexcGlobal.svg";
+
 import {
   AMMIcon,
   BridgeIcon,
@@ -32,6 +37,35 @@ import {
   TwitterIcon,
   UsersIcon,
 } from "~/components/Icons";
+
+export const magicPurchaseLinks = [
+  {
+    name: "Sushiswap",
+    url: "https://sushiswap.com",
+    icon: SushiSwapImg,
+  },
+  {
+    name: "OKX",
+    url: "https://okx.io",
+    icon: OkxImg,
+  },
+  {
+    name: "LBank",
+    url: "https://lbank.io",
+    icon: LBankImg,
+  },
+  {
+    name: "Bitget",
+    url: "https://bitget.io",
+    icon: BitgetImg,
+  },
+
+  {
+    name: "Mexc Global",
+    url: "https://mexcglobal.com",
+    icon: MexcGlobalImg,
+  },
+];
 
 const TwitterLink = ({
   href,

@@ -14,7 +14,7 @@ import LogoImg from "../../public/img/logo.png";
 
 import classNames from "clsx";
 
-export const Header = () => {
+export const Header = ({ openModal }: { openModal: () => void }) => {
   const matches = useMatches();
 
   const isLeafPage = matches.some((match) => !!match.handle);
@@ -116,13 +116,13 @@ export const Header = () => {
                   </a>
                 ))}
               </div>
-              <a
-                href="#"
+              <button
+                onClick={openModal}
                 className="hidden items-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 lg:inline-flex"
               >
                 <span className="font-semibold">Buy</span>
                 <MagicIcon />
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -210,13 +210,13 @@ export const Header = () => {
                   })}
                 </nav>
                 <div className="mt-6 px-5">
-                  <a
-                    href="#"
+                  <button
+                    onClick={openModal}
                     className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
                   >
                     <span className="font-semibold">Buy</span>
                     <MagicIcon />
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
