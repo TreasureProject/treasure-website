@@ -71,7 +71,8 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                   {item.links.map((link) => {
                                     if (link.isExternal) {
                                       return (
-                                        <a
+                                        <Popover.Button
+                                          as="a"
                                           key={link.name}
                                           href={link.href}
                                           className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
@@ -80,11 +81,12 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                             {link.name}
                                           </span>
                                           <ExternalLinkIcon className="ml-1 h-4 w-4 text-ruby-900" />
-                                        </a>
+                                        </Popover.Button>
                                       );
                                     }
                                     return (
-                                      <Link
+                                      <Popover.Button
+                                        as={Link}
                                         key={link.name}
                                         to={link.href}
                                         className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
@@ -92,7 +94,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         <p className="text-base font-medium text-night-900">
                                           {link.name}
                                         </p>
-                                      </Link>
+                                      </Popover.Button>
                                     );
                                   })}
                                 </div>
@@ -197,24 +199,26 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                 {item.links.map((link) => {
                                   if (link.isExternal) {
                                     return (
-                                      <a
+                                      <Popover.Button
+                                        as="a"
                                         key={link.name}
                                         href={link.href}
                                         className="flex items-center px-3 py-2 font-medium text-night-900"
                                       >
                                         <span>{link.name}</span>
                                         <ExternalLinkIcon className="ml-1 h-3 w-3 text-ruby-900" />
-                                      </a>
+                                      </Popover.Button>
                                     );
                                   }
                                   return (
-                                    <Link
+                                    <Popover.Button
+                                      as={Link}
                                       key={link.name}
                                       to={link.href}
                                       className="block px-3 py-2 font-medium text-night-900"
                                     >
                                       {link.name}
-                                    </Link>
+                                    </Popover.Button>
                                   );
                                 })}
                               </Disclosure.Panel>

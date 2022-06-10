@@ -3,6 +3,7 @@ import Legion1Img from "../../public/img/legion1.png";
 import BWTextSvg from "../../public/img/bridgeworld-text.svg";
 import { CTAButton, InternalCTAButton } from "~/components/Button";
 import { BridgeworldInfrastructures } from "~/const";
+import InfrastuctureImg from "../../public/img/Infrastucture.png";
 
 export default function About() {
   return (
@@ -127,8 +128,8 @@ export default function About() {
             <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-1">
               <img
                 className="h-full w-full object-cover"
-                src="/img/bridgeworld-legions.jpeg"
-                alt=""
+                src={InfrastuctureImg}
+                alt="Infrastructure"
               />
             </div>
           </div>

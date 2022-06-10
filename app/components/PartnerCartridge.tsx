@@ -2,6 +2,7 @@ import type { CartridgeT } from "~/const";
 import { DiscordIcon, TwitterIcon } from "./Icons";
 import classNames from "clsx";
 import { Badge } from "./Badge";
+import { GlobeAltIcon } from "@heroicons/react/solid";
 
 export const PartnerCartridge = ({
   cartridge,
@@ -45,6 +46,14 @@ export const PartnerCartridge = ({
         >
           <span className="sr-only">{cartridge.name} Twitter Link</span>
           <TwitterIcon className="h-6 w-6" aria-hidden="true" />
+        </a>
+        <a
+          href={cartridge.websiteLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="sr-only">{cartridge.name} Website Link</span>
+          <GlobeAltIcon className="h-6 w-6" aria-hidden="true" />
         </a>
       </div>
     </div>

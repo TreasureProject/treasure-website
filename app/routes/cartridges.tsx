@@ -3,6 +3,7 @@ import { CTAButton } from "~/components/Button";
 import { CoreCartridges } from "~/components/CoreCartridges";
 import { PartnerCartridge } from "~/components/PartnerCartridge";
 import { partnerCartridges } from "~/const";
+import BecomeAPartnerImg from "../../public/img/BecomeAPartner.png";
 
 export default function Cartridges() {
   return (
@@ -65,8 +66,8 @@ export default function Cartridges() {
             <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-2">
               <img
                 className="h-full w-full object-cover"
-                src="/img/bridgeworld-legions.jpeg"
-                alt=""
+                src={BecomeAPartnerImg}
+                alt="Become a Partner"
               />
             </div>
           </div>

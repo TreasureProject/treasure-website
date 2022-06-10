@@ -3,6 +3,7 @@ import BWTextSvg from "../../public/img/bridgeworld-text.svg";
 import SmolverseTextSvg from "../../public/img/smolverse-text.svg";
 import { DiscordIcon, TwitterIcon } from "./Icons";
 import classNames from "clsx";
+import { GlobeAltIcon } from "@heroicons/react/solid";
 
 export const CoreCartridges = () => {
   const [hoveredCartridge, setHoveredCartridge] = useState<
@@ -36,7 +37,7 @@ export const CoreCartridges = () => {
             <div className="mt-4 flex space-x-3 rounded-xl bg-night-900 p-2">
               <a
                 className="text-night-600 hover:text-night-700"
-                href="#"
+                href="https://discord.gg/treasuredao"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -45,12 +46,21 @@ export const CoreCartridges = () => {
               </a>
               <a
                 className="text-night-600 hover:text-night-700"
-                href="#"
+                href="https://twitter.com/playbridgeworld"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="sr-only">Bridgeworld Twitter Link</span>
                 <TwitterIcon className="h-6 w-6" aria-hidden="true" />
+              </a>
+              <a
+                className="text-night-600 hover:text-night-800"
+                href="https://bridgeworld.treasure.lol/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="sr-only">Bridgeworld Website Link</span>
+                <GlobeAltIcon className="h-6 w-6" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -80,7 +90,7 @@ export const CoreCartridges = () => {
             <div className="mt-4 flex space-x-3 rounded-xl bg-night-900 p-2">
               <a
                 className="text-night-600 hover:text-night-800"
-                href="#"
+                href="https://discord.gg/smolbrains"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,12 +99,21 @@ export const CoreCartridges = () => {
               </a>
               <a
                 className="text-night-600 hover:text-night-800"
-                href="#"
+                href="https://twitter.com/SmolBrainsNFT"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="sr-only">Smolverse Twitter Link</span>
                 <TwitterIcon className="h-6 w-6" aria-hidden="true" />
+              </a>
+              <a
+                className="text-night-600 hover:text-night-800"
+                href="https://www.smolverse.lol/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="sr-only">Smolverse Website Link</span>
+                <GlobeAltIcon className="h-6 w-6" aria-hidden="true" />
               </a>
             </div>
           </div>
