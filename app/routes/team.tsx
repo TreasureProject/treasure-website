@@ -1,26 +1,55 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
-import { TwitterIcon } from "~/components/Icons";
+import { DiscordIcon, TwitterIcon } from "~/components/Icons";
+import type { MemberT } from "~/const";
+import { teamMembers } from "~/const";
+import classNames from "clsx";
 
-const TeamCard = () => {
+const TeamCard = ({ member }: { member: MemberT }) => {
+  const hasSocials = member.twitterLink || member.discordLink;
   return (
-    <div className="rounded-lg border-2 border-honey-300 bg-honey-50 px-9 py-8">
+    <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-9 py-8">
       <img
         className="w-full object-contain"
         src="https://via.placeholder.com/150"
         alt="Test"
       />
-      <div className="mt-7 space-y-2 text-center">
-        <p className="text-black-900 font-mono text-3xl font-semibold">t1dev</p>
-        <div className="inline-block rounded-1.5xl bg-honey-100 px-4 py-2.5">
+      <div
+        className={classNames(
+          !hasSocials && "flex flex-1 flex-col",
+          "mt-7 space-y-3 text-center"
+        )}
+      >
+        <p className="text-black-900 text-3xl font-bold">{member.name}</p>
+        <div className="inline-flex flex-1 items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
           <h3 className="font-mono font-medium text-ruby-900">
-            Economist | Product, Bridgeworld
+            {member.title}
           </h3>
         </div>
       </div>
-      <div className="mt-7 flex justify-center">
-        <TwitterIcon className="h-8 w-8 text-twitter" />
-      </div>
+      {hasSocials ? (
+        <div className="flex flex-1 items-end justify-center space-x-4">
+          {member.twitterLink ? (
+            <a
+              href={member.twitterLink}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="mt-8"
+            >
+              <TwitterIcon className="h-8 w-8 text-twitter" />
+            </a>
+          ) : null}
+          {member.discordLink ? (
+            <a
+              href={member.discordLink}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <DiscordIcon className="h-8 w-8 text-discord" />
+            </a>
+          ) : null}
+        </div>
+      ) : null}
     </div>
   );
 };
@@ -55,8 +84,8 @@ export default function Team() {
       <div className="relative bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
-            {Array.from({ length: 25 }).map((_, i) => (
-              <TeamCard key={i} />
+            {teamMembers.map((member) => (
+              <TeamCard key={member.name} member={member} />
             ))}
           </div>
         </div>

@@ -138,7 +138,7 @@ export default function App() {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative w-full transform overflow-hidden rounded-1.9xl border border-night-800 bg-night-900 p-4 text-left shadow-xl transition-all sm:max-w-2xl sm:p-6">
+                  <Dialog.Panel className="relative w-full transform overflow-hidden rounded-1.9xl border border-night-800 bg-night-900 p-4 text-left shadow-xl transition-all sm:max-w-2xl sm:p-10">
                     <div className="flex justify-between">
                       <Dialog.Title
                         as="h3"
@@ -182,7 +182,7 @@ export default function App() {
                         </div>
                       ))}
                     </div>
-                    <div className="mt-8 mb-4 text-center sm:mt-12 sm:mb-6">
+                    <div className="mt-8 mb-4 text-center text-sm sm:mt-16 sm:mb-6 sm:text-base">
                       <p className="text-white">
                         New to Magic?{" "}
                         <a
