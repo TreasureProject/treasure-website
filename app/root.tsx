@@ -27,7 +27,7 @@ import { getPosts } from "./utils/posts.server";
 import type { Posts } from "./utils/posts.server";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
-import { MagicIcon, MagicLogoIcon, MagicTextIcon } from "./components/Icons";
+import { MagicIcon } from "./components/Icons";
 import { magicPurchaseLinks } from "./const";
 
 export type RootLoaderData = {
@@ -145,10 +145,7 @@ export default function App() {
                         className="inline-flex items-center justify-center space-x-2 text-2xl font-bold text-honey-25"
                       >
                         <span className="font-bold">Buy</span>
-                        <span className="inline-flex items-center space-x-1">
-                          <MagicLogoIcon />
-                          <MagicTextIcon className="h-16 w-16" />
-                        </span>
+                        <MagicIcon />
                       </Dialog.Title>
                       <button
                         type="button"
@@ -163,10 +160,17 @@ export default function App() {
                       {magicPurchaseLinks.map((link) => (
                         <div
                           key={link.name}
-                          className="flex items-center justify-between rounded-1.5xl border-2 border-night-800 bg-white/[0.02] p-5 shadow-md"
+                          className="relative flex items-center justify-between rounded-1.5xl border-2 border-night-800 bg-white/[0.02] p-5 shadow-md hover:bg-white/[0.05]"
                         >
                           <p className="text-base font-bold text-white sm:text-xl">
-                            {link.name}
+                            <a
+                              href={link.url}
+                              rel="noopener noreferrer"
+                              target="_blank"
+                            >
+                              <span className="absolute inset-0 h-full w-full"></span>
+                              {link.name}
+                            </a>
                           </p>
                           <div>
                             <img

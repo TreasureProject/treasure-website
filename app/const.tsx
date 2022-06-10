@@ -41,28 +41,28 @@ import {
 export const magicPurchaseLinks = [
   {
     name: "Sushiswap",
-    url: "https://sushiswap.com",
+    url: "#",
     icon: SushiSwapImg,
   },
   {
     name: "OKX",
-    url: "https://okx.io",
+    url: "#",
     icon: OkxImg,
   },
   {
     name: "LBank",
-    url: "https://lbank.io",
+    url: "#",
     icon: LBankImg,
   },
   {
     name: "Bitget",
-    url: "https://bitget.io",
+    url: "#",
     icon: BitgetImg,
   },
 
   {
     name: "Mexc Global",
-    url: "https://mexcglobal.com",
+    url: "#",
     icon: MexcGlobalImg,
   },
 ];
