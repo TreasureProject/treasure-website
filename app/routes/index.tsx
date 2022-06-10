@@ -21,8 +21,8 @@ export default function Home() {
                 <h1 className="mt-4 text-7xl font-bold tracking-tight text-ruby-900 sm:mt-0 xl:text-8xl">
                   The magic of play.
                 </h1>
-                <div className="mt-12 lg:max-w-xs">
-                  <p className="text-night-700">
+                <div className="mt-12 rounded-1.9xl border-2 border-honey-200 bg-honey-50 p-7.5 lg:max-w-sm">
+                  <p className="text-lg text-night-700">
                     Treasure is a decentralized video game console connecting
                     games and communities together through imagination,{" "}
                     <span className="font-bold">$MAGIC</span>, and NFTs.
@@ -65,13 +65,13 @@ export default function Home() {
           </div>
         </div>
         <div className="relative mt-12 px-6 before:absolute before:left-0 before:bottom-0 before:top-0 before:bg-gradient-to-r before:from-night-900 before:to-night-900/10 after:absolute after:right-0 after:bottom-0 after:top-0 after:bg-gradient-to-l after:from-night-900 after:to-night-900/10 sm:px-0 before:sm:w-6 after:sm:w-6">
-          <div className="flex w-full snap-x snap-mandatory gap-6 overflow-x-auto pb-12">
+          <div className="flex w-full gap-6 overflow-x-auto pb-12">
             <div className="h-48 shrink-0"></div>
             {partnerCartridges.map((cartridge) => (
               <PartnerCartridge
                 cartridge={cartridge}
                 key={cartridge.name}
-                className="h-48 snap-center sm:w-80"
+                className="h-48 sm:w-80"
               />
             ))}
             <div className="h-48 shrink-0"></div>
