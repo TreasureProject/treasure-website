@@ -807,12 +807,12 @@ export type CartridgeT = typeof partnerCartridges[number];
 export const socials = [
   {
     name: "Discord",
-    href: "#",
+    href: "http://discord.gg/treasuredao",
     icon: (props: { className?: string }) => <DiscordIcon {...props} />,
   },
   {
     name: "Twitter",
-    href: "#",
+    href: "https://twitter.com/Treasure_DAO",
     icon: (props: { className?: string }) => <TwitterIcon {...props} />,
   },
 ];
