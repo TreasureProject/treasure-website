@@ -21,9 +21,6 @@ import ReadyPlayerImg from "../public/img/partners/ReadyPlayer.svg";
 
 import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
 import OkxImg from "../public/img/magic-list/okx.svg";
-import LBankImg from "../public/img/magic-list/lBank.svg";
-import BitgetImg from "../public/img/magic-list/bitget.svg";
-import MexcGlobalImg from "../public/img/magic-list/mexcGlobal.svg";
 
 import BountyBoardImg from "../public/img/illustrations/bountyBoard.svg";
 import BuildWithUsImg from "../public/img/illustrations/buildWithUs.svg";
@@ -76,6 +73,90 @@ import {
 
 export const teamMembers = [
   {
+    name: "John Patten",
+    title: "Co-Founder | Strategy",
+    discordLink: "discordapp.com/users/882718244920754238",
+    twitterLink: "twitter.com/jpatten__",
+    image: JohnImg,
+  },
+  {
+    name: "Gaarp",
+    title: "Co-Founder | Growth",
+    discordLink: "discordapp.com/users/314716890339737600",
+    twitterLink: "twitter.com/_gaarping",
+    image: GaarpImg,
+  },
+  {
+    name: "Karel",
+    title: "Operations",
+    discordLink: "discordapp.com/users/397537602988670977",
+    twitterLink: "twitter.com/0xkarel",
+    image: KarelImg,
+  },
+  {
+    name: "t1dev",
+    title: "Technology",
+    discordLink: "discordapp.com/users/175078706136612864",
+    twitterLink: "twitter.com/pr0zy",
+    image: T1DevImg,
+  },
+  {
+    name: "Peita",
+    title: "Economist | Product, Bridgeworld",
+    discordLink: "discordapp.com/users/349586001892605954",
+    twitterLink: "twitter.com/pugmassacre",
+    image: PeitaImg,
+  },
+  {
+    name: "Bahama",
+    title: "Product, Bridgeworld",
+    discordLink: "discordapp.com/users/791828959360319498",
+    twitterLink: "twitter.com/Mr_Bahama_",
+    image: BahamaImg,
+  },
+  {
+    name: "Santi",
+    title: "Product, Smolverse",
+    discordLink: "discordapp.com/users/568107237629886506",
+    twitterLink: "twitter.com/SantidotSanti",
+    image: SantiImg,
+  },
+  {
+    name: "SimMayor",
+    title: "Product, Trove",
+    discordLink: "discordapp.com/users/366404971354390533",
+    twitterLink: "twitter.com/SimMay0r",
+    image: JakeImg,
+  },
+  {
+    name: "Trav",
+    title: "Product, Smolverse | Community",
+    discordLink: "discordapp.com/users/301756705652342785",
+    twitterLink: "twitter.com/NFTravelerr",
+    image: TravImg,
+  },
+  {
+    name: "End",
+    title: "Product, Bridgeworld",
+    discordLink: "discordapp.com/users/146399041125613568",
+    twitterLink: "twitter.com/notrealend",
+    image: null,
+  },
+  {
+    name: "Maximee",
+    title: "Creative",
+    discordLink: "discordapp.com/users/324482717611982848",
+    twitterLink: "twitter.com/maximee_eth",
+    image: MaximeeImg,
+  },
+  {
+    name: "Sambino",
+    title: "Marketing",
+    discordLink: "discordapp.com/users/864206375492124702",
+    twitterLink: "twitter.com/sambino_eth",
+    image: SambinoImg,
+  },
+  {
     name: "Antlion",
     title: "Development (Backend), Trove",
     discordLink: "discordapp.com/users/397537602988670977",
@@ -88,13 +169,6 @@ export const teamMembers = [
     discordLink: "discordapp.com/users/803824281263538196",
     twitterLink: "twitter.com/Archang01",
     image: ArchangImg,
-  },
-  {
-    name: "Bahama",
-    title: "Product, Bridgeworld",
-    discordLink: "discordapp.com/users/791828959360319498",
-    twitterLink: "twitter.com/Mr_Bahama_",
-    image: BahamaImg,
   },
   {
     name: "drrrrck",
@@ -110,13 +184,7 @@ export const teamMembers = [
     twitterLink: "twitter.com/DukePaints",
     image: DukeImg,
   },
-  {
-    name: "End",
-    title: "Product, Bridgeworld",
-    discordLink: "discordapp.com/users/146399041125613568",
-    twitterLink: "twitter.com/notrealend",
-    image: null,
-  },
+
   {
     name: "ENT1T7",
     title: "UI/UX, Bridgeworld",
@@ -132,13 +200,6 @@ export const teamMembers = [
     image: FrannyImg,
   },
   {
-    name: "Gaarp",
-    title: "Co-Founder | Growth",
-    discordLink: "discordapp.com/users/314716890339737600",
-    twitterLink: "twitter.com/_gaarping",
-    image: GaarpImg,
-  },
-  {
     name: "Hunter",
     title: "Development (Front-End), Trove",
     discordLink: null,
@@ -152,13 +213,7 @@ export const teamMembers = [
     twitterLink: null,
     image: InspracImg,
   },
-  {
-    name: "John Patten",
-    title: "Co-Founder | Strategy",
-    discordLink: "discordapp.com/users/882718244920754238",
-    twitterLink: "twitter.com/jpatten__",
-    image: JohnImg,
-  },
+
   {
     name: "Just Cheese",
     title: "Development (Front-End), Bridgeworld",
@@ -179,20 +234,6 @@ export const teamMembers = [
     discordLink: null,
     twitterLink: "twitter.com/defiluffy",
     image: null,
-  },
-  {
-    name: "Maximee",
-    title: "Creative",
-    discordLink: "discordapp.com/users/324482717611982848",
-    twitterLink: "twitter.com/maximee_eth",
-    image: MaximeeImg,
-  },
-  {
-    name: "Peita",
-    title: "Economist | Product, Bridgeworld",
-    discordLink: "discordapp.com/users/349586001892605954",
-    twitterLink: "twitter.com/pugmassacre",
-    image: PeitaImg,
   },
   {
     name: "Peyton C",
@@ -223,39 +264,11 @@ export const teamMembers = [
     image: RappzulaImg,
   },
   {
-    name: "Sambino",
-    title: "Marketing",
-    discordLink: "discordapp.com/users/864206375492124702",
-    twitterLink: "twitter.com/sambino_eth",
-    image: SambinoImg,
-  },
-  {
-    name: "Santi",
-    title: "Product, Smolverse",
-    discordLink: "discordapp.com/users/568107237629886506",
-    twitterLink: "twitter.com/SantidotSanti",
-    image: SantiImg,
-  },
-  {
     name: "Shimsho",
     title: "Development (Front-End), Smolverse",
     discordLink: "discordapp.com/users/300891313451302913",
     twitterLink: "twitter.com/ImShimsho",
     image: ShimshoImg,
-  },
-  {
-    name: "SimMayor",
-    title: "Product, Trove",
-    discordLink: "discordapp.com/users/366404971354390533",
-    twitterLink: "twitter.com/SimMay0r",
-    image: null,
-  },
-  {
-    name: "t1dev",
-    title: "Technology",
-    discordLink: "discordapp.com/users/175078706136612864",
-    twitterLink: "twitter.com/pr0zy",
-    image: T1DevImg,
   },
   {
     name: "Tei Timoraegi",
@@ -264,13 +277,7 @@ export const teamMembers = [
     twitterLink: "twitter.com/Timoraegi",
     image: TimoImg,
   },
-  {
-    name: "Trav",
-    title: "Product, Smolverse | Community",
-    discordLink: "discordapp.com/users/301756705652342785",
-    twitterLink: "twitter.com/NFTravelerr",
-    image: TravImg,
-  },
+
   {
     name: "Vinny",
     title: "Development (Solidity)",
