@@ -156,7 +156,7 @@ export default function App() {
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </button>
                     </div>
-                    <div className="mt-4 grid auto-rows-fr grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-8">
+                    <div className="mt-4 grid grid-cols-1 gap-4 sm:mt-8 sm:gap-8">
                       {magicPurchaseLinks.map((link) => (
                         <div
                           key={link.name}

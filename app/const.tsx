@@ -307,22 +307,6 @@ export const magicPurchaseLinks = [
     url: "#",
     icon: OkxImg,
   },
-  {
-    name: "LBank",
-    url: "#",
-    icon: LBankImg,
-  },
-  {
-    name: "Bitget",
-    url: "#",
-    icon: BitgetImg,
-  },
-
-  {
-    name: "Mexc Global",
-    url: "#",
-    icon: MexcGlobalImg,
-  },
 ];
 
 const TwitterLink = ({
