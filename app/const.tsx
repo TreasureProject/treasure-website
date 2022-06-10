@@ -216,13 +216,6 @@ export const teamMembers = [
     image: JustCheeseImg,
   },
   {
-    name: "Karel",
-    title: "Operations",
-    discordLink: "discordapp.com/users/397537602988670977",
-    twitterLink: "twitter.com/0xkarel",
-    image: KarelImg,
-  },
-  {
     name: "luffy",
     title: "Development (Backend), Trove",
     discordLink: null,
