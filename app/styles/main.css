@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.parter-cartridge-container:hover .partner-hover-target:before {
+  @apply bg-night-800/75;
+}
+
+.parter-cartridge-container:hover .partner-hover-target div:last-child {
+  @apply opacity-30;
+}
+
+.parter-cartridge-container .partner-hover-target:hover::before {
+  @apply bg-night-900/30;
+}
+
+.parter-cartridge-container .partner-hover-target:hover div:last-child {
+  @apply opacity-100;
+}
+
 @font-face {
   font-family: "GroteskSemi";
   font-weight: 500;

@@ -65,8 +65,7 @@ export default function Home() {
           </div>
         </div>
         <div className="relative mt-12 px-6 before:absolute before:left-0 before:bottom-0 before:top-0 before:bg-gradient-to-r before:from-night-900 before:to-night-900/10 after:absolute after:right-0 after:bottom-0 after:top-0 after:bg-gradient-to-l after:from-night-900 after:to-night-900/10 sm:px-0 before:sm:w-6 after:sm:w-6">
-          <div className="flex w-full gap-6 overflow-x-auto pb-12">
-            <div className="h-48 shrink-0"></div>
+          <div className="parter-cartridge-container flex w-full gap-6 overflow-x-auto px-6 pb-12">
             {partnerCartridges.map((cartridge) => (
               <PartnerCartridge
                 cartridge={cartridge}
@@ -74,7 +73,6 @@ export default function Home() {
                 className="h-48 sm:w-80"
               />
             ))}
-            <div className="h-48 shrink-0"></div>
           </div>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function Cartridges() {
               </p>
             </div>
           </div>
-          <div className="mt-12 grid auto-rows-[200px] grid-cols-1 gap-8 px-4 sm:mt-[7.5rem] sm:auto-rows-[300px] xl:grid-cols-3 xl:px-0">
+          <div className="parter-cartridge-container mt-12 grid auto-rows-[200px] grid-cols-1 gap-8 px-4 sm:mt-[7.5rem] sm:auto-rows-[300px] xl:grid-cols-3 xl:px-0">
             {partnerCartridges.map((cartridge) => (
               <PartnerCartridge cartridge={cartridge} key={cartridge.name} />
             ))}
