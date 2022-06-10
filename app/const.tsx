@@ -57,6 +57,7 @@ import TravImg from "../public/img/pfps/Trav.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
+import PeteYamaImg from "../public/img/pfps/PeteYama.png";
 
 import {
   AMMIcon,
@@ -200,13 +201,6 @@ export const teamMembers = [
     image: FrannyImg,
   },
   {
-    name: "Hunter",
-    title: "Development (Front-End), Trove",
-    discordLink: null,
-    twitterLink: null,
-    image: null,
-  },
-  {
     name: "Insprac",
     title: "Development (Front-End), Bridgeworld",
     discordLink: "discordapp.com/users/209096852430258176",
@@ -234,6 +228,13 @@ export const teamMembers = [
     discordLink: null,
     twitterLink: "twitter.com/defiluffy",
     image: null,
+  },
+  {
+    name: "Pete Yama",
+    title: "Development (Front-End), Trove",
+    discordLink: null,
+    twitterLink: null,
+    image: PeteYamaImg,
   },
   {
     name: "Peyton C",
