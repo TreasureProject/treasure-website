@@ -94,7 +94,7 @@ export default function About() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-night-800 p-6 [background:linear-gradient(0deg,#131D2E,#131D2E),#101827] sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
             <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-              <p className="text-lg font-semibold text-honey-200 sm:text-2xl xl:text-4xl">
+              <p className="text-lg font-bold text-honey-200 sm:text-2xl xl:text-4xl">
                 Discover other games
               </p>
               <p className="text-sm text-night-500 sm:text-base xl:text-2xl">
@@ -117,7 +117,7 @@ export default function About() {
           </div>
           <div className="mt-12 grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-night-800 p-6 [background:linear-gradient(0deg,#131D2E,#131D2E),#101827] sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
             <div className="order-2 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-              <p className="text-lg font-semibold text-honey-200 sm:text-2xl xl:text-4xl">
+              <p className="text-lg font-bold text-honey-200 sm:text-2xl xl:text-4xl">
                 Infrastructure
               </p>
               <p className="text-sm text-night-500 sm:text-base xl:text-2xl">
