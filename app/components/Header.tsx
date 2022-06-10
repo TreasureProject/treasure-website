@@ -75,8 +75,6 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                           as="a"
                                           key={link.name}
                                           href={link.href}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
                                           className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
                                         >
                                           <span className="text-base font-medium text-night-900">
@@ -205,8 +203,6 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         as="a"
                                         key={link.name}
                                         href={link.href}
-                                        rel="noopener noreferrer"
-                                        target="_blank"
                                         className="flex items-center px-3 py-2 font-medium text-night-900"
                                       >
                                         <span>{link.name}</span>
