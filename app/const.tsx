@@ -32,6 +32,35 @@ import FlywheelImg from "../public/img/illustrations/flywheel.svg";
 import GovernanceImg from "../public/img/illustrations/governance.svg";
 import GuildsImg from "../public/img/illustrations/guilds.svg";
 
+import AntlionImg from "../public/img/pfps/Antlion.png";
+import ArchangImg from "../public/img/pfps/Archang.png";
+import BahamaImg from "../public/img/pfps/Bahama.png";
+import DerrickImg from "../public/img/pfps/Derrick.png";
+import DukeImg from "../public/img/pfps/Duke.png";
+import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
+import FrannyImg from "../public/img/pfps/Franny.png";
+import GaarpImg from "../public/img/pfps/Gaarp.png";
+import InspracImg from "../public/img/pfps/Insprac.png";
+import JakeImg from "../public/img/pfps/Jake.png";
+import JohnImg from "../public/img/pfps/John.png";
+import JustCheeseImg from "../public/img/pfps/JustCheese.png";
+import KarelImg from "../public/img/pfps/Karel.png";
+import MaximeeImg from "../public/img/pfps/Maximee.png";
+import PeitaImg from "../public/img/pfps/Peita.png";
+import PeytonImg from "../public/img/pfps/Peyton.png";
+import PixelmatImg from "../public/img/pfps/Pixelmat.png";
+import PreeminentImg from "../public/img/pfps/Preeminent.png";
+import RappzulaImg from "../public/img/pfps/Rappzula.png";
+import SambinoImg from "../public/img/pfps/Sambino.png";
+import SantiImg from "../public/img/pfps/Santi.png";
+import ShimshoImg from "../public/img/pfps/Shimsho.png";
+import T1DevImg from "../public/img/pfps/t1dev.png";
+import TimoImg from "../public/img/pfps/Timo.png";
+import TravImg from "../public/img/pfps/Trav.png";
+import VinnyImg from "../public/img/pfps/Vinny.png";
+import XImg from "../public/img/pfps/X.png";
+import ZakImg from "../public/img/pfps/Zak.png";
+
 import {
   AMMIcon,
   BridgeIcon,
@@ -51,186 +80,217 @@ export const teamMembers = [
     title: "Development (Backend), Trove",
     discordLink: "discordapp.com/users/397537602988670977",
     twitterLink: "twitter.com/0xkarel",
+    image: AntlionImg,
   },
   {
     name: "Archang",
     title: "Community",
     discordLink: "discordapp.com/users/803824281263538196",
     twitterLink: "twitter.com/Archang01",
+    image: ArchangImg,
   },
   {
     name: "Bahama",
     title: "Product, Bridgeworld",
     discordLink: "discordapp.com/users/791828959360319498",
     twitterLink: "twitter.com/Mr_Bahama_",
+    image: BahamaImg,
   },
   {
     name: "drrrrck",
     title: "Branding",
     discordLink: "discordapp.com/users/909261509748723723",
     twitterLink: "twitter.com/drrrrck",
+    image: DerrickImg,
   },
   {
     name: "Duke",
     title: "Art",
     discordLink: "discordapp.com/users/206403485120462848",
     twitterLink: "twitter.com/DukePaints",
+    image: DukeImg,
   },
   {
     name: "End",
     title: "Product, Bridgeworld",
     discordLink: "discordapp.com/users/146399041125613568",
     twitterLink: "twitter.com/notrealend",
+    image: null,
   },
   {
     name: "ENT1T7",
     title: "UI/UX, Bridgeworld",
     discordLink: "discordapp.com/users/354679433853927445",
     twitterLink: "twitter.com/ENT1T7",
+    image: Ent1T7Img,
   },
   {
     name: "Frannyverse",
     title: "Development (Front-End), Trove",
     discordLink: "discordapp.com/users/766502243699523615",
     twitterLink: "twitter.com/fr4nnyverse",
+    image: FrannyImg,
   },
   {
     name: "Gaarp",
     title: "Co-Founder | Growth",
     discordLink: "discordapp.com/users/314716890339737600",
     twitterLink: "twitter.com/_gaarping",
+    image: GaarpImg,
   },
   {
     name: "Hunter",
     title: "Development (Front-End), Trove",
     discordLink: null,
     twitterLink: null,
+    image: null,
   },
   {
     name: "Insprac",
     title: "Development (Front-End), Bridgeworld",
     discordLink: "discordapp.com/users/209096852430258176",
     twitterLink: null,
+    image: InspracImg,
   },
   {
     name: "John Patten",
     title: "Co-Founder | Strategy",
     discordLink: "discordapp.com/users/882718244920754238",
     twitterLink: "twitter.com/jpatten__",
+    image: JohnImg,
   },
   {
     name: "Just Cheese",
     title: "Development (Front-End), Bridgeworld",
     discordLink: "discordapp.com/users/353057125137645568",
     twitterLink: "twitter.com/jc_1917",
+    image: JustCheeseImg,
   },
   {
     name: "Karel",
     title: "Operations",
     discordLink: "discordapp.com/users/397537602988670977",
     twitterLink: "twitter.com/0xkarel",
+    image: KarelImg,
   },
   {
     name: "luffy",
     title: "Development (Backend), Trove",
     discordLink: null,
     twitterLink: "twitter.com/defiluffy",
+    image: null,
   },
   {
     name: "Maximee",
     title: "Creative",
     discordLink: "discordapp.com/users/324482717611982848",
     twitterLink: "twitter.com/maximee_eth",
+    image: MaximeeImg,
   },
   {
     name: "Peita",
     title: "Economist | Product, Bridgeworld",
     discordLink: "discordapp.com/users/349586001892605954",
     twitterLink: "twitter.com/pugmassacre",
+    image: PeitaImg,
   },
   {
     name: "Peyton C",
     title: "UI/UX, Trove & Bridgeworld",
     discordLink: "discordapp.com/users/131828558375944192",
     twitterLink: "twitter.com/peytoncroft",
+    image: PeytonImg,
   },
   {
     name: "pixelmat",
     title: "Art, Smolverse",
     discordLink: "discordapp.com/users/724274057520087110",
     twitterLink: "twitter.com/pixel_mat",
+    image: PixelmatImg,
   },
   {
     name: "Preeminent",
     title: "Marketing, Smolverse",
     discordLink: "discordapp.com/users/797371848627191818",
     twitterLink: "twitter.com/mikelauofficial",
+    image: PreeminentImg,
   },
   {
     name: "Rappzula",
     title: "Development (Full-Stack)",
     discordLink: "discordapp.com/users/690989750127165581",
     twitterLink: "twitter.com/0xrappzula",
+    image: RappzulaImg,
   },
   {
     name: "Sambino",
     title: "Marketing",
     discordLink: "discordapp.com/users/864206375492124702",
     twitterLink: "twitter.com/sambino_eth",
+    image: SambinoImg,
   },
   {
     name: "Santi",
     title: "Product, Smolverse",
     discordLink: "discordapp.com/users/568107237629886506",
     twitterLink: "twitter.com/SantidotSanti",
+    image: SantiImg,
   },
   {
     name: "Shimsho",
     title: "Development (Front-End), Smolverse",
     discordLink: "discordapp.com/users/300891313451302913",
     twitterLink: "twitter.com/ImShimsho",
+    image: ShimshoImg,
   },
   {
     name: "SimMayor",
     title: "Product, Trove",
     discordLink: "discordapp.com/users/366404971354390533",
     twitterLink: "twitter.com/SimMay0r",
+    image: null,
   },
   {
     name: "t1dev",
     title: "Technology",
     discordLink: "discordapp.com/users/175078706136612864",
     twitterLink: "twitter.com/pr0zy",
+    image: T1DevImg,
   },
   {
     name: "Tei Timoraegi",
     title: "Creative",
     discordLink: "discordapp.com/users/171948550828195840",
     twitterLink: "twitter.com/Timoraegi",
+    image: TimoImg,
   },
   {
     name: "Trav",
     title: "Product, Smolverse | Community",
     discordLink: "discordapp.com/users/301756705652342785",
     twitterLink: "twitter.com/NFTravelerr",
+    image: TravImg,
   },
   {
     name: "Vinny",
     title: "Development (Solidity)",
     discordLink: "discordapp.com/users/938500876438487061",
     twitterLink: "twitter.com/VinnyDev1",
+    image: VinnyImg,
   },
   {
     name: "X",
     title: "Community",
     discordLink: "discordapp.com/users/390264760748474368",
     twitterLink: "twitter.com/cxf_0886",
+    image: XImg,
   },
   {
     name: "Zak",
     title: "Branding",
     discordLink: "discordapp.com/users/212333834501357578",
     twitterLink: "twitter.com/Z_Keen",
+    image: ZakImg,
   },
 ];
 

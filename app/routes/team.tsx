@@ -10,9 +10,9 @@ const TeamCard = ({ member }: { member: MemberT }) => {
   return (
     <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-9 py-8">
       <img
-        className="w-full object-contain"
-        src="https://via.placeholder.com/150"
-        alt="Test"
+        className="w-full bg-honey-100 object-contain"
+        src={member.image ?? "https://via.placeholder.com/150"}
+        alt={member.name}
       />
       <div
         className={classNames(
