@@ -88,7 +88,7 @@ export const CoreCartridges = () => {
             />
             <div className="mt-4 flex space-x-3 rounded-xl bg-night-900 p-2">
               <a
-                className="text-night-600 hover:text-night-800"
+                className="text-night-600 hover:text-night-700"
                 href="https://discord.gg/smolbrains"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -97,7 +97,7 @@ export const CoreCartridges = () => {
                 <DiscordIcon className="h-6 w-6" aria-hidden="true" />
               </a>
               <a
-                className="text-night-600 hover:text-night-800"
+                className="text-night-600 hover:text-night-700"
                 href="https://twitter.com/SmolBrainsNFT"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export const CoreCartridges = () => {
                 <TwitterIcon className="h-6 w-6" aria-hidden="true" />
               </a>
               <a
-                className="text-night-600 hover:text-night-800"
+                className="text-night-600 hover:text-night-700"
                 href="https://www.smolverse.lol/"
                 target="_blank"
                 rel="noopener noreferrer"

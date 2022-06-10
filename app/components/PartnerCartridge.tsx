@@ -30,8 +30,9 @@ export const PartnerCartridge = ({
           textColor="text-white"
         />
       </div>
-      <div className="absolute bottom-0 left-0 right-0 mx-auto mb-6 mt-2 flex w-min items-center justify-center space-x-3 rounded-xl bg-night-900 p-2 text-night-600 hover:text-night-800">
+      <div className="absolute bottom-0 left-0 right-0 mx-auto mb-6 mt-2 flex w-min items-center justify-center space-x-3 rounded-xl bg-night-900 p-2">
         <a
+          className="text-night-600 hover:text-night-700"
           href={cartridge.discordLink}
           target="_blank"
           rel="noopener noreferrer"
@@ -40,6 +41,7 @@ export const PartnerCartridge = ({
           <DiscordIcon className="h-6 w-6" aria-hidden="true" />
         </a>
         <a
+          className="text-night-600 hover:text-night-700"
           href={cartridge.twitterLink}
           target="_blank"
           rel="noopener noreferrer"
@@ -48,6 +50,7 @@ export const PartnerCartridge = ({
           <TwitterIcon className="h-6 w-6" aria-hidden="true" />
         </a>
         <a
+          className="text-night-600 hover:text-night-700"
           href={cartridge.websiteLink}
           target="_blank"
           rel="noopener noreferrer"
