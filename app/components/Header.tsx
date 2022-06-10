@@ -75,6 +75,8 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                           as="a"
                                           key={link.name}
                                           href={link.href}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
                                           className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
                                         >
                                           <span className="text-base font-medium text-night-900">
@@ -203,6 +205,8 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         as="a"
                                         key={link.name}
                                         href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="flex items-center px-3 py-2 font-medium text-night-900"
                                       >
                                         <span>{link.name}</span>
@@ -307,7 +311,9 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
               </ol>
             </nav>
             <a
-              href="#"
+              href="https://trove.treasure.lol"
+              rel="noopener noreferrer"
+              target="_blank"
               className="inline-flex items-center rounded-button bg-ruby-1000 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1400/50 focus:outline-none focus:ring-2 focus:ring-ruby-900 focus:ring-offset-2 sm:text-base"
             >
               Marketplace

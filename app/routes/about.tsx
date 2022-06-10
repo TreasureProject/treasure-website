@@ -22,35 +22,35 @@ export default function About() {
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">
           <div className="rounded-2.5xl border-2 border-night-800 px-4 py-20 sm:p-20">
-            <p className="text-2xl font-semibold text-night-500">
+            <p className="text-base font-semibold text-night-500 sm:text-2xl">
               Treasure is building a decentralized 'game console' and publisher
               stack.
             </p>
-            <ol className="mt-24 list-none space-y-20 text-lg text-gray-500 [counter-reset:line] sm:mt-10 sm:ml-12 sm:space-y-4">
-              <li className="relative text-center before:absolute before:-top-16 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-10 before:w-10 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0">
+            <ol className="mt-24 list-none space-y-20 text-sm text-gray-500 [counter-reset:line] sm:mt-10 sm:ml-12 sm:space-y-4 sm:text-lg">
+              <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">
                 Cartridges: Games and metaverses built from the ground up by
                 Treasure and seasoned builders, all connected by $MAGIC.
               </li>
-              <li className="relative text-center before:absolute before:-top-16 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-10 before:w-10 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0">
+              <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">
                 Community: Composite of many smaller communities, connected
                 through lore, guilds, resources, and $MAGIC.
               </li>
-              <li className="relative text-center before:absolute before:-top-16 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-10 before:w-10 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0">
+              <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">
                 Infrastructure: The shared economic engine, tooling and
                 resources that powers the ecosystem and empowers builders.
               </li>
             </ol>
-            <p className="mt-10 px-4 text-xl font-semibold text-honey-200">
+            <p className="mt-10 px-4 text-sm font-semibold text-honey-200 sm:text-xl">
               All connected by a dual resource model:
             </p>
-            <div className="mx-auto mt-10 block w-full rounded-tag bg-night-800 px-2.5 py-1.5 sm:w-max">
-              <h3 className="flex items-center justify-center space-x-2 text-lg font-semibold text-white">
+            <div className="mx-auto mt-10 block w-full rounded-tag bg-night-800 px-2.5 py-3 sm:w-max sm:py-1.5">
+              <h3 className="flex items-center justify-center space-x-2 text-sm font-semibold text-white sm:text-lg">
                 <MagicIcon />
                 <span>Powers everything</span>
               </h3>
             </div>
-            <div className="mx-auto mt-5 block rounded-tag bg-night-800 px-2.5 py-1.5 sm:w-max">
-              <h3 className="text-lg font-semibold text-honey-50">
+            <div className="mx-auto mt-5 block rounded-tag bg-night-800 px-2.5 py-3 sm:w-max sm:py-1.5">
+              <h3 className="text-sm font-semibold text-honey-50 sm:text-lg">
                 Treasures as composable resources
               </h3>
             </div>

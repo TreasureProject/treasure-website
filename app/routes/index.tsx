@@ -7,7 +7,7 @@ import { TreasureStats } from "~/components/TreasureStats";
 import { TreasurePosts } from "~/components/TreasurePosts";
 import { CoreCartridges } from "~/components/CoreCartridges";
 import { PartnerCartridge } from "~/components/PartnerCartridge";
-import { Guilds } from "~/components/Guilds";
+import { Communities } from "~/components/Communities";
 import { Infrastructures } from "~/components/Infrastructures";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
                   The magic of play.
                 </h1>
                 <div className="mt-12 rounded-1.9xl border-2 border-honey-200 bg-honey-50 p-7.5 lg:max-w-sm">
-                  <p className="text-lg text-night-700">
+                  <p className="text-base text-night-700 sm:text-lg">
                     Treasure is a decentralized video game console connecting
                     games and communities together through imagination,{" "}
                     <span className="font-bold">$MAGIC</span>, and NFTs.
@@ -85,7 +85,7 @@ export default function Home() {
             <Badge name="Community" />
           </div>
           <div className="mt-12">
-            <Guilds />
+            <Communities />
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function Home() {
             </p>
             <Badge name="Infrastructure" />
           </div>
-          <div className="mx-auto mt-12 max-w-3xl">
+          <div className="mt-12">
             <Infrastructures />
           </div>
         </div>

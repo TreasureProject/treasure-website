@@ -1,9 +1,7 @@
 import { Badge } from "~/components/Badge";
-import { CTAButton } from "~/components/Button";
 import { Card } from "~/components/Card";
 import { Infrastructures } from "~/components/Infrastructures";
 import { communityInfrastructure } from "~/const";
-import HeroImg from "../../public/img/hero.png";
 
 export default function Infrastructure() {
   return (

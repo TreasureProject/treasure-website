@@ -18,6 +18,10 @@ import JasonChoiImg from "../public/img/partners/JasonChoi.svg";
 import JihoImg from "../public/img/partners/Jiho.svg";
 import MeritCircleImg from "../public/img/partners/MeritCircle.svg";
 import ReadyPlayerImg from "../public/img/partners/ReadyPlayer.svg";
+import RyanDelphiImg from "../public/img/partners/RyanDelphi.svg";
+import NeonImg from "../public/img/partners/Neon.svg";
+import Metat8Img from "../public/img/partners/Metat8.svg";
+import OnekxImg from "../public/img/partners/1kx.svg";
 
 import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
 import OkxImg from "../public/img/magic-list/okx.svg";
@@ -471,16 +475,24 @@ export const communityInfrastructure = [
     name: "Flywheel",
     description:
       "Launched by the Battefly team, Flywheel offers staking-as-a-service for smaller ecosystem projects to help foster growth of the entire ecosystem.",
-    buttonDescription: "Learn more",
-    href: "#",
+    CTAButtons: [
+      {
+        buttonDescription: "Learn more",
+        href: "https://docs.battlefly.game/battlefly-treasury/flywheel",
+      },
+    ],
     image: FlywheelImg,
   },
   {
     name: "Build with us",
     description:
       "Treasure is actively working to build infrastructure in partnership with the community",
-    buttonDescription: "Visit the bounty board",
-    href: "#",
+    CTAButtons: [
+      {
+        buttonDescription: "Visit the bounty board",
+        href: "https://app.dework.xyz/treasuredao/board",
+      },
+    ],
     image: BuildWithUsImg,
   },
 ];
@@ -491,55 +503,91 @@ export const WhyTreasureCardList = [
     description:
       "Providing clarity to projects integrating into and building on top of the Treasure ecosystem.",
     buttonDescription: "Learn more",
-    href: "#",
+    href: "https://docs.treasure.lol/partnerships/ecosystem-integration-framework",
   },
   {
     name: "Apply to Partner",
     description:
       "Express your interest in becoming a partner cartridge with Treasure.",
     buttonDescription: "Learn more",
-    href: "#",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform",
   },
 ];
 
 export const communities = [
   {
     name: "Governance (DAO)",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
+    description: "Participate and decide on the future of TreasureDAO.",
+    CTAButtons: [
+      {
+        buttonDescription: "Forum",
+        href: "https://treasuredao.freeflarum.com/",
+      },
+      {
+        buttonDescription: "Vote",
+        href: "https://snapshot.org/#/treasuredao.eth",
+      },
+    ],
+
     image: GovernanceImg,
-  },
-  {
-    name: "Guilds",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Join a Guild",
-    href: "#",
-    image: GuildsImg,
-  },
-  {
-    name: "Community Initiatives",
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-    image: CommunityInitiativesImg,
   },
   {
     name: "Bounty Board",
     description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "View Initiatives",
-    href: "#",
+      "Supporting builders through Treasure’s official grants program.",
+    CTAButtons: [
+      {
+        buttonDescription: "View Initiatives",
+        href: "https://app.dework.xyz/treasuredao/board",
+      },
+    ],
+
     image: BountyBoardImg,
+  },
+  {
+    name: "Community Initiatives",
+    description: "Projects and initiatives built by and with the community.",
+    CTAButtons: [
+      {
+        buttonDescription: "Discover Now",
+        href: "https://treasure-dao.notion.site/3d135199cadd4f05baab4bce8c792ebe?v=f2ab00c41ab9457193632042ce682e00",
+      },
+    ],
+
+    image: CommunityInitiativesImg,
+  },
+  {
+    name: "Guilds",
+    description: "Bringing people together through social coordination.",
+    CTAButtons: [
+      {
+        buttonDescription: "Join a Guild",
+        href: "https://www.notion.so/treasure-dao/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
+      },
+    ],
+    image: GuildsImg,
   },
 ];
 
 export type CardT = typeof communities[number];
 
 export const partners = [
+  {
+    name: "1kx",
+    image: OnekxImg,
+  },
+  {
+    name: "Neon",
+    image: NeonImg,
+  },
+  {
+    name: "Metat8",
+    image: Metat8Img,
+  },
+  {
+    name: "Ryan Delphi",
+    image: RyanDelphiImg,
+  },
   {
     name: "Acad Arena",
     image: AcadArenaImg,
@@ -580,36 +628,28 @@ export const partners = [
 
 export const infrastructures = [
   {
-    name: "Marketplace",
+    name: "Trove Marketplace",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
     description:
-      "Showcasing projects and initiatives built by and with the community.",
+      "Trove is a gamified NFT marketplace on Arbitrum, denominated in MAGIC and ETH.",
     buttonDescription: "View Marketplace",
-    href: "#",
+    href: "https://trove.treasure.lol",
   },
   {
     name: "AMM",
     icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
     description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
+      "Magicswap supports trading of native tokens for partner projects with each liquidity pool using MAGIC as the base pair.",
+    buttonDescription: "Coming Soon",
+    href: "https://magiscwap.treasure.lol",
   },
   {
-    name: "Economy",
+    name: "Visit Bridgeworld",
     icon: <EconomyIcon className="h-10 w-10" aria-hidden="true" />,
     description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
-  },
-  {
-    name: "Bridging",
-    icon: <BridgeIcon className="h-10 w-10" aria-hidden="true" />,
-    description:
-      "Showcasing projects and initiatives built by and with the community.",
-    buttonDescription: "Button CTA",
-    href: "#",
+      "Bridgeworld provides the shared economy for Treasure, enabled through cross-metaverse relationships and resource sharing.",
+    buttonDescription: "Coming Soon",
+    href: "https://bridgeworld.treasure.lol",
   },
 ];
 
@@ -627,13 +667,13 @@ export const BridgeworldInfrastructures = [
       "Collectives of players have formed, allowing for the coordination and competition for emissions between groups.",
   },
   {
-    name: "Global",
+    name: "Economy",
     icon: <GlobalIcon className="h-14 w-14" aria-hidden="true" />,
     description:
       "Showcasing projects and initiatives built by and with the community.",
   },
   {
-    name: "Cartridges",
+    name: "More to come",
     icon: <CartridgesIcon className="h-14 w-14" aria-hidden="true" />,
     description:
       "Serving as the interplay between games and guilds, cartridges (games) can form “nations” to exert influence over Bridgeworld.",
@@ -751,7 +791,7 @@ export const navigation = [
       },
     ],
   },
-  { name: "Marketplace", href: "#", isExternal: true },
+  { name: "Marketplace", href: "https://trove.treasure.lol", isExternal: true },
 ];
 
 export const partnerCartridges = [

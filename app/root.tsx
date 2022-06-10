@@ -186,7 +186,9 @@ export default function App() {
                       <p className="text-white">
                         New to Magic?{" "}
                         <a
-                          href="#"
+                          href="https://docs.treasure.lol/getting-started/what-is-magic"
+                          rel="noopener noreferrer"
+                          target="_blank"
                           className="text-ruby-900 decoration-ruby-900 hover:underline"
                         >
                           Learn more

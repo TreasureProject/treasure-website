@@ -48,10 +48,14 @@ export default function About() {
             </div>
             <div className="mt-8 flex flex-col justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-5">
               <div>
-                <CTAButton>Read the Guide</CTAButton>
+                <CTAButton href="https://docs.treasure.lol/bridgeworld/bridgeworld-litepaper">
+                  Read the Guide
+                </CTAButton>
               </div>
               <div>
-                <CTAButton>Discover its lore</CTAButton>
+                <CTAButton href="https://lore.treasure.lol/">
+                  Discover its lore
+                </CTAButton>
               </div>
             </div>
 

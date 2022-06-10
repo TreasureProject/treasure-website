@@ -1,6 +1,6 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
-import { Guilds } from "~/components/Guilds";
+import { Communities } from "~/components/Communities";
 import { GuildsIcon } from "~/components/Icons";
 import { TwitterCard } from "~/components/TwitterCard";
 import { tweets } from "~/const";
@@ -22,7 +22,7 @@ export default function Community() {
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">
           <div className="relative rounded-2.5xl border-2 border-night-800 bg-[#131D2E] p-10 sm:p-20">
             <div className="flex flex-col items-center">
-              <p className="text-2xl font-semibold text-night-500">
+              <p className="text-base font-semibold text-night-500 sm:text-2xl">
                 Treasure comprises a composite of many smaller communities, all
                 connected through lore, guilds, resources, and MAGIC.
               </p>
@@ -62,7 +62,7 @@ export default function Community() {
       </div>
       <div className="relative bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-          <Guilds />
+          <Communities />
         </div>
       </div>
       <div className="relative bg-honey-25 py-16 sm:py-24">
@@ -114,7 +114,9 @@ export default function Community() {
                 partner cartridge today.
               </p>
               <div>
-                <CTAButton>Join Now</CTAButton>
+                <CTAButton href="https://discord.gg/treasuredao">
+                  Join Now
+                </CTAButton>
               </div>
             </div>
             <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-2">

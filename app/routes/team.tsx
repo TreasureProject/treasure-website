@@ -4,6 +4,7 @@ import { DiscordIcon, TwitterIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
 import { teamMembers } from "~/const";
 import classNames from "clsx";
+import TreasureTeamImg from "../../public/img/TreasureTeam.png";
 
 const TeamCard = ({ member }: { member: MemberT }) => {
   const hasSocials = member.twitterLink || member.discordLink;
@@ -65,7 +66,7 @@ export default function Team() {
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
-          <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-14 text-xl text-night-700">
+          <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 px-14 pt-14 text-base text-night-700 sm:text-xl">
             <p>
               We are a collective of seasoned builders growing the expansive
               platform and decentralized game console that is Treasure.{" "}
@@ -78,6 +79,7 @@ export default function Team() {
               supported by a wealth of DAO contributors and passionate community
               members.
             </p>
+            <img src={TreasureTeamImg} alt="Treasure Team" className="w-full" />
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ export default function Cartridges() {
           </div>
           <div className="mx-auto mt-14 max-w-sm px-4 text-center sm:max-w-3xl sm:px-28 lg:px-20">
             <div className="rounded-2.5xl border-2 border-night-800 bg-[#131D2E] p-14">
-              <p className="text-xl text-night-600">
+              <p className="text-sm text-night-600 sm:text-xl">
                 Treasure’s grassroots formation has already inspired dozens of
                 community-led projects to launch and integrate MAGIC. We are
                 proud to be home to a thriving ecosystem that comprises a wide
@@ -60,7 +60,9 @@ export default function Cartridges() {
                 partner cartridge today.
               </p>
               <div>
-                <CTAButton>Apply here</CTAButton>
+                <CTAButton href="https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform">
+                  Apply here
+                </CTAButton>
               </div>
             </div>
             <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-2">
