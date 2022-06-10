@@ -1,11 +1,6 @@
-import { ExternalLinkIcon } from "@heroicons/react/solid";
-import type { LinksFunction } from "@remix-run/cloudflare";
 import HeroImg from "../../public/img/hero.png";
 
-import { DiscordIcon, TwitterIcon } from "~/components/Icons";
-
 import { Badge } from "~/components/Badge";
-import { CTAButton } from "~/components/Button";
 import { TwitterCard } from "~/components/TwitterCard";
 import { partnerCartridges, partners, tweets } from "~/const";
 import { TreasureStats } from "~/components/TreasureStats";
