@@ -13,7 +13,11 @@ export const Card = ({ card }: { card: CardT }) => (
       <CTAButton>{card.buttonDescription}</CTAButton>
     </div>
     <div className="flex items-end">
-      <img src={HeroImg} className="w-full object-cover xl:h-48" alt="Hero" />
+      <img
+        src={card.image}
+        className="w-full object-cover xl:h-56"
+        alt="Hero"
+      />
     </div>
   </div>
 );

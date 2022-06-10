@@ -25,6 +25,13 @@ import LBankImg from "../public/img/magic-list/lBank.svg";
 import BitgetImg from "../public/img/magic-list/bitget.svg";
 import MexcGlobalImg from "../public/img/magic-list/mexcGlobal.svg";
 
+import BountyBoardImg from "../public/img/illustrations/bountyBoard.svg";
+import BuildWithUsImg from "../public/img/illustrations/buildWithUs.svg";
+import CommunityInitiativesImg from "../public/img/illustrations/communityInitiatives.svg";
+import FlywheelImg from "../public/img/illustrations/flywheel.svg";
+import GovernanceImg from "../public/img/illustrations/governance.svg";
+import GuildsImg from "../public/img/illustrations/guilds.svg";
+
 import {
   AMMIcon,
   BridgeIcon,
@@ -421,6 +428,7 @@ export const communityInfrastructure = [
       "Launched by the Battefly team, Flywheel offers staking-as-a-service for smaller ecosystem projects to help foster growth of the entire ecosystem.",
     buttonDescription: "Learn more",
     href: "#",
+    image: FlywheelImg,
   },
   {
     name: "Build with us",
@@ -428,6 +436,7 @@ export const communityInfrastructure = [
       "Treasure is actively working to build infrastructure in partnership with the community",
     buttonDescription: "Visit the bounty board",
     href: "#",
+    image: BuildWithUsImg,
   },
 ];
 
@@ -455,6 +464,7 @@ export const communities = [
       "Showcasing projects and initiatives built by and with the community.",
     buttonDescription: "Button CTA",
     href: "#",
+    image: GovernanceImg,
   },
   {
     name: "Guilds",
@@ -462,6 +472,7 @@ export const communities = [
       "Showcasing projects and initiatives built by and with the community.",
     buttonDescription: "Join a Guild",
     href: "#",
+    image: GuildsImg,
   },
   {
     name: "Community Initiatives",
@@ -469,6 +480,7 @@ export const communities = [
       "Showcasing projects and initiatives built by and with the community.",
     buttonDescription: "Button CTA",
     href: "#",
+    image: CommunityInitiativesImg,
   },
   {
     name: "Bounty Board",
@@ -476,6 +488,7 @@ export const communities = [
       "Showcasing projects and initiatives built by and with the community.",
     buttonDescription: "View Initiatives",
     href: "#",
+    image: BountyBoardImg,
   },
 ];
 

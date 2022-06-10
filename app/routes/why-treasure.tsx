@@ -4,7 +4,6 @@ import LegionImg from "../../public/img/legion1.png";
 import GoldCoinImg from "../../public/img/gold-coin.png";
 import RedRupeeImg from "../../public/img/red-rupee.png";
 import { WhyTreasureCardList } from "~/const";
-import { Card } from "~/components/Card";
 import { CTAButton } from "~/components/Button";
 
 export default function WhyTreasure() {
