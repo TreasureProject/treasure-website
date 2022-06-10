@@ -663,7 +663,7 @@ export const navigation = [
       },
       {
         name: "Documentation",
-        href: "#",
+        href: "https://docs.treasure.lol/",
         isExternal: true,
       },
     ],
@@ -703,7 +703,7 @@ export const navigation = [
       },
       {
         name: "Apply for partnership",
-        href: "#",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform",
         isExternal: true,
       },
     ],
@@ -713,38 +713,52 @@ export const navigation = [
     links: [
       {
         name: "Forum",
-        href: "https://bridgeworld.treasure.lol",
+        href: "https://treasuredao.freeflarum.com/",
         isExternal: true,
       },
       {
         name: "Vote on Snapshot",
-        href: "#",
+        href: "https://snapshot.org/#/treasuredao.eth",
         isExternal: true,
       },
       {
         name: "Bounty Board",
-        href: "#",
+        href: "https://app.dework.xyz/treasuredao/board",
         isExternal: true,
       },
       {
         name: "Guilds",
-        href: "#",
+        href: "https://www.notion.so/treasure-dao/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
         isExternal: true,
       },
       {
-        name: "Initiatives",
-        href: "#",
+        name: "Community Initiatives",
+        href: "https://treasure-dao.notion.site/3d135199cadd4f05baab4bce8c792ebe?v=f2ab00c41ab9457193632042ce682e00",
         isExternal: true,
       },
       {
         name: "Talent",
-        href: "#",
+        href: "https://www.notion.so/treasure-dao/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7",
+        isExternal: true,
+      },
+    ],
+  },
+  {
+    name: "LP",
+    links: [
+      {
+        name: "MAGIC-ETH LP",
+        href: "https://app.sushi.com/farm?chainId=42161",
+        isExternal: true,
+      },
+      {
+        name: "Balancer Crystals",
+        href: "https://bc.treasure.lol/",
         isExternal: true,
       },
     ],
   },
   { name: "Marketplace", href: "#", isExternal: true },
-  { name: "LP", href: "#", isExternal: true },
 ];
 
 export const partnerCartridges = [

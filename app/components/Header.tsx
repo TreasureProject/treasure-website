@@ -68,18 +68,33 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                             <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
                               <div className="overflow-hidden rounded-lg shadow-lg shadow-honey-500/30 ring-1 ring-black ring-opacity-5">
                                 <div className="relative grid gap-6 bg-honey-50 px-5 py-6 sm:gap-8 sm:p-8">
-                                  {item.links.map((link) => (
-                                    <a
-                                      key={link.name}
-                                      href={link.href}
-                                      className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
-                                    >
-                                      <p className="text-base font-medium text-night-900">
-                                        {link.name}
-                                      </p>
-                                      {/* <p className="mt-1 text-sm text-gray-500">{item.description}</p> */}
-                                    </a>
-                                  ))}
+                                  {item.links.map((link) => {
+                                    if (link.isExternal) {
+                                      return (
+                                        <a
+                                          key={link.name}
+                                          href={link.href}
+                                          className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
+                                        >
+                                          <span className="text-base font-medium text-night-900">
+                                            {link.name}
+                                          </span>
+                                          <ExternalLinkIcon className="ml-1 h-4 w-4 text-ruby-900" />
+                                        </a>
+                                      );
+                                    }
+                                    return (
+                                      <Link
+                                        key={link.name}
+                                        to={link.href}
+                                        className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
+                                      >
+                                        <p className="text-base font-medium text-night-900">
+                                          {link.name}
+                                        </p>
+                                      </Link>
+                                    );
+                                  })}
                                 </div>
                               </div>
                             </Popover.Panel>
@@ -179,15 +194,29 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                 />
                               </Disclosure.Button>
                               <Disclosure.Panel className="px-4 py-2 text-sm text-night-500">
-                                {item.links.map((link) => (
-                                  <a
-                                    key={link.name}
-                                    href={link.href}
-                                    className="block px-3 py-2 font-medium text-night-900"
-                                  >
-                                    {link.name}
-                                  </a>
-                                ))}
+                                {item.links.map((link) => {
+                                  if (link.isExternal) {
+                                    return (
+                                      <a
+                                        key={link.name}
+                                        href={link.href}
+                                        className="flex items-center px-3 py-2 font-medium text-night-900"
+                                      >
+                                        <span>{link.name}</span>
+                                        <ExternalLinkIcon className="ml-1 h-3 w-3 text-ruby-900" />
+                                      </a>
+                                    );
+                                  }
+                                  return (
+                                    <Link
+                                      key={link.name}
+                                      to={link.href}
+                                      className="block px-3 py-2 font-medium text-night-900"
+                                    >
+                                      {link.name}
+                                    </Link>
+                                  );
+                                })}
                               </Disclosure.Panel>
                             </>
                           )}
@@ -201,10 +230,10 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                         key={item.name}
                         rel="noopener noreferrer"
                         target="_blank"
-                        className="flex justify-between px-4 py-2 text-left text-sm font-medium text-night-900"
+                        className="group flex items-center justify-between px-4 py-2 text-left font-medium text-night-900"
                       >
                         {item.name}
-                        <ExternalLinkIcon className="h-4 w-4 text-ruby-900" />
+                        <ExternalLinkIcon className="h-4 w-4 text-ruby-900 group-hover:text-ruby-700" />
                       </a>
                     );
                   })}
