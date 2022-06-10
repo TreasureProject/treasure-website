@@ -25,7 +25,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
     <>
       <Popover as="header" className="sticky top-0 z-20 lg:relative">
         <div className="bg-honey-100 py-4 sm:py-6">
-          <div className="relative mx-auto flex max-w-9xl items-center justify-between px-4 lg:px-12">
+          <div className="relative mx-auto flex max-w-9xl items-center justify-between px-4 sm:px-8 lg:px-12">
             <div className="flex w-full items-center justify-between lg:w-auto">
               <Link to="/">
                 <span className="sr-only">Treasure</span>
@@ -141,7 +141,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
             className="absolute inset-x-0 top-0 z-10 origin-top transform transition lg:hidden"
           >
             <div className="overflow-hidden bg-honey-50 shadow-md ring-1 ring-black ring-opacity-5">
-              <div className="flex items-center justify-between px-5 pt-4">
+              <div className="flex items-center justify-between px-4 pt-4 sm:px-8 sm:pt-6">
                 <div>
                   <img
                     className="h-8 w-auto xl:h-10"
@@ -167,7 +167,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                               <Disclosure.Button
                                 className={classNames(
                                   open && "bg-honey-200",
-                                  "group flex w-full justify-between rounded-xl px-4 py-2 text-left text-sm font-medium text-night-900 focus:outline-none focus-visible:ring focus-visible:ring-honey-500 focus-visible:ring-opacity-75"
+                                  "group flex w-full items-center justify-between rounded-1.5xl px-4 py-2 text-left font-medium text-night-900 focus:outline-none focus-visible:ring focus-visible:ring-honey-500 focus-visible:ring-opacity-75"
                                 )}
                               >
                                 <span>{item.name}</span>
