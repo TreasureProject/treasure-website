@@ -21,7 +21,7 @@ export const TreasureStats = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] =
+      const [magicPrice, totalMarketplaceVolume, uniqueAddresses, totalLocked] =
         await Promise.all([
           getMagicPrice(),
           getTotalMarketplaceVolume(),
@@ -38,8 +38,6 @@ export const TreasureStats = () => {
     };
     fetchData();
   }, []);
-
-  console.log(isLoading, data);
 
   return (
     <div className="relative bg-ruby-900 py-6 text-honey-25 lg:py-8">
@@ -73,7 +71,7 @@ export const TreasureStats = () => {
               Total Value Locked
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              ${isLoading ? " --" : data?.totalLocked}
+              {isLoading ? " --" : data?.totalLocked}
             </p>
           </div>
         </div>
@@ -84,7 +82,7 @@ export const TreasureStats = () => {
               Unique Wallets
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              ${isLoading ? " --" : data?.uniqueAddresses}
+              {isLoading ? " --" : data?.uniqueAddresses}
             </p>
           </div>
         </div>
