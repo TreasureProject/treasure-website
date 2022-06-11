@@ -20,7 +20,7 @@ export const CoreCartridges = () => {
         <div
           className={classNames(
             hoveredCartridge === "smol" && "before:bg-night-800/75",
-            "relative h-96 bg-[url('/img/bridgeworld.png')] bg-cover bg-no-repeat transition-transform duration-300 [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 peer-hover:bg-black/50 motion-reduce:before:transition-none md:h-[45rem] md:w-[34rem] md:[mask-image:url('/img/union-big.svg')] before:md:h-[45rem] xl:translate-y-4 group-hover:xl:translate-y-2"
+            "relative h-96 bg-[url('/img/bridgeworld.jpg')] bg-cover bg-no-repeat transition-transform duration-300 [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 motion-reduce:before:transition-none md:h-[45rem] md:w-[34rem] md:[mask-image:url('/img/union-big.svg')] before:md:h-[45rem] xl:translate-y-2 group-hover:xl:translate-y-0"
           )}
         >
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
@@ -73,13 +73,13 @@ export const CoreCartridges = () => {
         <div
           className={classNames(
             hoveredCartridge === "bw" && "before:bg-night-800/75",
-            "relative h-96 bg-[url('/img/smolverse.png')] bg-[length:400px_600px] bg-bottom bg-no-repeat transition-transform duration-300 [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 before:group-hover:bg-night-800/50 motion-reduce:before:transition-none sm:bg-[length:500px_850px] md:h-[45rem] md:w-[34rem] md:[mask-image:url('/img/union-big.svg')] before:md:h-[45rem] xl:translate-y-4 group-hover:xl:translate-y-2"
+            "relative h-96 bg-[url('/img/smolverse.png')] bg-contain bg-top bg-no-repeat transition-transform duration-300 [mask-repeat:no-repeat] [mask-image:url('/img/union.svg')] [mask-size:contain] [mask-position:center] before:absolute before:right-0 before:bottom-0 before:left-0 before:h-96 before:bg-gradient-to-t before:from-night-900 before:via-transparent before:to-transparent before:transition-colors before:duration-500 motion-reduce:before:transition-none md:h-[45rem] md:w-[34rem] md:bg-cover md:bg-top md:[mask-image:url('/img/union-big.svg')] before:md:h-[45rem] xl:translate-y-2 group-hover:xl:translate-y-0"
           )}
         >
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
             <img
               src={SmolverseTextSvg}
-              alt="Bridgeworld"
+              alt="Smolverse"
               className={classNames(
                 hoveredCartridge === "bw" &&
                   "opacity-30 transition-all duration-500",

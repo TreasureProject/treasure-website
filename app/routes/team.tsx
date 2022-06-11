@@ -109,9 +109,9 @@ export default function Team() {
             </div>
             <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-2">
               <img
-                className="h-full w-full object-cover"
-                src="/img/bridgeworld-legions.jpeg"
-                alt=""
+                className="h-full w-full object-contain"
+                src={TreasureTeamImg}
+                alt="Treasure Team"
               />
             </div>
           </div>

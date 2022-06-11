@@ -1,4 +1,3 @@
-import { Link } from "@remix-run/react";
 import { Badge } from "~/components/Badge";
 import { MagicIcon } from "~/components/Icons";
 import { TreasurePosts } from "~/components/TreasurePosts";

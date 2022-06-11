@@ -29,9 +29,15 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
 import { MagicIcon } from "./components/Icons";
 import { magicPurchaseLinks } from "./const";
+import { getDomainUrl } from "./utils/misc.server";
+import { generateTitle, getSocialMetas, getUrl } from "./utils/seo";
 
 export type RootLoaderData = {
   data: Posts;
+  requestInfo: {
+    origin: string;
+    path: string;
+  };
   ENV: Partial<CloudFlareEnv>;
 };
 
@@ -68,20 +74,64 @@ export const links: LinksFunction = () => [
     href: "/img/bridgeworld-bg.png",
     as: "image",
   },
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/ABCWhyte-Bold.otf",
+    type: "font/otf",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/ABCWhyte-Medium.otf",
+    type: "font/otf",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/ABCWhyte-Regular.otf",
+    type: "font/otf",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/ABCMonumentGroteskSemi-Mono-Medium.otf",
+    type: "font/otf",
+    crossOrigin: "anonymous",
+  },
 ];
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "Treasure",
-  viewport: "width=device-width,initial-scale=1",
-  "theme-color": "#ffffff",
-  "msapplication-TileColor": "#ffc40d",
-});
+export const meta: MetaFunction = ({ data }) => {
+  const requestInfo = (data as RootLoaderData | undefined)?.requestInfo;
 
-export const loader: LoaderFunction = async ({ context }) => {
+  const isRootPath = requestInfo?.path === "/";
+
+  return {
+    charset: "utf-8",
+    viewport: "width=device-width,initial-scale=1",
+    "theme-color": "#ffffff",
+    "msapplication-TileColor": "#ffc40d",
+    ...getSocialMetas({
+      title: generateTitle(),
+      origin: requestInfo?.origin ?? "",
+      url: getUrl(requestInfo),
+      imgPath: isRootPath ? "/home" : requestInfo?.path ?? "/home",
+    }),
+  };
+};
+
+export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
+
   return json<RootLoaderData>({
     data: await getPosts(),
+    requestInfo: {
+      origin: getDomainUrl(request),
+      path: new URL(request.url).pathname,
+    },
     ENV: Object.keys(env).reduce(
       (envVars, key) => ({
         ...envVars,

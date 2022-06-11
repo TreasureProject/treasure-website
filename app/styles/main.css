@@ -11,7 +11,7 @@
 }
 
 .parter-cartridge-container .partner-hover-target:hover::before {
-  @apply bg-night-900/30;
+  @apply bg-transparent;
 }
 
 .parter-cartridge-container .partner-hover-target:hover div:last-child {
