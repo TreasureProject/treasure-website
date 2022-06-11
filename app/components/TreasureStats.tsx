@@ -3,7 +3,7 @@ import { useRouteData } from "remix-utils";
 import type { RootLoaderData } from "~/root";
 
 export const TreasureStats = () => {
-  const data = useRouteData<RootLoaderData>("root");
+  // const data = useRouteData<RootLoaderData>("root");
 
   return (
     <div className="relative bg-ruby-900 py-6 text-honey-25 lg:py-8">
