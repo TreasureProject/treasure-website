@@ -12,6 +12,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
   useLoaderData,
 } from "@remix-run/react";
 
@@ -139,6 +140,7 @@ export const meta: MetaFunction = ({ data }) => {
 
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
+
   const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] =
     await Promise.all([
       getMagicPrice(),
@@ -146,6 +148,18 @@ export const loader: LoaderFunction = async ({ context, request }) => {
       getUniqueAddressCount(),
       getTotalMarketplaceVolume(),
     ]);
+
+  if (
+    !magicPrice ||
+    !totalLocked ||
+    !uniqueAddresses ||
+    !totalMarketplaceVolume
+  ) {
+    return new Response("Something went wrong", {
+      status: 404,
+    });
+  }
+
   return json<RootLoaderData>({
     magicPrice,
     totalLocked,
@@ -165,6 +179,20 @@ export const loader: LoaderFunction = async ({ context, request }) => {
     ),
   });
 };
+
+export function CatchBoundary() {
+  const caught = useCatch();
+  if (caught.status === 404) {
+    return (
+      <div className="flex h-full flex-col items-center justify-center">
+        <p className="text-[0.6rem] text-gray-500 sm:text-base">
+          {caught.data}
+        </p>
+      </div>
+    );
+  }
+  throw new Error(`Unhandled error: ${caught.status}`);
+}
 
 export default function App() {
   const { ENV } = useLoaderData<RootLoaderData>();
