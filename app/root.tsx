@@ -140,7 +140,7 @@ export const meta: MetaFunction = ({ data }) => {
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
 
-  // const [magicPrice] = await Promise.all([
+  // const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] = await Promise.all([
   // getMagicPrice(),
   // getUtilization(),
   // getUniqueAddressCount(),

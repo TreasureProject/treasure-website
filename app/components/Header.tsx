@@ -91,6 +91,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         as={Link}
                                         key={link.name}
                                         to={link.href}
+                                        prefetch="render"
                                         className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
                                       >
                                         <p className="text-base font-medium text-night-900">
@@ -219,6 +220,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                       as={Link}
                                       key={link.name}
                                       to={link.href}
+                                      prefetch="render"
                                       className="block px-3 py-2 font-medium text-night-900"
                                     >
                                       {link.name}
