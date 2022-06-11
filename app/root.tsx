@@ -194,6 +194,23 @@ export function CatchBoundary() {
   throw new Error(`Unhandled error: ${caught.status}`);
 }
 
+export function ErrorBoundary({ error }) {
+  console.error(error);
+  return (
+    <html>
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        {/* add the UI you want your users to see */}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
+
 export default function App() {
   const { ENV } = useLoaderData<RootLoaderData>();
   const [openPurchaseMagicModal, setOpenPurchaseMagicModal] =
