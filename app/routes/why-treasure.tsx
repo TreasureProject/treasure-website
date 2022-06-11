@@ -1,5 +1,5 @@
 import { Badge } from "~/components/Badge";
-import MagicImg from "../../public/img/magic.png";
+import RedStarImg from "../../public/img/red-star.png";
 import LegionImg from "../../public/img/legion1.png";
 import GoldCoinImg from "../../public/img/gold-coin.png";
 import RedRupeeImg from "../../public/img/red-rupee.png";
@@ -20,7 +20,7 @@ export default function WhyTreasure() {
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
           <div className="flex flex-col items-center rounded-2.5xl border-2 border-honey-200 bg-honey-50 px-4 pb-16 pt-8 sm:px-20">
             <img
-              src={MagicImg}
+              src={RedStarImg}
               className="h-36 w-36 sm:h-48 sm:w-48"
               alt="Magic"
             />

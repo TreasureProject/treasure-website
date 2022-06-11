@@ -2,7 +2,7 @@ import { Badge } from "~/components/Badge";
 import { MagicIcon } from "~/components/Icons";
 import { TreasurePosts } from "~/components/TreasurePosts";
 import { TreasureStats } from "~/components/TreasureStats";
-import MagicImg from "../../public/img/magic.png";
+import RedStarImg from "../../public/img/red-star.png";
 import TreasureImg from "../../public/img/treasures.png";
 
 export default function About() {
@@ -99,7 +99,7 @@ export default function About() {
             <div className="mb-12 flex items-center justify-center lg:col-span-3 lg:col-start-1 lg:mb-0">
               <img
                 className="h-48 w-48 object-cover md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem]"
-                src={MagicImg}
+                src={RedStarImg}
                 alt="Magic"
               />
             </div>
