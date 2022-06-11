@@ -47,9 +47,9 @@ export type RootLoaderData = {
   };
   ENV: Partial<CloudFlareEnv>;
   magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
-  totalLocked: Awaited<ReturnType<typeof getUtilization>>;
-  totalMarketplaceVolume: Awaited<ReturnType<typeof getTotalMarketplaceVolume>>;
-  uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
+  // totalLocked: Awaited<ReturnType<typeof getUtilization>>;
+  // totalMarketplaceVolume: Awaited<ReturnType<typeof getTotalMarketplaceVolume>>;
+  // uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
 };
 
 export const links: LinksFunction = () => [
@@ -140,19 +140,18 @@ export const meta: MetaFunction = ({ data }) => {
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
 
-  const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] =
-    await Promise.all([
-      getMagicPrice(),
-      getUtilization(),
-      getUniqueAddressCount(),
-      getTotalMarketplaceVolume(),
-    ]);
+  const [magicPrice] = await Promise.all([
+    getMagicPrice(),
+    // getUtilization(),
+    // getUniqueAddressCount(),
+    // getTotalMarketplaceVolume(),
+  ]);
 
   return json<RootLoaderData>({
     magicPrice,
-    totalLocked,
-    uniqueAddresses,
-    totalMarketplaceVolume,
+    // totalLocked,
+    // uniqueAddresses,
+    // totalMarketplaceVolume,
     data: await getPosts(),
     requestInfo: {
       origin: getDomainUrl(request),
