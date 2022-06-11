@@ -13,6 +13,8 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
+  useTransition,
+  useFetchers,
 } from "@remix-run/react";
 
 import { getEnvVariable } from "./utils/env";
@@ -32,6 +34,8 @@ import { magicPurchaseLinks } from "./const";
 import { getDomainUrl } from "./utils/misc.server";
 import { generateTitle, getSocialMetas, getUrl } from "./utils/seo";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
+import NProgress from "nprogress";
+import nProgressStyles from "./styles/nProgress.css";
 // import {
 //   getMagicPrice,
 //   getTotalMarketplaceVolume,
@@ -54,6 +58,7 @@ export type RootLoaderData = {
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: nProgressStyles },
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
@@ -140,6 +145,11 @@ export const meta: MetaFunction = ({ data }) => {
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
 
+  /* TODO: figure out why this wasn't workign in production. gave me an application error 
+   saying "SyntaxError: Unexpected token e in JSON at position 0" and couldn't debug.
+   I resorted to doing a client-side fetch to get the data.
+  */
+
   // const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] = await Promise.all([
   // getMagicPrice(),
   // getUtilization(),
@@ -174,6 +184,30 @@ export default function App() {
 
   const openModal = () => setOpenPurchaseMagicModal(true);
   const closeModal = () => setOpenPurchaseMagicModal(false);
+
+  const transition = useTransition();
+
+  const fetchers = useFetchers();
+
+  const state = React.useMemo<"idle" | "loading">(
+    function getGlobalState() {
+      const states = [
+        transition.state,
+        ...fetchers.map((fetcher) => fetcher.state),
+      ];
+      if (states.every((state) => state === "idle")) return "idle";
+      return "loading";
+    },
+    [transition.state, fetchers]
+  );
+
+  React.useEffect(() => {
+    // and when it's something else it means it's either submitting a form or
+    // waiting for the loaders of the next location so we start it
+    if (state === "loading") NProgress.start();
+    // when the state is idle then we can to complete the progress bar
+    if (state === "idle") NProgress.done();
+  }, [state, transition.state]);
 
   return (
     <html lang="en" className="scroll-smooth">
