@@ -129,7 +129,7 @@ export default function WhyTreasure() {
                 key={card.name}
                 className="flex flex-col justify-between space-y-8 rounded-2.5xl bg-honey-50 p-16"
               >
-                <p className="text-xl font-semibold text-ruby-900 sm:text-4xl">
+                <p className="text-xl font-bold text-ruby-900 sm:text-4xl">
                   {card.name}
                 </p>
                 <p className="text-base text-night-700 sm:text-2xl">

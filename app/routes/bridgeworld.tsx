@@ -8,7 +8,7 @@ import InfrastuctureImg from "../../public/img/Infrastucture.png";
 export default function About() {
   return (
     <main>
-      <div className="relative bg-[url('/img/bridgeworld-bg.png')] bg-cover bg-fixed bg-center bg-no-repeat py-16 sm:py-32">
+      <div className="relative bg-[url('/img/bridgeworld-bg.png')] bg-cover bg-center bg-no-repeat py-16 sm:py-32 xl:bg-fixed">
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
           <img src={BWTextSvg} className="w-[62rem]" alt="Bridgeworld" />
           <a
