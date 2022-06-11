@@ -1,9 +1,45 @@
 import { MagicLogoIcon } from "./Icons";
-import { useRouteData } from "remix-utils";
-import type { RootLoaderData } from "~/root";
+import { useEffect, useState } from "react";
+import {
+  getMagicPrice,
+  getTotalMarketplaceVolume,
+  getUniqueAddressCount,
+  getUtilization,
+} from "~/utils/stats";
 
 export const TreasureStats = () => {
   // const data = useRouteData<RootLoaderData>("root");
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState<{
+    magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
+    totalLocked: Awaited<ReturnType<typeof getUtilization>>;
+    totalMarketplaceVolume: Awaited<
+      ReturnType<typeof getTotalMarketplaceVolume>
+    >;
+    uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
+  } | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] =
+        await Promise.all([
+          getMagicPrice(),
+          getTotalMarketplaceVolume(),
+          getUniqueAddressCount(),
+          getUtilization(),
+        ]);
+      setData({
+        magicPrice,
+        totalLocked,
+        uniqueAddresses,
+        totalMarketplaceVolume,
+      });
+      setIsLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  console.log(isLoading, data);
 
   return (
     <div className="relative bg-ruby-900 py-6 text-honey-25 lg:py-8">
@@ -15,7 +51,7 @@ export const TreasureStats = () => {
               Magic Price
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {/* ${data?.magicPrice} */}
+              ${isLoading ? " --" : data?.magicPrice}
             </p>
           </div>
         </div>
@@ -26,7 +62,7 @@ export const TreasureStats = () => {
               Total Marketplace Volume
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {/* ${data?.totalMarketplaceVolume} */}
+              ${isLoading ? " --" : data?.totalMarketplaceVolume}
             </p>
           </div>
         </div>
@@ -37,7 +73,7 @@ export const TreasureStats = () => {
               Total Value Locked
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {/* {data?.totalLocked} */}
+              ${isLoading ? " --" : data?.totalLocked}
             </p>
           </div>
         </div>
@@ -48,7 +84,7 @@ export const TreasureStats = () => {
               Unique Wallets
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {/* ${data?.uniqueAddresses} */}
+              ${isLoading ? " --" : data?.uniqueAddresses}
             </p>
           </div>
         </div>

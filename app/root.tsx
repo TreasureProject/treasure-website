@@ -32,12 +32,12 @@ import { magicPurchaseLinks } from "./const";
 import { getDomainUrl } from "./utils/misc.server";
 import { generateTitle, getSocialMetas, getUrl } from "./utils/seo";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
-import {
-  getMagicPrice,
-  getTotalMarketplaceVolume,
-  getUniqueAddressCount,
-  getUtilization,
-} from "./utils/stats.server";
+// import {
+//   getMagicPrice,
+//   getTotalMarketplaceVolume,
+//   getUniqueAddressCount,
+//   getUtilization,
+// } from "./utils/stats";
 
 export type RootLoaderData = {
   data: Posts;
@@ -46,7 +46,7 @@ export type RootLoaderData = {
     path: string;
   };
   ENV: Partial<CloudFlareEnv>;
-  magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
+  // magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
   // totalLocked: Awaited<ReturnType<typeof getUtilization>>;
   // totalMarketplaceVolume: Awaited<ReturnType<typeof getTotalMarketplaceVolume>>;
   // uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
@@ -140,15 +140,15 @@ export const meta: MetaFunction = ({ data }) => {
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
 
-  const [magicPrice] = await Promise.all([
-    getMagicPrice(),
-    // getUtilization(),
-    // getUniqueAddressCount(),
-    // getTotalMarketplaceVolume(),
-  ]);
+  // const [magicPrice] = await Promise.all([
+  // getMagicPrice(),
+  // getUtilization(),
+  // getUniqueAddressCount(),
+  // getTotalMarketplaceVolume(),
+  // ]);
 
   return json<RootLoaderData>({
-    magicPrice,
+    // magicPrice,
     // totalLocked,
     // uniqueAddresses,
     // totalMarketplaceVolume,
