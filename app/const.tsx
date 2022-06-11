@@ -304,12 +304,12 @@ export type MemberT = typeof teamMembers[number];
 export const magicPurchaseLinks = [
   {
     name: "Sushiswap",
-    url: "#",
+    url: "https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0x539bdE0d7Dbd336b79148AA742883198BBF60342&chainId=42161",
     icon: SushiSwapImg,
   },
   {
     name: "OKX",
-    url: "#",
+    url: "https://www.okx.com/trade-spot/magic-usdt",
     icon: OkxImg,
   },
 ];

@@ -31,6 +31,7 @@ import { MagicIcon } from "./components/Icons";
 import { magicPurchaseLinks } from "./const";
 import { getDomainUrl } from "./utils/misc.server";
 import { generateTitle, getSocialMetas, getUrl } from "./utils/seo";
+import { ExternalLinkIcon } from "@heroicons/react/solid";
 
 export type RootLoaderData = {
   data: Posts;
@@ -242,9 +243,10 @@ export default function App() {
                           href="https://docs.treasure.lol/getting-started/what-is-magic"
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="text-ruby-900 decoration-ruby-900 hover:underline"
+                          className="inline-flex items-center text-ruby-900 decoration-ruby-900 hover:underline"
                         >
-                          Learn more
+                          <span>Learn more</span>
+                          <ExternalLinkIcon className="ml-1 h-3 w-3" />
                         </a>
                       </p>
                     </div>
