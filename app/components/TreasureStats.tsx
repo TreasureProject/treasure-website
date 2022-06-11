@@ -15,7 +15,7 @@ export const TreasureStats = () => {
               Magic Price
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              ${data?.magicPrice}
+              {/* ${data?.magicPrice} */}
             </p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export const TreasureStats = () => {
               Total Marketplace Volume
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              ${data?.totalMarketplaceVolume}
+              {/* ${data?.totalMarketplaceVolume} */}
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ export const TreasureStats = () => {
               Total Value Locked
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {data?.totalLocked}
+              {/* {data?.totalLocked} */}
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export const TreasureStats = () => {
               Unique Wallets
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              ${data?.uniqueAddresses}
+              {/* ${data?.uniqueAddresses} */}
             </p>
           </div>
         </div>

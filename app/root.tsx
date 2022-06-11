@@ -47,10 +47,10 @@ export type RootLoaderData = {
     path: string;
   };
   ENV: Partial<CloudFlareEnv>;
-  magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
-  totalLocked: Awaited<ReturnType<typeof getUtilization>>;
-  totalMarketplaceVolume: Awaited<ReturnType<typeof getTotalMarketplaceVolume>>;
-  uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
+  // magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
+  // totalLocked: Awaited<ReturnType<typeof getUtilization>>;
+  // totalMarketplaceVolume: Awaited<ReturnType<typeof getTotalMarketplaceVolume>>;
+  // uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
 };
 
 export const links: LinksFunction = () => [
@@ -141,30 +141,19 @@ export const meta: MetaFunction = ({ data }) => {
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
 
-  const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] =
-    await Promise.all([
-      getMagicPrice(),
-      getUtilization(),
-      getUniqueAddressCount(),
-      getTotalMarketplaceVolume(),
-    ]);
-
-  if (
-    !magicPrice ||
-    !totalLocked ||
-    !uniqueAddresses ||
-    !totalMarketplaceVolume
-  ) {
-    return new Response("Something went wrong", {
-      status: 404,
-    });
-  }
+  // const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] =
+  //   await Promise.all([
+  //     getMagicPrice(),
+  //     getUtilization(),
+  //     getUniqueAddressCount(),
+  //     getTotalMarketplaceVolume(),
+  //   ]);
 
   return json<RootLoaderData>({
-    magicPrice,
-    totalLocked,
-    uniqueAddresses,
-    totalMarketplaceVolume,
+    // magicPrice,
+    // totalLocked,
+    // uniqueAddresses,
+    // totalMarketplaceVolume,
     data: await getPosts(),
     requestInfo: {
       origin: getDomainUrl(request),
@@ -179,37 +168,6 @@ export const loader: LoaderFunction = async ({ context, request }) => {
     ),
   });
 };
-
-export function CatchBoundary() {
-  const caught = useCatch();
-  if (caught.status === 404) {
-    return (
-      <div className="flex h-full flex-col items-center justify-center">
-        <p className="text-[0.6rem] text-gray-500 sm:text-base">
-          {caught.data}
-        </p>
-      </div>
-    );
-  }
-  throw new Error(`Unhandled error: ${caught.status}`);
-}
-
-export function ErrorBoundary({ error }) {
-  console.error(error);
-  return (
-    <html>
-      <head>
-        <title>Oh no!</title>
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {/* add the UI you want your users to see */}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 export default function App() {
   const { ENV } = useLoaderData<RootLoaderData>();
