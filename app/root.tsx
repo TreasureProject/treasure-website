@@ -115,7 +115,7 @@ export const meta: MetaFunction = ({ data }) => {
     "theme-color": "#ffffff",
     "msapplication-TileColor": "#ffc40d",
     ...getSocialMetas({
-      title: generateTitle(),
+      title: generateTitle(requestInfo?.path),
       origin: requestInfo?.origin ?? "",
       url: getUrl(requestInfo),
       imgPath: isRootPath ? "/home" : requestInfo?.path ?? "/home",

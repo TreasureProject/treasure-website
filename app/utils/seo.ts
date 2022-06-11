@@ -34,8 +34,20 @@ export function getSocialMetas({
   };
 }
 
+function prettify(str: string) {
+  return str.replace(/(-|^)([^-]?)/g, function (_, prep, letter) {
+    return (prep && " ") + letter.toUpperCase();
+  });
+}
+
+function removeStartingSlash(s: string) {
+  return s.startsWith("/") ? s.slice(1) : s;
+}
+
 export function generateTitle(title?: string) {
-  return title ? `${title} | Treasure DAO` : "Treasure DAO";
+  return title
+    ? `${prettify(removeStartingSlash(title))} | Treasure DAO`
+    : "Treasure DAO";
 }
 
 function removeTrailingSlash(s: string) {
