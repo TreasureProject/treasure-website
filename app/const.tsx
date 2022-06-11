@@ -165,7 +165,7 @@ export const teamMembers = [
     name: "Antlion",
     title: "Development (Backend), Trove",
     discordLink: "https://discordapp.com/users/397537602988670977",
-    twitterLink: "https://twitter.com/0xkarel",
+    twitterLink: "https://twitter.com/0xAntlion",
     image: AntlionImg,
   },
   {
