@@ -5,6 +5,7 @@ import type { MemberT } from "~/const";
 import { teamMembers } from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "../../public/img/TreasureTeam.png";
+import DefaultPfpImg from "../../public/img/pfps/default.png";
 
 const TeamCard = ({ member }: { member: MemberT }) => {
   const hasSocials = member.twitterLink || member.discordLink;
@@ -12,7 +13,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
     <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-9 py-8">
       <img
         className="w-full bg-honey-100 object-contain"
-        src={member.image ?? "https://via.placeholder.com/150"}
+        src={member.image ?? DefaultPfpImg}
         alt={member.name}
       />
       <div

@@ -62,10 +62,10 @@ import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
 import PeteYamaImg from "../public/img/pfps/PeteYama.png";
+import Endimg from "../public/img/pfps/End.png";
 
 import {
   AMMIcon,
-  BridgeIcon,
   CartridgesIcon,
   DiscordIcon,
   EconomyIcon,
@@ -145,7 +145,7 @@ export const teamMembers = [
     title: "Product, Bridgeworld",
     discordLink: "discordapp.com/users/146399041125613568",
     twitterLink: "twitter.com/notrealend",
-    image: null,
+    image: Endimg,
   },
   {
     name: "Maximee",
