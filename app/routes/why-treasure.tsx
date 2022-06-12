@@ -73,16 +73,10 @@ export default function WhyTreasure() {
               </p>
               <div className="space-y-4 text-base text-night-600 sm:text-xl">
                 <p>
-                  Most P2E games today are unsustainable by design. Adoption of
-                  the game lasts as long as speculation over the native token
-                  continues. After yield has been exhausted, users move on to
-                  new projects and tokens.
-                </p>
-
-                <p>
-                  Builders and games are separated from one another, left in
-                  isolation to deal with evaporating revenue, community
-                  attrition, and token illiquidity.
+                  Help bootstrap the project with capital in its initial stages
+                  as to complement existing go to market strategies. This would
+                  be in the form of vesting MAGIC with key performance
+                  milestones.
                 </p>
               </div>
             </div>
@@ -113,9 +107,9 @@ export default function WhyTreasure() {
               </p>
               <p className="text-base text-night-600 sm:text-xl">
                 All NFTs within an integrated project are listed on Trove and
-                denominated in MAGIC. Royalties received would go towards
-                funding ongoing in-game rewards and/or participation in
-                Bridgeworld.
+                denominated in MAGIC. Royalties received could go towards
+                funding operations, ongoing in-game rewards and/or participation
+                in Bridgeworld.
               </p>
             </div>
           </div>

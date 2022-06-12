@@ -577,52 +577,52 @@ export const partners = [
     image: OnekxImg,
   },
   {
-    name: "Neon",
-    image: NeonImg,
-  },
-  {
-    name: "Metat8",
-    image: Metat8Img,
-  },
-  {
-    name: "Ryan Delphi",
-    image: RyanDelphiImg,
-  },
-  {
-    name: "Acad Arena",
-    image: AcadArenaImg,
-  },
-  {
-    name: "Andrew Green",
-    image: AndrewGreenImg,
-  },
-  {
-    name: "Black Pool",
+    name: "BlackPool",
     image: BlackPoolImg,
   },
   {
-    name: "Defi Vader",
-    image: DefiVaderImg,
+    name: "NEON DAO",
+    image: NeonImg,
   },
   {
-    name: "Incentive Design Theory",
-    image: IncentiveDesignTheoryImg,
+    name: "AcadArena",
+    image: AcadArenaImg,
   },
   {
-    name: "Jason Choi",
-    image: JasonChoiImg,
-  },
-  {
-    name: "Jiho",
-    image: JihoImg,
+    name: "Ready Player DAO",
+    image: ReadyPlayerImg,
   },
   {
     name: "Merit Circle",
     image: MeritCircleImg,
   },
   {
-    name: "Ready Player",
-    image: ReadyPlayerImg,
+    name: "Incentive Design Theory",
+    image: IncentiveDesignTheoryImg,
+  },
+  {
+    name: "Jiho",
+    image: JihoImg,
+  },
+  {
+    name: "Jason Choi",
+    image: JasonChoiImg,
+  },
+  {
+    name: "Ryan Delphi",
+    image: RyanDelphiImg,
+  },
+  {
+    name: "Andrew Green",
+    image: AndrewGreenImg,
+  },
+  {
+    name: "Defi Vader",
+    image: DefiVaderImg,
+  },
+  {
+    name: "Metat8",
+    image: Metat8Img,
   },
 ];
 
@@ -644,39 +644,38 @@ export const infrastructures = [
     href: "https://magiscwap.treasure.lol",
   },
   {
-    name: "Visit Bridgeworld",
+    name: "Economy",
     icon: <EconomyIcon className="h-10 w-10" aria-hidden="true" />,
     description:
-      "Bridgeworld provides the shared economy for Treasure, enabled through cross-metaverse relationships and resource sharing.",
-    buttonDescription: "Coming Soon",
+      "Bridgeworld powers the shared economy for Treasure through a generalised economic framework designed to foster cross-metaverse relationships and resource sharing.",
+    buttonDescription: "Discover Bridgeworld",
     href: "https://bridgeworld.treasure.lol",
   },
 ];
 
 export const BridgeworldInfrastructures = [
   {
-    name: "Users",
-    icon: <UsersIcon className="h-14 w-14 text-ruby-900" aria-hidden="true" />,
-    description:
-      "Individual players explore Bridgeworld and the worlds beyond by questing, crafting, and more.",
-  },
-  {
-    name: "Guilds",
-    icon: <GuildsIcon className="h-14 w-14" aria-hidden="true" />,
-    description:
-      "Collectives of players have formed, allowing for the coordination and competition for emissions between groups.",
-  },
-  {
-    name: "Economy",
+    name: "Reservoirs of MAGIC",
     icon: <GlobalIcon className="h-14 w-14" aria-hidden="true" />,
     description:
-      "Showcasing projects and initiatives built by and with the community.",
+      "Vast pools of MAGIC for games, guilds, and players to uncover and use within their worlds.",
   },
   {
-    name: "More to come",
-    icon: <CartridgesIcon className="h-14 w-14" aria-hidden="true" />,
+    name: "Characters",
+    icon: <UsersIcon className="h-14 w-14" aria-hidden="true" />,
     description:
-      "Serving as the interplay between games and guilds, cartridges (games) can form “nations” to exert influence over Bridgeworld.",
+      "Embedded incentives for players to explore and facilitate economic activity across the Treasure ecosystem.",
+  },
+  {
+    name: "Treasures",
+    icon: <GuildsIcon className="h-14 w-14" aria-hidden="true" />,
+    description:
+      "A balanced and open economy of interoperable and composable assets.",
+  },
+  {
+    name: "Lore Creation",
+    icon: <CartridgesIcon className="h-14 w-14" aria-hidden="true" />,
+    description: "Coming soon.",
   },
 ];
 

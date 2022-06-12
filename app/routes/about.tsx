@@ -64,27 +64,36 @@ export default function About() {
               <h3 className="text-3xl font-bold text-ruby-900 sm:text-5xl">
                 The Problem
               </h3>
-              <p className="mt-5 text-lg text-night-700 sm:mt-10">
-                Most P2E games today are unsustainable by design. Adoption of
-                the game lasts as long as speculation over the native token
-                continues. After yield has been exhausted, users move on to new
-                projects and tokens. Builders and games are separated from one
-                another, left in isolation to deal with evaporating revenue,
-                community attrition, and token illiquidity.
-              </p>
+              <div className="mt-5 space-y-4 text-lg text-night-700 sm:mt-10">
+                <p>
+                  Most P2E games today are unsustainable by design. Adoption of
+                  the game lasts as long as speculation over the native token
+                  continues. After yield has been exhausted, users move on to
+                  new projects and tokens.
+                </p>
+                <p>
+                  Builders and games are separated from one another, left in
+                  isolation to deal with evaporating revenue, community
+                  attrition, and token illiquidity.
+                </p>
+              </div>
             </div>
             <div className="rounded-2.5xl border-2 border-honey-100 bg-honey-50 p-14">
               <h3 className="text-3xl font-bold text-ruby-900 sm:text-5xl">
                 The Solution
               </h3>
-              <p className="mt-5 text-lg text-night-700 sm:mt-10">
-                Most P2E games today are unsustainable by design. Adoption of
-                the game lasts as long as speculation over the native token
-                continues. After yield has been exhausted, users move on to new
-                projects and tokens. Builders and games are separated from one
-                another, left in isolation to deal with evaporating revenue,
-                community attrition, and token illiquidity.
-              </p>
+              <div className="mt-5 space-y-4 text-lg text-night-700 sm:mt-10">
+                <p>
+                  Treasure solves this by building a gaming and NFT ecosystem
+                  held together by the MAGIC token. MAGIC is backed by the
+                  network of metaverses, communities, and DeFi infrastructure
+                  built on Treasure.
+                </p>
+                <p>
+                  A global economy with one native token bridging the worlds and
+                  connecting the infrastructure and communities utilizing them.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -109,7 +118,7 @@ export default function About() {
               </h3>
               <div className="mt-6 space-y-4 text-sm text-night-700 sm:text-base">
                 <p>
-                  MAGIC is the currency of Treasure that serves as
+                  MAGIC is the currency of the Treasure ecosystem that serves as
                   cross-metaverse monies within the common economic layer.
                 </p>
                 <p>
@@ -119,10 +128,10 @@ export default function About() {
                   Treasure’s ecosystem of metaverses.
                 </p>
                 <p>
-                  Players are able to earn $MAGIC through playing Bridgeworld
-                  (one of Treasure’s flagship products) and other game
-                  cartridges. The Treasure ecosystem, therefore, is governed by
-                  MAGIC holders through TreasureDAO.
+                  Players are able to earn and use MAGIC through playing
+                  Bridgeworld (one of Treasure’s flagship products) and other
+                  game cartridges. Staked MAGIC in the Atlas Mine also enables
+                  holders to govern the broader Treasure ecosystem.
                 </p>
               </div>
             </div>

@@ -29,7 +29,8 @@ export default function About() {
                 <span className="font-semibold text-honey-200">
                   Bridgeworld
                 </span>{" "}
-                is a game of strategic commerce, trade and social coordination.
+                is a game of strategic commerce, trade and social coordination
+                forming a base economy layer for the Treasure ecosystem.
               </p>
 
               <p>
@@ -70,7 +71,7 @@ export default function About() {
       <div className="relative bg-honey-200 py-16 sm:py-24">
         <div className="mx-auto max-w-xl px-8 text-center sm:px-6 lg:max-w-3xl lg:px-12">
           <h2 className="text-center text-3xl font-bold tracking-tight text-night-900 sm:text-5xl">
-            Shared infrastructure powering group dynamics
+            Economic infrastructure powering the Treasure ecosystem
           </h2>
         </div>
         <div className="mx-auto mt-12 grid max-w-5xl gap-8 px-8 sm:mt-24 sm:grid-cols-2 sm:px-6 lg:px-12">
