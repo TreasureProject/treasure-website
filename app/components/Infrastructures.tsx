@@ -2,7 +2,7 @@ import { infrastructures } from "~/const";
 import { CTAButton } from "./Button";
 
 export const Infrastructures = () => (
-  <div className="grid gap-8 xl:grid-cols-3">
+  <div className="grid gap-8 xl:grid-cols-2">
     {infrastructures.map((Infrastructure) => (
       <div
         key={Infrastructure.name}

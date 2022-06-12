@@ -632,14 +632,14 @@ export const infrastructures = [
     buttonDescription: "View Marketplace",
     href: "https://trove.treasure.lol",
   },
-  {
-    name: "AMM",
-    icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
-    description:
-      "Magicswap supports trading of native tokens for partner projects with each liquidity pool using MAGIC as the base pair.",
-    buttonDescription: "Coming Soon",
-    href: "https://magiscwap.treasure.lol",
-  },
+  // {
+  //   name: "AMM",
+  //   icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
+  //   description:
+  //     "Magicswap supports trading of native tokens for partner projects with each liquidity pool using MAGIC as the base pair.",
+  //   buttonDescription: "Coming Soon",
+  //   href: "https://magiscwap.treasure.lol",
+  // },
   {
     name: "Economy",
     icon: <EconomyIcon className="h-10 w-10" aria-hidden="true" />,
