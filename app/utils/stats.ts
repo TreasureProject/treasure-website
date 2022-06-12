@@ -45,20 +45,36 @@ export const getMagicPrice = async () => {
 
 export async function getUtilization() {
   const res = await fetch(
-    "https://api.thegraph.com/subgraphs/name/treasureproject/bridgeworld",
+    "https://api.thegraph.com/subgraphs/name/treasureproject/bridgeworld-stats",
     {
-      body: '{"query":"{atlasMines{utilization}}","variables":null}',
+      body: JSON.stringify({
+        query: `
+          query getBWUAtlasLockedCount {
+            atlasMineStat(id: "all-time") {
+              magicDeposited
+              magicWithdrawn
+            }
+          }
+        `,
+      }),
       method: "POST",
     }
   );
 
-  const {
+  const data = (await res.json()) as {
     data: {
-      atlasMines: [{ utilization }],
-    },
-  }: { data: { atlasMines: [{ utilization: string }] } } = await res.json();
+      atlasMineStat: {
+        magicDeposited: string;
+        magicWithdrawn: string;
+      };
+    };
+  };
 
-  return formatPercent(Number(utilization) / 1e18);
+  const lockedAmount =
+    parseInt(data.data.atlasMineStat.magicDeposited) -
+    parseInt(data.data.atlasMineStat.magicWithdrawn);
+
+  return abbreviatePrice(lockedAmount / 1e18);
 }
 
 export async function getUniqueAddressCount() {
