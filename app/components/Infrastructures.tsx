@@ -20,7 +20,9 @@ export const Infrastructures = () => (
           </div>
         </div>
         <div>
-          <CTAButton>{Infrastructure.buttonDescription}</CTAButton>
+          <CTAButton href={Infrastructure.href}>
+            {Infrastructure.buttonDescription}
+          </CTAButton>
         </div>
       </div>
     ))}
