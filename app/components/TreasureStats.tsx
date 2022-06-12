@@ -60,7 +60,7 @@ export const TreasureStats = () => {
               Total Marketplace Volume
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              ${isLoading ? " --" : data?.totalMarketplaceVolume}
+              {isLoading ? " --" : data?.totalMarketplaceVolume}
             </p>
           </div>
         </div>
