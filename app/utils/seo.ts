@@ -46,8 +46,8 @@ function removeStartingSlash(s: string) {
 
 export function generateTitle(title?: string) {
   return title
-    ? `${prettify(removeStartingSlash(title))} | Treasure DAO`
-    : "Treasure DAO";
+    ? `${prettify(removeStartingSlash(title))} | Treasure`
+    : "Treasure";
 }
 
 function removeTrailingSlash(s: string) {
