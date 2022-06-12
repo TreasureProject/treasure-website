@@ -132,8 +132,9 @@ export const meta: MetaFunction = ({ data }) => {
     "msapplication-TileColor": "#ffc40d",
     ...getSocialMetas({
       description:
-        "Treasure is a decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
-      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+        "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+      keywords:
+        "treasure, NFT, DeFi, games, gamefi, ethereum, community, imagination, magic",
       title: generateTitle(requestInfo?.path),
       origin: requestInfo?.origin ?? "",
       url: getUrl(requestInfo),

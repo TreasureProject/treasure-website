@@ -23,7 +23,7 @@ export default function Home() {
                 </h1>
                 <div className="mt-12 rounded-1.9xl border-2 border-honey-200 bg-honey-50 p-7.5 lg:max-w-sm">
                   <p className="text-base text-night-700 sm:text-lg">
-                    Treasure is a decentralized video game console connecting
+                    Treasure is the decentralized video game console connecting
                     games and communities together through imagination,{" "}
                     <span className="font-bold">$MAGIC</span>, and NFTs.
                   </p>
