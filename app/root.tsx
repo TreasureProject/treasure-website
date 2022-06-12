@@ -145,7 +145,7 @@ export const meta: MetaFunction = ({ data }) => {
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
 
-  /* TODO: figure out why this wasn't workign in production. gave me an application error 
+  /* TODO: figure out why this wasn't workign in production. gave me an application error
    saying "SyntaxError: Unexpected token e in JSON at position 0" and couldn't debug.
    I resorted to doing a client-side fetch to get the data.
   */
@@ -265,7 +265,7 @@ export default function App() {
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </button>
                     </div>
-                    <div className="mt-4 grid grid-cols-1 gap-4 sm:mt-8 sm:gap-8">
+                    <div className="mt-4 grid grid-cols-1 gap-2 sm:mt-8 sm:gap-4">
                       {magicPurchaseLinks.map((link) => (
                         <div
                           key={link.name}
