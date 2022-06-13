@@ -79,7 +79,7 @@ export const TreasureStats = () => {
           <MagicLogoIcon />
           <div>
             <p className="text-base font-bold md:text-sm lg:text-base">
-              Total Value Locked (%)
+              % Circulating Supply
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
               {isLoading ? " --" : data?.percentLocked}

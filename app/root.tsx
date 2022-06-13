@@ -286,6 +286,11 @@ export default function App() {
             __html: `window.env = ${JSON.stringify(ENV)};`,
           }}
         />
+        <script
+          src="https://efficient-bloc-party.treasure.lol/script.js"
+          data-site="XBZCEUKN"
+          defer
+        />
       </body>
     </html>
   );
