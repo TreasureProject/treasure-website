@@ -1,7 +1,7 @@
 export function getSocialMetas({
   url,
   title = "Treasure",
-  description = "Treasure is a decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+  description = "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
   origin,
   imgPath,
   image = origin + "/img/meta" + imgPath + ".jpg",

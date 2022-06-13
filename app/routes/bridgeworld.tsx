@@ -1,5 +1,6 @@
 import Legion1Img from "../../public/img/legion1.png";
 
+import { ExternalLinkIcon } from "@heroicons/react/solid";
 import BWTextSvg from "../../public/img/bridgeworld-text.svg";
 import { CTAButton, InternalCTAButton } from "~/components/Button";
 import { BridgeworldInfrastructures } from "~/const";
@@ -19,7 +20,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   return {
     ...getSocialMetas({
       description:
-        "Treasure is a decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+        "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle("/bridgeworld"),
       origin: requestInfo.origin,
@@ -42,6 +43,7 @@ export default function About() {
             className="mt-12 inline-flex items-center rounded-button bg-ruby-900 px-7 py-4 font-semibold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1000 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2"
           >
             Visit Bridgeworld
+            <ExternalLinkIcon className="ml-1.5 h-4 w-4" aria-hidden="true" />
           </a>
         </div>
       </div>
@@ -74,7 +76,7 @@ export default function About() {
             <div className="mt-8 flex flex-col justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-5">
               <div>
                 <CTAButton href="https://docs.treasure.lol/bridgeworld/bridgeworld-litepaper">
-                  Read the Guide
+                  Read the guide
                 </CTAButton>
               </div>
               <div>
@@ -149,7 +151,7 @@ export default function About() {
                 The economic engine and tooling powering Treasure
               </p>
               <div>
-                <InternalCTAButton to="/cartridges">
+                <InternalCTAButton to="/infrastructure">
                   Explore Infrastructure
                 </InternalCTAButton>
               </div>

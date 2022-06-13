@@ -726,7 +726,7 @@ export const navigation = [
     name: "Build",
     links: [
       {
-        name: "Why Treasure",
+        name: "Why Treasure?",
         href: "/why-treasure",
         isExternal: false,
       },
