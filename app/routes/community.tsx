@@ -79,7 +79,7 @@ export default function Community() {
           <div className="flex flex-col items-center justify-center">
             <p className="text-4xl font-bold text-ruby-900 sm:text-5xl">26K</p>
             <p className="mt-2.5 text-center text-xl text-night-900">
-              Discord Followers
+              Discord Members
             </p>
           </div>
         </div>
