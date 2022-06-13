@@ -58,6 +58,8 @@ export const Footer = ({ openModal }: { openModal: () => void }) => (
                           {isExternal ? (
                             <a
                               href={href}
+                              rel="noopener noreferrer"
+                              target="_blank"
                               className="text-night-800 hover:text-night-700"
                             >
                               {name}
