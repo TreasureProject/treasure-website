@@ -239,6 +239,7 @@ export default function Home() {
                 <Dialog.Panel className="relative w-full sm:max-w-2xl">
                   <ReactPlayer
                     playing={true}
+                    loop={true}
                     controls={true}
                     url="https://www.youtube.com/watch?v=9W-Ps6xkgZI"
                     width="100%"
