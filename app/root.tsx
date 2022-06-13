@@ -123,8 +123,6 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = ({ data }) => {
   const requestInfo = (data as RootLoaderData | undefined)?.requestInfo;
 
-  const isRootPath = requestInfo?.path === "/";
-
   return {
     charset: "utf-8",
     viewport: "width=device-width,initial-scale=1",
@@ -135,10 +133,10 @@ export const meta: MetaFunction = ({ data }) => {
         "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
       keywords:
         "treasure, NFT, DeFi, games, gamefi, ethereum, community, imagination, magic",
-      title: generateTitle(requestInfo?.path),
+      title: generateTitle(),
       origin: requestInfo?.origin ?? "",
       url: getUrl(requestInfo),
-      imgPath: isRootPath ? "/home" : requestInfo?.path ?? "/home",
+      imgPath: "/home",
     }),
   };
 };

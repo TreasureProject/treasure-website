@@ -5,6 +5,30 @@ import { PartnerCartridge } from "~/components/PartnerCartridge";
 import { partnerCartridges } from "~/const";
 import BecomeAPartnerImg from "../../public/img/BecomeAPartner.png";
 
+import type { MetaFunction } from "@remix-run/cloudflare";
+import type { RootLoaderData } from "~/root";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+
+export const meta: MetaFunction = ({ parentsData }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is a decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle("/cartridges"),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/cartridges",
+    }),
+  };
+};
+
 export default function Cartridges() {
   return (
     <main>

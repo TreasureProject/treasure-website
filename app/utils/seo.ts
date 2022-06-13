@@ -45,9 +45,10 @@ function removeStartingSlash(s: string) {
 }
 
 export function generateTitle(title?: string) {
-  return title
-    ? `${prettify(removeStartingSlash(title))} | Treasure`
-    : "Treasure";
+  const prettifiedTitle = prettify(removeStartingSlash(title || ""));
+  return prettifiedTitle !== ""
+    ? `${prettifiedTitle} | Treasure`
+    : "Treasure - The Decentralized Game Console";
 }
 
 function removeTrailingSlash(s: string) {

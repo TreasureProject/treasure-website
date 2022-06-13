@@ -3,6 +3,30 @@ import { Card } from "~/components/Card";
 import { Infrastructures } from "~/components/Infrastructures";
 import { communityInfrastructure } from "~/const";
 
+import type { MetaFunction } from "@remix-run/cloudflare";
+import type { RootLoaderData } from "~/root";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+
+export const meta: MetaFunction = ({ parentsData }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is a decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle("/infrastructure"),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/infrastructure",
+    }),
+  };
+};
+
 export default function Infrastructure() {
   return (
     <main>

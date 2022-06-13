@@ -4,6 +4,29 @@ import { TreasurePosts } from "~/components/TreasurePosts";
 import { TreasureStats } from "~/components/TreasureStats";
 import RedStarImg from "../../public/img/red-star.png";
 import TreasureImg from "../../public/img/treasures.png";
+import type { MetaFunction } from "@remix-run/cloudflare";
+import type { RootLoaderData } from "~/root";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+
+export const meta: MetaFunction = ({ parentsData }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is a decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle("/about"),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/about",
+    }),
+  };
+};
 
 export default function About() {
   return (
