@@ -51,7 +51,7 @@ export default function Home() {
                     {/* <button> */}
                     <button onClick={() => setIsOpenYoutubeModal(true)}>
                       <PlayIcon
-                        className="h-20 w-20 text-ruby-900 sm:h-24 sm:w-24"
+                        className="h-20 w-20 text-ruby-900 transition-transform duration-300 hover:scale-110 sm:h-24 sm:w-24"
                         width="100%"
                         height="100%"
                       />

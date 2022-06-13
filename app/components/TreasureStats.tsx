@@ -4,7 +4,7 @@ import {
   getMagicPrice,
   getTotalMarketplaceVolume,
   getUniqueAddressCount,
-  getUtilization,
+  getTotalLockedAmount,
 } from "~/utils/stats";
 
 export const TreasureStats = () => {
@@ -12,7 +12,7 @@ export const TreasureStats = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<{
     magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
-    totalLocked: Awaited<ReturnType<typeof getUtilization>>;
+    totalLocked: Awaited<ReturnType<typeof getTotalLockedAmount>>;
     totalMarketplaceVolume: Awaited<
       ReturnType<typeof getTotalMarketplaceVolume>
     >;
@@ -26,7 +26,7 @@ export const TreasureStats = () => {
           getMagicPrice(),
           getTotalMarketplaceVolume(),
           getUniqueAddressCount(),
-          getUtilization(),
+          getTotalLockedAmount(),
         ]);
       setData({
         magicPrice,
