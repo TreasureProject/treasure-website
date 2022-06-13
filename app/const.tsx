@@ -695,6 +695,11 @@ export const navigation = [
         href: "https://docs.treasure.lol/",
         isExternal: true,
       },
+      {
+        name: "Newsletter",
+        href: "https://www.getrevue.co/profile/treasuredao/",
+        isExternal: true,
+      },
     ],
   },
   {
@@ -741,7 +746,7 @@ export const navigation = [
     name: "Contribute",
     links: [
       {
-        name: "Forum",
+        name: "Governance Forum",
         href: "https://treasuredao.freeflarum.com/",
         isExternal: true,
       },
@@ -757,7 +762,7 @@ export const navigation = [
       },
       {
         name: "Guilds",
-        href: "https://www.notion.so/treasure-dao/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
+        href: "https://treasure-dao.notion.site/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
         isExternal: true,
       },
       {
@@ -767,7 +772,7 @@ export const navigation = [
       },
       {
         name: "Talent",
-        href: "https://www.notion.so/treasure-dao/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7",
+        href: "https://treasure-dao.notion.site/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7",
         isExternal: true,
       },
     ],
