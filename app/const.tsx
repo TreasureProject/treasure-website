@@ -625,7 +625,7 @@ export const partners = [
 
 export const infrastructures = [
   {
-    name: "Trove Marketplace",
+    name: "Marketplace",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
     description:
       "Trove is a gamified NFT marketplace on Arbitrum, denominated in MAGIC and ETH.",
