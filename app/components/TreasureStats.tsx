@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {
   getMagicPrice,
   getTotalMarketplaceVolume,
-  getUniqueAddressCount,
+  getPercentLocked,
   getTotalLockedAmount,
 } from "~/utils/stats";
 
@@ -16,22 +16,22 @@ export const TreasureStats = () => {
     totalMarketplaceVolume: Awaited<
       ReturnType<typeof getTotalMarketplaceVolume>
     >;
-    uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
+    percentLocked: Awaited<ReturnType<typeof getPercentLocked>>;
   } | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const [magicPrice, totalMarketplaceVolume, uniqueAddresses, totalLocked] =
+      const [magicPrice, totalMarketplaceVolume, percentLocked, totalLocked] =
         await Promise.all([
           getMagicPrice(),
           getTotalMarketplaceVolume(),
-          getUniqueAddressCount(),
+          getPercentLocked(),
           getTotalLockedAmount(),
         ]);
       setData({
         magicPrice,
         totalLocked,
-        uniqueAddresses,
+        percentLocked,
         totalMarketplaceVolume,
       });
       setIsLoading(false);
@@ -79,10 +79,10 @@ export const TreasureStats = () => {
           <MagicLogoIcon />
           <div>
             <p className="text-base font-bold md:text-sm lg:text-base">
-              Unique Wallets
+              Total Value Locked (%)
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {isLoading ? " --" : data?.uniqueAddresses}
+              {isLoading ? " --" : data?.percentLocked}
             </p>
           </div>
         </div>

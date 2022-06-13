@@ -157,6 +157,24 @@ export async function getTotalSupply() {
   }
 }
 
+export async function getPercentLocked() {
+  const res = await fetch(
+    "https://api.thegraph.com/subgraphs/name/treasureproject/bridgeworld",
+    {
+      body: '{"query":"{atlasMines{utilization}}","variables":null}',
+      method: "POST",
+    }
+  );
+
+  const {
+    data: {
+      atlasMines: [{ utilization }],
+    },
+  }: { data: { atlasMines: [{ utilization: string }] } } = await res.json();
+
+  return formatPercent(Number(utilization) / 1e18);
+}
+
 export async function getUtilization() {
   try {
     const res = await fetch(
