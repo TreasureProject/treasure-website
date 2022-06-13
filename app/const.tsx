@@ -629,7 +629,7 @@ export const infrastructures = [
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
     description:
       "Trove is a gamified NFT marketplace on Arbitrum, denominated in MAGIC and ETH.",
-    buttonDescription: "View Marketplace",
+    buttonDescription: "Visit Trove",
     href: "https://trove.treasure.lol",
   },
   // {
