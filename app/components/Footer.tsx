@@ -33,57 +33,77 @@ export const Footer = ({ openModal }: { openModal: () => void }) => (
           </div>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:col-span-3 xl:mt-0">
-          {navigation
-            .filter((item) => Boolean(item.links))
-            .map((item) => {
-              const { name, links } = item;
-              if (links) {
-                return (
-                  <div
-                    key={name}
-                    className="space-y-6 text-center sm:text-left"
-                  >
-                    <Badge
-                      name={name}
-                      bgColor="bg-honey-100"
-                      textColor="text-ruby-900"
-                      size="sm"
-                    />
-                    <ul className="space-y-4">
-                      {links.map(({ name, isExternal, href }) => (
-                        <li
-                          key={name}
-                          className="flex items-center justify-center space-x-1 sm:justify-start"
-                        >
-                          {isExternal ? (
-                            <a
-                              href={href}
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              className="text-night-800 hover:text-night-700"
-                            >
-                              {name}
-                            </a>
-                          ) : (
-                            <Link
-                              to={href}
-                              className="text-night-800 hover:text-night-700"
-                            >
-                              {name}
-                            </Link>
-                          )}
-                          {isExternal ? (
-                            <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
-                          ) : null}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              }
+          {navigation.map((item) => {
+            const { name, links, href } = item;
+            if (links) {
+              return (
+                <div key={name} className="space-y-6 text-center sm:text-left">
+                  <Badge
+                    name={name}
+                    bgColor="bg-honey-100"
+                    textColor="text-ruby-900"
+                    size="sm"
+                  />
+                  <ul className="space-y-4">
+                    {links.map(({ name, isExternal, href }) => (
+                      <li
+                        key={name}
+                        className="flex items-center justify-center space-x-1 sm:justify-start"
+                      >
+                        {isExternal ? (
+                          <a
+                            href={href}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="text-night-800 hover:text-night-700"
+                          >
+                            {name}
+                          </a>
+                        ) : (
+                          <Link
+                            to={href}
+                            className="text-night-800 hover:text-night-700"
+                          >
+                            {name}
+                          </Link>
+                        )}
+                        {isExternal ? (
+                          <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            }
 
-              return null;
-            })}
+            return (
+              <div key={name} className="space-y-6 text-center sm:text-left">
+                <Badge
+                  name="Marketplace"
+                  bgColor="bg-honey-100"
+                  textColor="text-ruby-900"
+                  size="sm"
+                />
+                <ul className="space-y-4">
+                  <li
+                    key={name}
+                    className="flex items-center justify-center space-x-1 sm:justify-start"
+                  >
+                    <a
+                      href={href}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="text-night-800 hover:text-night-700"
+                    >
+                      Visit Trove
+                    </a>
+                    <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
+                  </li>
+                </ul>
+              </div>
+            );
+          })}
         </div>
         <div className="mt-12 text-left xl:mt-0 xl:text-right">
           <button
