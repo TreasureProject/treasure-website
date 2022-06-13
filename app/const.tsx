@@ -628,10 +628,18 @@ export const infrastructures = [
     name: "Marketplace",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
     description:
-      "Trove is a gamified NFT marketplace on Arbitrum, denominated in MAGIC and ETH.",
-    buttonDescription: "Visit Trove",
-    href: "https://trove.treasure.lol",
+      "The Treasure Marketplace is an NFT marketplace on Arbitrum denominated in MAGIC.",
+    buttonDescription: "Visit Marketplace",
+    href: "https://marketplace.treasure.lol",
   },
+  // {
+  //   name: "Marketplace",
+  //   icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
+  //   description:
+  //     "Trove is a gamified NFT marketplace on Arbitrum, denominated in MAGIC and ETH.",
+  //   buttonDescription: "Visit Trove",
+  //   href: "https://trove.treasure.lol",
+  // },
   // {
   //   name: "AMM",
   //   icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
@@ -792,7 +800,12 @@ export const navigation = [
       },
     ],
   },
-  { name: "Marketplace", href: "https://trove.treasure.lol", isExternal: true },
+  {
+    name: "Marketplace",
+    href: "https://marketplace.treasure.lol",
+    isExternal: true,
+  },
+  // { name: "Marketplace", href: "https://trove.treasure.lol", isExternal: true },
 ];
 
 export const partnerCartridges = [

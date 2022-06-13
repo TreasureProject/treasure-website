@@ -132,10 +132,10 @@ export default function WhyTreasure() {
                 Marketplace Listing
               </p>
               <p className="text-base text-night-600 sm:text-xl">
-                All NFTs within an integrated project are listed on Trove and
-                denominated in MAGIC. Royalties received could go towards
-                funding operations, ongoing in-game rewards and/or participation
-                in Bridgeworld.
+                All NFTs within an integrated project are listed on the Treasure
+                Marketplace and denominated in MAGIC. Royalties received could
+                go towards funding operations, ongoing in-game rewards and/or
+                participation in Bridgeworld.
               </p>
             </div>
           </div>
