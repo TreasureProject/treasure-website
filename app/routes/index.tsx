@@ -49,13 +49,21 @@ export default function Home() {
                   />
                   <div className="absolute top-0 flex h-full w-full items-center justify-center">
                     {/* <button> */}
-                    <button onClick={() => setIsOpenYoutubeModal(true)}>
-                      <PlayIcon
-                        className="h-20 w-20 text-ruby-900 transition-transform duration-300 hover:scale-110 sm:h-24 sm:w-24"
-                        width="100%"
-                        height="100%"
-                      />
-                    </button>
+                    <div className="relative">
+                      <button
+                        onClick={() => setIsOpenYoutubeModal(true)}
+                        className="relative z-10"
+                      >
+                        <PlayIcon
+                          className="h-20 w-20 text-ruby-900 transition-transform duration-300 hover:scale-110 sm:h-24 sm:w-24"
+                          width="100%"
+                          height="100%"
+                        />
+                      </button>
+                      <div className="absolute top-0 flex h-full w-full items-center justify-center">
+                        <span className="h-10 w-10 bg-white sm:h-12 sm:w-12" />
+                      </div>
+                    </div>
                     {/* </button> */}
                   </div>
                 </div>
