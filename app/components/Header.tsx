@@ -114,6 +114,8 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                   <a
                     key={item.name}
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-base font-medium text-night-900 hover:text-night-700"
                   >
                     {item.name}
