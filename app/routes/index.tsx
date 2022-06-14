@@ -14,6 +14,10 @@ import { Fragment, useState } from "react";
 
 import ReactPlayer from "react-player/youtube";
 import { Dialog, Transition } from "@headlessui/react";
+import type { HeadersFunction } from "@remix-run/cloudflare";
+import { commonHeaders } from "~/utils/misc.server";
+
+export const headers: HeadersFunction = commonHeaders;
 
 export default function Home() {
   const [isOpenYoutubeModal, setIsOpenYoutubeModal] = useState(false);
@@ -239,7 +243,6 @@ export default function Home() {
                 <Dialog.Panel className="relative w-full sm:max-w-2xl">
                   <ReactPlayer
                     playing={true}
-                    loop={true}
                     controls={true}
                     url="https://www.youtube.com/watch?v=9W-Ps6xkgZI"
                     width="100%"

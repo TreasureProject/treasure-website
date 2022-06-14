@@ -6,9 +6,12 @@ import RedRupeeImg from "../../public/img/red-rupee.png";
 import { WhyTreasureCardList } from "~/const";
 import { CTAButton } from "~/components/Button";
 
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
+
+export const headers: HeadersFunction = commonHeaders;
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {

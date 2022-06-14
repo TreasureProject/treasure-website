@@ -7,9 +7,12 @@ import classNames from "clsx";
 import TreasureTeamImg from "../../public/img/TreasureTeam.png";
 import DefaultPfpImg from "../../public/img/pfps/default.png";
 
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
+
+export const headers: HeadersFunction = commonHeaders;
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {

@@ -6,9 +6,10 @@ import { CTAButton, InternalCTAButton } from "~/components/Button";
 import { BridgeworldInfrastructures } from "~/const";
 import InfrastuctureImg from "../../public/img/Infrastucture.png";
 
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -29,6 +30,8 @@ export const meta: MetaFunction = ({ parentsData }) => {
     }),
   };
 };
+
+export const headers: HeadersFunction = commonHeaders;
 
 export default function About() {
   return (

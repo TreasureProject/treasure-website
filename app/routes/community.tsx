@@ -5,9 +5,10 @@ import { GuildsIcon } from "~/components/Icons";
 import { TwitterCard } from "~/components/TwitterCard";
 import { tweets } from "~/const";
 
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -28,6 +29,8 @@ export const meta: MetaFunction = ({ parentsData }) => {
     }),
   };
 };
+
+export const headers: HeadersFunction = commonHeaders;
 
 export default function Community() {
   return (
