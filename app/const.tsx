@@ -42,7 +42,7 @@ import Endimg from "../public/img/pfps/End.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
 import GaarpImg from "../public/img/pfps/Gaarp.png";
-import HunterImg from "../public/img/pfps/Hunter.png";
+import PeteYamaImg from "../public/img/pfps/Hunter.png";
 import InspracImg from "../public/img/pfps/Insprac.png";
 import JakeImg from "../public/img/pfps/Jake.png";
 import JohnImg from "../public/img/pfps/John.png";
@@ -141,11 +141,11 @@ export const teamMembers = [
     image: GaarpImg,
   },
   {
-    name: "Hunter",
+    name: "Pete Yama",
     title: "Development (Front-End), Trove",
     discordLink: null,
     twitterLink: null,
-    image: HunterImg,
+    image: PeteYamaImg,
   },
   {
     name: "Insprac",
