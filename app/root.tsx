@@ -215,7 +215,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="overflow-x-hidden bg-honey-25 antialiased" id="top">
+      <body className="bg-honey-25 antialiased" id="top">
         <div className="border-2 border-t border-ruby-900" />
         <Header openModal={openModal} />
         <Outlet />
