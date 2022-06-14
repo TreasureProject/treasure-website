@@ -25,7 +25,7 @@ export default function Home() {
   const onClose = () => setIsOpenYoutubeModal(false);
   return (
     <>
-      <main>
+      <main className="overflow-hidden">
         <div className="bg-honey-100 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8">
           <div className="mx-auto max-w-9xl lg:px-12">
             <div className="lg:grid lg:grid-cols-7 lg:gap-8">
