@@ -13,6 +13,7 @@ import { MagicIcon, TroveRevertedIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 
 import classNames from "clsx";
+import { Logo } from "./Logo";
 
 export const Header = ({ openModal }: { openModal: () => void }) => {
   const matches = useMatches();
@@ -25,18 +26,11 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
     <>
       <Popover as="header" className="sticky top-0 z-20 lg:relative">
         <div className="bg-honey-100 py-4 sm:py-6">
-          <div className="relative mx-auto flex max-w-9xl items-center justify-between px-4 sm:px-8 lg:px-12">
-            <div className="flex w-full items-center justify-between lg:w-auto">
+          <div className="relative mx-auto flex max-w-9xl items-center justify-center py-6">
+            <div className="absolute left-4 flex sm:left-8 lg:left-12 lg:w-auto">
               <Link to="/">
-                <span className="sr-only">Treasure</span>
-                <img className="h-8 w-auto xl:h-10" src={LogoImg} alt="Logo" />
+                <Logo />
               </Link>
-              <div className="-mr-2 flex items-center lg:hidden">
-                <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-honey-50">
-                  <span className="sr-only">Open main menu</span>
-                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                </Popover.Button>
-              </div>
             </div>
             <Popover.Group as="nav" className="hidden space-x-6 lg:flex">
               {navigation.map((item) => {
@@ -123,7 +117,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                 );
               })}
             </Popover.Group>
-            <div className="flex items-center xl:space-x-8">
+            <div className="absolute right-4 hidden items-center sm:right-8 lg:right-12 lg:flex xl:space-x-8">
               <div className="hidden divide-x divide-honey-300 xl:flex">
                 {socials.map((social) => (
                   <a
@@ -140,11 +134,17 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
               </div>
               <button
                 onClick={openModal}
-                className="hidden items-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 lg:inline-flex"
+                className="inline-flex items-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
               >
                 <span className="font-semibold">Buy</span>
                 <MagicIcon />
               </button>
+            </div>
+            <div className="absolute right-4 flex items-center sm:right-8 lg:hidden">
+              <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-honey-50">
+                <span className="sr-only">Open main menu</span>
+                <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              </Popover.Button>
             </div>
           </div>
         </div>
