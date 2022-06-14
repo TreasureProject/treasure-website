@@ -11,5 +11,5 @@ export function getDomainUrl(request: Request) {
 }
 
 export const commonHeaders: HeadersFunction = () => ({
-  "Cache-Control": "public, max-age=3600",
+  "Cache-Control": "private, max-age=3600",
 });
