@@ -26,7 +26,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
   return (
     <>
       <Popover as="header" className="sticky top-0 z-20 lg:relative">
-        <div className="bg-honey-100 py-4 sm:py-6">
+        <div className="bg-honey-100 py-4 sm:py-0">
           <div className="relative mx-auto flex max-w-9xl items-center justify-center px-4 lg:py-8 lg:px-0">
             <div className="flex w-full items-center justify-between lg:absolute lg:left-12 lg:w-auto">
               <Link to="/">
