@@ -30,6 +30,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
           <div className="relative mx-auto flex max-w-9xl items-center justify-center px-4 lg:py-8 lg:px-0">
             <div className="flex w-full items-center justify-between lg:absolute lg:left-12 lg:w-auto">
               <Link to="/">
+                <span className="sr-only">Home</span>
                 <Player
                   keepLastFrame
                   src={DataJson}

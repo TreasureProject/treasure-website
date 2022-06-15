@@ -58,6 +58,9 @@ export default function Home() {
                         onClick={() => setIsOpenYoutubeModal(true)}
                         className="relative z-10"
                       >
+                        <span className="sr-only">
+                          Play Treasure Promo Video
+                        </span>
                         <PlayIcon
                           className="h-20 w-20 text-ruby-900 transition-transform duration-300 hover:scale-110 sm:h-24 sm:w-24"
                           width="100%"
