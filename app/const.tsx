@@ -143,7 +143,7 @@ export const teamMembers = [
   {
     name: "Pete Yama",
     title: "Development (Front-End), Trove",
-    discordLink: null,
+    discordLink: "https://discordapp.com/users/941365721462632498",
     twitterLink: null,
     image: PeteYamaImg,
   },
