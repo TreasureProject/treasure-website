@@ -11,18 +11,22 @@ import { Communities } from "~/components/Communities";
 import { Infrastructures } from "~/components/Infrastructures";
 import { PlayIcon } from "@heroicons/react/solid";
 import { Fragment, useState } from "react";
+import { Trans } from "react-i18next";
 
 import ReactPlayer from "react-player/youtube";
 import { Dialog, Transition } from "@headlessui/react";
 import type { HeadersFunction } from "@remix-run/cloudflare";
 import { commonHeaders } from "~/utils/misc.server";
+import { useTranslation } from "react-i18next";
 
 export const headers: HeadersFunction = commonHeaders;
 
 export default function Home() {
   const [isOpenYoutubeModal, setIsOpenYoutubeModal] = useState(false);
+  const { t } = useTranslation("index");
 
   const onClose = () => setIsOpenYoutubeModal(false);
+
   return (
     <>
       <main className="overflow-hidden">
@@ -32,14 +36,16 @@ export default function Home() {
               <div className="col-span-3 mx-auto max-w-lg px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
                 <div className="lg:py-12 xl:pb-24 xl:pt-16">
                   <h1 className="mt-4 text-7xl font-bold tracking-tight text-ruby-900 sm:mt-0 xl:text-8xl">
-                    The magic of play.
+                    {t("title")}
                   </h1>
                   <div className="mt-12 rounded-1.9xl border-2 border-honey-200 bg-honey-50 p-7.5 lg:max-w-sm">
                     <p className="text-base text-night-700 sm:text-lg">
-                      Treasure is the decentralized video game console
-                      connecting games and communities together through
-                      imagination, <span className="font-bold">$MAGIC</span>,
-                      and NFTs.
+                      <Trans i18nKey="index:subtitle">
+                        Treasure is the decentralized video game console
+                        connecting games and communities together through
+                        imagination, <span className="font-bold">$MAGIC</span>,
+                        and NFTs.
+                      </Trans>
                     </p>
                   </div>
                 </div>

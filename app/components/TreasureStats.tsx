@@ -6,9 +6,12 @@ import {
   getPercentLocked,
   getTotalLockedAmount,
 } from "~/utils/stats";
+import { useTranslation } from "react-i18next";
 
 export const TreasureStats = () => {
   // const data = useRouteData<RootLoaderData>("root");
+  const { t } = useTranslation("common");
+
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<{
     magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
@@ -46,7 +49,7 @@ export const TreasureStats = () => {
           <MagicLogoIcon />
           <div>
             <p className="text-base font-bold md:text-sm lg:text-base">
-              Magic Price
+              {t("stats.magicPrice")}
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
               ${isLoading ? " --" : data?.magicPrice}
@@ -57,7 +60,7 @@ export const TreasureStats = () => {
           <MagicLogoIcon />
           <div>
             <p className="text-base font-bold md:text-sm lg:text-base">
-              Total Marketplace Volume
+              {t("stats.totalMPVolume")}
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
               {isLoading ? " --" : data?.totalMarketplaceVolume}
@@ -68,7 +71,7 @@ export const TreasureStats = () => {
           <MagicLogoIcon />
           <div>
             <p className="text-base font-bold md:text-sm lg:text-base">
-              Total Value Locked
+              {t("stats.totalValueLocked")}
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
               {isLoading ? " --" : data?.totalLocked}
@@ -79,7 +82,7 @@ export const TreasureStats = () => {
           <MagicLogoIcon />
           <div>
             <p className="text-base font-bold md:text-sm lg:text-base">
-              % Circulating Supply
+              {t("stats.percentCirculatingSupply")}
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
               {isLoading ? " --" : data?.percentLocked}

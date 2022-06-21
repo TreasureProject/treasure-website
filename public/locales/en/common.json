@@ -1,0 +1,14 @@
+{
+  "Learn": "Learn",
+  "Discover": "Discover",
+  "Build": "Build",
+  "Contribute": "Contribute",
+  "LP": "LP",
+  "Marketplace": "Marketplace",
+  "stats": {
+    "magicPrice": "Magic Price",
+    "totalMPVolume": "Total Marketplace Volume",
+    "totalValueLocked": "Total Value Locked",
+    "percentCirculatingSupply": "% Circulating Supply"
+  }
+}
