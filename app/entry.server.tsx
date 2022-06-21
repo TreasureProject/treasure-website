@@ -5,6 +5,7 @@ import Backend from "i18next-fetch-backend";
 import { renderToString } from "react-dom/server";
 import { I18nextProvider, initReactI18next } from "react-i18next";
 import { i18n } from "./utils/i18n.server";
+import { supportedLngs } from "./const";
 
 export default async function handleRequest(
   request: Request,
@@ -22,7 +23,7 @@ export default async function handleRequest(
     .use(initReactI18next)
     .use(Backend)
     .init({
-      supportedLngs: ["en", "ja-JP"],
+      supportedLngs,
       defaultNS: "index",
       fallbackLng: "en",
       react: { useSuspense: false },

@@ -5,13 +5,14 @@ import Backend from "i18next-http-backend";
 import { hydrate } from "react-dom";
 import { I18nextProvider, initReactI18next } from "react-i18next";
 import { getInitialNamespaces } from "remix-i18next";
+import { supportedLngs } from "./const";
 
 i18next
   .use(initReactI18next)
   .use(LanguageDetector)
   .use(Backend)
   .init({
-    supportedLngs: ["en", "ja-JP"],
+    supportedLngs,
     defaultNS: "index",
     fallbackLng: "en",
     react: { useSuspense: false },
