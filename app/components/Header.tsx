@@ -20,7 +20,9 @@ import { useTranslation } from "react-i18next";
 export const Header = ({ openModal }: { openModal: () => void }) => {
   const matches = useMatches();
 
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("index", {
+    keyPrefix: "common",
+  });
 
   const isLeafPage = matches.some((match) => !!match.handle?.breadcrumb);
 

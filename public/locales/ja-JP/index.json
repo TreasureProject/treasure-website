@@ -1,11 +1,11 @@
 {
   "common": {
-    "Learn": "Learn",
-    "Discover": "Discover",
-    "Build": "Build",
-    "Contribute": "Contribute",
+    "Learn": "学ぶ",
+    "Discover": "見つける",
+    "Build": "作る",
+    "Contribute": "貢献する",
     "LP": "LP",
-    "Marketplace": "Marketplace",
+    "Marketplace": "マーケットプレイス",
     "stats": {
       "magicPrice": "Magic Price",
       "totalMPVolume": "Total Marketplace Volume",

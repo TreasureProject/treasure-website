@@ -184,7 +184,7 @@ export const loader: LoaderFunction = async ({ context, request }) => {
 };
 
 export const handle = {
-  i18n: ["common", "index"],
+  i18n: ["index"],
 };
 
 export default function App() {

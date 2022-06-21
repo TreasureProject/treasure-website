@@ -7,7 +7,9 @@ import LogoImg from "../../public/img/logo.png";
 import { useTranslation } from "react-i18next";
 
 export const Footer = ({ openModal }: { openModal: () => void }) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("index", {
+    keyPrefix: "common",
+  });
 
   return (
     <footer className="bg-honey-50" aria-labelledby="footer-heading">

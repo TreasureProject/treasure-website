@@ -22,8 +22,8 @@ export default async function handleRequest(
     .use(initReactI18next)
     .use(Backend)
     .init({
-      supportedLngs: ["es", "en"],
-      defaultNS: "common",
+      supportedLngs: ["en", "ja-JP"],
+      defaultNS: "index",
       fallbackLng: "en",
       react: { useSuspense: false },
       lng,

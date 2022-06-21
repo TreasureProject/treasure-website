@@ -3,7 +3,7 @@ import { RemixI18Next } from "remix-i18next";
 
 export const i18n = new RemixI18Next({
   detection: {
-    supportedLanguages: ["es", "en"],
+    supportedLanguages: ["en", "ja-JP"],
     fallbackLanguage: "en",
   },
   i18next: {

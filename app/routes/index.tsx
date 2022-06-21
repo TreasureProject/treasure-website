@@ -23,7 +23,9 @@ export const headers: HeadersFunction = commonHeaders;
 
 export default function Home() {
   const [isOpenYoutubeModal, setIsOpenYoutubeModal] = useState(false);
-  const { t } = useTranslation("index");
+  const { t } = useTranslation("index", {
+    keyPrefix: "index",
+  });
 
   const onClose = () => setIsOpenYoutubeModal(false);
 

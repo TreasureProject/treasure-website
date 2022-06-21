@@ -11,8 +11,8 @@ i18next
   .use(LanguageDetector)
   .use(Backend)
   .init({
-    supportedLngs: ["es", "en"],
-    defaultNS: "common",
+    supportedLngs: ["en", "ja-JP"],
+    defaultNS: "index",
     fallbackLng: "en",
     react: { useSuspense: false },
 
