@@ -26,12 +26,12 @@ import OnekxImg from "../public/img/partners/1kx.svg";
 import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
 import OkxImg from "../public/img/magic-list/okx.svg";
 
-import BountyBoardImg from "../public/img/illustrations/bountyBoard.svg";
-import BuildWithUsImg from "../public/img/illustrations/buildWithUs.svg";
-import CommunityInitiativesImg from "../public/img/illustrations/communityInitiatives.svg";
-import FlywheelImg from "../public/img/illustrations/flywheel.svg";
-import GovernanceImg from "../public/img/illustrations/governance.svg";
-import GuildsImg from "../public/img/illustrations/guilds.svg";
+import BountyBoardImg from "../public/img/illustrations/bountyBoard.png";
+import BuildWithUsImg from "../public/img/illustrations/buildWithUs.png";
+import CommunityInitiativesImg from "../public/img/illustrations/communityInitiatives.png";
+import FlywheelImg from "../public/img/illustrations/flywheel.png";
+import GovernanceImg from "../public/img/illustrations/governance.png";
+import GuildsImg from "../public/img/illustrations/guilds.png";
 
 import AntlionImg from "../public/img/pfps/Antlion.png";
 import ArchangImg from "../public/img/pfps/Archang.png";
