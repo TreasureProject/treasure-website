@@ -1,0 +1,38 @@
+{
+  "common": {
+    "Learn": "学ぶ",
+    "Discover": "見つける",
+    "Build": "作る",
+    "Contribute": "貢献する",
+    "LP": "LP",
+    "Marketplace": "マーケットプレイス",
+    "stats": {
+      "magicPrice": "Magic Price",
+      "totalMPVolume": "Total Marketplace Volume",
+      "totalValueLocked": "Total Value Locked",
+      "percentCirculatingSupply": "% Circulating Supply"
+    },
+    "About": "Treasureについて",
+    "Team": "チーム",
+    "Documentation": "ドキュメンテーション",
+    "Newsletter": "ニュースレター",
+    "Bridgeworld": "ブリッジワールド",
+    "Cartridges": "カートリッジ",
+    "Community": "コミュニティ",
+    "Infrastructure": "インフラストラクチャー",
+    "Why Treasure?": "なぜ Treasure?",
+    "Apply for partnership": "パートナーシップを申し込む",
+    "Governance Forum": "ガバナンスフォーラム",
+    "Vote on Snapshot": "スナップショットに投票",
+    "Bounty Board": "バウンティボード",
+    "Guilds": "ギルド",
+    "Community Initiatives": "コミュニティイニシエーション",
+    "Talent": "タレント",
+    "MAGIC-ETH LP": "MAGIC-ETH LP",
+    "Balancer Crystals": "Balancer Crystals"
+  },
+  "index": {
+    "title": "The magic of play.",
+    "subtitle": "Treasure is the decentralized video game console connecting games and communities together through imagination, <1>$MAGIC</1>, and NFTs."
+  }
+}

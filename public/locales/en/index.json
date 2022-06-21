@@ -1,0 +1,38 @@
+{
+  "common": {
+    "Learn": "Learn",
+    "Discover": "Discover",
+    "Build": "Build",
+    "Contribute": "Contribute",
+    "LP": "LP",
+    "Marketplace": "Marketplace",
+    "stats": {
+      "magicPrice": "Magic Price",
+      "totalMPVolume": "Total Marketplace Volume",
+      "totalValueLocked": "Total Value Locked",
+      "percentCirculatingSupply": "% Circulating Supply"
+    },
+    "About": "About",
+    "Team": "Team",
+    "Documentation": "Documentation",
+    "Newsletter": "Newsletter",
+    "Bridgeworld": "Bridgeworld",
+    "Cartridges": "Cartridges",
+    "Community": "Community",
+    "Infrastructure": "Infrastructure",
+    "Why Treasure?": "Why Treasure?",
+    "Apply for partnership": "Apply for partnership",
+    "Governance Forum": "Governance Forum",
+    "Vote on Snapshot": "Vote on Snapshot",
+    "Bounty Board": "Bounty Board",
+    "Guilds": "Guilds",
+    "Community Initiatives": "Community Initiatives",
+    "Talent": "Talent",
+    "MAGIC-ETH LP": "MAGIC-ETH LP",
+    "Balancer Crystals": "Balancer Crystals"
+  },
+  "index": {
+    "title": "The magic of play.",
+    "subtitle": "Treasure is the decentralized video game console connecting games and communities together through imagination, <1>$MAGIC</1>, and NFTs."
+  }
+}

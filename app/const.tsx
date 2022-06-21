@@ -65,7 +65,6 @@ import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
 
 import {
-  AMMIcon,
   CartridgesIcon,
   DiscordIcon,
   EconomyIcon,
@@ -886,3 +885,5 @@ export const socials = [
     icon: (props: { className?: string }) => <TwitterIcon {...props} />,
   },
 ];
+
+export const supportedLngs = ["en", "ja-JP"];

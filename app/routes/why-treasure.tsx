@@ -20,8 +20,6 @@ export const meta: MetaFunction = ({ parentsData }) => {
     root: RootLoaderData;
   };
 
-  console.log({ parentsData });
-
   return {
     ...getSocialMetas({
       description:

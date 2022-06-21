@@ -15,11 +15,16 @@ import LogoImg from "../../public/img/logo.png";
 import classNames from "clsx";
 import { Player } from "@lottiefiles/react-lottie-player";
 import DataJson from "../lotties/data.json";
+import { useTranslation } from "react-i18next";
 
 export const Header = ({ openModal }: { openModal: () => void }) => {
   const matches = useMatches();
 
-  const isLeafPage = matches.some((match) => !!match.handle);
+  const { t } = useTranslation("index", {
+    keyPrefix: "common",
+  });
+
+  const isLeafPage = matches.some((match) => !!match.handle?.breadcrumb);
 
   const location = useLocation();
 
@@ -53,7 +58,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                       {({ open }) => (
                         <>
                           <Popover.Button className="group inline-flex items-center rounded-md text-base font-medium text-night-900 focus:outline-none focus:ring-2 focus:ring-honey-500 focus:ring-offset-2">
-                            <span>{item.name}</span>
+                            <span>{t(item.name)}</span>
                             <ChevronDownIcon
                               className={classNames(
                                 open ? "text-ruby-600" : "text-ruby-900",
@@ -87,7 +92,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                           className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
                                         >
                                           <span className="text-base font-medium text-night-900">
-                                            {link.name}
+                                            {t(link.name)}
                                           </span>
                                           <ExternalLinkIcon className="ml-1 h-4 w-4 text-ruby-900" />
                                         </Popover.Button>
@@ -102,7 +107,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-honey-200"
                                       >
                                         <p className="text-base font-medium text-night-900">
-                                          {link.name}
+                                          {t(link.name)}
                                         </p>
                                       </Popover.Button>
                                     );
@@ -125,7 +130,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                     rel="noopener noreferrer"
                     className="text-base font-medium text-night-900 hover:text-night-700"
                   >
-                    {item.name}
+                    {t(item.name)}
                   </a>
                 );
               })}
@@ -199,7 +204,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                   "group flex w-full items-center justify-between rounded-1.5xl px-4 py-2 text-left font-medium text-night-900 focus:outline-none focus-visible:ring focus-visible:ring-honey-500 focus-visible:ring-opacity-75"
                                 )}
                               >
-                                <span>{item.name}</span>
+                                <span>{t(item.name)}</span>
                                 <ChevronDownIcon
                                   className={classNames(
                                     open ? "text-ruby-600" : "text-ruby-900",
@@ -219,7 +224,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         rel="noopener noreferrer"
                                         className="flex items-center px-3 py-2 font-medium text-night-900"
                                       >
-                                        <span>{link.name}</span>
+                                        <span>{t(link.name)}</span>
                                         <ExternalLinkIcon className="ml-1 h-3 w-3 text-ruby-900" />
                                       </Popover.Button>
                                     );
@@ -232,7 +237,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                       prefetch="render"
                                       className="block px-3 py-2 font-medium text-night-900"
                                     >
-                                      {link.name}
+                                      {t(link.name)}
                                     </Popover.Button>
                                   );
                                 })}
@@ -251,7 +256,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                         target="_blank"
                         className="group flex items-center justify-between px-4 py-2 text-left font-medium text-night-900"
                       >
-                        {item.name}
+                        {t(item.name)}
                         <ExternalLinkIcon className="h-4 w-4 text-ruby-900 group-hover:text-ruby-700" />
                       </a>
                     );
@@ -290,7 +295,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                   </div>
                 </li>
                 {matches
-                  .filter((match) => !!match.handle)
+                  .filter((match) => !!match.handle.breadcrumb)
                   .map((match) => {
                     const { href, title } = match.handle.breadcrumb as {
                       href: string;
@@ -312,7 +317,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                             aria-current={currentPath ? "page" : undefined}
                           >
                             <h3 className="font-mono text-sm font-medium text-ruby-900">
-                              {title}
+                              {t(title)}
                             </h3>
                           </Link>
                         </div>
@@ -327,7 +332,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
               target="_blank"
               className="inline-flex items-center rounded-button bg-ruby-1000 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1400/50 focus:outline-none focus:ring-2 focus:ring-ruby-900 focus:ring-offset-2 sm:text-base"
             >
-              Marketplace
+              {t("Marketplace")}
               <TroveRevertedIcon
                 className="ml-4 h-6 w-6 text-white"
                 aria-hidden="true"

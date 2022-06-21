@@ -37,6 +37,9 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 import NProgress from "nprogress";
 import nProgressStyles from "./styles/nProgress.css";
 import { Modal } from "./components/Modal";
+import { i18n } from "./utils/i18n.server";
+import { useTranslation } from "react-i18next";
+import { useChangeLanguage } from "remix-i18next";
 // import {
 //   getMagicPrice,
 //   getTotalMarketplaceVolume,
@@ -51,6 +54,7 @@ export type RootLoaderData = {
     path: string;
   };
   ENV: Partial<CloudFlareEnv>;
+  locale: string;
   // magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
   // totalLocked: Awaited<ReturnType<typeof getUtilization>>;
   // totalMarketplaceVolume: Awaited<ReturnType<typeof getTotalMarketplaceVolume>>;
@@ -156,12 +160,14 @@ export const loader: LoaderFunction = async ({ context, request }) => {
   // getUniqueAddressCount(),
   // getTotalMarketplaceVolume(),
   // ]);
+  const locale = await i18n.getLocale(request);
 
   return json<RootLoaderData>({
     // magicPrice,
     // totalLocked,
     // uniqueAddresses,
     // totalMarketplaceVolume,
+    locale,
     data: await getPosts(),
     requestInfo: {
       origin: getDomainUrl(request),
@@ -177,10 +183,17 @@ export const loader: LoaderFunction = async ({ context, request }) => {
   });
 };
 
+export const handle = {
+  i18n: ["index"],
+};
+
 export default function App() {
-  const { ENV } = useLoaderData<RootLoaderData>();
+  const { ENV, locale } = useLoaderData<RootLoaderData>();
+
   const [openPurchaseMagicModal, setOpenPurchaseMagicModal] =
     React.useState(false);
+
+  const { i18n } = useTranslation();
 
   const openModal = () => setOpenPurchaseMagicModal(true);
   const closeModal = () => setOpenPurchaseMagicModal(false);
@@ -201,6 +214,8 @@ export default function App() {
     [transition.state, fetchers]
   );
 
+  useChangeLanguage(locale);
+
   React.useEffect(() => {
     // and when it's something else it means it's either submitting a form or
     // waiting for the loaders of the next location so we start it
@@ -210,7 +225,7 @@ export default function App() {
   }, [state, transition.state]);
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
       <head>
         <Meta />
         <Links />
