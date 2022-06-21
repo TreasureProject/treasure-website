@@ -11,7 +11,11 @@
       "totalMPVolume": "Total Marketplace Volume",
       "totalValueLocked": "Total Value Locked",
       "percentCirculatingSupply": "% Circulating Supply"
-    }
+    },
+    "About": "Treasureについて",
+    "Team": "チーム",
+    "Documentation": "ドキュメンテーション",
+    "Newsletter": "ニュースレター"
   },
   "index": {
     "title": "The magic of play.",
