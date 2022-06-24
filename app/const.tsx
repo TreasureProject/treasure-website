@@ -805,7 +805,7 @@ export const partnerCartridges = [
     image: BattleFlyImg,
     discordLink: "https://discord.gg/YzpajBfRNX",
     twitterLink: "https://twitter.com/battleflygame",
-    websiteLink: "https://battlefly.game/",
+    websiteLink: "https://www.battlefly.game/",
   },
   {
     name: "Toadstoolz",
