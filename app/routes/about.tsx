@@ -140,7 +140,7 @@ export default function About() {
             </div>
             <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:col-span-4">
               <h3 className="text-xl font-extrabold text-ruby-900 sm:text-4xl">
-                $MAGIC as currency
+                MAGIC as currency
               </h3>
               <div className="mt-6 space-y-4 text-sm text-night-700 sm:text-base">
                 <p>
