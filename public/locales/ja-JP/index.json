@@ -7,7 +7,7 @@
     "LP": "LP",
     "Marketplace": "マーケットプレイス",
     "stats": {
-      "magicPrice": "Magic Price",
+      "magicPrice": "MAGIC Price",
       "totalMPVolume": "Total Marketplace Volume",
       "totalValueLocked": "Total Value Locked",
       "percentCirculatingSupply": "% Circulating Supply"

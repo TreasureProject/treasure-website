@@ -279,7 +279,7 @@ export default function App() {
           </div>
           <div className="mt-8 mb-4 text-center text-sm sm:mt-16 sm:mb-6 sm:text-base">
             <p className="text-white">
-              New to Magic?{" "}
+              New to MAGIC?{" "}
               <a
                 href="https://docs.treasure.lol/getting-started/what-is-magic"
                 rel="noopener noreferrer"
