@@ -38,7 +38,7 @@ const ColorPaletteItem = ({
       >
         <span className="sr-only">Copy to clipboard</span>
         {copied ? (
-          <ClipboardCheckIcon className="h-4 w-4 text-white sm:h-6 sm:w-6" />
+          <ClipboardCheckIcon className="h-4 w-4 rotate-[-8deg] text-white sm:h-6 sm:w-6" />
         ) : (
           <ClipboardIcon className="h-4 w-4 text-white opacity-0 transition-opacity group-hover:opacity-100 sm:h-6 sm:w-6" />
         )}

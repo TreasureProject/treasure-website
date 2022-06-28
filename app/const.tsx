@@ -740,8 +740,8 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Resources",
-        href: "/resources",
+        name: "Brand Assets",
+        href: "/brand-assets",
         isExternal: false,
       },
     ],

@@ -407,7 +407,7 @@ export default function Resources() {
 
 export const handle = {
   breadcrumb: {
-    href: "/resources",
-    title: "Resources",
+    href: "/brand-assets",
+    title: "Brand Assets",
   },
 };
