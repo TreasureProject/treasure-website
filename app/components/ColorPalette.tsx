@@ -5,7 +5,7 @@ import { colors } from "../../const";
 import { Badge } from "./Badge";
 
 const ColorNames = {
-  ruby: "Ruby Red",
+  ruby: "Treasure Red",
   honey: "Honey Gold",
   night: "Night",
 } as const;
