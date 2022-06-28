@@ -212,7 +212,9 @@ export default function Resources() {
                           "-ml-[2px] border-l-2 py-1 pl-4 hover:border-ruby-700 hover:text-ruby-800"
                         )}
                       >
-                        <Link to={`/resources#${item.hash}`}>{item.name}</Link>
+                        <Link to={`/brand-assets#${item.hash}`}>
+                          {item.name}
+                        </Link>
                       </li>
                     );
                   })}
@@ -248,7 +250,7 @@ export default function Resources() {
                             >
                               {i === 0 ? (
                                 <Link
-                                  to={`/resources#${asset.toLowerCase()}`}
+                                  to={`/brand-assets#${asset.toLowerCase()}`}
                                   className="group inline-flex items-center text-xl font-bold text-night-900 sm:text-3xl"
                                 >
                                   <span>
