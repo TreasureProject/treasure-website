@@ -38,7 +38,6 @@ import ArchangImg from "../public/img/pfps/Archang.png";
 import BahamaImg from "../public/img/pfps/Bahama.png";
 import DerrickImg from "../public/img/pfps/Derrick.png";
 import DukeImg from "../public/img/pfps/Duke.png";
-import Endimg from "../public/img/pfps/End.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
 import GaarpImg from "../public/img/pfps/Gaarp.png";
@@ -117,13 +116,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/206403485120462848",
     twitterLink: "https://twitter.com/DukePaints",
     image: DukeImg,
-  },
-  {
-    name: "End",
-    title: "Product, Bridgeworld",
-    discordLink: "https://discordapp.com/users/146399041125613568",
-    twitterLink: "https://twitter.com/notrealend",
-    image: Endimg,
   },
   {
     name: "ENT1T7",
