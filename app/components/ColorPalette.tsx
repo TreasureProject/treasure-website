@@ -69,14 +69,14 @@ export const ColorPalette = () => {
                 className="rounded-1.5xl"
               />
               <div className="grid min-w-0 flex-1 grid-cols-3 gap-x-6 gap-y-5 lg:grid-cols-5 lg:gap-y-10 lg:gap-x-11">
-                {(
-                  Object.keys(palette) as unknown as (keyof typeof palette)[]
-                ).map((value, j) => {
-                  const color = palette[value];
-                  return (
-                    <ColorPaletteItem key={j} value={value} color={color} />
-                  );
-                })}
+                {(Object.keys(palette) as unknown as (keyof typeof palette)[])
+                  .reverse()
+                  .map((value, j) => {
+                    const color = palette[value];
+                    return (
+                      <ColorPaletteItem key={j} value={value} color={color} />
+                    );
+                  })}
               </div>
             </div>
           </div>
