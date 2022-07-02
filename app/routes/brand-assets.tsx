@@ -343,13 +343,16 @@ export default function Resources() {
                     );
                   }
                 )}
-                <div className="space-y-20 [&>*]:mt-28">
+                <div className="[&>*]:mt-20 [&>*]:sm:mt-28">
                   <div id="colors" className="scroll-mt-28">
                     <h3 className="text-3xl font-bold text-night-900">
                       Colors
                     </h3>
+
+                    <div className="mt-12">
+                      <ColorPalette />
+                    </div>
                   </div>
-                  <ColorPalette />
                 </div>
               </div>
               <div className="mt-28 scroll-mt-28 space-y-14" id="media-kit">
@@ -359,8 +362,8 @@ export default function Resources() {
                       Brand Guidelines
                     </p>
                     <p className="text-xs text-night-700 xl:text-2xl">
-                      Building a cartridge on Treasure and MAGIC? Apply to
-                      become a partner cartridge today.
+                      Building products related to our brand? Check out our
+                      brand guidelines.
                     </p>
                     <div>
                       <a
@@ -390,8 +393,8 @@ export default function Resources() {
                       Media Kit
                     </p>
                     <p className="text-xs text-night-700 xl:text-2xl">
-                      Building a cartridge on Treasure and MAGIC? Apply to
-                      become a partner cartridge today.
+                      Download our media kit and receive all logo variations for
+                      Treasure, Trove and Magic.
                     </p>
                     <div>
                       <a
