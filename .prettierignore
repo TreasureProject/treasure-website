@@ -3,3 +3,4 @@ app/graphql/*.generated.ts
 functions/
 node_modules/
 public/build/
+tailwind.config.js

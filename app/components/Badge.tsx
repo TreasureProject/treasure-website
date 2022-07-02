@@ -5,15 +5,18 @@ export const Badge = ({
   bgColor,
   textColor,
   size = "md",
+  className,
 }: {
   name: string;
   bgColor?: string;
   textColor?: string;
   size?: "md" | "sm";
+  className?: string;
 }) => {
   return (
     <div
       className={classNames(
+        className,
         bgColor ?? "bg-honey-200",
         size === "sm" ? "px-2.5 py-1.5" : "px-4 py-2.5",
         "inline-block w-max rounded-1.9xl"
