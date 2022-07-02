@@ -63,6 +63,13 @@ import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
 
+import TengImg from "../public/img/twitter/0xPrismatic.jpg";
+import MarioGoetzeImg from "../public/img/twitter/MarioGoetze.jpg";
+import MikeCryptoImg from "../public/img/twitter/Mike_Crypto.jpg";
+import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.jpg";
+import PennybagsImg from "../public/img/twitter/realpennybags.jpg";
+import SquareJordanImg from "../public/img/twitter/SquareJordan.jpg";
+
 import {
   CartridgesIcon,
   DiscordIcon,
@@ -110,7 +117,6 @@ export const teamMembers = [
     twitterLink: "https://twitter.com/DukePaints",
     image: DukeImg,
   },
-
   {
     name: "ENT1T7",
     title: "UI/UX, Bridgeworld",
@@ -322,8 +328,7 @@ const TwitterLink = ({
 
 export const tweets = [
   {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1531228011302989829/_VtNcCUp_200x200.jpg",
+    profileImage: SquareJordanImg,
     username: "Square Jordan",
     handle: "@SquareJordan",
     link: "https://twitter.com/SquareJordan/status/1532071817556676608",
@@ -347,8 +352,7 @@ export const tweets = [
     date: "3:49 AM · June 2, 2022",
   },
   {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1508930945956601862/CBiWlBZx_200x200.jpg",
+    profileImage: MarioGoetzeImg,
     username: "mariogotze.eth",
     handle: "@MarioGoetze",
     link: "https://twitter.com/mariogoetze/status/1478801150883377153",
@@ -360,8 +364,7 @@ export const tweets = [
   },
 
   {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1526836155420844033/N8wDSH1E_200x200.jpg",
+    profileImage: PennybagsImg,
     username: "Uncle Pennybags 🦍",
     handle: "@realpennybags",
     link: "https://twitter.com/realpennybags/status/1485856084258549762",
@@ -386,8 +389,7 @@ export const tweets = [
     date: "3:04 PM · Jan 25, 2022",
   },
   {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1463417539958951941/H0fwRrw4_200x200.jpg",
+    profileImage: MikeCryptoImg,
     username: "Mike_Crypto (🪄,🧠)",
     handle: "@Mike_Crypto",
     link: "https://twitter.com/Mike_Crypto/status/1506323131077697543",
@@ -412,10 +414,9 @@ export const tweets = [
   },
 
   {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1497859492029288448/4ioYZ3pS_200x200.jpg",
+    profileImage: OfficialAbengerImg,
     username: "OfficialAbenger (3,3) ( 🪄,🌙)",
-    handle: "@officialabenger",
+    handle: "@OfficialAbenger",
     link: "https://twitter.com/officialabenger/status/1512088847865495552",
     tweet: () => (
       <>
@@ -435,8 +436,7 @@ export const tweets = [
     date: "12:24 AM · Apr 8, 2022",
   },
   {
-    profileImage:
-      "https://pbs.twimg.com/profile_images/1518546576066547713/5ym8Z942_200x200.jpg",
+    profileImage: TengImg,
     username: "Teng",
     handle: "@0xPrismatic",
     link: "https://twitter.com/0xPrismatic/status/1508081582044856326",
@@ -723,7 +723,7 @@ export const navigation = [
     name: "Build",
     links: [
       {
-        name: "Why Treasure?",
+        name: "Why Treasure",
         href: "/why-treasure",
         isExternal: false,
       },
@@ -802,7 +802,7 @@ export const partnerCartridges = [
     image: BattleFlyImg,
     discordLink: "https://discord.gg/YzpajBfRNX",
     twitterLink: "https://twitter.com/battleflygame",
-    websiteLink: "https://battlefly.game/",
+    websiteLink: "https://www.battlefly.game/",
   },
   {
     name: "Toadstoolz",

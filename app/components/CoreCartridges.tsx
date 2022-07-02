@@ -24,15 +24,22 @@ export const CoreCartridges = () => {
           )}
         >
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
-            <img
-              src={BWTextSvg}
-              alt="Bridgeworld"
-              className={classNames(
-                hoveredCartridge === "smol" &&
-                  "opacity-30 transition-all duration-500",
-                "w-48 md:w-80"
-              )}
-            />
+            <a
+              href="https://bridgeworld.treasure.lol/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="sr-only">Bridgeworld Website Link</span>
+              <img
+                src={BWTextSvg}
+                alt="Bridgeworld"
+                className={classNames(
+                  hoveredCartridge === "smol" &&
+                    "opacity-30 transition-all duration-500",
+                  "w-48 md:w-80"
+                )}
+              />
+            </a>
             <div className="mt-4 flex space-x-3 rounded-xl bg-night-900 p-2">
               <a
                 className="text-night-600 hover:text-night-700"
@@ -77,16 +84,32 @@ export const CoreCartridges = () => {
           )}
         >
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-4 lg:pb-16">
-            <img
-              src={SmolverseTextSvg}
-              alt="Smolverse"
-              className={classNames(
-                hoveredCartridge === "bw" &&
-                  "opacity-30 transition-all duration-500",
-                "w-48 md:w-80"
-              )}
-            />
+            <a
+              href="https://www.smolverse.lol/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="sr-only">Smolverse Website Link</span>
+              <img
+                src={SmolverseTextSvg}
+                alt="Smolverse"
+                className={classNames(
+                  hoveredCartridge === "bw" &&
+                    "opacity-30 transition-all duration-500",
+                  "w-48 md:w-80"
+                )}
+              />
+            </a>
             <div className="mt-4 flex space-x-3 rounded-xl bg-night-900 p-2">
+              <a
+                className="text-night-600 hover:text-night-700"
+                href="https://www.smolverse.lol/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="sr-only">Smolverse Website Link</span>
+                <GlobeAltIcon className="h-6 w-6" aria-hidden="true" />
+              </a>
               <a
                 className="text-night-600 hover:text-night-700"
                 href="https://discord.gg/smolbrains"
@@ -104,15 +127,6 @@ export const CoreCartridges = () => {
               >
                 <span className="sr-only">Smolverse Twitter Link</span>
                 <TwitterIcon className="h-6 w-6" aria-hidden="true" />
-              </a>
-              <a
-                className="text-night-600 hover:text-night-700"
-                href="https://www.smolverse.lol/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="sr-only">Smolverse Website Link</span>
-                <GlobeAltIcon className="h-6 w-6" aria-hidden="true" />
               </a>
             </div>
           </div>

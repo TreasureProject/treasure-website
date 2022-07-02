@@ -49,7 +49,7 @@ export default function WhyTreasure() {
             <img
               src={RedStarImg}
               className="h-36 w-36 sm:h-48 sm:w-48"
-              alt="Magic"
+              alt="MAGIC"
             />
             <ol className="mt-24 list-none space-y-20 text-sm text-gray-500 [counter-reset:line] sm:mt-6 sm:ml-12 sm:space-y-4 sm:text-lg">
               <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">

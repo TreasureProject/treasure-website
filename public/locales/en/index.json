@@ -7,7 +7,7 @@
     "LP": "LP",
     "Marketplace": "Marketplace",
     "stats": {
-      "magicPrice": "Magic Price",
+      "magicPrice": "MAGIC Price",
       "totalMPVolume": "Total Marketplace Volume",
       "totalValueLocked": "Total Value Locked",
       "percentCirculatingSupply": "% Circulating Supply"
@@ -20,7 +20,7 @@
     "Cartridges": "Cartridges",
     "Community": "Community",
     "Infrastructure": "Infrastructure",
-    "Why Treasure?": "Why Treasure?",
+    "Why Treasure": "Why Treasure?",
     "Apply for partnership": "Apply for partnership",
     "Brand Assets": "Brand Assets",
     "Governance Forum": "Governance Forum",

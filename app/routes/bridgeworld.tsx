@@ -65,7 +65,7 @@ export default function About() {
               <p>
                 Sitting at the epicenter of the Treasure ecosystem, Bridgeworld
                 serves as the fabric between all other worlds. As the only known
-                natural source of Magic in the universe, Bridgeworld brings
+                natural source of MAGIC in the universe, Bridgeworld brings
                 forth a dynamic and perpetual conquest for resource acquisition
                 through social coordination.
               </p>
