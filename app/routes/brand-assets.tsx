@@ -35,6 +35,11 @@ import mediaKitImg from "../../public/img/media-kit.png";
 import { DownloadIcon } from "@heroicons/react/outline";
 import { HashtagIcon } from "@heroicons/react/solid";
 
+import type { RootLoaderData } from "~/root";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
+import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
+
 const ResourceNavigation = [
   {
     name: "Treasure",
@@ -193,6 +198,28 @@ const Assets = {
     Spacing: magicSpacingImg,
   },
 } as const;
+
+export const headers: HeadersFunction = commonHeaders;
+
+export const meta: MetaFunction = ({ parentsData }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle("Brand Assets"),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/brand-assets",
+    }),
+  };
+};
 
 export default function Resources() {
   const location = useLocation();
