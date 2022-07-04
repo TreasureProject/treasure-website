@@ -41,7 +41,6 @@ import DukeImg from "../public/img/pfps/Duke.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
 import GaarpImg from "../public/img/pfps/Gaarp.png";
-import PeteYamaImg from "../public/img/pfps/Hunter.png";
 import InspracImg from "../public/img/pfps/Insprac.png";
 import JakeImg from "../public/img/pfps/Jake.png";
 import JohnImg from "../public/img/pfps/John.png";
@@ -137,13 +136,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/314716890339737600",
     twitterLink: "https://twitter.com/_gaarping",
     image: GaarpImg,
-  },
-  {
-    name: "Pete Yama",
-    title: "Development (Front-End), Trove",
-    discordLink: "https://discordapp.com/users/941365721462632498",
-    twitterLink: null,
-    image: PeteYamaImg,
   },
   {
     name: "Insprac",
