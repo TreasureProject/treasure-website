@@ -1,18 +1,14 @@
 import React, { useMemo } from "react";
 import { PortableText } from "@portabletext/react";
-import type { TypedObject } from "sanity";
+// import type { TypedObject } from "sanity";
 import slugify from "slugify";
 import { urlFor } from "~/utils/sanity/helpers";
 
-export default function ProseableText({
-  value = [],
-}: {
-  value: TypedObject[];
-}) {
+export default function ProseableText({ value = [] }: { value: any[] }) {
   const valueGroups = useMemo(
     () =>
       value
-        ? value.reduce<[TypedObject[]]>(
+        ? value.reduce<[any[]]>(
             (acc, item) => {
               const lastIdx = acc.length - 1;
 
