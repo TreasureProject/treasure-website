@@ -13,8 +13,8 @@ import { MagicIcon, TroveRevertedIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 
 import classNames from "clsx";
-import { Player } from "@lottiefiles/react-lottie-player";
-import DataJson from "../lotties/data.json";
+// import { Player } from "@lottiefiles/react-lottie-player";
+// import DataJson from "../lotties/data.json";
 import { useTranslation } from "react-i18next";
 
 export const Header = ({ openModal }: { openModal: () => void }) => {
@@ -38,12 +38,12 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
             <div className="flex w-full items-center justify-between lg:absolute lg:left-12 lg:w-auto">
               <Link to="/">
                 <span className="sr-only">Home</span>
-                <Player
+                {/* <Player
                   keepLastFrame
                   src={DataJson}
                   autoplay
                   className="h-16 w-40 xl:h-20 xl:w-auto"
-                />
+                /> */}
               </Link>
               <div className="-mr-2 flex items-center lg:hidden">
                 <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-honey-50">
