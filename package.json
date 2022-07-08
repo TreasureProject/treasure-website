@@ -48,6 +48,7 @@
     "react-player": "^2.10.1",
     "remix-i18next": "^4.1.1",
     "remix-utils": "^3.3.0",
+    "sanity": "dev-preview",
     "sanity-typed-queries": "^0.8.1",
     "slugify": "^1.6.5",
     "tiny-invariant": "^1.2.0"

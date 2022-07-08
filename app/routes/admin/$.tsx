@@ -1,8 +1,8 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
 import { useRouteData } from "remix-utils";
-// import { Studio } from "sanity";
+import { Studio } from "sanity";
 import type { RootLoaderData } from "~/root";
-// import config from "~/utils/schema";
+import config from "~/utils/schema";
 
 export const meta: MetaFunction = () => {
   return {
@@ -18,8 +18,7 @@ export default function Admin() {
   if (data) {
     return (
       <div style={{ height: "100vh" }}>
-        {/* <Studio config={config} /> */}
-        yo
+        <Studio config={config} />
       </div>
     );
   }
