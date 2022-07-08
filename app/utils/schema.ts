@@ -2,7 +2,7 @@ import category from "./admin/category";
 import post from "./admin/post";
 import member from "./admin/member";
 // import { deskTool } from "sanity/desk";
-import { type WorkspaceOptions } from "sanity";
+// import { type WorkspaceOptions } from "sanity";
 import { CONFIG } from "./sanity/config";
 
 const config = {
@@ -14,6 +14,6 @@ const config = {
   schema: {
     types: [post, member, category],
   },
-} as WorkspaceOptions;
+};
 
 export default config;
