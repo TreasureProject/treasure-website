@@ -1,0 +1,13 @@
+diff --git a/node_modules/@remix-run/dev/config.js b/node_modules/@remix-run/dev/config.js
+index 8216463..59a05bb 100644
+--- a/node_modules/@remix-run/dev/config.js
++++ b/node_modules/@remix-run/dev/config.js
+@@ -77,7 +77,7 @@ async function readConfig(remixRoot, serverMode = serverModes.ServerMode.Product
+     case "cloudflare-workers":
+     case "deno":
+       serverModuleFormat = "esm";
+-      serverPlatform = "neutral";
++      serverPlatform = "browser";
+       break;
+   }
+ 

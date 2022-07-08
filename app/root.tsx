@@ -15,6 +15,8 @@ import {
   useLoaderData,
   useTransition,
   useFetchers,
+  useMatches,
+  useCatch,
 } from "@remix-run/react";
 
 import { getEnvVariable } from "./utils/env";
@@ -23,23 +25,18 @@ import type { CloudFlareEnv, CloudFlareEnvVar } from "./types";
 
 import styles from "./styles/tailwind.css";
 
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
 import { getPosts } from "./utils/posts.server";
 import type { Posts } from "./utils/posts.server";
-import { Dialog } from "@headlessui/react";
-import { XIcon } from "@heroicons/react/outline";
-import { MagicIcon } from "./components/Icons";
-import { magicPurchaseLinks } from "./const";
+
 import { getDomainUrl } from "./utils/misc.server";
 import { generateTitle, getSocialMetas, getUrl } from "./utils/seo";
-import { ExternalLinkIcon } from "@heroicons/react/solid";
 import NProgress from "nprogress";
 import nProgressStyles from "./styles/nProgress.css";
-import { Modal } from "./components/Modal";
 import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
 import { useChangeLanguage } from "remix-i18next";
+import { Layout } from "./components/Layout";
+
 // import {
 //   getMagicPrice,
 //   getTotalMarketplaceVolume,
@@ -190,17 +187,14 @@ export const handle = {
 export default function App() {
   const { ENV, locale } = useLoaderData<RootLoaderData>();
 
-  const [openPurchaseMagicModal, setOpenPurchaseMagicModal] =
-    React.useState(false);
-
   const { i18n } = useTranslation();
-
-  const openModal = () => setOpenPurchaseMagicModal(true);
-  const closeModal = () => setOpenPurchaseMagicModal(false);
+  const matches = useMatches();
 
   const transition = useTransition();
 
   const fetchers = useFetchers();
+
+  const isAdminPage = matches[1].id.split("/").includes("admin");
 
   const state = React.useMemo<"idle" | "loading">(
     function getGlobalState() {
@@ -224,6 +218,29 @@ export default function App() {
     if (state === "idle") NProgress.done();
   }, [state, transition.state]);
 
+  if (isAdminPage) {
+    return (
+      <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
+        <head>
+          <Meta />
+          <Links />
+        </head>
+        <body>
+          <Outlet />
+          <Scripts />
+          <ScrollRestoration />
+          {ENV.NODE_ENV === "development" ? <LiveReload /> : null}
+          {/* env available anywhere on your app */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.env = ${JSON.stringify(ENV)};`,
+            }}
+          />
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
       <head>
@@ -231,67 +248,9 @@ export default function App() {
         <Links />
       </head>
       <body className="bg-honey-25 antialiased" id="top">
-        <div className="border-2 border-t border-ruby-900" />
-        <Header openModal={openModal} />
-        <Outlet />
-        <Footer openModal={openModal} />
-
-        {/* Magic Purchase Modal */}
-        <Modal show={openPurchaseMagicModal} onClose={closeModal}>
-          <div className="flex justify-between">
-            <Dialog.Title
-              as="h3"
-              className="inline-flex items-center justify-center space-x-2 text-2xl font-bold text-honey-25"
-            >
-              <span className="font-bold">Buy</span>
-              <MagicIcon />
-            </Dialog.Title>
-            <button
-              type="button"
-              className="rounded-md bg-night-800 p-2.5 text-honey-50 hover:bg-night-900/50 focus:outline-none focus:ring-2 focus:ring-night-800 focus:ring-offset-2"
-              onClick={closeModal}
-            >
-              <span className="sr-only">Close</span>
-              <XIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-4 grid grid-cols-1 gap-2 sm:mt-8 sm:gap-4">
-            {magicPurchaseLinks.map((link) => (
-              <div
-                key={link.name}
-                className="relative flex items-center justify-between rounded-1.5xl border-2 border-night-800 bg-white/[0.02] p-5 shadow-md hover:bg-white/[0.05]"
-              >
-                <p className="text-base font-bold text-white sm:text-xl">
-                  <a href={link.url} rel="noopener noreferrer" target="_blank">
-                    <span className="absolute inset-0 h-full w-full"></span>
-                    {link.name}
-                  </a>
-                </p>
-                <div>
-                  <img
-                    className="w-8 sm:w-auto"
-                    src={link.icon}
-                    alt={link.name}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 mb-4 text-center text-sm sm:mt-16 sm:mb-6 sm:text-base">
-            <p className="text-white">
-              New to MAGIC?{" "}
-              <a
-                href="https://docs.treasure.lol/getting-started/what-is-magic"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="inline-flex items-center text-ruby-900 decoration-ruby-900 hover:underline"
-              >
-                <span>Learn more</span>
-                <ExternalLinkIcon className="ml-1 h-3 w-3" />
-              </a>
-            </p>
-          </div>
-        </Modal>
+        <Layout>
+          <Outlet />
+        </Layout>
         <Scripts />
         <ScrollRestoration />
         {ENV.NODE_ENV === "development" ? <LiveReload /> : null}
@@ -305,8 +264,48 @@ export default function App() {
           src="https://efficient-bloc-party.treasure.lol/script.js"
           data-site="XBZCEUKN"
           defer
+          data-auto="false"
         />
+        {ENV.NODE_ENV === "production" ? (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.addEventListener('load', function() {
+             if (!new URLSearchParams(window.location.search).has('preview')) {
+              window.fathom.trackPageview();
+             }  
+            })
+          `,
+            }}
+          />
+        ) : null}
       </body>
     </html>
   );
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+  const message = JSON.parse(caught.data)?.message;
+  if (caught.status === 404) {
+    return (
+      <html>
+        <head>
+          <Meta />
+          <Links />
+        </head>
+        <body className="bg-honey-25 antialiased" id="top">
+          <Layout>
+            <div className="flex h-full flex-col items-center justify-center py-24">
+              <p className="text-[0.6rem] text-night-500 sm:text-base">
+                {message ? message : "Page not found"}
+              </p>
+            </div>
+          </Layout>
+          <Scripts />
+        </body>
+      </html>
+    );
+  }
+  throw new Error(`Unhandled error: ${caught.status}`);
 }

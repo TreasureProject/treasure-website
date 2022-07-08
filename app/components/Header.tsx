@@ -26,6 +26,8 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
 
   const isLeafPage = matches.some((match) => !!match.handle?.breadcrumb);
 
+  const isBlogPage = matches.some((match) => match.id.includes("$slug"));
+
   const location = useLocation();
 
   return (
@@ -294,13 +296,41 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                     </Link>
                   </div>
                 </li>
+                {isBlogPage ? (
+                  <li className="flex">
+                    <div className="flex items-center">
+                      <ChevronRightIcon
+                        className="h-full w-6 flex-shrink-0 text-ruby-1000"
+                        aria-hidden="true"
+                      />
+                      <Link
+                        to="/blog"
+                        className="ml-4 inline-block w-max rounded-tag bg-ruby-1000 px-2.5 py-1.5 transition-colors hover:bg-ruby-1400"
+                      >
+                        <h3 className="font-mono text-sm font-medium text-ruby-100">
+                          Blog
+                        </h3>
+                      </Link>
+                    </div>
+                  </li>
+                ) : null}
                 {matches
                   .filter((match) => !!match.handle.breadcrumb)
                   .map((match) => {
-                    const { href, title } = match.handle.breadcrumb as {
-                      href: string;
-                      title: string;
-                    };
+                    let href: string, title: string;
+
+                    if (typeof match.handle.breadcrumb === "object") {
+                      href = match.handle.breadcrumb.href as string;
+                      title = match.handle.breadcrumb.title as string;
+                    } else {
+                      const { href: breadcrumbHref, title: breadcrumbTitle } =
+                        match.handle.breadcrumb(match.params) as {
+                          href: string;
+                          title: string;
+                        };
+                      href = breadcrumbHref;
+                      title = breadcrumbTitle;
+                    }
 
                     const currentPath = location.pathname === href;
 
@@ -312,12 +342,14 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                             aria-hidden="true"
                           />
                           <Link
-                            to="/"
+                            to={href}
                             className="ml-4 inline-block w-max rounded-tag bg-honey-100 px-2.5 py-1.5 transition-colors hover:bg-honey-200"
                             aria-current={currentPath ? "page" : undefined}
                           >
                             <h3 className="font-mono text-sm font-medium text-ruby-900">
-                              {t(title)}
+                              {typeof match.handle.breadcrumb === "function"
+                                ? title
+                                : t(title)}
                             </h3>
                           </Link>
                         </div>
