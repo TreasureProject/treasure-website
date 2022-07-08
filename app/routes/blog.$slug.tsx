@@ -9,7 +9,7 @@ import {
 import { notFound, useHydrated } from "remix-utils";
 import invariant from "tiny-invariant";
 import type { CloudFlareEnv } from "~/types";
-import { getPostAndMorePosts } from "~/utils/sanity/api";
+import { getPostAndMorePosts } from "~/utils/sanity/api.server";
 import { json } from "@remix-run/cloudflare";
 import { getEnvVariable } from "~/utils/env";
 import usePreview from "~/hooks/usePreview";

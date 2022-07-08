@@ -4,7 +4,7 @@ import { Link, useLoaderData, useSearchParams } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
 import type { CloudFlareEnv } from "~/types";
 import { getEnvVariable } from "~/utils/env";
-import { getAllPostsForHome } from "~/utils/sanity/api";
+import { getAllPostsForHome } from "~/utils/sanity/api.server";
 import usePreview from "~/hooks/usePreview";
 import { urlFor } from "~/utils/sanity/helpers";
 import { BookOpenIcon } from "@heroicons/react/solid";
