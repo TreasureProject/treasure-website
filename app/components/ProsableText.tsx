@@ -2,8 +2,6 @@ import React, { useMemo } from "react";
 import { PortableText } from "@portabletext/react";
 import type { TypedObject } from "sanity";
 import slugify from "slugify";
-import { useRouteData } from "remix-utils";
-import type { RootLoaderData } from "~/root";
 import { urlFor } from "~/utils/sanity/helpers";
 
 export default function ProseableText({
@@ -11,8 +9,6 @@ export default function ProseableText({
 }: {
   value: TypedObject[];
 }) {
-  const rootData = useRouteData<RootLoaderData>("root");
-
   const valueGroups = useMemo(
     () =>
       value
@@ -96,10 +92,7 @@ export default function ProseableText({
                   return (
                     <figure>
                       <img
-                        src={urlFor(value, rootData?.ENV)
-                          .fit("max")
-                          .auto("format")
-                          .url()}
+                        src={urlFor(value).fit("max").auto("format").url()}
                         alt={value.caption || " "}
                         loading="lazy"
                       />

@@ -2,12 +2,10 @@ import * as React from "react";
 import type { LoaderFunction } from "@remix-run/cloudflare";
 import { Link, useLoaderData, useSearchParams } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
-import { useRouteData } from "remix-utils";
 import type { CloudFlareEnv } from "~/types";
 import { getEnvVariable } from "~/utils/env";
 import { getAllPostsForHome } from "~/utils/sanity/api";
 import usePreview from "~/hooks/usePreview";
-import type { RootLoaderData } from "~/root";
 import { urlFor } from "~/utils/sanity/helpers";
 import { BookOpenIcon } from "@heroicons/react/solid";
 import classNames from "clsx";
@@ -46,7 +44,6 @@ export const loader: LoaderFunction = async ({ context, request }) => {
 export default function Blog() {
   const { posts, query, categories, categoryQuery, preview } =
     useLoaderData<LoaderData>();
-  const rootData = useRouteData<RootLoaderData>("root");
   const [data, setData] = React.useState(posts);
   const [categoryData, setCategoryData] = React.useState(categories);
   const [searchParams] = useSearchParams();
@@ -59,14 +56,12 @@ export default function Blog() {
     data: data,
     setData: setData,
     query: query,
-    projectId: rootData?.ENV.PROJECT_ID || "",
   });
 
   usePreview({
     data: categoryData,
     setData: setCategoryData,
     query: categoryQuery,
-    projectId: rootData?.ENV.PROJECT_ID || "",
   });
 
   return (
@@ -113,7 +108,7 @@ export default function Blog() {
             <img
               src={
                 latestPost?.coverImage
-                  ? urlFor(latestPost?.coverImage, rootData?.ENV)
+                  ? urlFor(latestPost?.coverImage)
                       .fit("max")
                       .auto("format")
                       .url()
@@ -177,7 +172,7 @@ export default function Blog() {
                       <img
                         src={
                           post?.coverImage
-                            ? urlFor(post.coverImage, rootData?.ENV)
+                            ? urlFor(post.coverImage)
                                 .fit("max")
                                 .auto("format")
                                 .url()

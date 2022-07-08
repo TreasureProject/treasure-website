@@ -6,14 +6,13 @@ import {
   useParams,
   useSearchParams,
 } from "@remix-run/react";
-import { notFound, useHydrated, useRouteData } from "remix-utils";
+import { notFound, useHydrated } from "remix-utils";
 import invariant from "tiny-invariant";
 import type { CloudFlareEnv } from "~/types";
 import { getPostAndMorePosts } from "~/utils/sanity/api";
 import { json } from "@remix-run/cloudflare";
 import { getEnvVariable } from "~/utils/env";
 import usePreview from "~/hooks/usePreview";
-import type { RootLoaderData } from "~/root";
 import ProseableText from "~/components/ProsableText";
 import classNames from "clsx";
 import slugify from "slugify";
@@ -86,8 +85,6 @@ export default function Blog() {
   const params = useParams();
   const [searchParams] = useSearchParams();
 
-  const rootData = useRouteData<RootLoaderData>("root");
-
   const isHydrated = useHydrated();
   const currentHash = isHydrated ? location.hash.replace("#", "") : "";
 
@@ -99,7 +96,6 @@ export default function Blog() {
     data: data,
     setData: setData,
     query: query,
-    projectId: rootData?.ENV.PROJECT_ID || "",
   });
 
   return (
@@ -110,7 +106,7 @@ export default function Blog() {
           <div className="flex flex-col space-y-10 xl:flex-row xl:space-y-0">
             <div className="flex items-center overflow-hidden">
               <img
-                src={urlFor(article?.coverImage, rootData?.ENV)
+                src={urlFor(article?.coverImage)
                   .width(600)
                   .fit("max")
                   .auto("format")

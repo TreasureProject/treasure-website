@@ -4,8 +4,9 @@
 // https://github.com/SimeonGriggs/sanity-remix-preview/tree/main/web/app
 
 import { useEffect, useState } from "react";
+import { CONFIG } from "../utils/sanity/config";
 
-export function usePreviewSubscription(query, subscriptionOptions, projectId) {
+export function usePreviewSubscription(query, subscriptionOptions) {
   const { initialData } = subscriptionOptions;
   const [data, setData] = useState(initialData);
 
@@ -20,9 +21,11 @@ export function usePreviewSubscription(query, subscriptionOptions, projectId) {
         default: { groqStore },
       } = await import("@sanity/groq-store");
 
+      const { projectId, dataset } = CONFIG;
+
       store = groqStore({
         projectId,
-        dataset: "production",
+        dataset,
         listen: true,
         overlayDrafts: true,
         documentLimit: 1000,

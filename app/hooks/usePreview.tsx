@@ -6,14 +6,10 @@ import { usePreviewSubscription } from "./usePreviewSubscription";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-export default function usePreview({ data, setData, query, projectId }) {
-  const { data: previewData } = usePreviewSubscription(
-    query,
-    {
-      initialData: data,
-    },
-    projectId
-  );
+export default function usePreview({ data, setData, query }) {
+  const { data: previewData } = usePreviewSubscription(query, {
+    initialData: data,
+  });
 
   useEffect(() => setData(previewData), [previewData, setData]);
 }

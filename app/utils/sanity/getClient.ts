@@ -3,23 +3,14 @@ import type { CloudFlareEnv } from "../../types";
 import type { PicoSanity as PicoSanityT } from "picosanity";
 import { CONFIG } from "./config";
 
-let client: PicoSanityT | null = null;
+const client = new PicoSanity(CONFIG);
 
 let previewClient: PicoSanityT | null = null;
 
 export const getClient = (usePreview = false, env: CloudFlareEnv) => {
-  const config = {
-    ...CONFIG,
-    projectId: env.PROJECT_ID,
-  };
-
-  if (!client) {
-    client = new PicoSanity(config);
-  }
-
   if (!previewClient) {
     previewClient = new PicoSanity({
-      ...config,
+      ...CONFIG,
       token: env.SANITY_API_TOKEN ?? ``,
     });
   }

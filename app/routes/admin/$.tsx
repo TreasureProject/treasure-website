@@ -18,7 +18,7 @@ export default function Admin() {
   if (data) {
     return (
       <div style={{ height: "100vh" }}>
-        <Studio config={config(data.ENV)} />
+        <Studio config={config} />
       </div>
     );
   }

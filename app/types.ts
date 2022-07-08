@@ -1,6 +1,5 @@
 export type CloudFlareEnvVar =
   | "NODE_ENV"
-  | "PROJECT_ID"
   | "SANITY_API_TOKEN"
   | "SANITY_PREVIEW_SECRET";
 
