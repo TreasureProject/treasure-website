@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
 import { useRouteData } from "remix-utils";
-import { Studio } from "sanity";
+import { Studio } from "sanity/lib/dts/src/studio";
 import type { RootLoaderData } from "~/root";
 import config from "~/utils/schema";
 
