@@ -1,9 +1,9 @@
 import category from "./admin/category";
 import post from "./admin/post";
 import member from "./admin/member";
+import { deskTool } from "sanity/desk";
 import { type WorkspaceOptions } from "sanity";
 import { CONFIG } from "./sanity/config";
-import { deskTool } from "sanity/lib/dts/src/desk";
 
 const config = {
   basePath: "/admin",
