@@ -225,7 +225,7 @@ export default function App() {
           <Meta />
           <Links />
         </head>
-        <body>
+        <body id="root" className="h-screen">
           <Outlet />
           <Scripts />
           <ScrollRestoration />
