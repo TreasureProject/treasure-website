@@ -1,5 +1,9 @@
 import * as React from "react";
-import type { LoaderFunction } from "@remix-run/cloudflare";
+import type {
+  HeadersFunction,
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/cloudflare";
 import { Link, useLoaderData, useSearchParams } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
 import { getEnvVariable } from "~/utils/env";
@@ -7,11 +11,37 @@ import { BookOpenIcon } from "@heroicons/react/solid";
 import { Preview } from "~/components/Preview";
 import { getAllPosts } from "~/utils/github.server";
 import { normalizePosts } from "~/utils/blog";
+import { notFound } from "remix-utils";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
+import type { RootLoaderData } from "~/root";
 
 type LoaderData = {
   posts: ReturnType<typeof normalizePosts>;
   preview: boolean;
 };
+
+export const meta: MetaFunction = ({ parentsData }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle("/blog"),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/blog",
+    }),
+  };
+};
+
+export const headers: HeadersFunction = commonHeaders;
 
 export const loader: LoaderFunction = async ({ context, request }) => {
   const requestUrl = new URL(request.url);
@@ -21,7 +51,13 @@ export const loader: LoaderFunction = async ({ context, request }) => {
 
   const posts = await getAllPosts(context);
 
-  const normedPosts = normalizePosts(posts.data);
+  const normedPosts = normalizePosts(posts.data, preview);
+
+  if (!normedPosts || normedPosts.length === 0) {
+    throw notFound({
+      message: `No posts found`,
+    });
+  }
 
   return json({
     posts: normedPosts,
@@ -33,17 +69,7 @@ export default function Blog() {
   const { posts, preview } = useLoaderData<LoaderData>();
   const [searchParams] = useSearchParams();
 
-  if (!posts) {
-    return (
-      <div className="mx-auto max-w-md px-4 py-16 sm:max-w-4xl sm:px-6 lg:max-w-8xl lg:px-12">
-        No posts
-      </div>
-    );
-  }
-
   const latestPost = posts?.[0]?.__typename === "Issue" ? posts[0] : null;
-
-  console.log(posts);
 
   return (
     <main className="bg-night-900">
@@ -125,43 +151,42 @@ export default function Blog() {
           </div>
         </div> */}
 
+        {/* ?.filter((post) =>
+            filter && filter.length > 0
+              ? post.categories.some((c) => filter.includes(c))
+              : true
+          ) */}
         <ul className="mt-12 grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {posts
-            // ?.filter((post) =>
-            //   filter && filter.length > 0
-            //     ? post.categories.some((c) => filter.includes(c))
-            //     : true
-            // )
-            .map((post) => (
-              <li key={post?.slug}>
-                <Link
-                  to={`/blog/${post?.slug}?${searchParams.toString()}`}
-                  className="h-full"
-                >
-                  <div className="flex h-full flex-col rounded-1.9xl bg-[#131D2E] p-10">
-                    <div className="flex-shrink-0">
-                      <img
-                        src={post?.coverImage}
-                        alt={post?.title || ""}
-                        className="h-48 w-full rounded-xl object-cover"
-                      />
-                    </div>
-                    <div className="mt-10 space-y-5">
-                      <span className="text-night-600">
-                        {new Intl.DateTimeFormat("en-US", {
-                          month: "short",
-                          day: "numeric",
-                        }).format(new Date(post?.createdAt))}
-                      </span>
-                      <h2 className="text-2xl font-bold text-honey-200">
-                        {post?.title}
-                      </h2>
-                      <p className="text-night-600">{post?.title}</p>
-                    </div>
+          {posts?.map((post) => (
+            <li key={post?.slug}>
+              <Link
+                to={`/blog/${post?.slug}?${searchParams.toString()}`}
+                className="h-full"
+              >
+                <div className="flex h-full flex-col rounded-1.9xl bg-[#131D2E] p-10">
+                  <div className="flex-shrink-0">
+                    <img
+                      src={post?.coverImage}
+                      alt={post?.title || ""}
+                      className="h-48 w-full rounded-xl object-cover"
+                    />
                   </div>
-                </Link>
-              </li>
-            ))}
+                  <div className="mt-10 space-y-5">
+                    <span className="text-night-600">
+                      {new Intl.DateTimeFormat("en-US", {
+                        month: "short",
+                        day: "numeric",
+                      }).format(new Date(post?.createdAt))}
+                    </span>
+                    <h2 className="text-2xl font-bold text-honey-200">
+                      {post?.title}
+                    </h2>
+                    <p className="text-night-600">{post?.title}</p>
+                  </div>
+                </div>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </main>

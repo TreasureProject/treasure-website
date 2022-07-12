@@ -4,6 +4,7 @@ import type {
   GetPostQuery,
   NodeFragmentFragment,
 } from "~/graphql/github.generated";
+import TreasureLogo from "../../public/img/resources/treasure/logo-light.png";
 
 export const decimalToTime = (minutes: number) =>
   `${
@@ -24,9 +25,10 @@ export const normalize = (node: NodeFragmentFragment) => {
     return {
       ...node,
       slug: slugify(node.title, { lower: true }),
-      coverImage: node.bodyHTML.match(
-        /https:\/\/user-images.githubusercontent.com\/[^"]+/g
-      )[0],
+      coverImage:
+        node.bodyHTML.match(
+          /https:\/\/user-images.githubusercontent.com\/[^"]+/g
+        )?.[0] ?? TreasureLogo,
     };
   }
 };
@@ -35,7 +37,19 @@ export const normalizePosts = (
   posts: GetAllPostsQuery | GetPostQuery,
   preview?: boolean
 ) => {
-  const result = posts.search.nodes?.map((node) => node && normalize(node));
+  const result = posts.search.nodes
+    ?.filter((post) => {
+      if (!preview && post?.__typename === "Issue") {
+        const isPublished =
+          post.labels?.edges?.some(
+            (label) => label?.node?.name === "published"
+          ) ?? false;
+
+        return isPublished;
+      }
+      return post;
+    })
+    .map((node) => node && normalize(node));
 
   return result;
 };

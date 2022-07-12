@@ -1,5 +1,9 @@
 import * as React from "react";
-import type { LoaderFunction } from "@remix-run/cloudflare";
+import type {
+  HeadersFunction,
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/cloudflare";
 import {
   Link,
   useLoaderData,
@@ -19,6 +23,9 @@ import { Badge } from "~/components/Badge";
 import { Preview } from "~/components/Preview";
 import { getPost } from "~/utils/github.server";
 import type { CloudFlareEnv } from "~/types";
+import type { RootLoaderData } from "~/root";
+import { commonHeaders } from "~/utils/misc.server";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 
 type LoaderData = {
   post: Awaited<ReturnType<typeof normalizePosts>>;
@@ -39,9 +46,9 @@ export const loader: LoaderFunction = async ({ context, params, request }) => {
 
   const post = await getPost(unslugify(slug), env);
 
-  const normedPost = normalizePosts(post.data);
+  const normedPost = normalizePosts(post.data, preview);
 
-  if (post.data.search.nodes?.length === 0) {
+  if (!normedPost || normedPost.length === 0) {
     throw notFound({
       message: `Post with slug "/${slug}" not found`,
     });
@@ -53,6 +60,32 @@ export const loader: LoaderFunction = async ({ context, params, request }) => {
   });
 };
 
+export const meta: MetaFunction = ({ parentsData, data }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  const { post } = data as LoaderData;
+
+  const article = post?.[0];
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle(`/${article?.title}`),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/home",
+    }),
+  };
+};
+
+export const headers: HeadersFunction = commonHeaders;
+
 export default function Blog() {
   const { post, preview } = useLoaderData<LoaderData>();
 
@@ -63,8 +96,6 @@ export default function Blog() {
   const currentHash = isHydrated ? location.hash.replace("#", "") : "";
 
   const article = post?.[0];
-
-  console.log(article);
 
   React.useEffect(() => {
     const container = document.getElementById("content");
@@ -97,8 +128,6 @@ export default function Blog() {
       h3.className = "scroll-mt-20 sm:scroll-mt-28";
     });
   }, []);
-
-  console.log(ids);
 
   return (
     <main className="relative">
