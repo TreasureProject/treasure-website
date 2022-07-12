@@ -2,67 +2,48 @@ import * as React from "react";
 import type { LoaderFunction } from "@remix-run/cloudflare";
 import { Link, useLoaderData, useSearchParams } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
-import type { CloudFlareEnv } from "~/types";
 import { getEnvVariable } from "~/utils/env";
-import { getAllPostsForHome } from "~/utils/sanity/api.server";
-import usePreview from "~/hooks/usePreview";
-import { urlFor } from "~/utils/sanity/helpers";
 import { BookOpenIcon } from "@heroicons/react/solid";
-import classNames from "clsx";
 import { Preview } from "~/components/Preview";
+import { getAllPosts } from "~/utils/github.server";
+import { normalizePosts } from "~/utils/blog";
 
 type LoaderData = {
-  posts: Awaited<ReturnType<typeof getAllPostsForHome>>["posts"];
-  categories: Awaited<ReturnType<typeof getAllPostsForHome>>["categories"];
-  categoryQuery: string | null;
+  posts: ReturnType<typeof normalizePosts>;
   preview: boolean;
-  query: string | null;
 };
 
 export const loader: LoaderFunction = async ({ context, request }) => {
   const requestUrl = new URL(request.url);
-  const previewSecret = getEnvVariable("SANITY_PREVIEW_SECRET", context);
+  const previewSecret = getEnvVariable("PREVIEW_SECRET", context);
 
   const preview = requestUrl?.searchParams?.get("preview") === previewSecret;
 
-  const env = context as CloudFlareEnv;
+  const posts = await getAllPosts(context);
 
-  const { posts, query, categories, categoryQuery } = await getAllPostsForHome(
-    preview,
-    env
-  );
+  const normedPosts = normalizePosts(posts.data);
 
   return json({
-    posts,
-    categories,
-    query: preview ? query : null,
-    categoryQuery: preview ? categoryQuery : null,
+    posts: normedPosts,
     preview,
   });
 };
 
 export default function Blog() {
-  const { posts, query, categories, categoryQuery, preview } =
-    useLoaderData<LoaderData>();
-  const [data, setData] = React.useState(posts);
-  const [categoryData, setCategoryData] = React.useState(categories);
+  const { posts, preview } = useLoaderData<LoaderData>();
   const [searchParams] = useSearchParams();
 
-  const [filter, setFilter] = React.useState<string[] | null>(null);
+  if (!posts) {
+    return (
+      <div className="mx-auto max-w-md px-4 py-16 sm:max-w-4xl sm:px-6 lg:max-w-8xl lg:px-12">
+        No posts
+      </div>
+    );
+  }
 
-  const latestPost = data?.[0];
+  const latestPost = posts?.[0]?.__typename === "Issue" ? posts[0] : null;
 
-  usePreview({
-    data: data,
-    setData: setData,
-    query: query,
-  });
-
-  usePreview({
-    data: categoryData,
-    setData: setCategoryData,
-    query: categoryQuery,
-  });
+  console.log(posts);
 
   return (
     <main className="bg-night-900">
@@ -76,22 +57,19 @@ export default function Blog() {
             <div className="flex items-center">
               <span className="relative inline-block flex-shrink-0">
                 <img
-                  src={latestPost?.authorImage || ""}
-                  alt={latestPost?.authorName || "Author"}
+                  src={latestPost?.author?.avatarUrl || ""}
+                  alt={latestPost?.author?.login || "Author Unavailable"}
                   className="h-10 w-10 rounded-full bg-honey-900 ring-1 ring-honey-500 sm:h-16 sm:w-16"
                 />
               </span>
               <div className="ml-4 truncate">
                 <p className="truncate text-base font-bold text-honey-800 sm:text-lg">
-                  {latestPost?.authorName}
-                </p>
-                <p className="truncate text-base text-honey-300 sm:text-lg">
-                  {latestPost?.authorRole}
+                  {latestPost?.author?.login || "Author Unavailable"}
                 </p>
               </div>
             </div>
-            <p className="text-base text-night-500 sm:text-2xl">
-              {latestPost?.subtitle}
+            <p className="truncate text-base text-night-500 sm:text-2xl">
+              {latestPost?.title}
             </p>
             <Link
               className="group inline-flex cursor-pointer items-center rounded-button border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
@@ -106,20 +84,13 @@ export default function Blog() {
           </div>
           <div className="-order-1 col-span-3 lg:order-2">
             <img
-              src={
-                latestPost?.coverImage
-                  ? urlFor(latestPost?.coverImage)
-                      .fit("max")
-                      .auto("format")
-                      .url()
-                  : ""
-              }
-              alt={latestPost?.coverImage?.caption || ""}
+              src={latestPost?.coverImage}
+              alt={latestPost?.title || ""}
               className="h-full w-full overflow-hidden rounded-1.9xl object-cover"
             />
           </div>
         </div>
-        <div className="mt-24">
+        {/* <div className="mt-24">
           <div className="flex items-center justify-between">
             <span className="text-2xl font-bold text-honey-100">Filter by</span>
             <div className="flex items-center space-x-6">
@@ -152,33 +123,26 @@ export default function Blog() {
               })}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <ul className="mt-12 grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {data
-            ?.filter((post) =>
-              filter && filter.length > 0
-                ? post.categories.some((c) => filter.includes(c))
-                : true
-            )
+          {posts
+            // ?.filter((post) =>
+            //   filter && filter.length > 0
+            //     ? post.categories.some((c) => filter.includes(c))
+            //     : true
+            // )
             .map((post) => (
-              <li key={post.slug}>
+              <li key={post?.slug}>
                 <Link
-                  to={`/blog/${post.slug}?${searchParams.toString()}`}
+                  to={`/blog/${post?.slug}?${searchParams.toString()}`}
                   className="h-full"
                 >
                   <div className="flex h-full flex-col rounded-1.9xl bg-[#131D2E] p-10">
                     <div className="flex-shrink-0">
                       <img
-                        src={
-                          post?.coverImage
-                            ? urlFor(post.coverImage)
-                                .fit("max")
-                                .auto("format")
-                                .url()
-                            : ""
-                        }
-                        alt={post?.coverImage?.caption || ""}
+                        src={post?.coverImage}
+                        alt={post?.title || ""}
                         className="h-48 w-full rounded-xl object-cover"
                       />
                     </div>
@@ -187,12 +151,12 @@ export default function Blog() {
                         {new Intl.DateTimeFormat("en-US", {
                           month: "short",
                           day: "numeric",
-                        }).format(new Date(post?.date))}
+                        }).format(new Date(post?.createdAt))}
                       </span>
                       <h2 className="text-2xl font-bold text-honey-200">
-                        {post.title}
+                        {post?.title}
                       </h2>
-                      <p className="text-night-600">{post.subtitle}</p>
+                      <p className="text-night-600">{post?.title}</p>
                     </div>
                   </div>
                 </Link>

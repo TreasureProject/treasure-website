@@ -15,7 +15,6 @@ import {
   useLoaderData,
   useTransition,
   useFetchers,
-  useMatches,
   useCatch,
 } from "@remix-run/react";
 
@@ -188,13 +187,10 @@ export default function App() {
   const { ENV, locale } = useLoaderData<RootLoaderData>();
 
   const { i18n } = useTranslation();
-  const matches = useMatches();
 
   const transition = useTransition();
 
   const fetchers = useFetchers();
-
-  const isAdminPage = matches[1].id.split("/").includes("admin");
 
   const state = React.useMemo<"idle" | "loading">(
     function getGlobalState() {
@@ -217,29 +213,6 @@ export default function App() {
     // when the state is idle then we can to complete the progress bar
     if (state === "idle") NProgress.done();
   }, [state, transition.state]);
-
-  if (isAdminPage) {
-    return (
-      <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
-        <head>
-          <Meta />
-          <Links />
-        </head>
-        <body id="root" className="h-screen">
-          <Outlet />
-          <Scripts />
-          <ScrollRestoration />
-          {ENV.NODE_ENV === "development" ? <LiveReload /> : null}
-          {/* env available anywhere on your app */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.env = ${JSON.stringify(ENV)};`,
-            }}
-          />
-        </body>
-      </html>
-    );
-  }
 
   return (
     <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
