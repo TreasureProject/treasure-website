@@ -13,12 +13,16 @@
     "dev:remix": "remix watch",
     "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public -b $(cat .env)",
     "generate:css": "tailwindcss -i ./app/styles/main.css -o ./app/styles/tailwind.css",
-    "codegen": "graphql-code-generator -r dotenv/config",
+    "codegen": "node -r dotenv/config node_modules/.bin/gql-gen",
     "start": "cross-env NODE_ENV=production npm run dev:wrangler",
     "lint": "prettier --write 'app/**/{*.ts,*.tsx}' && eslint --fix --no-error-on-unmatched-pattern 'app/**/{*.ts,*.tsx}'",
     "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.8",
+    "@graphql-codegen/typescript-graphql-request": "^4.4.5",
+    "@graphql-codegen/typescript-operations": "^2.3.5",
     "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "@lottiefiles/react-lottie-player": "^3.4.7",
@@ -49,10 +53,6 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.11.0",
-    "@graphql-codegen/cli": "^2.6.2",
-    "@graphql-codegen/typescript": "^2.4.8",
-    "@graphql-codegen/typescript-graphql-request": "^4.4.5",
-    "@graphql-codegen/typescript-operations": "^2.3.5",
     "@remix-run/dev": "^1.5.1",
     "@remix-run/eslint-config": "^1.5.1",
     "@tailwindcss/forms": "^0.5.2",
