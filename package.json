@@ -16,7 +16,7 @@
     "codegen": "node -r dotenv/config node_modules/.bin/gql-gen",
     "start": "cross-env NODE_ENV=production npm run dev:wrangler",
     "lint": "prettier --write 'app/**/{*.ts,*.tsx}' && eslint --fix --no-error-on-unmatched-pattern 'app/**/{*.ts,*.tsx}'",
-    "prepare": "husky install"
+    "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.4",
