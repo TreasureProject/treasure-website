@@ -65,7 +65,9 @@ export const TreasureStats = () => {
               {t("totalMPVolume")}
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {isLoading ? " --" : data?.totalMarketplaceVolume}
+              $264M
+              <span className="ml-1 text-[0.6rem]">(104.5M MAGIC)</span>
+              {/* {isLoading ? " --" : data?.totalMarketplaceVolume} */}
             </p>
           </div>
         </div>
