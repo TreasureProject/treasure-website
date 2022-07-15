@@ -74,6 +74,7 @@ export const meta: MetaFunction = ({ parentsData, data }) => {
   return {
     ...getSocialMetas({
       description:
+        article?.title ??
         "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle(`/${article?.title}`),
