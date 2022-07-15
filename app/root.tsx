@@ -142,6 +142,8 @@ export const meta: MetaFunction = ({ data }) => {
   };
 };
 
+const SECRET_ENV = ["GITHUB_API_TOKEN"] as CloudFlareEnvVar[];
+
 export const loader: LoaderFunction = async ({ context, request }) => {
   const env = context as CloudFlareEnv;
 
@@ -169,13 +171,16 @@ export const loader: LoaderFunction = async ({ context, request }) => {
       origin: getDomainUrl(request),
       path: new URL(request.url).pathname,
     },
-    ENV: Object.keys(env).reduce(
-      (envVars, key) => ({
-        ...envVars,
-        [key]: getEnvVariable(key as CloudFlareEnvVar, context),
-      }),
-      {}
-    ),
+    ENV: (Object.keys(env) as (keyof typeof env)[]).reduce((envVars, key) => {
+      if (!SECRET_ENV.includes(key)) {
+        return {
+          ...envVars,
+          [key]: getEnvVariable(key as CloudFlareEnvVar, context),
+        };
+      }
+
+      return envVars;
+    }, {}),
   });
 };
 
