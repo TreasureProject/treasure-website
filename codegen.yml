@@ -1,9 +1,11 @@
 overwrite: true
 generates:
-  ./app/graphql/exchange.generated.ts:
-    schema: ${EXCHANGE_ENDPOINT}
-    documents: "./app/graphql/app.queries.ts"
+  ./app/graphql/github.generated.ts:
+    schema:
+      - "https://api.github.com/graphql":
+          headers:
+            Authorization: "Bearer ${GITHUB_API_TOKEN}"
+    documents: "./app/graphql/github.queries.ts"
     plugins:
       - "typescript"
       - "typescript-operations"
-      - "typescript-graphql-request"
