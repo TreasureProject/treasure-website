@@ -79,7 +79,7 @@ export const meta: MetaFunction = ({ parentsData, data }) => {
       title: generateTitle(`/${article?.title}`),
       origin: requestInfo.origin,
       url: getUrl(requestInfo),
-      imgPath: "/home",
+      imgPath: "/blog",
     }),
   };
 };
