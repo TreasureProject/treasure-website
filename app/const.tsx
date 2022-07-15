@@ -22,6 +22,7 @@ import RyanDelphiImg from "../public/img/partners/RyanDelphi.svg";
 import NeonImg from "../public/img/partners/Neon.svg";
 import Metat8Img from "../public/img/partners/Metat8.svg";
 import OnekxImg from "../public/img/partners/1kx.svg";
+import DigitalStrategiesImg from "../public/img/partners/DigitalStrategies.png";
 
 import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
 import OkxImg from "../public/img/magic-list/okx.svg";
@@ -604,6 +605,10 @@ export const partners = [
   {
     name: "Metat8",
     image: Metat8Img,
+  },
+  {
+    name: "Digital Strategies",
+    image: DigitalStrategiesImg,
   },
 ];
 

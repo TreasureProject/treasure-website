@@ -7,6 +7,7 @@ import {
   getTotalLockedAmount,
 } from "~/utils/stats";
 import { useTranslation } from "react-i18next";
+import MagicLogoImg from "../../public/img/resources/magic/logomark-dark.png";
 
 export const TreasureStats = () => {
   // const data = useRouteData<RootLoaderData>("root");
@@ -65,7 +66,22 @@ export const TreasureStats = () => {
               {t("totalMPVolume")}
             </p>
             <p className="text-2xl font-bold md:text-xl lg:text-3xl">
-              {isLoading ? " --" : data?.totalMarketplaceVolume}
+              {isLoading ? (
+                " --"
+              ) : (
+                <div>
+                  $264M
+                  <div className="ml-1 inline-flex items-center text-sm">
+                    ({" "}
+                    <img
+                      src={MagicLogoImg}
+                      alt="Magic Logo"
+                      className="mr-0.5 h-2 w-2"
+                    />
+                    {data?.totalMarketplaceVolume})
+                  </div>
+                </div>
+              )}
             </p>
           </div>
         </div>
