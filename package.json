@@ -13,7 +13,7 @@
     "dev:remix": "remix watch",
     "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public -b $(cat .env)",
     "generate:css": "tailwindcss -i ./app/styles/main.css -o ./app/styles/tailwind.css",
-    "codegen": "npx graphql-codegen -r dotenv/config",
+    "codegen": "graphql-code-generator -r dotenv/config",
     "start": "cross-env NODE_ENV=production npm run dev:wrangler",
     "lint": "prettier --write 'app/**/{*.ts,*.tsx}' && eslint --fix --no-error-on-unmatched-pattern 'app/**/{*.ts,*.tsx}'",
     "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install"
