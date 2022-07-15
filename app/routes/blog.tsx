@@ -102,10 +102,7 @@ export default function Blog() {
               to={`/blog/${latestPost?.slug}?${searchParams.toString()}`}
             >
               Read more
-              <BookOpenIcon
-                className="ml-1.5 h-4 w-4 fill-white stroke-ruby-900 stroke-[1.95] group-hover:fill-ruby-900 group-hover:stroke-white"
-                aria-hidden="true"
-              />
+              <BookOpenIcon className="ml-1.5 h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
           <div className="-order-1 col-span-3 lg:order-2">
