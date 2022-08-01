@@ -255,7 +255,7 @@ export default function Home() {
                   <ReactPlayer
                     playing={true}
                     controls={true}
-                    url="https://www.youtube.com/watch?v=9W-Ps6xkgZI"
+                    url="https://www.youtube.com/watch?v=hR0hKprs0iM"
                     width="100%"
                     height="360px"
                   />
