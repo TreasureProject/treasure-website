@@ -1,5 +1,5 @@
 export type CloudFlareEnvVar =
-  | "NODE_ENV"
+  | "ENV"
   | "GITHUB_API_TOKEN"
   | "PROXY_ENDPOINT"
   | "PREVIEW_SECRET";

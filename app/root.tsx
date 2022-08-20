@@ -231,7 +231,7 @@ export default function App() {
         </Layout>
         <Scripts />
         <ScrollRestoration />
-        {ENV.NODE_ENV === "development" ? <LiveReload /> : null}
+        {ENV.ENV === "development" ? <LiveReload /> : null}
         {/* env available anywhere on your app */}
         <script
           dangerouslySetInnerHTML={{
@@ -244,7 +244,7 @@ export default function App() {
           defer
           data-auto="false"
         />
-        {ENV.NODE_ENV === "production" ? (
+        {ENV.ENV === "production" ? (
           <script
             dangerouslySetInnerHTML={{
               __html: `
