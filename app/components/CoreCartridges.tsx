@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BWTextSvg from "../../public/img/bridgeworld-text.webp";
+import BWTextSvg from "../../public/img/bridgeworld-text-single.webp";
 import SmolverseTextSvg from "../../public/img/smolverse-text.svg";
 import { DiscordIcon, TwitterIcon } from "./Icons";
 import classNames from "clsx";

@@ -36,7 +36,7 @@ export const headers: HeadersFunction = commonHeaders;
 export default function About() {
   return (
     <main>
-      <div className="relative bg-[url('/img/bridgeworld-bg.webp')] bg-contain bg-top bg-no-repeat py-16 sm:py-32 xl:bg-fixed">
+      <div className="relative bg-[url('/img/bridgeworld-bg.webp')] bg-no-repeat py-16 [background-size:100%_100%] sm:py-32">
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
           <img src={BWTextSvg} className="w-[62rem]" alt="Bridgeworld" />
           <a
