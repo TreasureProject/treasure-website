@@ -1,7 +1,9 @@
 import { ClipboardCheckIcon, ClipboardIcon } from "@heroicons/react/solid";
 import React from "react";
 import { useHydrated } from "remix-utils";
-import { colors } from "../../const";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { theme } from "@treasure-project/tailwind-config";
 import { Badge } from "./Badge";
 
 const ColorNames = {
@@ -9,6 +11,8 @@ const ColorNames = {
   honey: "Honey Gold",
   night: "Night",
 } as const;
+
+const iterateColors = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 const ColorPaletteItem = ({
   value,
@@ -53,11 +57,22 @@ const ColorPaletteItem = ({
 };
 
 export const ColorPalette = () => {
+  const colors = (
+    Object.keys(
+      theme.extend.colors
+    ) as (keyof typeof theme["extend"]["colors"])[]
+  ).filter((colors) => colors !== "twitter" && colors !== "discord") as (
+    | "night"
+    | "honey"
+    | "ruby"
+  )[];
+
   return (
     <div className="grid grid-cols-1 gap-8 space-y-20">
-      {(Object.keys(colors) as (keyof typeof colors)[]).map((color, i) => {
-        const palette = colors[color];
+      {colors.map((color, i) => {
+        const palette = theme.extend.colors[color] as Record<number, string>;
         const colorName = ColorNames[color];
+
         return (
           <div key={i}>
             <div className="flex flex-col space-y-9 text-[0.6rem] md:text-base">
@@ -73,6 +88,10 @@ export const ColorPalette = () => {
                   .reverse()
                   .map((value, j) => {
                     const color = palette[value];
+
+                    if (!color || !iterateColors.includes(Number(value)))
+                      return null;
+
                     return (
                       <ColorPaletteItem key={j} value={value} color={color} />
                     );
