@@ -19,7 +19,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   return {
     ...getSocialMetas({
       description:
-        "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+        "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle("/about"),
       origin: requestInfo.origin,
@@ -54,11 +54,11 @@ export default function About() {
             <ol className="mt-24 list-none space-y-20 text-sm text-gray-500 [counter-reset:line] sm:mt-10 sm:ml-12 sm:space-y-4 sm:text-lg">
               <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">
                 Cartridges: Games and metaverses built from the ground up by
-                Treasure and seasoned builders, all connected by $MAGIC.
+                Treasure and seasoned builders, all connected by MAGIC.
               </li>
               <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">
                 Community: Composite of many smaller communities, connected
-                through lore, guilds, resources, and $MAGIC.
+                through lore, guilds, resources, and MAGIC.
               </li>
               <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">
                 Infrastructure: The shared economic engine, tooling and

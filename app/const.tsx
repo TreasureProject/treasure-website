@@ -334,7 +334,7 @@ export const tweets = [
         is buidling during a bear market... The infrastructure, tools and engine
         to create a sustainable virtual economy powered by{" "}
         <TwitterLink href="https://twitter.com/search?q=$MAGIC">
-          $MAGIC
+          MAGIC
         </TwitterLink>{" "}
         all while developing an engaging social network and fun gaming ecosystem
         driven by the community ✨
@@ -396,7 +396,7 @@ export const tweets = [
         dozens of games in progress, it is becoming more and more clear that the
         TreasureDAO ecosystem can support hundreds of thriving games powered by{" "}
         <TwitterLink href="https://twitter.com/search?q=$MAGIC">
-          $MAGIC
+          MAGIC
         </TwitterLink>
         .
       </>
@@ -439,8 +439,8 @@ export const tweets = [
         <TwitterLink href="https://twitter.com/Treasure_DAO">
           @Treasure_DAO
         </TwitterLink>{" "}
-        ($MAGIC). Here’s why I think it's a fascinating socio-economic
-        experiment happening in real-time & something to watch for this year.
+        (MAGIC). Here’s why I think it's a fascinating socio-economic experiment
+        happening in real-time & something to watch for this year.
         <br />
         <br />
         🧵👇

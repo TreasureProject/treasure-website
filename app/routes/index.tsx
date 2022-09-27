@@ -45,7 +45,7 @@ export default function Home() {
                       <Trans i18nKey="index:subtitle">
                         Treasure is the decentralized video game console
                         connecting games and communities together through
-                        imagination, <span className="font-bold">$MAGIC</span>,
+                        imagination, <span className="font-bold">MAGIC</span>,
                         and NFTs.
                       </Trans>
                     </p>

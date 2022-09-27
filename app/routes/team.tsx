@@ -24,7 +24,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   return {
     ...getSocialMetas({
       description:
-        "Treasure is the decentralized video game console connecting games and communities together through imagination, $MAGIC, and NFTs.",
+        "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle("/team"),
       origin: requestInfo.origin,
@@ -113,7 +113,7 @@ export default function Team() {
       </div>
       <div className="relative bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
             {teamMembers.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
