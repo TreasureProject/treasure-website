@@ -503,7 +503,7 @@ export const communities = [
     CTAButtons: [
       {
         buttonDescription: "Forum",
-        href: "https://treasuredao.freeflarum.com/",
+        href: "https://commonwealth.im/treasure-dao",
       },
       {
         buttonDescription: "Vote",
@@ -746,7 +746,7 @@ export const navigation = [
     links: [
       {
         name: "Governance Forum",
-        href: "https://treasuredao.freeflarum.com/",
+        href: "https://commonwealth.im/treasure-dao",
         isExternal: true,
       },
       {
@@ -771,7 +771,7 @@ export const navigation = [
       },
       {
         name: "Talent",
-        href: "https://treasure-dao.notion.site/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7",
+        href: "https://treasuredao.pallet.com/",
         isExternal: true,
       },
     ],
@@ -779,6 +779,11 @@ export const navigation = [
   {
     name: "LP",
     links: [
+      {
+        name: "MagicSwap",
+        href: "https://magicswap.lol/",
+        isExternal: true,
+      },
       {
         name: "MAGIC-ETH LP",
         href: "https://app.sushi.com/farm?chainId=42161",

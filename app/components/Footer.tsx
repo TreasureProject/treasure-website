@@ -105,7 +105,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
                         target="_blank"
                         className="text-night-800 hover:text-night-700"
                       >
-                        Visit Marketplace
+                        Trove
                       </a>
                       <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
                     </li>
