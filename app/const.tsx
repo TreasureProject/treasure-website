@@ -805,7 +805,7 @@ export const navigation = [
 
 export const partnerCartridges = [
   {
-    name: "Battlefly",
+    name: "BattleFly",
     image: BattleFlyImg,
     discordLink: "https://discord.gg/YzpajBfRNX",
     twitterLink: "https://twitter.com/battleflygame",
