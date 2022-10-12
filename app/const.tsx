@@ -4,7 +4,6 @@ import LifeImg from "../public/img/projects/life.jpg";
 import LostSamuriseImg from "../public/img/projects/lostsamurise.jpg";
 import PeekABooImg from "../public/img/projects/peekaboo.jpg";
 import RealmImg from "../public/img/projects/realm.jpg";
-import SmithyDaoImg from "../public/img/projects/smithydao.jpg";
 import ToadStoolzImg from "../public/img/projects/toadstoolz.jpg";
 import ToeImg from "../public/img/projects/toe.jpeg";
 import LostDonkeysImg from "../public/img/projects/lostdonkeys.jpeg";
@@ -866,13 +865,6 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/peekaboo",
     twitterLink: "https://twitter.com/PeekABooGameNFT",
     websiteLink: "https://www.peekaboonft.io/",
-  },
-  {
-    name: "SmithyDAO",
-    image: SmithyDaoImg,
-    discordLink: "https://discord.gg/smithydao",
-    twitterLink: "https://twitter.com/SmithyDAO",
-    websiteLink: "https://smithydao.lol/",
   },
 ];
 
