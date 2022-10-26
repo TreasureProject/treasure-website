@@ -28,17 +28,13 @@ export const abbreviatePrice = (number: number) => {
 };
 
 export const getMagicPrice = async () => {
-  const response = await fetch(
-    "https://api.coingecko.com/api/v3/simple/price?ids=magic&vs_currencies=usd"
-  );
+  const response = await fetch("https://api.treasure.lol/magic/price");
 
   const data = (await response.json()) as {
-    magic: {
-      usd: number;
-    };
+    magicUsd: number;
   };
 
-  const price = toFixed(data.magic.usd, 2);
+  const price = toFixed(data.magicUsd, 2);
 
   return price;
 };
