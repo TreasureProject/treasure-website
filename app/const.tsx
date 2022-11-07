@@ -37,7 +37,6 @@ import GuildsImg from "../public/img/illustrations/guilds.png";
 import AntlionImg from "../public/img/pfps/Antlion.png";
 import ArchangImg from "../public/img/pfps/Archang.png";
 import BahamaImg from "../public/img/pfps/Bahama.png";
-import DerrickImg from "../public/img/pfps/Derrick.png";
 import DukeImg from "../public/img/pfps/Duke.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
@@ -49,7 +48,6 @@ import JustCheeseImg from "../public/img/pfps/JustCheese.png";
 import KarelImg from "../public/img/pfps/Karel.png";
 import MaximeeImg from "../public/img/pfps/Maximee.png";
 import PeitaImg from "../public/img/pfps/Peita.png";
-import PeytonImg from "../public/img/pfps/Peyton.png";
 import PixelmatImg from "../public/img/pfps/Pixelmat.png";
 import PreeminentImg from "../public/img/pfps/Preeminent.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
@@ -62,6 +60,9 @@ import TravImg from "../public/img/pfps/Trav.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
+import CrisisImg from "../public/img/pfps/Crisis.png";
+import GearhartImg from "../public/img/pfps/Gearhart.png";
+import MdImg from "../public/img/pfps/MD.png";
 
 import TengImg from "../public/img/twitter/0xPrismatic.jpg";
 import MarioGoetzeImg from "../public/img/twitter/MarioGoetze.jpg";
@@ -104,11 +105,11 @@ export const teamMembers = [
     image: BahamaImg,
   },
   {
-    name: "drrrrck",
-    title: "Branding",
-    discordLink: "https://discordapp.com/users/909261509748723723",
-    twitterLink: "https://twitter.com/drrrrck",
-    image: DerrickImg,
+    name: "Crisis",
+    title: "Development, Smolverse",
+    discordLink: "https://discordapp.com/users/351558969568788482",
+    twitterLink: "https://twitter.com/crisidot",
+    image: CrisisImg,
   },
   {
     name: "Duke",
@@ -137,6 +138,13 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/314716890339737600",
     twitterLink: "https://twitter.com/_gaarping",
     image: GaarpImg,
+  },
+  {
+    name: "Gearhart",
+    title: "Development, Smolverse",
+    discordLink: "https://discordapp.com/users/948417042522988566",
+    twitterLink: "https://twitter.com/NFTxhunterx",
+    image: GearhartImg,
   },
   {
     name: "Insprac",
@@ -181,18 +189,18 @@ export const teamMembers = [
     image: MaximeeImg,
   },
   {
+    name: "Mouse Dev",
+    title: "Development (Solidity)",
+    discordLink: "https://discordapp.com/users/888112902266044436",
+    twitterLink: "https://twitter.com/_MouseDev ",
+    image: MdImg,
+  },
+  {
     name: "Peita",
     title: "Economist | Product, Bridgeworld",
     discordLink: "https://discordapp.com/users/349586001892605954",
     twitterLink: "https://twitter.com/pugmassacre",
     image: PeitaImg,
-  },
-  {
-    name: "Peyton C",
-    title: "UI/UX, Trove & Bridgeworld",
-    discordLink: "https://discordapp.com/users/131828558375944192",
-    twitterLink: "https://twitter.com/peytoncroft",
-    image: PeytonImg,
   },
   {
     name: "pixelmat",
@@ -228,13 +236,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/568107237629886506",
     twitterLink: "https://twitter.com/SantidotSanti",
     image: SantiImg,
-  },
-  {
-    name: "Shimsho",
-    title: "Development (Front-End), Smolverse",
-    discordLink: "https://discordapp.com/users/300891313451302913",
-    twitterLink: "https://twitter.com/ImShimsho",
-    image: ShimshoImg,
   },
   {
     name: "SimMayor",
@@ -828,10 +829,10 @@ export const partnerCartridges = [
     websiteLink: "https://www.thelostdonkeys.com/",
   },
   {
-    name: "LifeDAO",
+    name: "LifeVerse",
     image: LifeImg,
     discordLink: "https://discord.gg/MsNSCpHhru",
-    twitterLink: "https://twitter.com/lifedao_",
+    twitterLink: "https://twitter.com/LifeVerse_GG",
     websiteLink: "https://life.treasure.lol/",
   },
   {
