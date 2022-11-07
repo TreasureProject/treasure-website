@@ -501,7 +501,7 @@ export const communities = [
     CTAButtons: [
       {
         buttonDescription: "Forum",
-        href: "https://commonwealth.im/treasure-dao",
+        href: "https://gov.treasure.lol",
       },
       {
         buttonDescription: "Vote",
@@ -744,7 +744,7 @@ export const navigation = [
     links: [
       {
         name: "Governance Forum",
-        href: "https://commonwealth.im/treasure-dao",
+        href: "https://gov.treasure.lol",
         isExternal: true,
       },
       {
