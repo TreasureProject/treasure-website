@@ -2,9 +2,7 @@ import BattleFlyImg from "../public/img/projects/battlefly.jpg";
 import KnightsOfTheEtherImg from "../public/img/projects/knightsofether.jpg";
 import LifeImg from "../public/img/projects/life.jpg";
 import LostSamuriseImg from "../public/img/projects/lostsamurise.jpg";
-import PeekABooImg from "../public/img/projects/peekaboo.jpg";
 import RealmImg from "../public/img/projects/realm.jpg";
-import SmithyDaoImg from "../public/img/projects/smithydao.jpg";
 import ToadStoolzImg from "../public/img/projects/toadstoolz.jpg";
 import ToeImg from "../public/img/projects/toe.jpeg";
 import LostDonkeysImg from "../public/img/projects/lostdonkeys.jpeg";
@@ -335,7 +333,7 @@ export const tweets = [
         is buidling during a bear market... The infrastructure, tools and engine
         to create a sustainable virtual economy powered by{" "}
         <TwitterLink href="https://twitter.com/search?q=$MAGIC">
-          $MAGIC
+          MAGIC
         </TwitterLink>{" "}
         all while developing an engaging social network and fun gaming ecosystem
         driven by the community ✨
@@ -397,7 +395,7 @@ export const tweets = [
         dozens of games in progress, it is becoming more and more clear that the
         TreasureDAO ecosystem can support hundreds of thriving games powered by{" "}
         <TwitterLink href="https://twitter.com/search?q=$MAGIC">
-          $MAGIC
+          MAGIC
         </TwitterLink>
         .
       </>
@@ -440,8 +438,8 @@ export const tweets = [
         <TwitterLink href="https://twitter.com/Treasure_DAO">
           @Treasure_DAO
         </TwitterLink>{" "}
-        ($MAGIC). Here’s why I think it's a fascinating socio-economic
-        experiment happening in real-time & something to watch for this year.
+        (MAGIC). Here’s why I think it's a fascinating socio-economic experiment
+        happening in real-time & something to watch for this year.
         <br />
         <br />
         🧵👇
@@ -504,7 +502,7 @@ export const communities = [
     CTAButtons: [
       {
         buttonDescription: "Forum",
-        href: "https://treasuredao.freeflarum.com/",
+        href: "https://commonwealth.im/treasure-dao",
       },
       {
         buttonDescription: "Vote",
@@ -747,7 +745,7 @@ export const navigation = [
     links: [
       {
         name: "Governance Forum",
-        href: "https://treasuredao.freeflarum.com/",
+        href: "https://commonwealth.im/treasure-dao",
         isExternal: true,
       },
       {
@@ -772,7 +770,7 @@ export const navigation = [
       },
       {
         name: "Talent",
-        href: "https://treasure-dao.notion.site/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7",
+        href: "https://treasuredao.pallet.com/",
         isExternal: true,
       },
     ],
@@ -780,6 +778,11 @@ export const navigation = [
   {
     name: "LP",
     links: [
+      {
+        name: "MagicSwap",
+        href: "https://magicswap.lol/",
+        isExternal: true,
+      },
       {
         name: "MAGIC-ETH LP",
         href: "https://app.sushi.com/farm?chainId=42161",
@@ -801,7 +804,7 @@ export const navigation = [
 
 export const partnerCartridges = [
   {
-    name: "Battlefly",
+    name: "BattleFly",
     image: BattleFlyImg,
     discordLink: "https://discord.gg/YzpajBfRNX",
     twitterLink: "https://twitter.com/battleflygame",
@@ -855,20 +858,6 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/realmdao",
     twitterLink: "https://twitter.com/RealmDao",
     websiteLink: "https://rlm.land/",
-  },
-  {
-    name: "Peek-A-Boo!",
-    image: PeekABooImg,
-    discordLink: "https://discord.gg/peekaboo",
-    twitterLink: "https://twitter.com/PeekABooGameNFT",
-    websiteLink: "https://www.peekaboonft.io/",
-  },
-  {
-    name: "SmithyDAO",
-    image: SmithyDaoImg,
-    discordLink: "https://discord.gg/smithydao",
-    twitterLink: "https://twitter.com/SmithyDAO",
-    websiteLink: "https://smithydao.lol/",
   },
 ];
 

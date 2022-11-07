@@ -10,7 +10,7 @@
       "magicPrice": "MAGIC Price",
       "totalMPVolume": "Total Marketplace Volume",
       "totalValueLocked": "Total Value Locked",
-      "percentCirculatingSupply": "% Circulating Supply"
+      "percentCirculatingSupply": "% Circ. Supply Locked"
     },
     "About": "About",
     "Team": "Team",
@@ -30,11 +30,12 @@
     "Guilds": "Guilds",
     "Community Initiatives": "Community Initiatives",
     "Talent": "Talent",
+    "MagicSwap": "MagicSwap",
     "MAGIC-ETH LP": "MAGIC-ETH LP",
     "Balancer Crystals": "Balancer Crystals"
   },
   "index": {
     "title": "The magic of play.",
-    "subtitle": "Treasure is the decentralized video game console connecting games and communities together through imagination, <1>$MAGIC</1>, and NFTs."
+    "subtitle": "Treasure is the decentralized video game console connecting games and communities together through imagination, <1>MAGIC</1>, and NFTs."
   }
 }
