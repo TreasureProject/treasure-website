@@ -26,8 +26,6 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
 
   const isLeafPage = matches.some((match) => !!match.handle?.breadcrumb);
 
-  const isBlogPage = matches.some((match) => match.id.includes("$slug"));
-
   const location = useLocation();
 
   return (
@@ -296,24 +294,6 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                     </Link>
                   </div>
                 </li>
-                {isBlogPage ? (
-                  <li className="flex">
-                    <div className="flex items-center">
-                      <ChevronRightIcon
-                        className="h-full w-6 flex-shrink-0 text-ruby-1000"
-                        aria-hidden="true"
-                      />
-                      <Link
-                        to="/blog"
-                        className="ml-4 inline-block w-max rounded-tag bg-ruby-1000 px-2.5 py-1.5 transition-colors hover:bg-ruby-1400"
-                      >
-                        <h3 className="font-mono text-sm font-medium text-ruby-100">
-                          Blog
-                        </h3>
-                      </Link>
-                    </div>
-                  </li>
-                ) : null}
                 {matches
                   .filter((match) => !!match.handle.breadcrumb)
                   .map((match) => {

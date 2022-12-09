@@ -691,11 +691,6 @@ export const navigation = [
         isExternal: false,
       },
       {
-        name: "Blog",
-        href: "/blog",
-        isExternal: false,
-      },
-      {
         name: "Documentation",
         href: "https://docs.treasure.lol/",
         isExternal: true,
