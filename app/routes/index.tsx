@@ -32,24 +32,15 @@ export default function Home() {
   return (
     <>
       <main className="overflow-hidden">
-        <div
-          className="relative py-24 lg:overflow-hidden lg:py-0"
-          style={{
-            backgroundImage: `url(${HeroImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div className="relative z-10 mx-auto max-w-9xl lg:px-12">
+        <div className="relative py-24 lg:overflow-hidden lg:py-0">
+          <div className="relative z-20 mx-auto max-w-9xl lg:px-12">
             <div className="lg:grid lg:grid-cols-7 lg:gap-8">
               <div className="col-span-3 mx-auto max-w-lg px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
                 <div className="lg:py-32 xl:pb-48 xl:pt-40">
                   <h1 className="mt-4 text-7xl font-bold tracking-tight text-white sm:mt-0 xl:text-8xl">
                     {t("title")}
                   </h1>
-                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-7.5 lg:max-w-sm">
+                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-7.5 backdrop-blur-sm lg:max-w-sm">
                     <p className="text-base text-white sm:text-lg">
                       <Trans i18nKey="index:subtitle">
                         Treasure is the decentralized video game console
@@ -65,13 +56,30 @@ export default function Home() {
           </div>
 
           <div
-            className="absolute top-0 left-0 hidden h-full w-full lg:block"
+            className="absolute top-0 left-0 z-10 hidden h-full w-full lg:block"
             style={{
               background:
                 "linear-gradient(81.88deg, rgba(33, 47, 94, 0.7) 17.27%, rgba(33, 47, 94, 0) 63.85%)",
             }}
           ></div>
 
+          <div
+            className="absolute top-0 left-0 hidden h-full w-full lg:block"
+            style={{
+              backgroundImage: `url(${HeroImg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center left",
+            }}
+          ></div>
+
+          <div
+            className="absolute top-0 left-0 h-full w-full lg:hidden"
+            style={{
+              backgroundImage: `url(${HeroImg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
+            }}
+          ></div>
           <div
             className="absolute top-0 left-0 h-full w-full lg:hidden"
             style={{
