@@ -23,6 +23,8 @@ import OnekxImg from "../public/img/partners/1kx.svg";
 import DigitalStrategiesImg from "../public/img/partners/DigitalStrategies.png";
 
 import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
+import CoinbaseImg from "../public/img/magic-list/coinbase.svg";
+import MoonPayImg from "../public/img/magic-list/moonpay.svg";
 import OkxImg from "../public/img/magic-list/okx.svg";
 
 import BountyBoardImg from "../public/img/illustrations/bountyBoard.png";
@@ -290,9 +292,19 @@ export type MemberT = typeof teamMembers[number];
 
 export const magicPurchaseLinks = [
   {
-    name: "Sushiswap",
+    name: "Sushi",
     url: "https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0x539bdE0d7Dbd336b79148AA742883198BBF60342&chainId=42161",
     icon: SushiSwapImg,
+  },
+  {
+    name: "MoonPay",
+    url: "https://trove.treasure.lol/manage-funds",
+    icon: MoonPayImg,
+  },
+  {
+    name: "Coinbase",
+    url: "https://exchange.coinbase.com/trade/MAGIC-USD",
+    icon: CoinbaseImg,
   },
   {
     name: "OKX",
@@ -543,7 +555,7 @@ export const communities = [
     CTAButtons: [
       {
         buttonDescription: "Join a Guild",
-        href: "https://www.notion.so/treasure-dao/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
+        href: "https://treasure-dao.notion.site/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
       },
     ],
     image: GuildsImg,
@@ -679,11 +691,6 @@ export const navigation = [
         isExternal: false,
       },
       {
-        name: "Blog",
-        href: "/blog",
-        isExternal: false,
-      },
-      {
         name: "Documentation",
         href: "https://docs.treasure.lol/",
         isExternal: true,
@@ -786,11 +793,6 @@ export const navigation = [
       {
         name: "MAGIC-ETH LP",
         href: "https://app.sushi.com/farm?chainId=42161",
-        isExternal: true,
-      },
-      {
-        name: "Balancer Crystals",
-        href: "https://bc.treasure.lol/",
         isExternal: true,
       },
     ],
