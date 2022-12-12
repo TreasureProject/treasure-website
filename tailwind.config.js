@@ -10,6 +10,9 @@ module.exports = {
         marquee: "marquee 80s linear infinite",
         marquee2: "marquee2 80s linear infinite",
       },
+      backgroundPosition: {
+        "hero-lg": "10% 0, center"
+      },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },

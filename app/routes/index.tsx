@@ -59,27 +59,17 @@ export default function Home() {
             className="absolute top-0 left-0 z-10 hidden h-full w-full lg:block"
             style={{
               background:
-                "linear-gradient(81.88deg, rgba(33, 47, 94, 0.7) 17.27%, rgba(33, 47, 94, 0) 63.85%)",
+                "linear-gradient(81.88deg, #212f5eb3 38.27%, #212f5e00 88.85%)",
             }}
           ></div>
 
           <div
-            className="absolute top-0 left-0 hidden h-full w-full lg:block"
+            className="absolute top-0 left-0 h-full w-full bg-cover bg-center lg:bg-hero-lg 2xl:bg-left"
             style={{
               backgroundImage: `url(${HeroImg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center left",
             }}
           ></div>
 
-          <div
-            className="absolute top-0 left-0 h-full w-full lg:hidden"
-            style={{
-              backgroundImage: `url(${HeroImg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center center",
-            }}
-          ></div>
           <div
             className="absolute top-0 left-0 h-full w-full lg:hidden"
             style={{
