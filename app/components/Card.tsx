@@ -32,7 +32,7 @@ export const NewCard = ({
   children: React.ReactNode;
   image: string;
 }) => (
-  <div className="relative flex min-h-[15rem] flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-10">
+  <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-10">
     <div className="max-w-[15rem]">
       <p className="text-2xl font-semibold text-ruby-900 sm:text-4xl">
         {title}

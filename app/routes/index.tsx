@@ -1,5 +1,5 @@
 import { Badge } from "~/components/Badge";
-import { IndexCTA, partners } from "~/const";
+import { IndexCTA, partners, socials } from "~/const";
 import { NewTreasureStats } from "~/components/TreasureStats";
 import { TreasurePosts } from "~/components/TreasurePosts";
 
@@ -19,6 +19,8 @@ import { CartridgeSlider } from "~/components/CartridgeSlider";
 import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
 import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
+import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
+import { Partners } from "~/components/Partners";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -112,50 +114,14 @@ export default function Home() {
 
         <Reviews />
 
-        <div className="relative bg-night-900 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 max-w-lg text-center text-2xl font-bold text-honey-25 sm:mt-0 sm:text-left sm:text-4xl">
-                An evergrowing roster of partners and supporters
-              </p>
-              <Badge
-                name="Partners"
-                bgColor="bg-night-800"
-                textColor="text-night-200"
-              />
-            </div>
-          </div>
-          <div className="relative mt-12 flex overflow-x-hidden sm:mt-24">
-            <div className="flex animate-marquee whitespace-nowrap">
-              {partners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="mx-4 flex w-56 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
-                >
-                  <img src={partner.image} alt={partner.name} />
-                </div>
-              ))}
-            </div>
-            {/* Needed for infinity loop */}
-            <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap">
-              {partners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="mx-4 flex w-56 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
-                >
-                  <img src={partner.image} alt={partner.name} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <Partners />
         <section
           id="info"
           aria-labelledby="other-information"
           className="relative bg-honey-100 py-16"
         >
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+            <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
               <NewCard
                 title="Get Magic"
                 description="Games on Treasure"
@@ -168,11 +134,22 @@ export default function Home() {
               <NewCard
                 title="Join the community"
                 description="Take part in the conversation!"
-                image={GetMagicImg}
+                image={JoinCommunityImg}
               >
-                <CTAButton type="primary" hideExternalIcon>
-                  Discover More
-                </CTAButton>
+                <div className="flex space-x-6">
+                  {socials.map((social) => (
+                    <a
+                      key={social.name}
+                      className="text-night-800 hover:text-night-900"
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="sr-only">{social.name}</span>
+                      <social.icon className="h-6 w-6" aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
               </NewCard>
             </div>
           </div>

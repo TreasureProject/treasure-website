@@ -1,6 +1,6 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
-import { Communities } from "~/components/Build";
+import { Build } from "~/components/Build";
 import { GuildsIcon } from "~/components/Icons";
 import { TwitterCard } from "~/components/TwitterCard";
 import { tweets } from "~/const";
@@ -9,6 +9,7 @@ import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
+import { Reviews } from "~/components/Reviews";
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -89,46 +90,10 @@ export default function Community() {
       </div>
       <div className="relative bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-          <Communities />
+          <Build />
         </div>
       </div>
-      <div className="relative bg-honey-25 py-16 sm:py-24">
-        <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-          <h2 className="mt-12 text-3xl font-bold tracking-tight text-night-900 sm:text-5xl">
-            Enjoyed by many (and counting)
-          </h2>
-          <div className="mt-12 sm:mt-24">
-            <div className="hidden justify-items-center gap-8 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
-              <ul className="space-y-8">
-                {tweets.slice(0, 2).map((tweet) => (
-                  <TwitterCard {...tweet} key={tweet.date} />
-                ))}
-              </ul>
-              <ul className="space-y-8">
-                {tweets.slice(2, 4).map((tweet) => (
-                  <TwitterCard {...tweet} key={tweet.date} />
-                ))}
-              </ul>
-              <ul className="hidden space-y-8 xl:block">
-                {tweets.slice(4, 6).map((tweet) => (
-                  <TwitterCard {...tweet} key={tweet.date} />
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto px-8 sm:px-0 lg:hidden">
-          {tweets
-            .filter((tweet) => !tweet.image)
-            .map((tweet) => (
-              <TwitterCard
-                {...tweet}
-                key={tweet.date}
-                className="first-of-type:ml-6 last-of-type:mr-6"
-              />
-            ))}
-        </div>
-      </div>
+      <Reviews />
       <div className="relative bg-honey-200 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">

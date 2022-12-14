@@ -1,5 +1,5 @@
 import React from "react";
-import type { TrackDetails, KeenSliderPlugin } from "keen-slider/react";
+import type { KeenSliderPlugin } from "keen-slider/react";
 import { useKeenSlider } from "keen-slider/react";
 import BWCartridgeImg from "../../public/img/cartridges/bw.png";
 import { motion } from "framer-motion";
