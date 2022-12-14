@@ -3,8 +3,7 @@ import { IndexCTA, partners } from "~/const";
 import { NewTreasureStats } from "~/components/TreasureStats";
 import { TreasurePosts } from "~/components/TreasurePosts";
 
-import { Communities } from "~/components/Communities";
-import { Infrastructures } from "~/components/Infrastructures";
+import { Build } from "~/components/Build";
 import { Fragment, useState } from "react";
 import { Trans } from "react-i18next";
 
@@ -17,6 +16,9 @@ import { Link } from "@remix-run/react";
 import { Reviews } from "~/components/Reviews";
 import keenSliderCSS from "keen-slider/keen-slider.min.css";
 import { CartridgeSlider } from "~/components/CartridgeSlider";
+import { CTAButton } from "~/components/Button";
+import { NewCard } from "~/components/Card";
+import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -97,12 +99,12 @@ export default function Home() {
         </div>
         <div className="relative bg-honey-100 py-16 sm:py-24">
           <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
-            <Badge name="Community" />
+            <Badge name="Build" />
             <p className="mx-auto mt-12 max-w-xl text-2xl font-bold tracking-tight text-night-900 sm:text-4xl">
               The future of web3 gaming is powered by Treasure.
             </p>
             <div className="mt-12">
-              <Communities />
+              <Build />
             </div>
           </div>
         </div>
@@ -147,6 +149,34 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <section
+          id="info"
+          aria-labelledby="other-information"
+          className="relative bg-honey-100 py-16"
+        >
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+              <NewCard
+                title="Get Magic"
+                description="Games on Treasure"
+                image={GetMagicImg}
+              >
+                <CTAButton type="primary" hideExternalIcon>
+                  Discover More
+                </CTAButton>
+              </NewCard>
+              <NewCard
+                title="Join the community"
+                description="Take part in the conversation!"
+                image={GetMagicImg}
+              >
+                <CTAButton type="primary" hideExternalIcon>
+                  Discover More
+                </CTAButton>
+              </NewCard>
+            </div>
+          </div>
+        </section>
       </main>
       <Transition.Root show={isOpenYoutubeModal} as={Fragment}>
         <Dialog as="div" className="relative z-30" onClose={onClose}>

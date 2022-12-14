@@ -1,6 +1,6 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
-import { Communities } from "~/components/Communities";
+import { Communities } from "~/components/Build";
 import { GuildsIcon } from "~/components/Icons";
 import { TwitterCard } from "~/components/TwitterCard";
 import { tweets } from "~/const";

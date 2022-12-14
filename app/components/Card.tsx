@@ -3,7 +3,7 @@ import type { CardT } from "~/const";
 export const Card = ({ card }: { card: CardT }) => (
   <div
     key={card.name}
-    className="relative flex flex-col rounded-2.5xl bg-honey-50 px-2 xl:flex-row"
+    className="relative flex flex-col rounded-2.5xl border-2 border-honey-200 bg-honey-50 px-2 xl:flex-row"
   >
     <div className="flex basis-7/12 flex-col items-start space-y-4 py-8 pl-8 pr-14">
       <p className="text-base font-semibold text-night-800 sm:text-2xl">
@@ -17,6 +17,31 @@ export const Card = ({ card }: { card: CardT }) => (
         className="w-full object-cover xl:h-56"
         alt="Hero"
       />
+    </div>
+  </div>
+);
+
+export const NewCard = ({
+  title,
+  description,
+  children,
+  image,
+}: {
+  title: string;
+  description: string;
+  children: React.ReactNode;
+  image: string;
+}) => (
+  <div className="relative flex min-h-[15rem] flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-10">
+    <div className="max-w-[15rem]">
+      <p className="text-2xl font-semibold text-ruby-900 sm:text-4xl">
+        {title}
+      </p>
+      <p className="mt-2.5 text-sm text-night-500 sm:text-lg">{description}</p>
+    </div>
+    <div className="mt-8">{children}</div>
+    <div className="absolute -bottom-1 right-0">
+      <img src={image} className="w-32 xl:w-60" alt="Hero" />
     </div>
   </div>
 );

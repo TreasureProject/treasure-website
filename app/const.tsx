@@ -605,7 +605,7 @@ export const WhyTreasureCardList = [
   },
 ];
 
-export const communities = [
+export const builds = [
   {
     name: "Grow with an unmatched community",
     description:
@@ -636,7 +636,7 @@ export const communities = [
   },
 ];
 
-export type CardT = typeof communities[number];
+export type CardT = typeof builds[number];
 
 export const partners = [
   {

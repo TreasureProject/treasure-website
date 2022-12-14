@@ -5,6 +5,7 @@ import BWCartridgeImg from "../../public/img/cartridges/bw.png";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { CTAButton } from "./Button";
 
 const WheelControls: KeenSliderPlugin = (slider) => {
   let touchTimeout: ReturnType<typeof setTimeout>;
@@ -67,43 +68,43 @@ const WheelControls: KeenSliderPlugin = (slider) => {
 const CARTRIDGE_LIST = [
   {
     name: "BridgeWorld",
-    link: "https://bridgeworld.app",
+    link: "https://bridgeworld.treasure.lol",
     tags: ["P2E", "Fantasy"],
     image: BWCartridgeImg,
   },
   {
     name: "BridgeWorld",
-    link: "https://bridgeworld.app",
+    link: "https://bridgeworld.treasure.lol",
     tags: ["P2E", "Fantasy"],
     image: BWCartridgeImg,
   },
   {
     name: "BridgeWorld",
-    link: "https://bridgeworld.app",
+    link: "https://bridgeworld.treasure.lol",
     tags: ["P2E", "Fantasy"],
     image: BWCartridgeImg,
   },
   {
     name: "BridgeWorld",
-    link: "https://bridgeworld.app",
+    link: "https://bridgeworld.treasure.lol",
     tags: ["P2E", "Fantasy"],
     image: BWCartridgeImg,
   },
   {
     name: "BridgeWorld",
-    link: "https://bridgeworld.app",
+    link: "https://bridgeworld.treasure.lol",
     tags: ["P2E", "Fantasy"],
     image: BWCartridgeImg,
   },
   {
     name: "BridgeWorld",
-    link: "https://bridgeworld.app",
+    link: "https://bridgeworld.treasure.lol",
     tags: ["P2E", "Fantasy"],
     image: BWCartridgeImg,
   },
   {
     name: "BridgeWorld",
-    link: "https://bridgeworld.app",
+    link: "https://bridgeworld.treasure.lol",
     tags: ["P2E", "Fantasy"],
     image: BWCartridgeImg,
   },
@@ -161,14 +162,35 @@ export const CartridgeSlider = () => {
                 }}
               >
                 <div className="keen-slider__slide">
-                  <motion.img
+                  <motion.div
                     animate={{
                       scale,
                     }}
-                    className="h-full w-full"
-                    src={cartridge.image}
-                    alt=""
-                  />
+                  >
+                    <img
+                      className="h-full w-full [mask-image:linear-gradient(to_bottom,#000_70%,#0000_100%)]"
+                      src={cartridge.image}
+                      alt={cartridge.name}
+                    />
+                    <CTAButton
+                      hideExternalIcon
+                      className="absolute left-1/2 bottom-24 -translate-x-1/2 border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm xl:bottom-36"
+                    >
+                      View Game
+                    </CTAButton>
+                    <div className="absolute bottom-6 flex w-full justify-center border-t border-honey-25/10 xl:bottom-12">
+                      <div className="mt-5 space-x-2.5">
+                        {cartridge.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="inline-block rounded-md bg-night-800/50 px-2.5 py-1 text-xs font-medium uppercase leading-4 text-night-400 backdrop-blur-sm"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             );
@@ -222,14 +244,16 @@ const Arrow = ({
   return (
     <button
       className={twMerge(
-        "absolute top-1/2 inline-block -translate-y-1/2 rounded-2xl border-2 border-night-900 bg-night-800 p-4 disabled:opacity-50",
-        dir === "left" ? "left-80" : "right-80"
+        "absolute top-1/2 inline-block -translate-y-1/2 rounded-lg border-2 border-night-900 bg-night-800 p-2 disabled:opacity-50 sm:rounded-2xl sm:p-4",
+        dir === "left"
+          ? "left-16 sm:left-40 xl:left-60 2xl:left-96"
+          : "right-16 sm:right-40 xl:right-60 2xl:right-96"
       )}
       {...props}
     >
       <ArrowRightIcon
         className={twMerge(
-          "h-6 w-6 [&>path]:stroke-night-100 [&>path]:stroke-[2]",
+          "h-3 w-3 sm:h-6 sm:w-6 [&>path]:stroke-night-100 [&>path]:stroke-[2]",
           dir === "left" && "rotate-180"
         )}
       />
