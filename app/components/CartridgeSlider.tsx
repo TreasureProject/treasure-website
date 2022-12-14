@@ -7,6 +7,8 @@ import { twMerge } from "tailwind-merge";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { CTAButton } from "./Button";
 
+const ArrowRight = motion(ArrowRightIcon);
+
 const WheelControls: KeenSliderPlugin = (slider) => {
   let touchTimeout: ReturnType<typeof setTimeout>;
   let position: {
@@ -235,6 +237,14 @@ export const CartridgeSlider = () => {
   );
 };
 
+const variant = {
+  scale: 1,
+};
+
+const childVariant = {
+  scale: 1.2,
+};
+
 const Arrow = ({
   dir = "right",
   ...props
@@ -244,18 +254,20 @@ const Arrow = ({
   return (
     <button
       className={twMerge(
-        "absolute top-1/2 inline-block -translate-y-1/2 rounded-lg border-2 border-night-900 bg-night-800 p-2 disabled:opacity-50 sm:rounded-2xl sm:p-4",
+        "absolute top-1/2 inline-block -translate-y-1/2 rounded-lg border-2 border-night-900 bg-night-800 p-2 transition-colors hover:bg-night-800/95 disabled:opacity-50 sm:rounded-2xl sm:p-4",
         dir === "left"
           ? "left-16 sm:left-40 xl:left-60 2xl:left-96"
           : "right-16 sm:right-40 xl:right-60 2xl:right-96"
       )}
       {...props}
     >
-      <ArrowRightIcon
-        className={twMerge(
-          "h-3 w-3 sm:h-6 sm:w-6 [&>path]:stroke-night-100 [&>path]:stroke-[2]",
-          dir === "left" && "rotate-180"
-        )}
+      <ArrowRight
+        initial={false}
+        animate={{
+          rotate: dir === "left" ? 180 : 0,
+        }}
+        whileHover={{ scale: 1.1 }}
+        className="h-3 w-3 sm:h-6 sm:w-6 [&>path]:stroke-night-100 [&>path]:stroke-[2]"
       />
     </button>
   );

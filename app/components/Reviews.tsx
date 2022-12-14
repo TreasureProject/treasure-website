@@ -55,7 +55,7 @@ function Tweet({
             "h-16 w-16 rounded-full object-cover",
             isBuilder && "rounded-md"
           )}
-          alt=""
+          alt={`${props.username}'s profile`}
         />
         <div className="ml-4 flex flex-col justify-center">
           <p>{props.username}</p>
