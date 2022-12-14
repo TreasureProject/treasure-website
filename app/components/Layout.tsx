@@ -5,7 +5,10 @@ import { Footer } from "./Footer";
 import { Modal } from "./Modal";
 import { Dialog } from "@headlessui/react";
 import { MagicIcon } from "./Icons";
-import { ExternalLinkIcon, XIcon } from "@heroicons/react/outline";
+import {
+  ArrowTopRightOnSquareIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import { magicPurchaseLinks } from "~/const";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -38,7 +41,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             onClick={closeModal}
           >
             <span className="sr-only">Close</span>
-            <XIcon className="h-6 w-6" aria-hidden="true" />
+            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
         <div className="mt-4 grid grid-cols-1 gap-2 sm:mt-8 sm:gap-4">
@@ -73,7 +76,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               className="inline-flex items-center text-ruby-900 decoration-ruby-900 hover:underline"
             >
               <span>Learn more</span>
-              <ExternalLinkIcon className="ml-1 h-3 w-3" />
+              <ArrowTopRightOnSquareIcon className="ml-1 h-3 w-3" />
             </a>
           </p>
         </div>

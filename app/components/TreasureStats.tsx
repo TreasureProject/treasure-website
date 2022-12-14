@@ -111,3 +111,85 @@ export const TreasureStats = () => {
     </div>
   );
 };
+
+// #1
+// Gaming and NFT ecosystem on Arbitrum
+
+// 95%+
+// of all gaming and NFT txns on Arbitrum
+
+// $267M
+// Total marketplace volume
+
+// 267k
+// Unique MAGIC holders
+
+// #1
+// Gaming and top 5 overall liquidity on Sushi
+
+// 10+
+// Games powered by Treasure
+
+// 100k+
+// Engaged player community
+
+const HARDCODED_DATA = [
+  {
+    title: "Gaming and NFT ecosystem on Arbitrum",
+    value: "#1",
+  },
+  {
+    title: "of all gaming and NFT txns on Arbitrum",
+    value: "95%",
+  },
+  {
+    title: "Total marketplace volume",
+    value: "$267M",
+  },
+  {
+    title: "Unique MAGIC holders",
+    value: "267k",
+  },
+  {
+    title: "Gaming and top 5 overall liquidity on Sushi",
+    value: "#1",
+  },
+  {
+    title: "Games powered by Treasure",
+
+    value: "10+",
+  },
+  {
+    title: "Engaged player community",
+    value: "100k+",
+  },
+] as const;
+
+const Stat = ({ data }: { data: typeof HARDCODED_DATA[number] }) => (
+  <div className="mx-4 flex w-[15rem] flex-col justify-center space-y-1 rounded-lg bg-honey-100 p-4">
+    <p className="text-base font-semibold lg:text-2xl">{data.value}</p>
+    <p className="break-word text-sm text-night-600 lg:text-base">
+      {data.title}
+    </p>
+  </div>
+);
+
+export const NewTreasureStats = () => {
+  return (
+    <div className="relative bg-honey-50 py-8 [mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)]">
+      <div className="relative flex overflow-x-hidden">
+        <div className="flex animate-marquee">
+          {HARDCODED_DATA.map((data) => (
+            <Stat key={data.title} data={data} />
+          ))}
+        </div>
+        {/* Needed for infinity loop */}
+        <div className="absolute top-0 ml-4 flex animate-marquee2">
+          {HARDCODED_DATA.map((data) => (
+            <Stat key={data.title} data={data} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};

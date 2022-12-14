@@ -1,4 +1,7 @@
-import { ExternalLinkIcon, ArrowUpIcon } from "@heroicons/react/solid";
+import {
+  ArrowTopRightOnSquareIcon,
+  ArrowUpIcon,
+} from "@heroicons/react/24/solid";
 import { Link } from "@remix-run/react";
 import { socials, navigation } from "~/const";
 import { Badge } from "./Badge";
@@ -77,7 +80,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
                             </Link>
                           )}
                           {isExternal ? (
-                            <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
+                            <ArrowTopRightOnSquareIcon className="h-3 w-3 text-ruby-900" />
                           ) : null}
                         </li>
                       ))}
@@ -107,7 +110,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
                       >
                         Trove
                       </a>
-                      <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
+                      <ArrowTopRightOnSquareIcon className="h-3 w-3 text-ruby-900" />
                     </li>
                   </ul>
                 </div>

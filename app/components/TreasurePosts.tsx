@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from "@heroicons/react/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { Badge } from "./Badge";
 import type { RootLoaderData } from "~/root";
 import { useRouteData } from "remix-utils";
@@ -8,7 +8,7 @@ export const TreasurePosts = () => {
   const routeData = useRouteData<RootLoaderData>("root");
 
   return (
-    <div className="relative bg-honey-100 py-16 sm:py-24">
+    <div className="relative bg-honey-25 py-16 sm:py-24">
       <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
         <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
           <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
@@ -58,7 +58,7 @@ export const TreasurePosts = () => {
                 textColor="text-ruby-900"
                 size="sm"
               />
-              <ExternalLinkIcon className="h-5 w-5 text-ruby-900" />
+              <ArrowTopRightOnSquareIcon className="h-5 w-5 text-ruby-900" />
             </div>
           </div>
         ))}

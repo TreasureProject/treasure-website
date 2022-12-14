@@ -6,12 +6,16 @@ module.exports = {
   presets: [require('@treasure-project/tailwind-config')],
   theme: {
     extend: {
+      colors: {
+        "tr-green": "#4FC74F",
+        "tr-blue":"#28A0F0"
+      },
       animation: {
         marquee: "marquee 80s linear infinite",
         marquee2: "marquee2 80s linear infinite",
-      },
-      backgroundPosition: {
-        "hero-lg": "10% 0, center"
+        marquee3: 'marquee3 var(--marquee-duration) linear infinite',
+        'fade-in': 'fade-in 0.5s linear forwards',
+
       },
       keyframes: {
         marquee: {
@@ -21,6 +25,19 @@ module.exports = {
         marquee2: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
+        },
+        marquee3: {
+          '100%': {
+            transform: 'translateY(-50%)',
+          },
+        },
+        'fade-in': {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
         },
       },
       typography: ({ theme }) => ({

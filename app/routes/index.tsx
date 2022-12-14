@@ -1,25 +1,28 @@
-import HeroImg from "../../public/img/bg-hero.jpg";
-
 import { Badge } from "~/components/Badge";
-import { TwitterCard } from "~/components/TwitterCard";
-import { partnerCartridges, partners, tweets } from "~/const";
-import { TreasureStats } from "~/components/TreasureStats";
+import { IndexCTA, partners } from "~/const";
+import { NewTreasureStats } from "~/components/TreasureStats";
 import { TreasurePosts } from "~/components/TreasurePosts";
-import { CoreCartridges } from "~/components/CoreCartridges";
-import { PartnerCartridge } from "~/components/PartnerCartridge";
+
 import { Communities } from "~/components/Communities";
 import { Infrastructures } from "~/components/Infrastructures";
-import { PlayIcon } from "@heroicons/react/solid";
 import { Fragment, useState } from "react";
 import { Trans } from "react-i18next";
 
 import ReactPlayer from "react-player/youtube";
 import { Dialog, Transition } from "@headlessui/react";
-import type { HeadersFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, LinksFunction } from "@remix-run/cloudflare";
 import { commonHeaders } from "~/utils/misc.server";
 import { useTranslation } from "react-i18next";
+import { Link } from "@remix-run/react";
+import { Reviews } from "~/components/Reviews";
+import keenSliderCSS from "keen-slider/keen-slider.min.css";
+import { CartridgeSlider } from "~/components/CartridgeSlider";
 
 export const headers: HeadersFunction = commonHeaders;
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: keenSliderCSS },
+];
 
 export default function Home() {
   const [isOpenYoutubeModal, setIsOpenYoutubeModal] = useState(false);
@@ -27,13 +30,14 @@ export default function Home() {
     keyPrefix: "index",
   });
 
+  console.log(keenSliderCSS);
   const onClose = () => setIsOpenYoutubeModal(false);
 
   return (
     <>
       <main className="overflow-hidden">
         <div className="relative py-24 lg:overflow-hidden lg:py-0">
-          <div className="relative z-20 mx-auto max-w-9xl lg:px-12">
+          <div className="relative z-20 lg:px-12">
             <div className="lg:grid lg:grid-cols-7 lg:gap-8">
               <div className="col-span-3 mx-auto max-w-lg px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
                 <div className="lg:py-32 xl:pb-48 xl:pt-40">
@@ -43,10 +47,9 @@ export default function Home() {
                   <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-7.5 backdrop-blur-sm lg:max-w-sm">
                     <p className="text-base text-white sm:text-lg">
                       <Trans i18nKey="index:subtitle">
-                        Treasure is the decentralized video game console
-                        connecting games and communities together through
-                        imagination, <span className="font-bold">MAGIC</span>,
-                        and NFTs.
+                        Treasure is the decentralized gaming ecosystem bringing
+                        games and players together through{" "}
+                        <span className="font-bold">MAGIC.</span>
                       </Trans>
                     </p>
                   </div>
@@ -55,29 +58,30 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="absolute top-0 left-0 z-10 hidden h-full w-full lg:block"
-            style={{
-              background:
-                "linear-gradient(81.88deg, #212f5eb3 38.27%, #212f5e00 88.85%)",
-            }}
-          ></div>
-
-          <div
-            className="absolute top-0 left-0 h-full w-full bg-cover bg-center lg:bg-hero-lg 2xl:bg-left"
-            style={{
-              backgroundImage: `url(${HeroImg})`,
-            }}
-          ></div>
-
-          <div
-            className="absolute top-0 left-0 h-full w-full lg:hidden"
-            style={{
-              background: "rgba(33, 47, 94, 0.7)",
-            }}
-          ></div>
+          <div className="absolute top-0 left-0 h-full w-full bg-[linear-gradient(0deg,#212f5e99,#212f5e99),url('/img/bg-hero.jpg')] bg-cover bg-center lg:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] 2xl:bg-left"></div>
         </div>
-        <TreasureStats />
+        <NewTreasureStats />
+        <div className="relative bg-honey-100 py-6 lg:py-10">
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+              {IndexCTA.map((cta) => (
+                <Link
+                  key={cta.name}
+                  to={"/"}
+                  className="flex max-w-[22rem] flex-1 flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 lg:p-7"
+                >
+                  {cta.icon}
+                  <p className="mt-3 text-lg font-semibold text-night-900 xl:text-2xl">
+                    {cta.name}
+                  </p>
+                  <p className="mt-1 break-words text-base text-night-700 xl:text-xl">
+                    {cta.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="relative bg-night-900 py-16 sm:py-24">
           <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
             <Badge
@@ -88,96 +92,24 @@ export default function Home() {
             <p className="mx-auto mt-12 max-w-xl text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
               Games and worlds that delight the masses
             </p>
-            <div className="mt-12">
-              <CoreCartridges />
-            </div>
-            <div className="mt-14">
-              <Badge
-                name="Partner Cartridges"
-                bgColor="bg-night-800"
-                textColor="text-night-200"
-              />
-            </div>
           </div>
-          <div className="relative mt-12 px-6 before:absolute before:left-0 before:bottom-0 before:top-0 before:bg-gradient-to-r before:from-night-900 before:to-night-900/10 after:absolute after:right-0 after:bottom-0 after:top-0 after:bg-gradient-to-l after:from-night-900 after:to-night-900/10 sm:px-0 before:sm:w-6 after:sm:w-6">
-            <div className="parter-cartridge-container flex w-full gap-6 overflow-x-auto px-6 pb-12">
-              {partnerCartridges.map((cartridge) => (
-                <PartnerCartridge
-                  cartridge={cartridge}
-                  key={cartridge.name}
-                  className="h-48 sm:w-80"
-                />
-              ))}
-            </div>
-          </div>
+          <CartridgeSlider />
         </div>
         <div className="relative bg-honey-100 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 max-w-lg text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-                The common thread that connects us all - community and good
-                times.
-              </p>
-              <Badge name="Community" />
-            </div>
+          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+            <Badge name="Community" />
+            <p className="mx-auto mt-12 max-w-xl text-2xl font-bold tracking-tight text-night-900 sm:text-4xl">
+              The future of web3 gaming is powered by Treasure.
+            </p>
             <div className="mt-12">
               <Communities />
             </div>
           </div>
         </div>
-        <div className="relative bg-honey-900 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 max-w-lg text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-                We provide the tools to make your imagination a reality.
-              </p>
-              <Badge name="Infrastructure" />
-            </div>
-            <div className="mt-12">
-              <Infrastructures />
-            </div>
-          </div>
-        </div>
-        <div className="relative bg-honey-25 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-                Enjoyed by many (and counting)
-              </p>
-              <Badge name="Wall Of Love" />
-            </div>
-            <div className="mt-12 sm:mt-24">
-              <div className="hidden justify-items-center gap-8 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
-                <ul className="space-y-8">
-                  {tweets.slice(0, 2).map((tweet) => (
-                    <TwitterCard {...tweet} key={tweet.date} />
-                  ))}
-                </ul>
-                <ul className="space-y-8">
-                  {tweets.slice(2, 4).map((tweet) => (
-                    <TwitterCard {...tweet} key={tweet.date} />
-                  ))}
-                </ul>
-                <ul className="hidden space-y-8 xl:block">
-                  {tweets.slice(4, 6).map((tweet) => (
-                    <TwitterCard {...tweet} key={tweet.date} />
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto px-8 sm:px-0 lg:hidden">
-            {tweets
-              .filter((tweet) => !tweet.image)
-              .map((tweet) => (
-                <TwitterCard
-                  {...tweet}
-                  key={tweet.date}
-                  className="first-of-type:ml-6 last-of-type:mr-6"
-                />
-              ))}
-          </div>
-        </div>
+        <TreasurePosts />
+
+        <Reviews />
+
         <div className="relative bg-night-900 py-16 sm:py-24">
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
             <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
@@ -215,7 +147,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <TreasurePosts />
       </main>
       <Transition.Root show={isOpenYoutubeModal} as={Fragment}>
         <Dialog as="div" className="relative z-30" onClose={onClose}>

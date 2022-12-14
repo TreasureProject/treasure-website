@@ -1,11 +1,11 @@
 import { Popover, Transition, Disclosure } from "@headlessui/react";
 import {
-  MenuIcon,
+  Bars3Icon,
   ChevronDownIcon,
-  XIcon,
-  ExternalLinkIcon,
+  XMarkIcon,
+  ArrowTopRightOnSquareIcon,
   ChevronRightIcon,
-} from "@heroicons/react/solid";
+} from "@heroicons/react/24/solid";
 import { Link, useLocation, useMatches } from "@remix-run/react";
 import { Fragment } from "react";
 import { navigation, socials } from "~/const";
@@ -31,7 +31,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
   return (
     <>
       <Popover as="header" className="sticky top-0 z-30 lg:relative">
-        <div className="bg-honey-100 py-4 sm:py-0">
+        <div className="bg-honey-25 py-4 sm:py-0">
           <div className="relative mx-auto flex max-w-9xl items-center justify-center px-4 lg:py-8 lg:px-0">
             <div className="flex w-full items-center justify-between lg:absolute lg:left-12 lg:w-auto">
               <Link to="/">
@@ -46,7 +46,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
               <div className="-mr-2 flex items-center lg:hidden">
                 <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-honey-50">
                   <span className="sr-only">Open main menu</span>
-                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
             </div>
@@ -94,7 +94,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                           <span className="text-base font-medium text-night-900">
                                             {t(link.name)}
                                           </span>
-                                          <ExternalLinkIcon className="ml-1 h-4 w-4 text-ruby-900" />
+                                          <ArrowTopRightOnSquareIcon className="ml-1 h-4 w-4 text-ruby-900" />
                                         </Popover.Button>
                                       );
                                     }
@@ -186,7 +186,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-honey-50">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         className="flex items-center px-3 py-2 font-medium text-night-900"
                                       >
                                         <span>{t(link.name)}</span>
-                                        <ExternalLinkIcon className="ml-1 h-3 w-3 text-ruby-900" />
+                                        <ArrowTopRightOnSquareIcon className="ml-1 h-3 w-3 text-ruby-900" />
                                       </Popover.Button>
                                     );
                                   }
@@ -257,7 +257,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                         className="group flex items-center justify-between px-4 py-2 text-left font-medium text-night-900"
                       >
                         {t(item.name)}
-                        <ExternalLinkIcon className="h-4 w-4 text-ruby-900 group-hover:text-ruby-700" />
+                        <ArrowTopRightOnSquareIcon className="h-4 w-4 text-ruby-900 group-hover:text-ruby-700" />
                       </a>
                     );
                   })}
@@ -295,16 +295,16 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                   </div>
                 </li>
                 {matches
-                  .filter((match) => !!match.handle.breadcrumb)
+                  .filter((match) => !!match.handle?.breadcrumb)
                   .map((match) => {
                     let href: string, title: string;
 
-                    if (typeof match.handle.breadcrumb === "object") {
-                      href = match.handle.breadcrumb.href as string;
-                      title = match.handle.breadcrumb.title as string;
+                    if (typeof match.handle?.breadcrumb === "object") {
+                      href = match.handle?.breadcrumb.href as string;
+                      title = match.handle?.breadcrumb.title as string;
                     } else {
                       const { href: breadcrumbHref, title: breadcrumbTitle } =
-                        match.handle.breadcrumb(match.params) as {
+                        match.handle?.breadcrumb(match.params) as {
                           href: string;
                           title: string;
                         };
@@ -327,7 +327,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                             aria-current={currentPath ? "page" : undefined}
                           >
                             <h3 className="font-mono text-sm font-medium text-ruby-900">
-                              {typeof match.handle.breadcrumb === "function"
+                              {typeof match.handle?.breadcrumb === "function"
                                 ? title
                                 : t(title)}
                             </h3>

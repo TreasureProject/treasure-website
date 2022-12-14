@@ -53,7 +53,6 @@ import PreeminentImg from "../public/img/pfps/Preeminent.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
 import SantiImg from "../public/img/pfps/Santi.png";
-import ShimshoImg from "../public/img/pfps/Shimsho.png";
 import T1DevImg from "../public/img/pfps/t1dev.png";
 import TimoImg from "../public/img/pfps/Timo.png";
 import TravImg from "../public/img/pfps/Trav.png";
@@ -65,13 +64,12 @@ import GearhartImg from "../public/img/pfps/Gearhart.png";
 import MdImg from "../public/img/pfps/MD.png";
 
 import TengImg from "../public/img/twitter/0xPrismatic.jpg";
-import MarioGoetzeImg from "../public/img/twitter/MarioGoetze.jpg";
-import MikeCryptoImg from "../public/img/twitter/Mike_Crypto.jpg";
+
 import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.jpg";
-import PennybagsImg from "../public/img/twitter/realpennybags.jpg";
 import SquareJordanImg from "../public/img/twitter/SquareJordan.jpg";
 
 import {
+  AMMIcon,
   CartridgesIcon,
   DiscordIcon,
   EconomyIcon,
@@ -351,117 +349,217 @@ export const tweets = [
         driven by the community ✨
       </>
     ),
-    image: null,
-    isOfficial: false,
-    date: "3:49 AM · June 2, 2022",
-  },
-  {
-    profileImage: MarioGoetzeImg,
-    username: "mariogotze.eth",
-    handle: "@MarioGoetze",
-    link: "https://twitter.com/mariogoetze/status/1478801150883377153",
-    tweet: () => <>Making smol steps in the crypto space</>,
-    image:
-      "https://pbs.twimg.com/media/FIXBzxaXMAwBeB2?format=jpg&name=360x360",
-    isOfficial: true,
-    date: "3:50 AM · Jan 6, 2022",
-  },
-
-  {
-    profileImage: PennybagsImg,
-    username: "Uncle Pennybags 🦍",
-    handle: "@realpennybags",
-    link: "https://twitter.com/realpennybags/status/1485856084258549762",
-    tweet: () => (
-      <>
-        1/ Many ppl have been asking me why i aped 300+ eth into an illiquid l2
-        nft topping some of the highest sales vs{" "}
-        <TwitterLink href="https://twitter.com/CyberKongz">
-          @CyberKongz
-        </TwitterLink>{" "}
-        and{" "}
-        <TwitterLink href="https://twitter.com/coolcatsnft">
-          @coolcatsnft
-        </TwitterLink>{" "}
-        amidst a bear market that doesnt even have a game out atm
-        <br />
-        <br /> Below is my story 👇
-      </>
-    ),
-    image: "https://pbs.twimg.com/media/FJ7SMgAXMAEsWCU?format=jpg&name=small",
-    isOfficial: false,
-    date: "3:04 PM · Jan 25, 2022",
-  },
-  {
-    profileImage: MikeCryptoImg,
-    username: "Mike_Crypto (🪄,🧠)",
-    handle: "@Mike_Crypto",
-    link: "https://twitter.com/Mike_Crypto/status/1506323131077697543",
-    tweet: () => (
-      <>
-        I think the exponential growth of the{" "}
-        <TwitterLink href="https://twitter.com/Treasure_DAO">
-          @Treasure_DAO
-        </TwitterLink>{" "}
-        network will start to become very clear over the next few months. With
-        dozens of games in progress, it is becoming more and more clear that the
-        TreasureDAO ecosystem can support hundreds of thriving games powered by{" "}
-        <TwitterLink href="https://twitter.com/search?q=$MAGIC">
-          MAGIC
-        </TwitterLink>
-        .
-      </>
-    ),
-    image: null,
-    isOfficial: false,
-    date: "2:33 AM · Mar 23, 2022",
+    type: "player",
   },
 
   {
     profileImage: OfficialAbengerImg,
-    username: "OfficialAbenger (3,3) ( 🪄,🌙)",
-    handle: "@OfficialAbenger",
-    link: "https://twitter.com/officialabenger/status/1512088847865495552",
+    username: "OfficialAbenger",
+    handle: "@officialabenger",
+    link: "https://twitter.com/officialabenger/status/1598879884427677696",
     tweet: () => (
       <>
-        I can't find another crypto ecosystem that has as many creative teams
-        building at speed as{" "}
-        <TwitterLink href="https://twitter.com/Treasure_DAO">
-          @Treasure_DAO
+        I’m part of the team building{" "}
+        <TwitterLink href="https://twitter.com/BattleFlyGame">
+          @BattleFlyGame
         </TwitterLink>{" "}
-        does right now. <br />
-        <br /> Decentralized, coordinated and boundless creativity will lead to
-        something very special -- a metaverse that people actually want to spend
-        time in.
+        on Treasure and continue to be impressed by the vision, community and
+        emerging interoperability of the ecosystem. The community is like
+        nothing else in web3 imho.
       </>
     ),
-    image: null,
-    isOfficial: false,
-    date: "12:24 AM · Apr 8, 2022",
+    type: "player",
   },
   {
     profileImage: TengImg,
-    username: "Teng",
-    handle: "@0xPrismatic",
-    link: "https://twitter.com/0xPrismatic/status/1508081582044856326",
+    username: "hunter (💙,🧡)",
+    handle: "@BFreshHB",
+    link: "https://twitter.com/BFreshHB/status/1598744138534379520",
     tweet: () => (
       <>
-        I’ve spent weeks deep in the weeds in{" "}
+        Truly impressed and proud of{" "}
         <TwitterLink href="https://twitter.com/Treasure_DAO">
           @Treasure_DAO
         </TwitterLink>{" "}
-        (MAGIC). Here’s why I think it's a fascinating socio-economic experiment
-        happening in real-time & something to watch for this year.
+        and the community they’ve cultivated.
         <br />
-        <br />
-        🧵👇
+        <br /> Very rare to see a project get insane hype and attention in the
+        beginning, build through the lows and FUD, to re-emerge as a leader in
+        their vertical - sustainably building for the future ✨
       </>
     ),
-    image: null,
-    isOfficial: false,
-    date: "11:00 PM · Mar 27, 2022",
+    type: "player",
   },
-];
+  {
+    profileImage: TengImg,
+    username: "cartjacked (💙,🧡)",
+    handle: "@cartjacked",
+    link: "https://twitter.com/cartjacked/status/1598863589598986240",
+    tweet: () => (
+      <>
+        Treasure/Arbitrum offers very strong network effects and leverages a
+        very tight knit genuine community. The amount of marketing push given by
+        Treasure and its community put The Beacon’s launch on steroids. Future
+        interoperability across these games will be massive as well.
+      </>
+    ),
+    type: "player",
+  },
+  {
+    profileImage: TengImg,
+    username: "Dmitriy Berenzon",
+    handle: "@dberenzon",
+    link: "https://twitter.com/dberenzon/status/1599894360513912832",
+    tweet: () => (
+      <>
+        Pay attention to the strength of communities over the next year - the
+        ones who make it through this bear will be 100x larger in the next bull.
+        <br />
+        <br />
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        is a great example ✨
+      </>
+    ),
+    type: "player",
+  },
+  {
+    profileImage: TengImg,
+    username: "sage | Kuroro CEO",
+    handle: "@kurorosage",
+    link: "https://twitter.com/kurorosage/status/1598869040700628993",
+    tweet: () => (
+      <>
+        ngl I’m impressed by{" "}
+        <TwitterLink href="https://twitter.com/arbitrum">
+          @arbitrum's
+        </TwitterLink>{" "}
+        &{" "}
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        communities
+        <br />
+        <br />
+        It’s crazy to see a community rallying behind a chain like this, creates
+        super powerful network effects for projects into their ecosystem
+      </>
+    ),
+    type: "player",
+  },
+  {
+    profileImage: TengImg,
+    username: "Diego Vidaurre",
+    handle: "@DiegoVidaurres",
+    link: "https://twitter.com/DiegoVidaurres/status/1596363046145822725",
+    tweet: () => (
+      <>
+        Off to bed after a really exciting day.
+        <br />
+        <br />
+        Me and the the at{" "}
+        <TwitterLink href="https://twitter.com/The_Beacon_GG">
+          @The_Beacon_GG
+        </TwitterLink>{" "}
+        couldn’t be more thrilled to see the game come alive in the way it did
+        today.
+        <br />
+        <br />
+        iBig shout out to to our friends at{" "}
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        and{" "}
+        <TwitterLink href="https://twitter.com/arbitrum">@arbitrum</TwitterLink>{" "}
+        . We’re proud to be part of this amazing ecosystem
+      </>
+    ),
+    type: "player",
+  },
+  {
+    profileImage: TengImg,
+    username: "apix 🎮",
+    handle: "@apixtwts",
+    link: "https://twitter.com/apixtwts/status/1599107703627911168",
+    tweet: () => (
+      <>
+        The{" "}
+        <TwitterLink href="https://twitter.com/Treasure_DAO">
+          @Treasure_DAO
+        </TwitterLink>{" "}
+        community has impressed me 1000% the last few weeks.
+        <br />
+        <br />
+        <ul className="list-inside list-disc space-y-1">
+          <li>The community is super tight knit</li>
+          <li>
+            Strong performing bluechip in{" "}
+            <TwitterLink href="https://twitter.com/smolverse">
+              @Treasure_DAO
+            </TwitterLink>{" "}
+            for over a year
+          </li>
+
+          <li>Leading ecosystem on Arbitrum</li>
+          <li>
+            Hard focus on gaming, which will be a core part of the future of
+            web3
+          </li>
+        </ul>
+      </>
+    ),
+    type: "player",
+  },
+  {
+    profileImage: TengImg,
+    username: "The Beacon",
+    userlink: "https://twitter.com/DiegoVidaurres",
+    handle: "Zeelex - Co Founder",
+    link: "https://twitter.com/The_Beacon_GG",
+    tweet: () => (
+      <>
+        Treasure has been the perfect place to build upon for us. Not only do
+        they provide crucial and top tier infrastructure to build your game on
+        top of, they also have the most active and enthusiastic community that
+        shares the overall vision and ethos. The team is also incredibly
+        supportive and proactive in terms of marketing, product design and
+        overall community fostering.
+      </>
+    ),
+    type: "builder",
+  },
+  {
+    profileImage: TengImg,
+    username: "Knights of the Ether",
+    userlink: "https://twitter.com/Flook_eth",
+    handle: "Flook - Co Founder",
+    link: "https://twitter.com/KnightsOfTheEth",
+    tweet: () => (
+      <>
+        Reliable, transparent and consummate builders, Treasure is everything a
+        founder could want in a partner to help bring their game to the masses.
+      </>
+    ),
+    type: "builder",
+  },
+  {
+    profileImage: TengImg,
+    username: "Tales of Elleria",
+    userlink: "https://twitter.com/Smashe__",
+    handle: "Smashe - Co Founder",
+    link: "https://twitter.com/TalesofElleria",
+    tweet: () => (
+      <>
+        Building with TreasureDAO has been a fantastic experience. The sincerity
+        behind their support, as well as opportunities provided is unparalleled
+        throughout web3. From social outreach to marketplace integration,
+        Treasure has been swift and helpful in all aspects.
+      </>
+    ),
+    type: "builder",
+  },
+] as const;
 
 export const communityInfrastructure = [
   {
@@ -509,55 +607,31 @@ export const WhyTreasureCardList = [
 
 export const communities = [
   {
-    name: "Governance (DAO)",
-    description: "Participate and decide on the future of TreasureDAO.",
-    CTAButtons: [
-      {
-        buttonDescription: "Forum",
-        href: "https://gov.treasure.lol",
-      },
-      {
-        buttonDescription: "Vote",
-        href: "https://snapshot.org/#/treasuredao.eth",
-      },
-    ],
+    name: "Grow with an unmatched community",
+    description:
+      "Tap into organic distribution with our expansive and tight-knit community.",
 
     image: GovernanceImg,
   },
   {
-    name: "Bounty Board",
+    name: "Derive network value through interoperability",
     description:
-      "Supporting builders through Treasure’s official grants program.",
-    CTAButtons: [
-      {
-        buttonDescription: "View Initiatives",
-        href: "https://app.dework.xyz/treasuredao/board",
-      },
-    ],
+      "Join a vibrant ecosystem connected by shared community and gaming experiences.",
 
     image: BountyBoardImg,
   },
   {
-    name: "Community Initiatives",
-    description: "Projects and initiatives built by and with the community.",
-    CTAButtons: [
-      {
-        buttonDescription: "Discover Now",
-        href: "https://treasure-dao.notion.site/3d135199cadd4f05baab4bce8c792ebe?v=f2ab00c41ab9457193632042ce682e00",
-      },
-    ],
+    name: "Leverage powerful infrastructure",
+    description:
+      "Enrich your game’s experience through Treasure’s Proof of Play framework, Trove, and MagicSwap.",
 
     image: CommunityInitiativesImg,
   },
   {
-    name: "Guilds",
-    description: "Bringing people together through social coordination.",
-    CTAButtons: [
-      {
-        buttonDescription: "Join a Guild",
-        href: "https://treasure-dao.notion.site/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
-      },
-    ],
+    name: "Receive support every step of the way",
+    description:
+      "Expert support at every stage of development, curated for all your unique use cases.",
+
     image: GuildsImg,
   },
 ];
@@ -673,6 +747,29 @@ export const BridgeworldInfrastructures = [
     name: "Lore Creation",
     icon: <CartridgesIcon className="h-14 w-14" aria-hidden="true" />,
     description: "Coming soon.",
+  },
+];
+
+export const IndexCTA = [
+  {
+    name: "Games",
+    description: "Games powered by Treasure.",
+    icon: <CartridgesIcon className="h-8 w-8" aria-hidden="true" />,
+  },
+  {
+    name: "Interoperability",
+    description: "Connected games are the future.",
+    icon: <EconomyIcon className="h-8 w-8" aria-hidden="true" />,
+  },
+  {
+    name: "Marketplace",
+    description: "Trove: the destination for gaming on Treasure.",
+    icon: <TroveIcon className="h-8 w-8 text-ruby-900" aria-hidden="true" />,
+  },
+  {
+    name: "AMM",
+    description: "MagicSwap: powering the cross-game economy.",
+    icon: <AMMIcon className="h-8 w-8" aria-hidden="true" />,
   },
 ];
 

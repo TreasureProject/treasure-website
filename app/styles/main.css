@@ -64,3 +64,9 @@
   font-named-instance: "Italic";
   src: url("/fonts/ABCWhyte-RegularItalic.otf") format("opentype");
 }
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}

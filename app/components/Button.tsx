@@ -1,6 +1,6 @@
-import { ExternalLinkIcon } from "@heroicons/react/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { Link } from "@remix-run/react";
-import type { RemixLinkProps } from "@remix-run/react/components";
+import type { RemixLinkProps } from "@remix-run/react/dist/components";
 
 export const CTAButton = ({
   children,
@@ -15,7 +15,7 @@ export const CTAButton = ({
     {...rest}
   >
     {children}
-    <ExternalLinkIcon className="ml-1.5 h-4 w-4" aria-hidden="true" />
+    <ArrowTopRightOnSquareIcon className="ml-1.5 h-4 w-4" aria-hidden="true" />
   </a>
 );
 

@@ -26,7 +26,7 @@ export const Badge = ({
         className={classNames(
           textColor ?? "text-ruby-900",
           size === "sm" ? "text-sm" : "text-base",
-          "font-mono font-medium"
+          "font-mono font-medium uppercase"
         )}
       >
         {name}

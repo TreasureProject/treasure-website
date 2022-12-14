@@ -27,6 +27,22 @@ const createIcon = ({
   return Comp;
 };
 
+export const QuoteIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="35"
+    height="29"
+    viewBox="0 0 35 29"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M34.3315 0.416016L26.1573 14.9115H33.2416V28.3171H20.0539V14.9115L28.1191 0.416016H34.3315ZM14.2775 0.416016L6.10337 14.9115H13.1876V28.3171H0V14.9115L8.06517 0.416016H14.2775Z"
+      fill="#FACE61"
+    />
+  </svg>
+);
+
 export const EconomyIcon = ({ className }: { className?: string }) => (
   <svg
     width="53"

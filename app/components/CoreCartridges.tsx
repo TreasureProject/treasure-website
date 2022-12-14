@@ -3,7 +3,7 @@ import BWTextSvg from "../../public/img/bridgeworld-text-single.webp";
 import SmolverseTextSvg from "../../public/img/smolverse-text.svg";
 import { DiscordIcon, TwitterIcon } from "./Icons";
 import classNames from "clsx";
-import { GlobeAltIcon } from "@heroicons/react/solid";
+import { GlobeAltIcon } from "@heroicons/react/24/solid";
 
 export const CoreCartridges = () => {
   const [hoveredCartridge, setHoveredCartridge] = useState<

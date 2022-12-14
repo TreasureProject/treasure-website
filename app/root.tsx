@@ -88,7 +88,7 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "preload",
-    href: "/img/bridgeworld-bg.png",
+    href: "/img/bridgeworld-bg.webp",
     as: "image",
   },
   {
@@ -175,7 +175,7 @@ export const loader: LoaderFunction = async ({ context, request }) => {
       if (!SECRET_ENV.includes(key)) {
         return {
           ...envVars,
-          [key]: getEnvVariable(key as CloudFlareEnvVar, context),
+          [key]: getEnvVariable(key as CloudFlareEnvVar, env),
         };
       }
 

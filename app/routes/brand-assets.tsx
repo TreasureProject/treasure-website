@@ -32,8 +32,8 @@ import { ColorPalette } from "~/components/ColorPalette";
 import brandGuidelinesImg from "../../public/img/brand-guidelines.png";
 import mediaKitImg from "../../public/img/media-kit.png";
 
-import { DownloadIcon } from "@heroicons/react/outline";
-import { HashtagIcon } from "@heroicons/react/solid";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { HashtagIcon } from "@heroicons/react/24/solid";
 
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
@@ -341,7 +341,7 @@ export default function Resources() {
                                           <span className="font-bold">
                                             Download
                                           </span>
-                                          <DownloadIcon className="ml-2 inline-block h-5 w-5" />
+                                          <ArrowDownTrayIcon className="ml-2 inline-block h-5 w-5" />
                                         </a>
                                         <Badge
                                           name={image.size}
@@ -399,7 +399,7 @@ export default function Resources() {
                         download
                       >
                         Download
-                        <DownloadIcon
+                        <ArrowDownTrayIcon
                           className="ml-1.5 h-4 w-4"
                           aria-hidden="true"
                         />
@@ -430,7 +430,7 @@ export default function Resources() {
                         download
                       >
                         Download
-                        <DownloadIcon
+                        <ArrowDownTrayIcon
                           className="ml-1.5 h-4 w-4"
                           aria-hidden="true"
                         />

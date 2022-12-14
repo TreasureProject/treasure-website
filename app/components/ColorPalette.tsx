@@ -1,4 +1,7 @@
-import { ClipboardCheckIcon, ClipboardIcon } from "@heroicons/react/solid";
+import {
+  ClipboardDocumentCheckIcon,
+  ClipboardIcon,
+} from "@heroicons/react/24/solid";
 import React from "react";
 import { useHydrated } from "remix-utils";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -42,7 +45,7 @@ const ColorPaletteItem = ({
       >
         <span className="sr-only">Copy to clipboard</span>
         {copied ? (
-          <ClipboardCheckIcon className="h-4 w-4 rotate-[-8deg] text-white sm:h-6 sm:w-6" />
+          <ClipboardDocumentCheckIcon className="h-4 w-4 rotate-[-8deg] text-white sm:h-6 sm:w-6" />
         ) : (
           <ClipboardIcon className="h-4 w-4 text-white opacity-0 transition-opacity group-hover:opacity-100 sm:h-6 sm:w-6" />
         )}

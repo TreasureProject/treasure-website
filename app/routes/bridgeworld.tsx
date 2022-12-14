@@ -1,6 +1,6 @@
 import Legion1Img from "../../public/img/legion1.png";
 
-import { ExternalLinkIcon } from "@heroicons/react/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import BWTextSvg from "../../public/img/bridgeworld-text.webp";
 import { CTAButton, InternalCTAButton } from "~/components/Button";
 import { BridgeworldInfrastructures } from "~/const";
@@ -46,7 +46,10 @@ export default function About() {
             className="mt-12 inline-flex items-center rounded-button bg-ruby-900 px-7 py-4 font-semibold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1000 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2"
           >
             Visit Bridgeworld
-            <ExternalLinkIcon className="ml-1.5 h-4 w-4" aria-hidden="true" />
+            <ArrowTopRightOnSquareIcon
+              className="ml-1.5 h-4 w-4"
+              aria-hidden="true"
+            />
           </a>
         </div>
       </div>
