@@ -237,14 +237,6 @@ export const CartridgeSlider = () => {
   );
 };
 
-const variant = {
-  scale: 1,
-};
-
-const childVariant = {
-  scale: 1.2,
-};
-
 const Arrow = ({
   dir = "right",
   ...props
