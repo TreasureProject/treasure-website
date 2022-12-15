@@ -777,6 +777,10 @@ export const IndexCTA = [
 
 export const navigation = [
   {
+    name: "Build",
+    href: "/build",
+  },
+  {
     name: "About",
     links: [
       {
