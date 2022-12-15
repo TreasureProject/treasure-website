@@ -129,7 +129,7 @@ export const CartridgeSlider = () => {
                         {cartridge.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="inline-block rounded-md bg-night-800/50 px-2.5 py-1 text-xs font-medium uppercase leading-4 text-night-400 backdrop-blur-sm"
+                            className="inline-block rounded-md bg-night-800/80 px-2.5 py-1 text-xs font-medium uppercase leading-4 text-night-400 backdrop-blur-sm"
                           >
                             {tag}
                           </span>

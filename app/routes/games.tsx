@@ -7,7 +7,7 @@ import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
 import { useState } from "react";
-import { partnerCartridges } from "~/const";
+import { partnerCartridges, socials } from "~/const";
 import { motion } from "framer-motion";
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
@@ -16,6 +16,10 @@ import { SpinnerIcon } from "~/components/Icons";
 import { twMerge } from "tailwind-merge";
 import { CTAButton } from "~/components/Button";
 import { Arrow } from "~/components/Arrow";
+import { NewCard } from "~/components/Card";
+import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
+import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
+import HeroImg from "../../public/img/hero.png";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -45,15 +49,15 @@ export const meta: MetaFunction = ({ parentsData }) => {
 
 const headerAnimation = {
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.3, delay: 0.5 } },
+  animate: { opacity: 1, transition: { duration: 0.3, delay: 0.3 } },
 };
 
 export default function Games() {
   return (
     <main>
       <section
-        id="games"
-        aria-labelledby="games-list"
+        id="games-slider"
+        aria-labelledby="games-slider"
         className="relative bg-night-900 py-16 sm:py-24"
       >
         <div className="hidden px-24 lg:block">
@@ -61,6 +65,173 @@ export default function Games() {
         </div>
         <div className="block lg:hidden">
           <PartnerSlideMobile />
+        </div>
+      </section>
+      <section
+        id="powered-by-treasure-games-list"
+        aria-labelledby="powered-by-treasure-games-list"
+        className="relative bg-night-900 py-8 sm:py-16"
+      >
+        <div className="px-4 sm:px-6 lg:px-24">
+          <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
+            <div className="max-w-min space-y-5">
+              <p className="whitespace-nowrap text-xl font-semibold text-honey-200 sm:text-4xl">
+                Powered by Treasure
+              </p>
+              <p className="text-center text-xs text-night-500 sm:text-left sm:text-xl">
+                Games powered by Treasure through MAGIC, imagination, and
+                interoperability.
+              </p>
+            </div>
+            <div className="mt-4 flex flex-col items-center space-y-1 rounded-1.5xl border-2 border-night-800 px-5 py-3.5 sm:mt-0">
+              <p className="text-xs text-night-600 sm:text-sm">
+                Integrated games
+              </p>
+              <span className="text-base font-semibold text-honey-300 sm:text-xl">
+                +40
+              </span>
+            </div>
+          </div>
+          <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
+            {partnerCartridges.map((cartridge) => {
+              return (
+                <div
+                  className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
+                  key={cartridge.name}
+                >
+                  <div
+                    className="relative z-10 [grid-area:overlay]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
+                    }}
+                  ></div>
+                  <div className="relative [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
+                    <img
+                      src={cartridge.image}
+                      className="h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      alt=""
+                    />
+                  </div>
+                  <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
+                    <p className="max-w-[70%] text-2xl font-semibold text-honey-25">
+                      {cartridge.name}
+                    </p>
+                    <div className="mt-5 space-x-2.5">
+                      {cartridge.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-block rounded-md bg-night-800/50 px-2.5 py-1 text-xs font-medium uppercase leading-4 text-night-400 backdrop-blur-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section
+        id="games-list"
+        aria-labelledby="games-list"
+        className="relative bg-night-900 py-8 sm:py-16"
+      >
+        <div className="px-4 sm:px-6 lg:px-24">
+          <p className="mx-auto w-min whitespace-nowrap text-xl font-semibold text-honey-200 sm:mx-0 sm:text-4xl">
+            Games
+          </p>
+
+          <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
+            {partnerCartridges.map((cartridge) => {
+              return (
+                <div
+                  className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
+                  key={cartridge.name}
+                >
+                  <div
+                    className="relative z-10 [grid-area:overlay]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
+                    }}
+                  ></div>
+                  <div className="relative [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
+                    <img
+                      src={cartridge.image}
+                      className="h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      alt=""
+                    />
+                  </div>
+                  <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
+                    <p className="max-w-[70%] text-2xl font-semibold text-honey-25">
+                      {cartridge.name}
+                    </p>
+                    <div className="mt-5 space-x-2.5">
+                      {cartridge.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-block rounded-md bg-night-800/50 px-2.5 py-1 text-xs font-medium uppercase leading-4 text-night-400 backdrop-blur-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section
+        id="info"
+        aria-labelledby="other-information"
+        className="relative bg-honey-100 py-16"
+      >
+        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-3">
+            <NewCard
+              title="Build with Treasure"
+              description="Games on Treasure"
+              image={HeroImg}
+            >
+              <CTAButton type="primary" hideExternalIcon>
+                Discover More
+              </CTAButton>
+            </NewCard>
+            <NewCard
+              title="Get Magic"
+              description="Games on Treasure"
+              image={GetMagicImg}
+            >
+              <CTAButton type="primary" hideExternalIcon>
+                Discover More
+              </CTAButton>
+            </NewCard>
+            <NewCard
+              title="Join the community"
+              description="Take part in the conversation!"
+              image={JoinCommunityImg}
+            >
+              <div className="flex space-x-6">
+                {socials.map((social) => (
+                  <a
+                    key={social.name}
+                    className="text-night-800 hover:text-night-900"
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="sr-only">{social.name}</span>
+                    <social.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
+            </NewCard>
+          </div>
         </div>
       </section>
     </main>

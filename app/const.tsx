@@ -869,6 +869,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
   {
@@ -881,6 +882,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
   {
@@ -893,6 +895,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
   {
@@ -905,6 +908,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
   {
@@ -917,6 +921,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
   {
@@ -929,6 +934,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
   {
@@ -941,6 +947,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
   {
@@ -953,6 +960,7 @@ export const partnerCartridges = [
     sliderImage: BattleFlyImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
     core: true,
   },
 ] as const;
