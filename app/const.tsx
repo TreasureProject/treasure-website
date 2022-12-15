@@ -68,6 +68,8 @@ import TengImg from "../public/img/twitter/0xPrismatic.jpg";
 import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.jpg";
 import SquareJordanImg from "../public/img/twitter/SquareJordan.jpg";
 
+import BWTextSvg from "../public/img/bridgeworld-text.webp";
+
 import {
   AMMIcon,
   CartridgesIcon,
@@ -775,7 +777,7 @@ export const IndexCTA = [
 
 export const navigation = [
   {
-    name: "Learn",
+    name: "About",
     links: [
       {
         name: "About",
@@ -798,6 +800,10 @@ export const navigation = [
         isExternal: true,
       },
     ],
+  },
+  {
+    name: "Games",
+    href: "/games",
   },
   {
     name: "Discover",
@@ -844,56 +850,7 @@ export const navigation = [
       },
     ],
   },
-  {
-    name: "Contribute",
-    links: [
-      {
-        name: "Governance Forum",
-        href: "https://gov.treasure.lol",
-        isExternal: true,
-      },
-      {
-        name: "Vote on Snapshot",
-        href: "https://snapshot.org/#/treasuredao.eth",
-        isExternal: true,
-      },
-      {
-        name: "Bounty Board",
-        href: "https://app.dework.xyz/treasuredao/board",
-        isExternal: true,
-      },
-      {
-        name: "Guilds",
-        href: "https://treasure-dao.notion.site/c0dbb9df79d64492b19e16577fb166bf?v=cfc4a1667c574a72b925999207ee9739",
-        isExternal: true,
-      },
-      {
-        name: "Community Initiatives",
-        href: "https://treasure-dao.notion.site/3d135199cadd4f05baab4bce8c792ebe?v=f2ab00c41ab9457193632042ce682e00",
-        isExternal: true,
-      },
-      {
-        name: "Talent",
-        href: "https://treasuredao.pallet.com/",
-        isExternal: true,
-      },
-    ],
-  },
-  {
-    name: "LP",
-    links: [
-      {
-        name: "MagicSwap",
-        href: "https://magicswap.lol/",
-        isExternal: true,
-      },
-      {
-        name: "MAGIC-ETH LP",
-        href: "https://app.sushi.com/farm?chainId=42161",
-        isExternal: true,
-      },
-    ],
-  },
+
   {
     name: "Marketplace",
     href: "https://trove.treasure.lol",
@@ -908,6 +865,11 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/YzpajBfRNX",
     twitterLink: "https://twitter.com/battleflygame",
     websiteLink: "https://www.battlefly.game/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
   {
     name: "Toadstoolz",
@@ -915,6 +877,11 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/toadstoolz",
     twitterLink: "https://twitter.com/toadstoolzNFT",
     websiteLink: "https://www.toadstoolz.lol/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
   {
     name: "Tales of Elleria",
@@ -922,6 +889,11 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/talesofelleria",
     twitterLink: "https://twitter.com/TalesofElleria",
     websiteLink: "https://www.talesofelleria.com/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
   {
     name: "The Lost Donkeys",
@@ -929,6 +901,11 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/TheLostDonkeys",
     twitterLink: "https://twitter.com/TheLostDonkeys",
     websiteLink: "https://www.thelostdonkeys.com/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
   {
     name: "LifeVerse",
@@ -936,6 +913,11 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/MsNSCpHhru",
     twitterLink: "https://twitter.com/LifeVerse_GG",
     websiteLink: "https://life.treasure.lol/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
   {
     name: "Knights of the Ether",
@@ -943,6 +925,11 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/kote",
     twitterLink: "https://twitter.com/KnightsOfTheEth",
     websiteLink: "https://knightsoftheether.com/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
   {
     name: "Lost SamuRise",
@@ -950,6 +937,11 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/samurise",
     twitterLink: "https://twitter.com/SamuRiseNFT",
     websiteLink: "https://samurise.xyz/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
   {
     name: "Realm",
@@ -957,8 +949,13 @@ export const partnerCartridges = [
     discordLink: "https://discord.gg/realmdao",
     twitterLink: "https://twitter.com/RealmDao",
     websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: BattleFlyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    core: true,
   },
-];
+] as const;
 
 export type CartridgeT = typeof partnerCartridges[number];
 

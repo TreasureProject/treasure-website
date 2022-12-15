@@ -34,7 +34,6 @@ export default function Home() {
     keyPrefix: "index",
   });
 
-  console.log(keenSliderCSS);
   const onClose = () => setIsOpenYoutubeModal(false);
 
   return (

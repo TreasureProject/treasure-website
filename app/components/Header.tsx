@@ -122,7 +122,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                   );
                 }
 
-                return (
+                if (item.isExternal) {
                   <a
                     key={item.name}
                     href={item.href}
@@ -131,7 +131,18 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                     className="text-base font-medium text-night-900 hover:text-night-700"
                   >
                     {t(item.name)}
-                  </a>
+                  </a>;
+                }
+
+                return (
+                  <Link
+                    to={item.href}
+                    key={item.name}
+                    prefetch="render"
+                    className="text-base font-medium text-night-900 hover:text-night-700"
+                  >
+                    {t(item.name)}
+                  </Link>
                 );
               })}
             </Popover.Group>
@@ -248,7 +259,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                       );
                     }
 
-                    return (
+                    if (item.isExternal) {
                       <a
                         href={item.href}
                         key={item.name}
@@ -258,7 +269,19 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                       >
                         {t(item.name)}
                         <ArrowTopRightOnSquareIcon className="h-4 w-4 text-ruby-900 group-hover:text-ruby-700" />
-                      </a>
+                      </a>;
+                    }
+
+                    return (
+                      <Link
+                        to={item.href}
+                        key={item.name}
+                        prefetch="render"
+                        className="group flex items-center justify-between px-4 py-2 text-left font-medium text-night-900"
+                      >
+                        {t(item.name)}
+                        <ArrowTopRightOnSquareIcon className="h-4 w-4 text-ruby-900 group-hover:text-ruby-700" />
+                      </Link>
                     );
                   })}
                 </nav>

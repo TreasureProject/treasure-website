@@ -1,72 +1,12 @@
 import React from "react";
-import type { KeenSliderPlugin } from "keen-slider/react";
 import { useKeenSlider } from "keen-slider/react";
 import BWCartridgeImg from "../../public/img/cartridges/bw.png";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { CTAButton } from "./Button";
+import { Arrow } from "./Arrow";
 
-const ArrowRight = motion(ArrowRightIcon);
-
-const WheelControls: KeenSliderPlugin = (slider) => {
-  let touchTimeout: ReturnType<typeof setTimeout>;
-  let position: {
-    x: number;
-    y: number;
-  };
-  let wheelActive: boolean;
-
-  function dispatch(e: WheelEvent, name: string) {
-    position.x -= e.deltaX;
-    position.y -= e.deltaY;
-    slider.container.dispatchEvent(
-      new CustomEvent(name, {
-        detail: {
-          x: position.x,
-          y: position.y,
-        },
-      })
-    );
-  }
-
-  function wheelStart(e: WheelEvent) {
-    position = {
-      x: e.pageX,
-      y: e.pageY,
-    };
-    dispatch(e, "ksDragStart");
-  }
-
-  function wheel(e: WheelEvent) {
-    dispatch(e, "ksDrag");
-  }
-
-  function wheelEnd(e: WheelEvent) {
-    dispatch(e, "ksDragEnd");
-  }
-
-  function eventWheel(e: WheelEvent) {
-    e.preventDefault();
-    if (!wheelActive) {
-      wheelStart(e);
-      wheelActive = true;
-    }
-    wheel(e);
-    clearTimeout(touchTimeout);
-    touchTimeout = setTimeout(() => {
-      wheelActive = false;
-      wheelEnd(e);
-    }, 50);
-  }
-
-  slider.on("created", () => {
-    slider.container.addEventListener("wheel", eventWheel, {
-      passive: false,
-    });
-  });
-};
-
+// TODO: replace this with the one in the const file
 const CARTRIDGE_LIST = [
   {
     name: "BridgeWorld",
@@ -117,33 +57,37 @@ const INITIAL_SLIDE = 3;
 export const CartridgeSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(INITIAL_SLIDE);
 
-  const [slideRef, instanceRef] = useKeenSlider(
-    {
-      initial: INITIAL_SLIDE,
-      slides: {
-        origin: "center",
-        perView: 3,
-        spacing: 8,
+  const [slideRef, instanceRef] = useKeenSlider({
+    initial: INITIAL_SLIDE,
+    slides: {
+      origin: "center",
+      perView: 1,
+      spacing: 8,
+    },
+    slideChanged(s) {
+      setCurrentSlide(s.track.details.rel);
+    },
+    breakpoints: {
+      "(min-width: 640px)": {
+        slides: {
+          origin: "center",
+          perView: 3,
+          spacing: 15,
+        },
       },
-      slideChanged(s) {
-        setCurrentSlide(s.track.details.rel);
-      },
-      breakpoints: {
-        "(min-width: 1024px)": {
-          slides: {
-            origin: "center",
-            perView: 5,
-            spacing: 30,
-          },
+      "(min-width: 1280px)": {
+        slides: {
+          origin: "center",
+          perView: 5,
+          spacing: 30,
         },
       },
     },
-    [WheelControls]
-  );
+  });
 
   return (
     <div className="mt-12">
-      <div className="relative">
+      <div className="relative sm:mt-2 xl:mt-4">
         <div
           ref={slideRef}
           className="keen-slider [mask-image:linear-gradient(to_left,#0000,#000_20%,#000_80%,#0000)]"
@@ -234,33 +178,5 @@ export const CartridgeSlider = () => {
         ))}
       </div>
     </div>
-  );
-};
-
-const Arrow = ({
-  dir = "right",
-  ...props
-}: {
-  dir?: "left" | "right";
-} & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
-  return (
-    <button
-      className={twMerge(
-        "absolute top-1/2 inline-block -translate-y-1/2 rounded-lg border-2 border-night-900 bg-night-800 p-2 transition-colors hover:bg-night-800/95 disabled:opacity-50 sm:rounded-2xl sm:p-4",
-        dir === "left"
-          ? "left-16 sm:left-40 xl:left-60 2xl:left-96"
-          : "right-16 sm:right-40 xl:right-60 2xl:right-96"
-      )}
-      {...props}
-    >
-      <ArrowRight
-        initial={false}
-        animate={{
-          rotate: dir === "left" ? 180 : 0,
-        }}
-        whileHover={{ scale: 1.1 }}
-        className="h-3 w-3 sm:h-6 sm:w-6 [&>path]:stroke-night-100 [&>path]:stroke-[2]"
-      />
-    </button>
   );
 };
