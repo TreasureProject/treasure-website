@@ -8,6 +8,7 @@ import {
 } from "~/utils/stats";
 import { useTranslation } from "react-i18next";
 import MagicLogoImg from "../../public/img/resources/magic/logomark-dark.png";
+import { twMerge } from "tailwind-merge";
 
 export const TreasureStats = () => {
   // const data = useRouteData<RootLoaderData>("root");
@@ -165,28 +166,67 @@ const HARDCODED_DATA = [
   },
 ] as const;
 
-const Stat = ({ data }: { data: typeof HARDCODED_DATA[number] }) => (
-  <div className="mx-4 flex w-[15rem] flex-col justify-center space-y-1 rounded-lg bg-honey-100 p-4">
-    <p className="text-base font-semibold lg:text-2xl">{data.value}</p>
-    <p className="break-word text-sm text-night-600 lg:text-base">
+const Stat = ({
+  data,
+  isSecondary,
+}: {
+  data: typeof HARDCODED_DATA[number];
+  isSecondary: boolean;
+}) => (
+  <div
+    className={twMerge(
+      "mx-4 flex w-[15rem] flex-col justify-center space-y-1 rounded-lg bg-honey-100 p-4",
+      isSecondary && "bg-night-800"
+    )}
+  >
+    <p
+      className={twMerge(
+        "text-base font-semibold lg:text-2xl",
+        isSecondary && "text-honey-200"
+      )}
+    >
+      {data.value}
+    </p>
+    <p
+      className={twMerge(
+        "break-word text-sm text-night-600 lg:text-base",
+        isSecondary && "text-night-400"
+      )}
+    >
       {data.title}
     </p>
   </div>
 );
 
-export const NewTreasureStats = () => {
+export const NewTreasureStats = ({
+  type = "primary",
+}: {
+  type?: "primary" | "secondary";
+}) => {
+  const isSecondary = type === "secondary";
   return (
-    <div className="relative bg-honey-50 py-8 [mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)]">
+    <div
+      className={twMerge(
+        "relative bg-honey-50 py-8",
+        isSecondary && "bg-night-900"
+      )}
+    >
+      <div
+        className={twMerge(
+          "absolute inset-0 z-10 bg-honey-50 [mask-image:linear-gradient(to_right,#000,#0000_30%,#0000_70%,#000)]",
+          isSecondary && "bg-night-900"
+        )}
+      ></div>
       <div className="relative flex overflow-x-hidden">
         <div className="flex animate-marquee">
           {HARDCODED_DATA.map((data) => (
-            <Stat key={data.title} data={data} />
+            <Stat key={data.title} data={data} isSecondary={isSecondary} />
           ))}
         </div>
         {/* Needed for infinity loop */}
         <div className="absolute top-0 ml-4 flex animate-marquee2">
           {HARDCODED_DATA.map((data) => (
-            <Stat key={data.title} data={data} />
+            <Stat key={data.title} data={data} isSecondary={isSecondary} />
           ))}
         </div>
       </div>
