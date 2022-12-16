@@ -187,6 +187,24 @@ export default function About() {
                   reinforcing our interoperability thesis of NFTs shared across
                   metaverses.
                 </p>
+                <p>
+                  It began with Bridgeworld but utility for Treasures will
+                  continue to be introduced to other game cartridges,
+                  reinforcing our interoperability thesis of NFTs shared across
+                  metaverses.
+                </p>
+                <p>
+                  It began with Bridgeworld but utility for Treasures will
+                  continue to be introduced to other game cartridges,
+                  reinforcing our interoperability thesis of NFTs shared across
+                  metaverses.
+                </p>
+                <p>
+                  It began with Bridgeworld but utility for Treasures will
+                  continue to be introduced to other game cartridges,
+                  reinforcing our interoperability thesis of NFTs shared across
+                  metaverses.
+                </p>
               </div>
             </div>
           </div>

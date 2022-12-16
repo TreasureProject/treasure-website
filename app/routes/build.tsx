@@ -1,8 +1,22 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowTopRightOnSquareIcon,
+  CheckCircleIcon,
+} from "@heroicons/react/24/solid";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { Badge } from "~/components/Badge";
+import { CTAButton } from "~/components/Button";
+import { NewCard } from "~/components/Card";
 import { CartridgesIcon } from "~/components/Icons";
+import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import HeroImg from "../../public/img/bg-hero.jpg";
+import { builderTweets, core5Cartridges } from "~/const";
+import BridgeworldImg from "../../public/img/bridgeworld.webp";
+import LogomarkImg from "../../public/img/resources/treasure/logomark.png";
+import HeroImg from "../../public/img/hero.png";
+import BgHeroImg from "../../public/img/bg-hero.jpg";
+
+import PartnerImg from "../../public/img/partner.webp";
+import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
 
 export default function Build() {
   const mouseX = useMotionValue(0);
@@ -21,11 +35,11 @@ export default function Build() {
           mouseX.set(clientX - left);
           mouseY.set(clientY - top);
         }}
-        className="group relative bg-night-800"
+        className="group relative overflow-hidden bg-[#101827]"
       >
         <div className="grid [grid-template-areas:'overlay']">
           <motion.img
-            src={HeroImg}
+            src={BgHeroImg}
             className="h-full w-full object-cover [grid-area:overlay]"
             alt=""
             initial={{
@@ -150,6 +164,277 @@ export default function Build() {
         </div>
       </section>
       <NewTreasureStats type="secondary" />
+      <section
+        id="information"
+        aria-labelledby="information"
+        className="group relative bg-honey-50 py-16 sm:py-24"
+      >
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="space-y-12 sm:space-y-20">
+            <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
+              <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
+                <img
+                  className="h-full w-full rounded-2xl object-cover"
+                  src={BridgeworldImg}
+                  alt="Bridgeworld"
+                />
+              </div>
+              <div className="p-14 lg:col-span-4">
+                <h3 className="text-xl font-semibold sm:text-4xl">
+                  Join a vibrant and intimate ecosystem
+                </h3>
+                <ol className="mt-10 space-y-4 text-base sm:text-xl">
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Tap into the most engaged community to bootstrap adoption
+                    </p>
+                  </li>
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Build together with game developers working towards common
+                      goals
+                    </p>
+                  </li>
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Never work in isolation and benefit from success of the
+                      ecosystem
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
+              <div className="mb-12 flex items-center justify-center lg:order-last lg:col-span-4 lg:mb-0">
+                <img
+                  className="h-full w-full rounded-2xl object-cover"
+                  src={BridgeworldImg}
+                  alt="Treasures"
+                />
+              </div>
+              <div className="p-14 lg:col-span-4">
+                <h3 className="text-xl font-semibold sm:text-4xl">
+                  Leverage immersive gaming experiences
+                </h3>
+                <ol className="mt-10 space-y-4 text-base sm:text-xl">
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Form deeper connections with your community through
+                      meta-progression and game player funnels
+                    </p>
+                  </li>
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Tap into powerful cross-game trading with MagicSwap
+                    </p>
+                  </li>
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Enhance player retention and engagement through cross-game
+                      resources and interoperability
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
+              <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
+                <img
+                  className="h-full w-full rounded-2xl object-cover"
+                  src={BridgeworldImg}
+                  alt="Bridgeworld"
+                />
+              </div>
+              <div className="p-14 lg:col-span-4">
+                <h3 className="text-xl font-semibold sm:text-4xl">
+                  Access powerful enablers and accelerants
+                </h3>
+                <ol className="mt-10 space-y-4 text-base sm:text-xl">
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Join the Game Builders Program to elevate your game
+                      through expert advisory and incentives
+                    </p>
+                  </li>
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Supercharge your go-to-market through extensive reach,
+                      authentic content and deep audience understanding
+                    </p>
+                  </li>
+                  <li className="flex items-center space-x-2.5">
+                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                    <p className="text-xl">
+                      Build faster with our toolkit and infrastructure for game
+                      builders
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="powered-by-treasure"
+        aria-labelledby="powered-by-treasure"
+        className="relative bg-honey-100 py-16"
+      >
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="mx-auto flex w-max items-center space-x-2.5 rounded-2xl border-2 border-honey-200 bg-honey-50 px-8 py-5"
+        >
+          <img src={LogomarkImg} alt="Treasure Logomark" className="h-8" />
+          <span className="text-2xl font-semibold text-night-900">
+            #PoweredByTreasure
+          </span>
+        </motion.div>
+      </section>
+      <section
+        id="powered-by-treasure-games-list"
+        aria-labelledby="powered-by-treasure-games-list"
+        className="relative bg-night-900 py-8 sm:py-16"
+      >
+        <div className="px-4 sm:px-6 lg:px-24">
+          <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
+            <div className="max-w-min space-y-5">
+              <p className="whitespace-nowrap text-xl font-semibold text-honey-200 sm:text-4xl">
+                Featured Games
+              </p>
+              <p className="text-center text-xs text-night-500 sm:text-left sm:text-xl">
+                Games powered by Treasure through MAGIC, imagination, and
+                interoperability.
+              </p>
+            </div>
+            <div className="mt-4 flex flex-col items-center space-y-1 rounded-1.5xl border-2 border-night-800 px-5 py-3.5 sm:mt-0">
+              <p className="text-xs text-night-600 sm:text-sm">
+                Integrated games
+              </p>
+              <span className="text-base font-semibold text-honey-300 sm:text-xl">
+                +40
+              </span>
+            </div>
+          </div>
+          <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
+            {core5Cartridges.map((cartridge) => {
+              return (
+                <div
+                  className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
+                  key={cartridge.name}
+                >
+                  <div
+                    className="relative z-10 [grid-area:overlay]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
+                    }}
+                  ></div>
+                  <div className="relative [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
+                    <img
+                      src={cartridge.image}
+                      className="h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      alt=""
+                    />
+                  </div>
+                  <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
+                    <p className="max-w-[70%] text-2xl font-semibold text-honey-25">
+                      {cartridge.name}
+                    </p>
+                    <div className="mt-5 space-x-2.5">
+                      {cartridge.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-block rounded-md bg-night-800/50 px-2.5 py-1 text-xs font-medium uppercase leading-4 text-night-400 backdrop-blur-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section
+        id="reviews"
+        aria-labelledby="reviews-title"
+        className="relative bg-honey-50 py-16 sm:py-24"
+      >
+        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
+            <p className="mt-12 text-center text-xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-3xl">
+              What our game partners are saying about us
+            </p>
+            <Badge className="flex-shrink-0" name="Partner Testimonials" />
+          </div>
+          <div className="mt-16 grid grid-cols-1 items-center gap-10 xl:grid-cols-3">
+            {builderTweets.map((tweet) => (
+              <Tweet {...tweet} key={tweet.username} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section
+        id="cta"
+        aria-labelledby="cta"
+        className="relative bg-honey-200 py-16 sm:py-24"
+      >
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="grid grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-6 sm:grid-cols-7 sm:p-10">
+            <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
+              <p className="text-base font-semibold text-ruby-900 lg:text-2xl xl:text-4xl">
+                Become a partner
+              </p>
+              <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">
+                Building a cartridge on Treasure and MAGIC? Apply to become a
+                partner cartridge today.
+              </p>
+              <div>
+                <CTAButton href="https://discord.gg/treasuredao">
+                  Apply here
+                </CTAButton>
+              </div>
+            </div>
+            <div className="col-span-3 overflow-hidden rounded-xl md:order-2">
+              <img
+                className="h-full w-full object-cover"
+                src={PartnerImg}
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="mt-14 grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
+            <NewCard
+              title="Build with Treasure"
+              description="Games on Treasure"
+              image={HeroImg}
+            >
+              <CTAButton type="primary" hideExternalIcon>
+                Learn More
+              </CTAButton>
+            </NewCard>
+            <NewCard
+              title="Ecosystem Careers"
+              description="Join the team at Treasure and our games to build the future of gaming in web3."
+              image={JoinCommunityImg}
+            >
+              <CTAButton type="primary" hideExternalIcon>
+                See Open Jobs
+              </CTAButton>
+            </NewCard>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

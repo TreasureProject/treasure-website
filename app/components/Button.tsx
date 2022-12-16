@@ -16,7 +16,7 @@ export const CTAButton = ({
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <a
     className={twMerge(
-      "inline-flex w-max cursor-pointer items-center rounded-button border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base",
+      "inline-flex w-max cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-semibold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base",
       type === "primary" && "bg-ruby-900 text-white hover:bg-ruby-1000",
       className
     )}

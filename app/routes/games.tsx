@@ -7,7 +7,7 @@ import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
 import { useState } from "react";
-import { partnerCartridges, socials } from "~/const";
+import { cartridges, socials } from "~/const";
 import { motion } from "framer-motion";
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
@@ -93,7 +93,7 @@ export default function Games() {
             </div>
           </div>
           <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
-            {partnerCartridges.map((cartridge) => {
+            {cartridges.map((cartridge) => {
               return (
                 <div
                   className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
@@ -145,7 +145,7 @@ export default function Games() {
           </p>
 
           <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
-            {partnerCartridges.map((cartridge) => {
+            {cartridges.map((cartridge) => {
               return (
                 <div
                   className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
@@ -256,7 +256,7 @@ const PartnerSlideMobile = () => {
     },
   });
 
-  const currentSlideInfo = partnerCartridges[currentSlide];
+  const currentSlideInfo = cartridges[currentSlide];
 
   return (
     <div className="relative">
@@ -269,7 +269,7 @@ const PartnerSlideMobile = () => {
         ref={slideRef}
         className="keen-slider"
       >
-        {partnerCartridges.map((feature) => (
+        {cartridges.map((feature) => (
           <div key={feature.name} className="keen-slider__slide px-16 sm:px-24">
             <img
               className="h-64 w-full rounded-2xl border-2 border-night-800 object-cover [mask-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:h-96"
@@ -375,13 +375,13 @@ const PartnerSlideDesktop = () => {
     },
   });
 
-  const currentSlideInfo = partnerCartridges[currentSlide];
+  const currentSlideInfo = cartridges[currentSlide];
 
   return (
     <div className="grid grid-cols-12 items-center gap-8">
       <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden">
         <div className="h-[28rem] space-y-3 overflow-y-auto xl:h-[34rem]">
-          {partnerCartridges.map((feature, featureIndex) => (
+          {cartridges.map((feature, featureIndex) => (
             <div
               key={feature.name}
               className="relative rounded-2xl transition-colors hover:bg-night-800/30"
@@ -421,7 +421,7 @@ const PartnerSlideDesktop = () => {
           )}
         />
         <div ref={slideRef} className="keen-slider h-full">
-          {partnerCartridges.map((feature) => (
+          {cartridges.map((feature) => (
             <div key={feature.name} className="keen-slider__slide">
               <img
                 className="h-full w-full object-cover [mask-image:linear-gradient(to_left,#000_10%,#0000_90%)] xl:[mask-image:linear-gradient(to_left,#000_20%,#0000_90%)]"

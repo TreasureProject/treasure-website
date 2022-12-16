@@ -563,6 +563,8 @@ export const tweets = [
   },
 ] as const;
 
+export const builderTweets = tweets.filter((tweet) => tweet.type === "builder");
+
 export const communityInfrastructure = [
   {
     name: "Flywheel",
@@ -862,7 +864,7 @@ export const navigation = [
   },
 ];
 
-export const partnerCartridges = [
+export const cartridges = [
   {
     name: "BattleFly",
     image: BattleFlyImg,
@@ -969,7 +971,13 @@ export const partnerCartridges = [
   },
 ] as const;
 
-export type CartridgeT = typeof partnerCartridges[number];
+// get random 5 cartridges
+export const core5Cartridges = cartridges
+  .filter((c) => c.core)
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 5);
+
+export type CartridgeT = typeof cartridges[number];
 
 export const socials = [
   {
