@@ -780,7 +780,30 @@ export const IndexCTA = [
 export const navigation = [
   {
     name: "Build",
-    href: "/build",
+    links: [
+      {
+        name: "Build",
+        href: "/build",
+        isExternal: false,
+      },
+      {
+        name: "Infrastructure",
+        href: "/infrastructure",
+        isExternal: false,
+      },
+    ],
+  },
+  {
+    name: "Games",
+    displayName: "Games",
+    href: "/games",
+    isExternal: false,
+  },
+  {
+    name: "Marketplace",
+    displayName: "Trove",
+    href: "https://trove.treasure.lol",
+    isExternal: true,
   },
   {
     name: "About",
@@ -806,61 +829,6 @@ export const navigation = [
         isExternal: true,
       },
     ],
-  },
-  {
-    name: "Games",
-    href: "/games",
-  },
-  {
-    name: "Discover",
-    links: [
-      {
-        name: "Bridgeworld",
-        href: "/bridgeworld",
-        isExternal: false,
-      },
-      {
-        name: "Cartridges",
-        href: "/cartridges",
-        isExternal: false,
-      },
-      {
-        name: "Community",
-        href: "/community",
-        isExternal: false,
-      },
-      {
-        name: "Infrastructure",
-        href: "/infrastructure",
-        isExternal: false,
-      },
-    ],
-  },
-  {
-    name: "Build",
-    links: [
-      {
-        name: "Why Treasure",
-        href: "/why-treasure",
-        isExternal: false,
-      },
-      {
-        name: "Apply for partnership",
-        href: "https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform",
-        isExternal: true,
-      },
-      {
-        name: "Brand Assets",
-        href: "/brand-assets",
-        isExternal: false,
-      },
-    ],
-  },
-
-  {
-    name: "Marketplace",
-    href: "https://trove.treasure.lol",
-    isExternal: true,
   },
 ];
 

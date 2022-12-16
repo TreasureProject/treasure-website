@@ -43,7 +43,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:col-span-3 xl:mt-0">
             {navigation.map((item) => {
-              const { name, links, href } = item;
+              const { name, links, href, isExternal, displayName } = item;
               if (links) {
                 return (
                   <div
@@ -80,7 +80,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
                             </Link>
                           )}
                           {isExternal ? (
-                            <ArrowTopRightOnSquareIcon className="h-3 w-3 text-ruby-900" />
+                            <ArrowTopRightOnSquareIcon className="h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
                           ) : null}
                         </li>
                       ))}
@@ -92,25 +92,33 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
               return (
                 <div key={name} className="space-y-6 text-center sm:text-left">
                   <Badge
-                    name={t("Marketplace")}
+                    name={t(name)}
                     bgColor="bg-honey-100"
                     textColor="text-ruby-900"
                     size="sm"
                   />
                   <ul className="space-y-4">
-                    <li
-                      key={name}
-                      className="flex items-center justify-center space-x-1 sm:justify-start"
-                    >
-                      <a
-                        href={href}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="text-night-800 hover:text-night-700"
-                      >
-                        Trove
-                      </a>
-                      <ArrowTopRightOnSquareIcon className="h-3 w-3 text-ruby-900" />
+                    <li className="flex items-center justify-center space-x-1 sm:justify-start">
+                      {isExternal ? (
+                        <a
+                          href={href}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="text-night-800 hover:text-night-700"
+                        >
+                          {t(displayName)}
+                        </a>
+                      ) : (
+                        <Link
+                          to={href}
+                          className="text-night-800 hover:text-night-700"
+                        >
+                          {t(displayName)}
+                        </Link>
+                      )}
+                      {isExternal ? (
+                        <ArrowTopRightOnSquareIcon className="h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
+                      ) : null}
                     </li>
                   </ul>
                 </div>
