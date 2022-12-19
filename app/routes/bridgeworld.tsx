@@ -2,7 +2,7 @@ import Legion1Img from "../../public/img/legion1.png";
 
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import BWTextSvg from "../../public/img/bridgeworld-text.webp";
-import { CTAButton, InternalCTAButton } from "~/components/Button";
+import { CTAButton } from "~/components/Button";
 import { BridgeworldInfrastructures } from "~/const";
 import InfrastuctureImg from "../../public/img/Infrastucture.png";
 
@@ -43,7 +43,7 @@ export default function About() {
             href="https://bridgeworld.treasure.lol"
             rel="noopener noreferrer"
             target="_blank"
-            className="mt-12 inline-flex items-center rounded-button bg-ruby-900 px-7 py-4 font-semibold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1000 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2"
+            className="mt-12 inline-flex items-center rounded-lg bg-ruby-900 px-7 py-4 font-semibold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1000 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2"
           >
             Visit Bridgeworld
             <ArrowTopRightOnSquareIcon
@@ -81,12 +81,15 @@ export default function About() {
             </div>
             <div className="mt-8 flex flex-col justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-5">
               <div>
-                <CTAButton href="https://docs.treasure.lol/bridgeworld/bridgeworld-litepaper">
+                <CTAButton
+                  as="a"
+                  href="https://docs.treasure.lol/bridgeworld/bridgeworld-litepaper"
+                >
                   Read the guide
                 </CTAButton>
               </div>
               <div>
-                <CTAButton href="https://lore.treasure.lol/">
+                <CTAButton as="a" href="https://lore.treasure.lol/">
                   Discover its lore
                 </CTAButton>
               </div>
@@ -135,9 +138,7 @@ export default function About() {
                 partner cartridge today.
               </p>
               <div>
-                <InternalCTAButton to="/cartridges">
-                  Visit Cartridges
-                </InternalCTAButton>
+                <CTAButton to="/cartridges">Visit Cartridges</CTAButton>
               </div>
             </div>
             <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-2">
@@ -157,9 +158,9 @@ export default function About() {
                 The economic engine and tooling powering Treasure
               </p>
               <div>
-                <InternalCTAButton to="/infrastructure">
+                <CTAButton to="/infrastructure">
                   Explore Infrastructure
-                </InternalCTAButton>
+                </CTAButton>
               </div>
             </div>
             <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-1">

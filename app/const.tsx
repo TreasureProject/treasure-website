@@ -787,9 +787,19 @@ export const navigation = [
         isExternal: false,
       },
       {
+        name: "Integration Framework",
+        href: "https://docs.treasure.lol/games/ecosystem-integration-framework",
+        isExternal: true,
+      },
+      {
         name: "Infrastructure",
         href: "/infrastructure",
         isExternal: false,
+      },
+      {
+        name: "Open Source",
+        href: "https://github.com/TreasureProject",
+        isExternal: true,
       },
     ],
   },

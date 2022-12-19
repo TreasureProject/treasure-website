@@ -47,7 +47,7 @@ const parse = async (url: string) => {
           : val.pubDate
           ? Date.parse(val.pubDate)
           : Date.now(),
-        "MMM dd"
+        "MMM dd, yyyy"
       ),
       thumbnail:
         content.match(/https:\/\/cdn-images-1.medium.com\/[^"]+/g)?.[0] ?? null,

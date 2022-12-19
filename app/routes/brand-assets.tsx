@@ -394,7 +394,7 @@ export default function Resources() {
                     </p>
                     <div>
                       <a
-                        className="inline-flex cursor-pointer items-center rounded-button border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
+                        className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
                         href="https://drive.google.com/uc?export=download&id=18j-7mAXpcVgZZBCxQnwAuHvbqbUZir1N"
                         download
                       >
@@ -425,7 +425,7 @@ export default function Resources() {
                     </p>
                     <div>
                       <a
-                        className="inline-flex cursor-pointer items-center rounded-button border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
+                        className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
                         href="https://drive.google.com/uc?export=download&id=1HMkqE2QPzUUnJD8-3WV8cOZo8LmnXfO5"
                         download
                       >

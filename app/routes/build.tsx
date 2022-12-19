@@ -10,13 +10,13 @@ import { CartridgesIcon } from "~/components/Icons";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
 import { builderTweets, core5Cartridges } from "~/const";
-import BridgeworldImg from "../../public/img/bridgeworld.webp";
-import LogomarkImg from "../../public/img/resources/treasure/logomark.png";
-import HeroImg from "../../public/img/hero.png";
-import BgHeroImg from "../../public/img/bg-hero.jpg";
+import BridgeworldImg from "@/img/bridgeworld.webp";
+import LogomarkImg from "@/img/resources/treasure/logomark.png";
+import HeroImg from "@/img/hero.png";
+import BgHeroImg from "@/img/bg-hero.jpg";
 
-import PartnerImg from "../../public/img/partner.webp";
-import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
+import PartnerImg from "@/img/partner.webp";
+import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 
 export default function Build() {
   const mouseX = useMotionValue(0);
@@ -289,13 +289,65 @@ export default function Build() {
         className="relative bg-honey-100 py-16"
       >
         <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="mx-auto flex w-max items-center space-x-2.5 rounded-2xl border-2 border-honey-200 bg-honey-50 px-8 py-5"
+          whileHover="hover"
+          variants={{
+            hover: {
+              scale: 1.05,
+            },
+          }}
+          className="relative mx-auto flex w-max items-center space-x-2.5 rounded-2xl border-2 border-honey-200 bg-honey-50 px-8 py-5"
         >
-          <img src={LogomarkImg} alt="Treasure Logomark" className="h-8" />
-          <span className="text-2xl font-semibold text-night-900">
+          <motion.div
+            className="absolute inset-0 rounded-2xl"
+            initial={{
+              opacity: 0,
+            }}
+            variants={{
+              hover: {
+                scale: 1.05,
+                background:
+                  "linear-gradient(60deg,#61dafb 0%,#d6cbf6 30%,#f2056f 70%)",
+                opacity: 1,
+              },
+            }}
+          ></motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            variants={{
+              hover: {
+                opacity: 1,
+              },
+            }}
+            className="absolute right-4 -bottom-4 h-9 w-1/2 bg-red-500 blur-xl"
+          ></motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            variants={{
+              hover: {
+                opacity: 1,
+              },
+            }}
+            className="absolute left-4 -bottom-4 h-9 w-1/2 bg-blue-500 blur-xl"
+          ></motion.div>
+          <img
+            src={LogomarkImg}
+            alt="Treasure Logomark"
+            className="relative h-8"
+          />
+          <motion.span
+            variants={{
+              hover: {
+                color: "#fff",
+              },
+            }}
+            className="relative text-2xl font-semibold text-night-900"
+          >
             #PoweredByTreasure
-          </span>
+          </motion.span>
         </motion.div>
       </section>
       <section
@@ -400,7 +452,7 @@ export default function Build() {
                 partner cartridge today.
               </p>
               <div>
-                <CTAButton href="https://discord.gg/treasuredao">
+                <CTAButton as="a" href="https://discord.gg/treasuredao">
                   Apply here
                 </CTAButton>
               </div>
@@ -419,7 +471,7 @@ export default function Build() {
               description="Games on Treasure"
               image={HeroImg}
             >
-              <CTAButton type="primary" hideExternalIcon>
+              <CTAButton to="/build" type="primary" hideExternalIcon>
                 Learn More
               </CTAButton>
             </NewCard>
@@ -428,7 +480,7 @@ export default function Build() {
               description="Join the team at Treasure and our games to build the future of gaming in web3."
               image={JoinCommunityImg}
             >
-              <CTAButton type="primary" hideExternalIcon>
+              <CTAButton as="a" href="#" type="primary" hideExternalIcon>
                 See Open Jobs
               </CTAButton>
             </NewCard>

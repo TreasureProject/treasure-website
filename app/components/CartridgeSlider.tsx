@@ -119,12 +119,14 @@ export const CartridgeSlider = () => {
                       alt={cartridge.name}
                     />
                     <CTAButton
+                      as="a"
+                      href={cartridge.link}
                       hideExternalIcon
                       className="absolute left-1/2 bottom-24 -translate-x-1/2 border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm xl:bottom-36"
                     >
                       View Game
                     </CTAButton>
-                    <div className="absolute bottom-6 flex w-full justify-center border-t border-honey-25/10 xl:bottom-12">
+                    {/* <div className="absolute bottom-6 flex w-full justify-center border-t border-honey-25/10 xl:bottom-12">
                       <div className="mt-5 space-x-2.5">
                         {cartridge.tags.map((tag) => (
                           <span
@@ -135,7 +137,7 @@ export const CartridgeSlider = () => {
                           </span>
                         ))}
                       </div>
-                    </div>
+                    </div> */}
                   </motion.div>
                 </div>
               </motion.div>
@@ -176,6 +178,11 @@ export const CartridgeSlider = () => {
             <span className="absolute -inset-x-1.5 -inset-y-3" />
           </button>
         ))}
+      </div>
+      <div className="mt-12 flex justify-center">
+        <CTAButton as="link" type="primary" to="/games" className="mx-auto">
+          View all games
+        </CTAButton>
       </div>
     </div>
   );

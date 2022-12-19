@@ -31,7 +31,7 @@ export const Partners = () => {
           />
         </div>
       </div>
-      <div className="relative mt-12 flex overflow-x-hidden sm:mt-24">
+      <div className="relative mt-12 flex overflow-x-hidden [mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)] sm:mt-24">
         <div className="flex animate-marquee whitespace-nowrap">
           {partners.map((partner) => (
             <Partner partner={partner} key={partner.name} />

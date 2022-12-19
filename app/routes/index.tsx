@@ -18,9 +18,10 @@ import keenSliderCSS from "keen-slider/keen-slider.min.css";
 import { CartridgeSlider } from "~/components/CartridgeSlider";
 import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
-import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
-import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
+import GetMagicImg from "@/img/illustrations/get-magic.webp";
+import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { Partners } from "~/components/Partners";
+import BuildFutureImg from "@/img/build-future.webp";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -39,15 +40,15 @@ export default function Home() {
   return (
     <>
       <main className="overflow-hidden">
-        <div className="relative py-24 lg:overflow-hidden lg:py-0">
+        <div className="relative bg-[#212f5e] py-24 lg:overflow-hidden lg:py-0">
           <div className="relative z-20 lg:px-12">
             <div className="lg:grid lg:grid-cols-7 lg:gap-8">
-              <div className="col-span-3 mx-auto max-w-lg px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
-                <div className="lg:py-32 xl:pb-48 xl:pt-40">
-                  <h1 className="mt-4 text-7xl font-bold tracking-tight text-white sm:mt-0 xl:text-8xl">
+              <div className="col-span-3 mx-auto max-w-md px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left xl:max-w-sm">
+                <div className="text-center lg:py-32 lg:text-left xl:pb-48 xl:pt-40">
+                  <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:mt-0 sm:text-7xl">
                     {t("title")}
                   </h1>
-                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-7.5 backdrop-blur-sm lg:max-w-sm">
+                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-5 backdrop-blur-sm lg:max-w-sm">
                     <p className="text-base text-white sm:text-lg">
                       <Trans i18nKey="index:subtitle">
                         Treasure is the decentralized gaming ecosystem bringing
@@ -61,7 +62,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute top-0 left-0 h-full w-full bg-[linear-gradient(0deg,#212f5e99,#212f5e99),url('/img/bg-hero.jpg')] bg-cover bg-center lg:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] 2xl:bg-left"></div>
+          <div className="absolute top-0 left-0 h-full w-full bg-[linear-gradient(0deg,#212f5e99,#212f5e99),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] xl:bg-[linear-gradient(to_right,#212f5e_40%,transparent_90%),url('/img/bg-hero.jpg')] xl:[background-position:-15rem] 2xl:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] 2xl:[background-position:10rem]"></div>
         </div>
         <NewTreasureStats />
         <div className="relative bg-honey-100 py-6 lg:py-10">
@@ -74,7 +75,7 @@ export default function Home() {
                   className="flex max-w-[22rem] flex-1 flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 lg:p-7"
                 >
                   {cta.icon}
-                  <p className="mt-3 text-lg font-semibold text-night-900 xl:text-2xl">
+                  <p className="mt-3 text-lg font-bold text-night-900 xl:text-2xl">
                     {cta.name}
                   </p>
                   <p className="mt-1 break-words text-base text-night-700 xl:text-xl">
@@ -88,7 +89,7 @@ export default function Home() {
         <div className="relative bg-night-900 py-16 sm:py-24">
           <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
             <Badge
-              name="Core Cartridges"
+              name="Games Powered by Treasure"
               bgColor="bg-night-800"
               textColor="text-night-200"
             />
@@ -109,6 +110,39 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <section
+          id="cta"
+          aria-labelledby="cta"
+          className="relative bg-night-900 py-16 sm:py-24"
+        >
+          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+            <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
+              <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
+                <p className="text-base font-bold text-honey-200 lg:text-2xl xl:text-4xl">
+                  Build the future of gaming with us
+                </p>
+                <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-xl">
+                  Apply to our Ecosystem Integration Framework to supercharge
+                  your game and build with a vibrant community and ecosystem of
+                  builders, and receive curated long-term support and
+                  incentives.
+                </p>
+                <div>
+                  <CTAButton as="a" href="https://discord.gg/treasuredao">
+                    Learn More
+                  </CTAButton>
+                </div>
+              </div>
+              <div className="col-span-3 overflow-hidden rounded-xl md:order-2">
+                <img
+                  className="h-full w-full object-cover"
+                  src={BuildFutureImg}
+                  alt="Build the future of gaming with us"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
         <TreasurePosts />
 
         <Reviews />
@@ -126,7 +160,7 @@ export default function Home() {
                 description="Games on Treasure"
                 image={GetMagicImg}
               >
-                <CTAButton type="primary" hideExternalIcon>
+                <CTAButton as="a" href="#" type="primary" hideExternalIcon>
                   Discover More
                 </CTAButton>
               </NewCard>

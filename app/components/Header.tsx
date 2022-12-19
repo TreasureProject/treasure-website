@@ -50,14 +50,14 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                 </Popover.Button>
               </div>
             </div>
-            <Popover.Group as="nav" className="hidden space-x-6 lg:flex">
+            <Popover.Group as="nav" className="hidden space-x-16 lg:flex">
               {navigation.map((item) => {
                 if (item.links) {
                   return (
                     <Popover className="relative z-50" key={item.name}>
                       {({ open }) => (
                         <>
-                          <Popover.Button className="group inline-flex items-center rounded-md text-base font-medium text-night-900 focus:outline-none focus:ring-2 focus:ring-honey-500 focus:ring-offset-2">
+                          <Popover.Button className="group inline-flex items-center rounded-md text-base font-semibold text-night-900 focus:outline-none focus:ring-2 focus:ring-honey-500 focus:ring-offset-2">
                             <span>{t(item.name)}</span>
                             <ChevronDownIcon
                               className={classNames(
@@ -77,7 +77,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                           >
-                            <Popover.Panel className="absolute left-1/2 z-40 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
+                            <Popover.Panel className="absolute left-1/2 z-40 mt-3 w-screen max-w-max -translate-x-1/2 transform px-2 sm:px-0">
                               <div className="overflow-hidden rounded-lg shadow-lg shadow-honey-500/30 ring-1 ring-black ring-opacity-5">
                                 <div className="relative grid gap-6 bg-honey-50 px-5 py-6 sm:gap-8 sm:p-8">
                                   {item.links.map((link) => {
@@ -94,7 +94,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                           <span className="text-base font-medium text-night-900">
                                             {t(link.name)}
                                           </span>
-                                          <ArrowTopRightOnSquareIcon className="ml-1 h-4 w-4 text-ruby-900" />
+                                          <ArrowTopRightOnSquareIcon className="ml-1.5 h-4 w-4 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
                                         </Popover.Button>
                                       );
                                     }
@@ -129,7 +129,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base font-medium text-night-900 hover:text-night-700"
+                      className="text-base font-semibold text-night-900 hover:text-night-700"
                     >
                       {t(item.name)}
                     </a>
@@ -141,7 +141,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                     to={item.href}
                     key={item.name}
                     prefetch="render"
-                    className="text-base font-medium text-night-900 hover:text-night-700"
+                    className="text-base font-semibold text-night-900 hover:text-night-700"
                   >
                     {t(item.name)}
                   </Link>
@@ -165,7 +165,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
               </div>
               <button
                 onClick={openModal}
-                className="inline-flex items-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
+                className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
               >
                 <span className="font-semibold">Buy</span>
                 <MagicIcon />
@@ -214,7 +214,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                               <Disclosure.Button
                                 className={classNames(
                                   open && "bg-honey-200",
-                                  "group flex w-full items-center justify-between rounded-1.5xl px-4 py-2 text-left font-medium text-night-900 focus:outline-none focus-visible:ring focus-visible:ring-honey-500 focus-visible:ring-opacity-75"
+                                  "group flex w-full items-center justify-between rounded-1.5xl px-4 py-2 text-left font-semibold text-night-900 focus:outline-none focus-visible:ring focus-visible:ring-honey-500 focus-visible:ring-opacity-75"
                                 )}
                               >
                                 <span>{t(item.name)}</span>
@@ -238,7 +238,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                                         className="flex items-center px-3 py-2 font-medium text-night-900"
                                       >
                                         <span>{t(link.name)}</span>
-                                        <ArrowTopRightOnSquareIcon className="ml-1 h-3 w-3 text-ruby-900" />
+                                        <ArrowTopRightOnSquareIcon className="ml-1.5 h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
                                       </Popover.Button>
                                     );
                                   }
@@ -268,10 +268,10 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                           key={item.name}
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="group flex items-center justify-between px-4 py-2 text-left font-medium text-night-900"
+                          className="group flex items-center justify-between px-4 py-2 text-left font-semibold text-night-900"
                         >
                           {t(item.name)}
-                          <ArrowTopRightOnSquareIcon className="h-4 w-4 text-ruby-900 group-hover:text-ruby-700" />
+                          <ArrowTopRightOnSquareIcon className="h-4 w-4 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1] group-hover:[&>path]:stroke-ruby-600" />
                         </a>
                       );
                     }
@@ -282,7 +282,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                         to={item.href}
                         key={item.name}
                         prefetch="render"
-                        className="group flex items-center justify-between px-4 py-2 text-left font-medium text-night-900"
+                        className="group flex items-center justify-between px-4 py-2 text-left font-semibold text-night-900"
                       >
                         {t(item.name)}
                       </Popover.Button>
@@ -292,7 +292,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                 <div className="mt-6 px-5">
                   <button
                     onClick={openModal}
-                    className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
+                    className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
                   >
                     <span className="font-semibold">Buy</span>
                     <MagicIcon />
@@ -303,83 +303,6 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
           </Popover.Panel>
         </Transition>
       </Popover>
-      {/* breadcrumbs only on route other than index */}
-      {isLeafPage ? (
-        <div className="sticky top-0 z-40 hidden bg-ruby-900 py-3.5 lg:block">
-          <div className="mx-auto flex w-full max-w-9xl justify-between px-4 lg:px-12">
-            <nav aria-label="Breadcrumb">
-              <ol className="flex h-full space-x-4">
-                <li className="flex">
-                  <div className="flex items-center">
-                    <Link
-                      to="/"
-                      className="inline-block w-max rounded-tag bg-ruby-1000 px-2.5 py-1.5 transition-colors hover:bg-ruby-1400"
-                    >
-                      <h3 className="font-mono text-sm font-medium text-ruby-100">
-                        Home
-                      </h3>
-                    </Link>
-                  </div>
-                </li>
-                {matches
-                  .filter((match) => !!match.handle?.breadcrumb)
-                  .map((match) => {
-                    let href: string, title: string;
-
-                    if (typeof match.handle?.breadcrumb === "object") {
-                      href = match.handle?.breadcrumb.href as string;
-                      title = match.handle?.breadcrumb.title as string;
-                    } else {
-                      const { href: breadcrumbHref, title: breadcrumbTitle } =
-                        match.handle?.breadcrumb(match.params) as {
-                          href: string;
-                          title: string;
-                        };
-                      href = breadcrumbHref;
-                      title = breadcrumbTitle;
-                    }
-
-                    const currentPath = location.pathname === href;
-
-                    return (
-                      <li key={match.id} className="flex">
-                        <div className="flex items-center">
-                          <ChevronRightIcon
-                            className="h-full w-6 flex-shrink-0 text-ruby-1000"
-                            aria-hidden="true"
-                          />
-                          <Link
-                            to={href}
-                            className="ml-4 inline-block w-max rounded-tag bg-honey-100 px-2.5 py-1.5 transition-colors hover:bg-honey-200"
-                            aria-current={currentPath ? "page" : undefined}
-                          >
-                            <h3 className="font-mono text-sm font-medium text-ruby-900">
-                              {typeof match.handle?.breadcrumb === "function"
-                                ? title
-                                : t(title)}
-                            </h3>
-                          </Link>
-                        </div>
-                      </li>
-                    );
-                  })}
-              </ol>
-            </nav>
-            <a
-              href="https://trove.treasure.lol"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inline-flex items-center rounded-button bg-ruby-1000 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1400/50 focus:outline-none focus:ring-2 focus:ring-ruby-900 focus:ring-offset-2 sm:text-base"
-            >
-              {t("Marketplace")}
-              <TroveRevertedIcon
-                className="ml-4 h-6 w-6 text-white"
-                aria-hidden="true"
-              />
-            </a>
-          </div>
-        </div>
-      ) : null}
     </>
   );
 };
