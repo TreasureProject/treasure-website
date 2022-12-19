@@ -304,7 +304,7 @@ export const magicPurchaseLinks = [
   },
   {
     name: "Binance",
-    url: "https://www.binance.com/en/trade/MAGIC_USDT?theme=dark&type=spot",
+    url: "https://accounts.binance.com/en/register?ref=546318140",
     icon: BinanceImg,
   },
   {
