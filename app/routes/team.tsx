@@ -131,7 +131,10 @@ export default function Team() {
                 partner cartridge today.
               </p>
               <div>
-                <CTAButton href="https://www.notion.so/treasure-dao/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7">
+                <CTAButton
+                  as="a"
+                  href="https://www.notion.so/treasure-dao/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7"
+                >
                   See roles
                 </CTAButton>
               </div>

@@ -22,6 +22,7 @@ import GetMagicImg from "@/img/illustrations/get-magic.webp";
 import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { Partners } from "~/components/Partners";
 import BuildFutureImg from "@/img/build-future.webp";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -68,21 +69,42 @@ export default function Home() {
         <div className="relative bg-honey-100 py-6 lg:py-10">
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
             <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-              {IndexCTA.map((cta) => (
-                <Link
-                  key={cta.name}
-                  to={"/"}
-                  className="flex max-w-[22rem] flex-1 flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 lg:p-7"
-                >
-                  {cta.icon}
-                  <p className="mt-3 text-lg font-bold text-night-900 xl:text-2xl">
-                    {cta.name}
-                  </p>
-                  <p className="mt-1 break-words text-base text-night-700 xl:text-xl">
-                    {cta.description}
-                  </p>
-                </Link>
-              ))}
+              {IndexCTA.map((cta) => {
+                if (cta.isExternal) {
+                  return (
+                    <a
+                      key={cta.name}
+                      href={cta.href}
+                      className="group relative flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
+                    >
+                      {cta.icon}
+                      <p className="mt-3 text-base font-bold text-night-900 xl:text-2xl">
+                        {cta.name}
+                      </p>
+                      <p className="mt-1 break-words text-sm text-night-700 xl:text-xl">
+                        {cta.description}
+                      </p>
+                      <ArrowTopRightOnSquareIcon className="absolute right-5 top-5 h-5 w-5 fill-honey-900 opacity-0 transition-opacity duration-500 group-hover:opacity-100 [&>path]:stroke-honey-900 [&>path]:stroke-[1]" />
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={cta.name}
+                    to={cta.href}
+                    className="flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
+                  >
+                    {cta.icon}
+                    <p className="mt-3 text-base font-bold text-night-900 xl:text-2xl">
+                      {cta.name}
+                    </p>
+                    <p className="mt-1 break-words text-sm text-night-700 xl:text-xl">
+                      {cta.description}
+                    </p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -17,6 +17,7 @@ import BgHeroImg from "@/img/bg-hero.jpg";
 
 import PartnerImg from "@/img/partner.webp";
 import JoinCommunityImg from "@/img/illustrations/join-community.webp";
+import { Link } from "@remix-run/react";
 
 export default function Build() {
   const mouseX = useMotionValue(0);
@@ -84,20 +85,30 @@ export default function Build() {
               </div>
             </div>
             <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-8xl lg:px-12">
-              <div className="grid grid-cols-4 grid-rows-2 gap-6 overflow-hidden rounded-xl bg-[#101827] sm:gap-4 lg:gap-1">
-                <div className="relative col-span-4 bg-[#131D2E] px-8 py-7 sm:col-span-2 lg:col-start-1 lg:col-end-3">
+              <div className="grid grid-cols-4 grid-rows-2 gap-6 rounded-xl bg-[#101827] sm:gap-4 lg:gap-1">
+                <a
+                  href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative col-span-4 rounded-tl-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 transition-colors duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-1 lg:col-end-3"
+                >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
                     <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
-                      Game Builders Program
+                      Ecosystem Integration Framework
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
                       Let’s partner to grow together over the long-term
                     </p>
                   </div>
                   <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                </div>
-                <div className="relative col-span-4 bg-[#131D2E] px-8 py-7 sm:col-span-2 lg:col-start-3 lg:col-end-4">
+                </a>
+                <a
+                  href="https://github.com/TreasureProject"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative col-span-4 border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-3 lg:col-end-4"
+                >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
                     <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
@@ -108,8 +119,13 @@ export default function Build() {
                     </p>
                   </div>
                   <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                </div>
-                <div className="relative col-span-4 bg-[#131D2E] px-8 py-7 sm:col-span-2 lg:col-start-4 lg:col-end-5">
+                </a>
+                <a
+                  href="https://docs.treasure.lol/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative col-span-4 rounded-tr-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-4 lg:col-end-5"
+                >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
                     <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
@@ -120,9 +136,13 @@ export default function Build() {
                     </p>
                   </div>
                   <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                </div>
+                </a>
 
-                <div className="relative col-span-4 bg-[#131D2E] px-8 py-7 sm:col-span-2 lg:col-start-1 lg:col-end-2">
+                <Link
+                  to="/infrastructure"
+                  prefetch="intent"
+                  className="relative col-span-4 rounded-bl-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-1 lg:col-end-2"
+                >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
                     <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
@@ -133,8 +153,12 @@ export default function Build() {
                     </p>
                   </div>
                   <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                </div>
-                <div className="relative col-span-4 bg-[#131D2E] px-8 py-7 sm:col-span-2 lg:col-start-2 lg:col-end-4">
+                </Link>
+                <Link
+                  to="/interoperability"
+                  prefetch="intent"
+                  className="relative col-span-4 border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-2 lg:col-end-4"
+                >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
                     <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
@@ -146,8 +170,13 @@ export default function Build() {
                     </p>
                   </div>
                   <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                </div>
-                <div className="relative col-span-4 flex items-center bg-[#131D2E] px-8 py-7 sm:col-span-2 lg:col-start-4 lg:col-end-5">
+                </Link>
+                <a
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative col-span-4 flex items-center rounded-br-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-4 lg:col-end-5"
+                >
                   <div className="flex flex-col items-start">
                     <p className="text-lg font-semibold text-honey-200 sm:text-2xl">
                       Learn more
@@ -157,7 +186,7 @@ export default function Build() {
                     </p>
                   </div>
                   <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -259,8 +288,8 @@ export default function Build() {
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
                     <p className="text-xl">
-                      Join the Game Builders Program to elevate your game
-                      through expert advisory and incentives
+                      Elevate your game with expert advisory and incentives
+                      through the Ecosystem Integration Framework
                     </p>
                   </li>
                   <li className="flex items-center space-x-2.5">
@@ -468,11 +497,11 @@ export default function Build() {
           <div className="mt-14 grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
             <NewCard
               title="Build with Treasure"
-              description="Games on Treasure"
+              description="Apply to our Game Builders Program to supercharge your game."
               image={HeroImg}
             >
               <CTAButton to="/build" type="primary" hideExternalIcon>
-                Learn More
+                Learn more
               </CTAButton>
             </NewCard>
             <NewCard
@@ -481,7 +510,7 @@ export default function Build() {
               image={JoinCommunityImg}
             >
               <CTAButton as="a" href="#" type="primary" hideExternalIcon>
-                See Open Jobs
+                See open jobs
               </CTAButton>
             </NewCard>
           </div>
