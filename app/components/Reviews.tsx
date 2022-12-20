@@ -1,16 +1,17 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { useInView } from "framer-motion";
-import { tweets } from "~/const";
+import { motion, useInView } from "framer-motion";
+import { playerTweets } from "~/const";
 import { Badge } from "./Badge";
 import { QuoteIcon } from "./Icons";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 
 export function Tweet({
   className,
   ...props
 }: {
   className?: string;
-} & typeof tweets[number]) {
+} & typeof playerTweets[number]) {
   const animationDelay = useMemo(() => {
     const possibleAnimationDelays = [
       "0s",
@@ -28,41 +29,47 @@ export function Tweet({
   const isBuilder = props.type === "builder";
 
   return (
-    <figure
+    <a
+      href={props.link}
+      target="_blank"
+      rel="noopener noreferrer"
       className={twMerge(
-        "animate-fade-in space-y-8 rounded-2xl border-2 border-honey-200 bg-honey-25 p-10 opacity-0 shadow-md shadow-honey-900/5",
+        "group block animate-fade-in rounded-2xl border-2 border-honey-200 bg-honey-25 p-10 opacity-0 shadow-md shadow-honey-900/5 transition-all hover:scale-105",
         className
       )}
       style={{ animationDelay }}
     >
-      <div className="flex items-center justify-between">
-        <QuoteIcon />
-        <Badge
-          name={props.type}
-          size="sm"
-          bgColor={isBuilder ? "bg-tr-blue/10" : "bg-tr-green/10"}
-          textColor={isBuilder ? "text-tr-blue" : "text-tr-green"}
-          className="rounded-[4px]"
-        />
-      </div>
-      <blockquote>
-        <props.tweet />
-      </blockquote>
-      <figcaption className="flex text-sm text-gray-600">
-        <img
-          src={props.profileImage}
-          className={twMerge(
-            "h-16 w-16 rounded-full object-cover",
-            isBuilder && "rounded-md"
-          )}
-          alt={`${props.username}'s profile`}
-        />
-        <div className="ml-4 flex flex-col justify-center">
-          <p>{props.username}</p>
-          <p>{props.handle}</p>
+      <figure className="space-y-8">
+        <div className="flex items-center justify-between">
+          <QuoteIcon />
+          <Badge
+            name={props.type}
+            size="sm"
+            bgColor={isBuilder ? "bg-tr-blue/10" : "bg-tr-green/10"}
+            textColor={isBuilder ? "text-tr-blue" : "text-tr-green"}
+            className="rounded-[4px]"
+          />
         </div>
-      </figcaption>
-    </figure>
+        <blockquote>
+          <props.tweet />
+        </blockquote>
+        <figcaption className="flex text-sm text-gray-600">
+          <img
+            src={props.profileImage}
+            className={twMerge(
+              "h-16 w-16 rounded-full object-cover",
+              isBuilder && "rounded-md"
+            )}
+            alt={`${props.username}'s profile`}
+          />
+          <div className="ml-4 flex flex-col justify-center">
+            <p>{props.username}</p>
+            <p>{props.handle}</p>
+          </div>
+        </figcaption>
+        <ArrowTopRightOnSquareIcon className="absolute right-10 bottom-10 h-5 w-5 fill-honey-900 opacity-0 transition-opacity duration-500 group-hover:opacity-100 [&>path]:stroke-honey-900 [&>path]:stroke-[1]" />
+      </figure>
+    </a>
   );
 }
 
@@ -84,7 +91,7 @@ function TweetsColumn({
   msPerPixel = 0,
 }: {
   className?: string;
-  reviews: typeof tweets[number][];
+  reviews: typeof playerTweets[number][];
   msPerPixel?: number;
 }) {
   const columnRef = useRef<HTMLDivElement | null>(null);
@@ -125,7 +132,7 @@ function TweetsColumn({
 function TweetsGrid() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.4 });
-  const splitColumns = splitArray([...tweets], 3);
+  const splitColumns = splitArray([...playerTweets], 3);
 
   return (
     <div
@@ -134,16 +141,9 @@ function TweetsGrid() {
     >
       {isInView && (
         <>
+          <TweetsColumn reviews={splitColumns[0]} msPerPixel={30} />
           <TweetsColumn
-            reviews={[
-              ...splitColumns[0],
-              ...splitColumns[2],
-              ...splitColumns[1],
-            ]}
-            msPerPixel={30}
-          />
-          <TweetsColumn
-            reviews={[...splitColumns[1], ...splitColumns[2]]}
+            reviews={splitColumns[1]}
             className="hidden md:block"
             msPerPixel={25}
           />

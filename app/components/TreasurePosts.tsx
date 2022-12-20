@@ -23,7 +23,7 @@ export const TreasurePosts = () => {
             target="_blank"
             rel="noopener noreferrer"
             key={post.title}
-            className="group relative flex flex-col justify-between rounded-xl border-2 border-transparent p-4 transition-colors duration-500 hover:border-honey-200 hover:bg-honey-50"
+            className="group relative flex flex-col justify-between rounded-xl border-2 border-transparent p-0 transition-colors duration-500 hover:border-honey-200 hover:bg-honey-50 xl:p-4"
           >
             <div>
               {post.thumbnail && (

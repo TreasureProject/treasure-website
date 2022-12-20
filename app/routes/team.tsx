@@ -97,15 +97,14 @@ export default function Team() {
           <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 px-14 pt-14 text-base text-night-700 sm:text-xl">
             <p>
               We are a collective of seasoned builders growing the expansive
-              platform and decentralized game console that is Treasure.{" "}
+              platform and decentralized game console that is Treasure.
             </p>
 
             <p>
-              With many members joining directly from the community, Treasure
-              comprises a globally distributed team of developers, product
-              managers, artists and designers, marketers, and economists. All
-              supported by a wealth of DAO contributors and passionate community
-              members.
+              Treasure comprises a globally distributed team of developers,
+              product managers, artists, brand builders, marketers, economists,
+              and gamers. All supported by a intimate and vibrant network of DAO
+              contributors and passionate community members.
             </p>
             <img src={TreasureTeamImg} alt="Treasure Team" className="w-full" />
           </div>

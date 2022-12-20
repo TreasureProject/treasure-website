@@ -122,7 +122,7 @@ export const CartridgeSlider = () => {
                       as="a"
                       href={cartridge.link}
                       hideExternalIcon
-                      className="absolute left-1/2 bottom-24 -translate-x-1/2 border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm xl:bottom-36"
+                      className="absolute left-1/2 bottom-24 -translate-x-1/2 border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm xl:bottom-24 2xl:bottom-36"
                     >
                       View Game
                     </CTAButton>

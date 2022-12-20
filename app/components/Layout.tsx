@@ -21,9 +21,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div className="border-2 border-t border-ruby-900" />
-      <Header openModal={openModal} />
+      <Header />
       {children}
-      <Footer openModal={openModal} />
+      <Footer />
 
       {/* Magic Purchase Modal */}
       <Modal show={openPurchaseMagicModal} onClose={closeModal}>

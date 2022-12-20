@@ -191,14 +191,14 @@ export default function Games() {
         aria-labelledby="other-information"
         className="relative bg-honey-100 py-16"
       >
-        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="px-4 sm:px-6 lg:px-24">
           <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-3">
             <NewCard
               title="Build with Treasure"
               description="Games on Treasure"
               image={HeroImg}
             >
-              <CTAButton type="primary" hideExternalIcon>
+              <CTAButton as="a" href="#" type="primary" hideExternalIcon>
                 Discover More
               </CTAButton>
             </NewCard>
@@ -207,7 +207,7 @@ export default function Games() {
               description="Games on Treasure"
               image={GetMagicImg}
             >
-              <CTAButton type="primary" hideExternalIcon>
+              <CTAButton as="a" href="#" type="primary" hideExternalIcon>
                 Discover More
               </CTAButton>
             </NewCard>
@@ -226,7 +226,7 @@ export default function Games() {
                     rel="noopener noreferrer"
                   >
                     <span className="sr-only">{social.name}</span>
-                    <social.icon className="h-6 w-6" aria-hidden="true" />
+                    <social.icon className="h-8 w-8" aria-hidden="true" />
                   </a>
                 ))}
               </div>
@@ -337,6 +337,8 @@ const PartnerSlideMobile = () => {
         </div>
         <div className="mt-3 flex justify-center space-x-2 sm:mt-6 sm:space-x-3.5">
           <CTAButton
+            as="a"
+            href="#"
             type="primary"
             className="text-[0.6rem] sm:text-xs"
             hideExternalIcon
@@ -344,6 +346,8 @@ const PartnerSlideMobile = () => {
             View
           </CTAButton>
           <CTAButton
+            as="a"
+            href="#"
             hideExternalIcon
             className="border-night-700 bg-night-900/50 text-[0.6rem] text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-xs"
           >
@@ -450,10 +454,18 @@ const PartnerSlideDesktop = () => {
             <p className="text-night-100">{currentSlideInfo.description}</p>
           </div>
           <div className="mt-6 flex space-x-3.5">
-            <CTAButton type="primary" className="sm:text-sm" hideExternalIcon>
+            <CTAButton
+              as="a"
+              href="#"
+              type="primary"
+              className="sm:text-sm"
+              hideExternalIcon
+            >
               View
             </CTAButton>
             <CTAButton
+              as="a"
+              href="#"
               hideExternalIcon
               className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm"
             >

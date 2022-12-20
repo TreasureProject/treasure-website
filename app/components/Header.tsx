@@ -17,7 +17,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import DataJson from "../lotties/data.json";
 import { useTranslation } from "react-i18next";
 
-export const Header = ({ openModal }: { openModal: () => void }) => {
+export const Header = () => {
   const matches = useMatches();
 
   const { t } = useTranslation("index", {
@@ -50,7 +50,10 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                 </Popover.Button>
               </div>
             </div>
-            <Popover.Group as="nav" className="hidden space-x-16 lg:flex">
+            <Popover.Group
+              as="nav"
+              className="hidden space-x-8 lg:flex xl:space-x-16"
+            >
               {navigation.map((item) => {
                 if (item.links) {
                   return (
@@ -149,27 +152,12 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
               })}
             </Popover.Group>
             <div className="absolute right-4 hidden items-center sm:right-8 lg:right-12 lg:flex xl:space-x-8">
-              <div className="hidden divide-x divide-honey-300 xl:flex">
-                {socials.map((social) => (
-                  <a
-                    key={social.name}
-                    className="px-4 text-night-800 hover:text-night-900"
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="sr-only">{social.name}</span>
-                    <social.icon className="h-6 w-6" aria-hidden="true" />
-                  </a>
-                ))}
-              </div>
-              <button
-                onClick={openModal}
-                className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
+              <Link
+                to="/build"
+                className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"
               >
-                <span className="font-semibold">Buy</span>
-                <MagicIcon />
-              </button>
+                Build with Treasure
+              </Link>
             </div>
           </div>
         </div>
@@ -290,13 +278,12 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                   })}
                 </nav>
                 <div className="mt-6 px-5">
-                  <button
-                    onClick={openModal}
-                    className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000"
+                  <Link
+                    to="/build"
+                    className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"
                   >
-                    <span className="font-semibold">Buy</span>
-                    <MagicIcon />
-                  </button>
+                    Build with Treasure
+                  </Link>
                 </div>
               </div>
             </div>

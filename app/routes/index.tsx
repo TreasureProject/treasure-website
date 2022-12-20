@@ -45,7 +45,7 @@ export default function Home() {
             <div className="lg:grid lg:grid-cols-7 lg:gap-8">
               <div className="col-span-3 mx-auto max-w-md px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left xl:max-w-sm">
                 <div className="text-center lg:py-32 lg:text-left xl:pb-48 xl:pt-40">
-                  <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:mt-0 sm:text-7xl">
+                  <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:mt-0 sm:text-7xl xl:text-[5rem]">
                     {t("title")}
                   </h1>
                   <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-5 backdrop-blur-sm lg:max-w-sm">
@@ -64,7 +64,7 @@ export default function Home() {
 
           <div className="absolute top-0 left-0 h-full w-full bg-[linear-gradient(0deg,#212f5e99,#212f5e99),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat sm:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] xl:bg-[linear-gradient(to_right,#212f5e_40%,transparent_90%),url('/img/bg-hero.jpg')] xl:[background-position:-15rem] 2xl:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] 2xl:[background-position:10rem]"></div>
         </div>
-        <NewTreasureStats />
+        <NewTreasureStats type="secondary" />
         <div className="relative bg-honey-100 py-6 lg:py-10">
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
             <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
@@ -121,7 +121,7 @@ export default function Home() {
                 <p className="text-base font-bold text-honey-200 lg:text-2xl xl:text-4xl">
                   Build the future of gaming with us
                 </p>
-                <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-xl">
+                <p className="text-xs text-night-500 sm:text-base lg:text-lg xl:text-xl">
                   Apply to our Ecosystem Integration Framework to supercharge
                   your game and build with a vibrant community and ecosystem of
                   builders, and receive curated long-term support and
@@ -129,7 +129,7 @@ export default function Home() {
                 </p>
                 <div>
                   <CTAButton as="a" href="https://discord.gg/treasuredao">
-                    Learn More
+                    Start building
                   </CTAButton>
                 </div>
               </div>

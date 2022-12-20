@@ -90,13 +90,7 @@ export const teamMembers = [
     twitterLink: "https://twitter.com/0xAntlion",
     image: AntlionImg,
   },
-  {
-    name: "Archang",
-    title: "Community",
-    discordLink: "https://discordapp.com/users/803824281263538196",
-    twitterLink: "https://twitter.com/Archang01",
-    image: ArchangImg,
-  },
+
   {
     name: "Bahama",
     title: "Product, Bridgeworld",
@@ -111,13 +105,7 @@ export const teamMembers = [
     twitterLink: "https://twitter.com/crisidot",
     image: CrisisImg,
   },
-  {
-    name: "Duke",
-    title: "Art",
-    discordLink: "https://discordapp.com/users/206403485120462848",
-    twitterLink: "https://twitter.com/DukePaints",
-    image: DukeImg,
-  },
+
   {
     name: "ENT1T7",
     title: "UI/UX, Bridgeworld",
@@ -174,13 +162,7 @@ export const teamMembers = [
     twitterLink: "https://twitter.com/0xkarel",
     image: KarelImg,
   },
-  {
-    name: "luffy",
-    title: "Development (Backend), Trove",
-    discordLink: null,
-    twitterLink: "https://twitter.com/defiluffy",
-    image: null,
-  },
+
   {
     name: "Maximee",
     title: "Creative",
@@ -202,13 +184,7 @@ export const teamMembers = [
     twitterLink: "https://twitter.com/pugmassacre",
     image: PeitaImg,
   },
-  {
-    name: "pixelmat",
-    title: "Art, Smolverse",
-    discordLink: "https://discordapp.com/users/724274057520087110",
-    twitterLink: "https://twitter.com/pixel_mat",
-    image: PixelmatImg,
-  },
+
   {
     name: "Preeminent",
     title: "Marketing, Smolverse",
@@ -563,6 +539,8 @@ export const tweets = [
   },
 ] as const;
 
+export const playerTweets = tweets.filter((tweet) => tweet.type === "player");
+
 export const builderTweets = tweets.filter((tweet) => tweet.type === "builder");
 
 export const communityInfrastructure = [
@@ -787,14 +765,14 @@ export const navigation = [
         isExternal: false,
       },
       {
-        name: "Integration Framework",
-        href: "https://docs.treasure.lol/games/ecosystem-integration-framework",
-        isExternal: true,
-      },
-      {
         name: "Infrastructure",
         href: "/infrastructure",
         isExternal: false,
+      },
+      {
+        name: "Integration Framework",
+        href: "https://docs.treasure.lol/games/ecosystem-integration-framework",
+        isExternal: true,
       },
       {
         name: "Open Source",
@@ -819,7 +797,7 @@ export const navigation = [
     name: "About",
     links: [
       {
-        name: "About",
+        name: "About Treasure",
         href: "/about",
         isExternal: false,
       },
@@ -829,13 +807,28 @@ export const navigation = [
         isExternal: false,
       },
       {
+        name: "What is MAGIC?",
+        href: "https://docs.treasure.lol/getting-started/what-is-magic",
+        isExternal: true,
+      },
+      {
         name: "Documentation",
         href: "https://docs.treasure.lol/",
         isExternal: true,
       },
       {
-        name: "Newsletter",
-        href: "https://www.getrevue.co/profile/treasuredao/",
+        name: "Ecosystem Careers",
+        href: "https://treasuredao.pallet.com/jobs",
+        isExternal: true,
+      },
+      {
+        name: "Governance Forum",
+        href: "https://gov.treasure.lol/",
+        isExternal: true,
+      },
+      {
+        name: "Snapshot",
+        href: "https://vote.treasure.lol/",
         isExternal: true,
       },
     ],
