@@ -201,11 +201,17 @@ export default function Build() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
           <div className="space-y-12 sm:space-y-20">
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
-              <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
+              <div className="relative mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
                 <img
-                  className="h-full w-full rounded-2xl object-cover"
+                  className="relative z-10 h-full w-full rounded-2xl object-cover"
                   src={BridgeworldImg}
                   alt="Bridgeworld"
+                />
+                <img
+                  aria-hidden="true"
+                  className="absolute top-[2px] left-[2px] h-full w-full rounded-2xl object-cover blur-md"
+                  src={BridgeworldImg}
+                  alt="Bridgeworld backdrop"
                 />
               </div>
               <div className="p-14 lg:col-span-4">
@@ -237,11 +243,17 @@ export default function Build() {
               </div>
             </div>
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
-              <div className="mb-12 flex items-center justify-center lg:order-last lg:col-span-4 lg:mb-0">
+              <div className="relative mb-12 flex items-center justify-center lg:order-last lg:col-span-4 lg:mb-0">
                 <img
-                  className="h-full w-full rounded-2xl object-cover"
+                  className="relative z-10 h-full w-full rounded-2xl object-cover"
                   src={BridgeworldImg}
                   alt="Treasures"
+                />
+                <img
+                  aria-hidden="true"
+                  className="absolute top-[2px] left-[2px] h-full w-full rounded-2xl object-cover blur-md"
+                  src={BridgeworldImg}
+                  alt="Bridgeworld backdrop"
                 />
               </div>
               <div className="p-14 lg:col-span-4">
@@ -273,11 +285,17 @@ export default function Build() {
               </div>
             </div>
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
-              <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
+              <div className="relative mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
                 <img
-                  className="h-full w-full rounded-2xl object-cover"
+                  className="relative z-10 h-full w-full rounded-2xl object-cover"
                   src={BridgeworldImg}
                   alt="Bridgeworld"
+                />
+                <img
+                  aria-hidden="true"
+                  className="absolute top-[2px] left-[2px] h-full w-full rounded-2xl object-cover blur-md"
+                  src={BridgeworldImg}
+                  alt="Bridgeworld backdrop"
                 />
               </div>
               <div className="p-14 lg:col-span-4">
