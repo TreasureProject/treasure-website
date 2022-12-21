@@ -35,14 +35,14 @@ export const TreasurePosts = () => {
                   />
                 </div>
               )}
-              <h3 className="mt-5 text-xl font-bold text-night-900">
+              <h3 className="mt-5 text-base font-bold text-night-900 sm:text-xl">
                 {post.title}
               </h3>
             </div>
-            <div className="mt-5">
+            <div className="mt-3 sm:mt-5">
               <div className="flex items-center space-x-2.5">
                 <CalendarIcon className="mr-1 inline-block h-4 w-4 text-ruby-900" />
-                <span className="font-mono text-sm font-medium">
+                <span className="font-mono text-xs font-medium text-night-700 sm:text-sm">
                   {post.published}
                 </span>
               </div>

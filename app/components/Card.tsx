@@ -6,7 +6,7 @@ export const Card = ({ card }: { card: CardT }) => (
     className="relative flex flex-col rounded-2.5xl border-2 border-honey-200 bg-honey-50 px-2 xl:flex-row"
   >
     <div className="flex basis-7/12 flex-col items-start space-y-4 py-8 pl-8 pr-14">
-      <p className="text-base font-semibold text-night-800 sm:text-2xl">
+      <p className="text-base font-bold !leading-[1.6rem] text-night-800 sm:text-2xl">
         {card.name}
       </p>
       <p className="text-sm text-night-700 xl:text-base">{card.description}</p>

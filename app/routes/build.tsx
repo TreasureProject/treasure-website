@@ -201,40 +201,34 @@ export default function Build() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
           <div className="space-y-12 sm:space-y-20">
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
-              <div className="relative mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
+              <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
                 <img
-                  className="relative z-10 h-full w-full rounded-2xl object-cover"
+                  className="rh-full w-full rounded-2xl object-cover"
                   src={BridgeworldImg}
                   alt="Bridgeworld"
                 />
-                <img
-                  aria-hidden="true"
-                  className="absolute top-[2px] left-[2px] h-full w-full rounded-2xl object-cover blur-md"
-                  src={BridgeworldImg}
-                  alt="Bridgeworld backdrop"
-                />
               </div>
-              <div className="p-14 lg:col-span-4">
+              <div className="p-0 sm:p-14 lg:col-span-4">
                 <h3 className="text-xl font-semibold sm:text-4xl">
                   Join a vibrant and intimate ecosystem
                 </h3>
                 <ol className="mt-10 space-y-4 text-base sm:text-xl">
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Tap into the most engaged community to bootstrap adoption
                     </p>
                   </li>
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Build together with game developers working towards common
                       goals
                     </p>
                   </li>
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Never work in isolation and benefit from success of the
                       ecosystem
                     </p>
@@ -243,40 +237,34 @@ export default function Build() {
               </div>
             </div>
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
-              <div className="relative mb-12 flex items-center justify-center lg:order-last lg:col-span-4 lg:mb-0">
+              <div className="mb-12 flex items-center justify-center lg:order-last lg:col-span-4 lg:mb-0">
                 <img
-                  className="relative z-10 h-full w-full rounded-2xl object-cover"
+                  className="h-full w-full rounded-2xl object-cover"
                   src={BridgeworldImg}
                   alt="Treasures"
                 />
-                <img
-                  aria-hidden="true"
-                  className="absolute top-[2px] left-[2px] h-full w-full rounded-2xl object-cover blur-md"
-                  src={BridgeworldImg}
-                  alt="Bridgeworld backdrop"
-                />
               </div>
-              <div className="p-14 lg:col-span-4">
+              <div className="p-0 sm:p-14 lg:col-span-4">
                 <h3 className="text-xl font-semibold sm:text-4xl">
                   Leverage immersive gaming experiences
                 </h3>
                 <ol className="mt-10 space-y-4 text-base sm:text-xl">
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Form deeper connections with your community through
                       meta-progression and game player funnels
                     </p>
                   </li>
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Tap into powerful cross-game trading with MagicSwap
                     </p>
                   </li>
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Enhance player retention and engagement through cross-game
                       resources and interoperability
                     </p>
@@ -285,41 +273,35 @@ export default function Build() {
               </div>
             </div>
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
-              <div className="relative mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
+              <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
                 <img
-                  className="relative z-10 h-full w-full rounded-2xl object-cover"
+                  className="h-full w-full rounded-2xl object-cover"
                   src={BridgeworldImg}
                   alt="Bridgeworld"
                 />
-                <img
-                  aria-hidden="true"
-                  className="absolute top-[2px] left-[2px] h-full w-full rounded-2xl object-cover blur-md"
-                  src={BridgeworldImg}
-                  alt="Bridgeworld backdrop"
-                />
               </div>
-              <div className="p-14 lg:col-span-4">
+              <div className="p-0 sm:p-14 lg:col-span-4">
                 <h3 className="text-xl font-semibold sm:text-4xl">
                   Access powerful enablers and accelerants
                 </h3>
                 <ol className="mt-10 space-y-4 text-base sm:text-xl">
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Elevate your game with expert advisory and incentives
                       through the Ecosystem Integration Framework
                     </p>
                   </li>
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Supercharge your go-to-market through extensive reach,
                       authentic content and deep audience understanding
                     </p>
                   </li>
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-xl">
+                    <p className="text-base sm:text-xl">
                       Build faster with our toolkit and infrastructure for game
                       builders
                     </p>
@@ -490,17 +472,18 @@ export default function Build() {
       >
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-6 sm:grid-cols-7 sm:p-10">
-            <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
+            <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
               <p className="text-base font-semibold text-ruby-900 lg:text-2xl xl:text-4xl">
-                Become a partner
+                You’re in good company on Arbitrum
               </p>
-              <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">
-                Building a cartridge on Treasure and MAGIC? Apply to become a
-                partner cartridge today.
+              <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-xl">
+                The Arbitrum ecosystem is vast and reaches beyond Treasure. It’s
+                home to other great dapps, protocols, social platforms and has
+                everything you need to build.
               </p>
               <div>
-                <CTAButton as="a" href="https://discord.gg/treasuredao">
-                  Apply here
+                <CTAButton as="a" href="https://portal.arbitrum.io/">
+                  Explore Arbitrum
                 </CTAButton>
               </div>
             </div>
