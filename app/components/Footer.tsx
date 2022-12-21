@@ -36,6 +36,12 @@ export const Footer = () => {
                 <span className="sr-only">Treasure</span>
                 <img className="h-10" src={LogoImg} alt="Treasure" />
               </Link>
+              <div className="mt-3.5 w-2/3 sm:w-1/3 xl:w-full">
+                <p className="text-center text-xs text-night-700 sm:text-left">
+                  Treasure is the decentralized gaming ecosystem bringing games
+                  and players together through MAGIC.
+                </p>
+              </div>
             </div>
             <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:col-span-4 xl:mt-0">
               {navigation.map((item) => {
