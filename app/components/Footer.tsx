@@ -25,21 +25,17 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className="bg-honey-50" aria-labelledby="footer-heading">
+      <footer className="bg-honey-25" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
         <div className="mx-auto max-w-9xl px-4 pt-12 sm:px-6 lg:px-12 lg:pt-16">
-          <div className="xl:grid xl:grid-cols-5 xl:gap-8">
+          <div className="xl:grid xl:grid-cols-[1fr,1fr,1fr,1fr,1fr,max-content] xl:gap-8">
             <div className="flex flex-col items-center justify-center sm:block xl:col-span-1">
               <Link to="/">
                 <span className="sr-only">Treasure</span>
                 <img className="h-10" src={LogoImg} alt="Treasure" />
               </Link>
-              <Buttons
-                className="mt-8 hidden space-x-3.5 space-y-0 md:block xl:space-y-3.5 xl:space-x-0"
-                openModal={openModal}
-              />
             </div>
             <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:col-span-4 xl:mt-0">
               {navigation.map((item) => {
@@ -118,11 +114,22 @@ export const Footer = () => {
                 );
               })}
             </div>
+            <div className="mt-8 flex flex-col items-end space-y-3.5 text-right sm:mt-12 sm:flex-row sm:space-y-0 sm:space-x-3.5 xl:col-span-1 xl:mt-0 xl:flex-col xl:space-y-3.5 xl:space-x-0">
+              <Link
+                to="/build"
+                className="inline-flex w-full items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000 sm:w-auto"
+              >
+                Build with Treasure
+              </Link>
+              <button
+                onClick={openModal}
+                className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border-2 border-ruby-900 bg-honey-50 py-3.25 px-6.5 text-base font-medium text-ruby-900 hover:bg-honey-200 sm:w-auto"
+              >
+                <span className="font-semibold">Buy</span>
+                <MagicIcon className="fill-ruby-900" />
+              </button>
+            </div>
           </div>
-          <Buttons
-            className="mt-8 block space-y-3.5 md:hidden"
-            openModal={openModal}
-          />
           <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 sm:flex-row">
             <p className="mt-12 text-sm text-night-700 sm:mt-0">
               &copy; 2021-2022 TreasureDAO
@@ -202,27 +209,3 @@ export const Footer = () => {
     </>
   );
 };
-
-const Buttons = ({
-  className,
-  openModal,
-}: {
-  className?: string;
-  openModal: () => void;
-}) => (
-  <div className={className}>
-    <Link
-      to="/build"
-      className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000 sm:w-auto"
-    >
-      Build with Treasure
-    </Link>
-    <button
-      onClick={openModal}
-      className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border-2 border-ruby-900 bg-honey-50 py-3.25 px-6.5 text-base font-medium text-ruby-900 hover:bg-honey-200 sm:w-auto"
-    >
-      <span className="font-semibold">Buy</span>
-      <MagicIcon className="fill-ruby-900" />
-    </button>
-  </div>
-);
