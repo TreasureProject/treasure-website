@@ -19,9 +19,6 @@ import BgHeroImg from "@/img/bg-hero.jpg";
 import PartnerImg from "@/img/partner.webp";
 import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { Link } from "@remix-run/react";
-import { useState } from "react";
-
-const MotionLink = motion(Link);
 
 export default function Build() {
   const mouseX = useMotionValue(0);

@@ -97,7 +97,7 @@ export default function Games() {
               </span>
             </div>
           </div>
-          <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
             {coreCartridges.map((cartridge) => {
               return (
                 <div
@@ -111,10 +111,10 @@ export default function Games() {
                         "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
                     }}
                   ></div>
-                  <div className="relative [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
+                  <div className="relative aspect-square [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:aspect-auto">
                     <img
                       src={cartridge.image}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                       alt=""
                     />
                   </div>
@@ -149,7 +149,7 @@ export default function Games() {
             Games
           </p>
 
-          <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
             {nonCoreCartridges.map((cartridge) => {
               return (
                 <div
