@@ -34,12 +34,10 @@ export const NewCard = ({
 }) => (
   <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-10">
     <div className="max-w-[15rem]">
-      <p className="text-2xl font-semibold text-ruby-900 sm:text-4xl">
-        {title}
-      </p>
+      <p className="text-2xl font-bold text-ruby-900 sm:text-4xl">{title}</p>
       <p className="mt-2.5 text-sm text-night-500 sm:text-lg">{description}</p>
     </div>
-    <div className="mt-8">{children}</div>
+    <div className="z-10 mt-8">{children}</div>
     <div className="absolute -bottom-1 right-0">
       <img src={image} className="ml-auto w-5/12" alt="Hero" />
     </div>

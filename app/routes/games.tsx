@@ -75,7 +75,7 @@ export default function Games() {
         <div className="px-4 sm:px-6 lg:px-24">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-min space-y-5">
-              <p className="whitespace-nowrap text-xl font-semibold text-honey-200 sm:text-4xl">
+              <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
                 Powered by Treasure
               </p>
               <p className="text-center text-xs text-night-500 sm:text-left sm:text-xl">
@@ -87,7 +87,7 @@ export default function Games() {
               <p className="text-xs text-night-600 sm:text-sm">
                 Integrated games
               </p>
-              <span className="text-base font-semibold text-honey-300 sm:text-xl">
+              <span className="text-base font-bold text-honey-300 sm:text-xl">
                 +40
               </span>
             </div>
@@ -114,7 +114,7 @@ export default function Games() {
                     />
                   </div>
                   <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
-                    <p className="max-w-[70%] text-2xl font-semibold text-honey-25">
+                    <p className="max-w-[70%] text-2xl font-bold text-honey-25">
                       {cartridge.name}
                     </p>
                     <div className="mt-5 space-x-2.5">
@@ -140,7 +140,7 @@ export default function Games() {
         className="relative bg-night-900 py-8 sm:py-16"
       >
         <div className="px-4 sm:px-6 lg:px-24">
-          <p className="mx-auto w-min whitespace-nowrap text-xl font-semibold text-honey-200 sm:mx-0 sm:text-4xl">
+          <p className="mx-auto w-min whitespace-nowrap text-xl font-bold text-honey-200 sm:mx-0 sm:text-4xl">
             Games
           </p>
 
@@ -166,7 +166,7 @@ export default function Games() {
                     />
                   </div>
                   <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
-                    <p className="max-w-[70%] text-2xl font-semibold text-honey-25">
+                    <p className="max-w-[70%] text-2xl font-bold text-honey-25">
                       {cartridge.name}
                     </p>
                     <div className="mt-5 space-x-2.5">
@@ -328,7 +328,7 @@ const PartnerSlideMobile = () => {
           alt={currentSlideInfo.name}
         />
         <div className="mt-3 space-y-2">
-          <p className="text-xs font-semibold text-night-100 sm:text-base">
+          <p className="text-xs font-bold text-night-100 sm:text-base">
             {currentSlideInfo.title}
           </p>
           <p className="text-[0.6rem] text-night-100 sm:text-xs">
@@ -363,21 +363,54 @@ const PartnerSlideDesktop = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [loaded, setLoaded] = useState(false);
 
-  const [slideRef, instanceRef] = useKeenSlider({
-    slides: {
-      origin: "center",
-      perView: 1,
-      spacing: 0,
+  const [slideRef, instanceRef] = useKeenSlider(
+    {
+      slides: {
+        origin: "center",
+        perView: 1,
+        spacing: 0,
+      },
+      loop: true,
+      drag: false,
+      created() {
+        setLoaded(true);
+      },
+      vertical: true,
+      slideChanged(s) {
+        setCurrentSlide(s.track.details.rel);
+      },
     },
-    drag: false,
-    created() {
-      setLoaded(true);
-    },
-    vertical: true,
-    slideChanged(s) {
-      setCurrentSlide(s.track.details.rel);
-    },
-  });
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 5000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
 
   const currentSlideInfo = cartridges[currentSlide];
 
@@ -403,7 +436,7 @@ const PartnerSlideDesktop = () => {
                   className="h-16 w-16 rounded-lg object-cover"
                   alt={feature.name}
                 />
-                <h3 className="font-semibold text-night-100">
+                <h3 className="font-bold text-night-100">
                   <button
                     onClick={() => instanceRef.current?.moveToIdx(featureIndex)}
                     className="text-left [&:not(:focus-visible)]:focus:outline-none"
@@ -448,7 +481,7 @@ const PartnerSlideDesktop = () => {
             alt={currentSlideInfo.name}
           />
           <div className="mt-6 max-w-min space-y-3.5">
-            <p className="whitespace-nowrap text-4xl font-semibold text-night-100">
+            <p className="whitespace-nowrap text-4xl font-bold text-night-100">
               {currentSlideInfo.title}
             </p>
             <p className="text-night-100">{currentSlideInfo.description}</p>

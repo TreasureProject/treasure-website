@@ -131,7 +131,7 @@ export const Footer = () => {
                 onClick={openModal}
                 className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border-2 border-ruby-900 bg-honey-50 py-3.25 px-6.5 text-base font-medium text-ruby-900 hover:bg-honey-200 sm:w-auto"
               >
-                <span className="font-semibold">Buy</span>
+                <span className="font-bold">Buy</span>
                 <MagicIcon className="fill-ruby-900" />
               </button>
             </div>

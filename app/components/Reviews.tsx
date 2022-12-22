@@ -40,17 +40,9 @@ export function Tweet({
       style={{ animationDelay }}
     >
       <figure className="space-y-8">
-        <div className="flex items-center justify-between">
-          <QuoteIcon />
-          <Badge
-            name={props.type}
-            size="sm"
-            bgColor={isBuilder ? "bg-tr-blue/10" : "bg-tr-green/10"}
-            textColor={isBuilder ? "text-tr-blue" : "text-tr-green"}
-            className="rounded-[4px]"
-          />
-        </div>
-        <blockquote>
+        <QuoteIcon />
+
+        <blockquote className="text-sm text-night-800 sm:text-xl">
           <props.tweet />
         </blockquote>
         <figcaption className="flex text-sm text-gray-600">

@@ -1,4 +1,5 @@
 import {
+  ArrowDownIcon,
   ArrowTopRightOnSquareIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/solid";
@@ -18,17 +19,23 @@ import BgHeroImg from "@/img/bg-hero.jpg";
 import PartnerImg from "@/img/partner.webp";
 import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { Link } from "@remix-run/react";
+import { useState } from "react";
+
+const MotionLink = motion(Link);
 
 export default function Build() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const maskImage = useMotionTemplate`radial-gradient(200px at ${mouseX}px ${mouseY}px, transparent, rgba(13, 20, 32, 0.95))`;
-  const style = { maskImage, WebkitMaskImage: maskImage };
+  const maskImage = useMotionTemplate`radial-gradient(200px at ${mouseX}px ${mouseY}px, transparent, #0d142095)`;
+  const style = {
+    maskImage,
+    WebkitMaskImage: maskImage,
+  };
 
   return (
     <main>
-      <section
+      <motion.section
         id="build-with-treasure"
         aria-labelledby="build-with-treasure"
         onMouseMove={({ currentTarget, clientX, clientY }) => {
@@ -54,21 +61,15 @@ export default function Build() {
               },
             }}
           />
-          <motion.div
-            style={{
-              backgroundImage:
-                "linear-gradient(to bottom, rgba(13, 20, 32, 0.95) 40%, rgba(13, 20, 32, 0.96) 50%, rgba(13, 20, 32, 0.97) 60%, rgba(13, 20, 32, 1) 100%)",
-            }}
-            className="relative z-10 [grid-area:overlay]"
-          ></motion.div>
+          <div className="relative z-10 bg-gradient-to-b from-[#0D142098] to-[#101827] [grid-area:overlay]"></div>
           <motion.div
             style={style}
-            className="relative z-20 bg-gradient-to-r from-[#0D1420] to-[#101827] opacity-0 transition duration-300 [grid-area:overlay] group-hover:opacity-100"
+            className="relative z-20 bg-[linear-gradient(to_bottom,#0d142095_40%,#0d142096_50%,#0d142097_60%,#0d1420_100%)] [grid-area:overlay]"
           ></motion.div>
           <div className="relative z-30 py-16 [grid-area:overlay] sm:py-24">
             <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-12">
               <div className="text-center">
-                <p className="text-xl font-semibold text-honey-200 sm:text-4xl">
+                <p className="text-xl font-bold text-honey-200 sm:text-4xl">
                   Build with Treasure
                 </p>
                 <div className="mt-4 text-night-300 sm:text-xl">
@@ -90,11 +91,11 @@ export default function Build() {
                   href="https://docs.treasure.lol/games/ecosystem-integration-framework"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative col-span-4 rounded-tl-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 transition-colors duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-1 lg:col-end-3"
+                  className="relative col-span-4 rounded-tl-lg bg-[#131D2E] px-8 py-7 transition-colors duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-3"
                 >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
-                    <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
+                    <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Ecosystem Integration Framework
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
@@ -107,11 +108,11 @@ export default function Build() {
                   href="https://github.com/TreasureProject"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative col-span-4 border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-3 lg:col-end-4"
+                  className="relative col-span-4 bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-3 lg:col-end-4"
                 >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
-                    <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
+                    <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Open Source
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
@@ -124,11 +125,11 @@ export default function Build() {
                   href="https://docs.treasure.lol/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative col-span-4 rounded-tr-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-4 lg:col-end-5"
+                  className="relative col-span-4 rounded-tr-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-4 lg:col-end-5"
                 >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
-                    <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
+                    <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Documentation
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
@@ -141,11 +142,11 @@ export default function Build() {
                 <Link
                   to="/infrastructure"
                   prefetch="intent"
-                  className="relative col-span-4 rounded-bl-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-1 lg:col-end-2"
+                  className="relative col-span-4 rounded-bl-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-2"
                 >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
-                    <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
+                    <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Infrastructure
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
@@ -157,11 +158,11 @@ export default function Build() {
                 <Link
                   to="/interoperability"
                   prefetch="intent"
-                  className="relative col-span-4 border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-2 lg:col-end-4"
+                  className="relative col-span-4 bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-2 lg:col-end-4"
                 >
                   <div className="flex flex-col items-start">
                     <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
-                    <p className="mt-3 text-lg font-semibold text-honey-200 sm:text-2xl">
+                    <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Interoperability
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
@@ -171,27 +172,31 @@ export default function Build() {
                   </div>
                   <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                 </Link>
-                <a
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative col-span-4 flex items-center rounded-br-lg border-2 border-transparent bg-[#131D2E] px-8 py-7 duration-500 hover:border-night-800 sm:col-span-2 lg:col-start-4 lg:col-end-5"
-                >
+                <div className="relative col-span-4 flex items-center rounded-br-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-4 lg:col-end-5">
                   <div className="flex flex-col items-start">
-                    <p className="text-lg font-semibold text-honey-200 sm:text-2xl">
+                    <p className="text-lg font-bold text-honey-200 sm:text-2xl">
                       Learn more
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
                       Discover how we supercharge games
                     </p>
                   </div>
-                  <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                </a>
+                  <ArrowDownIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
+                  <button
+                    className="absolute inset-0 h-full w-full"
+                    onClick={() => {
+                      // scroll to #information
+                      const information =
+                        document.querySelector("#information");
+                      information?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       <NewTreasureStats type="secondary" />
       <section
         id="information"
@@ -209,10 +214,10 @@ export default function Build() {
                 />
               </div>
               <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-semibold sm:text-4xl">
+                <h3 className="text-xl font-bold text-night-900 sm:text-4xl">
                   Join a vibrant and intimate ecosystem
                 </h3>
-                <ol className="mt-10 space-y-4 text-base sm:text-xl">
+                <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
                     <p className="text-base sm:text-xl">
@@ -245,10 +250,10 @@ export default function Build() {
                 />
               </div>
               <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-semibold sm:text-4xl">
+                <h3 className="text-xl font-bold text-night-900 sm:text-4xl">
                   Leverage immersive gaming experiences
                 </h3>
-                <ol className="mt-10 space-y-4 text-base sm:text-xl">
+                <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
                     <p className="text-base sm:text-xl">
@@ -281,10 +286,10 @@ export default function Build() {
                 />
               </div>
               <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-semibold sm:text-4xl">
+                <h3 className="text-xl font-bold text-night-900 sm:text-4xl">
                   Access powerful enablers and accelerants
                 </h3>
-                <ol className="mt-10 space-y-4 text-base sm:text-xl">
+                <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
                   <li className="flex items-center space-x-2.5">
                     <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
                     <p className="text-base sm:text-xl">
@@ -326,8 +331,11 @@ export default function Build() {
           }}
           className="relative mx-auto flex w-max items-center space-x-2.5 rounded-2xl border-2 border-honey-200 bg-honey-50 px-8 py-5"
         >
-          <motion.div
-            className="absolute inset-0 rounded-2xl"
+          <motion.a
+            href="https://twitter.com/search?q=%23PoweredByTreasure&src=typed_query"
+            target="_blank"
+            rel="noreferrer"
+            className="absolute inset-0 z-10 rounded-2xl"
             initial={{
               opacity: 0,
             }}
@@ -339,7 +347,7 @@ export default function Build() {
                 opacity: 1,
               },
             }}
-          ></motion.div>
+          ></motion.a>
           <motion.div
             initial={{
               opacity: 0,
@@ -365,7 +373,7 @@ export default function Build() {
           <img
             src={LogomarkImg}
             alt="Treasure Logomark"
-            className="relative h-8"
+            className="pointer-events-none relative z-10 h-8"
           />
           <motion.span
             variants={{
@@ -373,7 +381,7 @@ export default function Build() {
                 color: "#fff",
               },
             }}
-            className="relative text-2xl font-semibold text-night-900"
+            className="pointer-events-none relative z-10 text-2xl font-bold text-night-900"
           >
             #PoweredByTreasure
           </motion.span>
@@ -387,7 +395,7 @@ export default function Build() {
         <div className="px-4 sm:px-6 lg:px-24">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-min space-y-5">
-              <p className="whitespace-nowrap text-xl font-semibold text-honey-200 sm:text-4xl">
+              <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
                 Featured Games
               </p>
               <p className="text-center text-xs text-night-500 sm:text-left sm:text-xl">
@@ -399,7 +407,7 @@ export default function Build() {
               <p className="text-xs text-night-600 sm:text-sm">
                 Integrated games
               </p>
-              <span className="text-base font-semibold text-honey-300 sm:text-xl">
+              <span className="text-base font-bold text-honey-300 sm:text-xl">
                 +40
               </span>
             </div>
@@ -426,7 +434,7 @@ export default function Build() {
                     />
                   </div>
                   <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
-                    <p className="max-w-[70%] text-2xl font-semibold text-honey-25">
+                    <p className="max-w-[70%] text-2xl font-bold text-honey-25">
                       {cartridge.name}
                     </p>
                     <div className="mt-5 space-x-2.5">
@@ -473,7 +481,7 @@ export default function Build() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-6 sm:grid-cols-7 sm:p-10">
             <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
-              <p className="text-base font-semibold text-ruby-900 lg:text-2xl xl:text-4xl">
+              <p className="text-base font-bold text-ruby-900 lg:text-2xl xl:text-4xl">
                 You’re in good company on Arbitrum
               </p>
               <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-xl">
@@ -501,7 +509,7 @@ export default function Build() {
               description="Apply to our Game Builders Program to supercharge your game."
               image={HeroImg}
             >
-              <CTAButton to="/build" type="primary" hideExternalIcon>
+              <CTAButton to="/build" type="primary">
                 Learn more
               </CTAButton>
             </NewCard>

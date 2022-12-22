@@ -50,7 +50,7 @@ export default function Community() {
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">
           <div className="relative rounded-2.5xl border-2 border-night-800 bg-[#131D2E] p-10 sm:p-20">
             <div className="flex flex-col items-center">
-              <p className="text-base font-semibold text-night-500 sm:text-2xl">
+              <p className="text-base font-bold text-night-500 sm:text-2xl">
                 Treasure comprises a composite of many smaller communities, all
                 connected through lore, guilds, resources, and MAGIC.
               </p>
@@ -98,7 +98,7 @@ export default function Community() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
             <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-              <p className="text-base font-semibold text-ruby-900 lg:text-2xl xl:text-4xl">
+              <p className="text-base font-bold text-ruby-900 lg:text-2xl xl:text-4xl">
                 Join the community on Discord
               </p>
               <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">

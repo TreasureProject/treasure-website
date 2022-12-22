@@ -60,7 +60,7 @@ export const Header = () => {
                     <Popover className="relative z-50" key={item.name}>
                       {({ open }) => (
                         <>
-                          <Popover.Button className="group inline-flex items-center rounded-md text-base font-semibold text-night-900 focus:outline-none focus:ring-2 focus:ring-honey-500 focus:ring-offset-2">
+                          <Popover.Button className="group inline-flex items-center rounded-md text-base font-bold text-night-900 focus:outline-none focus:ring-2 focus:ring-honey-500 focus:ring-offset-2">
                             <span>{t(item.name)}</span>
                             <ChevronDownIcon
                               className={classNames(
@@ -132,7 +132,7 @@ export const Header = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base font-semibold text-night-900 hover:text-night-700"
+                      className="text-base font-bold text-night-900 hover:text-night-700"
                     >
                       {t(item.name)}
                     </a>
@@ -144,7 +144,7 @@ export const Header = () => {
                     to={item.href}
                     key={item.name}
                     prefetch="render"
-                    className="text-base font-semibold text-night-900 hover:text-night-700"
+                    className="text-base font-bold text-night-900 hover:text-night-700"
                   >
                     {t(item.name)}
                   </Link>
@@ -202,7 +202,7 @@ export const Header = () => {
                               <Disclosure.Button
                                 className={classNames(
                                   open && "bg-honey-200",
-                                  "group flex w-full items-center justify-between rounded-1.5xl px-4 py-2 text-left font-semibold text-night-900 focus:outline-none focus-visible:ring focus-visible:ring-honey-500 focus-visible:ring-opacity-75"
+                                  "group flex w-full items-center justify-between rounded-1.5xl px-4 py-2 text-left font-bold text-night-900 focus:outline-none focus-visible:ring focus-visible:ring-honey-500 focus-visible:ring-opacity-75"
                                 )}
                               >
                                 <span>{t(item.name)}</span>
@@ -256,7 +256,7 @@ export const Header = () => {
                           key={item.name}
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="group flex items-center justify-between px-4 py-2 text-left font-semibold text-night-900"
+                          className="group flex items-center justify-between px-4 py-2 text-left font-bold text-night-900"
                         >
                           {t(item.name)}
                           <ArrowTopRightOnSquareIcon className="h-4 w-4 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1] group-hover:[&>path]:stroke-ruby-600" />
@@ -270,7 +270,7 @@ export const Header = () => {
                         to={item.href}
                         key={item.name}
                         prefetch="render"
-                        className="group flex items-center justify-between px-4 py-2 text-left font-semibold text-night-900"
+                        className="group flex items-center justify-between px-4 py-2 text-left font-bold text-night-900"
                       >
                         {t(item.name)}
                       </Popover.Button>

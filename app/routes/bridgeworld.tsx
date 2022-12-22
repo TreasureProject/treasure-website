@@ -43,7 +43,7 @@ export default function About() {
             href="https://bridgeworld.treasure.lol"
             rel="noopener noreferrer"
             target="_blank"
-            className="mt-12 inline-flex items-center rounded-lg bg-ruby-900 px-7 py-4 font-semibold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1000 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2"
+            className="mt-12 inline-flex items-center rounded-lg bg-ruby-900 px-7 py-4 font-bold text-white shadow-sm transition-colors duration-500 hover:bg-ruby-1000 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2"
           >
             Visit Bridgeworld
             <ArrowTopRightOnSquareIcon
@@ -58,10 +58,8 @@ export default function About() {
           <div className="relative rounded-2.5xl border-2 border-night-800 bg-[#131D2E] px-4 pt-20 pb-48 text-base text-night-600 sm:px-14 sm:text-xl md:py-20">
             <div className="space-y-4">
               <p>
-                <span className="font-semibold text-honey-200">
-                  Bridgeworld
-                </span>{" "}
-                is a game of strategic commerce, trade and social coordination
+                <span className="font-bold text-honey-200">Bridgeworld</span> is
+                a game of strategic commerce, trade and social coordination
                 forming a base economy layer for the Treasure ecosystem.
               </p>
 
@@ -117,7 +115,7 @@ export default function About() {
             >
               {Infrastructure.icon}
               <div className="mt-6 flex flex-col space-y-2">
-                <p className="text-2xl font-semibold text-night-800">
+                <p className="text-2xl font-bold text-night-800">
                   {Infrastructure.name}
                 </p>
                 <p className="text-night-700">{Infrastructure.description}</p>

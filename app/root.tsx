@@ -225,7 +225,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-honey-25 antialiased" id="top">
+      <body className="bg-honey-25 antialiased selection:bg-honey-900" id="top">
         <Layout>
           <Outlet />
         </Layout>

@@ -47,7 +47,7 @@ export default function About() {
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">
           <div className="rounded-2.5xl border-2 border-night-800 px-4 py-20 sm:p-20">
-            <p className="text-base font-semibold text-night-500 sm:text-2xl">
+            <p className="text-base font-bold text-night-500 sm:text-2xl">
               Treasure is building the decentralized gaming ecosystem to
               transform game publishing.
             </p>
@@ -68,17 +68,17 @@ export default function About() {
                 the ecosystem and empowers builders.
               </li>
             </ol>
-            <p className="mt-10 px-4 text-sm font-semibold text-honey-200 sm:text-xl">
+            <p className="mt-10 px-4 text-sm font-bold text-honey-200 sm:text-xl">
               All connected by a dual resource model:
             </p>
             <div className="mx-auto mt-10 block w-full rounded-tag bg-night-800 px-2.5 py-3 sm:w-max sm:py-1.5">
-              <h3 className="flex items-center justify-center space-x-2 text-sm font-semibold text-white sm:text-lg">
+              <h3 className="flex items-center justify-center space-x-2 text-sm font-bold text-white sm:text-lg">
                 <MagicIcon />
                 <span>Powers everything</span>
               </h3>
             </div>
             <div className="mx-auto mt-5 block rounded-tag bg-night-800 px-2.5 py-3 sm:w-max sm:py-1.5">
-              <h3 className="text-sm font-semibold text-honey-50 sm:text-lg">
+              <h3 className="text-sm font-bold text-honey-50 sm:text-lg">
                 NFTs as composable resources
               </h3>
             </div>
@@ -134,7 +134,7 @@ export default function About() {
               />
             </div>
             <div className="rounded-2.5xl border-2 border-honey-200 bg-honey-50 p-14 text-left lg:order-2 lg:col-span-4">
-              <h3 className="text-xl font-semibold text-ruby-900 sm:text-4xl">
+              <h3 className="text-xl font-bold text-ruby-900 sm:text-4xl">
                 Treasures as resources
               </h3>
               <div className="mt-6 space-y-4 text-sm text-night-700 sm:text-base">

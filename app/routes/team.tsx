@@ -123,7 +123,7 @@ export default function Team() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
             <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-              <p className="text-lg font-semibold text-ruby-900 sm:text-2xl xl:text-4xl">
+              <p className="text-lg font-bold text-ruby-900 sm:text-2xl xl:text-4xl">
                 Join the team
               </p>
               <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">

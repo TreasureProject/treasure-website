@@ -11,7 +11,7 @@ export const Infrastructures = () => (
         <div>
           {Infrastructure.icon}
           <div className="my-6 flex flex-col space-y-2">
-            <p className="text-base font-semibold text-night-800 sm:text-2xl">
+            <p className="text-base font-bold text-night-800 sm:text-2xl">
               {Infrastructure.name}
             </p>
             <p className="text-sm text-night-700 sm:text-base">

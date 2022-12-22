@@ -181,7 +181,7 @@ const Stat = ({
   >
     <p
       className={twMerge(
-        "text-base font-semibold lg:text-2xl",
+        "text-base font-bold lg:text-2xl",
         isSecondary && "text-honey-200"
       )}
     >
@@ -207,7 +207,7 @@ export const NewTreasureStats = ({
   return (
     <div
       className={twMerge(
-        "relative bg-honey-50 py-8",
+        "group relative bg-honey-50 py-8",
         isSecondary && "bg-night-900"
       )}
     >
@@ -218,13 +218,13 @@ export const NewTreasureStats = ({
         )}
       ></div>
       <div className="relative flex overflow-x-hidden">
-        <div className="flex animate-marquee">
+        <div className="group-hover:pause flex animate-marquee">
           {HARDCODED_DATA.map((data) => (
             <Stat key={data.title} data={data} isSecondary={isSecondary} />
           ))}
         </div>
         {/* Needed for infinity loop */}
-        <div className="absolute top-0 ml-4 flex animate-marquee2">
+        <div className="group-hover:pause absolute top-0 ml-4 flex animate-marquee2">
           {HARDCODED_DATA.map((data) => (
             <Stat key={data.title} data={data} isSecondary={isSecondary} />
           ))}
