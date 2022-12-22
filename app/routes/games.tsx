@@ -7,7 +7,12 @@ import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
 import { useState } from "react";
-import { cartridges, socials } from "~/const";
+import {
+  cartridges,
+  coreCartridges,
+  nonCoreCartridges,
+  socials,
+} from "~/const";
 import { motion } from "framer-motion";
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
@@ -93,7 +98,7 @@ export default function Games() {
             </div>
           </div>
           <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
-            {cartridges.map((cartridge) => {
+            {coreCartridges.map((cartridge) => {
               return (
                 <div
                   className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
@@ -109,7 +114,7 @@ export default function Games() {
                   <div className="relative [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
                     <img
                       src={cartridge.image}
-                      className="h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                       alt=""
                     />
                   </div>
@@ -145,7 +150,7 @@ export default function Games() {
           </p>
 
           <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
-            {cartridges.map((cartridge) => {
+            {nonCoreCartridges.map((cartridge) => {
               return (
                 <div
                   className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
@@ -158,10 +163,10 @@ export default function Games() {
                         "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
                     }}
                   ></div>
-                  <div className="relative [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
+                  <div className="relative aspect-square [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:aspect-auto">
                     <img
                       src={cartridge.image}
-                      className="h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                       alt=""
                     />
                   </div>

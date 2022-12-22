@@ -1,11 +1,23 @@
-import BattleFlyImg from "../public/img/projects/battlefly.jpg";
-import KnightsOfTheEtherImg from "../public/img/projects/knightsofether.jpg";
-import LifeImg from "../public/img/projects/life.jpg";
-import LostSamuriseImg from "../public/img/projects/lostsamurise.jpg";
-import RealmImg from "../public/img/projects/realm.jpg";
-import ToadStoolzImg from "../public/img/projects/toadstoolz.jpg";
-import ToeImg from "../public/img/projects/toe.jpeg";
-import LostDonkeysImg from "../public/img/projects/lostdonkeys.jpeg";
+// Powered by Treasure
+import BattleFlyImg from "@/img/projects/Battlefly.webp";
+import BridgeworldImg from "@/img/projects/Bridgeworld.webp";
+import KnightsOfTheEtherImg from "@/img/projects/Knights_of_the_Ether.webp";
+import LifeVerseImg from "@/img/projects/LifeVerse.webp";
+import LostSamuriseImg from "@/img/projects/Lost_Samurise.webp";
+import RealmverseImg from "@/img/projects/Realmverse.webp";
+import TalesOfElleriaImg from "@/img/projects/Tales_of_Elleria.webp";
+import TheBeaconImg from "@/img/projects/The_Beacon.webp";
+import TheLostDonkeysImg from "@/img/projects/The_Lost_Donkeys.webp";
+import ToadstoolzImg from "@/img/projects/Toadstoolz.webp";
+
+// Other games
+import EggfamImg from "@/img/projects/Eggfam.webp";
+import DamnedPiratesSocietyImg from "@/img/projects/Damned_Pirates_Society.webp";
+import MetagatesImg from "@/img/projects/Metagates.webp";
+import MushrohmsImg from "@/img/projects/Mushrohms.webp";
+import PowerPlinsImg from "@/img/projects/Power_Plins.webp";
+import SmithyDAOImg from "@/img/projects/SmithyDAO.webp";
+import SmoloveImg from "@/img/projects/Smolove.webp";
 
 import AcadArenaImg from "../public/img/partners/AcadArena.svg";
 import AndrewGreenImg from "../public/img/partners/AndrewGreen.svg";
@@ -838,6 +850,34 @@ export const navigation = [
 
 export const cartridges = [
   {
+    name: "Bridgeworld",
+    image: BridgeworldImg,
+    discordLink: "https://discord.gg/treasuredao",
+    TwitterLink: "https://twitter.com/playbridgeworld",
+    websiteLink: "https://bridgeworld.treasure.lol",
+    logo: BWTextSvg,
+    // used in /games slider, which has a video aspect ratio
+    sliderImage: BridgeworldImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: true,
+  },
+  {
+    name: "The Beacon",
+    image: TheBeaconImg,
+    discordLink: "https://discord.gg/treasuredao",
+    TwitterLink: "https://twitter.com/playbridgeworld",
+    websiteLink: "https://bridgeworld.treasure.lol",
+    logo: BWTextSvg,
+    // used in /games slider, which has a video aspect ratio
+    sliderImage: TheBeaconImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: true,
+  },
+  {
     name: "BattleFly",
     image: BattleFlyImg,
     discordLink: "https://discord.gg/YzpajBfRNX",
@@ -852,12 +892,12 @@ export const cartridges = [
   },
   {
     name: "Toadstoolz",
-    image: ToadStoolzImg,
+    image: ToadstoolzImg,
     discordLink: "https://discord.gg/toadstoolz",
     twitterLink: "https://twitter.com/toadstoolzNFT",
     websiteLink: "https://www.toadstoolz.lol/",
     logo: BWTextSvg,
-    sliderImage: BattleFlyImg,
+    sliderImage: ToadstoolzImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["P2E", "Fantasy"],
@@ -865,12 +905,12 @@ export const cartridges = [
   },
   {
     name: "Tales of Elleria",
-    image: ToeImg,
+    image: TalesOfElleriaImg,
     discordLink: "https://discord.gg/talesofelleria",
     twitterLink: "https://twitter.com/TalesofElleria",
     websiteLink: "https://www.talesofelleria.com/",
     logo: BWTextSvg,
-    sliderImage: BattleFlyImg,
+    sliderImage: TalesOfElleriaImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["P2E", "Fantasy"],
@@ -878,12 +918,12 @@ export const cartridges = [
   },
   {
     name: "The Lost Donkeys",
-    image: LostDonkeysImg,
+    image: TheLostDonkeysImg,
     discordLink: "https://discord.gg/TheLostDonkeys",
     twitterLink: "https://twitter.com/TheLostDonkeys",
     websiteLink: "https://www.thelostdonkeys.com/",
     logo: BWTextSvg,
-    sliderImage: BattleFlyImg,
+    sliderImage: TheLostDonkeysImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["P2E", "Fantasy"],
@@ -891,12 +931,12 @@ export const cartridges = [
   },
   {
     name: "LifeVerse",
-    image: LifeImg,
+    image: LifeVerseImg,
     discordLink: "https://discord.gg/MsNSCpHhru",
     twitterLink: "https://twitter.com/LifeVerse_GG",
     websiteLink: "https://life.treasure.lol/",
     logo: BWTextSvg,
-    sliderImage: BattleFlyImg,
+    sliderImage: LifeVerseImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["P2E", "Fantasy"],
@@ -909,7 +949,7 @@ export const cartridges = [
     twitterLink: "https://twitter.com/KnightsOfTheEth",
     websiteLink: "https://knightsoftheether.com/",
     logo: BWTextSvg,
-    sliderImage: BattleFlyImg,
+    sliderImage: KnightsOfTheEtherImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["P2E", "Fantasy"],
@@ -922,7 +962,7 @@ export const cartridges = [
     twitterLink: "https://twitter.com/SamuRiseNFT",
     websiteLink: "https://samurise.xyz/",
     logo: BWTextSvg,
-    sliderImage: BattleFlyImg,
+    sliderImage: LostSamuriseImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["P2E", "Fantasy"],
@@ -930,18 +970,113 @@ export const cartridges = [
   },
   {
     name: "Realm",
-    image: RealmImg,
+    image: RealmverseImg,
     discordLink: "https://discord.gg/realmdao",
     twitterLink: "https://twitter.com/RealmDao",
     websiteLink: "https://rlm.land/",
     logo: BWTextSvg,
-    sliderImage: BattleFlyImg,
+    sliderImage: RealmverseImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["P2E", "Fantasy"],
     core: true,
   },
+  {
+    name: "Eggfam",
+    image: EggfamImg,
+    discordLink: "https://discord.gg/realmdao",
+    twitterLink: "https://twitter.com/RealmDao",
+    websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: EggfamImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: false,
+  },
+  {
+    name: "Damned Pirates Society",
+    image: DamnedPiratesSocietyImg,
+    discordLink: "https://discord.gg/realmdao",
+    twitterLink: "https://twitter.com/RealmDao",
+    websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: DamnedPiratesSocietyImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: false,
+  },
+  {
+    name: "Metagates",
+    image: MetagatesImg,
+    discordLink: "https://discord.gg/realmdao",
+    twitterLink: "https://twitter.com/RealmDao",
+    websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: MetagatesImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: false,
+  },
+  {
+    name: "Mushrohms",
+    image: MushrohmsImg,
+    discordLink: "https://discord.gg/realmdao",
+    twitterLink: "https://twitter.com/RealmDao",
+    websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: MushrohmsImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: false,
+  },
+  {
+    name: "Power Plins",
+    image: PowerPlinsImg,
+    discordLink: "https://discord.gg/realmdao",
+    twitterLink: "https://twitter.com/RealmDao",
+    websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: PowerPlinsImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: false,
+  },
+  {
+    name: "SmithyDAO",
+    image: SmithyDAOImg,
+    discordLink: "https://discord.gg/realmdao",
+    twitterLink: "https://twitter.com/RealmDao",
+    websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: SmithyDAOImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: false,
+  },
+  {
+    name: "Smolove",
+    image: SmoloveImg,
+    discordLink: "https://discord.gg/realmdao",
+    twitterLink: "https://twitter.com/RealmDao",
+    websiteLink: "https://rlm.land/",
+    logo: BWTextSvg,
+    sliderImage: SmoloveImg,
+    description: "The Origin Legions of Bridgeworld with a fixed supply.",
+    title: "Genesis Legions",
+    tags: ["P2E", "Fantasy"],
+    core: false,
+  },
 ] as const;
+
+export const coreCartridges = cartridges.filter((c) => c.core);
+
+export const nonCoreCartridges = cartridges.filter((c) => !c.core);
 
 // get random 5 cartridges
 export const core5Cartridges = cartridges

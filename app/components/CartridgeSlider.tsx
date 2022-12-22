@@ -1,56 +1,10 @@
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
-import BWCartridgeImg from "../../public/img/cartridges/bw.png";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { CTAButton } from "./Button";
 import { Arrow } from "./Arrow";
-
-// TODO: replace this with the one in the const file
-const CARTRIDGE_LIST = [
-  {
-    name: "BridgeWorld",
-    link: "https://bridgeworld.treasure.lol",
-    tags: ["P2E", "Fantasy"],
-    image: BWCartridgeImg,
-  },
-  {
-    name: "BridgeWorld",
-    link: "https://bridgeworld.treasure.lol",
-    tags: ["P2E", "Fantasy"],
-    image: BWCartridgeImg,
-  },
-  {
-    name: "BridgeWorld",
-    link: "https://bridgeworld.treasure.lol",
-    tags: ["P2E", "Fantasy"],
-    image: BWCartridgeImg,
-  },
-  {
-    name: "BridgeWorld",
-    link: "https://bridgeworld.treasure.lol",
-    tags: ["P2E", "Fantasy"],
-    image: BWCartridgeImg,
-  },
-  {
-    name: "BridgeWorld",
-    link: "https://bridgeworld.treasure.lol",
-    tags: ["P2E", "Fantasy"],
-    image: BWCartridgeImg,
-  },
-  {
-    name: "BridgeWorld",
-    link: "https://bridgeworld.treasure.lol",
-    tags: ["P2E", "Fantasy"],
-    image: BWCartridgeImg,
-  },
-  {
-    name: "BridgeWorld",
-    link: "https://bridgeworld.treasure.lol",
-    tags: ["P2E", "Fantasy"],
-    image: BWCartridgeImg,
-  },
-] as const;
+import { cartridges } from "~/const";
 
 const INITIAL_SLIDE = 3;
 
@@ -92,7 +46,7 @@ export const CartridgeSlider = () => {
           ref={slideRef}
           className="keen-slider [mask-image:linear-gradient(to_left,#0000,#000_20%,#000_80%,#0000)]"
         >
-          {CARTRIDGE_LIST.map((cartridge, index) => {
+          {cartridges.map((cartridge, index) => {
             const currentIndex = index === currentSlide;
 
             const isNearCurrentIndex = Math.abs(index - currentSlide) <= 1;
@@ -120,7 +74,7 @@ export const CartridgeSlider = () => {
                     />
                     <CTAButton
                       as="a"
-                      href={cartridge.link}
+                      href={cartridge.websiteLink}
                       hideExternalIcon
                       className="absolute left-1/2 bottom-24 -translate-x-1/2 border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm xl:bottom-24 2xl:bottom-36"
                     >
