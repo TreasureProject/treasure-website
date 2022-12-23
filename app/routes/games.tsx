@@ -8,7 +8,7 @@ import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
 import { useState } from "react";
 import {
-  cartridges,
+  sliderCartridges,
   coreCartridges,
   nonCoreCartridges,
   socials,
@@ -196,8 +196,8 @@ export default function Games() {
         aria-labelledby="other-information"
         className="relative bg-honey-100 py-16"
       >
-        <div className="px-4 sm:px-6 lg:px-24">
-          <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-3">
+        <div className="px-4 sm:px-6 xl:px-24">
+          <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
             <NewCard
               title="Build with Treasure"
               description="Games on Treasure"
@@ -231,7 +231,10 @@ export default function Games() {
                     rel="noopener noreferrer"
                   >
                     <span className="sr-only">{social.name}</span>
-                    <social.icon className="h-8 w-8" aria-hidden="true" />
+                    <social.icon
+                      className="h-6 w-6 sm:h-8 sm:w-8"
+                      aria-hidden="true"
+                    />
                   </a>
                 ))}
               </div>
@@ -261,7 +264,7 @@ const PartnerSlideMobile = () => {
     },
   });
 
-  const currentSlideInfo = cartridges[currentSlide];
+  const currentSlideInfo = sliderCartridges[currentSlide];
 
   return (
     <div className="relative">
@@ -274,11 +277,11 @@ const PartnerSlideMobile = () => {
         ref={slideRef}
         className="keen-slider"
       >
-        {cartridges.map((feature) => (
+        {sliderCartridges.map((feature) => (
           <div key={feature.name} className="keen-slider__slide px-16 sm:px-24">
             <img
               className="h-64 w-full rounded-2xl border-2 border-night-800 object-cover [mask-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:h-96"
-              src={feature.image}
+              src={feature.sliderImage ?? ""}
               alt=""
             />
           </div>
@@ -417,13 +420,13 @@ const PartnerSlideDesktop = () => {
     ]
   );
 
-  const currentSlideInfo = cartridges[currentSlide];
+  const currentSlideInfo = sliderCartridges[currentSlide];
 
   return (
     <div className="grid grid-cols-12 items-center gap-8">
-      <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden">
-        <div className="h-[28rem] space-y-3 overflow-y-auto xl:h-[34rem]">
-          {cartridges.map((feature, featureIndex) => (
+      <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden xl:col-span-5">
+        <div className="h-[20rem] space-y-3 overflow-y-auto xl:h-[26rem] 2xl:h-[30rem]">
+          {sliderCartridges.map((feature, featureIndex) => (
             <div
               key={feature.name}
               className="relative rounded-2xl transition-colors hover:bg-night-800/30"
@@ -455,7 +458,7 @@ const PartnerSlideDesktop = () => {
           ))}
         </div>
       </div>
-      <div className="relative col-span-8 h-[28rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:h-[34rem]">
+      <div className="relative col-span-8 h-[20rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:col-span-7 xl:h-[26rem] 2xl:h-[30rem]">
         <SpinnerIcon
           className={twMerge(
             "mx-auto h-full w-6 text-night-500",
@@ -463,11 +466,11 @@ const PartnerSlideDesktop = () => {
           )}
         />
         <div ref={slideRef} className="keen-slider h-full">
-          {cartridges.map((feature) => (
-            <div key={feature.name} className="keen-slider__slide">
+          {sliderCartridges.map((feature) => (
+            <div key={feature.name} className="keen-slider__slide aspect-video">
               <img
-                className="h-full w-full object-cover [mask-image:linear-gradient(to_left,#000_10%,#0000_90%)] xl:[mask-image:linear-gradient(to_left,#000_20%,#0000_90%)]"
-                src={feature.image}
+                className="h-full w-full [mask-image:linear-gradient(to_left,#000_10%,#0000_90%)] xl:[mask-image:linear-gradient(to_left,#000_20%,#0000_90%)]"
+                src={feature.sliderImage ?? ""}
                 alt=""
               />
             </div>
@@ -482,14 +485,16 @@ const PartnerSlideDesktop = () => {
         >
           <img
             src={currentSlideInfo.logo}
-            className="w-80"
+            className="w-48 xl:w-80"
             alt={currentSlideInfo.name}
           />
-          <div className="mt-6 max-w-min space-y-3.5">
-            <p className="whitespace-nowrap text-4xl font-bold text-night-100">
+          <div className="mt-6 space-y-3.5 xl:max-w-min">
+            <p className="whitespace-nowrap text-xl font-bold text-night-100 xl:text-4xl">
               {currentSlideInfo.title}
             </p>
-            <p className="text-night-100">{currentSlideInfo.description}</p>
+            <p className="text-xs text-night-100 xl:text-base">
+              {currentSlideInfo.description}
+            </p>
           </div>
           <div className="mt-6 flex space-x-3.5">
             <CTAButton

@@ -75,7 +75,7 @@ export default function Home() {
                     <a
                       key={cta.name}
                       href={cta.href}
-                      className="group relative flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
+                      className="relative flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
                     >
                       {cta.icon}
                       <p className="mt-3 text-base font-bold text-night-900 xl:text-2xl">
@@ -84,7 +84,7 @@ export default function Home() {
                       <p className="mt-1 break-words text-sm text-night-700 xl:text-xl">
                         {cta.description}
                       </p>
-                      <ArrowTopRightOnSquareIcon className="absolute right-5 top-5 h-5 w-5 fill-honey-900 opacity-0 transition-opacity duration-500 group-hover:opacity-100 [&>path]:stroke-honey-900 [&>path]:stroke-[1]" />
+                      <ArrowTopRightOnSquareIcon className="absolute right-5 top-5 h-5 w-5 fill-night-700 transition-opacity duration-500 lg:right-7 lg:top-7 [&>path]:stroke-night-700 [&>path]:stroke-[1]" />
                     </a>
                   );
                 }
@@ -176,10 +176,26 @@ export default function Home() {
           className="relative bg-honey-100 py-16"
         >
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
+            <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
+              <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
+                <div className="space-y-2.5">
+                  <p className="text-2xl font-bold text-honey-100 sm:text-4xl">
+                    Build with Treasure
+                  </p>
+                  <p className="text-sm text-night-100 sm:text-lg">
+                    Apply to the Ecosystem Integration Framework to supercharge
+                    your game.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <CTAButton to="/build" type="primary" hideExternalIcon>
+                    Start Building
+                  </CTAButton>
+                </div>
+              </div>
               <NewCard
                 title="Get Magic"
-                description="Games on Treasure"
+                description="Our native token MAGIC is your access pass to games powered by Treasure."
                 image={GetMagicImg}
               >
                 <CTAButton as="a" href="#" type="primary" hideExternalIcon>
@@ -201,7 +217,10 @@ export default function Home() {
                       rel="noopener noreferrer"
                     >
                       <span className="sr-only">{social.name}</span>
-                      <social.icon className="h-8 w-8" aria-hidden="true" />
+                      <social.icon
+                        className="h-6 w-6 sm:h-8 sm:w-8"
+                        aria-hidden="true"
+                      />
                     </a>
                   ))}
                 </div>

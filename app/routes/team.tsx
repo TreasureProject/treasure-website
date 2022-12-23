@@ -4,8 +4,8 @@ import { DiscordIcon, TwitterIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
 import { teamMembers } from "~/const";
 import classNames from "clsx";
-import TreasureTeamImg from "../../public/img/TreasureTeam.png";
-import DefaultPfpImg from "../../public/img/pfps/default.png";
+import TreasureTeamImg from "@/img/TreasureTeam.png";
+import DefaultPfpImg from "@/img/pfps/default.png";
 
 import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";

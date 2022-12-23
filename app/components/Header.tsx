@@ -4,12 +4,10 @@ import {
   ChevronDownIcon,
   XMarkIcon,
   ArrowTopRightOnSquareIcon,
-  ChevronRightIcon,
 } from "@heroicons/react/24/solid";
 import { Link, useLocation, useMatches } from "@remix-run/react";
 import { Fragment } from "react";
 import { navigation, socials } from "~/const";
-import { MagicIcon, TroveRevertedIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 
 import classNames from "clsx";
@@ -17,23 +15,49 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import DataJson from "../lotties/data.json";
 import { useTranslation } from "react-i18next";
 
-export const Header = () => {
-  const matches = useMatches();
-
+export const Header = ({ openModal }: { openModal: () => void }) => {
   const { t } = useTranslation("index", {
     keyPrefix: "common",
   });
 
-  const isLeafPage = matches.some((match) => !!match.handle?.breadcrumb);
-
-  const location = useLocation();
-
   return (
     <>
-      <Popover as="header" className="sticky top-0 z-[99999] lg:relative">
+      <Popover as="header" className="sticky top-0 z-[99999] xl:relative">
+        <div className="hidden bg-night-900 px-14 py-6 xl:block">
+          <div className="ml-auto flex max-w-max items-center space-x-8">
+            <div className="space-x-8">
+              {/* add blog later */}
+              <a
+                href="https://magicswap.lol/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-sm text-ruby-100"
+              >
+                MagicSwap
+              </a>
+              <button onClick={openModal} className="text-sm text-ruby-100">
+                Buy MAGIC
+              </button>
+            </div>
+            <div className="flex space-x-6">
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  className="text-honey-200 hover:text-honey-400"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">{social.name}</span>
+                  <social.icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="bg-honey-25 py-4 sm:py-0">
-          <div className="relative mx-auto flex max-w-9xl items-center justify-center px-4 lg:py-8 lg:px-0">
-            <div className="flex w-full items-center justify-between lg:absolute lg:left-12 lg:w-auto">
+          <div className="relative mx-auto flex max-w-9xl items-center justify-center px-4 xl:py-8 xl:px-0">
+            <div className="flex w-full items-center justify-between xl:absolute xl:left-12 xl:w-auto">
               <Link to="/">
                 <span className="sr-only">Home</span>
                 <Player
@@ -43,7 +67,7 @@ export const Header = () => {
                   className="h-16 w-40 xl:h-20 xl:w-auto"
                 />
               </Link>
-              <div className="-mr-2 flex items-center lg:hidden">
+              <div className="-mr-2 flex items-center xl:hidden">
                 <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-honey-50">
                   <span className="sr-only">Open main menu</span>
                   <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -52,7 +76,7 @@ export const Header = () => {
             </div>
             <Popover.Group
               as="nav"
-              className="hidden space-x-8 lg:flex xl:space-x-16"
+              className="hidden space-x-8 xl:flex xl:space-x-16"
             >
               {navigation.map((item) => {
                 if (item.links) {
@@ -132,9 +156,10 @@ export const Header = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base font-bold text-night-900 hover:text-night-700"
+                      className="flex items-center justify-between text-base font-bold text-night-900 hover:text-night-700"
                     >
                       {t(item.name)}
+                      <ArrowTopRightOnSquareIcon className="ml-1.5 h-4 w-4 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1] group-hover:[&>path]:stroke-ruby-600" />
                     </a>
                   );
                 }
@@ -151,7 +176,7 @@ export const Header = () => {
                 );
               })}
             </Popover.Group>
-            <div className="absolute right-4 hidden items-center sm:right-8 lg:right-12 lg:flex xl:space-x-8">
+            <div className="absolute right-4 hidden items-center sm:right-8 xl:right-12 xl:flex xl:space-x-8">
               <Link
                 to="/build"
                 className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"
@@ -173,7 +198,7 @@ export const Header = () => {
         >
           <Popover.Panel
             focus
-            className="absolute inset-x-0 top-0 z-40 origin-top transform transition lg:hidden"
+            className="absolute inset-x-0 top-0 z-40 origin-top transform transition xl:hidden"
           >
             <div className="overflow-hidden bg-honey-50 shadow-md ring-1 ring-black ring-opacity-5">
               <div className="flex items-center justify-between px-4 pt-4 sm:px-8 sm:pt-6">

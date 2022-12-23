@@ -42,6 +42,7 @@
     "react-dom": "^18.1.0",
     "react-i18next": "^11.17.2",
     "react-player": "^2.10.1",
+    "react-wrap-balancer": "^0.2.3",
     "remix-i18next": "^4.1.1",
     "remix-utils": "^3.3.0",
     "slugify": "^1.6.5",

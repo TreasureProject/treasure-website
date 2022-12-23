@@ -39,7 +39,7 @@ export const NewCard = ({
     </div>
     <div className="z-10 mt-8">{children}</div>
     <div className="absolute -bottom-1 right-0">
-      <img src={image} className="ml-auto w-5/12" alt="Hero" />
+      <img src={image} className="ml-auto w-2/6 sm:w-5/12" alt={title} />
     </div>
   </div>
 );

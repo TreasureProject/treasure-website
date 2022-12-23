@@ -7,7 +7,6 @@ import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
-import { CartridgesIcon } from "~/components/Icons";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
 import { builderTweets, core5Cartridges } from "~/const";
@@ -17,8 +16,15 @@ import HeroImg from "@/img/hero.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
 
 import PartnerImg from "@/img/partner.webp";
-import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { Link } from "@remix-run/react";
+import TreasureTeamImg from "@/img/TreasureTeam.png";
+
+// Icons
+import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
+import OpenSourceIcon from "@/img/icons/Badge_Open_Source.svg";
+import InfraIcon from "@/img/icons/Infra.svg";
+import InteropIcon from "@/img/icons/Interop.svg";
+import DocIcon from "@/img/icons/Docs.svg";
 
 export default function Build() {
   const mouseX = useMotionValue(0);
@@ -91,7 +97,12 @@ export default function Build() {
                   className="relative col-span-4 rounded-tl-lg bg-[#131D2E] px-8 py-7 transition-colors duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-3"
                 >
                   <div className="flex flex-col items-start">
-                    <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
+                    {/* <CartridgesIcon className="h-12 w-12" aria-hidden="true" /> */}
+                    <img
+                      src={GameBuildersProgramIcon}
+                      className="h-12"
+                      alt="Game Builders Program Icon"
+                    />
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Ecosystem Integration Framework
                     </p>
@@ -108,7 +119,11 @@ export default function Build() {
                   className="relative col-span-4 bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-3 lg:col-end-4"
                 >
                   <div className="flex flex-col items-start">
-                    <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
+                    <img
+                      src={OpenSourceIcon}
+                      className="h-12"
+                      alt="Open Source Icon"
+                    />
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Open Source
                     </p>
@@ -125,7 +140,11 @@ export default function Build() {
                   className="relative col-span-4 rounded-tr-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-4 lg:col-end-5"
                 >
                   <div className="flex flex-col items-start">
-                    <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
+                    <img
+                      src={DocIcon}
+                      className="h-12"
+                      alt="Documentation Icon"
+                    />
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Documentation
                     </p>
@@ -142,7 +161,11 @@ export default function Build() {
                   className="relative col-span-4 rounded-bl-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-2"
                 >
                   <div className="flex flex-col items-start">
-                    <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
+                    <img
+                      src={InfraIcon}
+                      className="h-12"
+                      alt="Infrastructure Icon"
+                    />
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Infrastructure
                     </p>
@@ -158,7 +181,11 @@ export default function Build() {
                   className="relative col-span-4 bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-2 lg:col-end-4"
                 >
                   <div className="flex flex-col items-start">
-                    <CartridgesIcon className="h-12 w-12" aria-hidden="true" />
+                    <img
+                      src={InteropIcon}
+                      className="h-12"
+                      alt="Interoperability Icon"
+                    />
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Interoperability
                     </p>
@@ -211,7 +238,7 @@ export default function Build() {
                 />
               </div>
               <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-bold text-night-900 sm:text-4xl">
+                <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
                   Join a vibrant and intimate ecosystem
                 </h3>
                 <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
@@ -247,7 +274,7 @@ export default function Build() {
                 />
               </div>
               <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-bold text-night-900 sm:text-4xl">
+                <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
                   Leverage immersive gaming experiences
                 </h3>
                 <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
@@ -283,7 +310,7 @@ export default function Build() {
                 />
               </div>
               <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-bold text-night-900 sm:text-4xl">
+                <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
                   Access powerful enablers and accelerants
                 </h3>
                 <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
@@ -423,10 +450,10 @@ export default function Build() {
                         "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
                     }}
                   ></div>
-                  <div className="relative [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
+                  <div className="relative aspect-square [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:aspect-auto">
                     <img
                       src={cartridge.image}
-                      className="h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                       alt=""
                     />
                   </div>
@@ -513,7 +540,7 @@ export default function Build() {
             <NewCard
               title="Ecosystem Careers"
               description="Join the team at Treasure and our games to build the future of gaming in web3."
-              image={JoinCommunityImg}
+              image={TreasureTeamImg}
             >
               <CTAButton as="a" href="#" type="primary" hideExternalIcon>
                 See open jobs
