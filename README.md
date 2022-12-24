@@ -1,6 +1,6 @@
 # Web3 Frontend Starter Template
 
-This is an opiniated web3 frontend starter template from TreasureDAO.
+This is an opiniated web3 frontend starter template from Treasure.
 
 ## Tech Stack
 

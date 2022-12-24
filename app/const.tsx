@@ -574,7 +574,7 @@ export const tweets = [
     link: "https://twitter.com/TalesofElleria",
     tweet: () => (
       <>
-        Building with Treasure has been a fantastic experience. The sincerity
+        Building with TreasureDAO has been a fantastic experience. The sincerity
         behind their support, as well as opportunities provided is unparalleled
         throughout web3. From social outreach to marketplace integration,
         Treasure has been swift and helpful in all aspects.
@@ -929,9 +929,9 @@ export const cartridges = [
   {
     name: "Smolverse",
     image: SmolverseImg,
-    discordLink: "https://discord.gg/smolverse",
-    TwitterLink: "https://twitter.com/smolverse",
-    websiteLink: "https://smolverse.lol",
+    discordLink: "https://discord.gg/treasuredao",
+    TwitterLink: "https://twitter.com/playbridgeworld",
+    websiteLink: "https://bridgeworld.treasure.lol",
     logo: BWTextSvg,
     sliderImage: SmolverseSliderImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
