@@ -2,7 +2,12 @@ import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { DiscordIcon, TwitterIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
-import { teamMembers } from "~/const";
+import {
+  teamCoFounders,
+  teamTrove,
+  teamBridgeworld,
+  teamSmolverse,
+} from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.png";
 import DefaultPfpImg from "@/img/pfps/default.png";
@@ -49,7 +54,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
           "mt-7 space-y-3 text-center"
         )}
       >
-        <p className="text-black-900 text-3xl font-bold">{member.name}</p>
+        <p className="text-2xl font-bold text-night-900">{member.name}</p>
         <div className="inline-flex flex-1 items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
           <h3 className="font-mono font-medium text-ruby-900">
             {member.title}
@@ -113,7 +118,7 @@ export default function Team() {
       <div className="relative bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
-            {teamMembers.map((member) => (
+            {teamCoFounders.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>

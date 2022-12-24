@@ -3,6 +3,7 @@
     "Learn": "Learn",
     "Discover": "Discover",
     "Build": "Build",
+    "Build with Treasure": "Build with Treasure",
     "Contribute": "Contribute",
     "LP": "LP",
     "Marketplace": "Marketplace",
@@ -13,6 +14,7 @@
       "percentCirculatingSupply": "% Circ. Supply Locked"
     },
     "Integration Framework": "Integration Framework",
+    "Game Integration Framework": "Game Integration Framework",
     "Interoperability": "Interoperability",
     "What is MAGIC?": "What is MAGIC?",
     "About Treasure": "About Treasure",
