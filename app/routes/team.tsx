@@ -95,7 +95,7 @@ export default function Team() {
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
           <Badge name="Contributors" bgColor="bg-honey-100" />
           <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
-            Meet the builders behind TreasureDAO
+            Meet the builders behind Treasure
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">

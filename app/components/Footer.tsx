@@ -142,7 +142,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
         </div>
         <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 sm:flex-row">
           <p className="mt-12 text-sm text-night-700 sm:mt-0">
-            &copy; 2021-2022 TreasureDAO
+            &copy; 2021-2022 Treasure
           </p>
           <div className="flex space-x-6">
             {socials.map((social) => (
