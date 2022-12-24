@@ -115,10 +115,43 @@ export default function Team() {
           </div>
         </div>
       </div>
-      <div className="relative bg-honey-100 py-16 sm:py-24">
+      <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Founders
+          </p>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
             {teamCoFounders.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Trove
+          </p>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+            {teamTrove.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Bridgeworld
+          </p>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+            {teamBridgeworld.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Smolverse
+          </p>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+            {teamSmolverse.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
