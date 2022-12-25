@@ -574,7 +574,7 @@ export const tweets = [
     link: "https://twitter.com/TalesofElleria",
     tweet: () => (
       <>
-        Building with TreasureDAO has been a fantastic experience. The sincerity
+        Building with Treasure has been a fantastic experience. The sincerity
         behind their support, as well as opportunities provided is unparalleled
         throughout web3. From social outreach to marketplace integration,
         Treasure has been swift and helpful in all aspects.
