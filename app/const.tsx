@@ -48,6 +48,7 @@ import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
 import CoinbaseImg from "../public/img/magic-list/coinbase.svg";
 import MoonPayImg from "../public/img/magic-list/moonpay.svg";
 import OkxImg from "../public/img/magic-list/okx.svg";
+import BinanceImg from "../public/img/magic-list/binance.svg";
 
 import BountyBoardImg from "../public/img/illustrations/bountyBoard.png";
 import BuildWithUsImg from "../public/img/illustrations/buildWithUs.png";
@@ -293,14 +294,14 @@ export const magicPurchaseLinks = [
     icon: MoonPayImg,
   },
   {
+    name: "Binance",
+    url: "https://www.binance.com/en/trade/MAGIC_USDT?theme=dark&type=spot?ref=546318140",
+    icon: BinanceImg,
+  },
+  {
     name: "Coinbase",
     url: "https://exchange.coinbase.com/trade/MAGIC-USD",
     icon: CoinbaseImg,
-  },
-  {
-    name: "OKX",
-    url: "https://www.okx.com/trade-spot/magic-usdt",
-    icon: OkxImg,
   },
 ];
 
