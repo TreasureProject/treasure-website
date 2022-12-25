@@ -23,19 +23,22 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
   return (
     <>
       <Popover as="header" className="sticky top-0 z-[99999] xl:relative">
-        <div className="hidden bg-night-900 px-14 py-6 xl:block">
-          <div className="ml-auto flex max-w-max items-center space-x-8">
+        <div className="hidden bg-night-900 py-3 xl:block">
+          <div className="mx-auto flex max-w-9xl items-center justify-end space-x-8 px-6">
             <div className="space-x-8">
-              {/* add blog later */}
+              {/* todo: add blog later */}
               <a
                 href="https://magicswap.lol/"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="text-sm text-ruby-100"
+                className="text-xs text-ruby-100 hover:text-ruby-200"
               >
                 MagicSwap
               </a>
-              <button onClick={openModal} className="text-sm text-ruby-100">
+              <button
+                onClick={openModal}
+                className="text-xs text-ruby-100 hover:text-ruby-200"
+              >
                 Buy MAGIC
               </button>
             </div>
@@ -49,7 +52,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                   rel="noopener noreferrer"
                 >
                   <span className="sr-only">{social.name}</span>
-                  <social.icon className="h-6 w-6" aria-hidden="true" />
+                  <social.icon className="h-5 w-5" aria-hidden="true" />
                 </a>
               ))}
             </div>
@@ -57,7 +60,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
         </div>
         <div className="bg-honey-25 py-4 sm:py-0">
           <div className="relative mx-auto flex max-w-9xl items-center justify-center px-4 xl:py-8 xl:px-0">
-            <div className="flex w-full items-center justify-between xl:absolute xl:left-12 xl:w-auto">
+            <div className="left-0 flex w-full items-center justify-between sm:left-4 xl:absolute xl:w-auto">
               <Link to="/">
                 <span className="sr-only">Home</span>
                 <Player
@@ -176,7 +179,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
                 );
               })}
             </Popover.Group>
-            <div className="absolute right-4 hidden items-center sm:right-8 xl:right-12 xl:flex xl:space-x-8">
+            <div className="absolute right-4 right-0 hidden items-center sm:right-6 xl:flex xl:space-x-8">
               <Link
                 to="/build"
                 className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"

@@ -55,7 +55,7 @@ export function Tweet({
             alt={`${props.username}'s profile`}
           />
           <div className="ml-4 flex flex-col justify-center">
-            <p>{props.username}</p>
+            <p className="font-bold">{props.username}</p>
             <p>{props.handle}</p>
           </div>
         </figcaption>

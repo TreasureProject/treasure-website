@@ -1,7 +1,6 @@
 import { Badge } from "~/components/Badge";
 import { IndexCTA, partners, socials } from "~/const";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import { TreasurePosts } from "~/components/TreasurePosts";
 
 import { Build } from "~/components/Build";
 import { Fragment, useState } from "react";
@@ -78,10 +77,10 @@ export default function Home() {
                       className="relative flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
                     >
                       {cta.icon}
-                      <p className="mt-3 text-base font-bold text-night-900 xl:text-2xl">
+                      <p className="mt-3 text-base font-bold text-night-900 xl:text-xl">
                         {cta.name}
                       </p>
-                      <p className="mt-1 break-words text-sm text-night-700 xl:text-xl">
+                      <p className="mt-1 break-words text-sm text-night-700 xl:text-lg">
                         {cta.description}
                       </p>
                       <ArrowTopRightOnSquareIcon className="absolute right-5 top-5 h-5 w-5 fill-night-700 transition-opacity duration-500 lg:right-7 lg:top-7 [&>path]:stroke-night-700 [&>path]:stroke-[1]" />
@@ -96,10 +95,10 @@ export default function Home() {
                     className="flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
                   >
                     {cta.icon}
-                    <p className="mt-3 text-base font-bold text-night-900 xl:text-2xl">
+                    <p className="mt-3 text-base font-bold text-night-900 xl:text-xl">
                       {cta.name}
                     </p>
-                    <p className="mt-1 break-words text-sm text-night-700 xl:text-xl">
+                    <p className="mt-1 break-words text-sm text-night-700 xl:text-lg">
                       {cta.description}
                     </p>
                   </Link>
@@ -111,7 +110,7 @@ export default function Home() {
         <div className="relative bg-night-900 py-16 sm:py-24">
           <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
             <Badge
-              name="Games Powered by Treasure"
+              name="Games"
               bgColor="bg-night-800"
               textColor="text-night-200"
             />
@@ -165,7 +164,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <TreasurePosts />
 
         <Reviews />
 
@@ -175,7 +173,7 @@ export default function Home() {
           aria-labelledby="other-information"
           className="relative bg-honey-100 py-16"
         >
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="mx-auto max-w-9xl px-4 sm:px-6">
             <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
               <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
                 <div className="space-y-2.5">
@@ -189,7 +187,7 @@ export default function Home() {
                 </div>
                 <div className="mt-8">
                   <CTAButton to="/build" type="primary" hideExternalIcon>
-                    Start Building
+                    Start building
                   </CTAButton>
                 </div>
               </div>
@@ -199,7 +197,7 @@ export default function Home() {
                 image={GetMagicImg}
               >
                 <CTAButton as="a" href="#" type="primary" hideExternalIcon>
-                  Discover More
+                  Discover more
                 </CTAButton>
               </NewCard>
               <NewCard

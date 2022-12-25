@@ -432,7 +432,7 @@ export default function Build() {
                 Integrated games
               </p>
               <span className="text-base font-bold text-honey-300 sm:text-xl">
-                +40
+                +10
               </span>
             </div>
           </div>
@@ -461,7 +461,7 @@ export default function Build() {
                     <p className="max-w-[70%] text-2xl font-bold text-honey-25">
                       {cartridge.name}
                     </p>
-                    <div className="mt-5 space-x-2.5">
+                    {/*<div className="mt-5 space-x-2.5">
                       {cartridge.tags.map((tag) => (
                         <span
                           key={tag}
@@ -470,7 +470,7 @@ export default function Build() {
                           {tag}
                         </span>
                       ))}
-                    </div>
+                    </div>*/}
                   </div>
                 </div>
               );
@@ -528,15 +528,22 @@ export default function Build() {
             </div>
           </div>
           <div className="mt-14 grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
-            <NewCard
-              title="Build with Treasure"
-              description="Apply to our Game Builders Program to supercharge your game."
-              image={HeroImg}
-            >
-              <CTAButton to="/build" type="primary">
-                Learn more
-              </CTAButton>
-            </NewCard>
+            <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
+              <div className="space-y-2.5">
+                <p className="text-2xl font-bold text-honey-100 sm:text-4xl">
+                  Build with Treasure
+                </p>
+                <p className="text-sm text-night-100 sm:text-lg">
+                  Apply to the Ecosystem Integration Framework to supercharge
+                  your game.
+                </p>
+              </div>
+              <div className="mt-8">
+                <CTAButton to="/build" type="primary" hideExternalIcon>
+                  Start building
+                </CTAButton>
+              </div>
+            </div>
             <NewCard
               title="Ecosystem Careers"
               description="Join the team at Treasure and our games to build the future of gaming in web3."

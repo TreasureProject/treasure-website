@@ -65,7 +65,7 @@ export default function Games() {
         aria-labelledby="games-slider"
         className="relative bg-night-900 py-16 sm:py-24"
       >
-        <div className="hidden px-24 lg:block">
+        <div className="mx-auto hidden max-w-9xl px-4 sm:px-6 lg:block">
           <PartnerSlideDesktop />
         </div>
         <div className="block lg:hidden">
@@ -77,7 +77,7 @@ export default function Games() {
         aria-labelledby="powered-by-treasure-games-list"
         className="relative bg-night-900 py-8 sm:py-16"
       >
-        <div className="px-4 sm:px-6 lg:px-24">
+        <div className="mx-auto max-w-9xl px-4 sm:px-6">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-min space-y-5">
               <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
@@ -93,7 +93,7 @@ export default function Games() {
                 Integrated games
               </p>
               <span className="text-base font-bold text-honey-300 sm:text-xl">
-                +40
+                +10
               </span>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Games() {
         aria-labelledby="games-list"
         className="relative bg-night-900 py-8 sm:py-16"
       >
-        <div className="px-4 sm:px-6 lg:px-24">
+        <div className="mx-auto max-w-9xl px-4 sm:px-6">
           <p className="mx-auto w-min whitespace-nowrap text-xl font-bold text-honey-200 sm:mx-0 sm:text-4xl">
             Games
           </p>
@@ -196,7 +196,7 @@ export default function Games() {
         aria-labelledby="other-information"
         className="relative bg-honey-100 py-16"
       >
-        <div className="px-4 sm:px-6 xl:px-24">
+        <div className="mx-auto max-w-9xl px-4 sm:px-6">
           <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
             <NewCard
               title="Build with Treasure"
@@ -424,7 +424,7 @@ const PartnerSlideDesktop = () => {
 
   return (
     <div className="grid grid-cols-12 items-center gap-8">
-      <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden xl:col-span-5">
+      <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden xl:col-span-3">
         <div className="h-[20rem] space-y-3 overflow-y-auto xl:h-[26rem] 2xl:h-[30rem]">
           {sliderCartridges.map((feature, featureIndex) => (
             <div
@@ -458,7 +458,7 @@ const PartnerSlideDesktop = () => {
           ))}
         </div>
       </div>
-      <div className="relative col-span-8 h-[20rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:col-span-7 xl:h-[26rem] 2xl:h-[30rem]">
+      <div className="relative col-span-8 h-[20rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:col-span-9 xl:h-[26rem] 2xl:h-[30rem]">
         <SpinnerIcon
           className={twMerge(
             "mx-auto h-full w-6 text-night-500",

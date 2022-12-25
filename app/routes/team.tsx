@@ -2,7 +2,12 @@ import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { DiscordIcon, TwitterIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
-import { teamMembers } from "~/const";
+import {
+  teamCoFounders,
+  teamTrove,
+  teamBridgeworld,
+  teamSmolverse,
+} from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.png";
 import DefaultPfpImg from "@/img/pfps/default.png";
@@ -49,7 +54,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
           "mt-7 space-y-3 text-center"
         )}
       >
-        <p className="text-black-900 text-3xl font-bold">{member.name}</p>
+        <p className="text-2xl font-bold text-night-900">{member.name}</p>
         <div className="inline-flex flex-1 items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
           <h3 className="font-mono font-medium text-ruby-900">
             {member.title}
@@ -90,7 +95,7 @@ export default function Team() {
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
           <Badge name="Contributors" bgColor="bg-honey-100" />
           <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
-            Meet the builders behind TreasureDAO
+            Meet the builders behind Treasure
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
@@ -110,10 +115,43 @@ export default function Team() {
           </div>
         </div>
       </div>
-      <div className="relative bg-honey-100 py-16 sm:py-24">
+      <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Founders
+          </p>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
-            {teamMembers.map((member) => (
+            {teamCoFounders.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Trove
+          </p>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+            {teamTrove.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Bridgeworld
+          </p>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+            {teamBridgeworld.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mt-12 mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Smolverse
+          </p>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+            {teamSmolverse.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>

@@ -6,13 +6,14 @@ import { CTAButton } from "./Button";
 import { Arrow } from "./Arrow";
 import { cartridges } from "~/const";
 
-const INITIAL_SLIDE = 3;
+const INITIAL_SLIDE = 5;
 
 export const CartridgeSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(INITIAL_SLIDE);
 
   const [slideRef, instanceRef] = useKeenSlider({
     initial: INITIAL_SLIDE,
+    loop: true,
     slides: {
       origin: "center",
       perView: 1,
