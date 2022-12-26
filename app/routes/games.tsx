@@ -65,7 +65,7 @@ export default function Games() {
         aria-labelledby="games-slider"
         className="relative bg-night-900 py-16 sm:py-24"
       >
-        <div className="mx-auto hidden max-w-9xl px-4 sm:px-6 lg:block">
+        <div className="mx-auto hidden max-w-9xl px-4 sm:px-24 lg:block">
           <PartnerSlideDesktop />
         </div>
         <div className="block lg:hidden">
@@ -77,7 +77,7 @@ export default function Games() {
         aria-labelledby="powered-by-treasure-games-list"
         className="relative bg-night-900 py-8 sm:py-16"
       >
-        <div className="mx-auto max-w-9xl px-4 sm:px-6">
+        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-min space-y-5">
               <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
@@ -100,7 +100,10 @@ export default function Games() {
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
             {coreCartridges.map((cartridge) => {
               return (
-                <div
+                <a
+                  href={cartridge.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
                   key={cartridge.name}
                 >
@@ -122,18 +125,8 @@ export default function Games() {
                     <p className="max-w-[70%] text-2xl font-bold text-honey-25">
                       {cartridge.name}
                     </p>
-                    <div className="mt-5 space-x-2.5">
-                      {cartridge.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="inline-block rounded-md bg-night-800/50 px-2.5 py-1 text-xs font-medium uppercase leading-4 text-night-400 backdrop-blur-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
-                </div>
+                </a>
               );
             })}
           </div>
@@ -144,7 +137,7 @@ export default function Games() {
         aria-labelledby="games-list"
         className="relative bg-night-900 py-8 sm:py-16"
       >
-        <div className="mx-auto max-w-9xl px-4 sm:px-6">
+        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
           <p className="mx-auto w-min whitespace-nowrap text-xl font-bold text-honey-200 sm:mx-0 sm:text-4xl">
             Games
           </p>
@@ -152,7 +145,10 @@ export default function Games() {
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
             {nonCoreCartridges.map((cartridge) => {
               return (
-                <div
+                <a
+                  href={cartridge.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
                   key={cartridge.name}
                 >
@@ -185,7 +181,7 @@ export default function Games() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </a>
               );
             })}
           </div>
@@ -196,7 +192,7 @@ export default function Games() {
         aria-labelledby="other-information"
         className="relative bg-honey-100 py-16"
       >
-        <div className="mx-auto max-w-9xl px-4 sm:px-6">
+        <div className="mx-auto max-w-9xl px-4 sm:px-6 xl:px-24">
           <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
             <NewCard
               title="Build with Treasure"
@@ -330,11 +326,13 @@ const PartnerSlideMobile = () => {
         initial="initial"
         animate="animate"
       >
-        <img
-          src={currentSlideInfo.logo}
-          className="mx-auto w-32 sm:w-48"
-          alt={currentSlideInfo.name}
-        />
+        {currentSlideInfo.logo ? (
+          <img
+            src={currentSlideInfo.logo}
+            className="mx-auto w-32 sm:w-48"
+            alt={currentSlideInfo.name}
+          />
+        ) : null}
         <div className="mt-3 space-y-2">
           <p className="text-xs font-bold text-night-100 sm:text-base">
             {currentSlideInfo.title}
@@ -483,11 +481,13 @@ const PartnerSlideDesktop = () => {
           initial="initial"
           animate="animate"
         >
-          <img
-            src={currentSlideInfo.logo}
-            className="w-48 xl:w-80"
-            alt={currentSlideInfo.name}
-          />
+          {currentSlideInfo.logo ? (
+            <img
+              src={currentSlideInfo.logo}
+              className="w-52"
+              alt={currentSlideInfo.name}
+            />
+          ) : null}
           <div className="mt-6 space-y-3.5 xl:max-w-min">
             <p className="whitespace-nowrap text-xl font-bold text-night-100 xl:text-4xl">
               {currentSlideInfo.title}

@@ -154,10 +154,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
                 rel="noopener noreferrer"
               >
                 <span className="sr-only">{social.name}</span>
-                <social.icon
-                  className="h-6 w-6 sm:h-8 sm:w-8"
-                  aria-hidden="true"
-                />
+                <social.icon className="h-5 w-5" aria-hidden="true" />
               </a>
             ))}
           </div>

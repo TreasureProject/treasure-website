@@ -16,27 +16,11 @@ export const CartridgeSlider = () => {
     loop: true,
     slides: {
       origin: "center",
-      perView: 1,
-      spacing: 8,
+      perView: "auto",
+      spacing: 50,
     },
     slideChanged(s) {
       setCurrentSlide(s.track.details.rel);
-    },
-    breakpoints: {
-      "(min-width: 640px)": {
-        slides: {
-          origin: "center",
-          perView: 3,
-          spacing: 15,
-        },
-      },
-      "(min-width: 1280px)": {
-        slides: {
-          origin: "center",
-          perView: 5,
-          spacing: 30,
-        },
-      },
     },
   });
 
@@ -52,8 +36,7 @@ export const CartridgeSlider = () => {
 
             const isNearCurrentIndex = Math.abs(index - currentSlide) <= 1;
 
-            const scale = currentIndex ? 1 : isNearCurrentIndex ? 0.9 : 0.7;
-            const opacity = currentIndex ? 1 : isNearCurrentIndex ? 0.9 : 0.5;
+            const opacity = currentIndex ? 1 : isNearCurrentIndex ? 0.7 : 0.5;
 
             return (
               <motion.div
@@ -62,26 +45,26 @@ export const CartridgeSlider = () => {
                   opacity,
                 }}
               >
-                <div className="keen-slider__slide">
-                  <motion.div
-                    animate={{
-                      scale,
-                    }}
-                  >
-                    <img
-                      className="h-full w-full [mask-image:linear-gradient(to_bottom,#000_70%,#0000_100%)]"
-                      src={cartridge.image}
-                      alt={cartridge.name}
-                    />
+                <div className="keen-slider__slide !min-w-[24rem] !max-w-[24rem] [mask-image:url(/img/gem.webp)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]">
+                  <img
+                    className="h-full w-full [mask-image:linear-gradient(to_bottom,#000_25%,#0000_100%)]"
+                    src={cartridge.image}
+                    alt={cartridge.name}
+                  />
+                  <div className="absolute left-1/2 bottom-24 flex -translate-x-1/2 flex-col items-center space-y-3.5 xl:bottom-24 2xl:bottom-36">
+                    <p className="whitespace-nowrap text-2xl font-bold text-honey-25">
+                      {cartridge.name}
+                    </p>
                     <CTAButton
                       as="a"
                       href={cartridge.websiteLink}
                       hideExternalIcon
-                      className="absolute left-1/2 bottom-24 -translate-x-1/2 border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm xl:bottom-24 2xl:bottom-36"
+                      className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm"
                     >
                       View Game
                     </CTAButton>
-                    {/* <div className="absolute bottom-6 flex w-full justify-center border-t border-honey-25/10 xl:bottom-12">
+                  </div>
+                  {/* <div className="absolute bottom-6 flex w-full justify-center border-t border-honey-25/10 xl:bottom-12">
                       <div className="mt-5 space-x-2.5">
                         {cartridge.tags.map((tag) => (
                           <span
@@ -93,7 +76,6 @@ export const CartridgeSlider = () => {
                         ))}
                       </div>
                     </div> */}
-                  </motion.div>
                 </div>
               </motion.div>
             );
@@ -101,22 +83,12 @@ export const CartridgeSlider = () => {
         </div>
         {instanceRef.current ? (
           <>
-            <Arrow
-              dir="left"
-              onClick={() => instanceRef.current?.prev()}
-              disabled={currentSlide === 0}
-            />
-            <Arrow
-              onClick={() => instanceRef.current?.next()}
-              disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-            />
+            <Arrow dir="left" onClick={() => instanceRef.current?.prev()} />
+            <Arrow onClick={() => instanceRef.current?.next()} />
           </>
         ) : null}
       </div>
-      <div className="mt-6 flex justify-center gap-3">
+      <div className="mt-6 flex flex-wrap justify-center gap-3 px-12">
         {instanceRef.current?.track.details.slides.map((_, index) => (
           <button
             type="button"

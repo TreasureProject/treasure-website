@@ -173,7 +173,7 @@ export default function Home() {
           aria-labelledby="other-information"
           className="relative bg-honey-100 py-16"
         >
-          <div className="mx-auto max-w-9xl px-4 sm:px-6">
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
             <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
               <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
                 <div className="space-y-2.5">
