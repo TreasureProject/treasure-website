@@ -25,7 +25,7 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
       <Popover as="header" className="sticky top-0 z-[99999] xl:relative">
         <div className="hidden bg-night-900 px-14 py-3 xl:block">
           <div className="mx-auto max-w-9xl">
-            <div className="ml-auto flex max-w-max items-center space-x-8 px-12">
+            <div className="ml-auto flex max-w-max items-center space-x-8 px-0 2xl:px-12">
               <div className="space-x-8">
                 {/* add blog later */}
                 <a
