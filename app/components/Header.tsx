@@ -24,37 +24,39 @@ export const Header = ({ openModal }: { openModal: () => void }) => {
     <>
       <Popover as="header" className="sticky top-0 z-[99999] xl:relative">
         <div className="hidden bg-night-900 px-14 py-3 xl:block">
-          <div className="ml-auto flex max-w-max items-center space-x-8">
-            <div className="space-x-8">
-              {/* add blog later */}
-              <a
-                href="https://magicswap.lol/"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="text-xs text-ruby-100 hover:text-ruby-200"
-              >
-                MagicSwap
-              </a>
-              <button
-                onClick={openModal}
-                className="text-xs text-ruby-100 hover:text-ruby-200"
-              >
-                Buy MAGIC
-              </button>
-            </div>
-            <div className="flex space-x-6">
-              {socials.map((social) => (
+          <div className="mx-auto max-w-9xl">
+            <div className="ml-auto flex max-w-max items-center space-x-8 px-12">
+              <div className="space-x-8">
+                {/* add blog later */}
                 <a
-                  key={social.name}
-                  className="text-honey-200 hover:text-honey-400"
-                  href={social.href}
+                  href="https://magicswap.lol/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noreferrer noopener"
+                  className="text-xs text-ruby-100 hover:text-ruby-200"
                 >
-                  <span className="sr-only">{social.name}</span>
-                  <social.icon className="h-5 w-5" aria-hidden="true" />
+                  MagicSwap
                 </a>
-              ))}
+                <button
+                  onClick={openModal}
+                  className="text-xs text-ruby-100 hover:text-ruby-200"
+                >
+                  Buy MAGIC
+                </button>
+              </div>
+              <div className="flex space-x-6">
+                {socials.map((social) => (
+                  <a
+                    key={social.name}
+                    className="text-honey-200 hover:text-honey-400"
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="sr-only">{social.name}</span>
+                    <social.icon className="h-5 w-5" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
