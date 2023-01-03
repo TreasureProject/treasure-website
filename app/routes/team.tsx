@@ -4,9 +4,11 @@ import { DiscordIcon, TwitterIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
 import {
   teamCoFounders,
+  teamTreasure,
   teamTrove,
   teamBridgeworld,
   teamSmolverse,
+  teamGameStudio,
 } from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.png";
@@ -50,25 +52,24 @@ const TeamCard = ({ member }: { member: MemberT }) => {
       />
       <div
         className={classNames(
-          !hasSocials && "flex flex-1 flex-col",
+          !hasSocials && "flex flex-col",
           "mt-7 space-y-3 text-center"
         )}
       >
         <p className="text-2xl font-bold text-night-900">{member.name}</p>
-        <div className="inline-flex flex-1 items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
+        <div className="items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
           <h3 className="font-mono font-medium text-ruby-900">
             {member.title}
           </h3>
         </div>
       </div>
       {hasSocials ? (
-        <div className="flex flex-1 items-end justify-center space-x-4">
+        <div className="mt-8 flex flex-1 items-end justify-center space-x-4">
           {member.twitterLink ? (
             <a
               href={member.twitterLink}
               rel="noopener noreferrer"
               target="_blank"
-              className="mt-8"
             >
               <TwitterIcon className="h-8 w-8 text-twitter" />
             </a>
@@ -128,6 +129,16 @@ export default function Team() {
         </div>
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
           <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Treasure
+          </p>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {teamTreasure.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
             Trove
           </p>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -152,6 +163,16 @@ export default function Team() {
           </p>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {teamSmolverse.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+            Game Studio
+          </p>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {teamGameStudio.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
