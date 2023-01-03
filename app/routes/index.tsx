@@ -1,5 +1,5 @@
 import { Badge } from "~/components/Badge";
-import { IndexCTA, partners, socials } from "~/const";
+import { IndexCTA, socials } from "~/const";
 import { NewTreasureStats } from "~/components/TreasureStats";
 
 import { Build } from "~/components/Build";
