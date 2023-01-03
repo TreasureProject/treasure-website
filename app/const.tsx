@@ -1,25 +1,38 @@
-// Powered by Treasure
+// Games (Powered by Treasure) - Logos
+import BWTextImg from "../public/img/gameLogos/bridgeworld.webp";
+import BattleflyLogoImg from "../public/img/gameLogos/Battlefly.svg";
+import KuroroLogoImg from "../public/img/gameLogos/Kuroro.svg";
+import KoteLogoImg from "../public/img/gameLogos/KOTE.webp";
+import RealmLogoImg from "../public/img/gameLogos/Realm.webp";
+import SmolverseLogoImg from "../public/img/gameLogos/Smolverse.svg";
+import TheBeaconLogoImg from "../public/img/gameLogos/The_Beacon.webp";
+import TOELogoImg from "../public/img/gameLogos/TOE.webp";
+
+// Games (Powered by Treasure) - Cards
 import BattleFlyImg from "@/img/projects/Battlefly.webp";
 import BridgeworldImg from "@/img/projects/Bridgeworld.webp";
 import KnightsOfTheEtherImg from "@/img/projects/Knights_of_the_Ether.webp";
 import LifeVerseImg from "@/img/projects/LifeVerse.webp";
 import LostSamuriseImg from "@/img/projects/Lost_Samurise.webp";
 import RealmverseImg from "@/img/projects/Realmverse.webp";
+import KuroroImg from "@/img/projects/Kuroro.webp";
 import TalesOfElleriaImg from "@/img/projects/Tales_of_Elleria.webp";
 import TheBeaconImg from "@/img/projects/The_Beacon.webp";
 import TheLostDonkeysImg from "@/img/projects/The_Lost_Donkeys.webp";
 import ToadstoolzImg from "@/img/projects/Toadstoolz.webp";
 import SmolverseImg from "@/img/projects/Smolverse.webp";
 
-// Sliders
+// Games (Powered by Treasure) - Sliders
 import BattleflySliderImg from "@/img/covers/Battlefly.webp";
 import BridgeworldSliderImg from "@/img/covers/Bridgeworld.webp";
 import KOTESliderImg from "@/img/covers/KOTE.webp";
 import RealmSliderImg from "@/img/covers/Realm.webp";
+import KuroroSliderImg from "@/img/covers/Kuroro.webp";
 import SmolverseSliderImg from "@/img/covers/Smolverse.webp";
 import TheBeaconSliderImg from "@/img/covers/The_Beacon.webp";
 import TOESliderImg from "@/img/covers/TOE.webp";
 
+// Investors
 import AcadArenaImg from "../public/img/partners/AcadArena.svg";
 import AndrewGreenImg from "../public/img/partners/AndrewGreen.svg";
 import BlackPoolImg from "../public/img/partners/BlackPool.svg";
@@ -79,14 +92,6 @@ import DefaultImg from "../public/img/pfps/default.png";
 import TengImg from "../public/img/twitter/0xPrismatic.jpg";
 import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.jpg";
 import SquareJordanImg from "../public/img/twitter/SquareJordan.jpg";
-
-import BWTextImg from "../public/img/gameLogos/bridgeworld.webp";
-import BattleflyLogoImg from "../public/img/gameLogos/Battlefly.svg";
-import KoteLogoImg from "../public/img/gameLogos/KOTE.webp";
-import RealmLogoImg from "../public/img/gameLogos/Realm.webp";
-import SmolverseLogoImg from "../public/img/gameLogos/Smolverse.svg";
-import TheBeaconLogoImg from "../public/img/gameLogos/The_Beacon.webp";
-import TOELogoImg from "../public/img/gameLogos/TOE.webp";
 
 import {
   AMMIcon,
@@ -945,9 +950,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/battlefly",
     logo: BattleflyLogoImg,
     sliderImage: BattleflySliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description: "BattleFly is a PVP/P2E strategy game powered by MAGIC.",
     core: true,
   },
   {
@@ -956,9 +959,8 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/tales-of-elleria",
     logo: TOELogoImg,
     sliderImage: TOESliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "Tales of Elleria is an immersive three-dimensional role-playing game. Send heroes on assignments and quests!",
     core: true,
   },
   {
@@ -967,20 +969,18 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/smolverse",
     logo: SmolverseLogoImg,
     sliderImage: SmolverseSliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "Smolverse is a fun and playful world of progressively-evolving NFTs on Arbitrum driven by storytelling, community, good vibes & EEEEEEs!",
     core: true,
   },
   {
     name: "Kuroro",
-    image: TheBeaconImg,
-    websiteLink: "https://bridgeworld.treasure.lol",
-    logo: BWTextImg,
-    sliderImage: TheBeaconSliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    image: KuroroImg,
+    websiteLink: "https://www.kuroro.com/",
+    logo: KuroroLogoImg,
+    sliderImage: KuroroSliderImg,
+    description:
+      "Kuroro is a gaming ecosystem where Beasts roam free and Trainers set out to explore, collect, craft, battle and master the elements.",
     core: true,
   },
   {
@@ -989,9 +989,8 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/the-beacon",
     logo: TheBeaconLogoImg,
     sliderImage: TheBeaconSliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "A fantasy action roguelite RPG. Venture into dungeons, defeat evils & expand the Beacon's protective light!",
     core: true,
   },
   {
@@ -1000,9 +999,8 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/kote",
     logo: KoteLogoImg,
     sliderImage: KOTESliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "A deckbuilding roguelike where players battle through randomly generated maps and upgrade their gear to dominate the leaderboards!",
     core: true,
   },
   {
@@ -1012,9 +1010,8 @@ export const cartridges = [
     logo: BWTextImg,
     // used in /games slider, which has a video aspect ratio
     sliderImage: BridgeworldSliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "Bridgeworld is a game of strategic commerce, trade and social coordination sitting at the epicenter of the Treasure ecosystem.",
     core: true,
   },
   {
@@ -1023,9 +1020,8 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/realm",
     logo: RealmLogoImg,
     sliderImage: RealmSliderImg,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "Realm is a world-building and exploration game rooted in GameFi.",
     core: true,
   },
   {
@@ -1034,9 +1030,8 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/samurise",
     logo: null,
     sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "Lost SamuRise is a faction based strategy game played in the fictional world of Tengoku.",
     core: true,
   },
   {
@@ -1046,7 +1041,6 @@ export const cartridges = [
     logo: null,
     sliderImage: null,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
     core: true,
   },
   {
@@ -1055,9 +1049,8 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/the-lost-donkeys",
     logo: null,
     sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "The Lost Donkeys is a game where barns will be built and donkeys will prevail.",
     core: true,
   },
   {
@@ -1066,9 +1059,8 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/life",
     logo: null,
     sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
+    description:
+      "LifeVerse is a fully decentralized game creating base character primitives to be used by other projects to connect worlds and create common lore and resources.",
     core: true,
   },
 ] as const;
