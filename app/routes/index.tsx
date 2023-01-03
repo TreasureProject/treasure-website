@@ -149,7 +149,10 @@ export default function Home() {
                   incentives.
                 </p>
                 <div>
-                  <CTAButton as="a" href="https://discord.gg/treasuredao">
+                  <CTAButton
+                    as="a"
+                    href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                  >
                     Start building
                   </CTAButton>
                 </div>
