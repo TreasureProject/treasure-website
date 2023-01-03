@@ -48,11 +48,13 @@ import Metat8Img from "../public/img/partners/Metat8.svg";
 import OnekxImg from "../public/img/partners/1kx.svg";
 import DigitalStrategiesImg from "../public/img/partners/DigitalStrategies.png";
 
+// MAGIC
 import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
 import CoinbaseImg from "../public/img/magic-list/coinbase.svg";
 import MoonPayImg from "../public/img/magic-list/moonpay.svg";
 import BinanceImg from "../public/img/magic-list/binance.svg";
 
+// Illustrations
 import BountyBoardImg from "../public/img/illustrations/bountyBoard.png";
 import BuildWithUsImg from "../public/img/illustrations/buildWithUs.png";
 import CommunityInitiativesImg from "../public/img/illustrations/communityInitiatives.png";
@@ -60,6 +62,15 @@ import FlywheelImg from "../public/img/illustrations/flywheel.png";
 import GovernanceImg from "../public/img/illustrations/governance.png";
 import GuildsImg from "../public/img/illustrations/guilds.png";
 
+// Stat Icons
+import IconArbitrumImg from "../public/img/stat-icons/Arbitrum.svg";
+import IconMagicImg from "../public/img/stat-icons/Magic.svg";
+import IconSushiImg from "../public/img/stat-icons/Sushi.svg";
+import IconTroveImg from "../public/img/stat-icons/Trove.svg";
+import IconGamesImg from "../public/img/stat-icons/Games.svg";
+import IconCommunityImg from "../public/img/stat-icons/Community.svg";
+
+// Team
 import AnimenImg from "../public/img/pfps/Animen.png";
 import AntlionImg from "../public/img/pfps/Antlion.png";
 import BahamaImg from "../public/img/pfps/Bahama.png";
@@ -89,9 +100,13 @@ import GearhartImg from "../public/img/pfps/Gearhart.png";
 import MdImg from "../public/img/pfps/MD.png";
 import DefaultImg from "../public/img/pfps/default.png";
 
+// Twitter
 import TengImg from "../public/img/twitter/0xPrismatic.jpg";
 import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.jpg";
 import SquareJordanImg from "../public/img/twitter/SquareJordan.jpg";
+import SmasheImg from "../public/img/twitter/Smashe.png";
+import DiegoImg from "../public/img/twitter/Diego.jpg";
+import FlookImg from "../public/img/twitter/Flook.jpg";
 
 import {
   AMMIcon,
@@ -579,7 +594,7 @@ export const tweets = [
     type: "player",
   },
   {
-    profileImage: TheBeaconImg,
+    profileImage: DiegoImg,
     username: "The Beacon",
     userlink: "https://twitter.com/DiegoVidaurres",
     handle: "Zeelex - Co Founder",
@@ -597,7 +612,7 @@ export const tweets = [
     type: "builder",
   },
   {
-    profileImage: KnightsOfTheEtherImg,
+    profileImage: FlookImg,
     username: "Knights of the Ether",
     userlink: "https://twitter.com/Flook_eth",
     handle: "Flook - Co Founder",
@@ -611,7 +626,7 @@ export const tweets = [
     type: "builder",
   },
   {
-    profileImage: TalesOfElleriaImg,
+    profileImage: SmasheImg,
     username: "Tales of Elleria",
     userlink: "https://twitter.com/Smashe__",
     handle: "Smashe - Co Founder",
@@ -772,19 +787,18 @@ export const infrastructures = [
   {
     name: "Marketplace",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
-    description:
-      "Trove is a gamified NFT marketplace on Arbitrum, denominated in MAGIC and ETH.",
+    description: "Trove is the destination for gaming on Treasure.",
     buttonDescription: "Visit Trove",
     href: "https://trove.treasure.lol",
   },
-  // {
-  //   name: "AMM",
-  //   icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
-  //   description:
-  //     "Magicswap supports trading of native tokens for partner projects with each liquidity pool using MAGIC as the base pair.",
-  //   buttonDescription: "Coming Soon",
-  //   href: "https://magiscwap.treasure.lol",
-  // },
+  {
+    name: "AMM",
+    icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
+    description:
+      "MagicSwap supports trading of native tokens for partner projects with each liquidity pool using MAGIC as the base pair.",
+    buttonDescription: "Visit MagicSwap Soon",
+    href: "https://magiscwap.treasure.lol",
+  },
   {
     name: "Economy",
     icon: <EconomyIcon className="h-10 w-10" aria-hidden="true" />,
@@ -945,32 +959,13 @@ export const navigation = [
 
 export const cartridges = [
   {
-    name: "BattleFly",
-    image: BattleFlyImg,
-    websiteLink: "https://trove.treasure.lol/games/battlefly",
-    logo: BattleflyLogoImg,
-    sliderImage: BattleflySliderImg,
-    description: "BattleFly is a PVP/P2E strategy game powered by MAGIC.",
-    core: true,
-  },
-  {
-    name: "Tales of Elleria",
-    image: TalesOfElleriaImg,
-    websiteLink: "https://trove.treasure.lol/games/tales-of-elleria",
-    logo: TOELogoImg,
-    sliderImage: TOESliderImg,
+    name: "The Beacon",
+    image: TheBeaconImg,
+    websiteLink: "https://trove.treasure.lol/games/the-beacon",
+    logo: TheBeaconLogoImg,
+    sliderImage: TheBeaconSliderImg,
     description:
-      "Tales of Elleria is an immersive three-dimensional role-playing game. Send heroes on assignments and quests!",
-    core: true,
-  },
-  {
-    name: "Smolverse",
-    image: SmolverseImg,
-    websiteLink: "https://trove.treasure.lol/games/smolverse",
-    logo: SmolverseLogoImg,
-    sliderImage: SmolverseSliderImg,
-    description:
-      "Smolverse is a fun and playful world of progressively-evolving NFTs on Arbitrum driven by storytelling, community, good vibes & EEEEEEs!",
+      "A fantasy action roguelite RPG. Venture into dungeons, defeat evils & expand the Beacon's protective light!",
     core: true,
   },
   {
@@ -984,23 +979,32 @@ export const cartridges = [
     core: true,
   },
   {
-    name: "The Beacon",
-    image: TheBeaconImg,
-    websiteLink: "https://trove.treasure.lol/games/the-beacon",
-    logo: TheBeaconLogoImg,
-    sliderImage: TheBeaconSliderImg,
+    name: "Tales of Elleria",
+    image: TalesOfElleriaImg,
+    websiteLink: "https://trove.treasure.lol/games/tales-of-elleria",
+    logo: TOELogoImg,
+    sliderImage: TOESliderImg,
     description:
-      "A fantasy action roguelite RPG. Venture into dungeons, defeat evils & expand the Beacon's protective light!",
+      "Tales of Elleria is an immersive three-dimensional role-playing game. Send heroes on assignments and quests!",
     core: true,
   },
   {
-    name: "Knights of the Ether",
-    image: KnightsOfTheEtherImg,
-    websiteLink: "https://trove.treasure.lol/games/kote",
-    logo: KoteLogoImg,
-    sliderImage: KOTESliderImg,
+    name: "BattleFly",
+    image: BattleFlyImg,
+    websiteLink: "https://trove.treasure.lol/games/battlefly",
+    logo: BattleflyLogoImg,
+    sliderImage: BattleflySliderImg,
+    description: "BattleFly is a PVP/P2E strategy game powered by MAGIC.",
+    core: true,
+  },
+  {
+    name: "Smolverse",
+    image: SmolverseImg,
+    websiteLink: "https://trove.treasure.lol/games/smolverse",
+    logo: SmolverseLogoImg,
+    sliderImage: SmolverseSliderImg,
     description:
-      "A deckbuilding roguelike where players battle through randomly generated maps and upgrade their gear to dominate the leaderboards!",
+      "Smolverse is a fun and playful world of progressively-evolving NFTs on Arbitrum driven by storytelling, community, good vibes & EEEEEEs!",
     core: true,
   },
   {
@@ -1063,6 +1067,16 @@ export const cartridges = [
       "LifeVerse is a fully decentralized game creating base character primitives to be used by other projects to connect worlds and create common lore and resources.",
     core: true,
   },
+  {
+    name: "Knights of the Ether",
+    image: KnightsOfTheEtherImg,
+    websiteLink: "https://trove.treasure.lol/games/kote",
+    logo: KoteLogoImg,
+    sliderImage: KOTESliderImg,
+    description:
+      "A deckbuilding roguelike where players battle through randomly generated maps and upgrade their gear to dominate the leaderboards!",
+    core: true,
+  },
 ] as const;
 
 export const sliderCartridges = cartridges.filter((c) => c.sliderImage);
@@ -1089,6 +1103,44 @@ export const socials = [
     icon: (props: { className?: string }) => <TwitterIcon {...props} />,
   },
 ];
+
+export const stats = [
+  {
+    title: "Gaming and NFT ecosystem on Arbitrum",
+    value: "#1",
+    icon: IconArbitrumImg,
+  },
+  {
+    title: "of all gaming and NFT txns on Arbitrum",
+    value: "95%",
+    icon: IconArbitrumImg,
+  },
+  {
+    title: "Total marketplace volume",
+    value: "$267M",
+    icon: IconTroveImg,
+  },
+  {
+    title: "Unique MAGIC holders",
+    value: "295k", //todo: make dynamic
+    icon: IconMagicImg,
+  },
+  {
+    title: "Gaming and top 5 overall liquidity on Sushi",
+    value: "#1",
+    icon: IconSushiImg,
+  },
+  {
+    title: "Games powered by Treasure",
+    value: "10+",
+    icon: IconGamesImg,
+  },
+  {
+    title: "Engaged player community",
+    value: "100k+",
+    icon: IconCommunityImg,
+  },
+] as const;
 
 export const supportedLngs = ["en", "ja-JP"];
 
