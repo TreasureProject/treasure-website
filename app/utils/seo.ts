@@ -1,7 +1,7 @@
 export function getSocialMetas({
   url,
   title = "Treasure",
-  description = "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
+  description = "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
   origin,
   imgPath,
   image = origin + "/img/meta" + imgPath + ".jpg",
@@ -48,7 +48,7 @@ export function generateTitle(title?: string) {
   const prettifiedTitle = prettify(removeStartingSlash(title || ""));
   return prettifiedTitle !== ""
     ? `${prettifiedTitle} | Treasure`
-    : "Treasure - The Decentralized Game Console";
+    : "Treasure - The Decentralized Gaming Ecosystem";
 }
 
 function removeTrailingSlash(s: string) {
