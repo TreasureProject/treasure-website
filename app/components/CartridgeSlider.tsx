@@ -58,7 +58,6 @@ export const CartridgeSlider = () => {
                     <CTAButton
                       as="a"
                       href={cartridge.websiteLink}
-                      hideExternalIcon
                       className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm"
                     >
                       View Game

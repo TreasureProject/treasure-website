@@ -98,7 +98,7 @@ export default function Home() {
                     <p className="mt-3 text-base font-bold text-night-900 xl:text-xl">
                       {cta.name}
                     </p>
-                    <p className="mt-1 break-words text-sm text-night-700 xl:text-lg">
+                    <p className="mt-1 break-words text-sm text-night-700 xl:text-lg xl:leading-5">
                       {cta.description}
                     </p>
                   </Link>
@@ -189,23 +189,27 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-8">
-                  <CTAButton to="/build" type="primary" hideExternalIcon>
+                  <CTAButton
+                    as="a"
+                    href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                    type="primary"
+                  >
                     Start building
                   </CTAButton>
                 </div>
               </div>
               <NewCard
-                title="Get Magic"
-                description="Our native token MAGIC is your access pass to games powered by Treasure."
+                title="Get MAGIC"
+                description="Our token MAGIC is your way to discover and access the Treasure ecosystem."
                 image={GetMagicImg}
               >
                 <CTAButton as="a" href="#" type="primary" hideExternalIcon>
-                  Discover more
+                  Get MAGIC
                 </CTAButton>
               </NewCard>
               <NewCard
                 title="Join the community"
-                description="Enter the Treasureverse!"
+                description="Become a member of Treasure's vibrant community!"
                 image={JoinCommunityImg}
               >
                 <div className="flex space-x-6">

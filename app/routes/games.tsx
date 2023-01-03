@@ -19,7 +19,6 @@ import { Arrow } from "~/components/Arrow";
 import { NewCard } from "~/components/Card";
 import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
 import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
-import HeroImg from "../../public/img/hero.png";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -37,7 +36,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   return {
     ...getSocialMetas({
       description:
-        "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
+        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle("/infrastructure"),
       origin: requestInfo.origin,
@@ -145,23 +144,27 @@ export default function Games() {
                 </p>
               </div>
               <div className="mt-8">
-                <CTAButton to="/build" type="primary" hideExternalIcon>
+                <CTAButton
+                  as="a"
+                  href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                  type="primary"
+                >
                   Start building
                 </CTAButton>
               </div>
             </div>
             <NewCard
-              title="Get Magic"
+              title="Get MAGIC"
               description="Our native token MAGIC is your access pass to games powered by Treasure."
               image={GetMagicImg}
             >
               <CTAButton as="a" href="#" type="primary" hideExternalIcon>
-                Discover More
+                Get MAGIC
               </CTAButton>
             </NewCard>
             <NewCard
               title="Join the community"
-              description="Enter the Treasureverse!"
+              description="Become a member of Treasure's vibrant community!"
               image={JoinCommunityImg}
             >
               <div className="flex space-x-6">
@@ -281,9 +284,6 @@ const PartnerSlideMobile = () => {
           />
         ) : null}
         <div className="mt-3 space-y-2">
-          <p className="text-xs font-bold text-night-100 sm:text-base">
-            {currentSlideInfo.name}
-          </p>
           <p className="text-[0.6rem] text-night-100 sm:text-xs">
             {currentSlideInfo.description}
           </p>
@@ -294,9 +294,8 @@ const PartnerSlideMobile = () => {
             href={currentSlideInfo.websiteLink}
             type="primary"
             className="text-[0.6rem] sm:text-xs"
-            hideExternalIcon
           >
-            View
+            View game
           </CTAButton>
         </div>
       </motion.div>
@@ -427,10 +426,7 @@ const PartnerSlideDesktop = () => {
               alt={currentSlideInfo.name}
             />
           ) : null}
-          <div className="mt-6 space-y-3.5 xl:max-w-min">
-            <p className="whitespace-nowrap text-xl font-bold text-night-100 xl:text-4xl">
-              {currentSlideInfo.name}
-            </p>
+          <div className="mt-6 space-y-3.5 xl:max-w-sm">
             <p className="text-xs text-night-100 xl:text-base">
               {currentSlideInfo.description}
             </p>
@@ -441,9 +437,8 @@ const PartnerSlideDesktop = () => {
               href={currentSlideInfo.websiteLink}
               type="primary"
               className="text-[0.6rem] sm:text-xs"
-              hideExternalIcon
             >
-              View
+              View game
             </CTAButton>
           </div>
         </motion.div>

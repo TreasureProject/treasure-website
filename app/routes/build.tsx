@@ -532,7 +532,11 @@ export default function Build() {
                 </p>
               </div>
               <div className="mt-8">
-                <CTAButton to="/build" type="primary" hideExternalIcon>
+                <CTAButton
+                  as="a"
+                  href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                  type="primary"
+                >
                   Start building
                 </CTAButton>
               </div>
