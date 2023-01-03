@@ -6,7 +6,7 @@ import { CTAButton } from "./Button";
 import { Arrow } from "./Arrow";
 import { coreCartridges } from "~/const";
 
-const INITIAL_SLIDE = 4;
+const INITIAL_SLIDE = 0;
 
 export const CartridgeSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(INITIAL_SLIDE);
@@ -59,6 +59,7 @@ export const CartridgeSlider = () => {
                       as="a"
                       href={cartridge.websiteLink}
                       className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm"
+                      hideExternalIcon
                     >
                       View Game
                     </CTAButton>
