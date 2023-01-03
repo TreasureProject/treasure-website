@@ -12,7 +12,6 @@ import { NewTreasureStats } from "~/components/TreasureStats";
 import { builderTweets, core5Cartridges } from "~/const";
 import BridgeworldImg from "@/img/bridgeworld.webp";
 import LogomarkImg from "@/img/resources/treasure/logomark.png";
-import HeroImg from "@/img/hero.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
 
 import PartnerImg from "@/img/partner.webp";
@@ -546,7 +545,11 @@ export default function Build() {
               description="Join the team at Treasure and our games to build the future of gaming in web3."
               image={TreasureTeamImg}
             >
-              <CTAButton as="a" href="#" type="primary" hideExternalIcon>
+              <CTAButton
+                as="a"
+                href="https://treasuredao.pallet.com/jobs"
+                type="primary"
+              >
                 See open jobs
               </CTAButton>
             </NewCard>
