@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { CTAButton } from "./Button";
 import { Arrow } from "./Arrow";
-import { cartridges } from "~/const";
+import { coreCartridges } from "~/const";
 
 const INITIAL_SLIDE = 5;
 
@@ -31,7 +31,7 @@ export const CartridgeSlider = () => {
           ref={slideRef}
           className="keen-slider [mask-image:linear-gradient(to_left,#0000,#000_20%,#000_80%,#0000)]"
         >
-          {cartridges.map((cartridge, index) => {
+          {coreCartridges.map((cartridge, index) => {
             const currentIndex = index === currentSlide;
 
             const isNearCurrentIndex = Math.abs(index - currentSlide) <= 1;
