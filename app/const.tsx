@@ -20,15 +20,6 @@ import SmolverseSliderImg from "@/img/covers/Smolverse.webp";
 import TheBeaconSliderImg from "@/img/covers/The_Beacon.webp";
 import TOESliderImg from "@/img/covers/TOE.webp";
 
-// Other games
-import EggfamImg from "@/img/projects/Eggfam.webp";
-import DamnedPiratesSocietyImg from "@/img/projects/Damned_Pirates_Society.webp";
-import MetagatesImg from "@/img/projects/Metagates.webp";
-import MushrohmsImg from "@/img/projects/Mushrohms.webp";
-import PowerPlinsImg from "@/img/projects/Power_Plins.webp";
-import SmithyDAOImg from "@/img/projects/SmithyDAO.webp";
-import SmoloveImg from "@/img/projects/Smolove.webp";
-
 import AcadArenaImg from "../public/img/partners/AcadArena.svg";
 import AndrewGreenImg from "../public/img/partners/AndrewGreen.svg";
 import BlackPoolImg from "../public/img/partners/BlackPool.svg";
@@ -47,7 +38,6 @@ import DigitalStrategiesImg from "../public/img/partners/DigitalStrategies.png";
 import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
 import CoinbaseImg from "../public/img/magic-list/coinbase.svg";
 import MoonPayImg from "../public/img/magic-list/moonpay.svg";
-import OkxImg from "../public/img/magic-list/okx.svg";
 import BinanceImg from "../public/img/magic-list/binance.svg";
 
 import BountyBoardImg from "../public/img/illustrations/bountyBoard.png";
@@ -57,8 +47,10 @@ import FlywheelImg from "../public/img/illustrations/flywheel.png";
 import GovernanceImg from "../public/img/illustrations/governance.png";
 import GuildsImg from "../public/img/illustrations/guilds.png";
 
+import AnimenImg from "../public/img/pfps/Animen.png";
 import AntlionImg from "../public/img/pfps/Antlion.png";
 import BahamaImg from "../public/img/pfps/Bahama.png";
+import BasImg from "../public/img/pfps/Bas.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
 import GaarpImg from "../public/img/pfps/Gaarp.png";
@@ -75,16 +67,16 @@ import SambinoImg from "../public/img/pfps/Sambino.png";
 import SantiImg from "../public/img/pfps/Santi.png";
 import T1DevImg from "../public/img/pfps/t1dev.png";
 import TimoImg from "../public/img/pfps/Timo.png";
-import TravImg from "../public/img/pfps/Trav.png";
+import RaeImg from "../public/img/pfps/Rae.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
 import GearhartImg from "../public/img/pfps/Gearhart.png";
 import MdImg from "../public/img/pfps/MD.png";
+import DefaultImg from "../public/img/pfps/default.png";
 
 import TengImg from "../public/img/twitter/0xPrismatic.jpg";
-
 import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.jpg";
 import SquareJordanImg from "../public/img/twitter/SquareJordan.jpg";
 
@@ -174,6 +166,12 @@ export const teamMembers = [
     team: "Treasure",
   },
   {
+    name: "Rae",
+    title: "Operations",
+    image: RaeImg,
+    team: "Treasure",
+  },
+  {
     name: "SimMayor",
     title: "Product",
     discordLink: "https://discordapp.com/users/366404971354390533",
@@ -238,6 +236,13 @@ export const teamMembers = [
     team: "Bridgeworld",
   },
   {
+    name: "Bas",
+    title: "UI/UX",
+    image: BasImg,
+    team: "Bridgeworld",
+    twitterLink: "https://twitter.com/bas_vdg",
+  },
+  {
     name: "ENT1T7",
     title: "UI/UX",
     discordLink: "https://discordapp.com/users/354679433853927445",
@@ -259,6 +264,13 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/938500876438487061",
     twitterLink: "https://twitter.com/VinnyDev1",
     image: VinnyImg,
+    team: "Bridgeworld",
+  },
+  {
+    name: "Yen",
+    title: "Art",
+    twitterLink: "https://twitter.com/YenLeeArt",
+    image: DefaultImg,
     team: "Bridgeworld",
   },
   {
@@ -301,10 +313,27 @@ export const teamMembers = [
     image: PreeminentImg,
     team: "Smolverse",
   },
+  {
+    name: "Animen",
+    title: "Marketing",
+    discordLink: "https://discordapp.com/users/277435777783169024",
+    image: AnimenImg,
+    team: "Smolverse",
+  },
+  {
+    name: "PurpleSnow",
+    title: "Game Director",
+    discordLink: "https://discordapp.com/users/539546215399030814",
+    image: DefaultImg,
+    team: "Game Studio",
+  },
 ];
 
 export const teamCoFounders = teamMembers.filter(
   (member) => member.team === "Co-Founders"
+);
+export const teamTreasure = teamMembers.filter(
+  (member) => member.team === "Treasure"
 );
 export const teamTrove = teamMembers.filter(
   (member) => member.team === "Trove"
@@ -314,6 +343,9 @@ export const teamBridgeworld = teamMembers.filter(
 );
 export const teamSmolverse = teamMembers.filter(
   (member) => member.team === "Smolverse"
+);
+export const teamGameStudio = teamMembers.filter(
+  (member) => member.team === "Game Studio"
 );
 
 export type MemberT = typeof teamMembers[number];
@@ -908,24 +940,9 @@ export const navigation = [
 
 export const cartridges = [
   {
-    name: "LifeVerse",
-    image: LifeVerseImg,
-    discordLink: "https://discord.gg/MsNSCpHhru",
-    twitterLink: "https://twitter.com/LifeVerse_GG",
-    websiteLink: "https://life.treasure.lol/",
-    logo: null,
-    sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: true,
-  },
-  {
     name: "BattleFly",
     image: BattleFlyImg,
-    discordLink: "https://discord.gg/YzpajBfRNX",
-    twitterLink: "https://twitter.com/battleflygame",
-    websiteLink: "https://www.battlefly.game/",
+    websiteLink: "https://trove.treasure.lol/games/battlefly",
     logo: BattleflyLogoImg,
     sliderImage: BattleflySliderImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
@@ -936,9 +953,7 @@ export const cartridges = [
   {
     name: "Tales of Elleria",
     image: TalesOfElleriaImg,
-    discordLink: "https://discord.gg/talesofelleria",
-    twitterLink: "https://twitter.com/TalesofElleria",
-    websiteLink: "https://www.talesofelleria.com/",
+    websiteLink: "https://trove.treasure.lol/games/tales-of-elleria",
     logo: TOELogoImg,
     sliderImage: TOESliderImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
@@ -949,9 +964,7 @@ export const cartridges = [
   {
     name: "Smolverse",
     image: SmolverseImg,
-    discordLink: "https://discord.gg/treasuredao",
-    TwitterLink: "https://twitter.com/playbridgeworld",
-    websiteLink: "https://bridgeworld.treasure.lol",
+    websiteLink: "https://trove.treasure.lol/games/smolverse",
     logo: SmolverseLogoImg,
     sliderImage: SmolverseSliderImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
@@ -962,8 +975,6 @@ export const cartridges = [
   {
     name: "Kuroro",
     image: TheBeaconImg,
-    discordLink: "https://discord.gg/treasuredao",
-    TwitterLink: "https://twitter.com/playbridgeworld",
     websiteLink: "https://bridgeworld.treasure.lol",
     logo: BWTextImg,
     sliderImage: TheBeaconSliderImg,
@@ -975,9 +986,7 @@ export const cartridges = [
   {
     name: "The Beacon",
     image: TheBeaconImg,
-    discordLink: "https://discord.gg/thebeacon",
-    TwitterLink: "https://twitter.com/the_beacon_gg",
-    websiteLink: "https://thebeacon.gg",
+    websiteLink: "https://trove.treasure.lol/games/the-beacon",
     logo: TheBeaconLogoImg,
     sliderImage: TheBeaconSliderImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
@@ -988,9 +997,7 @@ export const cartridges = [
   {
     name: "Knights of the Ether",
     image: KnightsOfTheEtherImg,
-    discordLink: "https://discord.gg/kote",
-    twitterLink: "https://twitter.com/KnightsOfTheEth",
-    websiteLink: "https://knightsoftheether.com/",
+    websiteLink: "https://trove.treasure.lol/games/kote",
     logo: KoteLogoImg,
     sliderImage: KOTESliderImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
@@ -1001,9 +1008,7 @@ export const cartridges = [
   {
     name: "Bridgeworld",
     image: BridgeworldImg,
-    discordLink: "https://discord.gg/treasuredao",
-    TwitterLink: "https://twitter.com/playbridgeworld",
-    websiteLink: "https://bridgeworld.treasure.lol",
+    websiteLink: "https://trove.treasure.lol/games/bridgeworld",
     logo: BWTextImg,
     // used in /games slider, which has a video aspect ratio
     sliderImage: BridgeworldSliderImg,
@@ -1015,9 +1020,7 @@ export const cartridges = [
   {
     name: "Realm",
     image: RealmverseImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
+    websiteLink: "https://trove.treasure.lol/games/realm",
     logo: RealmLogoImg,
     sliderImage: RealmSliderImg,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
@@ -1028,9 +1031,7 @@ export const cartridges = [
   {
     name: "Lost SamuRise",
     image: LostSamuriseImg,
-    discordLink: "https://discord.gg/samurise",
-    twitterLink: "https://twitter.com/SamuRiseNFT",
-    websiteLink: "https://samurise.xyz/",
+    websiteLink: "https://trove.treasure.lol/games/samurise",
     logo: null,
     sliderImage: null,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
@@ -1041,127 +1042,40 @@ export const cartridges = [
   {
     name: "Toadstoolz",
     image: ToadstoolzImg,
-    discordLink: "https://discord.gg/toadstoolz",
-    twitterLink: "https://twitter.com/toadstoolzNFT",
-    websiteLink: "https://www.toadstoolz.lol/",
+    websiteLink: "https://trove.treasure.lol/games/toadstoolz",
     logo: null,
     sliderImage: null,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: false,
+    core: true,
   },
   {
     name: "The Lost Donkeys",
     image: TheLostDonkeysImg,
-    discordLink: "https://discord.gg/TheLostDonkeys",
-    twitterLink: "https://twitter.com/TheLostDonkeys",
-    websiteLink: "https://www.thelostdonkeys.com/",
+    websiteLink: "https://trove.treasure.lol/games/the-lost-donkeys",
     logo: null,
     sliderImage: null,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["Fantasy"],
-    core: false,
+    core: true,
   },
   {
-    name: "Eggfam",
-    image: EggfamImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
+    name: "LifeVerse",
+    image: LifeVerseImg,
+    websiteLink: "https://trove.treasure.lol/games/life",
     logo: null,
     sliderImage: null,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     title: "Genesis Legions",
     tags: ["Fantasy"],
-    core: false,
-  },
-  {
-    name: "Damned Pirates Society",
-    image: DamnedPiratesSocietyImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
-    logo: null,
-    sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: false,
-  },
-  {
-    name: "Metagates",
-    image: MetagatesImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
-    logo: null,
-    sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: false,
-  },
-  {
-    name: "Mushrohms",
-    image: MushrohmsImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
-    logo: null,
-    sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: false,
-  },
-  {
-    name: "Power Plins",
-    image: PowerPlinsImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
-    logo: null,
-    sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: false,
-  },
-  {
-    name: "SmithyDAO",
-    image: SmithyDAOImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
-    logo: null,
-    sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: false,
-  },
-  {
-    name: "Smolove",
-    image: SmoloveImg,
-    discordLink: "https://discord.gg/realmdao",
-    twitterLink: "https://twitter.com/RealmDao",
-    websiteLink: "https://rlm.land/",
-    logo: null,
-    sliderImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    title: "Genesis Legions",
-    tags: ["Fantasy"],
-    core: false,
+    core: true,
   },
 ] as const;
 
 export const sliderCartridges = cartridges.filter((c) => c.sliderImage);
 
 export const coreCartridges = cartridges.filter((c) => c.core);
-
-export const nonCoreCartridges = cartridges.filter((c) => !c.core);
 
 // get random 5 cartridges
 export const core5Cartridges = cartridges
