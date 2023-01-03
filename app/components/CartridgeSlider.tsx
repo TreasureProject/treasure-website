@@ -6,7 +6,7 @@ import { CTAButton } from "./Button";
 import { Arrow } from "./Arrow";
 import { coreCartridges } from "~/const";
 
-const INITIAL_SLIDE = 5;
+const INITIAL_SLIDE = 4;
 
 export const CartridgeSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(INITIAL_SLIDE);

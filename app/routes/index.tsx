@@ -205,7 +205,7 @@ export default function Home() {
               </NewCard>
               <NewCard
                 title="Join the community"
-                description="Take part in the conversation!"
+                description="Enter the Treasureverse!"
                 image={JoinCommunityImg}
               >
                 <div className="flex space-x-6">
