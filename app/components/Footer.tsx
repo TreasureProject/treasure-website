@@ -43,12 +43,6 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
               <span className="sr-only">Treasure</span>
               <img className="h-10" src={LogoImg} alt="Treasure" />
             </Link>
-            <div className="mt-3.5 w-2/3 sm:w-1/3 xl:w-full">
-              <p className="text-center text-xs text-night-700 sm:text-left">
-                Treasure is the decentralized gaming ecosystem bringing games
-                and players together through MAGIC.
-              </p>
-            </div>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:col-span-4 xl:mt-0">
             {groupedNavigation.map((item) => {
@@ -57,10 +51,10 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
                 return (
                   <div
                     key={name}
-                    className="space-y-6 text-center sm:text-left"
+                    className="space-y-5 text-center sm:text-left"
                   >
                     <h3 className="font-bold text-ruby-900">{t(name)}</h3>
-                    <ul className="space-y-4">
+                    <ul className="space-y-3">
                       {links.map(({ name, isExternal, href }) => (
                         <li
                           key={name}
@@ -94,9 +88,9 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
               }
 
               return (
-                <div key={name} className="space-y-6 text-center sm:text-left">
+                <div key={name} className="space-y-5 text-center sm:text-left">
                   <h3 className="font-bold text-ruby-900">{t(name)}</h3>
-                  <ul className="space-y-4">
+                  <ul className="space-y-3">
                     <li className="flex items-center justify-center space-x-1 sm:justify-start">
                       {isExternal ? (
                         <a
