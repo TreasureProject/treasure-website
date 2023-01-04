@@ -19,6 +19,7 @@ import { Arrow } from "~/components/Arrow";
 import { NewCard } from "~/components/Card";
 import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
 import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
+import { useAppContext } from "~/context/App";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -52,6 +53,8 @@ const headerAnimation = {
 };
 
 export default function Games() {
+  const { openModal } = useAppContext();
+
   return (
     <main>
       <section
@@ -158,7 +161,7 @@ export default function Games() {
               description="Our native token MAGIC is your access pass to games powered by Treasure."
               image={GetMagicImg}
             >
-              <CTAButton as="a" href="#" type="primary" hideExternalIcon>
+              <CTAButton as="button" onClick={openModal} type="primary">
                 Get MAGIC
               </CTAButton>
             </NewCard>
@@ -361,7 +364,7 @@ const PartnerSlideDesktop = () => {
   return (
     <div className="grid grid-cols-12 items-center gap-8">
       <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden xl:col-span-3">
-        <div className="h-[20rem] space-y-3 overflow-y-auto xl:h-[26rem] 2xl:h-[30rem]">
+        <div className="h-[20rem] space-y-3 overflow-y-auto xl:h-[28rem] 2xl:h-[30rem]">
           {sliderCartridges.map((feature, featureIndex) => (
             <div
               key={feature.name}
@@ -394,7 +397,7 @@ const PartnerSlideDesktop = () => {
           ))}
         </div>
       </div>
-      <div className="relative col-span-8 h-[20rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:col-span-9 xl:h-[26rem] 2xl:h-[30rem]">
+      <div className="relative col-span-8 h-[20rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:col-span-9 xl:h-[28rem] 2xl:h-[30rem]">
         <SpinnerIcon
           className={twMerge(
             "mx-auto h-full w-6 text-night-500",

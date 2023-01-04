@@ -22,6 +22,7 @@ import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { Partners } from "~/components/Partners";
 import BuildFutureImg from "@/img/build-future.webp";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { useAppContext } from "~/context/App";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -36,6 +37,8 @@ export default function Home() {
   });
 
   const onClose = () => setIsOpenYoutubeModal(false);
+
+  const { openModal } = useAppContext();
 
   return (
     <>
@@ -203,7 +206,7 @@ export default function Home() {
                 description="Our token MAGIC is your way to discover and access the Treasure ecosystem."
                 image={GetMagicImg}
               >
-                <CTAButton as="a" href="#" type="primary" hideExternalIcon>
+                <CTAButton as="button" onClick={openModal} type="primary">
                   Get MAGIC
                 </CTAButton>
               </NewCard>

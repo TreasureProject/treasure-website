@@ -1,7 +1,7 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { Link } from "@remix-run/react";
 import type { RemixLinkProps } from "@remix-run/react/dist/components";
-import type { AnchorHTMLAttributes } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 type BaseProps = {
@@ -15,6 +15,11 @@ export type ButtonAsLink = BaseProps &
     as?: "link";
   };
 
+export type ButtonAsButton = BaseProps &
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
+    as: "button";
+  };
+
 type ButtonAsExternal = BaseProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & {
     as: "a";
@@ -22,7 +27,7 @@ type ButtonAsExternal = BaseProps &
     href: string;
   };
 
-type ButtonProps = ButtonAsExternal | ButtonAsLink;
+type ButtonProps = ButtonAsExternal | ButtonAsLink | ButtonAsButton;
 
 export const CTAButton = (props: ButtonProps) => {
   const style = twMerge(
@@ -30,6 +35,15 @@ export const CTAButton = (props: ButtonProps) => {
     props.type === "primary" && "bg-ruby-900 text-white hover:bg-ruby-1000",
     props.className
   );
+
+  if (props.as === "button") {
+    const { type: _, ...rest } = props;
+    return (
+      <button {...rest} className={style}>
+        {props.children}
+      </button>
+    );
+  }
 
   if (props.as === "a") {
     const { hideExternalIcon, as: _, ...rest } = props;

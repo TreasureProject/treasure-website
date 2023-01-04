@@ -123,12 +123,11 @@ const Stat = ({
 }) => (
   <div
     className={twMerge(
-      "mx-4 flex w-[18rem] flex-row justify-center space-x-4 rounded-lg bg-honey-100 p-4",
+      "mx-4 flex w-[18rem] items-center justify-center space-x-4 rounded-lg bg-honey-100 p-4",
       isSecondary && "bg-[#131D2E]"
     )}
   >
-    <img src={data.icon} className="w-[32px]" />
-
+    <img src={data.icon} className="w-8" alt="Icon" />
     <div className="flex-col justify-center space-y-1">
       <p
         className={twMerge(

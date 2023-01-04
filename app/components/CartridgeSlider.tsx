@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 import { CTAButton } from "./Button";
 import { Arrow } from "./Arrow";
 import { coreCartridges } from "~/const";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 
 const INITIAL_SLIDE = 0;
 
@@ -39,13 +40,13 @@ export const CartridgeSlider = () => {
             const opacity = currentIndex ? 1 : isNearCurrentIndex ? 0.7 : 0.5;
 
             return (
-              <motion.div
-                key={`${cartridge.name}-${index}`}
-                animate={{
-                  opacity,
-                }}
-              >
-                <div className="keen-slider__slide !min-w-[24rem] !max-w-[24rem] [mask-image:url(/img/gem.webp)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]">
+              <div key={`${cartridge.name}-${index}`}>
+                <motion.div
+                  animate={{
+                    opacity,
+                  }}
+                  className="keen-slider__slide !min-w-[24rem] !max-w-[24rem] [mask-image:url(/img/gem.webp)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]"
+                >
                   <img
                     className="h-full w-full [mask-image:linear-gradient(to_bottom,#000_25%,#0000_100%)]"
                     src={cartridge.image}
@@ -58,10 +59,14 @@ export const CartridgeSlider = () => {
                     <CTAButton
                       as="a"
                       href={cartridge.websiteLink}
-                      className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-md hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm"
                       hideExternalIcon
+                      className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-3xl hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm"
                     >
                       View Game
+                      <ArrowTopRightOnSquareIcon
+                        className="ml-1.5 h-4 w-4 [&>path]:stroke-honey-50 [&>path]:stroke-[1]"
+                        aria-hidden="true"
+                      />
                     </CTAButton>
                   </div>
                   {/* <div className="absolute bottom-6 flex w-full justify-center border-t border-honey-25/10 xl:bottom-12">
@@ -76,8 +81,8 @@ export const CartridgeSlider = () => {
                         ))}
                       </div>
                     </div> */}
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             );
           })}
         </div>

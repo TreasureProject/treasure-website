@@ -14,11 +14,13 @@ import classNames from "clsx";
 import { Player } from "@lottiefiles/react-lottie-player";
 import DataJson from "../lotties/data.json";
 import { useTranslation } from "react-i18next";
+import { useAppContext } from "~/context/App";
 
-export const Header = ({ openModal }: { openModal: () => void }) => {
+export const Header = () => {
   const { t } = useTranslation("index", {
     keyPrefix: "common",
   });
+  const { openModal } = useAppContext();
 
   return (
     <>

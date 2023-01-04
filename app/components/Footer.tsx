@@ -5,6 +5,7 @@ import { MagicIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 import { useTranslation } from "react-i18next";
 import React from "react";
+import { useAppContext } from "~/context/App";
 
 const groupedNavigation = navigation.reduce<typeof navigation[number][]>(
   (acc, item) => {
@@ -26,10 +27,12 @@ const groupedNavigation = navigation.reduce<typeof navigation[number][]>(
   []
 );
 
-export const Footer = ({ openModal }: { openModal: () => void }) => {
+export const Footer = () => {
   const { t } = useTranslation("index", {
     keyPrefix: "common",
   });
+
+  const { openModal } = useAppContext();
 
   return (
     <footer className="bg-honey-25" aria-labelledby="footer-heading">
