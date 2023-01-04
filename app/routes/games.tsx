@@ -339,7 +339,7 @@ const PartnerSlideDesktop = () => {
           if (mouseOver) return;
           timeout = setTimeout(() => {
             slider.next();
-          }, 5000);
+          }, 10000);
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {

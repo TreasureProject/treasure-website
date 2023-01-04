@@ -101,12 +101,16 @@ import MdImg from "../public/img/pfps/MD.png";
 import DefaultImg from "../public/img/pfps/default.png";
 
 // Twitter
-import TengImg from "../public/img/twitter/0xPrismatic.jpg";
-import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.jpg";
-import SquareJordanImg from "../public/img/twitter/SquareJordan.jpg";
-import SmasheImg from "../public/img/twitter/Smashe.png";
-import DiegoImg from "../public/img/twitter/Diego.jpg";
-import FlookImg from "../public/img/twitter/Flook.jpg";
+import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.webp";
+import SquareJordanImg from "../public/img/twitter/SquareJordan.webp";
+import SmasheImg from "../public/img/twitter/Smashe.webp";
+import DiegoImg from "../public/img/twitter/Diego.webp";
+import FlookImg from "../public/img/twitter/Flook.webp";
+import ApixImg from "@/img/twitter/Apix.webp";
+import CartjackedImg from "@/img/twitter/Cartjacked.webp";
+import DmitriyImg from "@/img/twitter/Dmitriy.webp";
+import HunterImg from "@/img/twitter/Hunter.webp";
+import SageImg from "@/img/twitter/Sage.webp";
 
 import {
   AMMIcon,
@@ -453,8 +457,8 @@ export const tweets = [
     type: "player",
   },
   {
-    profileImage: TengImg,
-    username: "hunter (💙,🧡)",
+    profileImage: HunterImg,
+    username: "hunter",
     handle: "@BFreshHB",
     link: "https://twitter.com/BFreshHB/status/1598744138534379520",
     tweet: () => (
@@ -473,7 +477,7 @@ export const tweets = [
     type: "player",
   },
   {
-    profileImage: TengImg,
+    profileImage: CartjackedImg,
     username: "cartjacked (💙,🧡)",
     handle: "@cartjacked",
     link: "https://twitter.com/cartjacked/status/1598863589598986240",
@@ -488,7 +492,7 @@ export const tweets = [
     type: "player",
   },
   {
-    profileImage: TengImg,
+    profileImage: DmitriyImg,
     username: "Dmitriy Berenzon",
     handle: "@dberenzon",
     link: "https://twitter.com/dberenzon/status/1599894360513912832",
@@ -507,7 +511,7 @@ export const tweets = [
     type: "player",
   },
   {
-    profileImage: TengImg,
+    profileImage: SageImg,
     username: "sage | Kuroro CEO",
     handle: "@kurorosage",
     link: "https://twitter.com/kurorosage/status/1598869040700628993",
@@ -531,7 +535,7 @@ export const tweets = [
     type: "player",
   },
   {
-    profileImage: TengImg,
+    profileImage: DiegoImg,
     username: "Diego Vidaurre",
     handle: "@DiegoVidaurres",
     link: "https://twitter.com/DiegoVidaurres/status/1596363046145822725",
@@ -560,7 +564,7 @@ export const tweets = [
     type: "player",
   },
   {
-    profileImage: TengImg,
+    profileImage: ApixImg,
     username: "apix 🎮",
     handle: "@apixtwts",
     link: "https://twitter.com/apixtwts/status/1599107703627911168",
