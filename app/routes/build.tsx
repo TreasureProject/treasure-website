@@ -24,6 +24,32 @@ import OpenSourceIcon from "@/img/icons/Badge_Open_Source.svg";
 import InfraIcon from "@/img/icons/Infra.svg";
 import InteropIcon from "@/img/icons/Interop.svg";
 import DocIcon from "@/img/icons/Docs.svg";
+import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { RootLoaderData } from "~/root";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
+
+export const meta: MetaFunction = ({ parentsData }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle("/build"),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/build",
+    }),
+  };
+};
+
+export const headers: HeadersFunction = commonHeaders;
 
 export default function Build() {
   const mouseX = useMotionValue(0);

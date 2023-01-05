@@ -21,12 +21,6 @@ import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
 import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
 import { useAppContext } from "~/context/App";
 
-export const headers: HeadersFunction = commonHeaders;
-
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: keenSliderCSS },
-];
-
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
     root: { requestInfo },
@@ -39,13 +33,19 @@ export const meta: MetaFunction = ({ parentsData }) => {
       description:
         "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
-      title: generateTitle("/infrastructure"),
+      title: generateTitle("/games"),
       origin: requestInfo.origin,
       url: getUrl(requestInfo),
-      imgPath: "/infrastructure",
+      imgPath: "/games",
     }),
   };
 };
+
+export const headers: HeadersFunction = commonHeaders;
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: keenSliderCSS },
+];
 
 const headerAnimation = {
   initial: { opacity: 0 },

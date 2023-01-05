@@ -2,6 +2,32 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { BridgeIcon } from "~/components/Icons";
 import BridgeworldImg from "@/img/bridgeworld.webp";
 import Balancer from "react-wrap-balancer";
+import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { RootLoaderData } from "~/root";
+import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
+
+export const meta: MetaFunction = ({ parentsData }) => {
+  const {
+    root: { requestInfo },
+  } = parentsData as {
+    root: RootLoaderData;
+  };
+
+  return {
+    ...getSocialMetas({
+      description:
+        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
+      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
+      title: generateTitle("/interoperability"),
+      origin: requestInfo.origin,
+      url: getUrl(requestInfo),
+      imgPath: "/interoperability",
+    }),
+  };
+};
+
+export const headers: HeadersFunction = commonHeaders;
 
 const interoperableList = [
   "Character Personas ability to transfer between more than 1 game",
