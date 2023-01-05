@@ -9,12 +9,11 @@ import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import { builderTweets, core5Cartridges } from "~/const";
+import { arbitrumPartners, builderTweets, core5Cartridges } from "~/const";
 import BridgeworldImg from "@/img/bridgeworld.webp";
 import LogomarkImg from "@/img/resources/treasure/logomark.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
 
-import PartnerImg from "@/img/partner.webp";
 import { Link } from "@remix-run/react";
 import TreasureTeamImg from "@/img/TreasureTeam.png";
 
@@ -28,6 +27,7 @@ import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
+import { twMerge } from "tailwind-merge";
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -50,6 +50,48 @@ export const meta: MetaFunction = ({ parentsData }) => {
 };
 
 export const headers: HeadersFunction = commonHeaders;
+
+const Partner = ({
+  partner,
+  index,
+}: {
+  partner: typeof arbitrumPartners[number];
+  index: number;
+}) => {
+  return (
+    <div key={partner} className="mx-4 w-16">
+      <img src={partner} alt={`Partner ${index}`} />
+    </div>
+  );
+};
+
+const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
+  return (
+    <div className="relative flex flex-1 overflow-x-hidden [mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)]">
+      <div
+        className={twMerge(
+          "flex whitespace-nowrap",
+          to === "left" ? "animate-marquee" : "animate-marquee-left"
+        )}
+      >
+        {arbitrumPartners.map((partner, i) => (
+          <Partner partner={partner} key={partner} index={i} />
+        ))}
+      </div>
+      {/* Needed for infinity loop */}
+      <div
+        className={twMerge(
+          "absolute top-0 flex whitespace-nowrap",
+          to === "left" ? "animate-marquee2" : "animate-marquee-left2"
+        )}
+      >
+        {arbitrumPartners.map((partner, i) => (
+          <Partner partner={partner} key={partner} index={i} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default function Build() {
   const mouseX = useMotionValue(0);
@@ -516,17 +558,17 @@ export default function Build() {
         </div>
       </section>
       <section
-        id="cta"
-        aria-labelledby="cta"
-        className="relative bg-honey-200 py-16 sm:py-24"
+        id="arbitrum-partners"
+        aria-labelledby="arbitrum-partners"
+        className="relative bg-night-900 py-16 sm:py-24"
       >
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <div className="grid grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-6 sm:grid-cols-7 sm:p-10">
+          <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
             <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
-              <p className="text-base font-bold text-ruby-900 lg:text-2xl xl:text-4xl">
+              <p className="text-base font-bold text-honey-200 lg:text-2xl xl:text-4xl">
                 You’re in good company on Arbitrum
               </p>
-              <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-xl">
+              <p className="text-xs text-night-500 sm:text-base lg:text-lg xl:text-xl">
                 The Arbitrum ecosystem is vast and reaches beyond Treasure. It’s
                 home to other great dapps, protocols, social platforms and has
                 everything you need to build.
@@ -537,15 +579,21 @@ export default function Build() {
                 </CTAButton>
               </div>
             </div>
-            <div className="col-span-3 overflow-hidden rounded-xl md:order-2">
-              <img
-                className="h-full w-full object-cover"
-                src={PartnerImg}
-                alt=""
-              />
+            <div className="col-span-3 flex flex-col justify-evenly space-y-10 rounded-xl md:order-2">
+              <PartnerMarquee />
+              <PartnerMarquee to="right" />
+              <PartnerMarquee />
             </div>
           </div>
-          <div className="mt-14 grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
+        </div>
+      </section>
+      <section
+        id="cta"
+        aria-labelledby="cta"
+        className="relative bg-honey-200 py-16 sm:py-24"
+      >
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
             <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
               <div className="space-y-2.5">
                 <p className="text-2xl font-bold text-honey-100 sm:text-4xl">

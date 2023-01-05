@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { partners } from "~/const";
 import { Badge } from "./Badge";
 

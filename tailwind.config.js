@@ -13,6 +13,8 @@ module.exports = {
       animation: {
         marquee: "marquee 80s linear infinite",
         marquee2: "marquee2 80s linear infinite",
+        "marquee-left": "marquee-left 80s linear infinite",
+        "marquee-left2": "marquee-left2 80s linear infinite",
         marquee3: 'marquee3 var(--marquee-duration) linear infinite',
         'fade-in': 'fade-in 0.5s linear forwards',
 
@@ -30,6 +32,14 @@ module.exports = {
           '100%': {
             transform: 'translateY(-50%)',
           },
+        },
+        "marquee-left": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "marquee-left2": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
         'fade-in': {
           from: {

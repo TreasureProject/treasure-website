@@ -112,6 +112,24 @@ import DmitriyImg from "@/img/twitter/Dmitriy.webp";
 import HunterImg from "@/img/twitter/Hunter.webp";
 import SageImg from "@/img/twitter/Sage.webp";
 
+// Arbitrum Partners
+import ArbitrumPartnerImg from "@/img/arbitrum-partners/Partners.webp";
+import ArbitrumPartner1Img from "@/img/arbitrum-partners/Partners-1.webp";
+import ArbitrumPartner2Img from "@/img/arbitrum-partners/Partners-2.webp";
+import ArbitrumPartner3Img from "@/img/arbitrum-partners/Partners-3.webp";
+import ArbitrumPartner4Img from "@/img/arbitrum-partners/Partners-4.webp";
+import ArbitrumPartner5Img from "@/img/arbitrum-partners/Partners-5.webp";
+import ArbitrumPartner6Img from "@/img/arbitrum-partners/Partners-6.webp";
+import ArbitrumPartner7Img from "@/img/arbitrum-partners/Partners-7.webp";
+import ArbitrumPartner8Img from "@/img/arbitrum-partners/Partners-8.webp";
+import ArbitrumPartner9Img from "@/img/arbitrum-partners/Partners-9.webp";
+import ArbitrumPartner10Img from "@/img/arbitrum-partners/Partners-10.webp";
+import ArbitrumPartner11Img from "@/img/arbitrum-partners/Partners-11.webp";
+import ArbitrumPartner12Img from "@/img/arbitrum-partners/Partners-12.webp";
+import ArbitrumPartner13Img from "@/img/arbitrum-partners/Partners-13.webp";
+import ArbitrumPartner14Img from "@/img/arbitrum-partners/Partners-14.webp";
+import ArbitrumPartner15Img from "@/img/arbitrum-partners/Partners-15.webp";
+
 import {
   AMMIcon,
   CartridgesIcon,
@@ -1183,3 +1201,22 @@ export const colors = {
     900: "#FACE61",
   },
 };
+
+export const arbitrumPartners = [
+  ArbitrumPartnerImg,
+  ArbitrumPartner1Img,
+  ArbitrumPartner2Img,
+  ArbitrumPartner3Img,
+  ArbitrumPartner4Img,
+  ArbitrumPartner5Img,
+  ArbitrumPartner6Img,
+  ArbitrumPartner7Img,
+  ArbitrumPartner8Img,
+  ArbitrumPartner9Img,
+  ArbitrumPartner10Img,
+  ArbitrumPartner11Img,
+  ArbitrumPartner12Img,
+  ArbitrumPartner13Img,
+  ArbitrumPartner14Img,
+  ArbitrumPartner15Img,
+];
