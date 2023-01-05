@@ -74,7 +74,7 @@ export default function Games() {
         aria-labelledby="powered-by-treasure-games-list"
         className="relative bg-night-900 py-8 sm:py-16"
       >
-        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-min space-y-5">
               <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">

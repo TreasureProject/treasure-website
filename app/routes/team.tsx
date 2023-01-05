@@ -117,7 +117,7 @@ export default function Team() {
         </div>
       </div>
       <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
             Founders
           </p>
@@ -127,7 +127,7 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
             Treasure
           </p>
@@ -137,7 +137,7 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
             Trove
           </p>
@@ -147,7 +147,7 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
             Bridgeworld
           </p>
@@ -157,7 +157,7 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
             Smolverse
           </p>
@@ -167,7 +167,7 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
             Game Studio
           </p>

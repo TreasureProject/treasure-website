@@ -155,7 +155,7 @@ export default function Build() {
                 </div>
               </div>
             </div>
-            <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-8xl lg:px-12">
+            <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-9xl lg:px-12">
               <div className="grid grid-cols-4 grid-rows-2 gap-6 rounded-xl bg-[#101827] sm:gap-4 lg:gap-1">
                 <a
                   href="https://docs.treasure.lol/games/ecosystem-integration-framework"
@@ -294,7 +294,7 @@ export default function Build() {
         aria-labelledby="information"
         className="group relative bg-honey-50 py-16 sm:py-24"
       >
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="space-y-12 sm:space-y-20">
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
               <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
@@ -483,7 +483,7 @@ export default function Build() {
         aria-labelledby="powered-by-treasure-games-list"
         className="relative bg-night-900 py-8 sm:py-16"
       >
-        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
             <div className="max-w-min space-y-5">
               <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
@@ -543,7 +543,7 @@ export default function Build() {
         aria-labelledby="reviews-title"
         className="relative bg-honey-50 py-16 sm:py-24"
       >
-        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
             <p className="mt-12 text-center text-xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-3xl">
               What our game partners are saying about us

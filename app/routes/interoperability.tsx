@@ -68,7 +68,7 @@ export default function Interoperability() {
         aria-labelledby="information"
         className="group relative bg-honey-50 py-16 sm:py-24"
       >
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="space-y-12 sm:space-y-20">
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
               <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
@@ -155,7 +155,7 @@ export default function Interoperability() {
         aria-labelledby="how-to-make-their-game-interoperable"
         className="group relative bg-night-900 py-16 sm:py-24"
       >
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <h2 className="px-20 text-center text-xl font-bold tracking-tight text-honey-200 sm:text-3xl">
             <Balancer>How can builders make their game interoperable?</Balancer>
           </h2>

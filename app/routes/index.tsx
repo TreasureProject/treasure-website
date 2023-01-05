@@ -69,7 +69,7 @@ export default function Home() {
         </div>
         <NewTreasureStats type="secondary" />
         <div className="relative bg-honey-100 py-6 lg:py-10">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
               {IndexCTA.map((cta) => {
                 if (cta.isExternal) {
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
         </div>
         <div className="relative bg-night-900 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
             <Badge
               name="Games"
               bgColor="bg-night-800"
@@ -179,7 +179,7 @@ export default function Home() {
           aria-labelledby="other-information"
           className="relative bg-honey-100 py-16"
         >
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
               <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
                 <div className="space-y-2.5">
