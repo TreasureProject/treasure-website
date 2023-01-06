@@ -264,7 +264,6 @@ export default function Build() {
                       connected communities and shared gaming experiences
                     </p>
                   </div>
-                  <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                 </Link>
                 <div className="relative col-span-4 flex items-center rounded-br-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-4 lg:col-end-5">
                   <div className="flex flex-col items-start">
