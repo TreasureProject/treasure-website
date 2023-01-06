@@ -13,6 +13,7 @@ import { arbitrumPartners, builderTweets, core5Cartridges } from "~/const";
 import BridgeworldImg from "@/img/bridgeworld.webp";
 import LogomarkImg from "@/img/resources/treasure/logomark.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
+import Balancer from "react-wrap-balancer";
 
 import { Link } from "@remix-run/react";
 import TreasureTeamImg from "@/img/TreasureTeam.png";
@@ -148,9 +149,11 @@ export default function Build() {
                     experiences.
                   </p>
                   <p>
-                    Tools to enable and accelerate your journey.{" "}
-                    <span className="font-bold">Everything</span> you need to
-                    supercharge your game.
+                    <Balancer>
+                      Tools to enable and accelerate your journey.{" "}
+                      <span className="font-bold">Everything</span> you need to
+                      supercharge your game.
+                    </Balancer>
                   </p>
                 </div>
               </div>

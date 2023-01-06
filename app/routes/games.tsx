@@ -7,7 +7,7 @@ import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
 import { useState } from "react";
-import { sliderCartridges, coreCartridges, socials } from "~/const";
+import { sliderCartridges, coreCartridges } from "~/const";
 import { motion } from "framer-motion";
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
@@ -16,10 +16,8 @@ import { SpinnerIcon } from "~/components/Icons";
 import { twMerge } from "tailwind-merge";
 import { CTAButton } from "~/components/Button";
 import { Arrow } from "~/components/Arrow";
-import { NewCard } from "~/components/Card";
-import GetMagicImg from "../../public/img/illustrations/get-magic.webp";
-import JoinCommunityImg from "../../public/img/illustrations/join-community.webp";
-import { useAppContext } from "~/context/App";
+
+import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -53,8 +51,6 @@ const headerAnimation = {
 };
 
 export default function Games() {
-  const { openModal } = useAppContext();
-
   return (
     <main>
       <section
@@ -129,68 +125,7 @@ export default function Games() {
           </div>
         </div>
       </section>
-      <section
-        id="info"
-        aria-labelledby="other-information"
-        className="relative bg-honey-100 py-16"
-      >
-        <div className="mx-auto max-w-9xl px-4 sm:px-6 xl:px-24">
-          <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
-            <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
-              <div className="space-y-2.5">
-                <p className="text-2xl font-bold text-honey-100 sm:text-4xl">
-                  Build with Treasure
-                </p>
-                <p className="text-sm text-night-100 sm:text-lg">
-                  Apply to the Ecosystem Integration Framework to supercharge
-                  your game.
-                </p>
-              </div>
-              <div className="mt-8">
-                <CTAButton
-                  as="a"
-                  href="https://docs.treasure.lol/games/ecosystem-integration-framework"
-                  type="primary"
-                >
-                  Start building
-                </CTAButton>
-              </div>
-            </div>
-            <NewCard
-              title="Get MAGIC"
-              description="Our native token MAGIC is your access pass to games powered by Treasure."
-              image={GetMagicImg}
-            >
-              <CTAButton as="button" onClick={openModal} type="primary">
-                Get MAGIC
-              </CTAButton>
-            </NewCard>
-            <NewCard
-              title="Join the community"
-              description="Become a member of Treasure's vibrant community!"
-              image={JoinCommunityImg}
-            >
-              <div className="flex space-x-6">
-                {socials.map((social) => (
-                  <a
-                    key={social.name}
-                    className="text-night-800 hover:text-night-900"
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="sr-only">{social.name}</span>
-                    <social.icon
-                      className="h-6 w-6 sm:h-8 sm:w-8"
-                      aria-hidden="true"
-                    />
-                  </a>
-                ))}
-              </div>
-            </NewCard>
-          </div>
-        </div>
-      </section>
+      <BuildWithTreasure />
     </main>
   );
 }

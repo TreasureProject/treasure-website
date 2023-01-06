@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <>
-      <Popover as="header" className="sticky top-0 z-[99999] xl:relative">
+      <Popover as="header" className="sticky top-0 z-[60] xl:relative">
         <div className="hidden bg-night-900 px-14 py-3 xl:block">
           <div className="mx-auto max-w-9xl">
             <div className="ml-auto flex max-w-max items-center space-x-8 px-0 2xl:px-12">

@@ -46,7 +46,7 @@ export default function About() {
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">
-          <div className="rounded-2.5xl border-2 border-night-800 px-4 py-20 sm:p-20">
+          <div className="rounded-2xl border-2 border-night-800 px-4 py-20 sm:p-20">
             <p className="text-base font-bold text-night-500 sm:text-2xl">
               Treasure is building the decentralized gaming ecosystem to
               transform game publishing.

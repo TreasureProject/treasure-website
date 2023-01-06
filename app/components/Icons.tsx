@@ -1,32 +1,4 @@
-import type { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
-
-// Icon creation factory
-const createIcon = ({
-  path,
-  displayName,
-}: {
-  path: ReactNode;
-  displayName: string;
-}) => {
-  const Comp = (props: React.SVGAttributes<SVGElement>) => (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      {...props}
-    >
-      {path}
-    </svg>
-  );
-
-  Comp.displayName = displayName;
-
-  return Comp;
-};
 
 export const CalendarIcon = ({ className }: { className?: string }) => (
   <svg
