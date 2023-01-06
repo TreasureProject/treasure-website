@@ -137,6 +137,7 @@ import {
   EconomyIcon,
   GlobalIcon,
   GuildsIcon,
+  InteropIcon,
   TroveIcon,
   TwitterIcon,
   UsersIcon,
@@ -868,7 +869,7 @@ export const IndexCTA = [
   {
     name: "Interoperability",
     description: "Connected games are the future.",
-    icon: <EconomyIcon className="h-8 w-8" aria-hidden="true" />,
+    icon: <InteropIcon className="h-8 w-8" aria-hidden="true" />,
     href: "/interoperability",
     isExternal: false,
   },
