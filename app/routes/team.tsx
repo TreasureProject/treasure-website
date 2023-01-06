@@ -44,7 +44,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
 const TeamCard = ({ member }: { member: MemberT }) => {
   const hasSocials = member.twitterLink || member.discordLink;
   return (
-    <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-9 py-8">
+    <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-4 py-3 md:px-9 md:py-8">
       <img
         className="w-full bg-honey-100 object-contain"
         src={member.image ?? DefaultPfpImg}
@@ -53,25 +53,27 @@ const TeamCard = ({ member }: { member: MemberT }) => {
       <div
         className={classNames(
           !hasSocials && "flex flex-col",
-          "mt-7 space-y-3 text-center"
+          "mt-5 space-y-3 text-center md:mt-7"
         )}
       >
-        <p className="text-2xl font-bold text-night-900">{member.name}</p>
+        <p className="text-lg font-bold text-night-900 md:text-xl lg:text-2xl">
+          {member.name}
+        </p>
         <div className="items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
-          <h3 className="font-mono font-medium text-ruby-900">
+          <h3 className="font-mono text-sm font-medium text-ruby-900 md:text-base">
             {member.title}
           </h3>
         </div>
       </div>
       {hasSocials ? (
-        <div className="mt-8 flex flex-1 items-end justify-center space-x-4">
+        <div className="mt-4 flex flex-1 items-end justify-center space-x-4 md:mt-8">
           {member.twitterLink ? (
             <a
               href={member.twitterLink}
               rel="noopener noreferrer"
               target="_blank"
             >
-              <TwitterIcon className="h-8 w-8 text-twitter" />
+              <TwitterIcon className="h-6 w-6 w-8 text-twitter md:h-8" />
             </a>
           ) : null}
           {member.discordLink ? (
@@ -80,7 +82,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <DiscordIcon className="h-8 w-8 text-discord" />
+              <DiscordIcon className="h-6 w-6 w-8 text-discord md:h-8" />
             </a>
           ) : null}
         </div>
@@ -118,60 +120,60 @@ export default function Team() {
       </div>
       <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
             Founders
           </p>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
             {teamCoFounders.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
         </div>
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
             Treasure
           </p>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
             {teamTreasure.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
         </div>
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
             Trove
           </p>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
             {teamTrove.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
         </div>
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
             Bridgeworld
           </p>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
             {teamBridgeworld.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
         </div>
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
             Smolverse
           </p>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
             {teamSmolverse.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
         </div>
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <p className="mb-8 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
             Game Studio
           </p>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
             {teamGameStudio.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
