@@ -1,6 +1,5 @@
 import { Badge } from "~/components/Badge";
 import { MagicIcon } from "~/components/Icons";
-import { TreasurePosts } from "~/components/TreasurePosts";
 import { NewTreasureStats } from "~/components/TreasureStats";
 import RedStarImg from "../../public/img/red-star.png";
 import TreasureImg from "../../public/img/treasures.png";

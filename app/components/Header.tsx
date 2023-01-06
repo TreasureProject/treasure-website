@@ -5,7 +5,7 @@ import {
   XMarkIcon,
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/solid";
-import { Link, useLocation, useMatches } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import { Fragment } from "react";
 import { navigation, socials } from "~/const";
 import LogoImg from "../../public/img/logo.png";

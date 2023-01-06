@@ -1,10 +1,7 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import { Badge } from "./Badge";
 import type { RootLoaderData } from "~/root";
 import { useRouteData } from "remix-utils";
-import classNames from "clsx";
 import { CalendarIcon } from "./Icons";
-import { motion } from "framer-motion";
 
 export const TreasurePosts = () => {
   const routeData = useRouteData<RootLoaderData>("root");

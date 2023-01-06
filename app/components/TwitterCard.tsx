@@ -72,7 +72,7 @@ export const TwitterCard = (props: {
       {image ? (
         <img
           className="mt-2 w-full rounded-2xl border border-honey-100 object-contain"
-          alt={`${username} embed image`}
+          alt={username}
           src={image}
         />
       ) : null}

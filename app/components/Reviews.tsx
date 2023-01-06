@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { playerTweets } from "~/const";
 import { Badge } from "./Badge";
 import { QuoteIcon } from "./Icons";

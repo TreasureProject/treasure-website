@@ -257,6 +257,7 @@ export default function Interoperability() {
                   <img
                     className="h-10 w-10 flex-shrink-0 text-honey-900"
                     src={example.icon}
+                    alt=""
                   />
                   <div className="">
                     <p className="text-sm font-bold text-honey-50 sm:text-base">
