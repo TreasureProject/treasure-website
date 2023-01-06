@@ -10,13 +10,17 @@ import { NewCard } from "~/components/Card";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
 import { arbitrumPartners, builderTweets, core5Cartridges } from "~/const";
-import BridgeworldImg from "@/img/bridgeworld.webp";
 import LogomarkImg from "@/img/resources/treasure/logomark.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
 import Balancer from "react-wrap-balancer";
 
 import { Link } from "@remix-run/react";
 import TreasureTeamImg from "@/img/TreasureTeam.png";
+import EcosystemFlywheelImg from "@/img/illustrations/Ecosystem_Flywheel.png";
+import InfrastructureImg from "@/img/illustrations/Infrastructure.png";
+import InfrastructureMobileImg from "@/img/illustrations/Infrastructure-mobile.png";
+import GamingExperiencesImg from "@/img/illustrations/Gaming_Experiences.png";
+import GamingExperiencesMobileImg from "@/img/illustrations/Gaming_Experiences-mobile.png";
 
 // Icons
 import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
@@ -24,6 +28,7 @@ import OpenSourceIcon from "@/img/icons/Badge_Open_Source.svg";
 import InfraIcon from "@/img/icons/Infra.svg";
 import InteropIcon from "@/img/icons/Interop.svg";
 import DocIcon from "@/img/icons/Docs.svg";
+
 import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
@@ -75,9 +80,11 @@ const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
           to === "left" ? "animate-marquee" : "animate-marquee-left"
         )}
       >
-        {arbitrumPartners.map((partner, i) => (
-          <Partner partner={partner} key={partner} index={i} />
-        ))}
+        {arbitrumPartners
+          .sort(() => Math.random() - 0.5)
+          .map((partner, i) => (
+            <Partner partner={partner} key={partner} index={i} />
+          ))}
       </div>
       {/* Needed for infinity loop */}
       <div
@@ -159,7 +166,7 @@ export default function Build() {
               </div>
             </div>
             <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-9xl lg:px-12">
-              <div className="grid grid-cols-4 grid-rows-2 gap-6 rounded-xl bg-[#101827] sm:gap-4 lg:gap-1">
+              <div className="grid grid-cols-4 grid-rows-2 gap-6 rounded-xl bg-[#101827] sm:gap-2 lg:gap-1">
                 <a
                   href="https://docs.treasure.lol/games/ecosystem-integration-framework"
                   target="_blank"
@@ -297,114 +304,131 @@ export default function Build() {
         className="group relative bg-honey-50 py-16 sm:py-24"
       >
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <div className="space-y-12 sm:space-y-20">
+          <div className="space-y-20 lg:space-y-0">
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
               <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
                 <img
-                  className="rh-full w-full rounded-2xl object-cover"
-                  src={BridgeworldImg}
-                  alt="Bridgeworld"
+                  className="w-full max-w-md lg:max-w-full"
+                  src={EcosystemFlywheelImg}
+                  alt="Ecosystem"
                 />
               </div>
-              <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
-                  Join a vibrant and intimate ecosystem
-                </h3>
-                <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Tap into the most engaged community to bootstrap adoption
-                    </p>
-                  </li>
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Build together with game developers working towards common
-                      goals
-                    </p>
-                  </li>
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Never work in isolation and benefit from success of the
-                      ecosystem
-                    </p>
-                  </li>
-                </ol>
+              <div className="flex items-center justify-center p-0 lg:col-span-4 lg:p-14">
+                <div>
+                  <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
+                    Join a vibrant and intimate ecosystem
+                  </h3>
+                  <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Tap into the most engaged community to bootstrap
+                        adoption
+                      </p>
+                    </li>
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Build together with game developers working towards
+                        common goals
+                      </p>
+                    </li>
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Never work in isolation and benefit from success of the
+                        ecosystem
+                      </p>
+                    </li>
+                  </ol>
+                </div>
               </div>
             </div>
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
               <div className="mb-12 flex items-center justify-center lg:order-last lg:col-span-4 lg:mb-0">
                 <img
-                  className="h-full w-full rounded-2xl object-cover"
-                  src={BridgeworldImg}
-                  alt="Treasures"
+                  className="hidden w-full lg:block"
+                  src={GamingExperiencesImg}
+                  alt="Gaming Experiences"
+                />
+                <img
+                  className="block w-full max-w-md lg:hidden lg:max-w-full"
+                  src={GamingExperiencesMobileImg}
+                  alt="Gaming Experiences"
                 />
               </div>
-              <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
-                  Leverage immersive gaming experiences
-                </h3>
-                <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Form deeper connections with your community through
-                      meta-progression and game player funnels
-                    </p>
-                  </li>
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Tap into powerful cross-game trading with MagicSwap
-                    </p>
-                  </li>
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Enhance player retention and engagement through cross-game
-                      resources and interoperability
-                    </p>
-                  </li>
-                </ol>
+              <div className="flex items-center justify-center p-0 lg:col-span-4 lg:p-14">
+                <div>
+                  <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
+                    Leverage immersive gaming experiences
+                  </h3>
+                  <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Form deeper connections with your community through
+                        meta-progression and game player funnels
+                      </p>
+                    </li>
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Tap into powerful cross-game trading with MagicSwap
+                      </p>
+                    </li>
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Enhance player retention and engagement through
+                        cross-game resources and interoperability
+                      </p>
+                    </li>
+                  </ol>
+                </div>
               </div>
             </div>
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
               <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
                 <img
-                  className="h-full w-full rounded-2xl object-cover"
-                  src={BridgeworldImg}
-                  alt="Bridgeworld"
+                  className="hidden w-full lg:block"
+                  src={InfrastructureImg}
+                  alt="Infrastructure"
+                />
+                <img
+                  className="block w-full max-w-md lg:hidden lg:max-w-full"
+                  src={InfrastructureMobileImg}
+                  alt="Infrastructure"
                 />
               </div>
-              <div className="p-0 sm:p-14 lg:col-span-4">
-                <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
-                  Access powerful enablers and accelerants
-                </h3>
-                <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Elevate your game with expert advisory and incentives
-                      through the Ecosystem Integration Framework
-                    </p>
-                  </li>
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Supercharge your go-to-market through extensive reach,
-                      authentic content and deep audience understanding
-                    </p>
-                  </li>
-                  <li className="flex items-center space-x-2.5">
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
-                    <p className="text-base sm:text-xl">
-                      Build faster with our toolkit and infrastructure for game
-                      builders
-                    </p>
-                  </li>
-                </ol>
+              <div className="flex items-center justify-center p-0 lg:col-span-4 lg:p-14">
+                <div>
+                  <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
+                    Access powerful enablers and accelerants
+                  </h3>
+                  <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Elevate your game with expert advisory and incentives
+                        through the Ecosystem Integration Framework
+                      </p>
+                    </li>
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Supercharge your go-to-market through extensive reach,
+                        authentic content and deep audience understanding
+                      </p>
+                    </li>
+                    <li className="flex items-center space-x-2.5">
+                      <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                      <p className="text-base sm:text-xl">
+                        Build faster with our toolkit and infrastructure for
+                        game builders
+                      </p>
+                    </li>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
