@@ -258,10 +258,14 @@ export default function Interoperability() {
                     className="h-10 w-10 flex-shrink-0 text-honey-900"
                     src={example.icon}
                   />
-                  <p className="text-sm text-honey-50 sm:text-base">
-                    <span className="font-bold">{example.title}:</span>{" "}
-                    {example.text}
-                  </p>
+                  <div className="">
+                    <p className="text-sm font-bold text-honey-50 sm:text-base">
+                      {example.title}
+                    </p>
+                    <p className="text-sm text-night-300 sm:text-base">
+                      {example.text}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
