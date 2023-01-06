@@ -117,7 +117,7 @@ export default function Interoperability() {
             <img
               src={InteropIcon}
               alt="Interoperability"
-              className="mx-auto h-12 w-12"
+              className="mx-auto h-16 w-16"
             />
             <h2 className="inline-block whitespace-nowrap text-base font-bold tracking-tight text-honey-200 sm:text-4xl">
               The future of gaming is here with Treasure
@@ -275,7 +275,7 @@ export default function Interoperability() {
       <section
         id="why-treasure"
         aria-labelledby="why-treasure"
-        className="group relative bg-[linear-gradient(0deg,#101827,#101827d1),url('/img/background/C1.webp')] bg-cover bg-fixed bg-center bg-no-repeat py-16 sm:py-24"
+        className="group relative bg-night-900 bg-cover bg-fixed bg-center bg-no-repeat py-16 sm:py-24"
       >
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="space-y-14">
