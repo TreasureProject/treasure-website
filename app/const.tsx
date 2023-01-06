@@ -691,11 +691,11 @@ export const communityInfrastructure = [
 
 export const WhyTreasureCardList = [
   {
-    name: "Ecosystem Integration Framework",
+    name: "Game Integration Framework",
     description:
       "Providing clarity to projects integrating into and building on top of the Treasure ecosystem.",
     buttonDescription: "Learn more",
-    href: "https://docs.treasure.lol/partnerships/ecosystem-integration-framework",
+    href: "https://docs.treasure.lol/partnerships/game-integration-framework",
   },
   {
     name: "Apply to Partner",
@@ -898,7 +898,7 @@ export const navigation = [
       },
       {
         name: "Game Integration Framework",
-        href: "https://docs.treasure.lol/games/ecosystem-integration-framework",
+        href: "https://docs.treasure.lol/games/game-integration-framework",
         isExternal: true,
       },
       {

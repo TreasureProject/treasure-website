@@ -168,7 +168,7 @@ export default function Build() {
             <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-9xl lg:px-12">
               <div className="grid grid-cols-4 grid-rows-2 gap-6 rounded-xl bg-[#101827] sm:gap-2 lg:gap-1">
                 <a
-                  href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                  href="https://docs.treasure.lol/games/game-integration-framework"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative col-span-4 rounded-tl-lg bg-[#131D2E] px-8 py-7 transition-colors duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-3"
@@ -181,7 +181,7 @@ export default function Build() {
                       alt="Game Builders Program Icon"
                     />
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                      Ecosystem Integration Framework
+                      Game Integration Framework
                     </p>
                     <p className="mt-1.5 text-night-500 sm:text-xl">
                       Let’s partner to grow together over the long-term
@@ -304,7 +304,7 @@ export default function Build() {
         className="group relative bg-honey-50 py-16 sm:py-24"
       >
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-          <div className="space-y-20 lg:space-y-0">
+          <div className="space-y-12 lg:space-y-16">
             <div className="relative lg:grid lg:grid-flow-row-dense lg:grid-cols-8 lg:gap-8">
               <div className="mb-12 flex items-center justify-center lg:col-span-4 lg:mb-0">
                 <img
@@ -511,11 +511,11 @@ export default function Build() {
       >
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
-            <div className="max-w-min space-y-5">
+            <div className="space-y-5 text-center sm:max-w-min sm:text-left">
               <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
                 Featured Games
               </p>
-              <p className="text-center text-xs text-night-500 sm:text-left sm:text-xl">
+              <p className="text-xs text-night-500 sm:text-xl">
                 Games powered by Treasure through MAGIC, imagination, and
                 interoperability.
               </p>
@@ -626,14 +626,14 @@ export default function Build() {
                   Build with Treasure
                 </p>
                 <p className="text-sm text-night-100 sm:text-lg">
-                  Apply to the Ecosystem Integration Framework to supercharge
-                  your game.
+                  Apply to the Game Integration Framework to supercharge your
+                  game.
                 </p>
               </div>
               <div className="mt-8">
                 <CTAButton
                   as="a"
-                  href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                  href="https://docs.treasure.lol/games/game-integration-framework"
                   type="primary"
                 >
                   Start building

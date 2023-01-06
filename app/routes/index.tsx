@@ -141,15 +141,15 @@ export default function Home() {
                   Build the future of gaming with us
                 </p>
                 <p className="text-xs text-night-500 sm:text-base lg:text-lg xl:text-xl">
-                  Apply to our Ecosystem Integration Framework to supercharge
-                  your game and build with a vibrant community and ecosystem of
+                  Apply to our Game Integration Framework to supercharge your
+                  game and build with a vibrant community and ecosystem of
                   builders, and receive curated long-term support and
                   incentives.
                 </p>
                 <div>
                   <CTAButton
                     as="a"
-                    href="https://docs.treasure.lol/games/ecosystem-integration-framework"
+                    href="https://docs.treasure.lol/games/game-integration-framework"
                   >
                     Start building
                   </CTAButton>
