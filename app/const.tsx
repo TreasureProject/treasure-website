@@ -357,7 +357,7 @@ export const teamMembers = [
   },
   {
     name: "Animen",
-    title: "Marketing",
+    title: "Art",
     discordLink: "https://discordapp.com/users/277435777783169024",
     image: AnimenImg,
     team: "Smolverse",
