@@ -869,7 +869,7 @@ export const IndexCTA = [
     name: "Interoperability",
     description: "Connected games are the future.",
     icon: <EconomyIcon className="h-8 w-8" aria-hidden="true" />,
-    href: "/games",
+    href: "/interoperability",
     isExternal: false,
   },
   {

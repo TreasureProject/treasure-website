@@ -4,8 +4,9 @@ import { socials, navigation } from "~/const";
 import { MagicIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 import { useTranslation } from "react-i18next";
-import React from "react";
 import { useAppContext } from "~/context/App";
+
+const currentYear = new Date().getFullYear();
 
 const groupedNavigation = navigation.reduce<typeof navigation[number][]>(
   (acc, item) => {
@@ -139,7 +140,7 @@ export const Footer = () => {
         </div>
         <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 sm:flex-row">
           <p className="mt-12 text-sm text-night-700 sm:mt-0">
-            &copy; 2021-2022 Treasure
+            &copy; 2021-{currentYear} Treasure
           </p>
           <div className="flex space-x-6">
             {socials.map((social) => (
