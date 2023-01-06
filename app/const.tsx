@@ -675,24 +675,16 @@ export const communityInfrastructure = [
     name: "Flywheel",
     description:
       "Launched by the Battefly team, Flywheel offers staking-as-a-service for smaller ecosystem projects to help foster growth of the entire ecosystem.",
-    CTAButtons: [
-      {
-        buttonDescription: "Learn more",
-        href: "https://docs.battlefly.game/battlefly-treasury/flywheel",
-      },
-    ],
+    buttonDescription: "Learn more",
+    href: "https://docs.battlefly.game/battlefly-treasury/flywheel",
     image: FlywheelImg,
   },
   {
     name: "Build with us",
     description:
       "Treasure is actively working to build infrastructure in partnership with the community",
-    CTAButtons: [
-      {
-        buttonDescription: "Visit the bounty board",
-        href: "https://app.dework.xyz/treasuredao/board",
-      },
-    ],
+    buttonDescription: "Visit the bounty board",
+    href: "https://app.dework.xyz/treasuredao/board",
     image: BuildWithUsImg,
   },
 ];
@@ -810,7 +802,8 @@ export const infrastructures = [
   {
     name: "Marketplace",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
-    description: "Trove is the destination for gaming on Treasure.",
+    description:
+      "Trove is the destination for gaming on Treasure offering game discovery, a leading marketplace, and events.",
     buttonDescription: "Visit Trove",
     href: "https://trove.treasure.lol",
   },
@@ -818,8 +811,8 @@ export const infrastructures = [
     name: "AMM",
     icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
     description:
-      "MagicSwap supports trading of native tokens for partner projects with each liquidity pool using MAGIC as the base pair.",
-    buttonDescription: "Visit MagicSwap Soon",
+      "MagicSwap powers the cross-game economy by supporting the trading of native tokens for games powererd by Treasure with each liquidity pool using MAGIC as the base pair.",
+    buttonDescription: "Visit MagicSwap",
     href: "https://magiscwap.treasure.lol",
   },
   {
@@ -875,14 +868,14 @@ export const IndexCTA = [
   },
   {
     name: "Marketplace",
-    description: "Trove: the destination for gaming on Treasure.",
+    description: "Trove is the destination for gaming on Treasure.",
     icon: <TroveIcon className="h-8 w-8 text-ruby-900" aria-hidden="true" />,
     href: "https://trove.treasure.lol",
     isExternal: true,
   },
   {
     name: "AMM",
-    description: "MagicSwap: powering the cross-game economy.",
+    description: "MagicSwap powers the cross-game economy.",
     icon: <AMMIcon className="h-8 w-8" aria-hidden="true" />,
     href: "https://magicswap.lol/",
     isExternal: true,

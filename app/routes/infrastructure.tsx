@@ -40,7 +40,7 @@ export default function Infrastructure() {
             The economic engine and tooling to make your imagination a reality.
           </h2>
         </div>
-        <div className="mx-auto mt-20 max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-6xl lg:px-12">
+        <div className="mx-auto mt-20 max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
           <Infrastructures />
         </div>
       </div>
