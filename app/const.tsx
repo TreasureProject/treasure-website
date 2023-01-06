@@ -64,7 +64,7 @@ import GuildsImg from "../public/img/illustrations/guilds.png";
 
 // Stat Icons
 import IconArbitrumImg from "../public/img/icons/Arbitrum.svg";
-import IconMagicImg from "../public/img/icons/Magic.svg";
+import IconGrowthImg from "../public/img/icons/Growth.svg";
 import IconSushiImg from "../public/img/icons/Sushi.svg";
 import IconTroveImg from "../public/img/icons/Trove.svg";
 import IconGamesImg from "../public/img/icons/Games.svg";
@@ -1133,24 +1133,9 @@ export const stats = [
     icon: IconArbitrumImg,
   },
   {
-    title: "of all gaming and NFT txns on Arbitrum",
-    value: "95%",
-    icon: IconArbitrumImg,
-  },
-  {
     title: "Total marketplace volume",
     value: "$267M",
     icon: IconTroveImg,
-  },
-  {
-    title: "Unique MAGIC holders",
-    value: "295k", //todo: make dynamic
-    icon: IconMagicImg,
-  },
-  {
-    title: "Gaming and top 5 overall liquidity on Sushi",
-    value: "#1",
-    icon: IconSushiImg,
   },
   {
     title: "Games powered by Treasure",
@@ -1158,9 +1143,24 @@ export const stats = [
     icon: IconGamesImg,
   },
   {
+    title: "Gaming and top 5 overall liquidity on Sushi",
+    value: "#1",
+    icon: IconSushiImg,
+  },
+  {
     title: "Engaged player community",
     value: "100k+",
     icon: IconCommunityImg,
+  },
+  {
+    title: "Quarter-on-quarter growth (weekly active users)",
+    value: "101%",
+    icon: IconGrowthImg,
+  },
+  {
+    title: "of all gaming and NFT txns on Arbitrum",
+    value: "95%",
+    icon: IconArbitrumImg,
   },
 ] as const;
 
