@@ -63,12 +63,12 @@ import GovernanceImg from "../public/img/illustrations/governance.png";
 import GuildsImg from "../public/img/illustrations/guilds.png";
 
 // Stat Icons
-import IconArbitrumImg from "../public/img/stat-icons/Arbitrum.svg";
-import IconMagicImg from "../public/img/stat-icons/Magic.svg";
-import IconSushiImg from "../public/img/stat-icons/Sushi.svg";
-import IconTroveImg from "../public/img/stat-icons/Trove.svg";
-import IconGamesImg from "../public/img/stat-icons/Games.svg";
-import IconCommunityImg from "../public/img/stat-icons/Community.svg";
+import IconArbitrumImg from "../public/img/icons/Arbitrum.svg";
+import IconMagicImg from "../public/img/icons/Magic.svg";
+import IconSushiImg from "../public/img/icons/Sushi.svg";
+import IconTroveImg from "../public/img/icons/Trove.svg";
+import IconGamesImg from "../public/img/icons/Games.svg";
+import IconCommunityImg from "../public/img/icons/Community.svg";
 
 // Team
 import AnimenImg from "../public/img/pfps/Animen.png";

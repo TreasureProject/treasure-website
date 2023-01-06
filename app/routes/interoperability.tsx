@@ -7,7 +7,16 @@ import { commonHeaders } from "~/utils/misc.server";
 import InteropIcon from "@/img/icons/Interop.svg";
 import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
-import IconGamesImg from "@/img/stat-icons/Games.svg";
+import IconGamesImg from "@/img/icons/Games.svg";
+import IconAssetImg from "@/img/icons/interop/Asset.svg";
+import IconCharacterImg from "@/img/icons/interop/Character.svg";
+import IconCurrencyImg from "@/img/icons/interop/Currency.svg";
+import IconGameLoopImg from "@/img/icons/interop/Game_Loop.svg";
+import IconIPImg from "@/img/icons/interop/IP.svg";
+import IconItemImg from "@/img/icons/interop/Item.svg";
+import IconMetagameImg from "@/img/icons/interop/Metagame.svg";
+import IconRewardsImg from "@/img/icons/interop/Rewards.svg";
+import IconToolingImg from "@/img/icons/interop/Tooling.svg";
 import MagicLogomarkImg from "@/img/magic-logomark.webp";
 import { stats } from "~/const";
 
@@ -33,23 +42,53 @@ export const meta: MetaFunction = ({ parentsData }) => {
 
 export const headers: HeadersFunction = commonHeaders;
 
-// hardcode the above array to an object with the key being the first word of the string
-
-const interoperableList = {
-  "Character Personas":
-    "Make your characters transferable between multiple games. ",
-  Currency: "Leverage shared currencies across games. ",
-  Asset: "Use assets across multiple games.",
-  IP: "Monetize your brand, stories, and universe with interoperable IP.",
-  "Game loop / Economic": "User flow spanning multiple games. ",
-  Rewards:
-    "Issue rewards to players for completing specific actions across games.",
-  "Item Drop Qualifier":
-    "Reward players for owning items across games to drive further retention and engagement.",
-  "Meta-game": "Gameplay beyond the main game.",
-  "Shared tooling / Game Mechanics":
-    "Elevate your world building with shared tooling and game mechanics.",
-} as const;
+const interoperableList = [
+  {
+    title: "Character Personas",
+    text: "Make your characters transferable between multiple games.",
+    icon: IconCharacterImg,
+  },
+  {
+    title: "Currency",
+    text: "Leverage shared currencies across games.",
+    icon: IconCurrencyImg,
+  },
+  {
+    title: "Asset",
+    text: "Use assets across multiple games.",
+    icon: IconAssetImg,
+  },
+  {
+    title: "IP",
+    text: "Monetize your brand, stories, and universe with interoperable IP.",
+    icon: IconIPImg,
+  },
+  {
+    title: "Game Loop / Economic",
+    text: "Player flows spanning multiple games. ",
+    icon: IconGameLoopImg,
+  },
+  {
+    title: "Rewards",
+    text: "Issue rewards to players for completing specific actions across games.",
+    icon: IconRewardsImg,
+  },
+  {
+    title: "Item Drop Qualifier",
+    text: "Reward players for owning items across games to drive further retention and engagement.",
+    icon: IconItemImg,
+  },
+  {
+    title: "Metagame",
+    text: "Gameplay beyond the main game.",
+    icon: IconMetagameImg,
+  },
+  {
+    title: "Shared Tooling / Game Mechanics",
+    text: "Elevate your world building with shared tooling and game mechanics.",
+    icon: IconToolingImg,
+  },
+];
 
 const builders = [
   "Create new game formats and unique player experiences",
@@ -210,24 +249,21 @@ export default function Interoperability() {
               </Balancer>
             </p>
             <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-3">
-              {(
-                Object.keys(
-                  interoperableList
-                ) as (keyof typeof interoperableList)[]
-              ).map((title) => {
-                const text = interoperableList[title];
-                return (
-                  <div
-                    className="flex items-center space-x-2.5 rounded-lg border border-night-100/5 bg-night-100/5 p-6 backdrop-blur-lg"
-                    key={title}
-                  >
-                    <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900" />
-                    <p className="text-sm text-honey-50 sm:text-base">
-                      <span className="font-bold">{title}:</span> {text}
-                    </p>
-                  </div>
-                );
-              })}
+              {interoperableList.map((example) => (
+                <div
+                  className="flex items-center space-x-2.5 rounded-lg border border-night-100/5 bg-night-100/5 p-6 backdrop-blur-lg"
+                  key={example.title}
+                >
+                  <img
+                    className="h-10 w-10 flex-shrink-0 text-honey-900"
+                    src={example.icon}
+                  />
+                  <p className="text-sm text-honey-50 sm:text-base">
+                    <span className="font-bold">{example.title}:</span>{" "}
+                    {example.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
