@@ -9,7 +9,7 @@ import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import { arbitrumPartners, builderTweets, core5Cartridges } from "~/const";
+import { arbitrumPartners, builderTweets, featuredCartridges } from "~/const";
 import LogomarkImg from "@/img/resources/treasure/logomark.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
 import Balancer from "react-wrap-balancer";
@@ -530,7 +530,7 @@ export default function Build() {
             </div>
           </div>
           <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
-            {core5Cartridges.map((cartridge) => {
+            {featuredCartridges.map((cartridge) => {
               return (
                 <a
                   href={cartridge.websiteLink}

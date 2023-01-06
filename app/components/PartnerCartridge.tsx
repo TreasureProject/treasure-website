@@ -1,5 +1,4 @@
 import type { CartridgeT } from "~/const";
-import { DiscordIcon, TwitterIcon } from "./Icons";
 import classNames from "clsx";
 import { Badge } from "./Badge";
 import { GlobeAltIcon } from "@heroicons/react/24/solid";

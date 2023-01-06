@@ -983,6 +983,7 @@ export const cartridges = [
     description:
       "A fantasy action roguelite RPG. Venture into dungeons, defeat evils & expand the Beacon's protective light!",
     core: true,
+    featured: true,
   },
   {
     name: "Kuroro",
@@ -993,6 +994,7 @@ export const cartridges = [
     description:
       "Kuroro is a gaming ecosystem where Beasts roam free and Trainers set out to explore, collect, craft, battle and master the elements.",
     core: true,
+    featured: true,
   },
   {
     name: "Tales of Elleria",
@@ -1003,6 +1005,7 @@ export const cartridges = [
     description:
       "Tales of Elleria is an immersive three-dimensional role-playing game. Send heroes on assignments and quests!",
     core: true,
+    featured: true,
   },
   {
     name: "BattleFly",
@@ -1012,6 +1015,7 @@ export const cartridges = [
     sliderImage: BattleflySliderImg,
     description: "BattleFly is a PVP/P2E strategy game powered by MAGIC.",
     core: true,
+    featured: false,
   },
   {
     name: "Smolverse",
@@ -1022,6 +1026,7 @@ export const cartridges = [
     description:
       "Smolverse is a fun and playful world of progressively-evolving NFTs on Arbitrum driven by storytelling, community, good vibes & EEEEEEs!",
     core: true,
+    featured: false,
   },
   {
     name: "Bridgeworld",
@@ -1033,6 +1038,7 @@ export const cartridges = [
     description:
       "Bridgeworld is a game of strategic commerce, trade and social coordination sitting at the epicenter of the Treasure ecosystem.",
     core: true,
+    featured: true,
   },
   {
     name: "Realm",
@@ -1043,6 +1049,7 @@ export const cartridges = [
     description:
       "Realm is a world-building and exploration game rooted in GameFi.",
     core: true,
+    featured: false,
   },
   {
     name: "Lost SamuRise",
@@ -1053,6 +1060,7 @@ export const cartridges = [
     description:
       "Lost SamuRise is a faction based strategy game played in the fictional world of Tengoku.",
     core: true,
+    featured: false,
   },
   {
     name: "Toadstoolz",
@@ -1062,6 +1070,7 @@ export const cartridges = [
     sliderImage: null,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     core: true,
+    featured: false,
   },
   {
     name: "The Lost Donkeys",
@@ -1072,6 +1081,7 @@ export const cartridges = [
     description:
       "The Lost Donkeys is a game where barns will be built and donkeys will prevail.",
     core: true,
+    featured: false,
   },
   {
     name: "LifeVerse",
@@ -1082,6 +1092,7 @@ export const cartridges = [
     description:
       "LifeVerse is a fully decentralized game creating base character primitives to be used by other projects to connect worlds and create common lore and resources.",
     core: true,
+    featured: false,
   },
   {
     name: "Knights of the Ether",
@@ -1092,18 +1103,14 @@ export const cartridges = [
     description:
       "A deckbuilding roguelike where players battle through randomly generated maps and upgrade their gear to dominate the leaderboards!",
     core: true,
+    featured: true,
   },
 ] as const;
 
 export const sliderCartridges = cartridges.filter((c) => c.sliderImage);
 
 export const coreCartridges = cartridges.filter((c) => c.core);
-
-// get random 5 cartridges
-export const core5Cartridges = cartridges
-  .filter((c) => c.core)
-  .sort(() => Math.random() - 0.5)
-  .slice(0, 5);
+export const featuredCartridges = cartridges.filter((c) => c.featured);
 
 export type CartridgeT = typeof cartridges[number];
 
