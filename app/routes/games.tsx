@@ -16,6 +16,7 @@ import { SpinnerIcon } from "~/components/Icons";
 import { twMerge } from "tailwind-merge";
 import { CTAButton } from "~/components/Button";
 import { Arrow } from "~/components/Arrow";
+import DefaultIconImg from "@/img/games/icons/default.webp";
 
 import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 
@@ -299,7 +300,7 @@ const PartnerSlideDesktop = () => {
   return (
     <div className="grid grid-cols-12 items-center gap-8">
       <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden xl:col-span-3">
-        <div className="h-[24rem] space-y-3 overflow-y-auto scrollbar-thin scrollbar-track-night-800 scrollbar-thumb-night-700 xl:h-[32rem] 2xl:h-[36rem]">
+        <div className="h-[24rem] space-y-3 overflow-y-auto scrollbar-thin scrollbar-track-night-800 scrollbar-thumb-night-700 lg:pr-8 xl:h-[32rem] 2xl:h-[36rem]">
           {sliderCartridges.map((feature, featureIndex) => (
             <div
               key={feature.name}
@@ -314,7 +315,7 @@ const PartnerSlideDesktop = () => {
               )}
               <div className="relative z-10 flex items-center space-x-3.5 px-4 py-3.5">
                 <img
-                  src={feature.image}
+                  src={feature.iconImage || DefaultIconImg}
                   className="h-16 w-16 rounded-lg object-cover"
                   alt={feature.name}
                 />

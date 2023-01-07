@@ -1,36 +1,46 @@
 // Games (Powered by Treasure) - Logos
-import BWTextImg from "../public/img/gameLogos/bridgeworld.webp";
-import BattleflyLogoImg from "../public/img/gameLogos/Battlefly.svg";
-import KuroroLogoImg from "../public/img/gameLogos/Kuroro.svg";
-import KoteLogoImg from "../public/img/gameLogos/KOTE.webp";
-import RealmLogoImg from "../public/img/gameLogos/Realm.webp";
-import SmolverseLogoImg from "../public/img/gameLogos/Smolverse.svg";
-import TheBeaconLogoImg from "../public/img/gameLogos/The_Beacon.webp";
-import TOELogoImg from "../public/img/gameLogos/TOE.webp";
+import BWTextImg from "../public/img/games/logos/bridgeworld.webp";
+import BattleflyLogoImg from "../public/img/games/logos/Battlefly.svg";
+import KuroroLogoImg from "../public/img/games/logos/Kuroro.svg";
+import KoteLogoImg from "../public/img/games/logos/KOTE.webp";
+import RealmLogoImg from "../public/img/games/logos/Realm.webp";
+import SmolverseLogoImg from "../public/img/games/logos/Smolverse.svg";
+import TheBeaconLogoImg from "../public/img/games/logos/The_Beacon.webp";
+import TOELogoImg from "../public/img/games/logos/TOE.webp";
 
 // Games (Powered by Treasure) - Cards
-import BattleFlyImg from "@/img/projects/Battlefly.webp";
-import BridgeworldImg from "@/img/projects/Bridgeworld.webp";
-import KnightsOfTheEtherImg from "@/img/projects/Knights_of_the_Ether.webp";
-import LifeVerseImg from "@/img/projects/LifeVerse.webp";
-import LostSamuriseImg from "@/img/projects/Lost_Samurise.webp";
-import RealmverseImg from "@/img/projects/Realmverse.webp";
-import KuroroImg from "@/img/projects/Kuroro.webp";
-import TalesOfElleriaImg from "@/img/projects/Tales_of_Elleria.webp";
-import TheBeaconImg from "@/img/projects/The_Beacon.webp";
-import TheLostDonkeysImg from "@/img/projects/The_Lost_Donkeys.webp";
-import ToadstoolzImg from "@/img/projects/Toadstoolz.webp";
-import SmolverseImg from "@/img/projects/Smolverse.webp";
+import BattleFlyImg from "@/img/games/cards/Battlefly.webp";
+import BridgeworldImg from "@/img/games/cards/Bridgeworld.webp";
+import KnightsOfTheEtherImg from "@/img/games/cards/Knights_of_the_Ether.webp";
+import LifeVerseImg from "@/img/games/cards/LifeVerse.webp";
+import LostSamuriseImg from "@/img/games/cards/Lost_Samurise.webp";
+import RealmverseImg from "@/img/games/cards/Realmverse.webp";
+import KuroroImg from "@/img/games/cards/Kuroro.webp";
+import TalesOfElleriaImg from "@/img/games/cards/Tales_of_Elleria.webp";
+import TheBeaconImg from "@/img/games/cards/The_Beacon.webp";
+import TheLostDonkeysImg from "@/img/games/cards/The_Lost_Donkeys.webp";
+import ToadstoolzImg from "@/img/games/cards/Toadstoolz.webp";
+import SmolverseImg from "@/img/games/cards/Smolverse.webp";
 
 // Games (Powered by Treasure) - Sliders
-import BattleflySliderImg from "@/img/covers/Battlefly.webp";
-import BridgeworldSliderImg from "@/img/covers/Bridgeworld.webp";
-import KOTESliderImg from "@/img/covers/KOTE.webp";
-import RealmSliderImg from "@/img/covers/Realm.webp";
-import KuroroSliderImg from "@/img/covers/Kuroro.webp";
-import SmolverseSliderImg from "@/img/covers/Smolverse.webp";
-import TheBeaconSliderImg from "@/img/covers/The_Beacon.webp";
-import TOESliderImg from "@/img/covers/TOE.webp";
+import BattleflySliderImg from "@/img/games/slides/Battlefly.webp";
+import BridgeworldSliderImg from "@/img/games/slides/Bridgeworld.webp";
+import KOTESliderImg from "@/img/games/slides/KOTE.webp";
+import RealmSliderImg from "@/img/games/slides/Realm.webp";
+import KuroroSliderImg from "@/img/games/slides/Kuroro.webp";
+import SmolverseSliderImg from "@/img/games/slides/Smolverse.webp";
+import TheBeaconSliderImg from "@/img/games/slides/The_Beacon.webp";
+import TOESliderImg from "@/img/games/slides/TOE.webp";
+
+// Games (Powered by Treasure) - Icons
+import BattleflyIconImg from "@/img/games/icons/battlefly.webp";
+import BridgeworldIconImg from "@/img/games/icons/bridgeworld.webp";
+import KOTEIconImg from "@/img/games/icons/kote.webp";
+import RealmIconImg from "@/img/games/icons/realm.webp";
+import KuroroIconImg from "@/img/games/icons/kuroro.webp";
+import SmolverseIconImg from "@/img/games/icons/smolverse.webp";
+import TheBeaconIconImg from "@/img/games/icons/thebeacon.webp";
+import TOEIconImg from "@/img/games/icons/talesofelleria.webp";
 
 // Investors
 import AcadArenaImg from "../public/img/partners/AcadArena.svg";
@@ -1000,6 +1010,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/the-beacon",
     logo: TheBeaconLogoImg,
     sliderImage: TheBeaconSliderImg,
+    iconImage: TheBeaconIconImg,
     description:
       "A fantasy action roguelite RPG. Venture into dungeons, defeat evils & expand the Beacon's protective light!",
     core: true,
@@ -1011,6 +1022,7 @@ export const cartridges = [
     websiteLink: "https://www.kuroro.com/",
     logo: KuroroLogoImg,
     sliderImage: KuroroSliderImg,
+    iconImage: KuroroIconImg,
     description:
       "Kuroro is a gaming ecosystem where Beasts roam free and Trainers set out to explore, collect, craft, battle and master the elements.",
     core: true,
@@ -1022,6 +1034,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/tales-of-elleria",
     logo: TOELogoImg,
     sliderImage: TOESliderImg,
+    iconImage: TOEIconImg,
     description:
       "Tales of Elleria is an immersive three-dimensional role-playing game. Send heroes on assignments and quests!",
     core: true,
@@ -1033,6 +1046,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/battlefly",
     logo: BattleflyLogoImg,
     sliderImage: BattleflySliderImg,
+    iconImage: BattleflyIconImg,
     description: "BattleFly is a PVP/P2E strategy game powered by MAGIC.",
     core: true,
     featured: false,
@@ -1043,6 +1057,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/smolverse",
     logo: SmolverseLogoImg,
     sliderImage: SmolverseSliderImg,
+    iconImage: SmolverseIconImg,
     description:
       "Smolverse is a fun and playful world of progressively-evolving NFTs on Arbitrum driven by storytelling, community, good vibes & EEEEEEs!",
     core: true,
@@ -1055,6 +1070,7 @@ export const cartridges = [
     logo: BWTextImg,
     // used in /games slider, which has a video aspect ratio
     sliderImage: BridgeworldSliderImg,
+    iconImage: BridgeworldIconImg,
     description:
       "Bridgeworld is a game of strategic commerce, trade and social coordination sitting at the epicenter of the Treasure ecosystem.",
     core: true,
@@ -1066,6 +1082,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/realm",
     logo: RealmLogoImg,
     sliderImage: RealmSliderImg,
+    iconImage: RealmIconImg,
     description:
       "Realm is a world-building and exploration game rooted in GameFi.",
     core: true,
@@ -1077,6 +1094,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/samurise",
     logo: null,
     sliderImage: null,
+    iconImage: null,
     description:
       "Lost SamuRise is a faction based strategy game played in the fictional world of Tengoku.",
     core: true,
@@ -1088,6 +1106,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/toadstoolz",
     logo: null,
     sliderImage: null,
+    iconImage: null,
     description: "The Origin Legions of Bridgeworld with a fixed supply.",
     core: true,
     featured: false,
@@ -1098,6 +1117,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/the-lost-donkeys",
     logo: null,
     sliderImage: null,
+    iconImage: null,
     description:
       "The Lost Donkeys is a game where barns will be built and donkeys will prevail.",
     core: true,
@@ -1109,6 +1129,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/life",
     logo: null,
     sliderImage: null,
+    iconImage: null,
     description:
       "LifeVerse is a fully decentralized game creating base character primitives to be used by other projects to connect worlds and create common lore and resources.",
     core: true,
@@ -1120,6 +1141,7 @@ export const cartridges = [
     websiteLink: "https://trove.treasure.lol/games/kote",
     logo: KoteLogoImg,
     sliderImage: KOTESliderImg,
+    iconImage: KOTEIconImg,
     description:
       "A deckbuilding roguelike where players battle through randomly generated maps and upgrade their gear to dominate the leaderboards!",
     core: true,
