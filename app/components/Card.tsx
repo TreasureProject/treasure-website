@@ -9,7 +9,7 @@ export const Card = ({ card }: { card: CardT }) => (
       <p className="text-base font-bold !leading-[1.6rem] text-night-800 sm:text-2xl">
         {card.name}
       </p>
-      <p className="text-sm text-night-700 xl:text-base">{card.description}</p>
+      <p className="text-sm text-night-600 xl:text-base">{card.description}</p>
     </div>
     <div className="flex items-end">
       <img
