@@ -58,7 +58,7 @@ export default function Games() {
         aria-labelledby="games-slider"
         className="relative bg-night-900 py-16 sm:py-24"
       >
-        <div className="mx-auto hidden max-w-9xl px-4 sm:px-24 lg:block">
+        <div className="mx-auto hidden max-w-9xl px-4 sm:px-12 lg:block">
           <PartnerSlideDesktop />
         </div>
         <div className="block lg:hidden">
@@ -164,7 +164,7 @@ const PartnerSlideMobile = () => {
         {sliderCartridges.map((feature) => (
           <div key={feature.name} className="keen-slider__slide px-16 sm:px-24">
             <img
-              className="h-64 w-full rounded-2xl border-2 border-night-800 object-cover [mask-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:h-96"
+              className="h-[20rem] w-full rounded-2xl border-2 border-night-800 object-cover [mask-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:h-[32rem]"
               src={feature.sliderImage ?? ""}
               alt=""
             />
@@ -222,7 +222,7 @@ const PartnerSlideMobile = () => {
           />
         ) : null}
         <div className="mt-3 space-y-2">
-          <p className="text-[0.6rem] text-night-100 sm:text-xs">
+          <p className="text-xs text-night-100 sm:text-sm">
             {currentSlideInfo.description}
           </p>
         </div>
@@ -231,7 +231,7 @@ const PartnerSlideMobile = () => {
             as="a"
             href={currentSlideInfo.websiteLink}
             type="primary"
-            className="text-[0.6rem] sm:text-xs"
+            className="text-xs sm:text-sm"
           >
             View game
           </CTAButton>
@@ -299,7 +299,7 @@ const PartnerSlideDesktop = () => {
   return (
     <div className="grid grid-cols-12 items-center gap-8">
       <div className="relative z-10 order-last col-span-4 h-0 min-h-full space-y-6 overflow-hidden xl:col-span-3">
-        <div className="h-[20rem] space-y-3 overflow-y-auto xl:h-[28rem] 2xl:h-[30rem]">
+        <div className="h-[24rem] space-y-3 overflow-y-auto scrollbar-thin scrollbar-track-night-800 scrollbar-thumb-night-700 xl:h-[32rem] 2xl:h-[36rem]">
           {sliderCartridges.map((feature, featureIndex) => (
             <div
               key={feature.name}
@@ -332,7 +332,7 @@ const PartnerSlideDesktop = () => {
           ))}
         </div>
       </div>
-      <div className="relative col-span-8 h-[20rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:col-span-9 xl:h-[28rem] 2xl:h-[30rem]">
+      <div className="relative col-span-8 h-[24rem] overflow-hidden rounded-2xl border-2 border-night-800 xl:col-span-9 xl:h-[32rem] 2xl:h-[36rem]">
         <SpinnerIcon
           className={twMerge(
             "mx-auto h-full w-6 text-night-500",
@@ -343,7 +343,7 @@ const PartnerSlideDesktop = () => {
           {sliderCartridges.map((feature) => (
             <div key={feature.name} className="keen-slider__slide aspect-video">
               <img
-                className="h-full w-full [mask-image:linear-gradient(to_left,#000_10%,#0000_90%)] xl:[mask-image:linear-gradient(to_left,#000_20%,#0000_90%)]"
+                className="h-full w-full object-cover object-center [mask-image:linear-gradient(to_left,#000_10%,#0000_90%)] xl:[mask-image:linear-gradient(to_left,#000_20%,#0000_90%)]"
                 src={feature.sliderImage ?? ""}
                 alt=""
               />
@@ -360,12 +360,12 @@ const PartnerSlideDesktop = () => {
           {currentSlideInfo.logo ? (
             <img
               src={currentSlideInfo.logo}
-              className="w-52"
+              className="h-12"
               alt={currentSlideInfo.name}
             />
           ) : null}
-          <div className="mt-6 space-y-3.5 xl:max-w-sm">
-            <p className="text-xs text-night-100 xl:text-base">
+          <div className="mt-6 max-w-md space-y-3.5 lg:max-w-sm">
+            <p className="text-sm text-night-100 sm:text-sm xl:text-base">
               {currentSlideInfo.description}
             </p>
           </div>
@@ -374,7 +374,7 @@ const PartnerSlideDesktop = () => {
               as="a"
               href={currentSlideInfo.websiteLink}
               type="primary"
-              className="text-[0.6rem] sm:text-xs"
+              className="text-[0.6rem] sm:text-sm"
             >
               View game
             </CTAButton>
