@@ -184,7 +184,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Game Integration Framework
                     </p>
-                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
+                    <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
                       Let’s partner to grow together over the long-term
                     </p>
                   </div>
@@ -205,7 +205,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Open Source
                     </p>
-                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
+                    <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
                       Shared code to help you bring your ideas to life
                     </p>
                   </div>
@@ -226,7 +226,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Documentation
                     </p>
-                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
+                    <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
                       Go under the hood for all things Treasure
                     </p>
                   </div>
@@ -247,7 +247,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Infrastructure
                     </p>
-                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
+                    <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
                       Tap into powerful tools and infra built by Treasure
                     </p>
                   </div>
@@ -267,7 +267,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Interoperability
                     </p>
-                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
+                    <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
                       Derive network value through a vibrant ecosystem of
                       connected communities and shared gaming experiences
                     </p>
@@ -278,7 +278,7 @@ export default function Build() {
                     <p className="text-lg font-bold text-honey-200 sm:text-2xl">
                       Learn more
                     </p>
-                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
+                    <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
                       Discover how we supercharge games
                     </p>
                   </div>

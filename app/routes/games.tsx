@@ -91,7 +91,7 @@ export default function Games() {
               </span>
             </div>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:gap-10 xl:grid-cols-5">
             {coreCartridges.map((cartridge) => {
               return (
                 <a
@@ -108,7 +108,7 @@ export default function Games() {
                         "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
                     }}
                   ></div>
-                  <div className="relative aspect-square [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:aspect-auto">
+                  <div className="relative aspect-auto [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
                     <img
                       src={cartridge.image}
                       className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
@@ -116,7 +116,7 @@ export default function Games() {
                     />
                   </div>
                   <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
-                    <p className="max-w-[70%] text-2xl font-bold text-honey-25">
+                    <p className="sm:text-md max-w-[70%] font-bold leading-5 text-honey-25 lg:text-xl lg:leading-6 xl:text-2xl">
                       {cartridge.name}
                     </p>
                   </div>
