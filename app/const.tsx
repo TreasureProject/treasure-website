@@ -55,12 +55,12 @@ import MoonPayImg from "../public/img/magic-list/moonpay.svg";
 import BinanceImg from "../public/img/magic-list/binance.svg";
 
 // Illustrations
-import BountyBoardImg from "../public/img/illustrations/bountyBoard.png";
+import CommunityCardImg from "../public/img/illustrations/Card_Community.webp";
 import BuildWithUsImg from "../public/img/illustrations/buildWithUs.png";
-import CommunityInitiativesImg from "../public/img/illustrations/communityInitiatives.png";
+import NetworkCardImg from "../public/img/illustrations/Card_Network.webp";
 import FlywheelImg from "../public/img/illustrations/flywheel.png";
-import GovernanceImg from "../public/img/illustrations/governance.png";
-import GuildsImg from "../public/img/illustrations/guilds.png";
+import SupportCardImg from "../public/img/illustrations/Card_Support.webp";
+import InfrastructureCardImg from "../public/img/illustrations/Card_Infrastructure.webp";
 
 // Stat Icons
 import IconArbitrumImg from "../public/img/icons/Arbitrum.svg";
@@ -73,6 +73,7 @@ import IconCommunityImg from "../public/img/icons/Community.svg";
 // Team
 import AnimenImg from "../public/img/pfps/Animen.png";
 import AntlionImg from "../public/img/pfps/Antlion.png";
+import ArchangImg from "../public/img/pfps/Archang.png";
 import BahamaImg from "../public/img/pfps/Bahama.png";
 import BasImg from "../public/img/pfps/Bas.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
@@ -81,11 +82,13 @@ import GaarpImg from "../public/img/pfps/Gaarp.png";
 import InspracImg from "../public/img/pfps/Insprac.png";
 import JakeImg from "../public/img/pfps/Jake.png";
 import JohnImg from "../public/img/pfps/John.png";
+import JpegapeImg from "../public/img/pfps/Jpegape.png";
 import JustCheeseImg from "../public/img/pfps/JustCheese.png";
 import KarelImg from "../public/img/pfps/Karel.png";
 import MaximeeImg from "../public/img/pfps/Maximee.png";
 import PeitaImg from "../public/img/pfps/Peita.png";
 import PreeminentImg from "../public/img/pfps/Preeminent.png";
+import PurpleSnowImg from "../public/img/pfps/PurpleSnow.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
 import SantiImg from "../public/img/pfps/Santi.png";
@@ -177,6 +180,14 @@ export const teamMembers = [
     team: "Treasure",
   },
   {
+    name: "Jpegape",
+    title: "Partnerships",
+    discordLink: "https://discordapp.com/users/757087781515165706",
+    twitterLink: "https://twitter.com/Jpegape1",
+    image: JpegapeImg,
+    team: "Treasure",
+  },
+  {
     name: "Sambino",
     title: "Marketing",
     discordLink: "https://discordapp.com/users/864206375492124702",
@@ -193,19 +204,19 @@ export const teamMembers = [
     team: "Treasure",
   },
   {
-    name: "X",
-    title: "Community",
-    discordLink: "https://discordapp.com/users/390264760748474368",
-    twitterLink: "https://twitter.com/cxf_0886",
-    image: XImg,
-    team: "Treasure",
-  },
-  {
     name: "Zak",
     title: "Branding",
     discordLink: "https://discordapp.com/users/212333834501357578",
     twitterLink: "https://twitter.com/Z_Keen",
     image: ZakImg,
+    team: "Treasure",
+  },
+  {
+    name: "X",
+    title: "Community",
+    discordLink: "https://discordapp.com/users/390264760748474368",
+    twitterLink: "https://twitter.com/cxf_0886",
+    image: XImg,
     team: "Treasure",
   },
   {
@@ -364,10 +375,19 @@ export const teamMembers = [
     team: "Smolverse",
   },
   {
+    name: "Archang",
+    title: "Community",
+    discordLink: "https://discordapp.com/users/803824281263538196",
+    twitterLink: "https://twitter.com/Archang01",
+    image: ArchangImg,
+    team: "Smolverse",
+  },
+  {
     name: "PurpleSnow",
     title: "Game Director",
     discordLink: "https://discordapp.com/users/539546215399030814",
-    image: DefaultImg,
+    twitterLink: "https://twitter.com/purplezsnow",
+    image: PurpleSnowImg,
     team: "Game Studio",
   },
 ];
@@ -712,28 +732,28 @@ export const builds = [
     description:
       "Tap into organic distribution with our expansive and tight-knit community.",
 
-    image: GovernanceImg,
+    image: CommunityCardImg,
   },
   {
     name: "Derive network value through interoperability",
     description:
       "Join a vibrant ecosystem connected by shared community and gaming experiences.",
 
-    image: BountyBoardImg,
+    image: NetworkCardImg,
   },
   {
     name: "Leverage powerful infrastructure",
     description:
       "Enrich your game’s experience through Treasure’s Proof of Play framework, Trove, and MagicSwap.",
 
-    image: CommunityInitiativesImg,
+    image: InfrastructureCardImg,
   },
   {
     name: "Receive support every step of the way",
     description:
       "Expert support at every stage of development, curated for all your unique use cases.",
 
-    image: GuildsImg,
+    image: SupportCardImg,
   },
 ];
 
@@ -854,14 +874,14 @@ export const BridgeworldInfrastructures = [
 export const IndexCTA = [
   {
     name: "Games",
-    description: "Games powered by Treasure.",
+    description: "Games powered by Treasure through MAGIC.",
     icon: <CartridgesIcon className="h-8 w-8" aria-hidden="true" />,
     href: "/games",
     isExternal: false,
   },
   {
     name: "Interoperability",
-    description: "Connected games are the future.",
+    description: "Experience the power of interconnected gaming.",
     icon: <InteropIcon className="h-8 w-8" aria-hidden="true" />,
     href: "/interoperability",
     isExternal: false,
@@ -869,7 +889,7 @@ export const IndexCTA = [
   {
     name: "Marketplace",
     description: "Trove is the destination for gaming on Treasure.",
-    icon: <TroveIcon className="h-8 w-8 text-ruby-900" aria-hidden="true" />,
+    icon: <TroveIcon className="h-7 w-7 text-ruby-900" aria-hidden="true" />,
     href: "https://trove.treasure.lol",
     isExternal: true,
   },

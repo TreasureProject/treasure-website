@@ -44,9 +44,10 @@ export default function Home() {
               <div className="col-span-3 mx-auto max-w-md px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left xl:max-w-sm">
                 <div className="text-center lg:py-32 lg:text-left xl:pb-48 xl:pt-40">
                   <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:mt-0 sm:text-7xl xl:text-[5rem]">
-                    {t("title")}
+                    The magic of <br className="inline-block sm:hidden" />
+                    play.
                   </h1>
-                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-5 backdrop-blur-sm lg:max-w-sm">
+                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-5 backdrop-blur-lg lg:max-w-sm">
                     <p className="text-base text-white sm:text-lg">
                       <Trans i18nKey="index:subtitle">
                         Treasure is the decentralized gaming ecosystem bringing
@@ -78,7 +79,7 @@ export default function Home() {
                       <p className="mt-3 text-base font-bold text-night-900 xl:text-xl">
                         {cta.name}
                       </p>
-                      <p className="mt-1 break-words text-sm text-night-700 xl:text-lg">
+                      <p className="mt-1 break-words text-sm text-night-700 xl:text-lg xl:leading-6">
                         {cta.description}
                       </p>
                       <ArrowTopRightOnSquareIcon className="absolute right-5 top-5 h-5 w-5 fill-night-700 transition-opacity duration-500 lg:right-7 lg:top-7 [&>path]:stroke-night-700 [&>path]:stroke-[1]" />
@@ -96,7 +97,7 @@ export default function Home() {
                     <p className="mt-3 text-base font-bold text-night-900 xl:text-xl">
                       {cta.name}
                     </p>
-                    <p className="mt-1 break-words text-sm text-night-700 xl:text-lg xl:leading-5">
+                    <p className="mt-1 break-words text-sm text-night-700 xl:text-lg xl:leading-6">
                       {cta.description}
                     </p>
                   </Link>

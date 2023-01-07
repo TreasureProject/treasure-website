@@ -16,11 +16,11 @@ import Balancer from "react-wrap-balancer";
 
 import { Link } from "@remix-run/react";
 import TreasureTeamImg from "@/img/TreasureTeam.png";
-import EcosystemFlywheelImg from "@/img/illustrations/Ecosystem_Flywheel.png";
-import InfrastructureImg from "@/img/illustrations/Infrastructure.png";
-import InfrastructureMobileImg from "@/img/illustrations/Infrastructure-mobile.png";
-import GamingExperiencesImg from "@/img/illustrations/Gaming_Experiences.png";
-import GamingExperiencesMobileImg from "@/img/illustrations/Gaming_Experiences-mobile.png";
+import EcosystemFlywheelImg from "@/img/illustrations/Ecosystem_Flywheel.webp";
+import InfrastructureImg from "@/img/illustrations/Infrastructure.webp";
+import InfrastructureMobileImg from "@/img/illustrations/Infrastructure-mobile.webp";
+import GamingExperiencesImg from "@/img/illustrations/Gaming_Experiences.webp";
+import GamingExperiencesMobileImg from "@/img/illustrations/Gaming_Experiences-mobile.webp";
 
 // Icons
 import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
@@ -152,10 +152,11 @@ export default function Build() {
                 </p>
                 <div className="mt-4 text-night-300 sm:text-xl">
                   <p>
-                    Vibrant community of builders and players. Immersive gaming
-                    experiences.
-                  </p>
-                  <p>
+                    <Balancer>
+                      Vibrant community of builders and players. Immersive
+                      gaming experiences.
+                    </Balancer>
+
                     <Balancer>
                       Tools to enable and accelerate your journey.{" "}
                       <span className="font-bold">Everything</span> you need to
@@ -166,7 +167,7 @@ export default function Build() {
               </div>
             </div>
             <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-9xl lg:px-12">
-              <div className="grid grid-cols-4 grid-rows-2 gap-6 rounded-xl bg-[#101827] sm:gap-2 lg:gap-1">
+              <div className="grid grid-cols-4 grid-rows-2 gap-1 rounded-xl bg-[#101827]">
                 <a
                   href="https://docs.treasure.lol/games/game-integration-framework"
                   target="_blank"
@@ -183,7 +184,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Game Integration Framework
                     </p>
-                    <p className="mt-1.5 text-night-500 sm:text-xl">
+                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
                       Let’s partner to grow together over the long-term
                     </p>
                   </div>
@@ -204,7 +205,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Open Source
                     </p>
-                    <p className="mt-1.5 text-night-500 sm:text-xl">
+                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
                       Shared code to help you bring your ideas to life
                     </p>
                   </div>
@@ -225,7 +226,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Documentation
                     </p>
-                    <p className="mt-1.5 text-night-500 sm:text-xl">
+                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
                       Go under the hood for all things Treasure
                     </p>
                   </div>
@@ -246,7 +247,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Infrastructure
                     </p>
-                    <p className="mt-1.5 text-night-500 sm:text-xl">
+                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
                       Tap into powerful tools and infra built by Treasure
                     </p>
                   </div>
@@ -266,7 +267,7 @@ export default function Build() {
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                       Interoperability
                     </p>
-                    <p className="mt-1.5 text-night-500 sm:text-xl">
+                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
                       Derive network value through a vibrant ecosystem of
                       connected communities and shared gaming experiences
                     </p>
@@ -277,7 +278,7 @@ export default function Build() {
                     <p className="text-lg font-bold text-honey-200 sm:text-2xl">
                       Learn more
                     </p>
-                    <p className="mt-1.5 text-night-500 sm:text-xl">
+                    <p className="mt-1.5 text-sm text-night-500 md:text-base md:leading-6 lg:text-lg 2xl:text-xl">
                       Discover how we supercharge games
                     </p>
                   </div>
@@ -511,11 +512,11 @@ export default function Build() {
       >
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
-            <div className="space-y-5 text-center sm:max-w-min sm:text-left">
+            <div className="space-y-5 text-center sm:max-w-sm sm:text-left">
               <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
                 Featured Games
               </p>
-              <p className="text-xs text-night-500 sm:text-xl">
+              <p className="text-sm text-night-500 sm:text-lg">
                 Games powered by Treasure through MAGIC, imagination, and
                 interoperability.
               </p>
@@ -562,6 +563,11 @@ export default function Build() {
               );
             })}
           </div>
+          <div className="mt-12 flex justify-center">
+            <CTAButton as="link" type="primary" to="/games" className="mx-auto">
+              View all games
+            </CTAButton>
+          </div>
         </div>
       </section>
       <section
@@ -591,10 +597,10 @@ export default function Build() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
             <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
-              <p className="text-base font-bold text-honey-200 lg:text-2xl xl:text-4xl">
+              <p className="text-2xl font-bold text-honey-200 xl:text-4xl">
                 You’re in good company on Arbitrum
               </p>
-              <p className="text-xs text-night-500 sm:text-base lg:text-lg xl:text-xl">
+              <p className="text-sm text-night-500 sm:text-base sm:text-lg">
                 The Arbitrum ecosystem is vast and reaches beyond Treasure. It’s
                 home to other great dapps, protocols, social platforms and has
                 everything you need to build.

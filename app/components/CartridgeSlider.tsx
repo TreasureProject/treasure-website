@@ -60,13 +60,13 @@ export const CartridgeSlider = () => {
                       as="a"
                       href={cartridge.websiteLink}
                       hideExternalIcon
-                      className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-3xl hover:bg-night-900 hover:text-white focus:ring-honey-500 sm:text-sm"
+                      className="border-night-700 bg-night-900/50 text-honey-50 backdrop-blur-xl focus:ring-honey-500 hover:bg-night-900 hover:text-white sm:text-sm"
                     >
                       View Game
-                      <ArrowTopRightOnSquareIcon
+                      {/* <ArrowTopRightOnSquareIcon
                         className="ml-1.5 h-4 w-4 [&>path]:stroke-honey-50 [&>path]:stroke-[1]"
                         aria-hidden="true"
-                      />
+                      /> */}
                     </CTAButton>
                   </div>
                   {/* <div className="absolute bottom-6 flex w-full justify-center border-t border-honey-25/10 xl:bottom-12">

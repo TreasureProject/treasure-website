@@ -62,7 +62,8 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        <div className="bg-honey-25 py-4 sm:py-0">
+        <div className="border-2 border-t border-ruby-900 sm:hidden" />
+        <div className="bg-honey-25">
           <div className="relative mx-auto flex max-w-9xl items-center justify-center px-4 xl:py-8 xl:px-0">
             <div className="flex w-full items-center justify-between xl:absolute xl:left-12 xl:w-auto">
               <Link to="/">
@@ -75,7 +76,7 @@ export const Header = () => {
                 />
               </Link>
               <div className="-mr-2 flex items-center xl:hidden">
-                <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-honey-50">
+                <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 focus:outline-none focus:ring-2 focus:ring-honey-50 hover:bg-honey-800">
                   <span className="sr-only">Open main menu</span>
                   <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
@@ -207,6 +208,7 @@ export const Header = () => {
             focus
             className="absolute inset-x-0 top-0 z-40 origin-top transform transition xl:hidden"
           >
+            <div className="border-2 border-t border-ruby-900 sm:hidden" />
             <div className="overflow-hidden bg-honey-50 shadow-md ring-1 ring-black ring-opacity-5">
               <div className="flex items-center justify-between px-4 pt-4 sm:px-8 sm:pt-6">
                 <div>
@@ -217,7 +219,7 @@ export const Header = () => {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 hover:bg-honey-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-honey-50">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-honey-200 p-2 text-ruby-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-honey-50 hover:bg-honey-800">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>

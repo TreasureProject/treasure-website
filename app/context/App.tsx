@@ -50,7 +50,7 @@ export const AppContextProvider = ({
           </Dialog.Title>
           <button
             type="button"
-            className="rounded-md bg-night-800 p-2.5 text-honey-50 hover:bg-night-900/50 focus:outline-none focus:ring-2 focus:ring-night-800 focus:ring-offset-2"
+            className="rounded-md bg-night-800 p-2.5 text-honey-50 focus:outline-none focus:ring-2 focus:ring-night-800 focus:ring-offset-2 hover:bg-night-900/50"
             onClick={closeModal}
           >
             <span className="sr-only">Close</span>
