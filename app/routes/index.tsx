@@ -138,10 +138,10 @@ export default function Home() {
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
               <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
-                <p className="text-base font-bold text-honey-200 lg:text-2xl xl:text-4xl">
+                <p className="text-2xl font-bold !leading-[1.6rem] text-honey-200 lg:text-3xl 2xl:text-4xl">
                   Build the future of gaming with us
                 </p>
-                <p className="text-xs text-night-500 sm:text-base lg:text-lg xl:text-xl">
+                <p className="text-sm text-night-500 sm:text-lg">
                   Apply to our Game Integration Framework to supercharge your
                   game and build with a vibrant community and ecosystem of
                   builders, and receive curated long-term support and

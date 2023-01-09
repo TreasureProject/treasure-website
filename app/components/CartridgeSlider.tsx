@@ -5,7 +5,6 @@ import { twMerge } from "tailwind-merge";
 import { CTAButton } from "./Button";
 import { Arrow } from "./Arrow";
 import { coreCartridges } from "~/const";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 
 const INITIAL_SLIDE = 0;
 
