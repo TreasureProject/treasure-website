@@ -15,7 +15,7 @@ import BgHeroImg from "@/img/bg-hero.jpg";
 import Balancer from "react-wrap-balancer";
 
 import { Link } from "@remix-run/react";
-import TreasureTeamImg from "@/img/TreasureTeam.png";
+import TreasureTeamImg from "@/img/TreasureTeam.webp";
 import EcosystemFlywheelImg from "@/img/illustrations/Ecosystem_Flywheel.webp";
 import InfrastructureImg from "@/img/illustrations/Infrastructure.webp";
 import InfrastructureMobileImg from "@/img/illustrations/Infrastructure-mobile.webp";
@@ -65,7 +65,7 @@ const Partner = ({
   index: number;
 }) => {
   return (
-    <div key={partner} className="mx-4 w-16">
+    <div key={partner} className="mx-3 w-16 lg:mx-4">
       <img src={partner} alt={`Partner ${index}`} />
     </div>
   );
@@ -611,7 +611,7 @@ export default function Build() {
                 </CTAButton>
               </div>
             </div>
-            <div className="col-span-3 flex flex-col justify-evenly space-y-10 rounded-xl md:order-2">
+            <div className="col-span-3 flex flex-col justify-evenly space-y-5 rounded-xl md:order-2 lg:space-y-10">
               <PartnerMarquee />
               <PartnerMarquee to="right" />
               <PartnerMarquee />

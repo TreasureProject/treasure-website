@@ -27,7 +27,7 @@ export const CartridgeSlider = () => {
 
   return (
     <div className="mt-12">
-      <div className="relative sm:mt-2 xl:mt-4">
+      <div className="relative px-4 sm:mt-2 xl:mt-4">
         <div
           ref={slideRef}
           className="keen-slider [mask-image:linear-gradient(to_left,#0000,#000_20%,#000_80%,#0000)]"
