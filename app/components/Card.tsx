@@ -6,10 +6,10 @@ export const Card = ({ card }: { card: CardT }) => (
     className="relative flex flex-col rounded-2.5xl border-2 border-honey-200 bg-honey-50 px-2 xl:flex-row"
   >
     <div className="flex basis-7/12 flex-col items-start space-y-4 pt-8 pl-8 pr-14 sm:py-8">
-      <p className="text-2xl font-bold !leading-[1.6rem] text-night-800 lg:text-3xl 2xl:text-4xl">
-        {card.name}
+      <p className="text-2xl font-bold text-night-800">{card.name}</p>
+      <p className="text-sm text-night-600 sm:text-base lg:text-lg">
+        {card.description}
       </p>
-      <p className="text-sm text-night-600 sm:text-lg">{card.description}</p>
     </div>
     <div className="flex items-end">
       <img
@@ -37,7 +37,9 @@ export const NewCard = ({
       <p className="text-2xl font-bold text-ruby-900 lg:text-3xl 2xl:text-4xl">
         {title}
       </p>
-      <p className="mt-2.5 text-sm text-night-600 sm:text-lg">{description}</p>
+      <p className="mt-2.5 text-sm text-night-600 sm:text-base lg:text-lg">
+        {description}
+      </p>
     </div>
     <div className="mt-8">{children}</div>
     <div className="absolute -bottom-1 right-0">

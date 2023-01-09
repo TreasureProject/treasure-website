@@ -18,10 +18,10 @@ export const BuildWithTreasure = () => {
         <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] xl:grid-cols-3">
           <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
             <div className="space-y-2.5">
-              <p className="text-2xl font-bold text-honey-100 sm:text-4xl">
+              <p className="text-2xl font-bold text-honey-100 lg:text-3xl 2xl:text-4xl">
                 Build with Treasure
               </p>
-              <p className="text-sm text-night-100 sm:text-lg">
+              <p className="text-sm text-night-100 sm:text-base lg:text-lg">
                 Apply to the Game Integration Framework to supercharge your
                 game.
               </p>
