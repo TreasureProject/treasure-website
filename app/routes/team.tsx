@@ -11,7 +11,7 @@ import {
   teamGameStudio,
 } from "~/const";
 import classNames from "clsx";
-import TreasureTeamImg from "@/img/TreasureTeam.png";
+import TreasureTeamImg from "@/img/TreasureTeam.webp";
 import DefaultPfpImg from "@/img/pfps/default.png";
 
 import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
