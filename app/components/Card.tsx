@@ -41,7 +41,7 @@ export const NewCard = ({
         {description}
       </p>
     </div>
-    <div className="mt-8">{children}</div>
+    <div className="relative z-10 mt-8">{children}</div>
     <div className="absolute -bottom-1 right-0">
       <img src={image} className="ml-auto w-1/4 md:w-5/12" alt={title} />
     </div>
