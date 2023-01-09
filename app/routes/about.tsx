@@ -7,6 +7,7 @@ import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
+import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -86,13 +87,13 @@ export default function About() {
       </div>
       <NewTreasureStats type="secondary" />
 
-      <div className="relative bg-honey-100 py-16 sm:py-24">
+      <div className="relative bg-honey-100 pt-16">
         <div className="mx-auto max-w-3xl px-8 text-center sm:px-6 lg:max-w-7xl lg:px-12">
           <h2 className="text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
             Shared Resources
           </h2>
 
-          <div className="relative mt-16 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
+          <div className="relative mt-16 py-16 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
             <div className="mb-12 flex items-center justify-center lg:col-span-3 lg:col-start-1 lg:mb-0">
               <img
                 className="h-48 w-48 object-cover md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem]"
@@ -124,7 +125,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="relative mt-12 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
+          <div className="relative mt-12 border-b border-night-900/10 pb-16 lg:grid lg:grid-flow-row-dense lg:grid-cols-7 lg:items-center lg:gap-8">
             <div className="mb-12 flex items-center justify-center lg:order-1 lg:col-span-3 lg:col-start-5 lg:mb-0">
               <img
                 className="h-48 w-48 object-cover md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem]"
@@ -154,6 +155,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <BuildWithTreasure />
     </main>
   );
 }
