@@ -1,4 +1,3 @@
-import { Badge } from "~/components/Badge";
 import { Card } from "~/components/Card";
 import { Infrastructures } from "~/components/Infrastructures";
 import { communityInfrastructure } from "~/const";
