@@ -2,10 +2,17 @@ import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { DiscordIcon, TwitterIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
-import { teamMembers } from "~/const";
+import {
+  teamCoFounders,
+  teamTreasure,
+  teamTrove,
+  teamBridgeworld,
+  teamSmolverse,
+  teamGameStudio,
+} from "~/const";
 import classNames from "clsx";
-import TreasureTeamImg from "../../public/img/TreasureTeam.png";
-import DefaultPfpImg from "../../public/img/pfps/default.png";
+import TreasureTeamImg from "@/img/TreasureTeam.webp";
+import DefaultPfpImg from "@/img/pfps/default.png";
 
 import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
 import type { RootLoaderData } from "~/root";
@@ -24,7 +31,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   return {
     ...getSocialMetas({
       description:
-        "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
+        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle("/team"),
       origin: requestInfo.origin,
@@ -37,7 +44,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
 const TeamCard = ({ member }: { member: MemberT }) => {
   const hasSocials = member.twitterLink || member.discordLink;
   return (
-    <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-9 py-8">
+    <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-4 py-3 md:px-9 md:py-8">
       <img
         className="w-full bg-honey-100 object-contain"
         src={member.image ?? DefaultPfpImg}
@@ -45,27 +52,28 @@ const TeamCard = ({ member }: { member: MemberT }) => {
       />
       <div
         className={classNames(
-          !hasSocials && "flex flex-1 flex-col",
-          "mt-7 space-y-3 text-center"
+          !hasSocials && "flex flex-col",
+          "mt-5 space-y-3 text-center md:mt-7"
         )}
       >
-        <p className="text-black-900 text-3xl font-bold">{member.name}</p>
-        <div className="inline-flex flex-1 items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
-          <h3 className="font-mono font-medium text-ruby-900">
+        <p className="text-lg font-bold text-night-900 md:text-xl lg:text-2xl">
+          {member.name}
+        </p>
+        <div className="items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
+          <h3 className="font-mono text-sm font-medium text-ruby-900 md:text-base">
             {member.title}
           </h3>
         </div>
       </div>
       {hasSocials ? (
-        <div className="flex flex-1 items-end justify-center space-x-4">
+        <div className="mt-4 flex flex-1 items-end justify-center space-x-4 md:mt-8">
           {member.twitterLink ? (
             <a
               href={member.twitterLink}
               rel="noopener noreferrer"
               target="_blank"
-              className="mt-8"
             >
-              <TwitterIcon className="h-8 w-8 text-twitter" />
+              <TwitterIcon className="h-6 w-6 w-8 text-twitter md:h-8" />
             </a>
           ) : null}
           {member.discordLink ? (
@@ -74,7 +82,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <DiscordIcon className="h-8 w-8 text-discord" />
+              <DiscordIcon className="h-6 w-6 w-8 text-discord md:h-8" />
             </a>
           ) : null}
         </div>
@@ -90,31 +98,83 @@ export default function Team() {
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
           <Badge name="Contributors" bgColor="bg-honey-100" />
           <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
-            Meet the builders behind TreasureDAO
+            Meet the builders behind Treasure
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
           <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 px-14 pt-14 text-base text-night-700 sm:text-xl">
             <p>
               We are a collective of seasoned builders growing the expansive
-              platform and decentralized game console that is Treasure.{" "}
+              platform and decentralized game console that is Treasure.
             </p>
 
             <p>
-              With many members joining directly from the community, Treasure
-              comprises a globally distributed team of developers, product
-              managers, artists and designers, marketers, and economists. All
-              supported by a wealth of DAO contributors and passionate community
-              members.
+              Treasure comprises a globally distributed team of developers,
+              product managers, artists, brand builders, marketers, economists,
+              and gamers. All supported by a intimate and vibrant network of DAO
+              contributors and passionate community members.
             </p>
             <img src={TreasureTeamImg} alt="Treasure Team" className="w-full" />
           </div>
         </div>
       </div>
-      <div className="relative bg-honey-100 py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-8xl lg:px-12">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
-            {teamMembers.map((member) => (
+      <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+            Founders
+          </p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+            {teamCoFounders.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+            Treasure
+          </p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+            {teamTreasure.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+            Trove
+          </p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+            {teamTrove.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+            Bridgeworld
+          </p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+            {teamBridgeworld.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+            Smolverse
+          </p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+            {teamSmolverse.map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+            Game Studio
+          </p>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+            {teamGameStudio.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
@@ -124,7 +184,7 @@ export default function Team() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
             <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-              <p className="text-lg font-semibold text-ruby-900 sm:text-2xl xl:text-4xl">
+              <p className="text-lg font-bold text-ruby-900 sm:text-2xl xl:text-4xl">
                 Join the team
               </p>
               <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">
@@ -132,7 +192,10 @@ export default function Team() {
                 partner cartridge today.
               </p>
               <div>
-                <CTAButton href="https://www.notion.so/treasure-dao/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7">
+                <CTAButton
+                  as="a"
+                  href="https://www.notion.so/treasure-dao/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7"
+                >
                   See roles
                 </CTAButton>
               </div>

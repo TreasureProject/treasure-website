@@ -1,59 +1,64 @@
-import { ExternalLinkIcon, ArrowUpIcon } from "@heroicons/react/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { Link } from "@remix-run/react";
 import { socials, navigation } from "~/const";
-import { Badge } from "./Badge";
 import { MagicIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 import { useTranslation } from "react-i18next";
+import { useAppContext } from "~/context/App";
 
-export const Footer = ({ openModal }: { openModal: () => void }) => {
+const currentYear = new Date().getFullYear();
+
+const groupedNavigation = navigation.reduce<typeof navigation[number][]>(
+  (acc, item) => {
+    if (item.group) {
+      const group = acc.find((group) => group.name === item.group);
+      if (group && group.links) {
+        group.links.push(item);
+      } else {
+        acc.push({
+          name: item.group,
+          links: [item],
+        });
+      }
+    } else {
+      acc.push(item);
+    }
+    return acc;
+  },
+  []
+);
+
+export const Footer = () => {
   const { t } = useTranslation("index", {
     keyPrefix: "common",
   });
 
+  const { openModal } = useAppContext();
+
   return (
-    <footer className="bg-honey-50" aria-labelledby="footer-heading">
+    <footer className="bg-honey-25" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="mx-auto max-w-9xl px-4 pt-12 sm:px-6 lg:px-12 lg:pt-16">
-        <div className="xl:grid xl:grid-cols-5 xl:gap-8">
-          <div className="flex flex-col items-center justify-center space-y-8 sm:block xl:col-span-1">
+        <div className="xl:grid xl:grid-cols-[1fr,1fr,1fr,1fr,1fr,max-content] xl:gap-8">
+          <div className="flex flex-col items-center justify-center sm:block xl:col-span-1">
             <Link to="/">
               <span className="sr-only">Treasure</span>
               <img className="h-10" src={LogoImg} alt="Treasure" />
             </Link>
-            <div className="flex space-x-6">
-              {socials.map((social) => (
-                <a
-                  key={social.name}
-                  className="text-night-800 hover:text-night-900"
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="sr-only">{social.name}</span>
-                  <social.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:col-span-3 xl:mt-0">
-            {navigation.map((item) => {
-              const { name, links, href } = item;
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:col-span-4 xl:mt-0">
+            {groupedNavigation.map((item) => {
+              const { name, links, href, isExternal } = item;
               if (links) {
                 return (
                   <div
                     key={name}
-                    className="space-y-6 text-center sm:text-left"
+                    className="space-y-5 text-center sm:text-left"
                   >
-                    <Badge
-                      name={t(name)}
-                      bgColor="bg-honey-100"
-                      textColor="text-ruby-900"
-                      size="sm"
-                    />
-                    <ul className="space-y-4">
+                    <h3 className="font-bold text-ruby-900">{t(name)}</h3>
+                    <ul className="space-y-3">
                       {links.map(({ name, isExternal, href }) => (
                         <li
                           key={name}
@@ -77,7 +82,7 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
                             </Link>
                           )}
                           {isExternal ? (
-                            <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
+                            <ArrowTopRightOnSquareIcon className="h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
                           ) : null}
                         </li>
                       ))}
@@ -87,55 +92,69 @@ export const Footer = ({ openModal }: { openModal: () => void }) => {
               }
 
               return (
-                <div key={name} className="space-y-6 text-center sm:text-left">
-                  <Badge
-                    name={t("Marketplace")}
-                    bgColor="bg-honey-100"
-                    textColor="text-ruby-900"
-                    size="sm"
-                  />
-                  <ul className="space-y-4">
-                    <li
-                      key={name}
-                      className="flex items-center justify-center space-x-1 sm:justify-start"
-                    >
-                      <a
-                        href={href}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="text-night-800 hover:text-night-700"
-                      >
-                        Trove
-                      </a>
-                      <ExternalLinkIcon className="h-3 w-3 text-ruby-900" />
+                <div key={name} className="space-y-5 text-center sm:text-left">
+                  <h3 className="font-bold text-ruby-900">{t(name)}</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center justify-center space-x-1 sm:justify-start">
+                      {isExternal ? (
+                        <a
+                          href={href}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="text-night-800 hover:text-night-700"
+                        >
+                          {t(name)}
+                        </a>
+                      ) : (
+                        <Link
+                          to={href}
+                          className="text-night-800 hover:text-night-700"
+                        >
+                          {t(name)}
+                        </Link>
+                      )}
+                      {isExternal ? (
+                        <ArrowTopRightOnSquareIcon className="h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
+                      ) : null}
                     </li>
                   </ul>
                 </div>
               );
             })}
           </div>
-          <div className="mt-12 text-left xl:mt-0 xl:text-right">
+          <div className="mt-8 flex flex-col items-end space-y-3.5 text-right sm:mt-12 sm:flex-row sm:space-y-0 sm:space-x-3.5 xl:col-span-1 xl:mt-0 xl:flex-col xl:space-y-3.5 xl:space-x-0">
+            <Link
+              to="/build"
+              className="inline-flex w-full items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000 sm:w-auto"
+            >
+              Build with Treasure
+            </Link>
             <button
               onClick={openModal}
-              className="inline-flex w-full items-center justify-center space-x-2 rounded-button border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-medium text-white hover:bg-ruby-1000 sm:w-auto"
+              className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border-2 border-ruby-900 bg-honey-50 py-3.25 px-6.5 text-base font-medium text-ruby-900 hover:bg-honey-200 sm:w-auto"
             >
-              <span className="font-semibold">Buy</span>
-              <MagicIcon />
+              <span className="font-bold">Buy</span>
+              <MagicIcon className="fill-ruby-900" />
             </button>
           </div>
         </div>
         <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 sm:flex-row">
           <p className="mt-12 text-sm text-night-700 sm:mt-0">
-            &copy; 2021-2022 TreasureDAO
+            &copy; 2021-{currentYear} Treasure
           </p>
-          <div className="inline-block">
-            <button
-              className="inline-flex items-center space-x-2 rounded-button bg-honey-100 px-4 py-2.5 font-mono font-medium text-ruby-900 transition-colors duration-500 hover:bg-honey-300"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <span className="text-xs leading-5">To the surface</span>{" "}
-              <ArrowUpIcon className="h-3 w-3 stroke-current stroke-1" />
-            </button>
+          <div className="flex space-x-6">
+            {socials.map((social) => (
+              <a
+                key={social.name}
+                className="text-night-800 hover:text-night-900"
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="sr-only">{social.name}</span>
+                <social.icon className="h-5 w-5" aria-hidden="true" />
+              </a>
+            ))}
           </div>
         </div>
       </div>

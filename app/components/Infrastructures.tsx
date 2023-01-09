@@ -2,26 +2,26 @@ import { infrastructures } from "~/const";
 import { CTAButton } from "./Button";
 
 export const Infrastructures = () => (
-  <div className="grid gap-8 xl:grid-cols-2">
-    {infrastructures.map((Infrastructure) => (
+  <div className="grid gap-8 xl:grid-cols-3">
+    {infrastructures.map((infrastructure) => (
       <div
-        key={Infrastructure.name}
-        className="flex flex-col justify-between rounded-2xl bg-honey-700 p-12"
+        key={infrastructure.name}
+        className="flex flex-col justify-between rounded-2xl border-2 border-[#1D232E] bg-[#131D2E] p-12"
       >
         <div>
-          {Infrastructure.icon}
+          {infrastructure.icon}
           <div className="my-6 flex flex-col space-y-2">
-            <p className="text-base font-semibold text-night-800 sm:text-2xl">
-              {Infrastructure.name}
+            <p className="text-base font-bold text-honey-200 sm:text-2xl">
+              {infrastructure.name}
             </p>
-            <p className="text-sm text-night-700 sm:text-base">
-              {Infrastructure.description}
+            <p className="text-sm text-night-500 sm:text-base">
+              {infrastructure.description}
             </p>
           </div>
         </div>
         <div>
-          <CTAButton href={Infrastructure.href}>
-            {Infrastructure.buttonDescription}
+          <CTAButton as="a" href={infrastructure.href}>
+            {infrastructure.buttonDescription}
           </CTAButton>
         </div>
       </div>

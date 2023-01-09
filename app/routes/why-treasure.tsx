@@ -23,7 +23,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   return {
     ...getSocialMetas({
       description:
-        "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
+        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle("Why Treasure"),
       origin: requestInfo.origin,
@@ -95,7 +95,7 @@ export default function WhyTreasure() {
                 alt="Gold Coin"
                 className="h-16 w-16 sm:h-20 sm:w-20"
               />
-              <p className="text-xl font-semibold text-honey-600 sm:text-3xl">
+              <p className="text-xl font-bold text-honey-600 sm:text-3xl">
                 Bootstrapped Liquidity and Funding
               </p>
               <div className="space-y-4 text-base text-night-600 sm:text-xl">
@@ -113,7 +113,7 @@ export default function WhyTreasure() {
                 alt="Red Rupee"
                 className="h-16 w-16 sm:h-20 sm:w-20"
               />
-              <p className="text-xl font-semibold text-honey-600 sm:text-3xl">
+              <p className="text-xl font-bold text-honey-600 sm:text-3xl">
                 MAGIC Emissions
               </p>
               <p className="text-base text-night-600 sm:text-xl">
@@ -129,7 +129,7 @@ export default function WhyTreasure() {
                 alt="Legion"
                 className="h-16 w-16 sm:h-20 sm:w-20"
               />
-              <p className="text-xl font-semibold text-honey-600 sm:text-3xl">
+              <p className="text-xl font-bold text-honey-600 sm:text-3xl">
                 Marketplace Listing
               </p>
               <p className="text-base text-night-600 sm:text-xl">

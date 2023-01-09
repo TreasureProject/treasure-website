@@ -25,7 +25,7 @@ export const TwitterCard = (props: {
     <div
       className={classNames(
         className,
-        "relative w-full max-w-sm shrink-0 snap-center rounded-xl border-2 border-honey-300 bg-honey-25 p-8 transition-colors duration-500 hover:bg-honey-100 lg:max-w-none"
+        "relative rounded-xl border-2 border-honey-300 bg-honey-25 p-8 transition-colors duration-500 hover:bg-honey-100"
       )}
     >
       <div className="flex justify-between">
@@ -72,7 +72,7 @@ export const TwitterCard = (props: {
       {image ? (
         <img
           className="mt-2 w-full rounded-2xl border border-honey-100 object-contain"
-          alt={`${username} embed image`}
+          alt={username}
           src={image}
         />
       ) : null}

@@ -32,8 +32,8 @@ import { ColorPalette } from "~/components/ColorPalette";
 import brandGuidelinesImg from "../../public/img/brand-guidelines.png";
 import mediaKitImg from "../../public/img/media-kit.png";
 
-import { DownloadIcon } from "@heroicons/react/outline";
-import { HashtagIcon } from "@heroicons/react/solid";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { HashtagIcon } from "@heroicons/react/24/solid";
 
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
@@ -211,7 +211,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   return {
     ...getSocialMetas({
       description:
-        "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
+        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
       keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
       title: generateTitle("Brand Assets"),
       origin: requestInfo.origin,
@@ -341,7 +341,7 @@ export default function Resources() {
                                           <span className="font-bold">
                                             Download
                                           </span>
-                                          <DownloadIcon className="ml-2 inline-block h-5 w-5" />
+                                          <ArrowDownTrayIcon className="ml-2 inline-block h-5 w-5" />
                                         </a>
                                         <Badge
                                           name={image.size}
@@ -385,7 +385,7 @@ export default function Resources() {
               <div className="mt-28 scroll-mt-28 space-y-14" id="media-kit">
                 <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-9 sm:p-10 xl:auto-rows-[23rem]">
                   <div className="order-1 col-span-6 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8">
-                    <p className="text-lg font-semibold text-ruby-900 xl:text-4xl">
+                    <p className="text-lg font-bold text-ruby-900 xl:text-4xl">
                       Brand Guidelines
                     </p>
                     <p className="text-xs text-night-700 xl:text-2xl">
@@ -394,12 +394,12 @@ export default function Resources() {
                     </p>
                     <div>
                       <a
-                        className="inline-flex cursor-pointer items-center rounded-button border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
+                        className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 hover:bg-ruby-900 hover:text-white sm:text-base"
                         href="https://drive.google.com/uc?export=download&id=18j-7mAXpcVgZZBCxQnwAuHvbqbUZir1N"
                         download
                       >
                         Download
-                        <DownloadIcon
+                        <ArrowDownTrayIcon
                           className="ml-1.5 h-4 w-4"
                           aria-hidden="true"
                         />
@@ -416,7 +416,7 @@ export default function Resources() {
                 </div>
                 <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-9 sm:p-10 xl:auto-rows-[23rem]">
                   <div className="order-1 col-span-6 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8">
-                    <p className="text-lg font-semibold text-ruby-900 xl:text-4xl">
+                    <p className="text-lg font-bold text-ruby-900 xl:text-4xl">
                       Media Kit
                     </p>
                     <p className="text-xs text-night-700 xl:text-2xl">
@@ -425,12 +425,12 @@ export default function Resources() {
                     </p>
                     <div>
                       <a
-                        className="inline-flex cursor-pointer items-center rounded-button border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
+                        className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 hover:bg-ruby-900 hover:text-white sm:text-base"
                         href="https://drive.google.com/uc?export=download&id=1HMkqE2QPzUUnJD8-3WV8cOZo8LmnXfO5"
                         download
                       >
                         Download
-                        <DownloadIcon
+                        <ArrowDownTrayIcon
                           className="ml-1.5 h-4 w-4"
                           aria-hidden="true"
                         />

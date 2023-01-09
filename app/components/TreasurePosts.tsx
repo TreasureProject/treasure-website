@@ -1,66 +1,51 @@
-import { ExternalLinkIcon } from "@heroicons/react/solid";
-import { Badge } from "./Badge";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import type { RootLoaderData } from "~/root";
 import { useRouteData } from "remix-utils";
-import classNames from "clsx";
+import { CalendarIcon } from "./Icons";
 
 export const TreasurePosts = () => {
   const routeData = useRouteData<RootLoaderData>("root");
 
+  const latest4Posts = routeData?.data?.slice(0, 4);
+
   return (
-    <div className="relative bg-honey-100 py-16 sm:py-24">
-      <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-        <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-          <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-            Posts from TreasureDAO
-          </p>
-          <Badge name="Latest" />
-        </div>
-      </div>
-      <div className="mt-12 flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-10 sm:mt-24 sm:px-0">
-        {routeData?.data?.map((post) => (
-          <div
+    <div className="relative bg-honey-25 py-16 sm:py-24">
+      <p className="text-center text-xl font-bold text-night-900 sm:text-4xl">
+        Get the latest news and updates
+      </p>
+      <div className="mt-14 grid grid-cols-1 gap-10 px-14 sm:grid-cols-2 sm:px-28 xl:grid-cols-4">
+        {latest4Posts?.map((post) => (
+          <a
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
             key={post.title}
-            className="relative flex h-full w-full snap-center flex-col justify-between rounded-2xl border border-transparent bg-honey-50 p-6 transition-colors duration-500 hover:border-honey-200 sm:h-80 first-of-type:sm:ml-6 last-of-type:sm:mr-6 first-of-type:lg:ml-12 last-of-type:lg:mr-12 first-of-type:xl:ml-16 last-of-type:xl:mr-16"
+            className="group relative flex flex-col justify-between rounded-xl border-2 border-transparent p-0 transition-colors duration-500 hover:border-honey-200 hover:bg-honey-50 xl:p-4"
           >
-            <div className="flex flex-1 flex-col-reverse sm:flex-row">
-              <div
-                className={classNames(
-                  post.thumbnail ? "sm:pr-14" : null,
-                  "mt-5 flex w-64 flex-col space-y-5 sm:mt-0 sm:w-96"
-                )}
-              >
-                <span className="text-xs text-night-700">{post.published}</span>
-                <p className="break-words text-lg font-bold leading-none text-night-900 line-clamp-2 sm:text-2xl sm:line-clamp-3">
-                  <a href={post.link} target="_blank" rel="noopener noreferrer">
-                    <span className="absolute inset-0 h-full w-full"></span>
-                    {post.title}
-                  </a>
-                </p>
-                <p className="text-xs text-night-700 line-clamp-2 sm:text-sm sm:line-clamp-2">
-                  {post.content}
-                </p>
-              </div>
-              {post.thumbnail ? (
-                <div className="sm:h-48 sm:w-48">
+            <div>
+              {post.thumbnail && (
+                <div className="h-40 2xl:h-80">
                   <img
-                    className="h-full w-full rounded-md object-cover"
+                    className="h-full w-full rounded-md object-cover object-center"
                     src={post.thumbnail}
                     alt={post.title}
                   />
                 </div>
-              ) : null}
+              )}
+              <h3 className="mt-5 text-base font-bold text-night-900 sm:text-xl">
+                {post.title}
+              </h3>
             </div>
-            <div className="mt-6 flex items-center justify-between">
-              <Badge
-                name="Medium Article"
-                bgColor="bg-honey-100"
-                textColor="text-ruby-900"
-                size="sm"
-              />
-              <ExternalLinkIcon className="h-5 w-5 text-ruby-900" />
+            <div className="mt-3 sm:mt-5">
+              <div className="flex items-center space-x-2.5">
+                <CalendarIcon className="mr-1 inline-block h-4 w-4 text-ruby-900" />
+                <span className="font-mono text-xs font-medium text-night-700 sm:text-sm">
+                  {post.published}
+                </span>
+              </div>
             </div>
-          </div>
+            <ArrowTopRightOnSquareIcon className="absolute right-4 bottom-4 h-4 w-4 fill-honey-900 opacity-0 transition-opacity duration-500 group-hover:opacity-100 [&>path]:stroke-honey-900 [&>path]:stroke-[1]" />
+          </a>
         ))}
       </div>
     </div>

@@ -12,8 +12,16 @@
       "totalValueLocked": "Total Value Locked",
       "percentCirculatingSupply": "% Circ. Supply Locked"
     },
+    "Integration Framework": "エコシステム統合フレームワーク",
+    "Interoperability": "相互運用性",
+    "What is MAGIC?": "MAGICとは",
+    "About Treasure": "Treasureについて",
+    "Ecosystem Careers": "エコシステムキャリア",
+    "Snapshot": "スナップショット",
+    "Open Source": "オープンソース",
     "About": "Treasureについて",
     "Team": "チーム",
+    "Games": "ゲーム",
     "Documentation": "ドキュメンテーション",
     "Newsletter": "ニュースレター",
     "Bridgeworld": "ブリッジワールド",
@@ -31,7 +39,8 @@
     "Talent": "タレント",
     "MagicSwap": "MagicSwap",
     "MAGIC-ETH LP": "MAGIC-ETH LP",
-    "Balancer Crystals": "Balancer Crystals"
+    "Balancer Crystals": "Balancer Crystals",
+    "Trove": "Trove"
   },
   "index": {
     "title": "The magic of play.",

@@ -88,7 +88,7 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "preload",
-    href: "/img/bridgeworld-bg.png",
+    href: "/img/bridgeworld-bg.webp",
     as: "image",
   },
   {
@@ -131,7 +131,7 @@ export const meta: MetaFunction = ({ data }) => {
     "msapplication-TileColor": "#ffc40d",
     ...getSocialMetas({
       description:
-        "Treasure is the decentralized video game console connecting games and communities together through imagination, MAGIC, and NFTs.",
+        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
       keywords:
         "treasure, NFT, DeFi, games, gamefi, ethereum, community, imagination, magic",
       title: generateTitle(),
@@ -175,7 +175,7 @@ export const loader: LoaderFunction = async ({ context, request }) => {
       if (!SECRET_ENV.includes(key)) {
         return {
           ...envVars,
-          [key]: getEnvVariable(key as CloudFlareEnvVar, context),
+          [key]: getEnvVariable(key as CloudFlareEnvVar, env),
         };
       }
 
@@ -225,7 +225,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-honey-25 antialiased" id="top">
+      <body className="bg-honey-25 antialiased selection:bg-honey-900" id="top">
         <Layout>
           <Outlet />
         </Layout>

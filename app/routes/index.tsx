@@ -1,25 +1,31 @@
-import HeroImg from "../../public/img/bg-hero.jpg";
-
 import { Badge } from "~/components/Badge";
-import { TwitterCard } from "~/components/TwitterCard";
-import { partnerCartridges, partners, tweets } from "~/const";
-import { TreasureStats } from "~/components/TreasureStats";
-import { TreasurePosts } from "~/components/TreasurePosts";
-import { CoreCartridges } from "~/components/CoreCartridges";
-import { PartnerCartridge } from "~/components/PartnerCartridge";
-import { Communities } from "~/components/Communities";
-import { Infrastructures } from "~/components/Infrastructures";
-import { PlayIcon } from "@heroicons/react/solid";
+import { IndexCTA } from "~/const";
+import { NewTreasureStats } from "~/components/TreasureStats";
+
+import { Build } from "~/components/Build";
 import { Fragment, useState } from "react";
 import { Trans } from "react-i18next";
 
 import ReactPlayer from "react-player/youtube";
 import { Dialog, Transition } from "@headlessui/react";
-import type { HeadersFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, LinksFunction } from "@remix-run/cloudflare";
 import { commonHeaders } from "~/utils/misc.server";
 import { useTranslation } from "react-i18next";
+import { Link } from "@remix-run/react";
+import { Reviews } from "~/components/Reviews";
+import keenSliderCSS from "keen-slider/keen-slider.min.css";
+import { CartridgeSlider } from "~/components/CartridgeSlider";
+import { CTAButton } from "~/components/Button";
+import { Partners } from "~/components/Partners";
+import BuildFutureImg from "@/img/build-future.webp";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 
 export const headers: HeadersFunction = commonHeaders;
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: keenSliderCSS },
+];
 
 export default function Home() {
   const [isOpenYoutubeModal, setIsOpenYoutubeModal] = useState(false);
@@ -32,21 +38,21 @@ export default function Home() {
   return (
     <>
       <main className="overflow-hidden">
-        <div className="relative py-24 lg:overflow-hidden lg:py-0">
-          <div className="relative z-20 mx-auto max-w-9xl lg:px-12">
+        <div className="relative bg-[#212f5e] py-24 lg:overflow-hidden lg:py-0">
+          <div className="relative z-20 lg:px-12">
             <div className="lg:grid lg:grid-cols-7 lg:gap-8">
-              <div className="col-span-3 mx-auto max-w-lg px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left">
-                <div className="lg:py-32 xl:pb-48 xl:pt-40">
-                  <h1 className="mt-4 text-7xl font-bold tracking-tight text-white sm:mt-0 xl:text-8xl">
-                    {t("title")}
+              <div className="col-span-3 mx-auto max-w-md px-4 sm:px-6 lg:flex lg:items-center lg:px-0 lg:text-left xl:max-w-sm">
+                <div className="text-center lg:py-32 lg:text-left xl:pb-48 xl:pt-40">
+                  <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:mt-0 sm:text-7xl xl:text-[5rem]">
+                    The magic of <br className="inline-block sm:hidden" />
+                    play.
                   </h1>
-                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-7.5 backdrop-blur-sm lg:max-w-sm">
+                  <div className="mt-12 rounded-1.9xl border-2 border-black/10 bg-black/10 p-5 backdrop-blur-lg lg:max-w-sm">
                     <p className="text-base text-white sm:text-lg">
                       <Trans i18nKey="index:subtitle">
-                        Treasure is the decentralized video game console
-                        connecting games and communities together through
-                        imagination, <span className="font-bold">MAGIC</span>,
-                        and NFTs.
+                        Treasure is the decentralized gaming ecosystem bringing
+                        games and players together through{" "}
+                        <span className="font-bold">MAGIC.</span>
                       </Trans>
                     </p>
                   </div>
@@ -55,167 +61,116 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="absolute top-0 left-0 z-10 hidden h-full w-full lg:block"
-            style={{
-              background:
-                "linear-gradient(81.88deg, #212f5eb3 38.27%, #212f5e00 88.85%)",
-            }}
-          ></div>
-
-          <div
-            className="absolute top-0 left-0 h-full w-full bg-cover bg-center lg:bg-hero-lg 2xl:bg-left"
-            style={{
-              backgroundImage: `url(${HeroImg})`,
-            }}
-          ></div>
-
-          <div
-            className="absolute top-0 left-0 h-full w-full lg:hidden"
-            style={{
-              background: "rgba(33, 47, 94, 0.7)",
-            }}
-          ></div>
+          <div className="absolute top-0 left-0 h-full w-full bg-[linear-gradient(0deg,#212f5e99,#212f5e99),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat lg:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] xl:bg-[linear-gradient(to_right,#212f5e_40%,transparent_90%),url('/img/bg-hero.jpg')] xl:[background-position:-15rem] 2xl:bg-[linear-gradient(to_right,#212f5e_10%,transparent_70%),url('/img/bg-hero.jpg')] 2xl:[background-position:5rem]"></div>
         </div>
-        <TreasureStats />
+        <NewTreasureStats type="secondary" />
+        <div className="relative bg-honey-100 py-6 lg:py-10">
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+              {IndexCTA.map((cta) => {
+                if (cta.isExternal) {
+                  return (
+                    <a
+                      key={cta.name}
+                      href={cta.href}
+                      className="relative flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
+                    >
+                      {cta.icon}
+                      <p className="mt-3 text-base font-bold text-night-900 xl:text-xl">
+                        {cta.name}
+                      </p>
+                      <p className="mt-1 break-words text-sm text-night-700 xl:text-lg xl:leading-6">
+                        {cta.description}
+                      </p>
+                      <ArrowTopRightOnSquareIcon className="absolute right-5 top-5 h-5 w-5 fill-night-700 transition-opacity duration-500 lg:right-7 lg:top-7 [&>path]:stroke-night-700 [&>path]:stroke-[1]" />
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={cta.name}
+                    to={cta.href}
+                    className="flex flex-col rounded-2xl border border-honey-300 bg-honey-50 p-5 transition-all hover:scale-105 lg:p-7"
+                  >
+                    {cta.icon}
+                    <p className="mt-3 text-base font-bold text-night-900 xl:text-xl">
+                      {cta.name}
+                    </p>
+                    <p className="mt-1 break-words text-sm text-night-700 xl:text-lg xl:leading-6">
+                      {cta.description}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
         <div className="relative bg-night-900 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
+          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
             <Badge
-              name="Core Cartridges"
+              name="Games"
               bgColor="bg-night-800"
               textColor="text-night-200"
             />
             <p className="mx-auto mt-12 max-w-xl text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
               Games and worlds that delight the masses
             </p>
-            <div className="mt-12">
-              <CoreCartridges />
-            </div>
-            <div className="mt-14">
-              <Badge
-                name="Partner Cartridges"
-                bgColor="bg-night-800"
-                textColor="text-night-200"
-              />
-            </div>
           </div>
-          <div className="relative mt-12 px-6 before:absolute before:left-0 before:bottom-0 before:top-0 before:bg-gradient-to-r before:from-night-900 before:to-night-900/10 after:absolute after:right-0 after:bottom-0 after:top-0 after:bg-gradient-to-l after:from-night-900 after:to-night-900/10 sm:px-0 before:sm:w-6 after:sm:w-6">
-            <div className="parter-cartridge-container flex w-full gap-6 overflow-x-auto px-6 pb-12">
-              {partnerCartridges.map((cartridge) => (
-                <PartnerCartridge
-                  cartridge={cartridge}
-                  key={cartridge.name}
-                  className="h-48 sm:w-80"
-                />
-              ))}
-            </div>
-          </div>
+          <CartridgeSlider />
         </div>
         <div className="relative bg-honey-100 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 max-w-lg text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-                The common thread that connects us all - community and good
-                times.
-              </p>
-              <Badge name="Community" />
-            </div>
+          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+            <Badge name="Build" />
+            <p className="mx-auto mt-12 max-w-xl text-2xl font-bold tracking-tight text-night-900 sm:text-4xl">
+              The future of web3 gaming is powered by Treasure.
+            </p>
             <div className="mt-12">
-              <Communities />
+              <Build />
             </div>
           </div>
         </div>
-        <div className="relative bg-honey-900 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 max-w-lg text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-                We provide the tools to make your imagination a reality.
-              </p>
-              <Badge name="Infrastructure" />
-            </div>
-            <div className="mt-12">
-              <Infrastructures />
-            </div>
-          </div>
-        </div>
-        <div className="relative bg-honey-25 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-                Enjoyed by many (and counting)
-              </p>
-              <Badge name="Wall Of Love" />
-            </div>
-            <div className="mt-12 sm:mt-24">
-              <div className="hidden justify-items-center gap-8 lg:grid lg:grid-cols-2 lg:overflow-x-hidden lg:pb-0 xl:grid-cols-3">
-                <ul className="space-y-8">
-                  {tweets.slice(0, 2).map((tweet) => (
-                    <TwitterCard {...tweet} key={tweet.date} />
-                  ))}
-                </ul>
-                <ul className="space-y-8">
-                  {tweets.slice(2, 4).map((tweet) => (
-                    <TwitterCard {...tweet} key={tweet.date} />
-                  ))}
-                </ul>
-                <ul className="hidden space-y-8 xl:block">
-                  {tweets.slice(4, 6).map((tweet) => (
-                    <TwitterCard {...tweet} key={tweet.date} />
-                  ))}
-                </ul>
+        <section
+          id="cta"
+          aria-labelledby="cta"
+          className="relative bg-night-900 py-16 sm:py-24"
+        >
+          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+            <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
+              <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
+                <p className="text-2xl font-bold !leading-[1.6rem] text-honey-200 lg:text-3xl 2xl:text-4xl">
+                  Build the future of gaming with us
+                </p>
+                <p className="text-sm text-night-500 sm:text-lg">
+                  Apply to our Game Integration Framework to supercharge your
+                  game and build with a vibrant community and ecosystem of
+                  builders, and receive curated long-term support and
+                  incentives.
+                </p>
+                <div>
+                  <CTAButton
+                    as="a"
+                    href="https://docs.treasure.lol/games/game-integration-framework"
+                  >
+                    Start building
+                  </CTAButton>
+                </div>
+              </div>
+              <div className="col-span-3 overflow-hidden rounded-xl md:order-2">
+                <img
+                  className="h-full w-full object-cover"
+                  src={BuildFutureImg}
+                  alt="Build the future of gaming with us"
+                />
               </div>
             </div>
           </div>
-          <div className="mt-12 flex snap-x snap-mandatory place-items-center gap-4 overflow-x-auto px-8 sm:px-0 lg:hidden">
-            {tweets
-              .filter((tweet) => !tweet.image)
-              .map((tweet) => (
-                <TwitterCard
-                  {...tweet}
-                  key={tweet.date}
-                  className="first-of-type:ml-6 last-of-type:mr-6"
-                />
-              ))}
-          </div>
-        </div>
-        <div className="relative bg-night-900 py-16 sm:py-24">
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-8xl lg:px-12">
-            <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 max-w-lg text-center text-2xl font-bold text-honey-25 sm:mt-0 sm:text-left sm:text-4xl">
-                An evergrowing roster of partners and supporters
-              </p>
-              <Badge
-                name="Partners"
-                bgColor="bg-night-800"
-                textColor="text-night-200"
-              />
-            </div>
-          </div>
-          <div className="relative mt-12 flex overflow-x-hidden sm:mt-24">
-            <div className="flex animate-marquee whitespace-nowrap">
-              {partners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="mx-4 flex w-56 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
-                >
-                  <img src={partner.image} alt={partner.name} />
-                </div>
-              ))}
-            </div>
-            {/* Needed for infinity loop */}
-            <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap">
-              {partners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="mx-4 flex w-56 items-center justify-center rounded-[15px] bg-black/25 px-7 py-3"
-                >
-                  <img src={partner.image} alt={partner.name} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <TreasurePosts />
+        </section>
+
+        <Reviews />
+
+        <Partners />
+        <BuildWithTreasure />
       </main>
       <Transition.Root show={isOpenYoutubeModal} as={Fragment}>
         <Dialog as="div" className="relative z-30" onClose={onClose}>
