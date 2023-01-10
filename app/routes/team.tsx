@@ -60,7 +60,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
           {member.name}
         </p>
         <div className="items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
-          <h3 className="font-mono text-sm font-medium text-ruby-900 md:text-base">
+          <h3 className="font-mono text-xs font-medium text-ruby-900 md:text-base">
             {member.title}
           </h3>
         </div>
@@ -73,7 +73,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <TwitterIcon className="h-6 w-6 w-8 text-twitter md:h-8" />
+              <TwitterIcon className="h-4 w-4 text-twitter sm:h-6 sm:w-6 md:h-8" />
             </a>
           ) : null}
           {member.discordLink ? (
@@ -82,7 +82,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <DiscordIcon className="h-6 w-6 w-8 text-discord md:h-8" />
+              <DiscordIcon className="h-4 w-4 text-discord sm:w-6 md:h-8" />
             </a>
           ) : null}
         </div>

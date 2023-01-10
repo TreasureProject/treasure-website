@@ -17,8 +17,8 @@ export const Arrow = ({
       className={twMerge(
         "absolute top-1/2 inline-block -translate-y-1/2 rounded-lg border-2 border-night-900 bg-night-800 p-2 shadow-lg shadow-night-900/50 transition-colors disabled:opacity-50 hover:bg-night-800/95 sm:rounded-2xl sm:p-4",
         dir === "left"
-          ? "left-16 sm:left-40 xl:left-60 2xl:left-96"
-          : "right-16 sm:right-40 xl:right-60 2xl:right-96",
+          ? "left-4 sm:left-40 xl:left-60 2xl:left-96"
+          : "right-4 sm:right-40 xl:right-60 2xl:right-96",
         className
       )}
       {...props}

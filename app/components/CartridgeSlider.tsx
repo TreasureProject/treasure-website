@@ -44,7 +44,7 @@ export const CartridgeSlider = () => {
                   animate={{
                     opacity,
                   }}
-                  className="keen-slider__slide !min-w-[24rem] !max-w-[24rem] [mask-image:url(/img/gem.webp)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]"
+                  className="keen-slider__slide min-w-[16rem] max-w-[16rem] [mask-image:url(/img/gem.webp)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center] sm:!min-w-[24rem] sm:!max-w-[24rem]"
                 >
                   <img
                     className="h-full w-full [mask-image:linear-gradient(to_bottom,#000_25%,#0000_100%)]"
