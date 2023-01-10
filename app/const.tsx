@@ -159,7 +159,7 @@ import {
 export const teamMembers = [
   {
     name: "John Patten",
-    title: "Co-Founder | Innovation",
+    title: "Co-Founder | Strategy",
     discordLink: "https://discordapp.com/users/882718244920754238",
     twitterLink: "https://twitter.com/jpatten__",
     image: JohnImg,
@@ -167,7 +167,7 @@ export const teamMembers = [
   },
   {
     name: "Gaarp",
-    title: "Co-Founder | Strategy",
+    title: "Co-Founder | Growth",
     discordLink: "https://discordapp.com/users/314716890339737600",
     twitterLink: "https://twitter.com/_gaarping",
     image: GaarpImg,
