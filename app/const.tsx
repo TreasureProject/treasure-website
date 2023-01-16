@@ -110,7 +110,7 @@ import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
 import GearhartImg from "../public/img/pfps/Gearhart.png";
-import MdImg from "../public/img/pfps/MD.png";
+import MdImg from "../public/img/pfps/MouseDev.webp";
 import DefaultImg from "../public/img/pfps/default.png";
 
 // Twitter
@@ -934,6 +934,11 @@ export const navigation = [
       {
         name: "Open Source",
         href: "https://github.com/TreasureProject",
+        isExternal: true,
+      },
+      {
+        name: "Apply for Partnership",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform",
         isExternal: true,
       },
     ],
