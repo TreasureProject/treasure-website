@@ -62,7 +62,7 @@ export const Footer = () => {
                       {links.map(({ name, isExternal, href }) => (
                         <li
                           key={name}
-                          className="flex items-center justify-center space-x-1 sm:justify-start"
+                          className="items-center justify-center space-x-1 sm:justify-start"
                         >
                           {isExternal ? (
                             <a
@@ -82,7 +82,7 @@ export const Footer = () => {
                             </Link>
                           )}
                           {isExternal ? (
-                            <ArrowTopRightOnSquareIcon className="h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
+                            <ArrowTopRightOnSquareIcon className="inline-block h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
                           ) : null}
                         </li>
                       ))}
@@ -95,7 +95,7 @@ export const Footer = () => {
                 <div key={name} className="space-y-5 text-center sm:text-left">
                   <h3 className="font-bold text-ruby-900">{t(name)}</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-center justify-center space-x-1 sm:justify-start">
+                    <li className="items-center justify-center space-x-1 sm:justify-start">
                       {isExternal ? (
                         <a
                           href={href}
@@ -114,7 +114,7 @@ export const Footer = () => {
                         </Link>
                       )}
                       {isExternal ? (
-                        <ArrowTopRightOnSquareIcon className="h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
+                        <ArrowTopRightOnSquareIcon className="inline-block h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
                       ) : null}
                     </li>
                   </ul>
