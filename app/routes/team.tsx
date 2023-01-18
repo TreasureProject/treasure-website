@@ -188,15 +188,12 @@ export default function Team() {
                 Join the team
               </p>
               <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">
-                Building a cartridge on Treasure and MAGIC? Apply to become a
-                partner cartridge today.
+                Want to contribute to the Treasure ecosystem and have a ton of
+                fun while doing it? We'd love to chat!
               </p>
               <div>
-                <CTAButton
-                  as="a"
-                  href="https://www.notion.so/treasure-dao/f5b2da6fd6ab44dfaad357ea88b8d5f7?v=585f76c3244a411ab672347a73a5ffa7"
-                >
-                  See roles
+                <CTAButton as="a" href="https://jobs.lever.co/TreasureDAO">
+                  See open roles
                 </CTAButton>
               </div>
             </div>
