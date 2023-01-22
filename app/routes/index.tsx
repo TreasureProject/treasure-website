@@ -142,15 +142,14 @@ export default function Home() {
                   Build the future of gaming with us
                 </p>
                 <p className="text-sm text-night-500 sm:text-lg">
-                  Apply to our Game Integration Framework to supercharge your
-                  game and build with a vibrant community and ecosystem of
-                  builders, and receive curated long-term support and
-                  incentives.
+                  Apply to our Game Builders Program to supercharge your game
+                  and build with a vibrant community and ecosystem of builders,
+                  and receive curated long-term support and incentives.
                 </p>
                 <div>
                   <CTAButton
                     as="a"
-                    href="https://docs.treasure.lol/games/game-integration-framework"
+                    href="https://docs.treasure.lol/games/game-builders-program"
                   >
                     Start building
                   </CTAButton>
