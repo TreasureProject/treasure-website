@@ -22,14 +22,13 @@ export const BuildWithTreasure = () => {
                 Build with Treasure
               </p>
               <p className="text-sm text-night-100 sm:text-base lg:text-lg">
-                Apply to the Game Integration Framework to supercharge your
-                game.
+                Apply to the Game Builders Program to supercharge your game.
               </p>
             </div>
             <div className="mt-8">
               <CTAButton
                 as="a"
-                href="https://docs.treasure.lol/games/game-integration-framework"
+                href="https://docs.treasure.lol/games/game-builders-program"
                 type="primary"
               >
                 Start building
