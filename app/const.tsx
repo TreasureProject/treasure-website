@@ -985,6 +985,11 @@ export const navigation = [
         isExternal: true,
       },
       {
+        name: "Newsletter",
+        href: "https://treasuredao.substack.com/",
+        isExternal: true,
+      },
+      {
         name: "Documentation",
         href: "https://docs.treasure.lol/",
         isExternal: true,
