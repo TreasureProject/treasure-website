@@ -114,7 +114,7 @@ import XImg from "../public/img/pfps/X.png";
 import ZakImg from "../public/img/pfps/Zak.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
 import GearhartImg from "../public/img/pfps/Gearhart.png";
-import MdImg from "../public/img/pfps/MD.png";
+import MdImg from "../public/img/pfps/MouseDev.webp";
 import DefaultImg from "../public/img/pfps/default.png";
 
 // Twitter
@@ -163,7 +163,7 @@ import {
 export const teamMembers = [
   {
     name: "John Patten",
-    title: "Co-Founder | Innovation",
+    title: "Co-Founder | Strategy",
     discordLink: "https://discordapp.com/users/882718244920754238",
     twitterLink: "https://twitter.com/jpatten__",
     image: JohnImg,
@@ -171,7 +171,7 @@ export const teamMembers = [
   },
   {
     name: "Gaarp",
-    title: "Co-Founder | Strategy",
+    title: "Co-Founder | Growth",
     discordLink: "https://discordapp.com/users/314716890339737600",
     twitterLink: "https://twitter.com/_gaarping",
     image: GaarpImg,
@@ -725,11 +725,11 @@ export const communityInfrastructure = [
 
 export const WhyTreasureCardList = [
   {
-    name: "Game Integration Framework",
+    name: "Game Builders Program",
     description:
       "Providing clarity to projects integrating into and building on top of the Treasure ecosystem.",
     buttonDescription: "Learn more",
-    href: "https://docs.treasure.lol/partnerships/game-integration-framework",
+    href: "https://docs.treasure.lol/games/game-builders-program",
   },
   {
     name: "Apply to Partner",
@@ -931,13 +931,18 @@ export const navigation = [
         isExternal: false,
       },
       {
-        name: "Game Integration Framework",
-        href: "https://docs.treasure.lol/games/game-integration-framework",
+        name: "Game Builders Program",
+        href: "https://docs.treasure.lol/games/game-builders-program",
         isExternal: true,
       },
       {
         name: "Open Source",
         href: "https://github.com/TreasureProject",
+        isExternal: true,
+      },
+      {
+        name: "Apply for Partnership",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform",
         isExternal: true,
       },
     ],
@@ -981,6 +986,11 @@ export const navigation = [
       {
         name: "What is MAGIC?",
         href: "https://docs.treasure.lol/getting-started/what-is-magic",
+        isExternal: true,
+      },
+      {
+        name: "Newsletter",
+        href: "https://treasuredao.substack.com/",
         isExternal: true,
       },
       {

@@ -29,7 +29,14 @@ export const Header = () => {
           <div className="mx-auto max-w-9xl">
             <div className="ml-auto flex max-w-max items-center space-x-8 px-0 2xl:px-12">
               <div className="space-x-8">
-                {/* add blog later */}
+                <a
+                  href="https://treasuredao.substack.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-xs text-ruby-100 hover:text-ruby-200"
+                >
+                  Newsletter
+                </a>
                 <a
                   href="https://magicswap.lol/"
                   target="_blank"
