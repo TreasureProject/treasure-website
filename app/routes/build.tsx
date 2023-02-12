@@ -530,7 +530,7 @@ export default function Build() {
               </span>
             </div>
           </div>
-          <div className="mt-10 grid auto-rows-[350px] grid-cols-1 gap-10 sm:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-3">
             {featuredCartridges.map((cartridge) => {
               return (
                 <a

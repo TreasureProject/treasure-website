@@ -7,6 +7,7 @@ import RealmLogoImg from "../public/img/games/logos/Realm.webp";
 import SmolverseLogoImg from "../public/img/games/logos/Smolverse.svg";
 import TheBeaconLogoImg from "../public/img/games/logos/The_Beacon.webp";
 import TOELogoImg from "../public/img/games/logos/TOE.webp";
+import BitmatesLogoImg from "../public/img/games/logos/Bitmates.webp";
 
 // Games (Powered by Treasure) - Cards
 import BattleFlyImg from "@/img/games/cards/Battlefly.webp";
@@ -21,6 +22,7 @@ import TheBeaconImg from "@/img/games/cards/The_Beacon.webp";
 import TheLostDonkeysImg from "@/img/games/cards/The_Lost_Donkeys.webp";
 import ToadstoolzImg from "@/img/games/cards/Toadstoolz.webp";
 import SmolverseImg from "@/img/games/cards/Smolverse.webp";
+import BitmatesImg from "@/img/games/cards/Bitmates.webp";
 
 // Games (Powered by Treasure) - Sliders
 import BattleflySliderImg from "@/img/games/slides/Battlefly.webp";
@@ -31,6 +33,7 @@ import KuroroSliderImg from "@/img/games/slides/Kuroro.webp";
 import SmolverseSliderImg from "@/img/games/slides/Smolverse.webp";
 import TheBeaconSliderImg from "@/img/games/slides/The_Beacon.webp";
 import TOESliderImg from "@/img/games/slides/TOE.webp";
+import BitmatesSliderImg from "@/img/games/slides/Bitmates.webp";
 
 // Games (Powered by Treasure) - Icons
 import BattleflyIconImg from "@/img/games/icons/battlefly.webp";
@@ -41,6 +44,7 @@ import KuroroIconImg from "@/img/games/icons/kuroro.webp";
 import SmolverseIconImg from "@/img/games/icons/smolverse.webp";
 import TheBeaconIconImg from "@/img/games/icons/thebeacon.webp";
 import TOEIconImg from "@/img/games/icons/talesofelleria.webp";
+import BitmatesIconImg from "@/img/games/icons/bitmates.webp";
 
 // Investors
 import AcadArenaImg from "../public/img/partners/AcadArena.svg";
@@ -1025,6 +1029,18 @@ export const cartridges = [
     iconImage: KuroroIconImg,
     description:
       "Kuroro is a gaming ecosystem where Beasts roam free and Trainers set out to explore, collect, craft, battle and master the elements.",
+    core: true,
+    featured: true,
+  },
+  {
+    name: "Bitmates",
+    image: BitmatesImg,
+    websiteLink: "https://trove.treasure.lol/games/bitmates",
+    logo: BitmatesLogoImg,
+    sliderImage: BitmatesSliderImg,
+    iconImage: BitmatesIconImg,
+    description:
+      "Explore, gather resources, and interact with other players in the world of Bitmates. An MMO where monkeys rule the lands.",
     core: true,
     featured: true,
   },
