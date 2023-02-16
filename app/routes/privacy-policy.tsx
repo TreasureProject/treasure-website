@@ -48,7 +48,7 @@ export default function Resources() {
         </div>
         <div className="mx-auto mt-16 max-w-md px-4 sm:max-w-6xl sm:px-20">
           <div className="grid pb-12">
-            <div className="col-span-6 space-y-5 text-justify text-sm text-night-700 sm:text-base">
+            <div className="col-span-6 space-y-5 text-sm text-night-700 sm:text-justify sm:text-base">
               <div>
                 <p>
                   <span className="font-bold text-night-900">
@@ -85,7 +85,8 @@ export default function Resources() {
                   <a
                     href="https://trove.treasure.lol"
                     className="text-ruby-900 underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     trove.treasure.lol
                   </a>
@@ -366,7 +367,8 @@ export default function Resources() {
                   <a
                     href="https://www.eff.org/issues/do-not-track"
                     className="text-ruby-900 underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     www.donottrack.us
                   </a>

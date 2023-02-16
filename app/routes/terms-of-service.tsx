@@ -48,7 +48,7 @@ export default function Resources() {
         </div>
         <div className="mx-auto mt-16 max-w-md px-4 sm:max-w-6xl sm:px-20">
           <div className="grid pb-12">
-            <div className="col-span-6 space-y-5 text-justify text-sm text-night-700 sm:text-base">
+            <div className="col-span-6 space-y-5 text-sm text-night-700 sm:text-justify sm:text-base">
               <div>
                 <p>
                   <span className="font-bold text-night-900">
@@ -199,7 +199,8 @@ export default function Resources() {
                   <a
                     href="https://docs.treasure.lol/getting-started/what-is-magic"
                     className="text-ruby-900 underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     https://docs.treasure.lol/getting-started/what-is-magic
                   </a>{" "}
@@ -430,7 +431,8 @@ export default function Resources() {
                   <a
                     href="https://docs.trove.treasure.lol/about-trove/faq#how-are-royalties-structured-on-trove"
                     className="text-ruby-900 underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     https://docs.trove.treasure.lol/about-trove/faq#how-are-royalties-structured-on-trove
                   </a>
@@ -569,7 +571,8 @@ export default function Resources() {
                   <a
                     href="https://treasure.lol/privacy-policy"
                     className="text-ruby-900 underline"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     https://treasure.lol/privacy-policy
                   </a>{" "}
@@ -947,7 +950,8 @@ export default function Resources() {
                     <a
                       href="https://www.un.org/securitycouncil/content/un-sc-consolidated-list"
                       className="text-ruby-900 underline"
-                      target="_blank" rel="noreferrer"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       https://www.un.org/securitycouncil/content/un-sc-consolidated-list
                     </a>
@@ -958,7 +962,8 @@ export default function Resources() {
                     <a
                       href="https://www.mas.gov.sg/regulation/anti-money-laundering/targeted-financial-sanctions/lists-of-designated-individuals-and-entities"
                       className="text-ruby-900 underline"
-                      target="_blank" rel="noreferrer"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       https://www.mas.gov.sg/regulation/anti-money-laundering/targeted-financial-sanctions/lists-of-designated-individuals-and-entities
                     </a>
