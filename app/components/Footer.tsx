@@ -69,14 +69,14 @@ export const Footer = () => {
                               href={href}
                               rel="noopener noreferrer"
                               target="_blank"
-                              className="text-night-800 hover:text-night-700"
+                              className="text-night-800 hover:text-night-900"
                             >
                               {t(name)}
                             </a>
                           ) : (
                             <Link
                               to={href}
-                              className="text-night-800 hover:text-night-700"
+                              className="text-night-800 hover:text-night-900"
                             >
                               {t(name)}
                             </Link>
@@ -101,14 +101,14 @@ export const Footer = () => {
                           href={href}
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="text-night-800 hover:text-night-700"
+                          className="text-night-800 hover:text-night-900"
                         >
                           {t(name)}
                         </a>
                       ) : (
                         <Link
                           to={href}
-                          className="text-night-800 hover:text-night-700"
+                          className="text-night-800 hover:text-night-900"
                         >
                           {t(name)}
                         </Link>
@@ -136,25 +136,41 @@ export const Footer = () => {
               <span className="font-bold">Buy</span>
               <MagicIcon className="fill-ruby-900" />
             </button>
+
+            <div className="mx-auto flex space-x-6 py-3 sm:mx-0 sm:pl-5 xl:pl-0">
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  className="text-night-800 hover:text-night-900"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">{social.name}</span>
+                  <social.icon className="h-8 w-8" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
         <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 sm:flex-row">
           <p className="mt-12 text-sm text-night-700 sm:mt-0">
-            &copy; 2021-{currentYear} Treasure
+            &copy; 2021-{currentYear} Treasure. All Rights Reserved.
           </p>
-          <div className="flex space-x-6">
-            {socials.map((social) => (
-              <a
-                key={social.name}
-                className="text-night-800 hover:text-night-900"
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="sr-only">{social.name}</span>
-                <social.icon className="h-5 w-5" aria-hidden="true" />
-              </a>
-            ))}
+          <div className="flex space-x-4 lg:space-x-6">
+            <Link
+              className="text-night-800 hover:text-night-900"
+              to="/terms-of-service"
+            >
+              Terms of Service
+            </Link>
+
+            <Link
+              className="text-night-800 hover:text-night-900"
+              to="/privacy-policy"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>
