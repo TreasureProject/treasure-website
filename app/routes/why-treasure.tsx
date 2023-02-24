@@ -9,9 +9,6 @@ import { CTAButton } from "~/components/Button";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
-import { commonHeaders } from "~/utils/misc.server";
-
-export const headers: HeadersFunction = commonHeaders;
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {

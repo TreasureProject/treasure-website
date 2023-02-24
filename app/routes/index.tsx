@@ -9,7 +9,6 @@ import { Trans } from "react-i18next";
 import ReactPlayer from "react-player/youtube";
 import { Dialog, Transition } from "@headlessui/react";
 import type { HeadersFunction, LinksFunction } from "@remix-run/node";
-import { commonHeaders } from "~/utils/misc.server";
 import { useTranslation } from "react-i18next";
 import { Link } from "@remix-run/react";
 import { Reviews } from "~/components/Reviews";
@@ -20,8 +19,6 @@ import { Partners } from "~/components/Partners";
 import BuildFutureImg from "@/img/build-future.webp";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { BuildWithTreasure } from "~/components/BuildWithTreasure";
-
-export const headers: HeadersFunction = commonHeaders;
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: keenSliderCSS },

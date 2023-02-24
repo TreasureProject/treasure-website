@@ -9,7 +9,3 @@ export function getDomainUrl(request: Request) {
   const protocol = host.includes("localhost") ? "http" : "https";
   return `${protocol}://${host}`;
 }
-
-export const commonHeaders: HeadersFunction = () => ({
-  "Cache-Control": "private, max-age=3600",
-});
