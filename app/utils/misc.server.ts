@@ -1,4 +1,5 @@
 import type { HeadersFunction } from "@remix-run/node";
+import { cacheHeader } from "pretty-cache-header";
 
 export function getDomainUrl(request: Request) {
   const host =
@@ -11,5 +12,7 @@ export function getDomainUrl(request: Request) {
 }
 
 export const commonHeaders: HeadersFunction = () => ({
-  "Cache-Control": "private, max-age=3600",
+  "Cache-Control": cacheHeader({
+    sMaxage: "1month",
+  }),
 });

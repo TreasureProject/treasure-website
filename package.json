@@ -34,6 +34,7 @@
     "i18next-http-backend": "^2.1.1",
     "keen-slider": "^6.8.5",
     "nprogress": "^0.2.0",
+    "pretty-cache-header": "^1.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-i18next": "^12.1.1",
