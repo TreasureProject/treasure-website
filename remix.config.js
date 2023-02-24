@@ -2,11 +2,11 @@
  * @type {import('@remix-run/dev').AppConfig}
  */
 module.exports = {
-  serverBuildTarget: "cloudflare-pages",
-  server: "./server.js",
-  devServerBroadcastDelay: 1000,
-  ignoredRouteFiles: [".*"],
-  serverDependenciesToBundle: ["@rainbow-me"],
+  ignoredRouteFiles: ["**/.*"],
+  future: {
+    unstable_tailwind: true,
+  },
+  serverDependenciesToBundle: ["i18next-fetch-backend"],
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",
   // serverBuildPath: "functions/[[path]].js",

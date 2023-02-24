@@ -9,7 +9,7 @@ import { HashtagIcon } from "@heroicons/react/24/solid";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
-import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 
 export const headers: HeadersFunction = commonHeaders;
 

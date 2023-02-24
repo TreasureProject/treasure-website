@@ -6,7 +6,7 @@ import RedRupeeImg from "../../public/img/red-rupee.png";
 import { WhyTreasureCardList } from "~/const";
 import { CTAButton } from "~/components/Button";
 
-import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
@@ -157,7 +157,7 @@ export default function WhyTreasure() {
                   {card.description}
                 </p>
                 <div>
-                  <CTAButton href={card.href}>
+                  <CTAButton as="a" href={card.href}>
                     {card.buttonDescription}
                   </CTAButton>
                 </div>

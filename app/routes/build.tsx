@@ -28,8 +28,9 @@ import OpenSourceIcon from "@/img/icons/Badge_Open_Source.svg";
 import InfraIcon from "@/img/icons/Infra.svg";
 import InteropIcon from "@/img/icons/Interop.svg";
 import DocIcon from "@/img/icons/Docs.svg";
+import { ClientOnly } from "remix-utils";
 
-import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
@@ -583,9 +584,13 @@ export default function Build() {
             <Badge className="flex-shrink-0" name="Partner Testimonials" />
           </div>
           <div className="mt-16 grid grid-cols-1 items-center gap-10 xl:grid-cols-3">
-            {builderTweets.map((tweet) => (
-              <Tweet {...tweet} key={tweet.username} />
-            ))}
+            <ClientOnly>
+              {() =>
+                builderTweets.map((tweet) => (
+                  <Tweet {...tweet} key={tweet.username} />
+                ))
+              }
+            </ClientOnly>
           </div>
         </div>
       </section>

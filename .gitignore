@@ -1,8 +1,6 @@
-node_modules/
+node_modules
 
 /.cache
-/functions/\[\[path\]\].js*
+/build
 /public/build
 .env
-
-/app/styles/tailwind.css
