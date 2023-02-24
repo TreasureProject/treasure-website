@@ -3,6 +3,7 @@ import Balancer from "react-wrap-balancer";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
 import InteropIcon from "@/img/icons/Interop.svg";
 import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
@@ -38,6 +39,8 @@ export const meta: MetaFunction = ({ parentsData }) => {
     }),
   };
 };
+
+export const headers: HeadersFunction = commonHeaders;
 
 const interoperableList = [
   {

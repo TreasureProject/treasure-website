@@ -6,6 +6,7 @@ import TreasureImg from "../../public/img/treasures.png";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
 import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 
 export const meta: MetaFunction = ({ parentsData }) => {
@@ -27,6 +28,8 @@ export const meta: MetaFunction = ({ parentsData }) => {
     }),
   };
 };
+
+export const headers: HeadersFunction = commonHeaders;
 
 export default function About() {
   return (

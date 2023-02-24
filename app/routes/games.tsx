@@ -5,6 +5,7 @@ import type {
 } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
 import { useState } from "react";
 import { sliderCartridges, coreCartridges } from "~/const";
 import { motion } from "framer-motion";
@@ -38,6 +39,8 @@ export const meta: MetaFunction = ({ parentsData }) => {
     }),
   };
 };
+
+export const headers: HeadersFunction = commonHeaders;
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: keenSliderCSS },

@@ -33,6 +33,7 @@ import { ClientOnly } from "remix-utils";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import { commonHeaders } from "~/utils/misc.server";
 import { twMerge } from "tailwind-merge";
 
 export const meta: MetaFunction = ({ parentsData }) => {
@@ -54,6 +55,8 @@ export const meta: MetaFunction = ({ parentsData }) => {
     }),
   };
 };
+
+export const headers: HeadersFunction = commonHeaders;
 
 const Partner = ({
   partner,
