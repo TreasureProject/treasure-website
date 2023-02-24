@@ -1234,7 +1234,7 @@ export const stats = [
   },
 ] as const;
 
-export const supportedLngs = ["en", "ja-JP"];
+export const supportedLngs = ["en", "ja-JP", "zh-CN"];
 
 export const colors = {
   night: {
@@ -1290,3 +1290,9 @@ export const arbitrumPartners = [
   ArbitrumPartner14Img,
   ArbitrumPartner15Img,
 ];
+
+export const languages = {
+  en: "English",
+  "ja-JP": "日本語",
+  "zh-CN": "简体中文",
+} as const;

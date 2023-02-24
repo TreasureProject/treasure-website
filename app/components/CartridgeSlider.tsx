@@ -29,7 +29,7 @@ export const CartridgeSlider = () => {
       <div className="relative px-4 sm:mt-2 xl:mt-4">
         <div
           ref={slideRef}
-          className="keen-slider [mask-image:linear-gradient(to_left,#0000,#000_20%,#000_80%,#0000)]"
+          className="keen-slider [-webkit-mask-image:linear-gradient(to_left,#0000,#000_20%,#000_80%,#0000)]"
         >
           {coreCartridges.map((cartridge, index) => {
             const currentIndex = index === currentSlide;
@@ -44,10 +44,10 @@ export const CartridgeSlider = () => {
                   animate={{
                     opacity,
                   }}
-                  className="keen-slider__slide min-w-[16rem] max-w-[16rem] [mask-image:url(/img/gem.webp)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center] sm:!min-w-[24rem] sm:!max-w-[24rem]"
+                  className="keen-slider__slide min-w-[16rem] max-w-[16rem] [-webkit-mask-image:url(/img/gem.webp)] [-webkit-mask-size:contain] [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] sm:!min-w-[24rem] sm:!max-w-[24rem]"
                 >
                   <img
-                    className="h-full w-full [mask-image:linear-gradient(to_bottom,#000_25%,#0000_100%)]"
+                    className="h-full w-full [-webkit-mask-image:linear-gradient(to_bottom,#000_25%,#0000_100%)]"
                     src={cartridge.image}
                     alt={cartridge.name}
                   />

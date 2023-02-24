@@ -165,7 +165,7 @@ const PartnerSlideMobile = () => {
         {sliderCartridges.map((feature) => (
           <div key={feature.name} className="keen-slider__slide px-16 sm:px-24">
             <img
-              className="h-[20rem] w-full rounded-2xl border-2 border-night-800 object-cover [mask-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:h-[32rem]"
+              className="h-[20rem] w-full rounded-2xl border-2 border-night-800 object-cover [-webkit-mask-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:h-[32rem]"
               src={feature.sliderImage ?? ""}
               alt=""
             />
@@ -344,7 +344,7 @@ const PartnerSlideDesktop = () => {
           {sliderCartridges.map((feature) => (
             <div key={feature.name} className="keen-slider__slide aspect-video">
               <img
-                className="h-full w-full object-cover object-center [mask-image:linear-gradient(to_left,#000_10%,#0000_90%)] xl:[mask-image:linear-gradient(to_left,#000_20%,#0000_90%)]"
+                className="h-full w-full object-cover object-center [-webkit-mask-image:linear-gradient(to_left,#000_10%,#0000_90%)] xl:[-webkit-mask-image:linear-gradient(to_left,#000_20%,#0000_90%)]"
                 src={feature.sliderImage ?? ""}
                 alt=""
               />

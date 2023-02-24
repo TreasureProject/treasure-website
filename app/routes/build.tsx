@@ -74,7 +74,7 @@ const Partner = ({
 
 const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
   return (
-    <div className="relative flex flex-1 overflow-x-hidden [mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)]">
+    <div className="relative flex flex-1 overflow-x-hidden [-webkit-mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)]">
       <div
         className={twMerge(
           "flex whitespace-nowrap",
@@ -605,7 +605,7 @@ export default function Build() {
               <p className="text-2xl font-bold text-honey-200 xl:text-4xl">
                 You’re in good company on Arbitrum
               </p>
-              <p className="text-sm text-night-500 sm:text-base sm:text-lg">
+              <p className="text-sm text-night-500 sm:text-base">
                 The Arbitrum ecosystem is vast and reaches beyond Treasure. It’s
                 home to other great dapps, protocols, social platforms and has
                 everything you need to build.
