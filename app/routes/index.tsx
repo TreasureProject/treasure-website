@@ -8,7 +8,7 @@ import { Trans } from "react-i18next";
 
 import ReactPlayer from "react-player/youtube";
 import { Dialog, Transition } from "@headlessui/react";
-import type { HeadersFunction, LinksFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, LinksFunction } from "@remix-run/node";
 import { commonHeaders } from "~/utils/misc.server";
 import { useTranslation } from "react-i18next";
 import { Link } from "@remix-run/react";

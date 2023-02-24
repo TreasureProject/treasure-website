@@ -157,16 +157,16 @@ export const Footer = () => {
           <p className="mt-12 text-sm text-night-700 sm:mt-0">
             &copy; 2021-{currentYear} Treasure. All Rights Reserved.
           </p>
-          <div className="flex space-x-4 lg:space-x-6">
+          <div className="flex items-center space-x-4 lg:space-x-6">
             <Link
-              className="text-night-800 hover:text-night-900"
+              className="text-sm text-night-700 hover:text-night-900"
               to="/terms-of-service"
             >
               Terms of Service
             </Link>
 
             <Link
-              className="text-night-800 hover:text-night-900"
+              className="text-sm text-night-700 hover:text-night-900"
               to="/privacy-policy"
             >
               Privacy Policy

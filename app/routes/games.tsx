@@ -2,7 +2,7 @@ import type {
   HeadersFunction,
   LinksFunction,
   MetaFunction,
-} from "@remix-run/cloudflare";
+} from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";

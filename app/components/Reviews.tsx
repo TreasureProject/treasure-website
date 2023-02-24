@@ -5,6 +5,7 @@ import { playerTweets } from "~/const";
 import { Badge } from "./Badge";
 import { QuoteIcon } from "./Icons";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { ClientOnly } from "remix-utils";
 
 export function Tweet({
   className,
@@ -106,18 +107,22 @@ function TweetsColumn({
   }, []);
 
   return (
-    <div
-      ref={columnRef}
-      className={twMerge(
-        "hover:pause animate-marquee3 space-y-8 py-4",
-        className
+    <ClientOnly>
+      {() => (
+        <div
+          ref={columnRef}
+          className={twMerge(
+            "hover:pause animate-marquee3 space-y-8 py-4",
+            className
+          )}
+          style={{ "--marquee-duration": duration } as React.CSSProperties}
+        >
+          {reviews.concat(reviews).map((review, reviewIndex) => (
+            <Tweet key={reviewIndex} {...review} />
+          ))}
+        </div>
       )}
-      style={{ "--marquee-duration": duration } as React.CSSProperties}
-    >
-      {reviews.concat(reviews).map((review, reviewIndex) => (
-        <Tweet key={reviewIndex} {...review} />
-      ))}
-    </div>
+    </ClientOnly>
   );
 }
 

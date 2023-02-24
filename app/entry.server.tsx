@@ -1,5 +1,5 @@
 import { RemixServer } from "@remix-run/react";
-import type { EntryContext } from "@remix-run/cloudflare";
+import type { EntryContext } from "@remix-run/node";
 import { createInstance } from "i18next";
 import Backend from "i18next-fetch-backend";
 import { renderToString } from "react-dom/server";

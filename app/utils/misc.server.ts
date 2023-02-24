@@ -1,4 +1,4 @@
-import type { HeadersFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction } from "@remix-run/node";
 
 export function getDomainUrl(request: Request) {
   const host =
