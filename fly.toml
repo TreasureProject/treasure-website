@@ -1,4 +1,4 @@
-# fly.toml file generated for treasure-governance-staking on 2023-02-20T10:23:29+09:00
+# fly.toml file generated for treasure-website on 2023-02-22T11:10:25+09:00
 
 app = "treasure-website"
 kill_signal = "SIGINT"
