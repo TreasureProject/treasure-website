@@ -3,7 +3,7 @@ import { MagicIcon } from "~/components/Icons";
 import { NewTreasureStats } from "~/components/TreasureStats";
 import RedStarImg from "../../public/img/red-star.png";
 import TreasureImg from "../../public/img/treasures.png";
-import type { HeadersFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
 import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";

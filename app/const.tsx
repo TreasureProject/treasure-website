@@ -1178,6 +1178,7 @@ export const cartridges = [
 export const sliderCartridges = cartridges.filter((c) => c.sliderImage);
 
 export const coreCartridges = cartridges.filter((c) => c.core);
+
 export const featuredCartridges = cartridges.filter((c) => c.featured);
 
 export type CartridgeT = typeof cartridges[number];

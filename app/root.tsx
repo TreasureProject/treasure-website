@@ -3,8 +3,8 @@ import type {
   LinksFunction,
   LoaderFunction,
   MetaFunction,
-} from "@remix-run/cloudflare";
-import { json } from "@remix-run/cloudflare";
+} from "@remix-run/node";
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -16,11 +16,8 @@ import {
   useTransition,
   useFetchers,
   useCatch,
+  useMatches,
 } from "@remix-run/react";
-
-import { getEnvVariable } from "./utils/env";
-
-import type { CloudFlareEnv, CloudFlareEnvVar } from "./types";
 
 import styles from "./styles/tailwind.css";
 
@@ -33,7 +30,6 @@ import NProgress from "nprogress";
 import nProgressStyles from "./styles/nProgress.css";
 import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
-import { useChangeLanguage } from "remix-i18next";
 import { Layout } from "./components/Layout";
 
 // import {
@@ -49,7 +45,7 @@ export type RootLoaderData = {
     origin: string;
     path: string;
   };
-  ENV: Partial<CloudFlareEnv>;
+  ENV: Partial<typeof process.env>;
   locale: string;
   // magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
   // totalLocked: Awaited<ReturnType<typeof getUtilization>>;
@@ -142,11 +138,14 @@ export const meta: MetaFunction = ({ data }) => {
   };
 };
 
-const SECRET_ENV = ["GITHUB_API_TOKEN"] as CloudFlareEnvVar[];
+function useChangeLanguage(locale: string) {
+  const { i18n } = useTranslation();
+  React.useEffect(() => {
+    i18n.changeLanguage(locale);
+  }, [locale, i18n]);
+}
 
-export const loader: LoaderFunction = async ({ context, request }) => {
-  const env = context as CloudFlareEnv;
-
+export const loader: LoaderFunction = async ({ request }) => {
   /* TODO: figure out why this wasn't workign in production. gave me an application error
    saying "SyntaxError: Unexpected token e in JSON at position 0" and couldn't debug.
    I resorted to doing a client-side fetch to get the data.
@@ -158,6 +157,7 @@ export const loader: LoaderFunction = async ({ context, request }) => {
   // getUniqueAddressCount(),
   // getTotalMarketplaceVolume(),
   // ]);
+
   const locale = await i18n.getLocale(request);
 
   return json<RootLoaderData>({
@@ -171,16 +171,12 @@ export const loader: LoaderFunction = async ({ context, request }) => {
       origin: getDomainUrl(request),
       path: new URL(request.url).pathname,
     },
-    ENV: (Object.keys(env) as (keyof typeof env)[]).reduce((envVars, key) => {
-      if (!SECRET_ENV.includes(key)) {
-        return {
-          ...envVars,
-          [key]: getEnvVariable(key as CloudFlareEnvVar, env),
-        };
-      }
-
-      return envVars;
-    }, {}),
+    ENV: {
+      PREVIEW_SECRET: process.env.PREVIEW_SECRET,
+      SANITY_PUBLIC_PROJECT_ID: process.env.SANITY_PUBLIC_PROJECT_ID,
+      SANITY_PUBLIC_DATASET: process.env.SANITY_PUBLIC_DATASET,
+      SANITY_PUBLIC_API_VERSION: process.env.SANITY_PUBLIC_API_VERSION,
+    },
   });
 };
 
@@ -192,10 +188,13 @@ export default function App() {
   const { ENV, locale } = useLoaderData<RootLoaderData>();
 
   const { i18n } = useTranslation();
+  const matches = useMatches();
 
   const transition = useTransition();
 
   const fetchers = useFetchers();
+
+  const isAdminPage = matches[1].id.split("/").includes("studio");
 
   const state = React.useMemo<"idle" | "loading">(
     function getGlobalState() {
@@ -219,6 +218,29 @@ export default function App() {
     if (state === "idle") NProgress.done();
   }, [state, transition.state]);
 
+  if (isAdminPage) {
+    return (
+      <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
+        <head>
+          <Meta />
+          <Links />
+        </head>
+        <body>
+          <Outlet />
+          <Scripts />
+          <ScrollRestoration />
+          <LiveReload />
+          {/* env available anywhere on your app */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.ENV = ${JSON.stringify(ENV)};`,
+            }}
+          />
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
       <head>
@@ -231,11 +253,11 @@ export default function App() {
         </Layout>
         <Scripts />
         <ScrollRestoration />
-        {ENV.ENV === "development" ? <LiveReload /> : null}
+        <LiveReload />
         {/* env available anywhere on your app */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.env = ${JSON.stringify(ENV)};`,
+            __html: `window.ENV = ${JSON.stringify(ENV)};`,
           }}
         />
         <script
@@ -244,7 +266,7 @@ export default function App() {
           defer
           data-auto="false"
         />
-        {ENV.ENV === "production" ? (
+        {process.env.NODE_ENV === "production" ? (
           <script
             dangerouslySetInnerHTML={{
               __html: `
