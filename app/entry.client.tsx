@@ -8,30 +8,39 @@ import { getInitialNamespaces } from "remix-i18next";
 import { supportedLngs } from "./const";
 import { hydrateRoot } from "react-dom/client";
 
-i18next
-  .use(initReactI18next)
-  .use(LanguageDetector)
-  .use(Backend)
-  .init({
-    supportedLngs,
-    defaultNS: "index",
-    fallbackLng: "en",
-    react: { useSuspense: false },
+async function hydrate() {
+  await i18next
+    .use(initReactI18next)
+    .use(LanguageDetector)
+    .use(Backend)
+    .init({
+      supportedLngs,
+      defaultNS: "index",
+      fallbackLng: "en",
+      react: { useSuspense: false },
 
-    ns: getInitialNamespaces(),
-    backend: { loadPath: "/locales/{{lng}}/{{ns}}.json" },
-    detection: {
-      order: ["htmlTag"],
-      caches: [],
-    },
-  })
-  .then(() => {
-    return startTransition(() => {
-      hydrateRoot(
-        document,
-        <I18nextProvider i18n={i18next}>
-          <RemixBrowser />
-        </I18nextProvider>
-      );
+      ns: getInitialNamespaces(),
+      backend: { loadPath: "/locales/{{lng}}/{{ns}}.json" },
+      detection: {
+        order: ["htmlTag"],
+        caches: [],
+      },
     });
+
+  startTransition(() => {
+    hydrateRoot(
+      document,
+      <I18nextProvider i18n={i18next}>
+        <RemixBrowser />
+      </I18nextProvider>
+    );
   });
+}
+
+if (window.requestIdleCallback) {
+  window.requestIdleCallback(hydrate);
+} else {
+  // Safari doesn't support requestIdleCallback
+  // https://caniuse.com/requestidlecallback
+  window.setTimeout(hydrate, 1);
+}

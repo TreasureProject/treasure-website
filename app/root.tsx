@@ -31,6 +31,7 @@ import nProgressStyles from "./styles/nProgress.css";
 import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
 import { Layout } from "./components/Layout";
+import { i18nCookie } from "./utils/cookie";
 
 // import {
 //   getMagicPrice,
@@ -160,24 +161,31 @@ export const loader: LoaderFunction = async ({ request }) => {
 
   const locale = await i18n.getLocale(request);
 
-  return json<RootLoaderData>({
-    // magicPrice,
-    // totalLocked,
-    // uniqueAddresses,
-    // totalMarketplaceVolume,
-    locale,
-    data: await getPosts(),
-    requestInfo: {
-      origin: getDomainUrl(request),
-      path: new URL(request.url).pathname,
+  return json<RootLoaderData>(
+    {
+      // magicPrice,
+      // totalLocked,
+      // uniqueAddresses,
+      // totalMarketplaceVolume,
+      locale,
+      data: await getPosts(),
+      requestInfo: {
+        origin: getDomainUrl(request),
+        path: new URL(request.url).pathname,
+      },
+      ENV: {
+        PREVIEW_SECRET: process.env.PREVIEW_SECRET,
+        SANITY_PUBLIC_PROJECT_ID: process.env.SANITY_PUBLIC_PROJECT_ID,
+        SANITY_PUBLIC_DATASET: process.env.SANITY_PUBLIC_DATASET,
+        SANITY_PUBLIC_API_VERSION: process.env.SANITY_PUBLIC_API_VERSION,
+      },
     },
-    ENV: {
-      PREVIEW_SECRET: process.env.PREVIEW_SECRET,
-      SANITY_PUBLIC_PROJECT_ID: process.env.SANITY_PUBLIC_PROJECT_ID,
-      SANITY_PUBLIC_DATASET: process.env.SANITY_PUBLIC_DATASET,
-      SANITY_PUBLIC_API_VERSION: process.env.SANITY_PUBLIC_API_VERSION,
-    },
-  });
+    {
+      headers: {
+        "Set-Cookie": await i18nCookie.serialize(locale),
+      },
+    }
+  );
 };
 
 export const handle = {

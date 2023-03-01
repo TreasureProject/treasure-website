@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 import { useInView } from "framer-motion";
 import { playerTweets } from "~/const";
@@ -81,30 +81,11 @@ function splitArray<T>(array: T[], numParts: number): T[][] {
 function TweetsColumn({
   className,
   reviews,
-  msPerPixel = 0,
 }: {
   className?: string;
   reviews: typeof playerTweets[number][];
-  msPerPixel?: number;
 }) {
   const columnRef = useRef<HTMLDivElement | null>(null);
-  const [columnHeight, setColumnHeight] = useState(0);
-  const duration = `${columnHeight * msPerPixel}ms`;
-
-  useEffect(() => {
-    if (columnRef.current) {
-      const column = columnRef.current;
-      const resizeObserver = new window.ResizeObserver(() => {
-        setColumnHeight(column.offsetHeight);
-      });
-
-      resizeObserver.observe(columnRef.current);
-
-      return () => {
-        resizeObserver.disconnect();
-      };
-    }
-  }, []);
 
   return (
     <ClientOnly>
@@ -115,7 +96,7 @@ function TweetsColumn({
             "hover:pause animate-marquee3 space-y-8 py-4",
             className
           )}
-          style={{ "--marquee-duration": duration } as React.CSSProperties}
+          style={{ "--marquee-duration": "100000ms" } as React.CSSProperties}
         >
           {reviews.concat(reviews).map((review, reviewIndex) => (
             <Tweet key={reviewIndex} {...review} />
@@ -134,21 +115,13 @@ function TweetsGrid() {
   return (
     <div
       ref={containerRef}
-      className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 [mask-image:linear-gradient(to_bottom,#0000,#000_20%,#000_80%,#0000)] sm:mt-20 md:grid-cols-2 lg:grid-cols-3"
+      className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 [-webkit-mask-image:linear-gradient(to_bottom,#0000,#000_20%,#000_80%,#0000)] sm:mt-20 md:grid-cols-2 lg:grid-cols-3"
     >
       {isInView && (
         <>
-          <TweetsColumn reviews={splitColumns[0]} msPerPixel={30} />
-          <TweetsColumn
-            reviews={splitColumns[1]}
-            className="hidden md:block"
-            msPerPixel={25}
-          />
-          <TweetsColumn
-            reviews={splitColumns[2]}
-            className="hidden lg:block"
-            msPerPixel={30}
-          />
+          <TweetsColumn reviews={splitColumns[0]} />
+          <TweetsColumn reviews={splitColumns[1]} className="hidden md:block" />
+          <TweetsColumn reviews={splitColumns[2]} className="hidden lg:block" />
         </>
       )}
     </div>

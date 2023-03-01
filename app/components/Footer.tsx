@@ -1,10 +1,16 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowTopRightOnSquareIcon,
+  ChevronDownIcon,
+  LanguageIcon,
+} from "@heroicons/react/24/solid";
 import { Link } from "@remix-run/react";
-import { socials, navigation } from "~/const";
+import { socials, navigation, languages } from "~/const";
 import { MagicIcon } from "./Icons";
 import LogoImg from "../../public/img/logo.png";
 import { useTranslation } from "react-i18next";
 import { useAppContext } from "~/context/App";
+import { Menu, Transition } from "@headlessui/react";
+import { Fragment } from "react";
 
 const currentYear = new Date().getFullYear();
 
@@ -47,6 +53,49 @@ export const Footer = () => {
               <span className="sr-only">Treasure</span>
               <img className="h-10" src={LogoImg} alt="Treasure" />
             </Link>
+            <Menu as="div" className="relative mt-4 inline-block text-left">
+              <div>
+                <Menu.Button className="inline-flex w-full justify-center rounded-md border border-honey-400/50 bg-honey-900 bg-opacity-20 px-4 py-2 text-sm font-medium text-white transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:bg-opacity-30">
+                  <LanguageIcon className="h-5 w-5 text-night-800 hover:text-night-900" />
+                  <ChevronDownIcon
+                    className="ml-2 -mr-1 h-5 w-5 text-night-800 hover:text-night-900"
+                    aria-hidden="true"
+                  />
+                </Menu.Button>
+              </div>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute left-0 mt-2 w-56 origin-top-left rounded-md bg-white shadow-lg shadow-honey-900/10 ring-1 ring-honey-300 ring-opacity-5 focus:outline-none">
+                  <div className="px-1 py-1">
+                    {(Object.keys(languages) as (keyof typeof languages)[]).map(
+                      (lang) => (
+                        <Menu.Item key={lang}>
+                          {({ active }) => (
+                            <Link
+                              className={`${
+                                active
+                                  ? "bg-honey-200/30 text-night-900"
+                                  : "text-night-900"
+                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                              to={`/?lng=${lang}`}
+                            >
+                              {languages[lang]}
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      )
+                    )}
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:col-span-4 xl:mt-0">
             {groupedNavigation.map((item) => {

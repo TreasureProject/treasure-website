@@ -1,0 +1,51 @@
+{
+  "common": {
+    "Learn": "学习",
+    "Discover": "发现",
+    "Build": "构建",
+    "Build with Treasure": "使用Treasure构建",
+    "Contribute": "贡献",
+    "LP": "流动性提供者",
+    "Marketplace": "市场",
+    "stats": {
+      "magicPrice": "MAGIC价格",
+      "totalMPVolume": "市场总交易量",
+      "totalValueLocked": "总锁定价值",
+      "percentCirculatingSupply": "% 流通供应锁定"
+    },
+    "Integration Framework": "集成框架",
+    "Game Builders Program": "游戏开发者计划",
+    "Interoperability": "互操作性",
+    "What is MAGIC?": "什么是MAGIC?",
+    "About Treasure": "关于Treasure",
+    "Ecosystem Careers": "生态职业",
+    "Snapshot": "快照",
+    "Open Source": "开源",
+    "About": "关于",
+    "Team": "团队",
+    "Games": "游戏",
+    "Documentation": "文档",
+    "Newsletter": "通讯",
+    "Bridgeworld": "桥接世界",
+    "Cartridges": "游戏卡带",
+    "Community": "社区",
+    "Infrastructure": "基础设施",
+    "Why Treasure": "为什么选择Treasure",
+    "Apply for Partnership": "申请合作",
+    "Brand Assets": "品牌资产",
+    "Governance Forum": "治理论坛",
+    "Vote on Snapshot": "在快照上投票",
+    "Bounty Board": "悬赏板块",
+    "Guilds": "公会",
+    "Community Initiatives": "社区计划",
+    "Talent": "人才",
+    "MagicSwap": "MagicSwap",
+    "MAGIC-ETH LP": "MAGIC-ETH LP",
+    "Balancer Crystals": "Balancer水晶",
+    "Trove": "藏宝阁"
+  },
+  "index": {
+    "title": "游戏的魔力。",
+    "subtitle": "Treasure是一个去中心化的游戏主机 通过想象力、MAGIC和NFT将游戏和社区连接在一起。"
+  }
+}

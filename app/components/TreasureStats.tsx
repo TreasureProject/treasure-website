@@ -164,7 +164,7 @@ export const NewTreasureStats = ({
     >
       <div
         className={twMerge(
-          "absolute inset-0 z-10 bg-honey-50 [mask-image:linear-gradient(to_right,#000,#0000_30%,#0000_70%,#000)]",
+          "absolute inset-0 z-10 bg-honey-50 [-webkit-mask-image:linear-gradient(to_right,#000_0%,#0000_30%,#0000_70%,#000_100%)]",
           isSecondary && "bg-night-900"
         )}
       ></div>
