@@ -170,7 +170,7 @@ export default function Build() {
             <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-9xl lg:px-12">
               <div className="grid grid-cols-4 grid-rows-2 gap-1 rounded-xl bg-[#101827]">
                 <a
-                  href="https://docs.treasure.lol/games/game-builders-program"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative col-span-4 rounded-tl-lg bg-[#131D2E] px-8 py-7 transition-colors duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-3"
@@ -180,10 +180,10 @@ export default function Build() {
                     <img
                       src={GameBuildersProgramIcon}
                       className="h-12"
-                      alt="Game Builders Program Icon"
+                      alt="Game Partner Icon"
                     />
                     <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                      Game Builders Program
+                      Become a Game Partner
                     </p>
                     <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
                       Let’s partner to grow together over the long-term
@@ -637,13 +637,14 @@ export default function Build() {
                   Build with Treasure
                 </p>
                 <p className="text-sm text-night-100 sm:text-lg">
-                  Apply to the Game Builders Program to supercharge your game.
+                  Apply to become an official Treasure Game Partner to
+                  supercharge your game.
                 </p>
               </div>
               <div className="mt-8">
                 <CTAButton
                   as="a"
-                  href="https://docs.treasure.lol/games/game-builders-program"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform"
                   type="primary"
                 >
                   Start building
