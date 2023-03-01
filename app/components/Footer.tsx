@@ -56,9 +56,9 @@ export const Footer = () => {
             <Menu as="div" className="relative mt-4 inline-block text-left">
               <div>
                 <Menu.Button className="inline-flex w-full justify-center rounded-md border border-honey-400/50 bg-honey-900 bg-opacity-20 px-4 py-2 text-sm font-medium text-white transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:bg-opacity-30">
-                  <LanguageIcon className="h-5 w-5 text-honey-900 hover:text-honey-800" />
+                  <LanguageIcon className="h-5 w-5 text-night-800 hover:text-night-900" />
                   <ChevronDownIcon
-                    className="ml-2 -mr-1 h-5 w-5 text-honey-900 hover:text-honey-800"
+                    className="ml-2 -mr-1 h-5 w-5 text-night-800 hover:text-night-900"
                     aria-hidden="true"
                   />
                 </Menu.Button>
@@ -81,7 +81,7 @@ export const Footer = () => {
                             <Link
                               className={`${
                                 active
-                                  ? "bg-honey-200/30 text-honey-900"
+                                  ? "bg-honey-200/30 text-night-900"
                                   : "text-night-900"
                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                               to={`/?lng=${lang}`}

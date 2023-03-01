@@ -142,14 +142,14 @@ export default function Home() {
                   Build the future of gaming with us
                 </p>
                 <p className="text-sm text-night-500 sm:text-lg">
-                  Apply to our Game Builders Program to supercharge your game
-                  and build with a vibrant community and ecosystem of builders,
-                  and receive curated long-term support and incentives.
+                  Apply to become an official Treasure Game Partner to
+                  supercharge your game by building with a vibrant community and
+                  ecosystem of builders.
                 </p>
                 <div>
                   <CTAButton
                     as="a"
-                    href="https://docs.treasure.lol/games/game-builders-program"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform"
                   >
                     Start building
                   </CTAButton>

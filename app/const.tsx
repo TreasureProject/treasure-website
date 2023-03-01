@@ -1204,7 +1204,7 @@ export const stats = [
   },
   {
     title: "Total marketplace volume",
-    value: "$267M",
+    value: "$271M",
     icon: IconTroveImg,
   },
   {

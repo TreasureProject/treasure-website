@@ -307,7 +307,7 @@ export default function Interoperability() {
                 <img src={MagicLogomarkImg} className="w-12" alt="Icon" />
                 <div className="flex-col justify-center space-y-1">
                   <p className="text-base font-bold text-[#FFFDF7] lg:text-3xl">
-                    267k
+                    344k
                   </p>
                   <p className="break-word text-sm text-[#FFFDF7] lg:text-base lg:leading-5">
                     Unique MAGIC holders
