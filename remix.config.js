@@ -6,7 +6,6 @@ module.exports = {
   future: {
     unstable_tailwind: true,
   },
-  serverDependenciesToBundle: ["i18next-fetch-backend"],
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",
   // serverBuildPath: "functions/[[path]].js",
