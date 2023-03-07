@@ -1,23 +1,31 @@
 import { RemixServer } from "@remix-run/react";
 import type { EntryContext } from "@remix-run/node";
 import { createInstance } from "i18next";
-import Backend from "i18next-fetch-backend";
-import { renderToString } from "react-dom/server";
+import Backend from "i18next-fs-backend";
+import { renderToPipeableStream } from "react-dom/server";
 import { I18nextProvider, initReactI18next } from "react-i18next";
 import { i18n } from "./utils/i18n.server";
 import { supportedLngs } from "./const";
+import { resolve } from "node:path";
+import isbot from "isbot";
+import { PassThrough } from "stream";
+import { Response } from "@remix-run/node";
+
+const ABORT_DELAY = 5000;
 
 export default async function handleRequest(
   request: Request,
-  statusCode: number,
-  headers: Headers,
-  context: EntryContext
+  responseStatusCode: number,
+  responseHeaders: Headers,
+  remixContext: EntryContext
 ) {
+  const callbackName = isbot(request.headers.get("user-agent"))
+    ? "onAllReady"
+    : "onShellReady";
+
   const instance = createInstance();
-
   const lng = await i18n.getLocale(request);
-
-  const ns = i18n.getRouteNamespaces(context);
+  const ns = i18n.getRouteNamespaces(remixContext);
 
   await instance
     .use(initReactI18next)
@@ -29,21 +37,42 @@ export default async function handleRequest(
       react: { useSuspense: false },
       lng,
       ns,
-      backend: {
-        loadPath: `${new URL(request.url).origin}/locales/{{lng}}/{{ns}}.json`,
-      },
+      backend: { loadPath: resolve("./public/locales/{{lng}}/{{ns}}.json") },
     });
 
-  const markup = renderToString(
-    <I18nextProvider i18n={instance}>
-      <RemixServer context={context} url={request.url} />
-    </I18nextProvider>
-  );
+  return new Promise((resolve, reject) => {
+    let didError = false;
 
-  headers.set("Content-Type", "text/html");
+    const { pipe, abort } = renderToPipeableStream(
+      <I18nextProvider i18n={instance}>
+        <RemixServer context={remixContext} url={request.url} />
+      </I18nextProvider>,
+      {
+        [callbackName]: () => {
+          const body = new PassThrough();
 
-  return new Response("<!DOCTYPE html>" + markup, {
-    status: statusCode,
-    headers: headers,
+          responseHeaders.set("Content-Type", "text/html");
+
+          resolve(
+            new Response(body, {
+              headers: responseHeaders,
+              status: didError ? 500 : responseStatusCode,
+            })
+          );
+
+          pipe(body);
+        },
+        onShellError(error: unknown) {
+          reject(error);
+        },
+        onError(error: unknown) {
+          didError = true;
+
+          console.error(error);
+        },
+      }
+    );
+
+    setTimeout(abort, ABORT_DELAY);
   });
 }
