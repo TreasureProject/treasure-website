@@ -21,9 +21,6 @@ import {
 
 import styles from "./styles/tailwind.css";
 
-import { getPosts } from "./utils/posts.server";
-import type { Posts } from "./utils/posts.server";
-
 import { getDomainUrl } from "./utils/misc.server";
 import { generateTitle, getSocialMetas, getUrl } from "./utils/seo";
 import NProgress from "nprogress";
@@ -41,7 +38,6 @@ import { i18nCookie } from "./utils/cookie";
 // } from "./utils/stats";
 
 export type RootLoaderData = {
-  data: Posts;
   requestInfo: {
     origin: string;
     path: string;
@@ -168,7 +164,6 @@ export const loader: LoaderFunction = async ({ request }) => {
       // uniqueAddresses,
       // totalMarketplaceVolume,
       locale,
-      data: await getPosts(),
       requestInfo: {
         origin: getDomainUrl(request),
         path: new URL(request.url).pathname,
@@ -279,7 +274,7 @@ export default function App() {
             dangerouslySetInnerHTML={{
               __html: `
             window.addEventListener('load', function() {
-             if (!new URLSearchParams(window.location.search).has('preview')) {
+             if (!window.location.host === "treasure-website-staging.fly.dev" && !new URLSearchParams(window.location.search).has('preview')) {
               window.fathom.trackPageview();
              }
             })
