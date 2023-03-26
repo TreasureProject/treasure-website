@@ -12,7 +12,7 @@ export function Tweet({
   ...props
 }: {
   className?: string;
-} & typeof playerTweets[number]) {
+} & (typeof playerTweets)[number]) {
   const animationDelay = useMemo(() => {
     const possibleAnimationDelays = [
       "0s",
@@ -83,7 +83,7 @@ function TweetsColumn({
   reviews,
 }: {
   className?: string;
-  reviews: typeof playerTweets[number][];
+  reviews: (typeof playerTweets)[number][];
 }) {
   const columnRef = useRef<HTMLDivElement | null>(null);
 

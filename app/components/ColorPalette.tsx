@@ -63,7 +63,7 @@ export const ColorPalette = () => {
   const colors = (
     Object.keys(
       theme.extend.colors
-    ) as (keyof typeof theme["extend"]["colors"])[]
+    ) as (keyof (typeof theme)["extend"]["colors"])[]
   ).filter((colors) => colors !== "twitter" && colors !== "discord") as (
     | "night"
     | "honey"

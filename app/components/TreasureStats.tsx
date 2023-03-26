@@ -118,7 +118,7 @@ const Stat = ({
   data,
   isSecondary,
 }: {
-  data: typeof stats[number];
+  data: (typeof stats)[number];
   isSecondary: boolean;
 }) => (
   <div

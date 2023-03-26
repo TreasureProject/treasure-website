@@ -62,7 +62,7 @@ const Partner = ({
   partner,
   index,
 }: {
-  partner: typeof arbitrumPartners[number];
+  partner: (typeof arbitrumPartners)[number];
   index: number;
 }) => {
   return (

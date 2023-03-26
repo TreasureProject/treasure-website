@@ -1,7 +1,7 @@
 import { partners } from "~/const";
 import { Badge } from "./Badge";
 
-const Partner = ({ partner }: { partner: typeof partners[number] }) => {
+const Partner = ({ partner }: { partner: (typeof partners)[number] }) => {
   return (
     <div
       key={partner.name}

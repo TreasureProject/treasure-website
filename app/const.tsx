@@ -425,7 +425,7 @@ export const teamGameStudio = teamMembers.filter(
   (member) => member.team === "Game Studio"
 );
 
-export type MemberT = typeof teamMembers[number];
+export type MemberT = (typeof teamMembers)[number];
 
 export const magicPurchaseLinks = [
   {
@@ -771,7 +771,7 @@ export const builds = [
   },
 ];
 
-export type CardT = typeof builds[number];
+export type CardT = (typeof builds)[number];
 
 export const partners = [
   {
@@ -1181,7 +1181,7 @@ export const coreCartridges = cartridges.filter((c) => c.core);
 
 export const featuredCartridges = cartridges.filter((c) => c.featured);
 
-export type CartridgeT = typeof cartridges[number];
+export type CartridgeT = (typeof cartridges)[number];
 
 export const socials = [
   {

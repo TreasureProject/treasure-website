@@ -14,7 +14,7 @@ import { Fragment } from "react";
 
 const currentYear = new Date().getFullYear();
 
-const groupedNavigation = navigation.reduce<typeof navigation[number][]>(
+const groupedNavigation = navigation.reduce<(typeof navigation)[number][]>(
   (acc, item) => {
     if (item.group) {
       const group = acc.find((group) => group.name === item.group);
