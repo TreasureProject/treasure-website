@@ -38,6 +38,8 @@ export const meta: MetaFunction = (args) => {
   return getSocialMetas({
     title: generateTitle("/blog"),
     url: getUrl(requestInfo),
+    description:
+      "The magic of play. Get the latest news and updates from Treasure, the decentralized gaming ecosystem.",
     image: genericImagePath(requestInfo.origin, "blog"),
   });
 };

@@ -1,7 +1,7 @@
 export function getSocialMetas({
   url,
   title = generateTitle(),
-  description = "The magic of play. Get the latest news and updates from Treasure, the decentralized gaming ecosystem.",
+  description = "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
   keywords = "treasure, NFT, DeFi, games, community, imagination, magic",
   image,
 }: {
