@@ -53,7 +53,7 @@ const Card = ({
     </div>
     <div className="relative z-10 mt-8">{children}</div>
     <div className="absolute -bottom-1 right-0">
-      <img src={image} className="ml-auto w-1/2 md:w-1/2" alt={title} />
+      <img src={image} className="ml-auto w-1/2 md:w-1/3" alt={title} />
     </div>
   </div>
 );
@@ -137,8 +137,8 @@ export const BlogLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="flex min-h-full flex-col">
-      <header className="container">
-        <div className="flex h-24">
+      <header className="dark:bg-night-900 dark:shadow-lg">
+        <div className="container flex h-24">
           <Link
             to={`/blog?${searchParams.toString()}`}
             className="flex max-w-none items-center space-x-2"

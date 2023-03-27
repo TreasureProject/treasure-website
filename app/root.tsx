@@ -22,12 +22,7 @@ import {
 import styles from "./styles/tailwind.css";
 
 import { getDomainUrl } from "./utils/misc.server";
-import {
-  generateTitle,
-  genericImagePath,
-  getSocialMetas,
-  getUrl,
-} from "./utils/seo";
+import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
 import NProgress from "nprogress";
 import nProgressStyles from "./styles/nProgress.css";
 import { i18n } from "./utils/i18n.server";
@@ -199,7 +194,7 @@ function App() {
         <ThemeHead ssrTheme={Boolean(data.theme)} />
       </head>
       <body
-        className="h-full bg-honey-25 antialiased selection:bg-honey-900 dark:bg-night-900"
+        className="h-full bg-honey-25 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
         id="top"
       >
         <Outlet />

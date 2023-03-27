@@ -8,7 +8,6 @@ import type { SerializeFrom } from "@remix-run/server-runtime";
 import { defer } from "@remix-run/node";
 import { contenfulDeliverySdk } from "~/utils/client.server";
 import invariant from "tiny-invariant";
-import { Layout } from "~/components/Layout";
 import {
   Await,
   Link,
