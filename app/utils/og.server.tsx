@@ -19,7 +19,6 @@ export const generateOgImage = async (
   const options: ImageResponseOptions = {
     width: OG_IMAGE_WIDTH,
     height: OG_IMAGE_HEIGHT,
-    debug: true,
     fonts: [
       {
         name: "ABCWhyte",
