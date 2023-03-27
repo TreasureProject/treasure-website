@@ -19,6 +19,7 @@ export const generateOgImage = async (
   const options: ImageResponseOptions = {
     width: OG_IMAGE_WIDTH,
     height: OG_IMAGE_HEIGHT,
+    debug: true,
     fonts: [
       {
         name: "ABCWhyte",
@@ -40,7 +41,7 @@ export const generateOgImage = async (
           width: options.width,
           height: options.height,
           fontFamily: "ABCWhyte",
-          fontSize: 50,
+          fontSize: 45,
           backgroundImage: `url(${origin}/img/meta/compass-bg.jpg)`,
           display: "flex",
           position: "relative",
@@ -50,7 +51,7 @@ export const generateOgImage = async (
           style={{
             color: "#FFFAEF",
             position: "absolute",
-            width: "100%",
+            width: "90%",
             bottom: "2.5rem",
             left: "4.5rem",
             lineHeight: "3rem",
