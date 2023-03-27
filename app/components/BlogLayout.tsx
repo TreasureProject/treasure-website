@@ -188,7 +188,7 @@ export const BlogLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </header>
-      <div className="relative flex-1">
+      <div className="relative flex-1 overflow-hidden lg:overflow-visible">
         {preview ? <Preview /> : null}
         {children}
       </div>

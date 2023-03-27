@@ -81,11 +81,11 @@ export default function Index() {
           <div className="relative top-0 left-0 z-10 h-full w-full lg:absolute">
             <img
               src={coverPhoto}
-              className="h-full w-full rounded-xl object-contain"
+              className="h-full w-full rounded-xl object-cover"
               alt={latestPost?.title || "Latest blog post"}
             />
           </div>
-          <div className="absolute z-10 rounded-xl ring-1 ring-inset ring-transparent dark:ring-night-500/10"></div>
+          <div className="absolute inset-0 z-10 rounded-xl ring-1 ring-inset ring-transparent dark:ring-night-500/10"></div>
           <img
             src={coverPhoto}
             className="absolute -inset-y-4 inset-x-0 hidden scale-125 opacity-20 blur-2xl brightness-150 dark:block"
@@ -137,8 +137,8 @@ export default function Index() {
 
       {/* posts */}
       <div className="lg:mt-12 lg:grid lg:grid-cols-6 lg:gap-10">
-        <aside className="col-span-2">
-          <div className="sticky top-20">
+        <aside className="col-span-2 hidden lg:block">
+          <div className="sticky top-12">
             {/* categories */}
             <ul className="mt-6 flex flex-col space-y-2">
               {categories.map((category) => {
