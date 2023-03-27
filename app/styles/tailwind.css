@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.latestPost {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    "image image image image"
+    "title title title title"
+    "excerpt excerpt excerpt excerpt"
+    "author author author author"
+    "readMore readMore readMore readMore";
+}
+
+@screen lg {
+  .latestPost {
+    grid-template-areas:
+      "image image title title"
+      "image image excerpt excerpt"
+      "image image author author"
+      "image image readMore readMore";
+  }
+}
+
+.post {
+  grid-template-areas:
+    "image image"
+    "image image"
+    "title title"
+    "author author";
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, min-content));
+}
+
 @font-face {
   font-family: "GroteskSemi";
   font-weight: 500;

@@ -2,7 +2,7 @@ import { RemixBrowser } from "@remix-run/react";
 import i18next from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
-import { startTransition, StrictMode } from "react";
+import { startTransition } from "react";
 import { I18nextProvider, initReactI18next } from "react-i18next";
 import { getInitialNamespaces } from "remix-i18next";
 import { supportedLngs } from "./const";
@@ -30,9 +30,7 @@ async function hydrate() {
     hydrateRoot(
       document,
       <I18nextProvider i18n={i18next}>
-        <StrictMode>
-          <RemixBrowser />
-        </StrictMode>
+        <RemixBrowser />
       </I18nextProvider>
     );
   });
