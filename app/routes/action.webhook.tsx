@@ -3,7 +3,7 @@ import { json } from "@remix-run/node";
 import { badRequest } from "remix-utils";
 import { contenfulDeliverySdk } from "~/utils/client.server";
 
-const BASE_URL = "https://compass.treasure.lol";
+const BASE_URL = "https://treasure.lol/blog";
 
 type EntryEvent = {
   fields: {
