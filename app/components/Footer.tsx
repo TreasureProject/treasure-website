@@ -179,7 +179,7 @@ export const Footer = () => {
               );
             })}
           </div>
-          <div className="mt-8 flex flex-col items-end space-y-3.5 text-right sm:mt-12 sm:flex-row sm:space-y-0 sm:space-x-3.5 xl:col-span-1 xl:mt-0 xl:flex-col xl:space-y-8 xl:space-x-0">
+          <div className="mt-8 flex flex-col items-center space-y-3.5 text-right sm:mt-12 sm:flex-row sm:space-y-0 sm:space-x-3.5 xl:col-span-1 xl:mt-0 xl:flex-col xl:items-end xl:space-y-8 xl:space-x-0">
             <MagicButton />
             <div className="z-10 mx-auto flex space-x-6 py-3 sm:mx-0 sm:pl-5 xl:pl-0">
               {socials.map((social) => (

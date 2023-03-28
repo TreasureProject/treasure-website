@@ -97,7 +97,7 @@ export default function Index() {
         <h2 className="relative text-lg font-semibold text-night-900 [grid-area:title] dark:text-honey-200 lg:pl-8 lg:text-2xl xl:text-3xl">
           {latestPost?.title}
         </h2>
-        <p className="relative text-sm text-night-700 [grid-area:excerpt] dark:text-night-500 lg:pl-8 lg:text-lg">
+        <p className="relative text-sm text-night-700 [grid-area:excerpt] dark:text-night-500 lg:pl-8 lg:pr-24 lg:text-lg">
           {latestPost?.subtitle}
         </p>
         <div className="relative flex items-center space-x-3 [grid-area:author] lg:pl-8">
