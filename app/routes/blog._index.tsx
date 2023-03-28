@@ -70,7 +70,7 @@ export default function Index() {
   const coverPhoto = toWebp(latestPost?.coverImage?.url || "");
 
   return (
-    <main className="container mt-2 xl:mt-16">
+    <main className="container py-8 xl:py-16">
       {/* latest blog post */}
       <Link
         to={`/blog/${latestPost?.slug}?${searchParams.toString()}`}
@@ -136,101 +136,106 @@ export default function Index() {
       </Link>
 
       {/* posts */}
-      <div className="lg:mt-12 lg:grid lg:grid-cols-6 lg:gap-10">
-        <aside className="col-span-2 hidden lg:block">
-          <div className="sticky top-12">
-            {/* categories */}
-            <ul className="mt-6 flex flex-col space-y-2">
-              {categories.map((category) => {
-                return (
-                  <li key={category.name} className="relative">
-                    <button
-                      onClick={() => {
-                        setActiveCategories(
-                          categories.map((c) => ({
-                            name: c.name,
-                            active: c.name === category.name,
-                          }))
-                        );
-                      }}
-                      className={cn(
-                        "relative z-10 inline-flex w-full px-3.5 py-2.5 text-xs font-semibold text-night-700 transition-colors hover:text-night-800 dark:text-night-400 dark:hover:text-night-300 sm:text-base",
-                        {
-                          "text-night-900 dark:text-night-200": category.active,
-                        }
+      <div className="min-h-[48rem] lg:mt-12">
+        <div className="lg:grid lg:grid-cols-6 lg:gap-10">
+          <aside className="col-span-2 hidden lg:block">
+            <div className="sticky top-12">
+              {/* categories */}
+              <ul className="mt-6 flex flex-col space-y-2">
+                {categories.map((category) => {
+                  return (
+                    <li key={category.name} className="relative">
+                      <button
+                        onClick={() => {
+                          setActiveCategories(
+                            categories.map((c) => ({
+                              name: c.name,
+                              active: c.name === category.name,
+                            }))
+                          );
+                        }}
+                        className={cn(
+                          "relative z-10 inline-flex w-full px-3.5 py-2.5 text-xs font-semibold text-night-700 transition-colors hover:text-night-800 dark:text-night-400 dark:hover:text-night-300 sm:text-base",
+                          {
+                            "text-night-900 dark:text-night-200":
+                              category.active,
+                          }
+                        )}
+                      >
+                        <span className="capitalize">{category.name}</span>
+                      </button>
+                      {category.active && (
+                        <motion.div
+                          layoutId="activeCategory"
+                          className="absolute inset-0 rounded-lg bg-honey-200 px-3.5 py-2.5 outline outline-1 outline-honey-200/20 dark:bg-night-800/30 dark:outline-night-800/20"
+                        />
                       )}
-                    >
-                      <span className="capitalize">{category.name}</span>
-                    </button>
-                    {category.active && (
-                      <motion.div
-                        layoutId="activeCategory"
-                        className="absolute inset-0 rounded-lg bg-honey-200 px-3.5 py-2.5 outline outline-1 outline-honey-200/20 dark:bg-night-800/30 dark:outline-night-800/20"
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </aside>
+          <div className="col-span-4 mt-6 grid grid-cols-1 gap-8 sm:gap-6 lg:grid-cols-2">
+            <AnimatePresence mode="popLayout">
+              {filteredPostsByCategory.map((post, i) => {
+                const authors = post?.authorCollection?.items || [];
+                return (
+                  <MotionLink
+                    layout
+                    prefetch="intent"
+                    to={`/blog/${post?.slug}?${searchParams.toString()}`}
+                    key={post?.slug}
+                    className="post relative gap-2 sm:gap-4"
+                  >
+                    <figure className="relative h-48 [grid-area:image]">
+                      <img
+                        src={toWebp(post?.coverImage?.url || "")}
+                        className="h-full w-full rounded-xl object-cover shadow-sm"
+                        alt={`Cover for ${post?.title}`}
                       />
-                    )}
-                  </li>
+                      <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-transparent dark:ring-night-500/10"></div>
+                    </figure>
+                    <h3 className="overflow-hidden text-base font-semibold leading-6 text-night-900 [grid-area:title] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-lg">
+                      {post?.title}
+                    </h3>
+                    <div className="flex items-center space-x-3 [grid-area:author]">
+                      <figure className="flex items-center gap-2">
+                        {post?.authorCollection?.items.length === 1 ? (
+                          <>
+                            <img
+                              src={toWebp(
+                                getAuthors(post)[0]?.image?.url || ""
+                              )}
+                              className="h-6 w-6 rounded-full bg-honey-400 ring-2 ring-honey-500"
+                              alt={`Avatar for ${getAuthors(post)[0]?.name}`}
+                            />
+                            <figcaption className="text-xs font-medium text-night-800 dark:text-night-200">
+                              <span>{getAuthors(post)[0]?.name}</span>
+                            </figcaption>
+                          </>
+                        ) : (
+                          <div className="flex -space-x-2">
+                            {authors.map((author) => (
+                              <img
+                                key={author?.name}
+                                src={toWebp(author?.image?.url || "")}
+                                className="inline-block h-6 w-6 rounded-full bg-honey-400 ring-2 ring-honey-500"
+                                alt={`Avatar for ${author?.name}`}
+                              />
+                            ))}
+                          </div>
+                        )}
+                      </figure>
+                      <span className="text-xs font-medium text-night-600 [grid-area:date]">
+                        <span>{post?.date}</span>
+                      </span>
+                    </div>
+                  </MotionLink>
                 );
               })}
-            </ul>
+            </AnimatePresence>
           </div>
-        </aside>
-        <div className="col-span-4 mt-6 grid grid-cols-1 gap-8 sm:gap-6 lg:grid-cols-2">
-          <AnimatePresence mode="popLayout">
-            {filteredPostsByCategory.map((post, i) => {
-              const authors = post?.authorCollection?.items || [];
-              return (
-                <MotionLink
-                  layout
-                  prefetch="intent"
-                  to={`/blog/${post?.slug}?${searchParams.toString()}`}
-                  key={post?.slug}
-                  className="post relative gap-2 sm:gap-4"
-                >
-                  <figure className="relative h-48 [grid-area:image]">
-                    <img
-                      src={toWebp(post?.coverImage?.url || "")}
-                      className="h-full w-full rounded-xl object-cover shadow-sm"
-                      alt={`Cover for ${post?.title}`}
-                    />
-                    <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-transparent dark:ring-night-500/10"></div>
-                  </figure>
-                  <h3 className="overflow-hidden text-base font-semibold leading-6 text-night-900 [grid-area:title] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-lg">
-                    {post?.title}
-                  </h3>
-                  <div className="flex items-center space-x-3 [grid-area:author]">
-                    <figure className="flex items-center gap-2">
-                      {post?.authorCollection?.items.length === 1 ? (
-                        <>
-                          <img
-                            src={toWebp(getAuthors(post)[0]?.image?.url || "")}
-                            className="h-6 w-6 rounded-full bg-honey-400 ring-2 ring-honey-500"
-                            alt={`Avatar for ${getAuthors(post)[0]?.name}`}
-                          />
-                          <figcaption className="text-xs font-medium text-night-800 dark:text-night-200">
-                            <span>{getAuthors(post)[0]?.name}</span>
-                          </figcaption>
-                        </>
-                      ) : (
-                        <div className="flex -space-x-2">
-                          {authors.map((author) => (
-                            <img
-                              key={author?.name}
-                              src={toWebp(author?.image?.url || "")}
-                              className="inline-block h-6 w-6 rounded-full bg-honey-400 ring-2 ring-honey-500"
-                              alt={`Avatar for ${author?.name}`}
-                            />
-                          ))}
-                        </div>
-                      )}
-                    </figure>
-                    <span className="text-xs font-medium text-night-600 [grid-area:date]">
-                      <span>{post?.date}</span>
-                    </span>
-                  </div>
-                </MotionLink>
-              );
-            })}
-          </AnimatePresence>
         </div>
       </div>
     </main>

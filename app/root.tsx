@@ -36,6 +36,7 @@ import {
   useTheme,
 } from "./utils/theme-provider";
 import { getThemeSession } from "./utils/theme.server";
+import { AppContextProvider } from "./context/App";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -194,10 +195,12 @@ function App() {
         <ThemeHead ssrTheme={Boolean(data.theme)} />
       </head>
       <body
-        className="h-full bg-honey-25 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
+        className="h-full bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
         id="top"
       >
-        <Outlet />
+        <AppContextProvider>
+          <Outlet />
+        </AppContextProvider>
         <ThemeBody ssrTheme={Boolean(data.theme)} />
         <Scripts />
         <ScrollRestoration />

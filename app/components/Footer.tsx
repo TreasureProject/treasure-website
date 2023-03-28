@@ -5,12 +5,12 @@ import {
 } from "@heroicons/react/24/solid";
 import { Link } from "@remix-run/react";
 import { socials, navigation, languages } from "~/const";
-import { MagicIcon } from "./Icons";
-import LogoImg from "../../public/img/logo.png";
 import { useTranslation } from "react-i18next";
-import { useAppContext } from "~/context/App";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import TreasureLogo from "@/img/TreasureLogo.svg";
+import TreasureText from "@/img/TreasureText.svg";
+import { MagicButton } from "./MagicButton";
 
 const currentYear = new Date().getFullYear();
 
@@ -39,26 +39,32 @@ export const Footer = () => {
     keyPrefix: "common",
   });
 
-  const { openModal } = useAppContext();
-
   return (
-    <footer className="bg-honey-25" aria-labelledby="footer-heading">
+    <footer
+      className="bg-honey-25 dark:bg-night-900"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="mx-auto max-w-9xl px-4 pt-12 sm:px-6 lg:px-12 lg:pt-16">
         <div className="xl:grid xl:grid-cols-[1fr,1fr,1fr,1fr,1fr,max-content] xl:gap-8">
           <div className="flex flex-col items-center justify-center sm:block xl:col-span-1">
-            <Link to="/">
+            <Link to="/" className="flex max-w-none items-center space-x-2">
               <span className="sr-only">Treasure</span>
-              <img className="h-10" src={LogoImg} alt="Treasure" />
+              <img src={TreasureLogo} alt="Compass Logo" />
+              <img
+                src={TreasureText}
+                alt="Compass Text Logo"
+                className="invert dark:invert-0"
+              />
             </Link>
             <Menu as="div" className="relative mt-4 inline-block text-left">
               <div>
-                <Menu.Button className="inline-flex w-full justify-center rounded-md border border-honey-400/50 bg-honey-900 bg-opacity-20 px-4 py-2 text-sm font-medium text-white transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:bg-opacity-30">
-                  <LanguageIcon className="h-5 w-5 text-night-800 hover:text-night-900" />
+                <Menu.Button className="inline-flex w-full justify-center rounded-md border border-honey-400/50 bg-honey-900 bg-opacity-20 px-4 py-2 text-sm font-medium text-night-800 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:bg-opacity-30 hover:text-night-900 dark:border-night-600 dark:bg-night-900 dark:text-white dark:text-night-200">
+                  <LanguageIcon className="h-5 w-5" />
                   <ChevronDownIcon
-                    className="ml-2 -mr-1 h-5 w-5 text-night-800 hover:text-night-900"
+                    className="ml-2 -mr-1 h-5 w-5"
                     aria-hidden="true"
                   />
                 </Menu.Button>
@@ -106,7 +112,9 @@ export const Footer = () => {
                     key={name}
                     className="space-y-5 text-center sm:text-left"
                   >
-                    <h3 className="font-bold text-ruby-900">{t(name)}</h3>
+                    <h3 className="font-bold text-ruby-900 dark:text-[#FFFDF7]">
+                      {t(name)}
+                    </h3>
                     <ul className="space-y-3">
                       {links.map(({ name, isExternal, href }) => (
                         <li
@@ -118,20 +126,20 @@ export const Footer = () => {
                               href={href}
                               rel="noopener noreferrer"
                               target="_blank"
-                              className="text-night-800 hover:text-night-900"
+                              className="text-night-800 hover:text-night-900 dark:text-[#888C93]"
                             >
                               {t(name)}
                             </a>
                           ) : (
                             <Link
                               to={href}
-                              className="text-night-800 hover:text-night-900"
+                              className="text-night-800 hover:text-night-900 dark:text-[#888C93]"
                             >
                               {t(name)}
                             </Link>
                           )}
                           {isExternal ? (
-                            <ArrowTopRightOnSquareIcon className="inline-block h-3 w-3 fill-ruby-900 [&>path]:stroke-ruby-900 [&>path]:stroke-[1]" />
+                            <ArrowTopRightOnSquareIcon className="inline-block h-3 w-3 fill-ruby-900 dark:fill-[#FFFDF7] [&>path]:stroke-ruby-900 [&>path]:stroke-[1] dark:[&>path]:stroke-[#FFFDF7]" />
                           ) : null}
                         </li>
                       ))}
@@ -171,26 +179,13 @@ export const Footer = () => {
               );
             })}
           </div>
-          <div className="mt-8 flex flex-col items-end space-y-3.5 text-right sm:mt-12 sm:flex-row sm:space-y-0 sm:space-x-3.5 xl:col-span-1 xl:mt-0 xl:flex-col xl:space-y-3.5 xl:space-x-0">
-            <Link
-              to="/build"
-              className="inline-flex w-full items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000 sm:w-auto"
-            >
-              Build with Treasure
-            </Link>
-            <button
-              onClick={openModal}
-              className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border-2 border-ruby-900 bg-honey-50 py-3.25 px-6.5 text-base font-medium text-ruby-900 hover:bg-honey-200 sm:w-auto"
-            >
-              <span className="font-bold">Buy</span>
-              <MagicIcon className="fill-ruby-900" />
-            </button>
-
-            <div className="mx-auto flex space-x-6 py-3 sm:mx-0 sm:pl-5 xl:pl-0">
+          <div className="mt-8 flex flex-col items-end space-y-3.5 text-right sm:mt-12 sm:flex-row sm:space-y-0 sm:space-x-3.5 xl:col-span-1 xl:mt-0 xl:flex-col xl:space-y-8 xl:space-x-0">
+            <MagicButton />
+            <div className="z-10 mx-auto flex space-x-6 py-3 sm:mx-0 sm:pl-5 xl:pl-0">
               {socials.map((social) => (
                 <a
                   key={social.name}
-                  className="text-night-800 hover:text-night-900"
+                  className="text-night-800 hover:text-night-900 dark:text-[#FFFDF7] dark:hover:text-[#FFFDF7]/50"
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -202,20 +197,20 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 sm:flex-row">
-          <p className="mt-12 text-sm text-night-700 sm:mt-0">
+        <div className="mt-12 flex flex-col-reverse items-center justify-between border-t border-honey-300 py-8 dark:border-[#1D232F] sm:flex-row">
+          <p className="mt-12 text-sm text-night-700 dark:text-[#888C93] sm:mt-0">
             &copy; 2021-{currentYear} Treasure. All Rights Reserved.
           </p>
           <div className="flex items-center space-x-4 lg:space-x-6">
             <Link
-              className="text-sm text-night-700 hover:text-night-900"
+              className="text-sm text-night-700 hover:text-night-900 dark:text-[#888C93] dark:hover:text-night-600"
               to="/terms-of-service"
             >
               Terms of Service
             </Link>
 
             <Link
-              className="text-sm text-night-700 hover:text-night-900"
+              className="text-sm text-night-700 hover:text-night-900 dark:text-[#888C93] dark:hover:text-night-600"
               to="/privacy-policy"
             >
               Privacy Policy

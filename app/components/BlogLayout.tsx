@@ -30,6 +30,7 @@ import type { SerializeFrom } from "@remix-run/server-runtime";
 
 import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { socials } from "~/const";
+import { Footer } from "./Footer";
 
 const Card = ({
   title,
@@ -137,7 +138,7 @@ export const BlogLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="flex min-h-full flex-col">
-      <header className="dark:bg-night-900 dark:shadow-lg">
+      <header className="bg-honey-25 dark:bg-night-900 dark:shadow-lg">
         <div className="container flex h-24">
           <Link
             to={`/blog?${searchParams.toString()}`}
@@ -192,73 +193,7 @@ export const BlogLayout = ({ children }: { children: React.ReactNode }) => {
         {preview ? <Preview /> : null}
         {children}
       </div>
-      <footer className="container mt-8 lg:mt-20">
-        <div className="flex grid-cols-5 flex-col gap-6 xl:grid">
-          <div className="relative flex flex-col items-stretch justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-6 dark:border-night-800 sm:p-10 xl:col-span-3">
-            <div className="space-y-2.5">
-              <p className="text-2xl font-bold text-honey-100 lg:text-3xl 2xl:text-4xl">
-                Build with Treasure
-              </p>
-              <p className="text-sm text-night-100 sm:text-base lg:text-lg">
-                Apply to become an official Treasure Game Partner to supercharge
-                your game.
-              </p>
-            </div>
-            <div className="mt-8 flex">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform"
-                rel="noopener noreferrer"
-                className="rounded-md bg-ruby-900 py-4 px-5 text-sm font-bold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ruby-600 hover:bg-ruby-1000 sm:py-4 sm:px-7 sm:text-base"
-              >
-                Start building
-              </a>
-            </div>
-          </div>
-          <div className="flex xl:col-span-2">
-            <Card
-              title="Join the Community"
-              description="Become a member of Treasure's vibrant community!"
-              image={JoinCommunityImg}
-            >
-              <div className="flex space-x-6">
-                {socials.map((social) => (
-                  <a
-                    key={social.name}
-                    className="text-night-800 hover:text-night-900 dark:text-honey-100 dark:hover:text-honey-300"
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="sr-only">{social.name}</span>
-                    <social.icon
-                      className="h-6 w-6 sm:h-8 sm:w-8"
-                      aria-hidden="true"
-                    />
-                  </a>
-                ))}
-              </div>
-            </Card>
-          </div>
-        </div>
-        <div className="flex h-24">
-          <Link
-            to={`/blog?${searchParams.toString()}`}
-            className="flex max-w-none items-center space-x-2"
-          >
-            <img src={CompassLogo} alt="Compass Logo" />
-            <img
-              src={CompassText}
-              alt="Compass Text Logo"
-              className="hidden dark:invert sm:inline-block"
-            />
-          </Link>
-          <div className="flex flex-1 items-center justify-end">
-            <p className="text-xs text-night-700 dark:text-night-400 sm:text-sm">
-              &copy; 2021-{currentYear} Treasure. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       <CommandMenu open={open} setOpen={setOpen} />
     </div>
   );

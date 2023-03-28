@@ -249,7 +249,7 @@ export default function BlogPost() {
   const resizedCoverImg = toWebp(post.coverImage?.url || "");
 
   return (
-    <main className="container mt-2 lg:mt-12 lg:grid lg:grid-cols-8 lg:gap-10">
+    <main className="container py-8 lg:grid lg:grid-cols-8 lg:gap-10 lg:py-12">
       <div className="col-span-6">
         <figure className="flex items-center gap-2">
           {authors.length === 1 ? (
@@ -348,7 +348,7 @@ export default function BlogPost() {
                   <p className="text-lg font-semibold text-night-900 dark:text-honey-50 sm:text-xl">
                     Explore more
                   </p>
-                  <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+                  <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
                     {additionalPosts.map((post) => (
                       <Link
                         reloadDocument
