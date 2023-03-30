@@ -42,7 +42,9 @@ export default function Index() {
 
   const search = (category: string) => {
     const searchParams = new URLSearchParams();
-    searchParams.set("preview", preview || "");
+    if (preview) {
+      searchParams.set("preview", preview);
+    }
     searchParams.set("category", category);
     return `/blog/?${searchParams.toString()}`;
   };
