@@ -27,9 +27,9 @@ const ITEMS_FRAGMENT = gql`
 
 export const getAllBlogPosts = gql`
   ${ITEMS_FRAGMENT}
-  query getAllBlogPosts($preview: Boolean!) {
+  query getAllBlogPosts($preview: Boolean!, $category: [String]) {
     blogPostCollection(
-      where: { hidden: false }
+      where: { hidden: false, category_contains_all: $category }
       order: date_DESC
       preview: $preview
     ) {

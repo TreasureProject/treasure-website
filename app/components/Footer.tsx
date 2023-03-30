@@ -3,7 +3,7 @@ import {
   ChevronDownIcon,
   LanguageIcon,
 } from "@heroicons/react/24/solid";
-import { Link } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import { socials, navigation, languages } from "~/const";
 import { useTranslation } from "react-i18next";
 import { Menu, Transition } from "@headlessui/react";
@@ -38,6 +38,8 @@ export const Footer = () => {
   const { t } = useTranslation("index", {
     keyPrefix: "common",
   });
+
+  const location = useLocation();
 
   return (
     <footer
@@ -90,7 +92,7 @@ export const Footer = () => {
                                   ? "bg-honey-200/30 text-night-900"
                                   : "text-night-900"
                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                              to={`/?lng=${lang}`}
+                              to={`${location.pathname}/?lng=${lang}`}
                             >
                               {languages[lang]}
                             </Link>

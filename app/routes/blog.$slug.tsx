@@ -296,7 +296,7 @@ export default function BlogPost() {
             </dl>
           </div>
         </dl>
-        <h1 className="mt-4 overflow-hidden text-xl font-extrabold text-night-900 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-2xl lg:text-4xl">
+        <h1 className="mt-4 overflow-hidden text-xl font-bold text-night-900 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-2xl lg:text-4xl">
           <Balancer>{post.title}</Balancer>
         </h1>
         <div className="mt-6 gap-2">

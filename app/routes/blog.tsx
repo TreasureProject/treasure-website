@@ -7,6 +7,7 @@ import { json } from "@remix-run/node";
 import { Links, Meta, Outlet, useCatch } from "@remix-run/react";
 
 import { BlogLayout } from "~/components/BlogLayout";
+import { getAllCategories } from "~/utils/client.server";
 
 import { formatDate } from "~/utils/lib";
 import { cacheHeader } from "pretty-cache-header";
@@ -47,12 +48,17 @@ export const meta: MetaFunction = (args) => {
 export const loader = async ({ request }: LoaderArgs) => {
   const requestUrl = new URL(request.url);
 
+  const category = requestUrl?.searchParams?.get("category");
+
   const preview =
     requestUrl?.searchParams?.get("preview") === process.env.PREVIEW_SECRET;
 
   const data = await contenfulDeliverySdk(preview).getAllBlogPosts({
     preview,
+    category,
   });
+
+  const allCategories = await getAllCategories();
 
   const posts = data.blogPostCollection?.items ?? [];
 
@@ -72,6 +78,7 @@ export const loader = async ({ request }: LoaderArgs) => {
   return json(
     {
       preview,
+      allCategories,
       posts: posts.map((post) => ({
         ...post,
         date: formatDate(post?.date),
