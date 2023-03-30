@@ -31,6 +31,7 @@ import type { SerializeFrom } from "@remix-run/server-runtime";
 import JoinCommunityImg from "@/img/illustrations/join-community.webp";
 import { socials } from "~/const";
 import { Footer } from "./Footer";
+import { createUrl } from "~/utils/lib";
 
 const Card = ({
   title,
@@ -102,7 +103,10 @@ const CommandMenu = ({
                 if (!targetPost) return;
 
                 navigate(
-                  `/blog/${targetPost.slug}/?${searchParams.toString()}`
+                  createUrl(
+                    `/blog/${targetPost.slug}`,
+                    searchParams.get("preview")
+                  )
                 );
 
                 setOpen(false);
@@ -141,7 +145,7 @@ export const BlogLayout = ({ children }: { children: React.ReactNode }) => {
       <header className="bg-honey-25 dark:bg-night-900 dark:shadow-lg">
         <div className="container flex h-24">
           <Link
-            to={`/blog?${searchParams.toString()}`}
+            to={createUrl("/blog", searchParams.get("preview"))}
             className="flex max-w-none items-center space-x-2"
           >
             <img src={CompassLogo} alt="Compass Logo" />

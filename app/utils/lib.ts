@@ -57,3 +57,13 @@ export const getSrcSet = (url: string) => {
 
   return srcSet;
 };
+
+export const createUrl = (url: string, preview: string | null) => {
+  const searchParams = new URLSearchParams();
+
+  if (preview) {
+    searchParams.set("preview", preview);
+  }
+
+  return `${url}?${searchParams.toString()}`;
+};

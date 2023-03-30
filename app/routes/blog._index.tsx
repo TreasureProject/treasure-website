@@ -7,7 +7,7 @@ import {
   useSearchParams,
 } from "@remix-run/react";
 
-import { cn, getAuthors, toWebp } from "~/utils/lib";
+import { cn, createUrl, getAuthors, toWebp } from "~/utils/lib";
 import type { loader as blogLoader } from "./blog";
 import { motion } from "framer-motion";
 
@@ -53,7 +53,7 @@ export default function Index() {
     <main className="container py-8 xl:py-16">
       {/* latest blog post */}
       <Link
-        to={`/blog/${latestPost?.slug}?${searchParams.toString()}`}
+        to={createUrl(`/blog/${latestPost?.slug}`, preview)}
         className="latestPost relative gap-4 py-8 xl:h-80"
         prefetch="render"
       >
@@ -125,6 +125,7 @@ export default function Index() {
                 <li className="relative">
                   <Link
                     to={search("all")}
+                    preventScrollReset
                     className={cn(
                       "relative z-10 inline-flex w-full px-3.5 py-2.5 text-xs font-semibold text-night-700 transition-colors hover:text-night-800 dark:text-night-400 dark:hover:text-night-300 sm:text-base",
                       {
@@ -146,6 +147,7 @@ export default function Index() {
                   return (
                     <li key={category} className="relative">
                       <Link
+                        preventScrollReset
                         to={search(category)}
                         className={cn(
                           "relative z-10 inline-flex w-full px-3.5 py-2.5 text-xs font-semibold text-night-700 transition-colors hover:text-night-800 dark:text-night-400 dark:hover:text-night-300 sm:text-base",
@@ -175,8 +177,7 @@ export default function Index() {
               return (
                 <Link
                   prefetch="intent"
-                  preventScrollReset
-                  to={`/blog/${post?.slug}?${searchParams.toString()}`}
+                  to={createUrl(`/blog/${post?.slug}`, preview)}
                   key={post?.slug}
                   className="post relative gap-2 sm:gap-4"
                 >

@@ -20,6 +20,7 @@ import { parseDocument } from "~/utils/parse.server";
 import React, { Suspense } from "react";
 import {
   cn,
+  createUrl,
   decimalToTime,
   formatDate,
   getAuthors,
@@ -353,7 +354,10 @@ export default function BlogPost() {
                       <Link
                         reloadDocument
                         prefetch="intent"
-                        to={`/blog/${post?.slug}?${searchParams.toString()}`}
+                        to={createUrl(
+                          `/blog/${post?.slug}`,
+                          searchParams.get("preview")
+                        )}
                         key={post?.slug}
                         className="post relative gap-2 sm:gap-4"
                       >
@@ -431,9 +435,10 @@ export default function BlogPost() {
                   )}
                 >
                   <Link
-                    to={`/blog/${params.slug}?${searchParams.toString()}#${
-                      item.id
-                    }`}
+                    to={`${createUrl(
+                      `/blog/${params.slug}`,
+                      searchParams.get("preview")
+                    )}#${item.id}`}
                   >
                     {item.name}
                   </Link>
