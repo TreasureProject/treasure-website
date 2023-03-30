@@ -28,8 +28,6 @@ export default function Index() {
     "routes/blog"
   ) as SerializeFrom<typeof blogLoader>;
 
-  console.log(allCategories);
-
   const [searchParams] = useSearchParams();
 
   const activeCategory = searchParams.get("category");
@@ -39,6 +37,15 @@ export default function Index() {
   const authors = getAuthors(latestPost);
 
   const coverPhoto = toWebp(latestPost?.coverImage?.url || "");
+
+  const preview = searchParams.get("preview");
+
+  const search = (category: string) => {
+    const searchParams = new URLSearchParams();
+    searchParams.set("preview", preview || "");
+    searchParams.set("category", category);
+    return `/blog/?${searchParams.toString()}`;
+  };
 
   return (
     <main className="container py-8 xl:py-16">
@@ -115,28 +122,29 @@ export default function Index() {
               <ul className="mt-6 flex flex-col space-y-2">
                 <li className="relative">
                   <Link
-                    to="/blog"
+                    to={search("all")}
                     className={cn(
                       "relative z-10 inline-flex w-full px-3.5 py-2.5 text-xs font-semibold text-night-700 transition-colors hover:text-night-800 dark:text-night-400 dark:hover:text-night-300 sm:text-base",
                       {
-                        "text-night-900 dark:text-night-200": !activeCategory,
+                        "text-night-900 dark:text-night-200":
+                          !activeCategory || activeCategory === "all",
                       }
                     )}
                   >
                     <span className="capitalize">All</span>
                   </Link>
-                  {!activeCategory && (
+                  {!activeCategory || activeCategory === "all" ? (
                     <motion.div
                       layoutId="activeCategory"
                       className="absolute inset-0 rounded-lg bg-honey-200 px-3.5 py-2.5 outline outline-1 outline-honey-200/20 dark:bg-night-800/30 dark:outline-night-800/20"
                     />
-                  )}
+                  ) : null}
                 </li>
                 {allCategories?.map((category) => {
                   return (
                     <li key={category} className="relative">
                       <Link
-                        to={`/blog?category=${category}`}
+                        to={search(category)}
                         className={cn(
                           "relative z-10 inline-flex w-full px-3.5 py-2.5 text-xs font-semibold text-night-700 transition-colors hover:text-night-800 dark:text-night-400 dark:hover:text-night-300 sm:text-base",
                           {

@@ -55,7 +55,7 @@ export const loader = async ({ request }: LoaderArgs) => {
 
   const data = await contenfulDeliverySdk(preview).getAllBlogPosts({
     preview,
-    category,
+    ...(category === "all" ? {} : { category }),
   });
 
   const allCategories = await getAllCategories();
