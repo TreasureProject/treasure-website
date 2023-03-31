@@ -55,17 +55,15 @@ export default function Index() {
       {/* latest blog post */}
       <Link
         to={createUrl(`/blog/${latestPost?.slug}`, preview)}
-        className="latestPost relative gap-4 py-8 xl:h-80"
+        className="latestPost relative gap-4 py-8"
         prefetch="render"
       >
-        <figure className="relative inset-x-0 [grid-area:image] lg:absolute lg:-inset-y-8">
-          <div className="relative top-0 left-0 z-10 h-full w-full lg:absolute">
-            <img
-              src={coverPhoto}
-              className="h-full w-full rounded-xl object-cover"
-              alt={latestPost?.title || "Latest blog post"}
-            />
-          </div>
+        <figure className="relative [grid-area:image]">
+          <img
+            src={coverPhoto}
+            className="h-full w-full rounded-xl object-cover"
+            alt={latestPost?.title || "Latest blog post"}
+          />
           <div className="absolute inset-0 z-10 rounded-xl ring-1 ring-inset ring-transparent dark:ring-night-500/10"></div>
           <img
             src={coverPhoto}
