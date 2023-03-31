@@ -114,6 +114,7 @@ export interface Validation {
   enabledNodeTypes?: string[];
   nodes?: object;
   linkMimetypeGroup?: string[];
+  in?: string[];
 }
 
 export interface DefaultValue {
@@ -169,6 +170,5 @@ export const getAllCategories = async () => {
     }
   );
 
-  return res.fields.find((field) => field.id === "category")?.items
-    ?.validations[0].in;
+  return res.fields.find((field) => field.id === "category")?.validations[0].in;
 };

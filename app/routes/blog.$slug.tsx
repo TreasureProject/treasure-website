@@ -33,6 +33,7 @@ import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
 import type { RootLoaderData } from "~/root";
 import highlightStyles from "highlight.js/styles/agate.css";
 import { motion } from "framer-motion";
+import { BlogBadge } from "~/components/Badge";
 
 function remToPx(remValue: number) {
   const rootFontSize =
@@ -100,7 +101,7 @@ export const loader = async ({ request, params }: LoaderArgs) => {
 
   const additionalBlogPosts = contenfulDeliverySdk(preview).additionalBlogPosts(
     {
-      categories: post.category as string[],
+      category: post.category as string,
       preview,
       currentSlug: post.slug as string,
     }
@@ -282,7 +283,7 @@ export default function BlogPost() {
           <div>
             <dt className="sr-only">Publish Date</dt>
             <dl className="text-sm font-medium">
-              <span>{post.date}</span>
+              <span>{formatDate(post.date)}</span>
             </dl>
           </div>
           <div aria-hidden="true" className="mx-2">
@@ -370,10 +371,16 @@ export default function BlogPost() {
                           />
                           <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-night-900/10 dark:ring-night-500/10"></div>
                         </figure>
-                        <h3 className="overflow-hidden text-base font-semibold leading-6 text-night-900 [grid-area:title] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-lg">
+                        <div className="flex items-center justify-between px-2 [grid-area:info]">
+                          <BlogBadge name={post?.category} />
+                          <span className="font-mono text-sm font-medium text-night-600 dark:text-night-500">
+                            <span>{formatDate(post?.date)}</span>
+                          </span>
+                        </div>
+                        <h3 className="overflow-hidden px-2 text-base font-semibold leading-6 text-night-900 [grid-area:title] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-lg">
                           {post?.title}
                         </h3>
-                        <div className="flex items-center space-x-3 [grid-area:author]">
+                        <div className="flex items-center space-x-3 px-2 [grid-area:author]">
                           <figure className="flex items-center gap-2">
                             {post?.authorCollection?.items.length === 1 ? (
                               <>
@@ -403,9 +410,6 @@ export default function BlogPost() {
                               </div>
                             )}
                           </figure>
-                          <span className="text-xs font-medium text-night-600 [grid-area:date]">
-                            <span>{formatDate(post?.date)}</span>
-                          </span>
                         </div>
                       </Link>
                     ))}

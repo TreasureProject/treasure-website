@@ -10,6 +10,7 @@ import {
 import { cn, createUrl, getAuthors, toWebp } from "~/utils/lib";
 import type { loader as blogLoader } from "./blog";
 import { motion } from "framer-motion";
+import { Badge, BlogBadge } from "~/components/Badge";
 
 export const headers: HeadersFunction = ({ parentHeaders }) => {
   const headers = new Headers();
@@ -57,7 +58,7 @@ export default function Index() {
         className="latestPost relative gap-4 py-8 xl:h-80"
         prefetch="render"
       >
-        <figure className="relative -inset-y-8 inset-x-0 [grid-area:image] lg:absolute">
+        <figure className="relative inset-x-0 [grid-area:image] lg:absolute lg:-inset-y-8">
           <div className="relative top-0 left-0 z-10 h-full w-full lg:absolute">
             <img
               src={coverPhoto}
@@ -73,6 +74,13 @@ export default function Index() {
             alt="backdrop"
           />
         </figure>
+
+        <div className="flex items-center space-x-2 [grid-area:info] lg:pl-8">
+          <BlogBadge name={latestPost?.category} />
+          <span className="font-mono text-sm font-medium text-night-600 dark:text-night-500">
+            <span>{latestPost?.date}</span>
+          </span>
+        </div>
 
         <h2 className="relative text-lg font-bold text-night-900 [grid-area:title] dark:text-honey-200 lg:pl-8 lg:text-2xl xl:text-3xl">
           {latestPost?.title}
@@ -106,9 +114,6 @@ export default function Index() {
               </div>
             )}
           </figure>
-          <span className="text-xs font-medium text-night-600 [grid-area:date] dark:text-night-500">
-            <span>{latestPost?.date}</span>
-          </span>
         </div>
         <p className="relative text-sm font-semibold text-ruby-900 [grid-area:readMore] lg:pl-8">
           Read more →
@@ -171,7 +176,7 @@ export default function Index() {
               </ul>
             </div>
           </aside>
-          <div className="col-span-4 mt-6 grid grid-cols-1 gap-8 sm:gap-6 lg:grid-cols-2">
+          <div className="col-span-4 mt-6 grid grid-cols-1 gap-8 sm:gap-x-8 sm:gap-y-12 lg:grid-cols-2">
             {posts.map((post) => {
               const authors = post?.authorCollection?.items || [];
               return (
@@ -179,7 +184,7 @@ export default function Index() {
                   prefetch="intent"
                   to={createUrl(`/blog/${post?.slug}`, preview)}
                   key={post?.slug}
-                  className="post relative gap-2 sm:gap-4"
+                  className="post relative gap-3"
                 >
                   <figure className="relative h-64 [grid-area:image]">
                     <img
@@ -189,10 +194,16 @@ export default function Index() {
                     />
                     <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-transparent dark:ring-night-500/10"></div>
                   </figure>
-                  <h3 className="overflow-hidden text-base font-semibold leading-6 text-night-900 [grid-area:title] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-lg">
+                  <div className="flex items-center justify-between px-2 [grid-area:info]">
+                    <BlogBadge name={post?.category} />
+                    <span className="font-mono text-sm font-medium text-night-600 dark:text-night-500">
+                      <span>{post?.date}</span>
+                    </span>
+                  </div>
+                  <h3 className="overflow-hidden px-2 text-base font-semibold leading-6 text-night-900 [grid-area:title] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] dark:text-honey-200 sm:text-lg">
                     {post?.title}
                   </h3>
-                  <div className="flex items-center space-x-3 [grid-area:author]">
+                  <div className="flex items-center space-x-3 px-2 [grid-area:author]">
                     <figure className="flex items-center gap-2">
                       {post?.authorCollection?.items.length === 1 ? (
                         <>
@@ -218,9 +229,6 @@ export default function Index() {
                         </div>
                       )}
                     </figure>
-                    <span className="text-xs font-medium text-night-600 [grid-area:date]">
-                      <span>{post?.date}</span>
-                    </span>
                   </div>
                 </Link>
               );
