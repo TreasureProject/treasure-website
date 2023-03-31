@@ -91,9 +91,17 @@ export const getBlogPost = gql`
 
 export const additionalBlogPosts = gql`
   ${ITEMS_FRAGMENT}
-  query additionalBlogPosts($preview: Boolean!, $categories: [String!]!) {
+  query additionalBlogPosts(
+    $preview: Boolean!
+    $categories: [String!]!
+    $currentSlug: String!
+  ) {
     blogPostCollection(
-      where: { category_contains_some: $categories }
+      where: {
+        category_contains_some: $categories
+        slug_not: $currentSlug
+        hidden: false
+      }
       limit: 3
       preview: $preview
     ) {

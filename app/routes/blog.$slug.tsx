@@ -102,6 +102,7 @@ export const loader = async ({ request, params }: LoaderArgs) => {
     {
       categories: post.category as string[],
       preview,
+      currentSlug: post.slug as string,
     }
   );
 
