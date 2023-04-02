@@ -67,7 +67,7 @@ export default function Index() {
           <div className="absolute inset-0 z-10 rounded-xl ring-1 ring-inset ring-transparent dark:ring-night-500/10"></div>
           <img
             src={coverPhoto}
-            className="absolute -inset-y-4 inset-x-0 hidden h-[110%] w-full scale-125 opacity-20 blur-2xl brightness-150 dark:block"
+            className="absolute -inset-y-4 inset-x-0 hidden h-[110%] w-full scale-105 opacity-20 blur-3xl brightness-110 dark:block"
             aria-hidden="true"
             alt="backdrop"
           />
