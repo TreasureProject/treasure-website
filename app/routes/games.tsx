@@ -4,7 +4,12 @@ import type {
   MetaFunction,
 } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
-import { generateTitle, getSocialMetas, getUrl } from "~/utils/seo";
+import {
+  generateTitle,
+  genericImagePath,
+  getSocialMetas,
+  getUrl,
+} from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
 import { useState } from "react";
 import { sliderCartridges, coreCartridges } from "~/const";
@@ -19,6 +24,7 @@ import { Arrow } from "~/components/Arrow";
 import DefaultIconImg from "@/img/games/icons/default.webp";
 
 import { BuildWithTreasure } from "~/components/BuildWithTreasure";
+import { Layout } from "~/components/Layout";
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -27,17 +33,11 @@ export const meta: MetaFunction = ({ parentsData }) => {
     root: RootLoaderData;
   };
 
-  return {
-    ...getSocialMetas({
-      description:
-        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
-      keywords: "treasure, NFT, DeFi, games, community, imagination, magic",
-      title: generateTitle("/games"),
-      origin: requestInfo.origin,
-      url: getUrl(requestInfo),
-      imgPath: "/games",
-    }),
-  };
+  return getSocialMetas({
+    title: generateTitle("/games"),
+    url: getUrl(requestInfo),
+    image: genericImagePath(requestInfo.origin, "games"),
+  });
 };
 
 export const headers: HeadersFunction = commonHeaders;
@@ -53,81 +53,83 @@ const headerAnimation = {
 
 export default function Games() {
   return (
-    <main>
-      <section
-        id="games-slider"
-        aria-labelledby="games-slider"
-        className="relative bg-night-900 py-16 sm:py-24"
-      >
-        <div className="mx-auto hidden max-w-9xl px-4 sm:px-12 lg:block">
-          <PartnerSlideDesktop />
-        </div>
-        <div className="block lg:hidden">
-          <PartnerSlideMobile />
-        </div>
-      </section>
-      <section
-        id="powered-by-treasure-games-list"
-        aria-labelledby="powered-by-treasure-games-list"
-        className="relative bg-night-900 py-8 sm:py-16"
-      >
-        <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
-          <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
-            <div className="max-w-min space-y-5">
-              <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
-                Powered by Treasure
-              </p>
-              <p className="text-center text-xs text-night-500 sm:text-left sm:text-xl">
-                Games powered by Treasure through MAGIC, imagination, and
-                interoperability.
-              </p>
+    <Layout>
+      <main>
+        <section
+          id="games-slider"
+          aria-labelledby="games-slider"
+          className="relative bg-night-900 py-16 sm:py-24"
+        >
+          <div className="mx-auto hidden max-w-9xl px-4 sm:px-12 lg:block">
+            <PartnerSlideDesktop />
+          </div>
+          <div className="block lg:hidden">
+            <PartnerSlideMobile />
+          </div>
+        </section>
+        <section
+          id="powered-by-treasure-games-list"
+          aria-labelledby="powered-by-treasure-games-list"
+          className="relative bg-night-900 py-8 sm:py-16"
+        >
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
+            <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
+              <div className="max-w-min space-y-5">
+                <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
+                  Powered by Treasure
+                </p>
+                <p className="text-center text-xs text-night-500 sm:text-left sm:text-xl">
+                  Games powered by Treasure through MAGIC, imagination, and
+                  interoperability.
+                </p>
+              </div>
+              <div className="mt-4 flex flex-col items-center space-y-1 rounded-1.5xl border-2 border-night-800 px-5 py-3.5 sm:mt-0">
+                <p className="text-xs text-night-600 sm:text-sm">
+                  Integrated games
+                </p>
+                <span className="text-base font-bold text-honey-300 sm:text-xl">
+                  +10
+                </span>
+              </div>
             </div>
-            <div className="mt-4 flex flex-col items-center space-y-1 rounded-1.5xl border-2 border-night-800 px-5 py-3.5 sm:mt-0">
-              <p className="text-xs text-night-600 sm:text-sm">
-                Integrated games
-              </p>
-              <span className="text-base font-bold text-honey-300 sm:text-xl">
-                +10
-              </span>
+            <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:gap-10 xl:grid-cols-5">
+              {coreCartridges.map((cartridge) => {
+                return (
+                  <a
+                    href={cartridge.websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
+                    key={cartridge.name}
+                  >
+                    <div
+                      className="relative z-10 [grid-area:overlay]"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
+                      }}
+                    ></div>
+                    <div className="relative aspect-auto [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
+                      <img
+                        src={cartridge.image}
+                        className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                        alt=""
+                      />
+                    </div>
+                    <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
+                      <p className="sm:text-md max-w-[70%] font-bold leading-5 text-honey-25 lg:text-xl lg:leading-6 xl:text-2xl">
+                        {cartridge.name}
+                      </p>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:gap-10 xl:grid-cols-5">
-            {coreCartridges.map((cartridge) => {
-              return (
-                <a
-                  href={cartridge.websiteLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
-                  key={cartridge.name}
-                >
-                  <div
-                    className="relative z-10 [grid-area:overlay]"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
-                    }}
-                  ></div>
-                  <div className="relative aspect-auto [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)]">
-                    <img
-                      src={cartridge.image}
-                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                      alt=""
-                    />
-                  </div>
-                  <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
-                    <p className="sm:text-md max-w-[70%] font-bold leading-5 text-honey-25 lg:text-xl lg:leading-6 xl:text-2xl">
-                      {cartridge.name}
-                    </p>
-                  </div>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      <BuildWithTreasure />
-    </main>
+        </section>
+        <BuildWithTreasure />
+      </main>
+    </Layout>
   );
 }
 

@@ -1,8 +1,9 @@
 import * as React from "react";
 import type {
   LinksFunction,
-  LoaderFunction,
+  LoaderArgs,
   MetaFunction,
+  SerializeFrom,
 } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import {
@@ -13,42 +14,29 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
-  useTransition,
   useFetchers,
   useCatch,
-  useMatches,
+  useNavigation,
 } from "@remix-run/react";
 
 import styles from "./styles/tailwind.css";
 
 import { getDomainUrl } from "./utils/misc.server";
-import { generateTitle, getSocialMetas, getUrl } from "./utils/seo";
+import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
 import NProgress from "nprogress";
 import nProgressStyles from "./styles/nProgress.css";
 import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
 import { Layout } from "./components/Layout";
 import { i18nCookie } from "./utils/cookie";
-
-// import {
-//   getMagicPrice,
-//   getTotalMarketplaceVolume,
-//   getUniqueAddressCount,
-//   getUtilization,
-// } from "./utils/stats";
-
-export type RootLoaderData = {
-  requestInfo: {
-    origin: string;
-    path: string;
-  };
-  ENV: Partial<typeof process.env>;
-  locale: string;
-  // magicPrice: Awaited<ReturnType<typeof getMagicPrice>>;
-  // totalLocked: Awaited<ReturnType<typeof getUtilization>>;
-  // totalMarketplaceVolume: Awaited<ReturnType<typeof getTotalMarketplaceVolume>>;
-  // uniqueAddresses: Awaited<ReturnType<typeof getUniqueAddressCount>>;
-};
+import {
+  ThemeBody,
+  ThemeHead,
+  ThemeProvider,
+  useTheme,
+} from "./utils/theme-provider";
+import { getThemeSession } from "./utils/theme.server";
+import { AppContextProvider } from "./context/App";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -115,7 +103,7 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = ({ data }) => {
-  const requestInfo = (data as RootLoaderData | undefined)?.requestInfo;
+  const { requestInfo } = data as RootLoaderData;
 
   return {
     charset: "utf-8",
@@ -123,14 +111,8 @@ export const meta: MetaFunction = ({ data }) => {
     "theme-color": "#ffffff",
     "msapplication-TileColor": "#ffc40d",
     ...getSocialMetas({
-      description:
-        "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
-      keywords:
-        "treasure, NFT, DeFi, games, gamefi, ethereum, community, imagination, magic",
-      title: generateTitle(),
-      origin: requestInfo?.origin ?? "",
       url: getUrl(requestInfo),
-      imgPath: "/home",
+      image: genericImagePath(requestInfo.origin, "home"),
     }),
   };
 };
@@ -142,38 +124,18 @@ function useChangeLanguage(locale: string) {
   }, [locale, i18n]);
 }
 
-export const loader: LoaderFunction = async ({ request }) => {
-  /* TODO: figure out why this wasn't workign in production. gave me an application error
-   saying "SyntaxError: Unexpected token e in JSON at position 0" and couldn't debug.
-   I resorted to doing a client-side fetch to get the data.
-  */
-
-  // const [magicPrice, totalLocked, uniqueAddresses, totalMarketplaceVolume] = await Promise.all([
-  // getMagicPrice(),
-  // getUtilization(),
-  // getUniqueAddressCount(),
-  // getTotalMarketplaceVolume(),
-  // ]);
-
+export const loader = async ({ request }: LoaderArgs) => {
+  const themeSession = await getThemeSession(request);
   const locale = await i18n.getLocale(request);
 
-  return json<RootLoaderData>(
+  return json(
     {
-      // magicPrice,
-      // totalLocked,
-      // uniqueAddresses,
-      // totalMarketplaceVolume,
       locale,
       requestInfo: {
         origin: getDomainUrl(request),
         path: new URL(request.url).pathname,
       },
-      ENV: {
-        PREVIEW_SECRET: process.env.PREVIEW_SECRET,
-        SANITY_PUBLIC_PROJECT_ID: process.env.SANITY_PUBLIC_PROJECT_ID,
-        SANITY_PUBLIC_DATASET: process.env.SANITY_PUBLIC_DATASET,
-        SANITY_PUBLIC_API_VERSION: process.env.SANITY_PUBLIC_API_VERSION,
-      },
+      theme: themeSession.getTheme(),
     },
     {
       headers: {
@@ -183,21 +145,21 @@ export const loader: LoaderFunction = async ({ request }) => {
   );
 };
 
+export type RootLoaderData = SerializeFrom<typeof loader>;
+
 export const handle = {
   i18n: ["index"],
 };
 
-export default function App() {
-  const { ENV, locale } = useLoaderData<RootLoaderData>();
+function App() {
+  const data = useLoaderData<RootLoaderData>();
 
   const { i18n } = useTranslation();
-  const matches = useMatches();
+  const [theme] = useTheme();
 
-  const transition = useTransition();
+  const transition = useNavigation();
 
   const fetchers = useFetchers();
-
-  const isAdminPage = matches[1].id.split("/").includes("studio");
 
   const state = React.useMemo<"idle" | "loading">(
     function getGlobalState() {
@@ -211,7 +173,7 @@ export default function App() {
     [transition.state, fetchers]
   );
 
-  useChangeLanguage(locale);
+  useChangeLanguage(data.locale);
 
   React.useEffect(() => {
     // and when it's something else it means it's either submitting a form or
@@ -221,48 +183,28 @@ export default function App() {
     if (state === "idle") NProgress.done();
   }, [state, transition.state]);
 
-  if (isAdminPage) {
-    return (
-      <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
-        <head>
-          <Meta />
-          <Links />
-        </head>
-        <body>
-          <Outlet />
-          <Scripts />
-          <ScrollRestoration />
-          <LiveReload />
-          {/* env available anywhere on your app */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.ENV = ${JSON.stringify(ENV)};`,
-            }}
-          />
-        </body>
-      </html>
-    );
-  }
-
   return (
-    <html lang={locale} dir={i18n.dir()} className="scroll-smooth">
+    <html
+      lang={data.locale}
+      dir={i18n.dir()}
+      className={`h-full ${theme ?? ""}`}
+    >
       <head>
         <Meta />
         <Links />
+        <ThemeHead ssrTheme={Boolean(data.theme)} />
       </head>
-      <body className="bg-honey-25 antialiased selection:bg-honey-900" id="top">
-        <Layout>
+      <body
+        className="h-full bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
+        id="top"
+      >
+        <AppContextProvider>
           <Outlet />
-        </Layout>
+        </AppContextProvider>
+        <ThemeBody ssrTheme={Boolean(data.theme)} />
         <Scripts />
         <ScrollRestoration />
         <LiveReload />
-        {/* env available anywhere on your app */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.ENV = ${JSON.stringify(ENV)};`,
-          }}
-        />
         <script
           src="https://efficient-bloc-party.treasure.lol/script.js"
           data-site="XBZCEUKN"
@@ -311,4 +253,14 @@ export function CatchBoundary() {
     );
   }
   throw new Error(`Unhandled error: ${caught.status}`);
+}
+
+export default function AppWithProviders() {
+  const data = useLoaderData<typeof loader>();
+
+  return (
+    <ThemeProvider specifiedTheme={data.theme}>
+      <App />
+    </ThemeProvider>
+  );
 }

@@ -2,6 +2,7 @@
 
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
+  darkMode: "class",
   presets: [require('@treasure-project/tailwind-config')],
   theme: {
     extend: {
@@ -90,7 +91,7 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/forms"), 
+    require("tailwindcss-animate"),
     require("@tailwindcss/line-clamp"), 
     require('@tailwindcss/typography'),
     require('tailwind-scrollbar')

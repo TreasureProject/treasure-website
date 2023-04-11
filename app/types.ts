@@ -1,1 +1,18 @@
+export type EnvVar =
+  | "CONTENTFUL_ENDPOINT"
+  | "CONTENTFUL_DELIVERY_TOKEN"
+  | "CONTENTFUL_DELIVERY_PREVIEW_TOKEN"
+  | "CONTENTFUL_MANAGEMENT_TOKEN"
+  | "CONTENTFUL_SPACE_ID"
+  | "SESSION_SECRET"
+  | "PREVIEW_SECRET"
+  | "CONTENFUL_WEBHOOK_NAME"
+  | "CLOUDFLARE_AUTH_KEY"
+  | "CLOUDFLARE_AUTH_EMAIL"
+  | "CLOUDFLARE_ZONE_ID";
+
+export type Env = {
+  [key in EnvVar]: string;
+};
+
 export type Optional<T> = T | undefined;

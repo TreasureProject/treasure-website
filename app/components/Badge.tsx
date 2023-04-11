@@ -1,5 +1,15 @@
 import classNames from "clsx";
 
+export const BlogBadge = ({ name }: { name?: string | null }) => {
+  return (
+    <div className="inline-block w-max rounded-lg bg-honey-200 px-2.5 py-1.5 dark:bg-[#101827]">
+      <p className="font-mono text-sm font-medium capitalize text-ruby-900 dark:text-[#888C93]">
+        {name}
+      </p>
+    </div>
+  );
+};
+
 export const Badge = ({
   name,
   bgColor,

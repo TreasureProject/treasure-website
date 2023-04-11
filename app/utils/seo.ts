@@ -1,17 +1,13 @@
 export function getSocialMetas({
   url,
-  title = "Treasure",
+  title = generateTitle(),
   description = "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
-  origin,
-  imgPath,
-  image = origin + "/img/meta" + imgPath + ".jpg",
-  keywords = "",
+  keywords = "treasure, NFT, DeFi, games, community, imagination, magic",
+  image,
 }: {
-  origin: string;
   image?: string;
   url: string;
   title?: string;
-  imgPath: string;
   description?: string;
   keywords?: string;
 }) {
@@ -33,6 +29,9 @@ export function getSocialMetas({
     "twitter:alt": title,
   };
 }
+
+export const genericImagePath = (origin: string, pathname: string) =>
+  `${origin}/img/meta/${pathname}.jpg`;
 
 function prettify(str: string) {
   return str.replace(/(-|^)([^-]?)/g, function (_, prep, letter) {
