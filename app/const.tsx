@@ -736,7 +736,7 @@ export const WhyTreasureCardList = [
     description:
       "Express your interest in becoming a partner cartridge with Treasure.",
     buttonDescription: "Learn more",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
   },
 ];
 
@@ -942,7 +942,7 @@ export const navigation = [
       },
       {
         name: "Apply for Partnership",
-        href: "https://docs.google.com/forms/d/e/1FAIpQLSe_4Luv3wXGli-mR3GB-eOyjEU47r61qsjfDvBKISEggafz4Q/viewform",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
         isExternal: true,
       },
     ],
