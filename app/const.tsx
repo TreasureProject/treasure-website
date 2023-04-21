@@ -847,7 +847,7 @@ export const infrastructures = [
     description:
       "MagicSwap powers the cross-game economy by supporting the trading of native tokens for games powererd by Treasure with each liquidity pool using MAGIC as the base pair.",
     buttonDescription: "Visit MagicSwap",
-    href: "https://magiscwap.treasure.lol",
+    href: "https://magicswap.treasure.lol",
   },
   {
     name: "Economy",
