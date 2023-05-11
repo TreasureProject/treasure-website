@@ -978,11 +978,11 @@ export const navigation = [
         href: "/team",
         isExternal: false,
       },
-      {
-        name: "Blog",
-        href: "/blog",
-        isExternal: false,
-      },
+      // {
+      //   name: "Blog",
+      //   href: "/blog",
+      //   isExternal: false,
+      // },
       {
         name: "Brand Assets",
         href: "/brand-assets",
