@@ -72,12 +72,12 @@ export default function Resources() {
                     </a>
                     ,{" "}
                     <a
-                      href="https://trove.treasure.lol"
+                      href="https://app.treasure.lol"
                       className="text-ruby-900 underline"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      trove.treasure.lol
+                      app.treasure.lol
                     </a>
                     , and any other website offered by us that links to this
                     privacy policy (collectively the{" "}

@@ -77,11 +77,11 @@ export default function Resources() {
                     </a>
                     ,{" "}
                     <a
-                      href="trove.treasure.lol"
+                      href="app.treasure.lol"
                       className="text-ruby-900 underline"
                       target="_blank"
                     >
-                      trove.treasure.lol
+                      app.treasure.lol
                     </a>
                     , and any other site owned or operated by Treasure that
                     links to these Terms (collectively the “Site”), and all
