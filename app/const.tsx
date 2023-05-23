@@ -245,7 +245,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/366404971354390533",
     twitterLink: "https://twitter.com/SimMay0r",
     image: JakeImg,
-    team: "Trove",
+    team: "Platform",
   },
   {
     name: "Antlion",
@@ -253,7 +253,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/397537602988670977",
     twitterLink: "https://twitter.com/0xAntlion",
     image: AntlionImg,
-    team: "Trove",
+    team: "Platform",
   },
   {
     name: "Frannyverse",
@@ -261,7 +261,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/766502243699523615",
     twitterLink: "https://twitter.com/fr4nnyverse",
     image: FrannyImg,
-    team: "Trove",
+    team: "Platform",
   },
   {
     name: "Insprac",
@@ -269,7 +269,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/209096852430258176",
     twitterLink: null,
     image: InspracImg,
-    team: "Trove",
+    team: "Platform",
   },
   {
     name: "Bahama",
@@ -412,8 +412,8 @@ export const teamCoFounders = teamMembers.filter(
 export const teamTreasure = teamMembers.filter(
   (member) => member.team === "Treasure"
 );
-export const teamTrove = teamMembers.filter(
-  (member) => member.team === "Trove"
+export const teamPlatform = teamMembers.filter(
+  (member) => member.team === "Platform"
 );
 export const teamBridgeworld = teamMembers.filter(
   (member) => member.team === "Bridgeworld"
@@ -435,7 +435,7 @@ export const magicPurchaseLinks = [
   },
   {
     name: "MoonPay",
-    url: "https://trove.treasure.lol/manage-funds",
+    url: "https://app.treasure.lol/manage-funds",
     icon: MoonPayImg,
   },
   {
@@ -758,7 +758,7 @@ export const builds = [
   {
     name: "Leverage powerful infrastructure",
     description:
-      "Enrich your game’s experience through Treasure’s Proof of Play framework, Trove, and MagicSwap.",
+      "Enrich your game’s experience through Treasure’s platform, Proof of Play framework, and MagicSwap.",
 
     image: InfrastructureCardImg,
   },
@@ -834,12 +834,12 @@ export const partners = [
 
 export const infrastructures = [
   {
-    name: "Marketplace",
+    name: "Platform",
     icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
     description:
-      "Trove is the destination for gaming on Treasure offering game discovery, a leading marketplace, and events.",
-    buttonDescription: "Visit Trove",
-    href: "https://trove.treasure.lol",
+      "Play, collect, trade, compete, and discover your new favorite games on Treasure.",
+    buttonDescription: "Visit Platform",
+    href: "https://app.treasure.lol",
   },
   {
     name: "AMM",
@@ -901,10 +901,11 @@ export const IndexCTA = [
     isExternal: false,
   },
   {
-    name: "Marketplace",
-    description: "Trove is the destination for gaming on Treasure.",
+    name: "Platform",
+    description:
+      "Play, collect, trade, compete, and discover games on Treasure.",
     icon: <TroveIcon className="h-7 w-7 text-ruby-900" aria-hidden="true" />,
-    href: "https://trove.treasure.lol",
+    href: "https://app.treasure.lol",
     isExternal: true,
   },
   {
@@ -960,8 +961,8 @@ export const navigation = [
     group: "Discover",
   },
   {
-    name: "Marketplace",
-    href: "https://trove.treasure.lol",
+    name: "Platform",
+    href: "https://app.treasure.lol",
     isExternal: true,
     group: "Discover",
   },
@@ -1026,7 +1027,7 @@ export const cartridges = [
   {
     name: "The Beacon",
     image: TheBeaconImg,
-    websiteLink: "https://trove.treasure.lol/games/the-beacon",
+    websiteLink: "https://app.treasure.lol/games/the-beacon",
     logo: TheBeaconLogoImg,
     sliderImage: TheBeaconSliderImg,
     iconImage: TheBeaconIconImg,
@@ -1038,7 +1039,7 @@ export const cartridges = [
   {
     name: "Kuroro",
     image: KuroroImg,
-    websiteLink: "https://www.kuroro.com/",
+    websiteLink: "https://app.treasure.lol/games/kuroro-beasts",
     logo: KuroroLogoImg,
     sliderImage: KuroroSliderImg,
     iconImage: KuroroIconImg,
@@ -1050,7 +1051,7 @@ export const cartridges = [
   {
     name: "Bitmates",
     image: BitmatesImg,
-    websiteLink: "https://trove.treasure.lol/games/bitmates",
+    websiteLink: "https://app.treasure.lol/games/bitmates",
     logo: BitmatesLogoImg,
     sliderImage: BitmatesSliderImg,
     iconImage: BitmatesIconImg,
@@ -1062,7 +1063,7 @@ export const cartridges = [
   {
     name: "Tales of Elleria",
     image: TalesOfElleriaImg,
-    websiteLink: "https://trove.treasure.lol/games/tales-of-elleria",
+    websiteLink: "https://app.treasure.lol/games/tales-of-elleria",
     logo: TOELogoImg,
     sliderImage: TOESliderImg,
     iconImage: TOEIconImg,
@@ -1074,7 +1075,7 @@ export const cartridges = [
   {
     name: "BattleFly",
     image: BattleFlyImg,
-    websiteLink: "https://trove.treasure.lol/games/battlefly",
+    websiteLink: "https://app.treasure.lol/games/battlefly",
     logo: BattleflyLogoImg,
     sliderImage: BattleflySliderImg,
     iconImage: BattleflyIconImg,
@@ -1085,7 +1086,7 @@ export const cartridges = [
   {
     name: "Smolverse",
     image: SmolverseImg,
-    websiteLink: "https://trove.treasure.lol/games/smolverse",
+    websiteLink: "https://app.treasure.lol/games/smolverse",
     logo: SmolverseLogoImg,
     sliderImage: SmolverseSliderImg,
     iconImage: SmolverseIconImg,
@@ -1097,7 +1098,7 @@ export const cartridges = [
   {
     name: "Bridgeworld",
     image: BridgeworldImg,
-    websiteLink: "https://trove.treasure.lol/games/bridgeworld",
+    websiteLink: "https://app.treasure.lol/games/bridgeworld",
     logo: BWTextImg,
     // used in /games slider, which has a video aspect ratio
     sliderImage: BridgeworldSliderImg,
@@ -1110,7 +1111,7 @@ export const cartridges = [
   {
     name: "Realm",
     image: RealmverseImg,
-    websiteLink: "https://trove.treasure.lol/games/realm",
+    websiteLink: "https://app.treasure.lol/games/realm",
     logo: RealmLogoImg,
     sliderImage: RealmSliderImg,
     iconImage: RealmIconImg,
@@ -1120,56 +1121,9 @@ export const cartridges = [
     featured: false,
   },
   {
-    name: "Lost SamuRise",
-    image: LostSamuriseImg,
-    websiteLink: "https://trove.treasure.lol/games/samurise",
-    logo: null,
-    sliderImage: null,
-    iconImage: null,
-    description:
-      "Lost SamuRise is a faction based strategy game played in the fictional world of Tengoku.",
-    core: true,
-    featured: false,
-  },
-  {
-    name: "Toadstoolz",
-    image: ToadstoolzImg,
-    websiteLink: "https://trove.treasure.lol/games/toadstoolz",
-    logo: null,
-    sliderImage: null,
-    iconImage: null,
-    description: "The Origin Legions of Bridgeworld with a fixed supply.",
-    core: true,
-    featured: false,
-  },
-  {
-    name: "The Lost Donkeys",
-    image: TheLostDonkeysImg,
-    websiteLink: "https://trove.treasure.lol/games/the-lost-donkeys",
-    logo: null,
-    sliderImage: null,
-    iconImage: null,
-    description:
-      "The Lost Donkeys is a game where barns will be built and donkeys will prevail.",
-    core: true,
-    featured: false,
-  },
-  {
-    name: "LifeVerse",
-    image: LifeVerseImg,
-    websiteLink: "https://trove.treasure.lol/games/life",
-    logo: null,
-    sliderImage: null,
-    iconImage: null,
-    description:
-      "LifeVerse is a fully decentralized game creating base character primitives to be used by other projects to connect worlds and create common lore and resources.",
-    core: true,
-    featured: false,
-  },
-  {
     name: "Knights of the Ether",
     image: KnightsOfTheEtherImg,
-    websiteLink: "https://trove.treasure.lol/games/kote",
+    websiteLink: "https://app.treasure.lol/games/kote",
     logo: KoteLogoImg,
     sliderImage: KOTESliderImg,
     iconImage: KOTEIconImg,
