@@ -80,7 +80,6 @@ import InfrastructureCardImg from "../public/img/illustrations/Card_Infrastructu
 import IconArbitrumImg from "../public/img/icons/Arbitrum.svg";
 import IconGrowthImg from "../public/img/icons/Growth.svg";
 import IconSushiImg from "../public/img/icons/Sushi.svg";
-import IconTroveImg from "../public/img/icons/Trove.svg";
 import IconGamesImg from "../public/img/icons/Games.svg";
 import IconCommunityImg from "../public/img/icons/Community.svg";
 
@@ -155,7 +154,7 @@ import {
   GlobalIcon,
   GuildsIcon,
   InteropIcon,
-  TroveIcon,
+  MagicLogoIcon,
   TwitterIcon,
   UsersIcon,
 } from "~/components/Icons";
@@ -835,7 +834,9 @@ export const partners = [
 export const infrastructures = [
   {
     name: "Platform",
-    icon: <TroveIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />,
+    icon: (
+      <MagicLogoIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />
+    ),
     description:
       "Play, collect, trade, compete, and discover your new favorite games on Treasure.",
     buttonDescription: "Visit Platform",
@@ -904,7 +905,9 @@ export const IndexCTA = [
     name: "Platform",
     description:
       "Play, collect, trade, compete, and discover games on Treasure.",
-    icon: <TroveIcon className="h-7 w-7 text-ruby-900" aria-hidden="true" />,
+    icon: (
+      <MagicLogoIcon className="h-7 w-7 text-ruby-900" aria-hidden="true" />
+    ),
     href: "https://app.treasure.lol",
     isExternal: true,
   },
