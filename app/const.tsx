@@ -81,6 +81,7 @@ import IconArbitrumImg from "../public/img/icons/Arbitrum.svg";
 import IconGrowthImg from "../public/img/icons/Growth.svg";
 import IconSushiImg from "../public/img/icons/Sushi.svg";
 import IconGamesImg from "../public/img/icons/Games.svg";
+import IconMagicImg from "../public/img/icons/Magic.svg";
 import IconCommunityImg from "../public/img/icons/Community.svg";
 
 // Team
@@ -1167,7 +1168,7 @@ export const stats = [
   {
     title: "Total marketplace volume",
     value: "$271M",
-    icon: IconTroveImg,
+    icon: IconMagicImg,
   },
   {
     title: "Games powered by Treasure",
