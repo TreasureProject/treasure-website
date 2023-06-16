@@ -6,7 +6,6 @@ import {
   teamCoFounders,
   teamTreasure,
   teamPlatform,
-  teamBridgeworld,
   teamSmolverse,
   teamGameStudio,
 } from "~/const";
@@ -150,16 +149,6 @@ export default function Team() {
             </p>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
               {teamPlatform.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Bridgeworld
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {teamBridgeworld.map((member) => (
                 <TeamCard key={member.name} member={member} />
               ))}
             </div>

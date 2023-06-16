@@ -277,7 +277,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/791828959360319498",
     twitterLink: "https://twitter.com/Mr_Bahama_",
     image: BahamaImg,
-    team: "Bridgeworld",
+    team: "Platform",
   },
   {
     name: "Mouse Dev",
@@ -285,7 +285,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/888112902266044436",
     twitterLink: "https://twitter.com/_MouseDev ",
     image: MdImg,
-    team: "Bridgeworld",
+    team: "Platform",
   },
   {
     name: "Rappzula",
@@ -293,7 +293,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/690989750127165581",
     twitterLink: "https://twitter.com/0xrappzula",
     image: RappzulaImg,
-    team: "Bridgeworld",
+    team: "Platform",
   },
   {
     name: "jcheese",
@@ -301,30 +301,22 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/353057125137645568",
     twitterLink: "https://twitter.com/jc_1917",
     image: JustCheeseImg,
-    team: "Bridgeworld",
+    team: "Platform",
   },
   {
     name: "Bas",
     title: "UI/UX",
     image: BasImg,
-    team: "Bridgeworld",
+    team: "Platform",
     twitterLink: "https://twitter.com/bas_vdg",
   },
   {
-    name: "ENT1T7",
+    name: "ENT",
     title: "UI/UX",
     discordLink: "https://discordapp.com/users/354679433853927445",
     twitterLink: "https://twitter.com/ENT1T7",
     image: Ent1T7Img,
-    team: "Bridgeworld",
-  },
-  {
-    name: "Tei Timoraegi",
-    title: "Creative",
-    discordLink: "https://discordapp.com/users/171948550828195840",
-    twitterLink: "https://twitter.com/Timoraegi",
-    image: TimoImg,
-    team: "Bridgeworld",
+    team: "Platform",
   },
   {
     name: "Vinny",
@@ -332,30 +324,14 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/938500876438487061",
     twitterLink: "https://twitter.com/VinnyDev1",
     image: VinnyImg,
-    team: "Bridgeworld",
+    team: "Platform",
   },
   {
     name: "Yen",
     title: "Art",
     twitterLink: "https://twitter.com/YenLeeArt",
     image: DefaultImg,
-    team: "Bridgeworld",
-  },
-  {
-    name: "Santi",
-    title: "Product",
-    discordLink: "https://discordapp.com/users/568107237629886506",
-    twitterLink: "https://twitter.com/SantidotSanti",
-    image: SantiImg,
-    team: "Smolverse",
-  },
-  {
-    name: "Maximee",
-    title: "Creative & Animation",
-    discordLink: "https://discordapp.com/users/324482717611982848",
-    twitterLink: "https://twitter.com/maximee_eth",
-    image: MaximeeImg,
-    team: "Smolverse",
+    team: "Platform",
   },
   {
     name: "Crisis",
@@ -363,6 +339,14 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/351558969568788482",
     twitterLink: "https://twitter.com/crisidot",
     image: CrisisImg,
+    team: "Smolverse",
+  },
+  {
+    name: "Maximee",
+    title: "Animation",
+    discordLink: "https://discordapp.com/users/324482717611982848",
+    twitterLink: "https://twitter.com/maximee_eth",
+    image: MaximeeImg,
     team: "Smolverse",
   },
   {
@@ -415,9 +399,6 @@ export const teamTreasure = teamMembers.filter(
 export const teamPlatform = teamMembers.filter(
   (member) => member.team === "Platform"
 );
-export const teamBridgeworld = teamMembers.filter(
-  (member) => member.team === "Bridgeworld"
-);
 export const teamSmolverse = teamMembers.filter(
   (member) => member.team === "Smolverse"
 );
@@ -430,7 +411,7 @@ export type MemberT = (typeof teamMembers)[number];
 export const magicPurchaseLinks = [
   {
     name: "Sushi",
-    url: "https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0x539bdE0d7Dbd336b79148AA742883198BBF60342&chainId=42161",
+    url: "https://www.sushi.com/swap?%24%7B=&fromChainId=42161&fromCurrency=NATIVE&toChainId=42161&toCurrency=0x539bdE0d7Dbd336b79148AA742883198BBF60342",
     icon: SushiSwapImg,
   },
   {
