@@ -3,6 +3,7 @@ import BWTextImg from "../public/img/games/logos/bridgeworld.webp";
 import BattleflyLogoImg from "../public/img/games/logos/Battlefly.svg";
 import KuroroLogoImg from "../public/img/games/logos/Kuroro.svg";
 import KoteLogoImg from "../public/img/games/logos/KOTE.webp";
+import KaijuCardsLogoImg from "../public/img/games/logos/KaijuCards.webp";
 import RealmLogoImg from "../public/img/games/logos/Realm.webp";
 import SmolverseLogoImg from "../public/img/games/logos/Smolverse.svg";
 import TheBeaconLogoImg from "../public/img/games/logos/The_Beacon.webp";
@@ -13,14 +14,11 @@ import BitmatesLogoImg from "../public/img/games/logos/Bitmates.webp";
 import BattleFlyImg from "@/img/games/cards/Battlefly.webp";
 import BridgeworldImg from "@/img/games/cards/Bridgeworld.webp";
 import KnightsOfTheEtherImg from "@/img/games/cards/Knights_of_the_Ether.webp";
-import LifeVerseImg from "@/img/games/cards/LifeVerse.webp";
-import LostSamuriseImg from "@/img/games/cards/Lost_Samurise.webp";
 import RealmverseImg from "@/img/games/cards/Realmverse.webp";
+import KaijuCardsImg from "@/img/games/cards/KaijuCards.webp";
 import KuroroImg from "@/img/games/cards/Kuroro.webp";
 import TalesOfElleriaImg from "@/img/games/cards/Tales_of_Elleria.webp";
 import TheBeaconImg from "@/img/games/cards/The_Beacon.webp";
-import TheLostDonkeysImg from "@/img/games/cards/The_Lost_Donkeys.webp";
-import ToadstoolzImg from "@/img/games/cards/Toadstoolz.webp";
 import SmolverseImg from "@/img/games/cards/Smolverse.webp";
 import BitmatesImg from "@/img/games/cards/Bitmates.webp";
 
@@ -29,6 +27,7 @@ import BattleflySliderImg from "@/img/games/slides/Battlefly.webp";
 import BridgeworldSliderImg from "@/img/games/slides/Bridgeworld.webp";
 import KOTESliderImg from "@/img/games/slides/KOTE.webp";
 import RealmSliderImg from "@/img/games/slides/Realm.webp";
+import KaijuCardsSliderImg from "@/img/games/slides/KaijuCards.webp";
 import KuroroSliderImg from "@/img/games/slides/Kuroro.webp";
 import SmolverseSliderImg from "@/img/games/slides/Smolverse.webp";
 import TheBeaconSliderImg from "@/img/games/slides/The_Beacon.webp";
@@ -40,6 +39,7 @@ import BattleflyIconImg from "@/img/games/icons/battlefly.webp";
 import BridgeworldIconImg from "@/img/games/icons/bridgeworld.webp";
 import KOTEIconImg from "@/img/games/icons/kote.webp";
 import RealmIconImg from "@/img/games/icons/realm.webp";
+import KaijuCardsIconImg from "@/img/games/icons/kaijucards.webp";
 import KuroroIconImg from "@/img/games/icons/kuroro.webp";
 import SmolverseIconImg from "@/img/games/icons/smolverse.webp";
 import TheBeaconIconImg from "@/img/games/icons/thebeacon.webp";
@@ -1018,6 +1018,18 @@ export const cartridges = [
     iconImage: TheBeaconIconImg,
     description:
       "A fantasy action roguelite RPG. Venture into dungeons, defeat evils & expand the Beacon's protective light!",
+    core: true,
+    featured: true,
+  },
+  {
+    name: "Kaiju Cards",
+    image: KaijuCardsImg,
+    websiteLink: "https://app.treasure.lol/games/kaiju-cards",
+    logo: KaijuCardsLogoImg,
+    sliderImage: KaijuCardsSliderImg,
+    iconImage: KaijuCardsIconImg,
+    description:
+      "Battle through Good Earth and unleash your tactical brilliance in this roguelite deckbuilder.",
     core: true,
     featured: true,
   },
