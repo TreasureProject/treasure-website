@@ -232,7 +232,12 @@ function App() {
 
 export function CatchBoundary() {
   const caught = useCatch();
-  const message = JSON.parse(caught.data)?.message;
+  let message: string | undefined;
+  try {
+    message = message = JSON.parse(caught.data)?.message;
+  } catch (err) {
+    console.warn("Error parsing catch boundary data", err);
+  }
   if (caught.status === 404) {
     return (
       <html>
