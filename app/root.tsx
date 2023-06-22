@@ -256,13 +256,15 @@ export function CatchBoundary() {
           <Links />
         </head>
         <body className="bg-honey-25 antialiased" id="top">
-          <Layout>
-            <div className="flex h-full flex-col items-center justify-center py-24">
-              <p className="text-[0.6rem] text-night-500 sm:text-base">
-                {message ? message : "Page not found"}
-              </p>
-            </div>
-          </Layout>
+          <AppContextProvider>
+            <Layout>
+              <div className="flex h-full flex-col items-center justify-center py-24">
+                <p className="text-[0.6rem] text-night-500 sm:text-base">
+                  {message ? message : "Page not found"}
+                </p>
+              </div>
+            </Layout>
+          </AppContextProvider>
           <Scripts />
         </body>
       </html>
