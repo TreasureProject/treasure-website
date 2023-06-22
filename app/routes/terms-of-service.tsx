@@ -434,12 +434,12 @@ export default function Resources() {
                     applicable creator fee set by the creator, and a Platform
                     fee, each as further described in our Documentation at{" "}
                     <a
-                      href="https://docs.trove.treasure.lol/about-trove/faq#how-are-royalties-structured-on-trove"
+                      href="https://docs.treasure.lol/infrastructure/platform/faq#how-are-royalties-structured-on-treasure"
                       className="text-ruby-900 underline"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      https://docs.trove.treasure.lol/about-trove/faq#how-are-royalties-structured-on-trove
+                      https://docs.treasure.lol/infrastructure/platform/faq#how-are-royalties-structured-on-treasure
                     </a>
                     .
                   </p>

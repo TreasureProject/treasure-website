@@ -5,27 +5,21 @@ import { useHydrated } from "remix-utils";
 
 // Logos
 import treasureLogoKnockoutImg from "../../public/img/resources/treasure/logo-knockout.png";
-import troveLogoKnockoutImg from "../../public/img/resources/trove/logo-knockout.png";
 
 import treasureLogoDarkImg from "../../public/img/resources/treasure/logo-dark.png";
 import magicLogoDarkImg from "../../public/img/resources/magic/logo-dark.png";
-import troveLogoDarkImg from "../../public/img/resources/trove/logo-dark.png";
 
 import treasureLogoLightImg from "../../public/img/resources/treasure/logo-light.png";
 import magicLogoLightImg from "../../public/img/resources/magic/logo-light.png";
-import troveLogoLightImg from "../../public/img/resources/trove/logo-light.png";
 
 // Logomarks
 import treasureLogomarkImg from "../../public/img/resources/treasure/logomark.png";
 import treasureLogomarkKnockoutImg from "../../public/img/resources/treasure/logomark-knockout.png";
-import troveLogomarkImg from "../../public/img/resources/trove/logomark.png";
-import troveLogomarkKnockoutImg from "../../public/img/resources/trove/logomark-knockout.png";
 import magicLogomarkDarkImg from "../../public/img/resources/magic/logomark-dark.png";
 import magicLogomarkLightImg from "../../public/img/resources/magic/logomark-light.png";
 
 // Spacing
 import treasureSpacingImg from "../../public/img/resources/treasure/spacing.png";
-import troveSpacingImg from "../../public/img/resources/trove/spacing.png";
 import magicSpacingImg from "../../public/img/resources/magic/spacing.png";
 import { ColorPalette } from "~/components/ColorPalette";
 
@@ -50,10 +44,6 @@ const ResourceNavigation = [
   {
     name: "Treasure",
     hash: "treasure",
-  },
-  {
-    name: "Trove",
-    hash: "trove",
   },
   {
     name: "Magic",
@@ -117,53 +107,6 @@ const Assets = {
     ],
     Spacing: treasureSpacingImg,
   },
-  Trove: {
-    Logo: [
-      {
-        downloadLink:
-          "https://drive.google.com/uc?export=download&id=1y9uWJm1qECE0h7108Raelpr0aSquQR6r",
-        size: "647KB",
-        image: troveLogoDarkImg,
-        bg: "bg-honey-25",
-        alt: "Dark trove logo on light background",
-      },
-      {
-        downloadLink:
-          "https://drive.google.com/uc?export=download&id=1-AK9rMs-_Oza1YqYKNLfBPlgQbB7RT-l",
-        size: "602KB",
-        image: troveLogoLightImg,
-        bg: "bg-night-900",
-        alt: "Light trove logo on dark background",
-      },
-      {
-        downloadLink:
-          "https://drive.google.com/uc?export=download&id=1luiWONJALKWyxG6laqk79i3x1mhIfK-2",
-        size: "587KB",
-        image: troveLogoKnockoutImg,
-        bg: "bg-night-900",
-        alt: "Knockout trove logo on dark background",
-      },
-    ],
-    Logomark: [
-      {
-        downloadLink:
-          "https://drive.google.com/uc?export=download&id=1brIJxBYhAU-lR2YPpJWo4fR-J4v4sd8K",
-        size: "582KB",
-        image: troveLogomarkImg,
-        bg: "bg-honey-25",
-        alt: "Trove logomark on light background",
-      },
-      {
-        downloadLink:
-          "https://drive.google.com/uc?export=download&id=1msyb70x5vpugXsiy7UBYLMcIH42pklrG",
-        size: "587KB",
-        image: troveLogomarkKnockoutImg,
-        bg: "bg-night-900",
-        alt: "Trove logomark on dark background",
-      },
-    ],
-    Spacing: troveSpacingImg,
-  },
   Magic: {
     Logo: [
       {
@@ -172,7 +115,7 @@ const Assets = {
         size: "616KB",
         image: magicLogoDarkImg,
         bg: "bg-honey-25",
-        alt: "Dark magic logo on light background",
+        alt: "Dark MAGIC logo on light background",
       },
       {
         downloadLink:
@@ -180,7 +123,7 @@ const Assets = {
         size: "594KB",
         image: magicLogoLightImg,
         bg: "bg-night-900",
-        alt: "Light magic logo on dark background",
+        alt: "Light MAGIC logo on dark background",
       },
     ],
     Logomark: [
@@ -190,7 +133,7 @@ const Assets = {
         size: "573KB",
         image: magicLogomarkLightImg,
         bg: "bg-honey-25",
-        alt: "Red magic logomark on light background",
+        alt: "Red MAGIC logomark on light background",
       },
       {
         downloadLink:
@@ -198,7 +141,7 @@ const Assets = {
         size: "545KB",
         image: magicLogomarkDarkImg,
         bg: "bg-night-900",
-        alt: "White magic logomark on dark background",
+        alt: "White MAGIC logomark on dark background",
       },
     ],
     Spacing: magicSpacingImg,
@@ -424,7 +367,7 @@ export default function Resources() {
                       </p>
                       <p className="text-xs text-night-700 xl:text-2xl">
                         Download our media kit and receive all logo variations
-                        for Treasure, Trove and Magic.
+                        for Treasure and MAGIC.
                       </p>
                       <div>
                         <a

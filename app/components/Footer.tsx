@@ -85,18 +85,28 @@ export const Footer = () => {
                     {(Object.keys(languages) as (keyof typeof languages)[]).map(
                       (lang) => (
                         <Menu.Item key={lang}>
-                          {({ active }) => (
-                            <Link
-                              className={`${
-                                active
-                                  ? "bg-honey-200/30 text-night-900"
-                                  : "text-night-900"
-                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                              to={`${location.pathname}/?lng=${lang}`}
-                            >
-                              {languages[lang]}
-                            </Link>
-                          )}
+                          {({ active }) => {
+                            console.log(
+                              `${location.pathname}/?lng=${lang}`,
+                              location
+                            );
+                            return (
+                              <Link
+                                className={`${
+                                  active
+                                    ? "bg-honey-200/30 text-night-900"
+                                    : "text-night-900"
+                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                to={`${
+                                  location.pathname === "/"
+                                    ? ""
+                                    : location.pathname
+                                }/?lng=${lang}`}
+                              >
+                                {languages[lang]}
+                              </Link>
+                            );
+                          }}
                         </Menu.Item>
                       )
                     )}

@@ -106,6 +106,7 @@ export const meta: MetaFunction = ({ data }) => {
   const { requestInfo } = data as RootLoaderData;
 
   return {
+    robots: "index, follow",
     charset: "utf-8",
     viewport: "width=device-width,initial-scale=1",
     "theme-color": "#ffffff",
