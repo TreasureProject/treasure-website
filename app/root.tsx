@@ -1,5 +1,6 @@
 import * as React from "react";
 import type {
+  HtmlMetaDescriptor,
   LinksFunction,
   LoaderArgs,
   MetaFunction,
@@ -103,19 +104,28 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = ({ data }) => {
-  const { requestInfo } = data as RootLoaderData;
-
-  return {
+  let tags: HtmlMetaDescriptor = {
     robots: "index, follow",
     charset: "utf-8",
     viewport: "width=device-width,initial-scale=1",
     "theme-color": "#ffffff",
     "msapplication-TileColor": "#ffc40d",
-    ...getSocialMetas({
-      url: getUrl(requestInfo),
-      image: genericImagePath(requestInfo.origin, "home"),
-    }),
   };
+
+  if (data) {
+    const { requestInfo } = data as RootLoaderData;
+    if (requestInfo) {
+      tags = {
+        ...tags,
+        ...getSocialMetas({
+          url: getUrl(requestInfo),
+          image: genericImagePath(requestInfo.origin, "home"),
+        }),
+      };
+    }
+  }
+
+  return tags;
 };
 
 function useChangeLanguage(locale: string) {
