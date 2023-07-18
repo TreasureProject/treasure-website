@@ -1,5 +1,6 @@
 import * as React from "react";
 import type {
+  HtmlMetaDescriptor,
   LinksFunction,
   LoaderArgs,
   MetaFunction,
@@ -103,18 +104,28 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = ({ data }) => {
-  const { requestInfo } = data as RootLoaderData;
-
-  return {
+  let tags: HtmlMetaDescriptor = {
+    robots: "index, follow",
     charset: "utf-8",
     viewport: "width=device-width,initial-scale=1",
     "theme-color": "#ffffff",
     "msapplication-TileColor": "#ffc40d",
-    ...getSocialMetas({
-      url: getUrl(requestInfo),
-      image: genericImagePath(requestInfo.origin, "home"),
-    }),
   };
+
+  if (data) {
+    const { requestInfo } = data as RootLoaderData;
+    if (requestInfo) {
+      tags = {
+        ...tags,
+        ...getSocialMetas({
+          url: getUrl(requestInfo),
+          image: genericImagePath(requestInfo.origin, "home"),
+        }),
+      };
+    }
+  }
+
+  return tags;
 };
 
 function useChangeLanguage(locale: string) {
@@ -231,7 +242,12 @@ function App() {
 
 export function CatchBoundary() {
   const caught = useCatch();
-  const message = JSON.parse(caught.data)?.message;
+  let message: string | undefined;
+  try {
+    message = message = JSON.parse(caught.data)?.message;
+  } catch (err) {
+    console.warn("Error parsing catch boundary data", err);
+  }
   if (caught.status === 404) {
     return (
       <html>
@@ -240,13 +256,15 @@ export function CatchBoundary() {
           <Links />
         </head>
         <body className="bg-honey-25 antialiased" id="top">
-          <Layout>
-            <div className="flex h-full flex-col items-center justify-center py-24">
-              <p className="text-[0.6rem] text-night-500 sm:text-base">
-                {message ? message : "Page not found"}
-              </p>
-            </div>
-          </Layout>
+          <AppContextProvider>
+            <Layout>
+              <div className="flex h-full flex-col items-center justify-center py-24">
+                <p className="text-[0.6rem] text-night-500 sm:text-base">
+                  {message ? message : "Page not found"}
+                </p>
+              </div>
+            </Layout>
+          </AppContextProvider>
           <Scripts />
         </body>
       </html>
