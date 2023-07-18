@@ -110,7 +110,7 @@ import T1DevImg from "../public/img/pfps/t1dev.png";
 import TimoImg from "../public/img/pfps/Timo.png";
 import RaeImg from "../public/img/pfps/Rae.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
-import XImg from "../public/img/pfps/X.png";
+import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
 import GearhartImg from "../public/img/pfps/Gearhart.png";
@@ -226,7 +226,7 @@ export const teamMembers = [
     team: "Treasure",
   },
   {
-    name: "X",
+    name: "X_",
     title: "Community",
     discordLink: "https://discordapp.com/users/390264760748474368",
     twitterLink: "https://twitter.com/cxf_0886",
