@@ -4,6 +4,7 @@ import BattleflyLogoImg from "../public/img/games/logos/Battlefly.svg";
 import KuroroLogoImg from "../public/img/games/logos/Kuroro.svg";
 import KoteLogoImg from "../public/img/games/logos/KOTE.webp";
 import KaijuCardsLogoImg from "../public/img/games/logos/KaijuCards.webp";
+import MAHLogoImg from "../public/img/games/logos/MAH.webp";
 import RealmLogoImg from "../public/img/games/logos/Realm.webp";
 import SmolverseLogoImg from "../public/img/games/logos/Smolverse.svg";
 import TheBeaconLogoImg from "../public/img/games/logos/The_Beacon.webp";
@@ -17,6 +18,7 @@ import KnightsOfTheEtherImg from "@/img/games/cards/Knights_of_the_Ether.webp";
 import RealmverseImg from "@/img/games/cards/Realmverse.webp";
 import KaijuCardsImg from "@/img/games/cards/KaijuCards.webp";
 import KuroroImg from "@/img/games/cards/Kuroro.webp";
+import MAHImg from "@/img/games/cards/MAH.webp";
 import TalesOfElleriaImg from "@/img/games/cards/Tales_of_Elleria.webp";
 import TheBeaconImg from "@/img/games/cards/The_Beacon.webp";
 import SmolverseImg from "@/img/games/cards/Smolverse.webp";
@@ -29,6 +31,7 @@ import KOTESliderImg from "@/img/games/slides/KOTE.webp";
 import RealmSliderImg from "@/img/games/slides/Realm.webp";
 import KaijuCardsSliderImg from "@/img/games/slides/KaijuCards.webp";
 import KuroroSliderImg from "@/img/games/slides/Kuroro.webp";
+import MAHSliderImg from "@/img/games/slides/MAH.webp";
 import SmolverseSliderImg from "@/img/games/slides/Smolverse.webp";
 import TheBeaconSliderImg from "@/img/games/slides/The_Beacon.webp";
 import TOESliderImg from "@/img/games/slides/TOE.webp";
@@ -41,6 +44,7 @@ import KOTEIconImg from "@/img/games/icons/kote.webp";
 import RealmIconImg from "@/img/games/icons/realm.webp";
 import KaijuCardsIconImg from "@/img/games/icons/kaijucards.webp";
 import KuroroIconImg from "@/img/games/icons/kuroro.webp";
+import MAHIconImg from "@/img/games/icons/MAH.webp";
 import SmolverseIconImg from "@/img/games/icons/smolverse.webp";
 import TheBeaconIconImg from "@/img/games/icons/thebeacon.webp";
 import TOEIconImg from "@/img/games/icons/talesofelleria.webp";
@@ -110,7 +114,7 @@ import T1DevImg from "../public/img/pfps/t1dev.png";
 import TimoImg from "../public/img/pfps/Timo.png";
 import RaeImg from "../public/img/pfps/Rae.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
-import XImg from "../public/img/pfps/X.png";
+import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
 import GearhartImg from "../public/img/pfps/Gearhart.png";
@@ -163,25 +167,17 @@ import {
 export const teamMembers = [
   {
     name: "John Patten",
-    title: "Co-Founder | Strategy",
+    title: "Co-Founder",
     discordLink: "https://discordapp.com/users/882718244920754238",
     twitterLink: "https://twitter.com/jpatten__",
     image: JohnImg,
     team: "Co-Founders",
   },
   {
-    name: "Gaarp",
-    title: "Co-Founder | Growth",
-    discordLink: "https://discordapp.com/users/314716890339737600",
-    twitterLink: "https://twitter.com/_gaarping",
-    image: GaarpImg,
-    team: "Co-Founders",
-  },
-  {
     name: "Karel Vuong",
-    title: "Co-Founder | Operations",
+    title: "Co-Founder",
     discordLink: "https://discordapp.com/users/397537602988670977",
-    twitterLink: "https://twitter.com/0xkarel",
+    twitterLink: "https://twitter.com/karelvuong",
     image: KarelImg,
     team: "Co-Founders",
   },
@@ -226,7 +222,7 @@ export const teamMembers = [
     team: "Treasure",
   },
   {
-    name: "X",
+    name: "X_",
     title: "Community",
     discordLink: "https://discordapp.com/users/390264760748474368",
     twitterLink: "https://twitter.com/cxf_0886",
@@ -261,22 +257,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/766502243699523615",
     twitterLink: "https://twitter.com/fr4nnyverse",
     image: FrannyImg,
-    team: "Platform",
-  },
-  {
-    name: "Insprac",
-    title: "Development (Full-Stack)",
-    discordLink: "https://discordapp.com/users/209096852430258176",
-    twitterLink: null,
-    image: InspracImg,
-    team: "Platform",
-  },
-  {
-    name: "Bahama",
-    title: "Product",
-    discordLink: "https://discordapp.com/users/791828959360319498",
-    twitterLink: "https://twitter.com/Mr_Bahama_",
-    image: BahamaImg,
     team: "Platform",
   },
   {
@@ -342,22 +322,6 @@ export const teamMembers = [
     team: "Smolverse",
   },
   {
-    name: "Maximee",
-    title: "Animation",
-    discordLink: "https://discordapp.com/users/324482717611982848",
-    twitterLink: "https://twitter.com/maximee_eth",
-    image: MaximeeImg,
-    team: "Smolverse",
-  },
-  {
-    name: "Gearhart",
-    title: "Development",
-    discordLink: "https://discordapp.com/users/948417042522988566",
-    twitterLink: "https://twitter.com/NFTxhunterx",
-    image: GearhartImg,
-    team: "Smolverse",
-  },
-  {
     name: "Preeminent",
     title: "Marketing",
     discordLink: "https://discordapp.com/users/797371848627191818",
@@ -386,7 +350,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/539546215399030814",
     twitterLink: "https://twitter.com/purplezsnow",
     image: PurpleSnowImg,
-    team: "Game Studio",
+    team: "Darkbright Studios",
   },
 ];
 
@@ -1009,6 +973,18 @@ export const navigation = [
 ];
 
 export const cartridges = [
+  {
+    name: "Mighty Action Heroes",
+    image: MAHImg,
+    websiteLink: "https://app.treasure.lol/games/mighty-action-heroes",
+    logo: MAHLogoImg,
+    sliderImage: MAHSliderImg,
+    iconImage: MAHIconImg,
+    description:
+      "Unleash mayhem in the world’s mightiest action movie-inspired battle royale.",
+    core: true,
+    featured: true,
+  },
   {
     name: "The Beacon",
     image: TheBeaconImg,
