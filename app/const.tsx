@@ -167,7 +167,7 @@ import {
 export const teamMembers = [
   {
     name: "John Patten",
-    title: "Co-Founder | Strategy",
+    title: "Co-Founder",
     discordLink: "https://discordapp.com/users/882718244920754238",
     twitterLink: "https://twitter.com/jpatten__",
     image: JohnImg,
@@ -175,7 +175,7 @@ export const teamMembers = [
   },
   {
     name: "Karel Vuong",
-    title: "Co-Founder | Operations",
+    title: "Co-Founder",
     discordLink: "https://discordapp.com/users/397537602988670977",
     twitterLink: "https://twitter.com/karelvuong",
     image: KarelImg,
@@ -260,14 +260,6 @@ export const teamMembers = [
     team: "Platform",
   },
   {
-    name: "Bahama",
-    title: "Product",
-    discordLink: "https://discordapp.com/users/791828959360319498",
-    twitterLink: "https://twitter.com/Mr_Bahama_",
-    image: BahamaImg,
-    team: "Platform",
-  },
-  {
     name: "Mouse Dev",
     title: "Development (Solidity)",
     discordLink: "https://discordapp.com/users/888112902266044436",
@@ -330,14 +322,6 @@ export const teamMembers = [
     team: "Smolverse",
   },
   {
-    name: "Maximee",
-    title: "Animation",
-    discordLink: "https://discordapp.com/users/324482717611982848",
-    twitterLink: "https://twitter.com/maximee_eth",
-    image: MaximeeImg,
-    team: "Smolverse",
-  },
-  {
     name: "Preeminent",
     title: "Marketing",
     discordLink: "https://discordapp.com/users/797371848627191818",
@@ -366,7 +350,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/539546215399030814",
     twitterLink: "https://twitter.com/purplezsnow",
     image: PurpleSnowImg,
-    team: "Game Studio",
+    team: "Darkbright Studios",
   },
 ];
 
