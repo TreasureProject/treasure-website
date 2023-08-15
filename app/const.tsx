@@ -10,6 +10,7 @@ import SmolverseLogoImg from "../public/img/games/logos/Smolverse.svg";
 import TheBeaconLogoImg from "../public/img/games/logos/The_Beacon.webp";
 import TOELogoImg from "../public/img/games/logos/TOE.webp";
 import BitmatesLogoImg from "../public/img/games/logos/Bitmates.webp";
+import ZeeLogoImg from "../public/img/games/logos/zeeverse.webp";
 
 // Games (Powered by Treasure) - Cards
 import BattleFlyImg from "@/img/games/cards/Battlefly.webp";
@@ -23,6 +24,7 @@ import TalesOfElleriaImg from "@/img/games/cards/Tales_of_Elleria.webp";
 import TheBeaconImg from "@/img/games/cards/The_Beacon.webp";
 import SmolverseImg from "@/img/games/cards/Smolverse.webp";
 import BitmatesImg from "@/img/games/cards/Bitmates.webp";
+import ZeeImg from "@/img/games/cards/zeeverse.webp";
 
 // Games (Powered by Treasure) - Sliders
 import BattleflySliderImg from "@/img/games/slides/Battlefly.webp";
@@ -36,6 +38,7 @@ import SmolverseSliderImg from "@/img/games/slides/Smolverse.webp";
 import TheBeaconSliderImg from "@/img/games/slides/The_Beacon.webp";
 import TOESliderImg from "@/img/games/slides/TOE.webp";
 import BitmatesSliderImg from "@/img/games/slides/Bitmates.webp";
+import ZeeSliderImg from "@/img/games/slides/zeeverse.webp";
 
 // Games (Powered by Treasure) - Icons
 import BattleflyIconImg from "@/img/games/icons/battlefly.webp";
@@ -49,6 +52,7 @@ import SmolverseIconImg from "@/img/games/icons/smolverse.webp";
 import TheBeaconIconImg from "@/img/games/icons/thebeacon.webp";
 import TOEIconImg from "@/img/games/icons/talesofelleria.webp";
 import BitmatesIconImg from "@/img/games/icons/bitmates.webp";
+import ZeeIconImg from "@/img/games/icons/zeeverse.webp";
 
 // Investors
 import AcadArenaImg from "../public/img/partners/AcadArena.svg";
@@ -96,8 +100,6 @@ import BahamaImg from "../public/img/pfps/Bahama.png";
 import BasImg from "../public/img/pfps/Bas.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
-import GaarpImg from "../public/img/pfps/Gaarp.png";
-import InspracImg from "../public/img/pfps/Insprac.png";
 import JakeImg from "../public/img/pfps/Jake.png";
 import JohnImg from "../public/img/pfps/John.png";
 import JpegapeImg from "../public/img/pfps/Jpegape.png";
@@ -109,15 +111,12 @@ import PreeminentImg from "../public/img/pfps/Preeminent.png";
 import PurpleSnowImg from "../public/img/pfps/PurpleSnow.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
-import SantiImg from "../public/img/pfps/Santi.png";
 import T1DevImg from "../public/img/pfps/t1dev.png";
-import TimoImg from "../public/img/pfps/Timo.png";
 import RaeImg from "../public/img/pfps/Rae.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
-import GearhartImg from "../public/img/pfps/Gearhart.png";
 import MdImg from "../public/img/pfps/MouseDev.webp";
 import DefaultImg from "../public/img/pfps/default.png";
 
@@ -998,6 +997,18 @@ export const cartridges = [
     iconImage: MAHIconImg,
     description:
       "Unleash mayhem in the world’s mightiest action movie-inspired battle royale.",
+    core: true,
+    featured: true,
+  },
+  {
+    name: "Zeeverse",
+    image: ZeeImg,
+    websiteLink: "https://app.treasure.lol/games/zeeverse",
+    logo: ZeeLogoImg,
+    sliderImage: ZeeSliderImg,
+    iconImage: ZeeIconImg,
+    description:
+      "Zeeverse is a monster-tamer MMORPG set in an indigenous fantasy world. Explore a mythical Spirit Realm as a young Shaman, train your collection of exotic battle companions called Zee, and take part in strategic turn-based battles to help protect Zeeverse from the looming corrupted forces.",
     core: true,
     featured: true,
   },
