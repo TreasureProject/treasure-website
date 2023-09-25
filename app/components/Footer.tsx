@@ -43,7 +43,7 @@ export const Footer = () => {
 
   return (
     <footer
-      className="bg-honey-25 dark:bg-night-900"
+      className="overflow-hidden bg-honey-25 dark:bg-night-900"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
