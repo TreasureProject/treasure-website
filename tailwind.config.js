@@ -8,7 +8,14 @@ module.exports = {
     extend: {
       colors: {
         "tr-green": "#4FC74F",
-        "tr-blue":"#28A0F0"
+        "tr-blue":"#28A0F0",
+      partner: {
+        background: "#020228"
+      },
+      },
+      backgroundImage: {
+        "gradient-partner-hero" : "linear-gradient(104deg, #020228 55.79%, #396AF3 115.73%)",
+        "gradient-partner-placeholder" : "linear-gradient(156deg, #001348 74.03%, #396AF3 167.04%)"
       },
       animation: {
         marquee: "marquee 80s linear infinite",

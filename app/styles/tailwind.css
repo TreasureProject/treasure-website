@@ -83,8 +83,35 @@
   font-weight: 500;
   font-display: swap;
   font-style: italic;
-  font-named-instance: "Italic";
+  font-named-instance: "italic";
   src: url("/fonts/ABCWhyte-RegularItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Millik";
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Millik.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Satoshi-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Satoshi-Regular.otf") format("opentype");
 }
 
 @layer utilities {
