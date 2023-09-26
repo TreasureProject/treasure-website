@@ -1,8 +1,6 @@
-import React from "react";
-import { Link } from "@remix-run/react";
 import { Layout } from "~/components/Layout";
 
-import { TreasureLogo } from "~/components/Svgs";
+import { TreasureLogo } from "~/components/Icons";
 import game_tile_image from "../../public/img/illustrations/game_tiles.png";
 import game_tile_mobile_image from "../../public/img/illustrations/game_tiles_mobile.png";
 import community_illustration_image from "../../public/img/illustrations/community_illustration.png";
@@ -14,7 +12,6 @@ import partner_badge_image from "../../public/img/icons/partner_badge.png";
 import TileGrid from "~/components/decoration/TileGrid";
 import { twMerge } from "tailwind-merge";
 
-const MAX_W_CLASS = "relative mx-auto max-w-8xl px-4 sm:px-5 md:px-8";
 const FORM_URL =
   "https://forms.clickup.com/9003025951/f/8c9yhgz-3182/QBO3G2H9GDHUXBZ7K5";
 
@@ -52,7 +49,7 @@ const TestimonialCard = ({
 }: {
   testimonial: { text: string; name: string; twitter: string };
 }) => (
-  <div className="flex  w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
+  <div className="flex w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
     <p className="sm:text-md font-[Satoshi] text-sm leading-[160%] md:text-lg">
       “{testimonial.text}“
     </p>
@@ -81,10 +78,10 @@ const Partner = () => {
   return (
     <Layout>
       <div className=" w-full overflow-x-hidden bg-partner-background">
-        <div className="relative  mb-24 w-full overflow-hidden bg-gradient-partner-hero">
-          <div className={MAX_W_CLASS}>
+        <div className="relative mb-24 w-full overflow-hidden bg-gradient-partner-hero">
+          <div className="wrapper">
             <div className="relative z-40 mt-14 flex flex-col items-center lg:items-start lg:pt-[240px] lg:pl-16">
-              <h1 className="font-[Millik] text-[38px] sm:text-[42px]  md:text-[64px] lg:leading-[80px]">
+              <h1 className="font-[Millik] text-[38px] sm:text-[42px] md:text-[64px] lg:leading-[80px]">
                 Become
               </h1>
               <h1 className="max-w-lg text-center text-[38px] leading-[48px] md:text-[64px] md:leading-[80px] lg:text-start">
@@ -107,17 +104,12 @@ const Partner = () => {
               />
             </div>
           </div>
-          <div className="absolute left-0 bottom-0 z-30 h-1/2 w-screen  bg-gradient-to-t from-partner-background via-partner-background to-transparent" />
+          <div className="absolute left-0 bottom-0 z-30 h-1/2 w-screen bg-gradient-to-t from-partner-background via-partner-background to-transparent" />
 
           <div className="absolute top-1/4 right-0 z-10 hidden translate-x-1/2 opacity-60 lg:block">
             <TileGrid />
           </div>
-          <div
-            className={twMerge(
-              MAX_W_CLASS,
-              "z-40 mt-[320px] flex flex-col items-center gap-8 lg:flex-row lg:gap-16"
-            )}
-          >
+          <div className="wrapper z-40 mt-[320px] flex flex-col items-center gap-8 lg:flex-row lg:gap-16">
             <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-partner-placeholder md:rounded-[40px]">
               <img
                 src={partner_badge_image}
@@ -136,13 +128,7 @@ const Partner = () => {
         </div>
       </div>
       <div className="space-y-24 bg-partner-background py-20 md:space-y-8">
-        <div
-          className={twMerge(
-            "flex flex-col items-center justify-center gap-6 md:flex-row md:gap-12",
-            MAX_W_CLASS,
-            "max-w-[512px] sm:max-w-[580px] md:max-w-8xl"
-          )}
-        >
+        <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row md:gap-12">
           <div className="flex w-full items-center justify-center">
             <img
               src={platform_illustration_image}
@@ -151,7 +137,7 @@ const Partner = () => {
             />
           </div>
           <div className="flex w-full md:justify-end ">
-            <div className="max-w-md space-y-6  ">
+            <div className="max-w-md space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
               </h1>
@@ -163,14 +149,8 @@ const Partner = () => {
             </div>
           </div>
         </div>
-        <div
-          className={twMerge(
-            "flex flex-col items-center justify-center gap-6 md:flex-row-reverse md:gap-12",
-            MAX_W_CLASS,
-            "max-w-[512px] sm:max-w-[580px] md:max-w-8xl"
-          )}
-        >
-          <div className="flex w-full  items-center justify-center">
+        <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse md:gap-12">
+          <div className="flex w-full items-center justify-center">
             <img
               src={reward_illustration_image}
               alt="Platform Illustration"
@@ -178,7 +158,7 @@ const Partner = () => {
             />
           </div>
           <div className="flex w-full justify-start ">
-            <div className="max-w-sm space-y-6  ">
+            <div className="max-w-sm space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
               </h1>
@@ -192,9 +172,7 @@ const Partner = () => {
         </div>
         <div
           className={twMerge(
-            "flex flex-col items-center justify-center gap-12 md:flex-row",
-            MAX_W_CLASS,
-            "max-w-[512px] sm:max-w-[580px] md:max-w-8xl"
+            "wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row"
           )}
         >
           <div className="flex w-full flex-col items-center justify-center md:flex-row">
@@ -205,7 +183,7 @@ const Partner = () => {
             />
           </div>
           <div className="flex w-full md:justify-end ">
-            <div className="max-w-md space-y-3 sm:space-y-6  ">
+            <div className="max-w-md space-y-3 sm:space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
               </h1>
@@ -219,7 +197,7 @@ const Partner = () => {
         </div>
       </div>
       <div className="bg-partner-background py-12 pt-0 sm:py-14 sm:pt-14 md:py-20 md:pt-20">
-        <div className={MAX_W_CLASS}>
+        <div className="wrapper">
           <div
             className="space-y-8 rounded-2xl p-5 md:space-y-10 md:rounded-3xl md:p-12 md:px-12"
             style={{ background: `url(${texture_background_image})` }}
@@ -227,7 +205,7 @@ const Partner = () => {
             <h1 className="pt-4 text-center font-[Millik] text-xl sm:text-start md:pt-0 md:text-3xl">
               Testimonials
             </h1>
-            <div className="group relative">
+            <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#000_0%,#0000_30%,#0000_70%,#000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
                 <div className="group-hover:pause flex animate-marquee gap-5">
                   {Testimonials.map((testimonial, i) => (
@@ -245,12 +223,12 @@ const Partner = () => {
         </div>
       </div>
       <div
-        className="py-12   sm:py-16 md:py-24"
+        className="py-12 sm:py-16 md:py-24"
         style={{ background: `url(${texture_background_image})` }}
       >
-        <div className={MAX_W_CLASS}>
+        <div className="wrapper">
           <div className="flex flex-col items-center justify-center rounded-2xl bg-gradient-partner-hero p-12 sm:p-16 md:rounded-[32px]">
-            <h1 className="mb-4 text-center font-[Millik]  text-2xl leading-[120%] md:text-3xl">
+            <h1 className="mb-4 text-center font-[Millik] text-2xl leading-[120%] md:text-3xl">
               Become a Treasure Create Partner
             </h1>
             <p className="text-center text-sm leading-[160%] sm:text-xl lg:text-2xl">
