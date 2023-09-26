@@ -207,12 +207,12 @@ const Partner = () => {
             </h1>
             <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#000_0%,#0000_30%,#0000_70%,#000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
-                <div className="group-hover:pause flex animate-marquee gap-5">
+                <div className="group-hover:pause flex animate-[marquee_40s_linear_infinite] gap-5">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
                 </div>
-                <div className="group-hover:pause absolute top-0 ml-4 flex animate-marquee2 gap-5">
+                <div className="group-hover:pause absolute top-0 ml-4 flex animate-[marquee2_40s_linear_infinite] gap-5">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
