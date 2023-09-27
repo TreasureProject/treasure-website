@@ -1,13 +1,20 @@
 import { Layout } from "~/components/Layout";
 
+// Assets
 import { TreasureLogo } from "~/components/Icons";
 import game_tile_image from "../../public/img/illustrations/game_tiles.png";
 import game_tile_mobile_image from "../../public/img/illustrations/game_tiles_mobile.png";
-import community_illustration_image from "../../public/img/illustrations/community_illustration.png";
-import platform_illustration_image from "../../public/img/illustrations/platform_illustration.png";
-import reward_illustration_image from "../../public/img/illustrations/reward_illustration.png";
 import texture_background_image from "../../public/img/illustrations/texture_background.png";
-import partner_badge_image from "../../public/img/icons/partner_badge.png";
+import tc_intro_video from "../../public/img/TC_INTRO.mp4";
+
+// Asset Parts for animations
+import a_01_image from "../../public/img/partner-components/A_01.png";
+import a_02_image from "../../public/img/partner-components/A_02.png";
+import b_01_image from "../../public/img/partner-components/B_01.png";
+import c_01_image from "../../public/img/partner-components/C_01.png";
+import c_02_image from "../../public/img/partner-components/C_02.png";
+import c_03_image from "../../public/img/partner-components/C_03.png";
+import red_diamond_gif from "../../public/img/partner-components/red_diamond.gif";
 
 import TileGrid from "~/components/decoration/TileGrid";
 import { twMerge } from "tailwind-merge";
@@ -111,11 +118,7 @@ const Partner = () => {
           </div>
           <div className="wrapper z-40 mt-[320px] flex flex-col items-center gap-8 lg:flex-row lg:gap-16">
             <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-partner-placeholder md:rounded-[40px]">
-              <img
-                src={partner_badge_image}
-                alt="Badge for Partners"
-                className="w-[80px] sm:w-[96px] xl:w-[120px]"
-              />
+              <video src={tc_intro_video} autoPlay muted />
             </div>
             <p className="max-w-lg px-4 font-[Satoshi] text-sm font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
               Welcome to Treasure Create, your gateway to web3 gaming! Join our
@@ -129,12 +132,11 @@ const Partner = () => {
       </div>
       <div className="space-y-24 bg-partner-background py-20 md:space-y-8">
         <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row md:gap-12">
-          <div className="flex w-full items-center justify-center">
-            <img
-              src={platform_illustration_image}
-              alt="Platform Illustration"
-              className="w-full"
-            />
+          <div className="relative flex w-full  items-center justify-center">
+            <img src={a_02_image} alt="" className="" />
+            <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2">
+              <img src={a_01_image} alt="" className="animate-move-up-down" />
+            </div>
           </div>
           <div className="flex w-full md:justify-end ">
             <div className="max-w-md space-y-6">
@@ -150,12 +152,24 @@ const Partner = () => {
           </div>
         </div>
         <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse md:gap-12">
-          <div className="flex w-full items-center justify-center">
-            <img
-              src={reward_illustration_image}
-              alt="Platform Illustration"
-              className="w-full"
-            />
+          <div className="relative flex w-full items-center justify-center">
+            <div className="absolute left-1/2 right-1/2 h-0 w-0">
+              <div className="absolute top-0 left-0 h-0 w-0 border-t-8 border-l-4 border-r-4 border-solid border-transparent"></div>
+              <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
+            </div>
+            <div className="flex-items-center absolute top-[23.5%] left-[9.5%] h-[46.5%] w-[60%] justify-center rounded-xl bg-gradient-partner-hero md:rounded-[18px]">
+              <img
+                src={red_diamond_gif}
+                alt=""
+                className="absolute left-1/2 top-1/2 w-[33%] -translate-y-1/2 -translate-x-1/2"
+              />
+              <div className="absolute top-[8%] left-[5%] flex h-[4%] w-[10%] items-center gap-[4px] md:top-[5%] md:left-[3%] ">
+                <div className="aspect-square h-full rounded-full bg-[#396AF3]" />
+                <div className="h-full animate-stretch rounded-full bg-[#396AF3]" />
+              </div>
+              <div className="absolute top-[8%] right-[5%] z-10 h-[4%] w-[8%] animate-pulse2 rounded-full bg-[#396AF3] md:right-[3%] md:top-[5%]" />
+            </div>
+            <img src={b_01_image} alt="Platform Illustration" />
           </div>
           <div className="flex w-full justify-start ">
             <div className="max-w-sm space-y-6">
@@ -175,12 +189,14 @@ const Partner = () => {
             "wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row"
           )}
         >
-          <div className="flex w-full flex-col items-center justify-center md:flex-row">
+          <div className="relative flex w-full flex-col items-center justify-center md:flex-row">
+            <img src={c_01_image} alt="Reward Illustration" />
             <img
-              src={community_illustration_image}
-              alt="Reward Illustration"
-              className="w-full"
+              src={c_02_image}
+              alt=""
+              className="absolute animate-move-up-down2"
             />
+            <img src={c_03_image} alt="" className="absolute " />
           </div>
           <div className="flex w-full md:justify-end ">
             <div className="max-w-md space-y-3 sm:space-y-6">
@@ -205,7 +221,7 @@ const Partner = () => {
             <h1 className="pt-4 text-center font-[Millik] text-xl sm:text-start md:pt-0 md:text-3xl">
               Testimonials
             </h1>
-            <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#000_0%,#0000_30%,#0000_70%,#000_100%)]">
+            <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
                 <div className="group-hover:pause flex animate-[marquee_40s_linear_infinite] gap-5">
                   {Testimonials.map((testimonial, i) => (
