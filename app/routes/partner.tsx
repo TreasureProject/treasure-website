@@ -57,7 +57,7 @@ const TestimonialCard = ({
   testimonial: { text: string; name: string; twitter: string };
 }) => (
   <div className="flex w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
-    <p className="sm:text-md font-[Satoshi] text-sm leading-[160%] md:text-lg">
+    <p className="sm:text-md text-sm leading-[160%] md:text-lg">
       “{testimonial.text}“
     </p>
     <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
@@ -120,7 +120,7 @@ const Partner = () => {
             <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-partner-placeholder md:rounded-[40px]">
               <video src={tc_intro_video} autoPlay muted />
             </div>
-            <p className="max-w-lg px-4 font-[Satoshi] text-sm font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
+            <p className="max-w-lg px-4 text-sm font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
               Welcome to Treasure Create, your gateway to web3 gaming! Join our
               exclusive creator program to champion Treasure games, boost your
               online presence, and explore unique opportunities in the web3
@@ -143,7 +143,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
               </h1>
-              <p className="sm:text-md font-[satoshi] text-sm font-light leading-[160%]">
+              <p className="text-sm font-light leading-[160%] sm:text-lg">
                 Join our exclusive content creator program to connect with over
                 150k players, access early playtests, and amplify your reach
                 through promotion on official Treasure channels.
@@ -157,7 +157,7 @@ const Partner = () => {
               <div className="absolute top-0 left-0 h-0 w-0 border-t-8 border-l-4 border-r-4 border-solid border-transparent"></div>
               <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
             </div>
-            <div className="flex-items-center absolute top-[23.5%] left-[9.5%] h-[46.5%] w-[60%] justify-center rounded-xl bg-gradient-partner-hero md:rounded-[18px]">
+            <div className="flex-items-center absolute top-[25.5%] left-[11.5%] z-20 h-[52%] w-[57.5%] justify-center rounded-xl bg-gradient-partner-hero md:rounded-[18px]">
               <img
                 src={red_diamond_gif}
                 alt=""
@@ -169,14 +169,18 @@ const Partner = () => {
               </div>
               <div className="absolute top-[8%] right-[5%] z-10 h-[4%] w-[8%] animate-pulse2 rounded-full bg-[#396AF3] md:right-[3%] md:top-[5%]" />
             </div>
-            <img src={b_01_image} alt="Platform Illustration" />
+            <img
+              src={b_01_image}
+              className="translate-y-[5%] scale-[1.1] transform"
+              alt="Platform Illustration"
+            />
           </div>
           <div className="flex w-full justify-start ">
             <div className="max-w-sm space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
               </h1>
-              <p className="sm:text-md font-[satoshi] text-sm font-light leading-[160%]">
+              <p className="text-sm font-light leading-[160%] sm:text-lg">
                 Gain <span className="text-ruby-800">MAGIC</span> compensation,
                 exclusive in-game items, and priority beta access, celebrating
                 your dedication to Treasure games.
@@ -203,7 +207,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
               </h1>
-              <p className="sm:text-md font-[satoshi] text-sm font-light leading-[160%]">
+              <p className="text-sm font-light leading-[160%] sm:text-lg">
                 Immerse yourself in a vibrant creator community, connect with
                 game devs, participate in game nights and unique events, and
                 forge unforgettable gaming moments together!
@@ -223,12 +227,12 @@ const Partner = () => {
             </h1>
             <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
-                <div className="group-hover:pause flex animate-[marquee_40s_linear_infinite] gap-5">
+                <div className="group-hover:pause flex animate-[marquee_20s_linear_infinite] gap-5 sm:animate-[marquee_40s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
                 </div>
-                <div className="group-hover:pause absolute top-0 ml-4 flex animate-[marquee2_40s_linear_infinite] gap-5">
+                <div className="group-hover:pause animate-[marquee2_20s_linear_infinite absolute] top-0 ml-4 flex gap-5 sm:animate-[marquee2_40s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
@@ -239,8 +243,13 @@ const Partner = () => {
         </div>
       </div>
       <div
-        className="py-12 sm:py-16 md:py-24"
-        style={{ background: `url(${texture_background_image})` }}
+        style={{
+          background: `url(${texture_background_image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="bg-cover bg-center bg-no-repeat py-12 sm:py-16 md:py-24"
       >
         <div className="wrapper">
           <div className="flex flex-col items-center justify-center rounded-2xl bg-gradient-partner-hero p-12 sm:p-16 md:rounded-[32px]">
