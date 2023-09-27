@@ -227,7 +227,7 @@ const Partner = () => {
             <h1 className="pt-4 text-center font-[Millik] text-xl sm:text-start md:pt-0 md:text-3xl">
               Testimonials
             </h1>
-            <div className="group relative">
+            <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
                 <div className="group-hover:pause flex animate-marquee gap-5">
                   {Testimonials.map((testimonial, i) => (
