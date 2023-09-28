@@ -1,20 +1,24 @@
-import React from "react";
-import { Link } from "@remix-run/react";
 import { Layout } from "~/components/Layout";
 
-import { TreasureLogo } from "~/components/Svgs";
+// Assets
+import { TreasureLogo } from "~/components/Icons";
 import game_tile_image from "../../public/img/illustrations/game_tiles.png";
 import game_tile_mobile_image from "../../public/img/illustrations/game_tiles_mobile.png";
-import community_illustration_image from "../../public/img/illustrations/community_illustration.png";
-import platform_illustration_image from "../../public/img/illustrations/platform_illustration.png";
-import reward_illustration_image from "../../public/img/illustrations/reward_illustration.png";
 import texture_background_image from "../../public/img/illustrations/texture_background.png";
-import partner_badge_image from "../../public/img/icons/partner_badge.png";
+import tc_intro_video from "../../public/img/TC_INTRO.mp4";
+
+// Asset Parts for animations
+import a_01_image from "../../public/img/partner-components/A_01.png";
+import a_02_image from "../../public/img/partner-components/A_02.png";
+import b_01_image from "../../public/img/partner-components/B_01.png";
+import c_01_image from "../../public/img/partner-components/C_01.png";
+import c_02_image from "../../public/img/partner-components/C_02.png";
+import c_03_image from "../../public/img/partner-components/C_03.png";
+import red_diamond_gif from "../../public/img/partner-components/red_diamond.gif";
 
 import TileGrid from "~/components/decoration/TileGrid";
 import { twMerge } from "tailwind-merge";
 
-const MAX_W_CLASS = "relative mx-auto max-w-8xl px-4 sm:px-5 md:px-8";
 const FORM_URL =
   "https://forms.clickup.com/9003025951/f/8c9yhgz-3182/QBO3G2H9GDHUXBZ7K5";
 
@@ -52,7 +56,7 @@ const TestimonialCard = ({
 }: {
   testimonial: { text: string; name: string; twitter: string };
 }) => (
-  <div className="flex  w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
+  <div className="flex w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
     <p className="sm:text-md font-[Satoshi] text-sm leading-[160%] md:text-lg">
       “{testimonial.text}“
     </p>
@@ -81,10 +85,10 @@ const Partner = () => {
   return (
     <Layout>
       <div className=" w-full overflow-x-hidden bg-partner-background">
-        <div className="relative  mb-24 w-full overflow-hidden bg-gradient-partner-hero">
-          <div className={MAX_W_CLASS}>
+        <div className="relative mb-24 w-full overflow-hidden bg-gradient-partner-hero">
+          <div className="wrapper">
             <div className="relative z-40 mt-14 flex flex-col items-center lg:items-start lg:pt-[240px] lg:pl-16">
-              <h1 className="font-[Millik] text-[38px] sm:text-[42px]  md:text-[64px] lg:leading-[80px]">
+              <h1 className="font-[Millik] text-[38px] sm:text-[42px] md:text-[64px] lg:leading-[80px]">
                 Become
               </h1>
               <h1 className="max-w-lg text-center text-[38px] leading-[48px] md:text-[64px] md:leading-[80px] lg:text-start">
@@ -107,23 +111,14 @@ const Partner = () => {
               />
             </div>
           </div>
-          <div className="absolute left-0 bottom-0 z-30 h-1/2 w-screen  bg-gradient-to-t from-partner-background via-partner-background to-transparent" />
+          <div className="absolute left-0 bottom-0 z-30 h-1/2 w-screen bg-gradient-to-t from-partner-background via-partner-background to-transparent" />
 
           <div className="absolute top-1/4 right-0 z-10 hidden translate-x-1/2 opacity-60 lg:block">
             <TileGrid />
           </div>
-          <div
-            className={twMerge(
-              MAX_W_CLASS,
-              "z-40 mt-[320px] flex flex-col items-center gap-8 lg:flex-row lg:gap-16"
-            )}
-          >
+          <div className="wrapper z-40 mt-[320px] flex flex-col items-center gap-8 lg:flex-row lg:gap-16">
             <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-partner-placeholder md:rounded-[40px]">
-              <img
-                src={partner_badge_image}
-                alt="Badge for Partners"
-                className="w-[80px] sm:w-[96px] xl:w-[120px]"
-              />
+              <video src={tc_intro_video} autoPlay muted />
             </div>
             <p className="max-w-lg px-4 font-[Satoshi] text-sm font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
               Welcome to Treasure Create, your gateway to web3 gaming! Join our
@@ -136,22 +131,15 @@ const Partner = () => {
         </div>
       </div>
       <div className="space-y-24 bg-partner-background py-20 md:space-y-8">
-        <div
-          className={twMerge(
-            "flex flex-col items-center justify-center gap-6 md:flex-row md:gap-12",
-            MAX_W_CLASS,
-            "max-w-[512px] sm:max-w-[580px] md:max-w-8xl"
-          )}
-        >
-          <div className="flex w-full items-center justify-center">
-            <img
-              src={platform_illustration_image}
-              alt="Platform Illustration"
-              className="w-full"
-            />
+        <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row md:gap-12">
+          <div className="relative flex w-full  items-center justify-center">
+            <img src={a_02_image} alt="" className="" />
+            <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2">
+              <img src={a_01_image} alt="" className="animate-move-up-down" />
+            </div>
           </div>
           <div className="flex w-full md:justify-end ">
-            <div className="max-w-md space-y-6  ">
+            <div className="max-w-md space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
               </h1>
@@ -163,22 +151,28 @@ const Partner = () => {
             </div>
           </div>
         </div>
-        <div
-          className={twMerge(
-            "flex flex-col items-center justify-center gap-6 md:flex-row-reverse md:gap-12",
-            MAX_W_CLASS,
-            "max-w-[512px] sm:max-w-[580px] md:max-w-8xl"
-          )}
-        >
-          <div className="flex w-full  items-center justify-center">
-            <img
-              src={reward_illustration_image}
-              alt="Platform Illustration"
-              className="w-full"
-            />
+        <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse md:gap-12">
+          <div className="relative flex w-full items-center justify-center">
+            <div className="absolute left-1/2 right-1/2 h-0 w-0">
+              <div className="absolute top-0 left-0 h-0 w-0 border-t-8 border-l-4 border-r-4 border-solid border-transparent"></div>
+              <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
+            </div>
+            <div className="flex-items-center absolute top-[23.5%] left-[9.5%] h-[46.5%] w-[60%] justify-center rounded-xl bg-gradient-partner-hero md:rounded-[18px]">
+              <img
+                src={red_diamond_gif}
+                alt=""
+                className="absolute left-1/2 top-1/2 w-[33%] -translate-y-1/2 -translate-x-1/2"
+              />
+              <div className="absolute top-[8%] left-[5%] flex h-[4%] w-[10%] items-center gap-[4px] md:top-[5%] md:left-[3%] ">
+                <div className="aspect-square h-full rounded-full bg-[#396AF3]" />
+                <div className="h-full animate-stretch rounded-full bg-[#396AF3]" />
+              </div>
+              <div className="absolute top-[8%] right-[5%] z-10 h-[4%] w-[8%] animate-pulse2 rounded-full bg-[#396AF3] md:right-[3%] md:top-[5%]" />
+            </div>
+            <img src={b_01_image} alt="Platform Illustration" />
           </div>
           <div className="flex w-full justify-start ">
-            <div className="max-w-sm space-y-6  ">
+            <div className="max-w-sm space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
               </h1>
@@ -192,20 +186,20 @@ const Partner = () => {
         </div>
         <div
           className={twMerge(
-            "flex flex-col items-center justify-center gap-12 md:flex-row",
-            MAX_W_CLASS,
-            "max-w-[512px] sm:max-w-[580px] md:max-w-8xl"
+            "wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row"
           )}
         >
-          <div className="flex w-full flex-col items-center justify-center md:flex-row">
+          <div className="relative flex w-full flex-col items-center justify-center md:flex-row">
+            <img src={c_01_image} alt="Reward Illustration" />
             <img
-              src={community_illustration_image}
-              alt="Reward Illustration"
-              className="w-full"
+              src={c_02_image}
+              alt=""
+              className="absolute animate-move-up-down2"
             />
+            <img src={c_03_image} alt="" className="absolute " />
           </div>
           <div className="flex w-full md:justify-end ">
-            <div className="max-w-md space-y-3 sm:space-y-6  ">
+            <div className="max-w-md space-y-3 sm:space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
               </h1>
@@ -219,7 +213,7 @@ const Partner = () => {
         </div>
       </div>
       <div className="bg-partner-background py-12 pt-0 sm:py-14 sm:pt-14 md:py-20 md:pt-20">
-        <div className={MAX_W_CLASS}>
+        <div className="wrapper">
           <div
             className="space-y-8 rounded-2xl p-5 md:space-y-10 md:rounded-3xl md:p-12 md:px-12"
             style={{ background: `url(${texture_background_image})` }}
@@ -229,12 +223,12 @@ const Partner = () => {
             </h1>
             <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
-                <div className="group-hover:pause flex animate-marquee gap-5">
+                <div className="group-hover:pause flex animate-[marquee_40s_linear_infinite] gap-5">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
                 </div>
-                <div className="group-hover:pause absolute top-0 ml-4 flex animate-marquee2 gap-5">
+                <div className="group-hover:pause absolute top-0 ml-4 flex animate-[marquee2_40s_linear_infinite] gap-5">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
@@ -245,12 +239,12 @@ const Partner = () => {
         </div>
       </div>
       <div
-        className="py-12   sm:py-16 md:py-24"
+        className="py-12 sm:py-16 md:py-24"
         style={{ background: `url(${texture_background_image})` }}
       >
-        <div className={MAX_W_CLASS}>
+        <div className="wrapper">
           <div className="flex flex-col items-center justify-center rounded-2xl bg-gradient-partner-hero p-12 sm:p-16 md:rounded-[32px]">
-            <h1 className="mb-4 text-center font-[Millik]  text-2xl leading-[120%] md:text-3xl">
+            <h1 className="mb-4 text-center font-[Millik] text-2xl leading-[120%] md:text-3xl">
               Become a Treasure Create Partner
             </h1>
             <p className="text-center text-sm leading-[160%] sm:text-xl lg:text-2xl">
