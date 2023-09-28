@@ -216,7 +216,7 @@ const Partner = () => {
         <div className="wrapper">
           <div
             className="space-y-8 rounded-2xl p-5 md:space-y-10 md:rounded-3xl md:p-12 md:px-12"
-            style={{ background: `url(${texture_background_image})` }}
+            // style={{ background: `url(${texture_background_image})` }}
           >
             <h1 className="pt-4 text-center font-[Millik] text-xl sm:text-start md:pt-0 md:text-3xl">
               Testimonials
@@ -238,10 +238,7 @@ const Partner = () => {
           </div>
         </div>
       </div>
-      <div
-        className="py-12 sm:py-16 md:py-24"
-        style={{ background: `url(${texture_background_image})` }}
-      >
+      <div className="bg-[url(/img/illustrations/texture_background.png)] bg-cover py-12 sm:py-16 md:py-24">
         <div className="wrapper">
           <div className="flex flex-col items-center justify-center rounded-2xl bg-gradient-partner-hero p-12 sm:p-16 md:rounded-[32px]">
             <h1 className="mb-4 text-center font-[Millik] text-2xl leading-[120%] md:text-3xl">
