@@ -214,10 +214,7 @@ const Partner = () => {
       </div>
       <div className="bg-partner-background py-12 pt-0 sm:py-14 sm:pt-14 md:py-20 md:pt-20">
         <div className="wrapper">
-          <div
-            className="space-y-8 rounded-2xl p-5 md:space-y-10 md:rounded-3xl md:p-12 md:px-12"
-            // style={{ background: `url(${texture_background_image})` }}
-          >
+          <div className="space-y-8 rounded-2xl bg-[url(/img/illustrations/texture_background.png)] p-5 md:space-y-10 md:rounded-3xl md:p-12 md:px-12">
             <h1 className="pt-4 text-center font-[Millik] text-xl sm:text-start md:pt-0 md:text-3xl">
               Testimonials
             </h1>
