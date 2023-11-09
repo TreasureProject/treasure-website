@@ -658,7 +658,7 @@ export default function Build() {
                 </div>
               </div>
               <NewCard
-                title="Ecosystem Careers"
+                title="Careers"
                 description="Join the team at Treasure and our games to build the future of gaming in web3."
                 image={TreasureTeamImg}
               >

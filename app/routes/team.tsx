@@ -1,6 +1,6 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
-import { DiscordIcon, TwitterIcon } from "~/components/Icons";
+import { DiscordIcon, XIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
 import {
   teamCoFounders,
@@ -72,7 +72,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <TwitterIcon className="h-4 w-4 text-twitter sm:h-6 sm:w-6 md:h-8" />
+              <XIcon className="h-4 w-4 text-twitter sm:h-6 sm:w-6 md:h-8" />
             </a>
           ) : null}
           {member.discordLink ? (

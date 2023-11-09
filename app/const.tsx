@@ -159,7 +159,7 @@ import {
   GuildsIcon,
   InteropIcon,
   MagicLogoIcon,
-  TwitterIcon,
+  XIcon,
   UsersIcon,
 } from "~/components/Icons";
 
@@ -836,15 +836,8 @@ export const IndexCTA = [
     name: "Games",
     description: "Games powered by Treasure through MAGIC.",
     icon: <CartridgesIcon className="h-8 w-8" aria-hidden="true" />,
-    href: "/games",
-    isExternal: false,
-  },
-  {
-    name: "Interoperability",
-    description: "Experience the power of interconnected gaming.",
-    icon: <InteropIcon className="h-8 w-8" aria-hidden="true" />,
-    href: "/interoperability",
-    isExternal: false,
+    href: "https://app.treasure.lol/",
+    isExternal: true,
   },
   {
     name: "Platform",
@@ -890,7 +883,7 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Apply for Partnership",
+        name: "Apply to Partner",
         href: "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
         isExternal: true,
       },
@@ -898,21 +891,15 @@ export const navigation = [
   },
   {
     name: "Games",
-    href: "/games",
-    isExternal: false,
-    group: "Discover",
-  },
-  {
-    name: "Interoperability",
-    href: "/interoperability",
-    isExternal: false,
-    group: "Discover",
+    href: "https://app.treasure.lol/games",
+    isExternal: true,
+    group: "Play",
   },
   {
     name: "Platform",
     href: "https://app.treasure.lol",
     isExternal: true,
-    group: "Discover",
+    group: "Play",
   },
   {
     name: "About",
@@ -953,8 +940,8 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Ecosystem Careers",
-        href: "https://treasuredao.pallet.com/jobs",
+        name: "Careers",
+        href: "https://jobs.treasure.lol/",
         isExternal: true,
       },
       {
@@ -1133,9 +1120,9 @@ export const socials = [
     icon: (props: { className?: string }) => <DiscordIcon {...props} />,
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/Treasure_DAO",
-    icon: (props: { className?: string }) => <TwitterIcon {...props} />,
+    name: "X",
+    href: "https://x.com/Treasure_DAO",
+    icon: (props: { className?: string }) => <XIcon {...props} />,
   },
 ];
 

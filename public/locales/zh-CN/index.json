@@ -1,7 +1,7 @@
 {
   "common": {
     "Learn": "学习",
-    "Discover": "发现",
+    "Play": "玩",
     "Build": "构建",
     "Build with Treasure": "使用Treasure构建",
     "Contribute": "贡献",
@@ -19,7 +19,7 @@
     "What is MAGIC?": "什么是MAGIC?",
     "About Treasure": "关于Treasure",
     "Blog": "博客",
-    "Ecosystem Careers": "生态职业",
+    "Careers": "生态职业",
     "Snapshot": "快照",
     "Open Source": "开源",
     "About": "关于",
@@ -32,7 +32,7 @@
     "Community": "社区",
     "Infrastructure": "基础设施",
     "Why Treasure": "为什么选择Treasure",
-    "Apply for Partnership": "申请合作",
+    "Apply to Partner": "申请合作",
     "Brand Assets": "品牌资产",
     "Governance Forum": "治理论坛",
     "Vote on Snapshot": "在快照上投票",
