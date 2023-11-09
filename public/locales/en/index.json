@@ -1,7 +1,7 @@
 {
   "common": {
     "Learn": "Learn",
-    "Discover": "Discover",
+    "Play": "Play",
     "Build": "Build",
     "Build with Treasure": "Build with Treasure",
     "Contribute": "Contribute",
@@ -19,7 +19,7 @@
     "What is MAGIC?": "What is MAGIC?",
     "About Treasure": "About Treasure",
     "Blog": "Blog",
-    "Ecosystem Careers": "Ecosystem Careers",
+    "Careers": "Careers",
     "Snapshot": "Snapshot",
     "Open Source": "Open Source",
     "About": "About",
@@ -32,7 +32,7 @@
     "Community": "Community",
     "Infrastructure": "Infrastructure",
     "Why Treasure": "Why Treasure",
-    "Apply for Partnership": "Apply for Partnership",
+    "Apply to Partner": "Apply to Partner",
     "Brand Assets": "Brand Assets",
     "Governance Forum": "Governance Forum",
     "Vote on Snapshot": "Vote on Snapshot",
@@ -40,7 +40,7 @@
     "Guilds": "Guilds",
     "Community Initiatives": "Community Initiatives",
     "Talent": "Talent",
-    "MagicSwap": "MagicSwap",
+    "Magicswap": "Magicswap",
     "MAGIC-ETH LP": "MAGIC-ETH LP",
     "Balancer Crystals": "Balancer Crystals",
     "Platform": "Platform"
