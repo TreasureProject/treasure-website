@@ -376,7 +376,7 @@ export default function Build() {
                       <li className="flex items-center space-x-2.5">
                         <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
                         <p className="text-base sm:text-xl">
-                          Tap into powerful cross-game trading with MagicSwap
+                          Tap into powerful cross-game trading with Magicswap
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
