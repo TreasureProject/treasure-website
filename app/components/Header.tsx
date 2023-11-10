@@ -37,19 +37,11 @@ export const Header = () => {
                 >
                   Newsletter
                 </a>
-                <a
-                  href="https://magicswap.lol/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="text-xs text-ruby-100 hover:text-ruby-200"
-                >
-                  MagicSwap
-                </a>
                 <button
                   onClick={openModal}
                   className="text-xs text-ruby-100 hover:text-ruby-200"
                 >
-                  Buy MAGIC
+                  Get MAGIC
                 </button>
               </div>
               <div className="flex space-x-6">
@@ -193,10 +185,12 @@ export const Header = () => {
             </Popover.Group>
             <div className="absolute right-4 hidden items-center sm:right-8 xl:right-12 xl:flex xl:space-x-8">
               <Link
-                to="/build"
-                className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"
+                to="https://app.treasure.lol"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-lg font-bold text-white hover:bg-ruby-1000"
               >
-                Build with Treasure
+                Play Now
               </Link>
             </div>
           </div>
@@ -320,10 +314,12 @@ export const Header = () => {
                 </nav>
                 <div className="mt-6 px-5">
                   <Link
-                    to="/build"
-                    className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"
+                    to="https://app.treasure.lol"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-lg font-bold text-white hover:bg-ruby-1000"
                   >
-                    Build with Treasure
+                    Play Now
                   </Link>
                 </div>
               </div>

@@ -1,8 +1,6 @@
-import { Badge } from "~/components/Badge";
 import { IndexCTA } from "~/const";
 import { NewTreasureStats } from "~/components/TreasureStats";
 
-import { Build } from "~/components/Build";
 import { Trans } from "react-i18next";
 
 import type { HeadersFunction, LinksFunction } from "@remix-run/node";
@@ -11,10 +9,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "@remix-run/react";
 import { Reviews } from "~/components/Reviews";
 import keenSliderCSS from "keen-slider/keen-slider.min.css";
-import { CartridgeSlider } from "~/components/CartridgeSlider";
-import { CTAButton } from "~/components/Button";
 import { Partners } from "~/components/Partners";
-import BuildFutureImg from "@/img/build-future.webp";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { BuildWithTreasure } from "~/components/BuildWithTreasure";
 import { Layout } from "~/components/Layout";
@@ -61,7 +56,7 @@ export default function Home() {
         <NewTreasureStats type="secondary" />
         <div className="relative bg-honey-100 py-6 lg:py-10">
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
-            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
               {IndexCTA.map((cta) => {
                 if (cta.isExternal) {
                   return (
@@ -101,6 +96,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/*
         <div className="relative bg-night-900 py-16 sm:py-24">
           <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
             <Badge
@@ -160,6 +156,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        */}
 
         <Reviews />
 

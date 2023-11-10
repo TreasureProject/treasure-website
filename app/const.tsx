@@ -95,20 +95,22 @@ import IconCommunityImg from "../public/img/icons/Community.svg";
 // Team
 import AnimenImg from "../public/img/pfps/Animen.png";
 import AntlionImg from "../public/img/pfps/Antlion.png";
-import ArchangImg from "../public/img/pfps/Archang.png";
-import BahamaImg from "../public/img/pfps/Bahama.png";
 import BasImg from "../public/img/pfps/Bas.png";
+import CrisisImg from "../public/img/pfps/Crisis.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
+import GinaImg from "../public/img/pfps/Gina.png";
 import JakeImg from "../public/img/pfps/Jake.png";
+import JenImg from "../public/img/pfps/Jen.png";
 import JohnImg from "../public/img/pfps/John.png";
+import JoshImg from "../public/img/pfps/Josh.png";
 import JpegapeImg from "../public/img/pfps/Jpegape.png";
 import JustCheeseImg from "../public/img/pfps/JustCheese.png";
 import KarelImg from "../public/img/pfps/Karel.png";
-import MaximeeImg from "../public/img/pfps/Maximee.png";
+import MouseDevImg from "../public/img/pfps/MouseDev.webp";
+import MulfImg from "../public/img/pfps/Mulf.png";
 import PeitaImg from "../public/img/pfps/Peita.png";
 import PreeminentImg from "../public/img/pfps/Preeminent.png";
-import PurpleSnowImg from "../public/img/pfps/PurpleSnow.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
 import T1DevImg from "../public/img/pfps/t1dev.png";
@@ -116,8 +118,9 @@ import RaeImg from "../public/img/pfps/Rae.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
-import CrisisImg from "../public/img/pfps/Crisis.png";
-import MdImg from "../public/img/pfps/MouseDev.webp";
+import RayhaanImg from "../public/img/pfps/Rayhaan.png";
+import WagingBullImg from "../public/img/pfps/Wagingbull.png";
+import YuriImg from "../public/img/pfps/Yuri.png";
 import DefaultImg from "../public/img/pfps/default.png";
 
 // Twitter
@@ -157,216 +160,257 @@ import {
   EconomyIcon,
   GlobalIcon,
   GuildsIcon,
-  InteropIcon,
   MagicLogoIcon,
-  TwitterIcon,
+  XIcon,
   UsersIcon,
 } from "~/components/Icons";
 
 export const teamMembers = [
-  {
-    name: "John Patten",
-    title: "Co-Founder",
-    discordLink: "https://discordapp.com/users/882718244920754238",
-    twitterLink: "https://twitter.com/jpatten__",
-    image: JohnImg,
-    team: "Co-Founders",
-  },
   {
     name: "Karel Vuong",
     title: "Co-Founder",
     discordLink: "https://discordapp.com/users/397537602988670977",
     twitterLink: "https://twitter.com/karelvuong",
     image: KarelImg,
-    team: "Co-Founders",
+    team: "Core",
   },
   {
-    name: "Peita",
-    title: "Economist | Product, Bridgeworld",
-    discordLink: "https://discordapp.com/users/349586001892605954",
-    twitterLink: "https://twitter.com/pugmassacre",
-    image: PeitaImg,
-    team: "Treasure",
+    name: "John Patten",
+    title: "Co-Founder",
+    discordLink: "https://discordapp.com/users/882718244920754238",
+    twitterLink: "https://twitter.com/jpatten__",
+    image: JohnImg,
+    team: "Core",
   },
   {
-    name: "Jpegape",
-    title: "Partnerships",
-    discordLink: "https://discordapp.com/users/757087781515165706",
-    twitterLink: "https://twitter.com/Jpegape1",
-    image: JpegapeImg,
-    team: "Treasure",
+    name: "Yuri Visser",
+    title: "CTO",
+    discordLink: "https://discordapp.com/users/554674918562988072",
+    twitterLink: "https://twitter.com/aphexyuri",
+    image: YuriImg,
+    team: "Core",
   },
   {
-    name: "Sambino",
-    title: "Marketing",
+    name: "Sam Udeschini",
+    title: "Head of Marketing",
     discordLink: "https://discordapp.com/users/864206375492124702",
     twitterLink: "https://twitter.com/sambino_eth",
     image: SambinoImg,
-    team: "Treasure",
+    team: "Core",
   },
   {
-    name: "t1dev",
-    title: "Technology",
-    discordLink: "https://discordapp.com/users/175078706136612864",
-    twitterLink: "https://twitter.com/pr0zy",
-    image: T1DevImg,
-    team: "Treasure",
+    name: "Gina Snoke",
+    title: "Head of Art",
+    discordLink: "https://discordapp.com/users/864206375492124702",
+    twitterLink: "https://twitter.com/GinaBlaster",
+    image: GinaImg,
+    team: "Core",
   },
   {
-    name: "Zak",
-    title: "Branding",
+    name: "Peita",
+    title: "Economist",
+    discordLink: "https://discordapp.com/users/1031951650392387695",
+    twitterLink: "https://twitter.com/pugmassacre",
+    image: PeitaImg,
+    team: "Ecosystem",
+  },
+  {
+    name: "Jpegape",
+    title: "Partnerships Lead",
+    discordLink: "https://discordapp.com/users/757087781515165706",
+    twitterLink: "https://twitter.com/Jpegape1",
+    image: JpegapeImg,
+    team: "Ecosystem",
+  },
+  {
+    name: "Zak Keen",
+    title: "Senior Brand Designer",
     discordLink: "https://discordapp.com/users/212333834501357578",
     twitterLink: "https://twitter.com/Z_Keen",
     image: ZakImg,
-    team: "Treasure",
+    team: "Creative",
   },
   {
-    name: "X_",
-    title: "Community",
+    name: "Jen Stuber",
+    title: "Community Manager",
+    discordLink: "https://discordapp.com/users/104317183521198080",
+    twitterLink: "https://twitter.com/JenniferStuber",
+    image: JenImg,
+    team: "Marketing",
+  },
+  {
+    name: "Josh",
+    title: "Live Ops Coordinator",
+    discordLink: "https://discordapp.com/users/851329871137472557",
+    twitterLink: "https://twitter.com/ReadyPlayerJay",
+    image: JoshImg,
+    team: "Marketing",
+  },
+  {
+    name: "X",
+    title: "Community Manager",
     discordLink: "https://discordapp.com/users/390264760748474368",
     twitterLink: "https://twitter.com/cxf_0886",
     image: XImg,
-    team: "Treasure",
+    team: "Marketing",
+  },
+  {
+    name: "Yen",
+    title: "Artist",
+    twitterLink: "https://twitter.com/YenLeeArt",
+    image: DefaultImg,
+    team: "Creative",
   },
   {
     name: "Rae",
-    title: "Operations",
+    title: "People Operations Consultant",
     image: RaeImg,
-    team: "Treasure",
+    team: "Operations",
   },
   {
-    name: "SimMayor",
-    title: "Product",
+    name: "Simmayor",
+    title: "Product Manager",
     discordLink: "https://discordapp.com/users/366404971354390533",
     twitterLink: "https://twitter.com/SimMay0r",
     image: JakeImg,
-    team: "Platform",
+    team: "Product & Engineering",
   },
   {
     name: "Antlion",
-    title: "Development (Backend)",
+    title: "Backend Engineer",
     discordLink: "https://discordapp.com/users/397537602988670977",
     twitterLink: "https://twitter.com/0xAntlion",
     image: AntlionImg,
-    team: "Platform",
-  },
-  {
-    name: "Frannyverse",
-    title: "Development (Front-End)",
-    discordLink: "https://discordapp.com/users/766502243699523615",
-    twitterLink: "https://twitter.com/fr4nnyverse",
-    image: FrannyImg,
-    team: "Platform",
-  },
-  {
-    name: "Mouse Dev",
-    title: "Development (Solidity)",
-    discordLink: "https://discordapp.com/users/888112902266044436",
-    twitterLink: "https://twitter.com/_MouseDev ",
-    image: MdImg,
-    team: "Platform",
+    team: "Product & Engineering",
   },
   {
     name: "Rappzula",
-    title: "Development (Full-Stack)",
+    title: "Full-Stack Engineer",
     discordLink: "https://discordapp.com/users/690989750127165581",
     twitterLink: "https://twitter.com/0xrappzula",
     image: RappzulaImg,
-    team: "Platform",
+    team: "Product & Engineering",
+  },
+  {
+    name: "Mulf",
+    title: "Full-Stack Engineer",
+    discordLink: "https://discordapp.com/users/696481332158660698",
+    twitterLink: "https://twitter.com/0xMulf ",
+    image: MulfImg,
+    team: "Product & Engineering",
+  },
+  {
+    name: "Frannyverse",
+    title: "Front-End Engineer",
+    discordLink: "https://discordapp.com/users/766502243699523615",
+    twitterLink: "https://twitter.com/fr4nnyverse",
+    image: FrannyImg,
+    team: "Product & Engineering",
+  },
+  {
+    name: "wagingbull",
+    title: "Front-End Engineer",
+    discordLink: "https://discordapp.com/users/601936617820782592",
+    twitterLink: "https://twitter.com/waging_bull",
+    image: WagingBullImg,
+    team: "Product & Engineering",
+  },
+  {
+    name: "t1dev",
+    title: "Solidity Developer",
+    discordLink: "https://discordapp.com/users/175078706136612864",
+    twitterLink: "https://twitter.com/pr0zy",
+    image: T1DevImg,
+    team: "Product & Engineering",
+  },
+  {
+    name: "Crisis",
+    title: "Full-Stack Engineer",
+    discordLink: "https://discordapp.com/users/351558969568788482",
+    twitterLink: "https://twitter.com/crisidot",
+    image: CrisisImg,
+    team: "Product & Engineering",
+  },
+  {
+    name: "Vinny",
+    title: "Solidity Developer",
+    discordLink: "https://discordapp.com/users/938500876438487061",
+    twitterLink: "https://twitter.com/VinnyDev1",
+    image: VinnyImg,
+    team: "Product & Engineering",
+  },
+  {
+    name: "Mouse Dev",
+    title: "Solidity Developer",
+    discordLink: "https://discordapp.com/users/888112902266044436",
+    twitterLink: "https://twitter.com/_MouseDev ",
+    image: MouseDevImg,
+    team: "Product & Engineering",
   },
   {
     name: "jcheese",
-    title: "Development (Front-End)",
+    title: "Front-End Engineer",
     discordLink: "https://discordapp.com/users/353057125137645568",
     twitterLink: "https://twitter.com/jc_1917",
     image: JustCheeseImg,
-    team: "Platform",
+    team: "Product & Engineering",
   },
   {
     name: "Bas",
-    title: "UI/UX",
+    title: "Product Designer",
     image: BasImg,
-    team: "Platform",
+    team: "Creative",
     twitterLink: "https://twitter.com/bas_vdg",
   },
   {
     name: "ENT",
-    title: "UI/UX",
+    title: "Product Designer",
     discordLink: "https://discordapp.com/users/354679433853927445",
     twitterLink: "https://twitter.com/ENT1T7",
     image: Ent1T7Img,
-    team: "Platform",
-  },
-  {
-    name: "Vinny",
-    title: "Development (Backend & Solidity)",
-    discordLink: "https://discordapp.com/users/938500876438487061",
-    twitterLink: "https://twitter.com/VinnyDev1",
-    image: VinnyImg,
-    team: "Platform",
-  },
-  {
-    name: "Yen",
-    title: "Art",
-    twitterLink: "https://twitter.com/YenLeeArt",
-    image: DefaultImg,
-    team: "Platform",
-  },
-  {
-    name: "Crisis",
-    title: "Development",
-    discordLink: "https://discordapp.com/users/351558969568788482",
-    twitterLink: "https://twitter.com/crisidot",
-    image: CrisisImg,
-    team: "Smolverse",
+    team: "Creative",
   },
   {
     name: "Preeminent",
-    title: "Marketing",
+    title: "Producer",
     discordLink: "https://discordapp.com/users/797371848627191818",
     twitterLink: "https://twitter.com/mikelauofficial",
     image: PreeminentImg,
-    team: "Smolverse",
+    team: "Smol",
   },
   {
     name: "Animen",
-    title: "Art",
+    title: "Pixel Artist",
     discordLink: "https://discordapp.com/users/277435777783169024",
     image: AnimenImg,
-    team: "Smolverse",
+    team: "Smol",
   },
   {
-    name: "Archang",
-    title: "Community",
-    discordLink: "https://discordapp.com/users/803824281263538196",
-    twitterLink: "https://twitter.com/Archang01",
-    image: ArchangImg,
-    team: "Smolverse",
-  },
-  {
-    name: "PurpleSnow",
-    title: "Game Director",
-    discordLink: "https://discordapp.com/users/539546215399030814",
-    twitterLink: "https://twitter.com/purplezsnow",
-    image: PurpleSnowImg,
-    team: "Darkbright Studios",
+    name: "Rayhaan",
+    title: "Community Manager",
+    discordLink: "https://discordapp.com/users/240658497207926784",
+    twitterLink: "https://twitter.com/rayhaan_jay",
+    image: RayhaanImg,
+    team: "Smol",
   },
 ];
 
-export const teamCoFounders = teamMembers.filter(
-  (member) => member.team === "Co-Founders"
+export const teamCore = teamMembers.filter((member) => member.team === "Core");
+export const teamCreative = teamMembers.filter(
+  (member) => member.team === "Creative"
 );
-export const teamTreasure = teamMembers.filter(
-  (member) => member.team === "Treasure"
+export const teamMarketing = teamMembers.filter(
+  (member) => member.team === "Marketing"
 );
-export const teamPlatform = teamMembers.filter(
-  (member) => member.team === "Platform"
+export const teamProduct = teamMembers.filter(
+  (member) => member.team === "Product & Engineering"
 );
-export const teamSmolverse = teamMembers.filter(
-  (member) => member.team === "Smolverse"
+export const teamEcosystem = teamMembers.filter(
+  (member) => member.team === "Ecosystem"
 );
-export const teamGameStudio = teamMembers.filter(
-  (member) => member.team === "Game Studio"
+export const teamSmol = teamMembers.filter((member) => member.team === "Smol");
+export const teamOperations = teamMembers.filter(
+  (member) => member.team === "Operations"
 );
 
 export type MemberT = (typeof teamMembers)[number];
@@ -702,7 +746,7 @@ export const builds = [
   {
     name: "Leverage powerful infrastructure",
     description:
-      "Enrich your game’s experience through Treasure’s platform, Proof of Play framework, and MagicSwap.",
+      "Enrich your game’s experience through Treasure’s platform, Proof of Play framework, and Magicswap.",
 
     image: InfrastructureCardImg,
   },
@@ -791,8 +835,8 @@ export const infrastructures = [
     name: "AMM",
     icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
     description:
-      "MagicSwap powers the cross-game economy by supporting the trading of native tokens for games powererd by Treasure with each liquidity pool using MAGIC as the base pair.",
-    buttonDescription: "Visit MagicSwap",
+      "Magicswap powers the cross-game economy by supporting the trading of native tokens for games powererd by Treasure with each liquidity pool using MAGIC as the base pair.",
+    buttonDescription: "Visit Magicswap",
     href: "https://magicswap.treasure.lol",
   },
   {
@@ -836,15 +880,8 @@ export const IndexCTA = [
     name: "Games",
     description: "Games powered by Treasure through MAGIC.",
     icon: <CartridgesIcon className="h-8 w-8" aria-hidden="true" />,
-    href: "/games",
-    isExternal: false,
-  },
-  {
-    name: "Interoperability",
-    description: "Experience the power of interconnected gaming.",
-    icon: <InteropIcon className="h-8 w-8" aria-hidden="true" />,
-    href: "/interoperability",
-    isExternal: false,
+    href: "https://app.treasure.lol/",
+    isExternal: true,
   },
   {
     name: "Platform",
@@ -858,7 +895,7 @@ export const IndexCTA = [
   },
   {
     name: "AMM",
-    description: "MagicSwap powers the cross-game economy.",
+    description: "Magicswap powers the cross-game economy.",
     icon: <AMMIcon className="h-8 w-8" aria-hidden="true" />,
     href: "https://magicswap.lol/",
     isExternal: true,
@@ -872,7 +909,7 @@ export const navigation = [
       {
         name: "Build with Treasure",
         href: "/build",
-        isExternal: false,
+        isExternal: true,
       },
       {
         name: "Infrastructure",
@@ -890,7 +927,7 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Apply for Partnership",
+        name: "Apply to Partner",
         href: "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
         isExternal: true,
       },
@@ -898,21 +935,15 @@ export const navigation = [
   },
   {
     name: "Games",
-    href: "/games",
-    isExternal: false,
-    group: "Discover",
-  },
-  {
-    name: "Interoperability",
-    href: "/interoperability",
-    isExternal: false,
-    group: "Discover",
+    href: "https://app.treasure.lol/games",
+    isExternal: true,
+    group: "Play",
   },
   {
     name: "Platform",
     href: "https://app.treasure.lol",
     isExternal: true,
-    group: "Discover",
+    group: "Play",
   },
   {
     name: "About",
@@ -953,8 +984,8 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Ecosystem Careers",
-        href: "https://treasuredao.pallet.com/jobs",
+        name: "Careers",
+        href: "https://jobs.treasure.lol/",
         isExternal: true,
       },
       {
@@ -1133,9 +1164,9 @@ export const socials = [
     icon: (props: { className?: string }) => <DiscordIcon {...props} />,
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/Treasure_DAO",
-    icon: (props: { className?: string }) => <TwitterIcon {...props} />,
+    name: "X",
+    href: "https://x.com/Treasure_DAO",
+    icon: (props: { className?: string }) => <XIcon {...props} />,
   },
 ];
 
