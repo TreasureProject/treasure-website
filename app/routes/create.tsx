@@ -47,7 +47,7 @@ const ApplyNowButton = () => (
     rel="noreferrer"
     className="text-md mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-medium transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
   >
-    Apply now
+    Apply Now
   </a>
 );
 
@@ -120,7 +120,7 @@ const Partner = () => {
             <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-partner-placeholder md:rounded-[40px]">
               <video src={tc_intro_video} autoPlay muted />
             </div>
-            <p className="max-w-lg px-4 font-[Satoshi] text-sm font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
+            <p className="max-w-lg px-4 font-[Satoshi] text-base font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
               Welcome to Treasure Create, your gateway to web3 gaming! Join our
               exclusive creator program to champion Treasure games, boost your
               online presence, and explore unique opportunities in the web3
@@ -143,7 +143,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
               </h1>
-              <p className="sm:text-md font-[satoshi] text-sm font-light leading-[160%]">
+              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Join our exclusive content creator program to connect with over
                 150k players, access early playtests, and amplify your reach
                 through promotion on official Treasure channels.
@@ -176,7 +176,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
               </h1>
-              <p className="sm:text-md font-[satoshi] text-sm font-light leading-[160%]">
+              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Gain <span className="text-ruby-800">MAGIC</span> compensation,
                 exclusive in-game items, and priority beta access, celebrating
                 your dedication to Treasure games.
@@ -203,7 +203,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
               </h1>
-              <p className="sm:text-md font-[satoshi] text-sm font-light leading-[160%]">
+              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Immerse yourself in a vibrant creator community, connect with
                 game devs, participate in game nights and unique events, and
                 forge unforgettable gaming moments together!
