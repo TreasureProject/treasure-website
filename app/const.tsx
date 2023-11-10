@@ -172,7 +172,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/397537602988670977",
     twitterLink: "https://twitter.com/karelvuong",
     image: KarelImg,
-    team: "Leadership",
+    team: "Core",
   },
   {
     name: "John Patten",
@@ -180,7 +180,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/882718244920754238",
     twitterLink: "https://twitter.com/jpatten__",
     image: JohnImg,
-    team: "Leadership",
+    team: "Core",
   },
   {
     name: "Yuri Visser",
@@ -188,7 +188,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/554674918562988072",
     twitterLink: "https://twitter.com/aphexyuri",
     image: YuriImg,
-    team: "Leadership",
+    team: "Core",
   },
   {
     name: "Sam Udeschini",
@@ -196,7 +196,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/864206375492124702",
     twitterLink: "https://twitter.com/sambino_eth",
     image: SambinoImg,
-    team: "Leadership",
+    team: "Core",
   },
   {
     name: "Gina Snoke",
@@ -204,7 +204,7 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/864206375492124702",
     twitterLink: "https://twitter.com/GinaBlaster",
     image: GinaImg,
-    team: "Leadership",
+    team: "Core",
   },
   {
     name: "Peita",
@@ -395,9 +395,7 @@ export const teamMembers = [
   },
 ];
 
-export const teamLeadership = teamMembers.filter(
-  (member) => member.team === "Leadership"
-);
+export const teamCore = teamMembers.filter((member) => member.team === "Core");
 export const teamCreative = teamMembers.filter(
   (member) => member.team === "Creative"
 );
