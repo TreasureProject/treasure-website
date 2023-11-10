@@ -3,7 +3,7 @@ import { CTAButton } from "~/components/Button";
 import { DiscordIcon, XIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
 import {
-  teamLeadership,
+  teamCore,
   teamEcosystem,
   teamCreative,
   teamMarketing,
@@ -127,10 +127,10 @@ export default function Team() {
         <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Leadership
+              Core
             </p>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamLeadership.map((member) => (
+              {teamCore.map((member) => (
                 <TeamCard key={member.name} member={member} />
               ))}
             </div>

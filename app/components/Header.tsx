@@ -188,9 +188,9 @@ export const Header = () => {
                 to="https://app.treasure.lol"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"
+                className="inline-flex items-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-lg font-bold text-white hover:bg-ruby-1000"
               >
-                Start Playing!
+                Play Now
               </Link>
             </div>
           </div>
@@ -317,9 +317,9 @@ export const Header = () => {
                     to="https://app.treasure.lol"
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-base font-bold text-white hover:bg-ruby-1000"
+                    className="inline-flex w-full items-center justify-center space-x-2 rounded-lg border border-transparent bg-ruby-900 py-3.25 px-6.5 text-lg font-bold text-white hover:bg-ruby-1000"
                   >
-                    Start Playing!
+                    Play Now
                   </Link>
                 </div>
               </div>
