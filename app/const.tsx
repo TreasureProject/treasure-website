@@ -909,7 +909,7 @@ export const navigation = [
       {
         name: "Build with Treasure",
         href: "/build",
-        isExternal: true,
+        isExternal: false,
       },
       {
         name: "Infrastructure",
