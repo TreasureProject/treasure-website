@@ -26,8 +26,7 @@ import tile_05_mobile_image from "../../public/img/partner-components/tiles/TILE
 
 import TileGrid from "~/components/decoration/TileGrid";
 import { twMerge } from "tailwind-merge";
-import type {
-  MotionValue} from "framer-motion";
+import type { MotionValue } from "framer-motion";
 import {
   useScroll,
   useTransform,
