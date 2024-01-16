@@ -57,7 +57,7 @@
 	.st51{fill:url(#SVGID_00000163045677101985069840000008550584628226547869_);}
 	.st52{fill:url(#SVGID_00000014632988330122623400000015945842162239906741_);}
 	.st53{fill:url(#SVGID_00000043440860783668839670000005005706391165967028_);}
-	.st54{fill:none;stroke:#FFF5DD;stroke-width:10;stroke-miterlimit:10;}
+	.st54{fill:none;stroke:#FFF5DD;strokeWidth:10;stroke-miterlimit:10;}
 	.st55{fill:#DC2626;}
 	.st56{fill:#E6E7E8;}
 	.st57{fill:#CED0D3;}
@@ -354,7 +354,7 @@
 	.st348{fill:url(#SVGID_00000088844063551252743730000009801313183976553381_);}
 	.st349{fill:url(#SVGID_00000018212669559025912820000006649003750184528771_);}
 	.st350{opacity:0.6;fill:url(#SVGID_00000023960423343334211290000008755978622624220568_);}
-	.st351{fill:#A81A1A;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st351{fill:#A81A1A;stroke:#000000;strokeWidth:0.25;stroke-miterlimit:10;}
 	.st352{fill:url(#SVGID_00000053523829475806937050000003622018015444199819_);}
 	.st353{fill:url(#SVGID_00000021094879793260541650000004018875420173251216_);}
 	.st354{filter:url(#Adobe_OpacityMaskFilter_00000029011298005708705720000011582823479254637954_);}
@@ -399,13 +399,13 @@
 	.st393{opacity:0.8273;}
 	.st394{opacity:0.9136;}
 	.st395{fill:#FFFCF6;stroke:#FBD277;stroke-miterlimit:10;}
-	.st396{fill:#FFFCF6;stroke:#FBD277;stroke-width:0.6043;stroke-miterlimit:10;}
-	.st397{fill:#101827;stroke:#FBD277;stroke-width:0.8053;stroke-miterlimit:10;}
+	.st396{fill:#FFFCF6;stroke:#FBD277;strokeWidth:0.6043;stroke-miterlimit:10;}
+	.st397{fill:#101827;stroke:#FBD277;strokeWidth:0.8053;stroke-miterlimit:10;}
 	.st398{fill:#FDF4DF;stroke:#FBD277;stroke-miterlimit:10;}
 	.st399{fill:none;stroke:#FBD277;stroke-miterlimit:10;}
 	.st400{fill:#101827;stroke:#FBD277;stroke-miterlimit:10;}
 	.st401{fill:#282F3D;stroke:#404652;stroke-miterlimit:10;}
-	.st402{fill:none;stroke:#DD2626;stroke-width:5;stroke-miterlimit:10;}
+	.st402{fill:none;stroke:#DD2626;strokeWidth:5;stroke-miterlimit:10;}
 </style>
 <g id="Layer_2">
 </g>

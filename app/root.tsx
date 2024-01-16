@@ -21,11 +21,12 @@ import {
 } from "@remix-run/react";
 
 import styles from "./styles/tailwind.css";
+import newlandingStyles from "./styles/new-landing.css";
+import nProgressStyles from "./styles/nProgress.css";
 
 import { getDomainUrl } from "./utils/misc.server";
 import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
 import NProgress from "nprogress";
-import nProgressStyles from "./styles/nProgress.css";
 import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
 import { Layout } from "./components/Layout";
@@ -42,6 +43,7 @@ import { AppContextProvider } from "./context/App";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
   { rel: "stylesheet", href: nProgressStyles },
+  { rel: "stylesheet", href: newlandingStyles },
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
@@ -206,7 +208,7 @@ function App() {
         <ThemeHead ssrTheme={Boolean(data.theme)} />
       </head>
       <body
-        className="h-full bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
+        className="max-w-screen h-full overflow-x-hidden bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
         id="top"
       >
         <AppContextProvider>

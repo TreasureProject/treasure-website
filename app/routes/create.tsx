@@ -2,8 +2,6 @@ import { Layout } from "~/components/Layout";
 
 // Assets
 import { TreasureLogo } from "~/components/Icons";
-import game_tile_image from "../../public/img/illustrations/game_tiles.png";
-import game_tile_mobile_image from "../../public/img/illustrations/game_tiles_mobile.png";
 import texture_background_image from "../../public/img/illustrations/texture_background.png";
 import tc_intro_video from "../../public/img/TC_INTRO.mp4";
 
@@ -15,9 +13,27 @@ import c_01_image from "../../public/img/partner-components/C_01.png";
 import c_02_image from "../../public/img/partner-components/C_02.png";
 import c_03_image from "../../public/img/partner-components/C_03.png";
 import red_diamond_gif from "../../public/img/partner-components/red_diamond.gif";
+import tile_01_desktop_image from "../../public/img/partner-components/tiles/TILE_01_DESKTOP.png";
+import tile_02_desktop_image from "../../public/img/partner-components/tiles/TILE_02_DESKTOP.png";
+import tile_03_desktop_image from "../../public/img/partner-components/tiles/TILE_03_DESKTOP.png";
+import tile_04_desktop_image from "../../public/img/partner-components/tiles/TILE_04_DESKTOP.png";
+import tile_05_desktop_image from "../../public/img/partner-components/tiles/TILE_05_DESKTOP.png";
+import tile_01_mobile_image from "../../public/img/partner-components/tiles/TILE_01_MOBILE.png";
+import tile_02_mobile_image from "../../public/img/partner-components/tiles/TILE_02_MOBILE.png";
+import tile_03_mobile_image from "../../public/img/partner-components/tiles/TILE_03_MOBILE.png";
+import tile_04_mobile_image from "../../public/img/partner-components/tiles/TILE_04_MOBILE.png";
+import tile_05_mobile_image from "../../public/img/partner-components/tiles/TILE_05_MOBILE.png";
 
 import TileGrid from "~/components/decoration/TileGrid";
 import { twMerge } from "tailwind-merge";
+import type { MotionValue } from "framer-motion";
+import {
+  useScroll,
+  useTransform,
+  motion,
+  useMotionValueEvent,
+} from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const FORM_URL =
   "https://forms.clickup.com/9003025951/f/8c9yhgz-3182/QBO3G2H9GDHUXBZ7K5";
@@ -57,7 +73,7 @@ const TestimonialCard = ({
   testimonial: { text: string; name: string; twitter: string };
 }) => (
   <div className="flex w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
-    <p className="sm:text-md font-[Satoshi] text-sm leading-[160%] md:text-lg">
+    <p className="sm:text-md text-sm leading-[160%] md:text-lg">
       “{testimonial.text}“
     </p>
     <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
@@ -81,11 +97,26 @@ const TestimonialCard = ({
   </div>
 );
 
+function useParallax(value: MotionValue<number>, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
+
 const Partner = () => {
+  const DESKTOP_TILE_CLASS = "absolute left-0 hidden -translate-y-1/2 lg:block";
+  const MOBILE_TILE_CLASS =
+    "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.4] lg:hidden";
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: heroRef });
+  const y = useParallax(scrollYProgress, 100);
+  useMotionValueEvent(y, "change", (val) => console.log(val));
+
   return (
     <Layout>
       <div className=" w-full overflow-x-hidden bg-partner-background">
-        <div className="relative mb-24 w-full overflow-hidden bg-gradient-partner-hero">
+        <div
+          className="relative mb-24 w-full overflow-hidden bg-gradient-partner-hero"
+          ref={heroRef}
+        >
           <div className="wrapper">
             <div className="relative z-40 mt-14 flex flex-col items-center lg:items-start lg:pt-[240px] lg:pl-16">
               <h1 className="font-[Millik] text-[38px] sm:text-[42px] md:text-[64px] lg:leading-[80px]">
@@ -97,17 +128,58 @@ const Partner = () => {
               <ApplyNowButton />
             </div>
             <div className=" -20 absolute -right-1/2 top-[180%] w-screen -translate-x-1/2 -translate-y-1/2 sm:top-[140%] lg:top-[80%] lg:-right-16 lg:w-[960px] lg:translate-x-0 lg:translate-y-0">
+              {" "}
               <TreasureLogo className="absolute top-1/2 left-1/2 z-[25] w-16 -translate-x-1/2 -translate-y-1/2 lg:w-[120px]" />
               <TreasureLogo className="absolute top-1/2 left-1/2 w-[96px] -translate-x-1/2 -translate-y-1/2 animate-pulse opacity-75 blur-[28px] lg:w-[160px] lg:blur-[64px]" />
-              <img
-                src={game_tile_mobile_image}
+              <motion.img
+                src={tile_01_desktop_image}
                 alt=""
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.4] lg:hidden"
+                className={DESKTOP_TILE_CLASS}
               />
-              <img
-                src={game_tile_image}
-                alt="A selection of various Treasure Ecosystem games"
-                className="absolute left-0 hidden -translate-y-1/2 lg:block"
+              <motion.img
+                src={tile_02_desktop_image}
+                alt=""
+                className={DESKTOP_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_03_desktop_image}
+                alt=""
+                className={DESKTOP_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_04_desktop_image}
+                alt=""
+                className={DESKTOP_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_05_desktop_image}
+                alt=""
+                className={DESKTOP_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_01_mobile_image}
+                alt=""
+                className={MOBILE_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_02_mobile_image}
+                alt=""
+                className={MOBILE_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_03_mobile_image}
+                alt=""
+                className={MOBILE_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_04_mobile_image}
+                alt=""
+                className={MOBILE_TILE_CLASS}
+              />
+              <motion.img
+                src={tile_05_mobile_image}
+                alt=""
+                className={MOBILE_TILE_CLASS}
               />
             </div>
           </div>
@@ -138,7 +210,7 @@ const Partner = () => {
               <img src={a_01_image} alt="" className="animate-move-up-down" />
             </div>
           </div>
-          <div className="flex w-full md:justify-end ">
+          <div className="flex w-full md:justify-center ">
             <div className="max-w-md space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
@@ -157,7 +229,8 @@ const Partner = () => {
               <div className="absolute top-0 left-0 h-0 w-0 border-t-8 border-l-4 border-r-4 border-solid border-transparent"></div>
               <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
             </div>
-            <div className="flex-items-center absolute top-[23.5%] left-[9.5%] h-[46.5%] w-[60%] justify-center rounded-xl bg-gradient-partner-hero md:rounded-[18px]">
+            {/* This width here */}
+            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl border-2 border-[red] bg-gradient-partner-hero sm:border-[green] md:w-[58%] md:rounded-[16px] md:border-[yellow] lg:left-[11%] lg:h-[50%] lg:border-[pink]">
               <img
                 src={red_diamond_gif}
                 alt=""
@@ -169,9 +242,13 @@ const Partner = () => {
               </div>
               <div className="absolute top-[8%] right-[5%] z-10 h-[4%] w-[8%] animate-pulse2 rounded-full bg-[#396AF3] md:right-[3%] md:top-[5%]" />
             </div>
-            <img src={b_01_image} alt="Platform Illustration" />
+            <img
+              src={b_01_image}
+              className="translate-y-[5%] scale-[1.1] transform"
+              alt="Platform Illustration"
+            />
           </div>
-          <div className="flex w-full justify-start ">
+          <div className="flex w-full md:justify-center ">
             <div className="max-w-sm space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
@@ -198,7 +275,7 @@ const Partner = () => {
             />
             <img src={c_03_image} alt="" className="absolute " />
           </div>
-          <div className="flex w-full md:justify-end ">
+          <div className="flex w-full md:justify-center ">
             <div className="max-w-md space-y-3 sm:space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
@@ -220,12 +297,12 @@ const Partner = () => {
             </h1>
             <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
-                <div className="group-hover:pause flex animate-[marquee_40s_linear_infinite] gap-5">
+                <div className="group-hover:pause flex animate-[marquee_20s_linear_infinite] gap-5 sm:animate-[marquee_40s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
                 </div>
-                <div className="group-hover:pause absolute top-0 ml-4 flex animate-[marquee2_40s_linear_infinite] gap-5">
+                <div className="group-hover:pause animate-[marquee2_20s_linear_infinite absolute] top-0 ml-4 flex gap-5 sm:animate-[marquee2_40s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
