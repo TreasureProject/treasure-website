@@ -63,7 +63,7 @@ const ApplyNowButton = () => (
     rel="noreferrer"
     className="text-md mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-medium transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
   >
-    Apply now
+    Apply Now
   </a>
 );
 
@@ -192,7 +192,7 @@ const Partner = () => {
             <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-partner-placeholder md:rounded-[40px]">
               <video src={tc_intro_video} autoPlay muted />
             </div>
-            <p className="max-w-lg px-4 text-sm font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
+            <p className="max-w-lg px-4 font-[Satoshi] text-base font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
               Welcome to Treasure Create, your gateway to web3 gaming! Join our
               exclusive creator program to champion Treasure games, boost your
               online presence, and explore unique opportunities in the web3
@@ -215,7 +215,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
               </h1>
-              <p className="text-sm font-light leading-[160%] sm:text-lg">
+              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Join our exclusive content creator program to connect with over
                 150k players, access early playtests, and amplify your reach
                 through promotion on official Treasure channels.
@@ -253,7 +253,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
               </h1>
-              <p className="text-sm font-light leading-[160%] sm:text-lg">
+              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Gain <span className="text-ruby-800">MAGIC</span> compensation,
                 exclusive in-game items, and priority beta access, celebrating
                 your dedication to Treasure games.
@@ -280,7 +280,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
               </h1>
-              <p className="text-sm font-light leading-[160%] sm:text-lg">
+              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Immerse yourself in a vibrant creator community, connect with
                 game devs, participate in game nights and unique events, and
                 forge unforgettable gaming moments together!
@@ -291,10 +291,7 @@ const Partner = () => {
       </div>
       <div className="bg-partner-background py-12 pt-0 sm:py-14 sm:pt-14 md:py-20 md:pt-20">
         <div className="wrapper">
-          <div
-            className="space-y-8 rounded-2xl p-5 md:space-y-10 md:rounded-3xl md:p-12 md:px-12"
-            style={{ background: `url(${texture_background_image})` }}
-          >
+          <div className="space-y-8 rounded-2xl bg-[url(/img/illustrations/texture_background.png)] p-5 md:space-y-10 md:rounded-3xl md:p-12 md:px-12">
             <h1 className="pt-4 text-center font-[Millik] text-xl sm:text-start md:pt-0 md:text-3xl">
               Testimonials
             </h1>
@@ -315,15 +312,7 @@ const Partner = () => {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          background: `url(${texture_background_image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-        className="bg-cover bg-center bg-no-repeat py-12 sm:py-16 md:py-24"
-      >
+      <div className="bg-[url(/img/illustrations/texture_background.png)] bg-cover py-12 sm:py-16 md:py-24">
         <div className="wrapper">
           <div className="flex flex-col items-center justify-center rounded-2xl bg-gradient-partner-hero p-12 sm:p-16 md:rounded-[32px]">
             <h1 className="mb-4 text-center font-[Millik] text-2xl leading-[120%] md:text-3xl">

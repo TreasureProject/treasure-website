@@ -1,13 +1,15 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
-import { DiscordIcon, TwitterIcon } from "~/components/Icons";
+import { DiscordIcon, XIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
 import {
-  teamCoFounders,
-  teamTreasure,
-  teamPlatform,
-  teamSmolverse,
-  teamGameStudio,
+  teamCore,
+  teamEcosystem,
+  teamCreative,
+  teamMarketing,
+  teamProduct,
+  teamSmol,
+  teamOperations,
 } from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.webp";
@@ -72,7 +74,7 @@ const TeamCard = ({ member }: { member: MemberT }) => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <TwitterIcon className="h-4 w-4 text-twitter sm:h-6 sm:w-6 md:h-8" />
+              <XIcon className="h-4 w-4 text-twitter sm:h-6 sm:w-6 md:h-8" />
             </a>
           ) : null}
           {member.discordLink ? (
@@ -96,9 +98,9 @@ export default function Team() {
       <main>
         <div className="relative bg-honey-200 py-16 sm:py-24">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
-            <Badge name="Contributors" bgColor="bg-honey-100" />
+            <Badge name="Team" bgColor="bg-honey-100" />
             <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
-              Meet the builders behind Treasure
+              Meet the people behind Treasure
             </h2>
           </div>
           <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
@@ -125,50 +127,70 @@ export default function Team() {
         <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Founders
+              Core
             </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {teamCoFounders.map((member) => (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamCore.map((member) => (
                 <TeamCard key={member.name} member={member} />
               ))}
             </div>
           </div>
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Treasure
+              Ecosystem
             </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {teamTreasure.map((member) => (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamEcosystem.map((member) => (
                 <TeamCard key={member.name} member={member} />
               ))}
             </div>
           </div>
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Platform
+              Creative
             </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {teamPlatform.map((member) => (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamCreative.map((member) => (
                 <TeamCard key={member.name} member={member} />
               ))}
             </div>
           </div>
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Smolverse
+              Product & Engineering
             </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {teamSmolverse.map((member) => (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamProduct.map((member) => (
                 <TeamCard key={member.name} member={member} />
               ))}
             </div>
           </div>
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Game Studio
+              Marketing
             </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {teamGameStudio.map((member) => (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamMarketing.map((member) => (
+                <TeamCard key={member.name} member={member} />
+              ))}
+            </div>
+          </div>
+          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+              Smol
+            </p>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamSmol.map((member) => (
+                <TeamCard key={member.name} member={member} />
+              ))}
+            </div>
+          </div>
+          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+              Operations
+            </p>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamOperations.map((member) => (
                 <TeamCard key={member.name} member={member} />
               ))}
             </div>
@@ -182,11 +204,11 @@ export default function Team() {
                   Join the team
                 </p>
                 <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">
-                  Want to contribute to the Treasure ecosystem and have a ton of
-                  fun while doing it? We'd love to chat!
+                  Want to contribute to Treasure and have a ton of fun while
+                  doing it? We'd love to chat!
                 </p>
                 <div>
-                  <CTAButton as="a" href="https://jobs.lever.co/TreasureDAO">
+                  <CTAButton as="a" href="https://jobs.treasure.lol">
                     See open roles
                   </CTAButton>
                 </div>

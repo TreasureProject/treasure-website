@@ -16,11 +16,11 @@ export function Tweet({
   const animationDelay = useMemo(() => {
     const possibleAnimationDelays = [
       "0s",
+      "0.1s",
       "0.15s",
       "0.25s",
-      "0.35s",
-      "0.45s",
-      "0.55s",
+      "0.3s",
+      "0.4s",
     ];
     return possibleAnimationDelays[
       Math.floor(Math.random() * possibleAnimationDelays.length)
