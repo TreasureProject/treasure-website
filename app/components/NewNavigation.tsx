@@ -136,17 +136,25 @@ const dropdownItems: DropDownItems[] = [
 ];
 
 const Dropdown = ({ label, items }: DropDownItems) => (
-  <RDM.Root>
-    <RDM.Trigger className="relative flex h-9 items-center gap-2.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10">
-      {label}
-      <ChevronDownIcon className="w-3 data-[-state=open]:rotate-180" />
+  <RDM.Root key={label}>
+    <RDM.Trigger
+      asChild
+      className="relative flex h-9 cursor-pointer  rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
+    >
+      <div className="flex items-center gap-2.5">
+        {label}
+        <ChevronDownIcon className="w-3 data-[-state=open]:rotate-180" />
+      </div>
     </RDM.Trigger>
-    <RDM.Content className="mt-4 rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2">
+    <RDM.Content
+      key={label}
+      className="relative rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2"
+    >
       {items &&
         items.map((item, index) => (
           <RDM.Item
             className={twMerge(
-              "flex h-11  cursor-pointer items-center gap-3 rounded-md bg-transparent px-2.5 text-new-night-400 transition-colors focus:outline-none hover:bg-new-night-100/5 hover:text-new-night-100",
+              "flex h-11  cursor-pointer items-center gap-3 rounded-md bg-transparent px-2.5 text-new-night-400 backdrop-blur-lg transition-colors focus:outline-none hover:bg-new-night-100/5 hover:text-new-night-100",
               item.type === "external" && "justify-between"
             )}
             key={index}
@@ -161,7 +169,7 @@ const Dropdown = ({ label, items }: DropDownItems) => (
 
 const NewNavigation = () => {
   const SOCIAL_LINK_CLASS =
-    "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5 hover:text-new-night-100 text-new-night-400 flex cursor-pointer items-center rounded-md transition-colors ";
+    "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5  text-new-night-100 flex cursor-pointer items-center rounded-md transition-colors ";
   const MOBILE_ITEM_CLASS =
     "hover:bg-new-night-100/10 h-10 w-full cursor-pointer rounded-lg px-4 text-start font-bold text-white transition-colors";
 
@@ -170,7 +178,7 @@ const NewNavigation = () => {
   return (
     <div
       className={twMerge(
-        "fixed top-0 left-1/2 z-40 mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-0 lg:p-6",
+        "justify-centerp-0 fixed top-0 left-1/2 z-40 mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center lg:p-6",
         openHamburger && "fixed h-screen max-h-screen lg:absolute lg:h-auto"
       )}
     >
@@ -183,7 +191,11 @@ const NewNavigation = () => {
             {dropdownItems.map((item, index) => {
               if (item.items) {
                 return (
-                  <Dropdown key={index} label={item.label} items={item.items} />
+                  <Dropdown
+                    key={item.label}
+                    label={item.label}
+                    items={item.items}
+                  />
                 );
               }
               return (
