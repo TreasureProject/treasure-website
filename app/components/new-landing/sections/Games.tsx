@@ -30,6 +30,7 @@ import TOE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_ToE
 
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
+import { set } from "nprogress";
 
 const games = [
   {
@@ -92,11 +93,25 @@ const Games = () => {
       />
 
       {/* Carousel container */}
-      <div className="relative z-10 mb-20 flex cursor-pointer gap-12">
+      <div className="relative z-10 mb-20 flex h-[600px] cursor-pointer gap-12 transition-all">
         {games.map((game) => (
           <div
-            className="h-[600px] w-[416px] min-w-[416px] overflow-hidden rounded-2xl border border-night-100/40"
+            className={twMerge(
+              "absolute h-[600px] w-[416px] min-w-[416px] overflow-hidden rounded-2xl border border-night-100/40",
+              activeGame === games.indexOf(game) && "scale-110"
+            )}
+            style={{
+              left: `${
+                (games.indexOf(game) - activeGame) * 416 +
+                games.indexOf(game) * 32
+              }px`,
+            }}
             key={game.name}
+            onClick={() => {
+              if (!(activeGame === games.indexOf(game))) {
+                setActiveGame(games.indexOf(game));
+              }
+            }}
           >
             <img
               src={game.cover}
