@@ -11,7 +11,6 @@ import Games from "~/components/new-landing/sections/Games";
 import Ctas from "~/components/new-landing/sections/Ctas";
 import Bridgeworld from "~/components/new-landing/sections/Bridgeworld";
 import Chain from "~/components/new-landing/sections/Chain";
-import Platform from "~/components/new-landing/sections/Platform";
 
 export const headers: HeadersFunction = commonHeaders;
 
