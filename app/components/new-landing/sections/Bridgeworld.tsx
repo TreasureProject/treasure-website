@@ -39,7 +39,7 @@ const Bridgeworld = () => {
         <div className="absolute top-1/2 left-[35%] z-10 aspect-square min-w-[800px] max-w-[880px] -translate-x-1/2 -translate-y-1/2 sm:left-[45%] md:w-full lg:max-w-[1040px] xl:left-0 xl:w-[72%] xl:max-w-none xl:-translate-x-1/4">
           <div className="translate-y-[72px] xl:-translate-y-0">
             <div
-              className="t relative h-max"
+              className="t relative h-max 2xl:min-w-[1100px]"
               style={{
                 transform: `translateY(-${scrollPercent * 0.2}%)`,
               }}

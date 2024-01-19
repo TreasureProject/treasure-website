@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Link } from "@remix-run/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 import BEACON_COVER from "~/../public/img/new-landing/game-covers/The_Beacon_Game_Cover.png";
 import BEACON_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.png";
@@ -31,6 +35,12 @@ import TOE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_ToE
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { set } from "nprogress";
+
+interface game {
+  name: string;
+  cover: string;
+  background: string;
+}
 
 const games = [
   {
@@ -79,6 +89,28 @@ const games = [
     background: TOE_BACKGROUND,
   },
 ];
+const gameByIndex = (index: number): game => games[index % games.length];
+const scaleStep = 0.15;
+
+function getSlideScale(progress: number) {
+  return 1 - Math.abs(progress) * scaleStep;
+}
+
+function getTranslateOffsetStep(progress: number) {
+  if (progress < 1) {
+    return 0;
+  }
+  return 1 - getSlideScale(progress) + getTranslateOffsetStep(progress - 1);
+}
+
+function getTranslateOffset(progress: number) {
+  if (progress < 1) {
+    return 0;
+  }
+  return (
+    (1 - getSlideScale(progress)) * 0.5 + getTranslateOffsetStep(progress - 1)
+  );
+}
 
 const Games = () => {
   const [activeGame, setActiveGame] = useState<number>(0);
@@ -93,34 +125,64 @@ const Games = () => {
       />
 
       {/* Carousel container */}
-      <div className="relative z-10 mb-20 flex h-[600px] cursor-pointer gap-12 transition-all">
-        {games.map((game) => (
-          <div
-            className={twMerge(
-              "absolute h-[600px] w-[416px] min-w-[416px] overflow-hidden rounded-2xl border border-night-100/40",
-              activeGame === games.indexOf(game) && "scale-110"
-            )}
-            style={{
-              left: `${
-                (games.indexOf(game) - activeGame) * 416 +
-                games.indexOf(game) * 32
-              }px`,
-            }}
-            key={game.name}
-            onClick={() => {
-              if (!(activeGame === games.indexOf(game))) {
-                setActiveGame(games.indexOf(game));
+      {/* <div className="relative z-50  bg-blue-50/10">
+        <Swiper
+          modules={[Keyboard]}
+          keyboard={{
+            enabled: true,
+          }}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          watchSlidesProgress={true}
+          spaceBetween={10}
+          slidesPerView="auto"
+          onProgress={(swiper) => {
+            const zIndexMax = swiper.slides.length;
+            for (let i = 0; i < swiper.slides.length; i++) {
+              const slideEl = swiper.slides[i];
+
+              const slideProgress = swiper.slides[i].progress;
+              const absProgress = Math.abs(slideProgress);
+              const progressSign =
+                absProgress === 0 ? 0 : Math.sign(slideProgress);
+              const translate = `${
+                progressSign * getTranslateOffset(absProgress) * 100
+              }%`;
+
+              const scale = getSlideScale(slideProgress);
+              const zIndex = zIndexMax - Math.abs(Math.round(slideProgress));
+
+              slideEl.style.transform = `translateX(${translate}) scale(${scale})`;
+              slideEl.style.zIndex = String(zIndex);
+              if (absProgress > 3) {
+                slideEl.style.opacity = "0";
+              } else {
+                slideEl.style.opacity = "1";
               }
-            }}
-          >
-            <img
-              src={game.cover}
-              alt="Cover"
-              className="h-full w-full object-cover object-center"
-            />
-          </div>
-        ))}
-      </div>
+            }
+          }}
+        >
+          {Array.from({ length: 40 }).map((_, i) => {
+            return (
+              <SwiperSlide key={i}>
+                <a
+                  className="aspect-square w-5 rounded-2xl border-2 border-new-night-100/10 bg-red-50 p-4"
+                  href="/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                   <img
+                  className="h-full w-full object-cover object-center"
+                  alt={gameByIndex[i].name}
+                  src={gameByIndex[i].cover}
+                /> *
+                </a>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div> */}
 
       {/* Navigation dots */}
       <div className="container relative z-10  flex w-full items-center justify-center gap-2">

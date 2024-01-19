@@ -6,11 +6,12 @@ import {
   ChevronDownIcon,
   ExternalIcon,
   HamburgerIcon,
+  DiscordIcon,
+  TwitterIcon,
   TwitchIcon,
   YoutubeIcon,
 } from "./new-landing/misc/Icons";
 import { twMerge } from "tailwind-merge";
-import { DiscordIcon, TwitterIcon } from "./new-landing/misc/Icons";
 import Button from "./new-landing/Button";
 import { Link } from "@remix-run/react";
 import { SOCIAL } from "./new-landing/misc/const";
@@ -135,38 +136,6 @@ const dropdownItems: DropDownItems[] = [
   },
 ];
 
-const Dropdown = ({ label, items }: DropDownItems) => (
-  <RDM.Root key={label}>
-    <RDM.Trigger
-      asChild
-      className="relative flex h-9 cursor-pointer  rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
-    >
-      <div className="flex items-center gap-2.5">
-        {label}
-        <ChevronDownIcon className="w-3 data-[-state=open]:rotate-180" />
-      </div>
-    </RDM.Trigger>
-    <RDM.Content
-      key={label}
-      className="relative rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2"
-    >
-      {items &&
-        items.map((item, index) => (
-          <RDM.Item
-            className={twMerge(
-              "flex h-11  cursor-pointer items-center gap-3 rounded-md bg-transparent px-2.5 text-new-night-400 backdrop-blur-lg transition-colors focus:outline-none hover:bg-new-night-100/5 hover:text-new-night-100",
-              item.type === "external" && "justify-between"
-            )}
-            key={index}
-          >
-            {item.label}
-            {item.type === "external" && <ExternalIcon className="w-3" />}
-          </RDM.Item>
-        ))}
-    </RDM.Content>
-  </RDM.Root>
-);
-
 const NewNavigation = () => {
   const SOCIAL_LINK_CLASS =
     "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5  text-new-night-100 flex cursor-pointer items-center rounded-md transition-colors ";
@@ -191,11 +160,32 @@ const NewNavigation = () => {
             {dropdownItems.map((item, index) => {
               if (item.items) {
                 return (
-                  <Dropdown
+                  <button
+                    className="group relative flex h-9 cursor-pointer items-center gap-2.5  rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
                     key={item.label}
-                    label={item.label}
-                    items={item.items}
-                  />
+                  >
+                    {item.label}
+                    <ChevronDownIcon className="w-3 transition-transform group-hover:-rotate-180" />
+                    <div className="absolute top-0 left-0 hidden pt-[72px] group-hover:block">
+                      <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-lg">
+                        {item.items &&
+                          item.items.map((item, index) => (
+                            <div
+                              className={twMerge(
+                                "flex h-11  cursor-pointer items-center gap-3 whitespace-nowrap rounded-md bg-transparent px-2.5 text-new-night-400 transition-colors focus:outline-none hover:bg-new-night-100/5 hover:text-new-night-100",
+                                item.type === "external" && "justify-between"
+                              )}
+                              key={index}
+                            >
+                              {item.label}
+                              {item.type === "external" && (
+                                <ExternalIcon className="w-3" />
+                              )}
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  </button>
                 );
               }
               return (
@@ -218,7 +208,7 @@ const NewNavigation = () => {
               rel="noreferrer"
               className={SOCIAL_LINK_CLASS}
             >
-              <DiscordIcon className="w-5" />
+              <DiscordIcon className="w-6" />
             </a>
             <a
               href={SOCIAL.TWITTER}
@@ -226,7 +216,7 @@ const NewNavigation = () => {
               rel="noreferrer"
               className={SOCIAL_LINK_CLASS}
             >
-              <TwitterIcon className="w-5" />
+              <TwitterIcon className="w-6" />
             </a>
             <a
               href={SOCIAL.YOUTUBE}
@@ -234,7 +224,7 @@ const NewNavigation = () => {
               rel="noreferrer"
               className={SOCIAL_LINK_CLASS}
             >
-              <YoutubeIcon className="w-5" />
+              <YoutubeIcon className="w-6" />
             </a>
             <a
               href={SOCIAL.TWITCH}
@@ -242,7 +232,7 @@ const NewNavigation = () => {
               rel="noreferrer"
               className={twMerge(SOCIAL_LINK_CLASS, "hidden xl:flex")}
             >
-              <TwitchIcon className="w-5" />
+              <TwitchIcon className="w-6" />
             </a>
           </div>
           <Button color="ruby">Start Playing</Button>

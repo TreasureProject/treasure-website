@@ -1,5 +1,3 @@
-import React from "react";
-import { TreasureLogo } from "../Icons";
 import {
   DiscordIcon,
   ExternalIcon,
@@ -157,7 +155,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="relative bottom-0 right-0 flex flex-col gap-6 md:items-end">
+          <div className="relative bottom-0 right-0 flex flex-col gap-6 pl-24 md:items-end">
             <div className="w-max space-y-4">
               <Button color="ruby">Start Playing</Button>
               <Button color="ruby">Start Building</Button>

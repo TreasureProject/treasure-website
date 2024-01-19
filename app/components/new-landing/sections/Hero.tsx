@@ -23,8 +23,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <LandingCutOff className="absolute right-0 -bottom-[1px] z-20 w-[80px] sm:w-[128px]" />
-      <div className=" absolute inset-0 z-10 h-full w-full" />
+      <LandingCutOff className="absolute right-0 -bottom-[1px] z-20 w-[80px] text-new-light-background sm:w-[128px]" />
+      <div className=" absolute inset-0 z-10 h-full w-full bg-gradient-landing-hero" />
       <img
         src={SPLASHART_IMAGE}
         alt="Hero Background"

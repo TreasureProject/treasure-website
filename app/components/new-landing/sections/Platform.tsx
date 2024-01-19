@@ -13,6 +13,7 @@ const Platform = () => {
         background: "linear-gradient(149deg, #0D1420 49.11%, #DC2626 165.09%)",
       }}
     >
+      <div className="absolute top-0 left-0 h-24 w-full bg-gradient-to-t from-transparent to-new-night-1300" />
       <PlatformGrid className="absolute left-1/2 -bottom-4 h-[960px] -translate-x-1/2 xl:bottom-auto xl:top-0" />
       <div className="container relative z-10 flex flex-col gap-10  sm:gap-16 xl:flex-row xl:items-center xl:gap-40">
         <div className=" space-y-7">
@@ -50,7 +51,7 @@ const Platform = () => {
           <img
             src={UI_IMAGE}
             alt="Platform UI"
-            className="absolute  h-[342px] rounded-lg border border-white/40 sm:relative sm:h-auto sm:w-full sm:rounded-xl lg:rounded-2xl xl:w-auto"
+            className="absolute  h-[342px] rounded-lg border-2 border-white/40 sm:relative sm:h-auto sm:w-full sm:rounded-xl lg:rounded-2xl xl:w-auto"
           />
         </div>
       </div>

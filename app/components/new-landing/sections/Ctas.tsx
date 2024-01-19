@@ -4,16 +4,16 @@ import Button from "../Button";
 import {
   ExternalIcon,
   TwitchIcon,
+  DiscordIcon,
   TwitterIcon,
   YoutubeIcon,
 } from "../misc/Icons";
 import { SOCIAL } from "../misc/const";
-import { DiscordIcon } from "~/components/Icons";
 
 const Ctas = () => {
   return (
     <div className="relative bg-new-ruby-900  py-20">
-      <CtasCutOff className="absolute top-0 left-0 hidden w-[144px] -translate-y-[100%] 2xl:block" />
+      <CtasCutOff className="absolute top-[1px] left-0 hidden w-[144px] -translate-y-[100%] 2xl:block" />
       <div className=" container grid grid-cols-1 grid-rows-[auto_1px_auto] gap-y-16 gap-x-16 sm:grid-cols-[1fr_1px_1fr]  2xl:grid-cols-[1fr_1px_1fr_1px_1fr_1px_1fr] 2xl:gap-y-0">
         <div className="h-60 space-y-6 ">
           <h1 className="text-3xl font-bold text-new-night-100">

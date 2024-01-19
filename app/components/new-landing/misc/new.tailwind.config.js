@@ -47,6 +47,10 @@ module.exports = {
           },
         },
       },
+      backgroundImage: {
+        "gradient-landing-hero":
+          "linear-gradient(270deg, rgba(13, 20, 32, 0.00) 48.68%, rgba(13, 20, 32, 0.65) 100%)",
+      },
       keyframes: {
         slideDown: {
           from: { height: 0 },
