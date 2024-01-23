@@ -1178,12 +1178,12 @@ export const stats = [
   },
   {
     title: "Total marketplace volume",
-    value: "$271M",
+    value: "$280M",
     icon: IconMagicImg,
   },
   {
     title: "Games powered by Treasure",
-    value: "10+",
+    value: "15+",
     icon: IconGamesImg,
   },
   {
@@ -1193,7 +1193,7 @@ export const stats = [
   },
   {
     title: "Engaged player community",
-    value: "100k+",
+    value: "150k+",
     icon: IconCommunityImg,
   },
   {
