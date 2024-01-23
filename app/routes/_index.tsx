@@ -12,6 +12,7 @@ import Ctas from "~/components/new-landing/sections/Ctas";
 import Bridgeworld from "~/components/new-landing/sections/Bridgeworld";
 import Chain from "~/components/new-landing/sections/Chain";
 import Platform from "~/components/new-landing/sections/Platform";
+import BuildOnTreasure from "~/components/new-landing/sections/BuildOnTreasure";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -30,9 +31,9 @@ export default function Home() {
         <Hero />
         <Intro />
         <Partners />
-        <Games />
+        {/* <Games /> */}
         <Platform />
-        <Chain />
+        <BuildOnTreasure />
         <Bridgeworld />
         <Ctas />
       </main>

@@ -2,6 +2,14 @@
   @apply mx-auto max-w-9xl px-6 sm:px-12 md:px-[60px];
 }
 
+.landing-h1 {
+  @apply text-[32px] font-[635] leading-[105%] md:text-5xl;
+}
+
+.landing-h2 {
+  @apply text-[24px] font-[635] leading-[105%] md:text-[32px];
+}
+
 .swiper {
   width: 100%;
 }

@@ -2,7 +2,7 @@ import * as React from "react";
 import NewNavigation from "../NewNavigation";
 import Footer from "./Footer";
 
-const DEV = false;
+const DEV = true;
 
 export const NewLayout = ({ children }: { children: React.ReactNode }) => {
   return (

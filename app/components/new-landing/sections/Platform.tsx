@@ -8,7 +8,7 @@ import GEM_IMAGE from "~/../public/img/new-landing/platform/gem.png";
 const Platform = () => {
   return (
     <div
-      className=" relative border-b border-new-ruby-900 py-12 sm:py-20"
+      className=" relative overflow-hidden border-b border-new-ruby-900 py-12 sm:py-20"
       style={{
         background: "linear-gradient(149deg, #0D1420 49.11%, #DC2626 165.09%)",
       }}

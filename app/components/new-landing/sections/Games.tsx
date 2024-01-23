@@ -35,7 +35,6 @@ import TOE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_ToE
 
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
-import { set } from "nprogress";
 
 const games = [
   {
