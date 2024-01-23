@@ -125,7 +125,7 @@ const Games = () => {
       />
 
       {/* Carousel container */}
-      {/* <div className="relative z-50  bg-blue-50/10">
+      <div className="relative z-50  bg-blue-50/10">
         <Swiper
           modules={[Keyboard]}
           keyboard={{
@@ -172,17 +172,18 @@ const Games = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                   <img
-                  className="h-full w-full object-cover object-center"
-                  alt={gameByIndex[i].name}
-                  src={gameByIndex[i].cover}
-                /> *
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    alt={gameByIndex[i].name}
+                    src={gameByIndex[i].cover}
+                  />{" "}
+                  *
                 </a>
               </SwiperSlide>
             );
           })}
         </Swiper>
-      </div> */}
+      </div>
 
       {/* Navigation dots */}
       <div className="container relative z-10  flex w-full items-center justify-center gap-2">
