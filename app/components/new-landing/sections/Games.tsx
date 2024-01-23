@@ -36,12 +36,6 @@ import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { set } from "nprogress";
 
-interface game {
-  name: string;
-  cover: string;
-  background: string;
-}
-
 const games = [
   {
     name: "Beacon",
@@ -88,15 +82,16 @@ const games = [
     cover: TOE_COVER,
     background: TOE_BACKGROUND,
   },
-];
-const gameByIndex = (index: number): game => games[index % games.length];
+] as const;
+
+const gameByIndex = (index: number) => games[index % games.length];
 const scaleStep = 0.15;
 
 function getSlideScale(progress: number) {
   return 1 - Math.abs(progress) * scaleStep;
 }
 
-function getTranslateOffsetStep(progress: number) {
+function getTranslateOffsetStep(progress: number): number {
   if (progress < 1) {
     return 0;
   }
@@ -142,6 +137,8 @@ const Games = () => {
             for (let i = 0; i < swiper.slides.length; i++) {
               const slideEl = swiper.slides[i];
 
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
               const slideProgress = swiper.slides[i].progress;
               const absProgress = Math.abs(slideProgress);
               const progressSign =
@@ -174,10 +171,9 @@ const Games = () => {
                 >
                   <img
                     className="h-full w-full object-cover object-center"
-                    alt={gameByIndex[i].name}
-                    src={gameByIndex[i].cover}
-                  />{" "}
-                  *
+                    alt={gameByIndex(i).name}
+                    src={gameByIndex(i).cover}
+                  />
                 </a>
               </SwiperSlide>
             );
