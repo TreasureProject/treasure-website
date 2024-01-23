@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "@remix-run/react";
+import type { SwiperClass } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard } from "swiper/modules";
 import "swiper/css";
@@ -132,7 +133,7 @@ const Games = () => {
           watchSlidesProgress={true}
           spaceBetween={10}
           slidesPerView="auto"
-          onProgress={(swiper) => {
+          onProgress={(swiper: SwiperClass) => {
             const zIndexMax = swiper.slides.length;
             for (let i = 0; i < swiper.slides.length; i++) {
               const slideEl = swiper.slides[i];
