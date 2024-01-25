@@ -1,7 +1,12 @@
 import React from "react";
 import Button from "../Button";
 import { twMerge } from "tailwind-merge";
-import { ChevronRightIcon, DiscordIcon, TwitterIcon } from "../misc/Icons";
+import {
+  ChevronRightIcon,
+  DiscordIcon,
+  SteamIcon,
+  TwitterIcon,
+} from "../misc/Icons";
 import {
   Badge,
   BoTGraphicFour,
@@ -64,12 +69,12 @@ const BaseCard = ({
 }) => (
   <div
     className={twMerge(
-      "relative h-[300px] rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-6 sm:p-12 lg:h-[460px] lg:p-8 xl:p-12",
+      "relative  h-[460px] rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-6 sm:p-12 lg:p-8 xl:p-12",
       className
     )}
   >
     {children}
-    <h1 className="landing-h2 relative z-20 pb-4 text-new-ruby-900 sm:pb-6">
+    <h1 className="landing-h2 lg:max-w-auto relative z-20 max-w-[80%] pb-4 text-new-ruby-900 sm:pb-6">
       {title}
     </h1>
     <p className="relative z-20 max-w-[480px] text-lg leading-[150%] text-new-night-700">
@@ -87,7 +92,7 @@ const SocialCard = ({
   rank: number;
   username: string;
 }) => (
-  <div className="ml-4 h-[120px] w-[280px] space-y-3.5 rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-3.5 shadow-lg ">
+  <div className="ml-4 h-[120px] w-[280px] space-y-3.5 rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-3.5  ">
     <div className="flex gap-3">
       <img
         src={image}
@@ -112,7 +117,7 @@ const SocialCard = ({
         <DiscordIcon className="w-5" />
       </div>
       <div className="flex aspect-square h-8 items-center justify-center rounded-md border border-new-honey-1100">
-        <DiscordIcon className="w-5" />
+        <SteamIcon className="w-5" />
       </div>
     </div>
   </div>
@@ -146,7 +151,7 @@ const BuildOnTreasure = () => {
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <BoTGraphicOne className="absolute left-1/2 -top-[50%] w-[110%%] -translate-x-1/2 text-new-light-background  lg:-top-[10%]" />
+              <BoTGraphicOne className="absolute left-1/2 -bottom-[48%] w-[110%%] -translate-x-1/2 text-new-light-background  lg:-top-[10%]" />
             </div>
           </BaseCard>
           <BaseCard
@@ -155,7 +160,7 @@ const BuildOnTreasure = () => {
             className="col-span-4"
           >
             <div className="absolute inset-0 h-full overflow-hidden rounded-2xl">
-              <BoTGraphicTwo className="absolute bottom-0 left-1/2 w-full -translate-x-1/2  text-new-light-background opacity-50 lg:h-full lg:w-auto lg:opacity-100" />
+              <BoTGraphicTwo className="absolute -bottom-[5%] left-1/2  h-auto w-[180%] -translate-x-1/2 text-new-light-background lg:bottom-0 lg:h-full lg:w-auto " />
             </div>
           </BaseCard>
 
@@ -165,7 +170,7 @@ const BuildOnTreasure = () => {
             className="col-span-4"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <div className="absolute -bottom-10 z-20 sm:-bottom-8 lg:-bottom-[64px]">
+              <div className="absolute bottom-10 z-20 sm:-bottom-8 lg:-bottom-[64px] ">
                 <div className="space-y-4">
                   <div className="relative hidden overflow-x-hidden lg:flex">
                     <div className="flex animate-marquee whitespace-nowrap pl-4">
@@ -213,7 +218,7 @@ const BuildOnTreasure = () => {
                   </div>
                 </div>
               </div>
-              <BoTGraphicThree className="absolute left-1/2 w-[200%] -translate-x-1/2 lg:bottom-0 lg:h-[100%] lg:w-auto " />
+              <BoTGraphicThree className="absolute left-1/2 -bottom-10 w-[200%] -translate-x-1/2 lg:bottom-0 lg:h-[100%] lg:w-auto " />
             </div>
           </BaseCard>
           <BaseCard

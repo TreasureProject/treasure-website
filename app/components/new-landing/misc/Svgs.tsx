@@ -280,7 +280,7 @@ export const BoTGraphicOne = ({ className }: Props) => (
       fill="#FDEBC0"
       stroke="#FACE61"
     />
-    <g filter="url(#filter0_d_942_20547)">
+    <g filter="url(#filter0_d_1006_19463)">
       <circle
         cx="364.444"
         cy="364.389"
@@ -296,7 +296,7 @@ export const BoTGraphicOne = ({ className }: Props) => (
         stroke="#FACE61"
       />
     </g>
-    <g filter="url(#filter1_d_942_20547)">
+    <g filter="url(#filter1_d_1006_19463)">
       <circle
         cx="364.451"
         cy="364.452"
@@ -312,38 +312,38 @@ export const BoTGraphicOne = ({ className }: Props) => (
         stroke="#FACE61"
       />
     </g>
-    <g filter="url(#filter2_d_942_20547)">
+    <g filter="url(#filter2_d_1006_19463)">
       <circle cx="364.406" cy="364.406" r="45.5" fill="#FFFAEF" />
       <circle cx="364.406" cy="364.406" r="45" stroke="#FACE61" />
     </g>
-    <g filter="url(#filter3_d_942_20547)">
+    <g filter="url(#filter3_d_1006_19463)">
       <circle
         cx="364.406"
         cy="364.5"
         r="86"
         stroke="#FACE61"
-        stroke-dasharray="2 2"
-        shape-rendering="crispEdges"
+        strokeDasharray="2 2"
+        shapeRendering="crispEdges"
       />
     </g>
-    <g filter="url(#filter4_d_942_20547)">
+    <g filter="url(#filter4_d_1006_19463)">
       <circle
         cx="364.406"
         cy="364.5"
         r="186"
         stroke="#FACE61"
-        stroke-dasharray="2 2"
-        shape-rendering="crispEdges"
+        strokeDasharray="2 2"
+        shapeRendering="crispEdges"
       />
     </g>
-    <g filter="url(#filter5_d_942_20547)">
+    <g filter="url(#filter5_d_1006_19463)">
       <circle
         cx="364.406"
         cy="364.5"
         r="296"
         stroke="#FACE61"
-        stroke-dasharray="2 2"
-        shape-rendering="crispEdges"
+        strokeDasharray="2 2"
+        shapeRendering="crispEdges"
       />
     </g>
     <rect
@@ -371,7 +371,7 @@ export const BoTGraphicOne = ({ className }: Props) => (
       height="10.4446"
       rx="1.79562"
       transform="rotate(2.39774 9.6582 344.152)"
-      fill="#FEF0D0"
+      fill="#FACE61"
     />
     <rect
       x="478.221"
@@ -398,24 +398,24 @@ export const BoTGraphicOne = ({ className }: Props) => (
       height="10.4446"
       rx="1.79562"
       transform="rotate(2.39774 709.268 373.446)"
-      fill="#FDEBC0"
+      fill="#FACE61"
     />
     <path d="M364.906 409.5V403.75V398" stroke="#FACE61" />
     <path d="M364.906 330.5V324.75V319" stroke="#FACE61" />
     <path d="M319.656 364.25L325.406 364.25L331.156 364.25" stroke="#FACE61" />
     <path d="M398.656 364.25L404.406 364.25L410.156 364.25" stroke="#FACE61" />
-    <g filter="url(#filter6_d_942_20547)">
+    <g filter="url(#filter6_d_1006_19463)">
       <path
         d="M346.906 356.291V373.143C346.906 375.933 348.384 378.507 350.773 379.893L361.788 386.305C363.558 387.336 365.732 387.336 367.502 386.305L378.517 379.893C380.906 378.498 382.384 375.925 382.384 373.143V356.291C382.384 353.501 380.906 350.927 378.517 349.541L367.502 343.12C365.732 342.089 363.558 342.089 361.788 343.12L350.773 349.532C348.384 350.927 346.906 353.501 346.906 356.291Z"
         fill="#DC2626"
       />
     </g>
     <path
-      d="M378.097 364.27L374.05 362.884C372.563 362.373 371.455 361.108 371.146 359.557L369.436 351.048C369.393 350.832 369.204 350.676 368.98 350.676C368.757 350.676 368.568 350.832 368.525 351.048L366.815 359.557C366.506 361.108 365.397 362.373 363.911 362.884L359.864 364.27C359.675 364.331 359.555 364.513 359.555 364.712C359.555 364.912 359.684 365.085 359.864 365.154L363.911 366.541C365.397 367.052 366.506 368.317 366.815 369.868L368.525 378.376C368.568 378.593 368.757 378.749 368.98 378.749C369.204 378.749 369.393 378.593 369.436 378.376L371.146 369.868C371.455 368.317 372.563 367.052 374.05 366.541L378.097 365.154C378.286 365.094 378.406 364.912 378.406 364.712C378.406 364.513 378.277 364.34 378.097 364.27Z"
+      d="M378.097 364.271L374.05 362.884C372.563 362.373 371.455 361.108 371.146 359.557L369.436 351.048C369.393 350.832 369.204 350.676 368.98 350.676C368.757 350.676 368.568 350.832 368.525 351.048L366.815 359.557C366.506 361.108 365.397 362.373 363.911 362.884L359.864 364.271C359.675 364.331 359.555 364.513 359.555 364.712C359.555 364.912 359.684 365.085 359.864 365.154L363.911 366.541C365.397 367.052 366.506 368.317 366.815 369.868L368.525 378.377C368.568 378.593 368.757 378.749 368.98 378.749C369.204 378.749 369.393 378.593 369.436 378.377L371.146 369.868C371.455 368.317 372.563 367.052 374.05 366.541L378.097 365.154C378.286 365.094 378.406 364.912 378.406 364.712C378.406 364.513 378.277 364.34 378.097 364.271Z"
       fill="#FFFDF7"
     />
     <path
-      d="M356.323 356.464L357.749 356.949C358.273 357.131 358.668 357.573 358.771 358.128L359.373 361.134C359.39 361.212 359.459 361.264 359.536 361.264C359.613 361.264 359.682 361.212 359.699 361.134L360.301 358.128C360.413 357.582 360.799 357.131 361.332 356.949L362.758 356.464C362.827 356.438 362.87 356.377 362.87 356.308C362.87 356.239 362.827 356.178 362.758 356.152L361.332 355.667C360.808 355.485 360.413 355.043 360.301 354.489L359.699 351.482C359.682 351.404 359.613 351.352 359.536 351.352C359.459 351.352 359.39 351.404 359.373 351.482L358.771 354.489C358.66 355.034 358.273 355.485 357.749 355.667L356.323 356.152C356.254 356.178 356.211 356.239 356.211 356.308C356.211 356.377 356.254 356.438 356.323 356.464"
+      d="M356.323 356.464L357.749 356.949C358.273 357.131 358.668 357.573 358.771 358.128L359.373 361.134C359.39 361.212 359.459 361.264 359.536 361.264C359.613 361.264 359.682 361.212 359.699 361.134L360.301 358.128C360.413 357.582 360.799 357.131 361.332 356.949L362.758 356.464C362.827 356.438 362.87 356.378 362.87 356.308C362.87 356.239 362.827 356.178 362.758 356.152L361.332 355.667C360.808 355.485 360.413 355.043 360.301 354.489L359.699 351.482C359.682 351.404 359.613 351.352 359.536 351.352C359.459 351.352 359.39 351.404 359.373 351.482L358.771 354.489C358.66 355.035 358.273 355.485 357.749 355.667L356.323 356.152C356.254 356.178 356.211 356.239 356.211 356.308C356.211 356.378 356.254 356.438 356.323 356.464"
       fill="#FFFDF7"
     />
     <path
@@ -424,7 +424,7 @@ export const BoTGraphicOne = ({ className }: Props) => (
     />
     <defs>
       <filter
-        id="filter0_d_942_20547"
+        id="filter0_d_1006_19463"
         x="123.502"
         y="123.447"
         width="481.885"
@@ -448,21 +448,21 @@ export const BoTGraphicOne = ({ className }: Props) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_942_20547"
+          result="effect1_dropShadow_1006_19463"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_942_20547"
+          in2="effect1_dropShadow_1006_19463"
           result="shape"
         />
       </filter>
       <filter
-        id="filter1_d_942_20547"
+        id="filter1_d_1006_19463"
         x="231.477"
         y="231.478"
-        width="265.949"
-        height="269.948"
+        width="265.948"
+        height="269.949"
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
@@ -482,17 +482,17 @@ export const BoTGraphicOne = ({ className }: Props) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_942_20547"
+          result="effect1_dropShadow_1006_19463"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_942_20547"
+          in2="effect1_dropShadow_1006_19463"
           result="shape"
         />
       </filter>
       <filter
-        id="filter2_d_942_20547"
+        id="filter2_d_1006_19463"
         x="318.906"
         y="318.906"
         width="91"
@@ -516,17 +516,17 @@ export const BoTGraphicOne = ({ className }: Props) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_942_20547"
+          result="effect1_dropShadow_1006_19463"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_942_20547"
+          in2="effect1_dropShadow_1006_19463"
           result="shape"
         />
       </filter>
       <filter
-        id="filter3_d_942_20547"
+        id="filter3_d_1006_19463"
         x="277.906"
         y="278"
         width="173"
@@ -550,17 +550,17 @@ export const BoTGraphicOne = ({ className }: Props) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_942_20547"
+          result="effect1_dropShadow_1006_19463"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_942_20547"
+          in2="effect1_dropShadow_1006_19463"
           result="shape"
         />
       </filter>
       <filter
-        id="filter4_d_942_20547"
+        id="filter4_d_1006_19463"
         x="177.906"
         y="178"
         width="373"
@@ -584,17 +584,17 @@ export const BoTGraphicOne = ({ className }: Props) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_942_20547"
+          result="effect1_dropShadow_1006_19463"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_942_20547"
+          in2="effect1_dropShadow_1006_19463"
           result="shape"
         />
       </filter>
       <filter
-        id="filter5_d_942_20547"
+        id="filter5_d_1006_19463"
         x="67.9062"
         y="68"
         width="593"
@@ -618,21 +618,21 @@ export const BoTGraphicOne = ({ className }: Props) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_942_20547"
+          result="effect1_dropShadow_1006_19463"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_942_20547"
+          in2="effect1_dropShadow_1006_19463"
           result="shape"
         />
       </filter>
       <filter
-        id="filter6_d_942_20547"
+        id="filter6_d_1006_19463"
         x="346.906"
         y="342.347"
-        width="35.4785"
-        height="48.731"
+        width="35.4775"
+        height="48.7308"
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
@@ -652,12 +652,12 @@ export const BoTGraphicOne = ({ className }: Props) => (
         <feBlend
           mode="normal"
           in2="BackgroundImageFix"
-          result="effect1_dropShadow_942_20547"
+          result="effect1_dropShadow_1006_19463"
         />
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect1_dropShadow_942_20547"
+          in2="effect1_dropShadow_1006_19463"
           result="shape"
         />
       </filter>
@@ -1384,7 +1384,7 @@ export const BoTGraphicTwo = ({ className }: Props) => (
         width="80"
         height="84"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
@@ -1418,7 +1418,7 @@ export const BoTGraphicTwo = ({ className }: Props) => (
         width="35.4785"
         height="48.731"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
@@ -3515,7 +3515,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3549,7 +3549,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3583,7 +3583,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3617,7 +3617,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3651,7 +3651,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3685,7 +3685,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3719,7 +3719,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3753,7 +3753,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3787,7 +3787,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
@@ -3821,9 +3821,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -3855,9 +3855,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -3889,9 +3889,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -3923,9 +3923,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -3957,9 +3957,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -3991,9 +3991,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -4025,9 +4025,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -4059,9 +4059,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -4093,9 +4093,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -4127,9 +4127,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -4161,9 +4161,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="44.8311"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -4195,9 +4195,9 @@ export const BoTGraphicThree = ({ className }: Props) => (
         width="1014.89"
         height="451.479"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -6346,9 +6346,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6380,9 +6380,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6414,9 +6414,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6448,9 +6448,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6482,9 +6482,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6516,9 +6516,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6550,9 +6550,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6584,9 +6584,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6618,9 +6618,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6652,9 +6652,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6686,9 +6686,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6720,9 +6720,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6754,9 +6754,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6788,9 +6788,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6822,9 +6822,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6856,9 +6856,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6890,9 +6890,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6924,9 +6924,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6958,9 +6958,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -6992,9 +6992,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -7026,9 +7026,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -7060,9 +7060,9 @@ export const BoTGraphicFour = ({ className }: Props) => (
         width="44.8301"
         height="44.8306"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"
@@ -7096,7 +7096,7 @@ export const BoTGraphicFour = ({ className }: Props) => (
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend
           mode="normal"
           in="SourceGraphic"

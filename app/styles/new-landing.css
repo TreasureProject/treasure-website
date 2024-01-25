@@ -7,7 +7,7 @@
 }
 
 .landing-h2 {
-  @apply text-[24px] font-[635] leading-[105%] md:text-[32px];
+  @apply text-[32px] font-[635] leading-[105%];
 }
 
 .swiper {
