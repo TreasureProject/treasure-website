@@ -163,7 +163,7 @@ const NewNavigation = () => {
                     {item.label}
                     <ChevronDownIcon className="w-3 transition-transform group-hover:-rotate-180" />
                     <div className="absolute top-0 left-0 hidden pt-[72px] group-hover:block">
-                      <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-lg">
+                      <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-2xl lg:backdrop-blur-lg">
                         {item.items &&
                           item.items.map((item, index) => (
                             <div
@@ -265,7 +265,7 @@ const NewNavigation = () => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-new-night-1200/25 py-6  backdrop-blur-lg lg:hidden"
+            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-new-night-1200/25 py-6  backdrop-blur-2xl lg:hidden"
           >
             <div className=" flex-1 space-y-6 overflow-hidden px-3 pb-3 sm:px-8">
               <div className="max-h-full w-full overflow-scroll">

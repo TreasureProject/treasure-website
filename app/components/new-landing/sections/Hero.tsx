@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="relative h-screen max-h-[1024px] w-screen">
       <div className="container relative z-30 flex h-full flex-col justify-between pb-12 pt-32 sm:pb-20 sm:pt-48">
-        <h1 className="max-w-lg text-5xl font-bold leading-[105%] text-new-night-100 sm:text-8xl">
+        <h1 className="max-w-[240px] text-5xl font-bold leading-[105%] text-new-night-100 sm:max-w-lg sm:text-8xl">
           The magic of play.
         </h1>
 

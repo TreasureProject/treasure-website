@@ -1,7 +1,7 @@
 import Button from "../Button";
 import { AppleIcon, PlatformGrid, WindowsIcon } from "../misc/Svgs";
 
-import UI_IMAGE from "~/../public/img/new-landing/platform/UI.png";
+import UI_IMAGE from "~/../public/img/new-landing/platform/UI.jpg";
 import BADGE_IMAGE from "~/../public/img/new-landing/platform/Quest_Tile_Badge.png";
 import GEM_IMAGE from "~/../public/img/new-landing/platform/gem.png";
 
