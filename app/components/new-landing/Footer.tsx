@@ -8,85 +8,35 @@ import {
 import { Logo } from "./misc/Logo";
 import { Link } from "@remix-run/react";
 import Button from "./Button";
-import { SOCIAL } from "./misc/const";
+import { LINKS, SOCIAL } from "./misc/const";
 
 const FooterLinks = [
-  {
-    title: "About",
-    links: [
-      {
-        title: "About Treasure",
-        url: "/",
-        external: false,
-      },
-      {
-        title: "Team",
-        url: "/",
-        external: false,
-      },
-      {
-        title: "Brand Assets",
-        url: "/",
-        external: false,
-      },
-      {
-        title: "What is MAGIC",
-        url: "/",
-        external: true,
-      },
-      {
-        title: "Newsletter",
-        url: "/",
-        external: true,
-      },
-      {
-        title: "Documentation",
-        url: "/",
-        external: true,
-      },
-      {
-        title: "Careers",
-        url: "/",
-        external: true,
-      },
-      {
-        title: "Governance Forum",
-        url: "/",
-        external: true,
-      },
-      {
-        title: "Snapshot",
-        url: "/",
-        external: true,
-      },
-    ],
-  },
   {
     title: "Build",
     links: [
       {
         title: "Build with Treasure",
-        url: "/",
+        url: "/build",
         external: false,
       },
       {
         title: "Infrastructure",
-        url: "/",
+        url: "/infrastructure",
         external: false,
       },
       {
         title: "Game Builders Program",
-        url: "/",
+        url: LINKS.DEVELOPERS,
         external: true,
       },
       {
         title: "Open Source",
-        url: "/",
+        url: LINKS.GITHUB,
         external: true,
       },
       {
         title: "Apply to Partner",
-        url: "/",
+        url: LINKS.PARTNER,
         external: true,
       },
     ],
@@ -96,17 +46,62 @@ const FooterLinks = [
     links: [
       {
         title: "Games",
-        url: "/",
-        external: true,
+        url: LINKS.GAMES,
+        external: false,
       },
       {
         title: "Platform",
-        url: "/",
+        url: LINKS.APP,
+        external: false,
+      },
+    ],
+  },
+  {
+    title: "About",
+    links: [
+      {
+        title: "About",
+        url: "/about",
+        external: false,
+      },
+      {
+        title: "Team",
+        url: "/team",
+        external: false,
+      },
+      {
+        title: "Brand Assets",
+        url: "/brand-assets",
+        external: false,
+      },
+      {
+        title: "What is MAGIC",
+        url: LINKS.WHAT_IS_MAGIC,
         external: true,
       },
       {
-        title: "Launcher",
-        url: "/",
+        title: "Newsletter",
+        url: LINKS.SUBSTACK,
+        external: true,
+      },
+      {
+        title: "Documentation",
+        url: LINKS.DOCUMENTATION,
+        external: true,
+      },
+      {
+        title: "Careers",
+        url: LINKS.CAREERS,
+        external: true,
+      },
+      {
+        title: "Governance Forum",
+        url: LINKS.GOVERNANCE,
+        external: true,
+      },
+      {
+        title: "Snapshot",
+        url: LINKS.SNAPSHOT,
         external: true,
       },
     ],
@@ -131,34 +126,31 @@ const Footer = () => {
                   {linkSection.title}
                 </p>
                 <div className="space-y-3">
-                  {linkSection.links.map((link) =>
-                    !link.external ? (
-                      <Link
-                        to={link.url}
-                        key={link.title}
-                        className="block cursor-pointer text-new-night-400 transition-colors hover:text-new-night-100"
-                      >
-                        {link.title}
-                      </Link>
-                    ) : (
-                      <a
-                        href={link.url}
-                        key={link.title}
-                        className="group flex cursor-pointer gap-1 text-new-night-400 transition-colors hover:text-new-night-100"
-                      >
-                        {link.title}
+                  {linkSection.links.map((link) => (
+                    <Link
+                      to={link.url}
+                      target={link.external ? "_blank" : "_self"}
+                      key={link.title}
+                      className=" flex cursor-pointer items-center gap-1.5 text-new-night-400 transition-colors hover:text-new-night-100"
+                    >
+                      {link.title}
+                      {link.external && (
                         <ExternalIcon className="block w-3 text-new-night-600 group-hover:text-night-100" />
-                      </a>
-                    )
-                  )}
+                      )}
+                    </Link>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
-          <div className="relative bottom-0 right-0 flex flex-col gap-6 pl-24 md:items-end">
+          <div className="relative bottom-0 right-0 flex flex-col gap-6 md:items-end md:pl-24">
             <div className="w-max space-y-4">
-              <Button color="ruby">Start Playing</Button>
-              <Button color="ruby">Start Building</Button>
+              <Button color="ruby" href={LINKS.GAMES}>
+                Start Playing
+              </Button>
+              <Button color="ruby" href={LINKS.BUILD}>
+                Start Building
+              </Button>
             </div>
             <div className="bottom-0 right-0 flex gap-1.5 xl:absolute">
               <a

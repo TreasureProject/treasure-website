@@ -31,7 +31,7 @@ export default function Home() {
         <Hero />
         <Intro />
         <Partners />
-        {/* <Games /> */}
+        <Games />
         <Platform />
         <BuildOnTreasure />
         <Bridgeworld />

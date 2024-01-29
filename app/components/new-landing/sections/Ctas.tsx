@@ -8,7 +8,7 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "../misc/Icons";
-import { SOCIAL } from "../misc/const";
+import { LINKS, SOCIAL } from "../misc/const";
 
 const Ctas = () => {
   return (
@@ -23,7 +23,7 @@ const Ctas = () => {
             Apply to join our curated portfolio of indie games and pioneer a new
             era of gaming with Treasure.
           </p>
-          <Button color="outline" className="w-max">
+          <Button color="outline" className="w-max" to="/build">
             Learn More
           </Button>
         </div>
@@ -37,10 +37,10 @@ const Ctas = () => {
             leading creator program.
           </p>
           <div className="absolute bottom-0 left-0 flex gap-4">
-            <Button color="outline" className="w-max">
+            <Button color="outline" className="w-max" href={LINKS.CREATORS}>
               Apply Now
             </Button>
-            <Button color="outline" className="w-max">
+            <Button color="outline" className="w-max" to="/create">
               Learn More
             </Button>
           </div>
@@ -52,7 +52,7 @@ const Ctas = () => {
           </h1>
 
           <div className="absolute bottom-0 left-0">
-            <Button color="outline" className="w-max">
+            <Button color="outline" className="w-max" href={LINKS.SUBSTACK}>
               Subscribe
               <ExternalIcon className="w-4 " />
             </Button>

@@ -134,7 +134,7 @@ const BuildOnTreasure = () => {
             community-driven ethos and novel approach to game building ensures
             developers have the tools to [operate]
           </p>
-          <div className="flex gap-6">
+          {/* <div className="flex gap-6">
             <Button color="ruby" className="w-max">
               Read Litepaper
             </Button>
@@ -142,9 +142,12 @@ const BuildOnTreasure = () => {
               Learn More
               <ChevronRightIcon className="w-4" />
             </Button>
-          </div>
+          </div> */}
+          <Button color="ruby" className="w-max" to="/build">
+            Learn More
+          </Button>
         </div>
-        <div className="grid-cols-7 gap-6 space-y-6 lg:grid lg:space-y-0">
+        {/* <div className="grid-cols-7 gap-6 space-y-6 lg:grid lg:space-y-0">
           <BaseCard
             title="L2 and L3 Chains"
             description="Cheap, fast powered through Treasure’s Infinity Chains."
@@ -230,7 +233,7 @@ const BuildOnTreasure = () => {
               <BoTGraphicFour className="absolute bottom-0 left-1/2  w-[108%] -translate-x-1/2 lg:h-[100%] lg:w-auto " />
             </div>
           </BaseCard>
-        </div>
+        </div> */}
       </div>
     </div>
   );
