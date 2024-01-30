@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import PLACEHOLDER_IMAGE from "~/../public/img/new-landing/PLR_enSG_1920x1080_SOCIAL_MAHmovieposter3.png";
+import PLACEHOLDER_IMAGE from "~/../public/img/new-landing/PLR_enSG_1920x1080_SOCIAL_MAHmovieposter3.webp";
 
 import { ChevronRightIcon } from "../misc/Icons";
 import { VideoCutOff } from "../misc/Svgs";

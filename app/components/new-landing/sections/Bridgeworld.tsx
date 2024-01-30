@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 
-import BACKGROUND_IMAGE from "~/../public/img/new-landing/bridgeworld/BW_WorldMap_shrouded_blurred_with_mask.png";
-import ISLAND_IMAGE from "~/../public/img/new-landing/bridgeworld/Bridgeworld_Meem_Portal_Island.png";
-import ROCK_1_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_1.png";
-import ROCK_2_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_2.png";
-import ROCK_3_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_3.png";
-import ROCK_4_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_4.png";
-import ROCK_5_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_5.png";
-import MAGIC_IMAGE from "~/../public/img/new-landing/bridgeworld/Magic_Illustration.png";
+import BACKGROUND_IMAGE from "~/../public/img/new-landing/bridgeworld/BW_WorldMap_shrouded_blurred_with_mask.webp";
+import ISLAND_IMAGE from "~/../public/img/new-landing/bridgeworld/Bridgeworld_Meem_Portal_Island.webp";
+import ROCK_1_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_1.webp";
+import ROCK_2_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_2.webp";
+import ROCK_3_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_3.webp";
+import ROCK_4_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_4.webp";
+import ROCK_5_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_5.webp";
+import MAGIC_IMAGE from "~/../public/img/new-landing/bridgeworld/Magic_Illustration.webp";
 import Button from "../Button";
 import { MagicLogo } from "../misc/Svgs";
 import { ChevronRightIcon } from "../misc/Icons";

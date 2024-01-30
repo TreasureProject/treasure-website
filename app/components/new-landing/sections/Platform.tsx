@@ -1,9 +1,9 @@
 import Button from "../Button";
 import { AppleIcon, PlatformGrid, WindowsIcon } from "../misc/Svgs";
 
-import UI_IMAGE from "~/../public/img/new-landing/platform/UI.jpg";
-import BADGE_IMAGE from "~/../public/img/new-landing/platform/Quest_Tile_Badge.png";
-import GEM_IMAGE from "~/../public/img/new-landing/platform/gem.png";
+import UI_IMAGE from "~/../public/img/new-landing/platform/UI.webp";
+import BADGE_IMAGE from "~/../public/img/new-landing/platform/Quest_Tile_Badge.webp";
+import GEM_IMAGE from "~/../public/img/new-landing/platform/gem.webp";
 import { LINKS } from "../misc/const";
 
 const Platform = () => {
