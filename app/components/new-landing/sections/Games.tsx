@@ -184,7 +184,7 @@ const Games = () => {
             return (
               <SwiperSlide key={game.name}>
                 <a
-                  href="/"
+                  href={game.link}
                   target="_blank"
                   rel="noreferrer"
                   className={twMerge(

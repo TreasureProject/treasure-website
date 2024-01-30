@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import * as RA from "@radix-ui/react-accordion";
-import * as RDM from "@radix-ui/react-dropdown-menu";
 import { Logo } from "./new-landing/misc/Logo";
 import {
   ChevronDownIcon,
@@ -14,7 +13,12 @@ import { twMerge } from "tailwind-merge";
 import Button from "./new-landing/Button";
 import { Link } from "@remix-run/react";
 import { LINKS, SOCIAL } from "./new-landing/misc/const";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 
 type Type = "internal" | "external";
 
@@ -143,16 +147,36 @@ const dropdownItems: DropDownItems[] = [
 ];
 
 const NewNavigation = () => {
+  const [visible, setVisible] = useState(true);
+  const [openHamburger, setOpenHamburger] = useState(false);
+  const [latestScroll, setLatestScroll] = useState(0);
+  const { scrollY } = useScroll();
   const SOCIAL_LINK_CLASS =
     "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5  text-new-night-100 flex cursor-pointer items-center rounded-md transition-colors ";
   const MOBILE_ITEM_CLASS =
     "hover:bg-new-night-100/10 h-10 w-full cursor-pointer rounded-lg px-4 text-start font-bold text-white transition-colors";
   const GENERIC_HAMBURGER_LINE = `h-[3px] w-5 my-[2px] rounded-full bg-new-night-100 transition ease transform duration-300`;
 
-  const [openHamburger, setOpenHamburger] = useState(false);
+  const ScrollDelay = 200;
+
+  useMotionValueEvent(scrollY, "change", (latest: number) => {
+    if (openHamburger) return;
+    if (latest - ScrollDelay > latestScroll) {
+      setLatestScroll(latest);
+      setVisible(false);
+    } else if (latest + ScrollDelay < latestScroll) {
+      setLatestScroll(latest);
+      setVisible(true);
+    }
+  });
 
   return (
-    <div className="justify-centerp-0 fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center lg:p-6">
+    <div
+      className={twMerge(
+        "justify-centerp-0 fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center opacity-100 transition-opacity lg:p-6",
+        !visible && "pointer-events-none opacity-0"
+      )}
+    >
       <div className="relative z-[900] flex h-16 w-full items-center justify-between border-white/5 bg-new-night-1200/25 px-6 backdrop-blur-lg md:px-4 lg:h-20 lg:rounded-2xl lg:border lg:px-6">
         <div className="flex items-center gap-0 sm:gap-9">
           <Link to="/">
