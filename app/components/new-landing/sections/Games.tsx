@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@remix-run/react";
 import type { SwiperClass } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
 
 import BEACON_COVER from "~/../public/img/new-landing/game-covers/The_Beacon_Game_Cover.png";
 import BEACON_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.png";
@@ -110,6 +108,14 @@ function getTranslateOffset(progress: number) {
 const Games = () => {
   const [activeGame, setActiveGame] = useState<number>(0);
 
+  const swiperRef = useRef<SwiperClass | null>(null);
+
+  useEffect(() => {
+    if (!swiperRef.current) return;
+
+    setActiveGame(swiperRef.current.activeIndex);
+  }, []);
+
   return (
     <div className="relative w-full pt-32 pb-10">
       {/* Background image */}
@@ -120,7 +126,7 @@ const Games = () => {
       />
 
       {/* Carousel container */}
-      <div className="relative z-50  bg-blue-50/10">
+      <div className="relative z-50">
         <Swiper
           modules={[Keyboard]}
           keyboard={{
@@ -131,7 +137,11 @@ const Games = () => {
           loop={true}
           watchSlidesProgress={true}
           spaceBetween={10}
+          onSlideChange={(swiper: SwiperClass) => {
+            setActiveGame(swiper.realIndex);
+          }}
           slidesPerView="auto"
+          onSwiper={(swiper: SwiperClass) => (swiperRef.current = swiper)}
           onProgress={(swiper: SwiperClass) => {
             const zIndexMax = swiper.slides.length;
             for (let i = 0; i < swiper.slides.length; i++) {
@@ -160,15 +170,10 @@ const Games = () => {
             }
           }}
         >
-          {Array.from({ length: 40 }).map((_, i) => {
+          {games.map((game, i) => {
             return (
-              <SwiperSlide key={i}>
-                <a
-                  className="aspect-square w-5 rounded-2xl border-2 border-new-night-100/10 bg-red-50 p-4"
-                  href="/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              <SwiperSlide key={game.name}>
+                <a href="/" target="_blank" rel="noreferrer">
                   <img
                     className="h-full w-full object-cover object-center"
                     alt={gameByIndex(i).name}
@@ -182,7 +187,7 @@ const Games = () => {
       </div>
 
       {/* Navigation dots */}
-      <div className="container relative z-10  flex w-full items-center justify-center gap-2">
+      <div className="container relative z-10 mt-12 flex w-full items-center justify-center gap-2">
         {games.map((game, index) => (
           <button
             key={game.name}
