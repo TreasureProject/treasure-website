@@ -14,7 +14,11 @@ import Chain from "~/components/new-landing/sections/Chain";
 import Platform from "~/components/new-landing/sections/Platform";
 import BuildOnTreasure from "~/components/new-landing/sections/BuildOnTreasure";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import swiperCSS from "swiper/css";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import swiperNavigationCSS from "swiper/css/navigation";
 
 export const headers: HeadersFunction = commonHeaders;
