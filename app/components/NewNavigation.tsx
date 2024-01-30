@@ -13,17 +13,21 @@ import {
 import { twMerge } from "tailwind-merge";
 import Button from "./new-landing/Button";
 import { Link } from "@remix-run/react";
-import { SOCIAL } from "./new-landing/misc/const";
+import { LINKS, SOCIAL } from "./new-landing/misc/const";
 import { AnimatePresence, motion } from "framer-motion";
+
+type Type = "internal" | "external";
 
 type DropDownItems = {
   label: string;
+  target?: string;
+  type?: Type;
   items?: DropDownItem[];
 };
 
 interface DropDownItem {
   label: string;
-  type: "internal" | "external";
+  type: Type;
   target: string;
 }
 
@@ -68,6 +72,8 @@ const dropdownItems: DropDownItems[] = [
   },
   {
     label: "Build",
+    target: LINKS.BUILD,
+    type: "external",
   },
   {
     label: "Solutions",
@@ -146,7 +152,7 @@ const NewNavigation = () => {
   const [openHamburger, setOpenHamburger] = useState(false);
 
   return (
-    <div className="justify-centerp-0 fixed top-0 left-1/2 z-40 mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center lg:p-6">
+    <div className="justify-centerp-0 fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center lg:p-6">
       <div className="relative z-[900] flex h-16 w-full items-center justify-between border-white/5 bg-new-night-1200/25 px-6 backdrop-blur-lg md:px-4 lg:h-20 lg:rounded-2xl lg:border lg:px-6">
         <div className="flex items-center gap-0 sm:gap-9">
           <Link to="/">
@@ -166,7 +172,11 @@ const NewNavigation = () => {
                       <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-2xl lg:backdrop-blur-lg">
                         {item.items &&
                           item.items.map((item, index) => (
-                            <div
+                            <Link
+                              to={item.target}
+                              target={
+                                item.type === "external" ? "_blank" : "_self"
+                              }
                               className={twMerge(
                                 "flex h-11  cursor-pointer items-center gap-3 whitespace-nowrap rounded-md bg-transparent px-2.5 text-new-night-400 transition-colors focus:outline-none hover:bg-new-night-100/5 hover:text-new-night-100",
                                 item.type === "external" && "justify-between"
@@ -175,9 +185,9 @@ const NewNavigation = () => {
                             >
                               {item.label}
                               {item.type === "external" && (
-                                <ExternalIcon className="w-3" />
+                                <ExternalIcon className="w-4" />
                               )}
-                            </div>
+                            </Link>
                           ))}
                       </div>
                     </div>
@@ -185,13 +195,15 @@ const NewNavigation = () => {
                 );
               }
               return (
-                <a
-                  href="/"
+                <Link
+                  to={item.target ? item.target : "/"}
+                  target={item.type === "external" ? "_blank" : "_self"}
                   key={index}
-                  className="flex h-9 items-center gap-2.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
+                  className="flex h-9 items-center gap-1.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
                 >
                   {item.label}
-                </a>
+                  {item.type === "external" && <ExternalIcon className="w-4" />}
+                </Link>
               );
             })}
           </div>
@@ -239,23 +251,23 @@ const NewNavigation = () => {
         >
           <div
             className={`${GENERIC_HAMBURGER_LINE} ${
-              !openHamburger && "translate-y-[7px] rotate-45"
+              openHamburger && "translate-y-[7px] rotate-45"
             }`}
           />
           <div
             className={`${GENERIC_HAMBURGER_LINE} ${
-              !openHamburger && "opacity-0"
+              openHamburger && "opacity-0"
             }`}
           />
           <div
             className={`${GENERIC_HAMBURGER_LINE} ${
-              !openHamburger && "-translate-y-[7px] -rotate-45"
+              openHamburger && "-translate-y-[7px] -rotate-45"
             }`}
           />
         </button>
       </div>
       <AnimatePresence>
-        {!openHamburger && (
+        {openHamburger && (
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -287,7 +299,11 @@ const NewNavigation = () => {
                           </RA.Header>
                           <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
                             {item.items.map((item, index) => (
-                              <div
+                              <Link
+                                to={item.target}
+                                target={
+                                  item.type === "external" ? "_blank" : "_self"
+                                }
                                 key={index}
                                 className={twMerge(
                                   MOBILE_ITEM_CLASS,
@@ -298,7 +314,7 @@ const NewNavigation = () => {
                                 {item.type === "external" && (
                                   <ExternalIcon className="w-4 text-new-night-400" />
                                 )}
-                              </div>
+                              </Link>
                             ))}
                           </RA.Content>
                         </RA.Item>

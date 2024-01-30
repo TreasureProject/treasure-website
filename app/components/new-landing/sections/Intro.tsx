@@ -1,9 +1,10 @@
 import { Link } from "@remix-run/react";
-import PLACEHOLDER_IMAGE from "~/../public/img/new-landing/PLR_enSG_1920x1080_SOCIAL_MAHmovieposter3.png";
+import PLACEHOLDER_IMAGE from "~/../public/img/new-landing/PLR_enSG_1920x1080_SOCIAL_MAHmovieposter3.webp";
 
 import { ChevronRightIcon } from "../misc/Icons";
 import { VideoCutOff } from "../misc/Svgs";
 import Button from "../Button";
+import { LINKS } from "../misc/const";
 
 const Intro = () => {
   return (
@@ -61,7 +62,7 @@ const Intro = () => {
             building ensures developers have everything they need to be
             successful.
           </p>
-          <Button color="ruby" className="w-max">
+          <Button color="ruby" className="w-max" to={LINKS.BUILD}>
             Build with Treasure
           </Button>
         </div>

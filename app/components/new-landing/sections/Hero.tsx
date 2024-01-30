@@ -1,8 +1,9 @@
 import React from "react";
 
-import SPLASHART_IMAGE from "~/../public/img/new-landing/Treasure_new_splash_final_extended_canvas_Motion_Test.jpg";
+import SPLASHART_IMAGE from "~/../public/img/new-landing/Treasure_new_splash_final_extended_canvas_Motion_Test.webp";
 import Button from "../Button";
 import { LandingCutOff } from "../misc/Svgs";
+import { LINKS } from "../misc/const";
 
 const Hero = () => {
   return (
@@ -18,8 +19,10 @@ const Hero = () => {
             built and owned by all.
           </p>
           <div className="flex gap-4">
-            <Button color="ruby">Start Playing</Button>
-            <Button color="honey">Read Litepaper</Button>
+            <Button color="ruby" href={LINKS.APP}>
+              Start Playing
+            </Button>
+            {/* <Button color="honey">Read Litepaper</Button> */}
           </div>
         </div>
       </div>

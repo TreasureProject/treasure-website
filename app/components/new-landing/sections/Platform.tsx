@@ -1,9 +1,10 @@
 import Button from "../Button";
 import { AppleIcon, PlatformGrid, WindowsIcon } from "../misc/Svgs";
 
-import UI_IMAGE from "~/../public/img/new-landing/platform/UI.jpg";
-import BADGE_IMAGE from "~/../public/img/new-landing/platform/Quest_Tile_Badge.png";
-import GEM_IMAGE from "~/../public/img/new-landing/platform/gem.png";
+import UI_IMAGE from "~/../public/img/new-landing/platform/UI.webp";
+import BADGE_IMAGE from "~/../public/img/new-landing/platform/Quest_Tile_Badge.webp";
+import GEM_IMAGE from "~/../public/img/new-landing/platform/gem.webp";
+import { LINKS } from "../misc/const";
 
 const Platform = () => {
   return (
@@ -25,16 +26,16 @@ const Platform = () => {
             for Treasure games.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button color="ruby" className="w-max">
+            <Button color="ruby" className="w-max" href={LINKS.APP}>
               Start Playing
             </Button>
-            <Button color="honey" className="w-max">
+            {/* <Button color="honey" className="w-max">
               Download Launcher{" "}
               <div className="flex ">
                 <WindowsIcon className="w-5" />
                 <AppleIcon className="w-5" />
               </div>
-            </Button>
+            </Button> */}
           </div>
         </div>
         <div className="relative z-10 h-[342px] w-[600px] sm:h-auto sm:w-full">
