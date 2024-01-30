@@ -10,7 +10,7 @@ import { LINKS } from "../misc/const";
 const Intro = () => {
   return (
     <div className="w-full bg-new-light-background">
-      <div className="container flex flex-col justify-between gap-10 py-12 sm:py-14 md:flex-row md:gap-16 md:py-20 lg:items-center">
+      <div className="container flex flex-col justify-between gap-10 py-12 sm:py-14 md:flex-row md:gap-16 md:py-20 xl:items-center">
         <div className="items-between flex-h-full flex max-w-lg grow flex-col gap-4 sm:gap-6 md:gap-16 ">
           <h1 className="max-w-[300px]  text-3xl font-bold leading-[107%] text-ruby-900 sm:max-w-none  sm:text-[60px]">
             Pioneering a new era of gaming
@@ -29,16 +29,28 @@ const Intro = () => {
           </p>
         </div>
       </div>
-      <div className="relative block flex-1 overflow-hidden lg:hidden lg:rounded-tl-3xl">
-        <VideoCutOff className="absolute -right-[1px] -top-[1px] z-20 hidden w-[80px] sm:w-[128px] lg:block" />
-        <video autoPlay muted src={VIDEO} className="aspect-video w-full" />
+      <div className="relative block flex-1 overflow-hidden xl:hidden xl:rounded-tl-3xl">
+        <VideoCutOff className="absolute -right-[1px] -top-[1px] z-20 hidden w-[80px] sm:w-[128px] xl:block" />
+        <video
+          autoPlay
+          muted
+          src={VIDEO}
+          loop
+          className="aspect-video w-full"
+        />
       </div>
-      <div className="container flex flex-col items-center gap-10 py-12 sm:py-14 md:gap-32 lg:flex-row  lg:py-0 ">
-        <div className="relative hidden flex-1 overflow-hidden lg:block lg:rounded-tl-3xl">
-          <VideoCutOff className="absolute -right-[1px] -top-[1px] z-20 hidden w-[80px] text-new-light-background sm:w-[128px] lg:block" />
-          <video autoPlay muted src={VIDEO} className="aspect-video w-full" />
+      <div className="container flex flex-col items-center gap-10 py-12 sm:py-14 md:gap-32 xl:flex-row  xl:py-0 ">
+        <div className="relative hidden flex-1 overflow-hidden xl:block xl:rounded-tl-3xl">
+          <VideoCutOff className="absolute -right-[1px] -top-[1px] z-20 hidden w-[80px] text-new-light-background sm:w-[128px] xl:block" />
+          <video
+            autoPlay
+            muted
+            src={VIDEO}
+            loop
+            className="aspect-video w-full min-w-[560px]"
+          />
         </div>
-        <div className=" w-full items-center gap-7  space-y-7 lg:max-w-md ">
+        <div className=" w-full items-center gap-7  space-y-7 xl:max-w-md ">
           <h1 className="max-w-sm  text-3xl font-bold leading-[107%] text-ruby-900 sm:text-5xl">
             The new home for indie
           </h1>
