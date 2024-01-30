@@ -1,6 +1,6 @@
 import React from "react";
 
-import SPLASHART_IMAGE from "~/../public/img/new-landing/Treasure_new_splash_final_extended_canvas_Motion_Test.jpg";
+import SPLASHART_IMAGE from "~/../public/img/new-landing/Treasure_new_splash_final_extended_canvas_Motion_Test.webp";
 import Button from "../Button";
 import { LandingCutOff } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
