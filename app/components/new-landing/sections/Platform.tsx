@@ -19,7 +19,7 @@ const Platform = () => {
       <div className="container relative z-10 flex flex-col gap-10  sm:gap-16 xl:flex-row xl:items-center xl:gap-40">
         <div className=" space-y-7">
           <h1 className="text-3xl font-black leading-[105%] sm:text-5xl">
-            Discover the magic
+            Discover <br /> the magic
           </h1>
           <p className="max-w-md leading-[150%] text-night-400">
             Play, compete, and unlock rewards all on the app – the destination
@@ -52,7 +52,7 @@ const Platform = () => {
           <img
             src={UI_IMAGE}
             alt="Platform UI"
-            className="absolute  h-[342px] rounded-lg border-2 border-white/40 sm:relative sm:h-auto sm:w-full sm:rounded-xl lg:rounded-2xl xl:w-auto"
+            className="absolute  h-[342px] rounded-lg border-2 border-white/10 sm:relative sm:h-auto sm:w-full sm:rounded-xl lg:rounded-2xl xl:w-auto"
           />
         </div>
       </div>

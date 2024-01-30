@@ -39,6 +39,7 @@ const Bridgeworld = () => {
       ref={containerRef}
       className="relative h-[1400px] w-screen py-12 px-7 md:h-[1580px] md:py-20 md:px-14 xl:h-[1140px] xl:px-20 xl:py-0 xl:pt-48"
     >
+      <div className="absolute inset-0 z-10 block bg-gradient-landing-bridgeworld bg-blend-multiply md:hidden" />
       <div className="container relative h-full">
         <div className="absolute top-1/2 left-[35%] z-[90] aspect-square min-w-[800px] max-w-[880px] -translate-x-1/2 -translate-y-1/2 sm:left-[45%] md:w-full lg:max-w-[1040px] xl:left-0 xl:w-[72%]  xl:-translate-x-1/4">
           <div className="translate-y-[72px] xl:-translate-y-0">

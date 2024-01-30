@@ -148,7 +148,7 @@ const Footer = () => {
               <Button color="ruby" href={LINKS.GAMES}>
                 Start Playing
               </Button>
-              <Button color="ruby" href={LINKS.BUILD}>
+              <Button color="ruby" to="/build">
                 Start Building
               </Button>
             </div>
@@ -193,13 +193,13 @@ const Footer = () => {
         <div className="flex flex-col  gap-4 border-t border-new-night-800 pt-6 md:flex-row md:items-center md:justify-between">
           <div className="flex gap-6">
             <Link
-              to="/"
+              to="/terms-of-service"
               className="cursor-pointer text-new-night-500 hover:text-new-night-100"
             >
               Terms of Service
             </Link>
             <Link
-              to="/"
+              to="/privacy-policy"
               className="cursor-pointer text-new-night-500 hover:text-new-night-100"
             >
               Privacy Policy

@@ -34,6 +34,7 @@ import TOE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_ToE
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { GamesGrid } from "../misc/Svgs";
+import { LINKS } from "../misc/const";
 
 const games = [
   {
@@ -188,7 +189,7 @@ const Games = () => {
                   target="_blank"
                   rel="noreferrer"
                   className={twMerge(
-                    "overflow-hidden rounded-lg border-2 border-new-night-700",
+                    "overflow-hidden rounded-2xl border-2 border-new-night-700",
                     activeGame === i && "border-new-night-500"
                   )}
                 >
@@ -203,11 +204,12 @@ const Games = () => {
           })}
         </Swiper>
       </div>
-      <div className="to-transaprent absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-new-night-1300" />
+      <div className="to-transaprent absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-new-night-1300" />
       <GamesGrid className="absolute inset-0 z-[5] min-h-[600px] opacity-25" />
       {/* View All Games link */}
       <Link
-        to="/games"
+        to={LINKS.GAMES}
+        target="_blank"
         className="relative z-10 mt-8 flex w-full items-center justify-center gap-1.5 font-semibold leading-[160%] transition-opacity hover:opacity-75"
       >
         View All Games <ChevronRightIcon className="w-4" />

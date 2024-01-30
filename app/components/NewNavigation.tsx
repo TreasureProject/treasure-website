@@ -45,39 +45,41 @@ const dropdownItems: DropDownItems[] = [
         target: "/about",
       },
       {
-        label: "Story / MAGIC",
-        type: "internal",
-        target: "/about",
+        label: "What is MAGIC?",
+        type: "external",
+        target: LINKS.WHAT_IS_MAGIC,
       },
       {
-        label: "Interoperability",
+        label: "Infrastructure",
         type: "internal",
-        target: "/about",
+        target: "/infrastructure",
       },
       {
         label: "Team",
         type: "internal",
-        target: "/about",
+        target: "/team",
       },
       {
         label: "Careers",
-        type: "internal",
-        target: "/about",
+        type: "external",
+        target: LINKS.CAREERS,
       },
       {
-        label: "Media",
+        label: "Brand Assets",
         type: "internal",
-        target: "/about",
+        target: "/brand-assets",
       },
     ],
   },
   {
     label: "Play",
+    target: LINKS.APP,
+    type: "external",
   },
   {
     label: "Build",
-    target: LINKS.BUILD,
-    type: "external",
+    target: "/build",
+    type: "internal",
   },
   {
     label: "Solutions",
@@ -174,10 +176,11 @@ const NewNavigation = () => {
     <div
       className={twMerge(
         "justify-centerp-0 fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center opacity-100 transition-opacity lg:p-6",
+        openHamburger && "bg-new-night-1200 lg:bg-transparent",
         !visible && "pointer-events-none opacity-0"
       )}
     >
-      <div className="relative z-[900] flex h-16 w-full items-center justify-between border-white/5 bg-new-night-1200/25 px-6 backdrop-blur-lg md:px-4 lg:h-20 lg:rounded-2xl lg:border lg:px-6">
+      <div className="relative z-[900] flex h-16 w-full items-center justify-between border-white/5 bg-new-night-1200/50 px-6 backdrop-blur-lg md:px-4 lg:h-20 lg:rounded-2xl lg:border lg:bg-new-night-1200/25 lg:px-6">
         <div className="flex items-center gap-0 sm:gap-9">
           <Link to="/">
             <Logo className="w-[148px] xl:w-[160px]" />
@@ -267,7 +270,9 @@ const NewNavigation = () => {
               <TwitchIcon className="w-6" />
             </a>
           </div>
-          <Button color="ruby">Start Playing</Button>
+          <Button color="ruby" href={LINKS.APP}>
+            Start Playing
+          </Button>
         </div>
         <button
           className="group flex h-11 w-11 cursor-pointer flex-col items-center justify-center rounded-lg bg-new-night-1200/20 lg:hidden"
@@ -301,7 +306,7 @@ const NewNavigation = () => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-new-night-1200/25 py-6  backdrop-blur-2xl lg:hidden"
+            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-new-night-1200 py-6  backdrop-blur-2xl lg:hidden"
           >
             <div className=" flex-1 space-y-6 overflow-hidden px-3 pb-3 sm:px-8">
               <div className="max-h-full w-full overflow-scroll">

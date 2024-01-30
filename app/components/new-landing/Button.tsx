@@ -23,7 +23,7 @@ const Button = ({ color = "ruby", children, className, to, href }: Props) => {
     return (
       <Link
         to={`${to ? to : href}`}
-        target={href ? "_blank" : "self"}
+        target={href ? "_blank" : "_self"}
         className={twMerge(
           " flex h-12 cursor-pointer items-center justify-center gap-1 rounded-md px-4 text-center font-medium transition-colors focus:outline-none",
           colors[color],

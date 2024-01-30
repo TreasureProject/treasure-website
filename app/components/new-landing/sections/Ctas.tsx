@@ -16,8 +16,8 @@ const Ctas = () => {
       <CtasCutOff className="absolute top-[1px] left-0 hidden w-[144px] -translate-y-[100%] 2xl:block" />
       <div className=" container grid grid-cols-1 grid-rows-[auto_1px_auto] gap-y-16 gap-x-16 sm:grid-cols-[1fr_1px_1fr]  2xl:grid-cols-[1fr_1px_1fr_1px_1fr_1px_1fr] 2xl:gap-y-0">
         <div className="h-60 space-y-6 ">
-          <h1 className="text-3xl font-bold text-new-night-100">
-            For Studios and Developers
+          <h1 className=" text-3xl font-bold text-new-night-100">
+            For Studios <br /> and Developers
           </h1>
           <p className="">
             Apply to join our curated portfolio of indie games and pioneer a new
@@ -47,7 +47,7 @@ const Ctas = () => {
         </div>
         <div className="h-[1px] w-full bg-new-night-100 sm:col-span-3  sm:h-auto  2xl:col-span-1 2xl:w-auto" />
         <div className="relative h-60">
-          <h1 className="text-3xl font-bold text-new-night-100">
+          <h1 className="max-w-[300px] text-3xl font-bold text-new-night-100 md:max-w-none">
             Get the latest Treasure news
           </h1>
 
