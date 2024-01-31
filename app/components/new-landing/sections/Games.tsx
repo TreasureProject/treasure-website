@@ -50,12 +50,6 @@ const games = [
     link: "https://app.treasure.lol/games/kaiju-cards",
   },
   {
-    name: "KOTE",
-    cover: KOTE_COVER,
-    background: KOTE_BACKGROUND,
-    link: "https://app.treasure.lol/games/kote",
-  },
-  {
     name: "Kuroro Beast",
     cover: KURORO_BEAST_COVER,
     background: KURORO_BEAST_BACKGROUND,
@@ -66,6 +60,18 @@ const games = [
     cover: MAH_COVER,
     background: MAH_BACKGROUND,
     link: "https://app.treasure.lol/games/mighty-action-heroes",
+  },
+  {
+    name: "Bitmates",
+    cover: BITMATES_COVER,
+    background: BITMATES_BACKGROUND,
+    link: "https://app.treasure.lol/games/bitmates",
+  },
+  {
+    name: "Realm",
+    cover: REALM_COVER,
+    background: REALM_BACKGROUND,
+    link: "https://app.treasure.lol/games/realm",
   },
   {
     name: "Zeeverse",
@@ -80,16 +86,10 @@ const games = [
     link: "https://app.treasure.lol/games/tales-of-elleria",
   },
   {
-    name: "Bitmates",
-    cover: BITMATES_COVER,
-    background: BITMATES_BACKGROUND,
-    link: "https://app.treasure.lol/games/bitmates",
-  },
-  {
-    name: "Realm",
-    cover: REALM_COVER,
-    background: REALM_BACKGROUND,
-    link: "https://app.treasure.lol/games/realm",
+    name: "KOTE",
+    cover: KOTE_COVER,
+    background: KOTE_BACKGROUND,
+    link: "https://app.treasure.lol/games/kote",
   },
 ] as const;
 
