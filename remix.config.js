@@ -10,8 +10,8 @@ module.exports = {
     "swiper/modules",
   ],
   future: {
-    unstable_tailwind: true,
     v2_routeConvention: true,
+    unstable_postcss: true,
   },
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",

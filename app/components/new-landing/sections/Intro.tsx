@@ -34,6 +34,7 @@ const Intro = () => {
         <video
           autoPlay
           muted
+          playsInline
           src={VIDEO}
           loop
           className="aspect-video w-full"
