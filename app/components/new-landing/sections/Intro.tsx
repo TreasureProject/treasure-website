@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import PLACEHOLDER_IMAGE from "~/../public/img/new-landing/PLR_enSG_1920x1080_SOCIAL_MAHmovieposter3.webp";
-import VIDEO from "~/../public/img/new-landing/Treasure_Mini_Game_Trailer_30_01_24_LR_1080p.mp4";
+import VIDEO from "~/../public/img/new-landing/trailer.mp4";
 
 import { ChevronRightIcon } from "../misc/Icons";
 import { VideoCutOff } from "../misc/Svgs";

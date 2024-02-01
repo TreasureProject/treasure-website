@@ -41,7 +41,7 @@ const Bridgeworld = () => {
     >
       <div className="absolute inset-0 z-10 block bg-gradient-landing-bridgeworld bg-blend-multiply md:hidden" />
       <div className="container relative h-full">
-        <div className="absolute top-1/2 left-[35%] z-[90] aspect-square min-w-[800px] max-w-[880px] -translate-x-1/2 -translate-y-1/2 sm:left-[45%] md:w-full lg:max-w-[1040px] xl:left-0 xl:w-[72%]  xl:-translate-x-1/4">
+        <div className="absolute top-1/2 left-[35%] z-[90] aspect-square min-w-[680px] max-w-[880px] -translate-x-1/2 -translate-y-1/2 sm:top-[55%] sm:left-[45%] sm:min-w-[800px] md:top-1/2 md:w-full lg:top-[55%] lg:max-w-[960px] xl:top-1/2 xl:left-0 xl:w-[72%]  xl:-translate-x-1/4">
           <div className="translate-y-[72px] xl:-translate-y-0">
             <div
               className="t relative h-max 2xl:min-w-[1100px]"
