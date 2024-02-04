@@ -160,9 +160,10 @@ export default function Build() {
                       </Balancer>
 
                       <Balancer>
-                        Tools to enable and accelerate your journey.{" "}
-                        <span className="font-bold">Everything</span> you need
-                        to supercharge your game.
+                        We empower games to reach their full potential. Our
+                        community-driven ethos, publishing stack, and novel
+                        approach to game building gives developers everything
+                        they need to be successful.
                       </Balancer>
                     </p>
                   </div>
@@ -301,6 +302,7 @@ export default function Build() {
           </div>
         </motion.section>
         <NewTreasureStats type="secondary" />
+        {/*
         <section
           id="information"
           aria-labelledby="information"
@@ -577,6 +579,7 @@ export default function Build() {
             </div>
           </div>
         </section>
+        */}
         <section
           id="reviews"
           aria-labelledby="reviews-title"

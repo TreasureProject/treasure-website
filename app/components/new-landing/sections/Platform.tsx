@@ -22,8 +22,8 @@ const Platform = () => {
             Discover <br /> the magic
           </h1>
           <p className="max-w-md leading-[150%] text-night-400">
-            Play, compete, and unlock rewards all on the app – the destination
-            for Treasure games.
+            Play, compete, and unlock rewards all on Treasure – our destination
+            for games.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button color="ruby" className="w-max" href={LINKS.APP}>

@@ -49,11 +49,11 @@ const dropdownItems: DropDownItems[] = [
         type: "external",
         target: LINKS.WHAT_IS_MAGIC,
       },
-      {
-        label: "Infrastructure",
-        type: "internal",
-        target: "/infrastructure",
-      },
+      // {
+      //   label: "Infrastructure",
+      //   type: "internal",
+      //   target: "/infrastructure",
+      // },
       {
         label: "Team",
         type: "internal",
@@ -100,24 +100,19 @@ const dropdownItems: DropDownItems[] = [
     label: "Community",
     items: [
       {
-        label: "Connect",
-        type: "internal",
-        target: "/about",
+        label: "Newsletter",
+        type: "external",
+        target: LINKS.SUBSTACK,
       },
       {
-        label: "Ecosystem Projects",
+        label: "Governance Forum",
         type: "external",
-        target: "/about",
+        target: LINKS.GOVERNANCE,
       },
       {
-        label: "Ecosystem Careers",
+        label: "Snapshot",
         type: "external",
-        target: "/about",
-      },
-      {
-        label: "Governance",
-        type: "external",
-        target: "/about",
+        target: LINKS.SNAPSHOT,
       },
     ],
   },

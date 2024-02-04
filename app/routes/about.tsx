@@ -43,7 +43,7 @@ export default function About() {
               textColor="text-night-200"
             />
             <h2 className="mt-12 text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
-              The decentralized 'Nintendo'
+              The decentralized gaming ecosystem
             </h2>
           </div>
           <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">

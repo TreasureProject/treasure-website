@@ -15,8 +15,8 @@ const Hero = () => {
 
         <div className="max-w-md space-y-6">
           <p className="text-xl leading-[120%] sm:text-[28px]">
-            Treasure is building a new gaming and entertainment powerhouse,
-            built and owned by all.
+            Treasure is building a gaming and entertainment powerhouse, built
+            and owned by all.
           </p>
           <div className="flex gap-4">
             <Button color="ruby" href={LINKS.APP}>

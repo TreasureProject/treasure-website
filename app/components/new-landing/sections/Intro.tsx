@@ -22,8 +22,8 @@ const Intro = () => {
         <div className="max-w-md space-y-7 md:space-y-12">
           <p className="leading-[150%] text-new-night-700">
             We’re shaping a future where developers, creators, and players can
-            build new virtual worlds together. Where you can truly own your
-            assets. And share in the collective growth of our ecosystem.
+            build new experiences together. Where you can truly own your assets.
+            And share in the collective growth of our ecosystem.
             <br />
             <br /> All made possible by the blockchain.
           </p>
@@ -53,13 +53,12 @@ const Intro = () => {
         </div>
         <div className=" w-full items-center gap-7  space-y-7 xl:max-w-md ">
           <h1 className="max-w-sm  text-3xl font-bold leading-[107%] text-ruby-900 sm:text-5xl">
-            The new home for indie
+            We level up game builders
           </h1>
           <p className="leading-[150%] text-new-night-700">
-            We empower indie games to reach their full potential. Our
-            community-driven ethos, publishing stack, and novel approach to game
-            building ensures developers have everything they need to be
-            successful.
+            We empower games to reach their full potential. Our community-driven
+            ethos, publishing stack, and novel approach to game building gives
+            developers everything they need to be successful.
           </p>
           <Button color="ruby" className="w-max" to="/build">
             Build with Treasure

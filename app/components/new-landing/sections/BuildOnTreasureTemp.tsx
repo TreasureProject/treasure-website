@@ -12,9 +12,10 @@ const Chain = () => {
           </h1>
         </div>
         <p className="max-w-2xl leading-[150%] text-new-night-700 md:text-center">
-          We empower games to reach their full potential. Our community-driven
-          ethos and approach to game building gives developers everything they
-          need to be successful.
+          We equip our game developers with the tools they need to be
+          successful. Everything from publishing tools, bottom-up distribution
+          through a passionate community, and shoulder-to-shoulder game advisory
+          and support.
         </p>
         <Button color="ruby" className="w-max" to="/build">
           Learn More
