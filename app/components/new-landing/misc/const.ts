@@ -6,12 +6,13 @@ export const SOCIAL = {
 };
 
 export const LINKS = {
-  BUILD: "https://go.treasure.lol/creators-apply?utm_source=website",
+  BUILD: "/build",
   DEVELOPERS:
     "https://docs.treasure.lol/for-game-developers/game-builders-program",
   APP: "https://app.treasure.lol",
   CREATORS: "https://go.treasure.lol/creators-apply?utm_source=website",
   GAMES: "https://app.treasure.lol/games",
+  LITEPAPER: "https://app.treasure.lol", //todo
   SUBSTACK: "https://treasuredao.substack.com",
   GITHUB: "https://github.com/TreasureProject",
   PARTNER:

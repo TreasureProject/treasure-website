@@ -15,6 +15,7 @@ import {
   BoTGraphicTwo,
   LandingCutOff,
 } from "../misc/Svgs";
+import { LINKS } from "../misc/const";
 
 import AVATAR_GAMER_IMAGE from "~/../public/img/new-landing/avatars/avatar_gamer.jpg";
 import AVATAR_JOHN_IMAGE from "~/../public/img/new-landing/avatars/avatar_john.jpg";
@@ -130,15 +131,20 @@ const BuildOnTreasure = () => {
         <div className="mx-auto flex max-w-2xl flex-col items-center space-y-7">
           <h1 className="landing-h1  text-new-ruby-900">Build on Treasure</h1>
           <p className="text-center leading-[150%] text-new-night-700">
-            We empower indie games to reach their full potential. Our
-            community-driven ethos and novel approach to game building ensures
-            developers have the tools to [operate]
+            We equip our game builders with the tools they need to be
+            successful. Everything from our publishing stack, bottom-up
+            distribution through a passionate player community, and
+            shoulder-to-shoulder game support.
           </p>
           <div className="flex gap-6">
-            <Button color="ruby" className="w-max">
+            <Button color="ruby" className="w-max" href={LINKS.LITEPAPER}>
               Read Litepaper
             </Button>
-            <Button color="float" className="w-max text-new-ruby-900">
+            <Button
+              color="float"
+              className="w-max text-new-ruby-900"
+              href="/build"
+            >
               Learn More
               <ChevronRightIcon className="w-4" />
             </Button>
@@ -146,8 +152,8 @@ const BuildOnTreasure = () => {
         </div>
         <div className="grid-cols-7 gap-6 space-y-6 lg:grid lg:space-y-0">
           <BaseCard
-            title="L2 and L3 Chains"
-            description="Cheap, fast powered through Treasure’s Infinity Chains."
+            title="Gaming Chain"
+            description="Fast, affordable, and fully powered by Treasure’s Infinity Chains."
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
@@ -156,7 +162,7 @@ const BuildOnTreasure = () => {
           </BaseCard>
           <BaseCard
             title="Treasure Development Kit"
-            description="Access multi-platform support for popular game engines (Unity, Unreal, Godot), deployable smart contracts for tokens and gameplay logic. Manage player identities, view reports, and tap into a wide range of LiveOps features. "
+            description="Access multi-platform support for popular game engines, deployable smart contracts for tokens and gameplay logic. Manage player identities, access analytics, and tap into a wide range of LiveOps features."
             className="col-span-4"
           >
             <div className="absolute inset-0 h-full overflow-hidden rounded-2xl">
@@ -166,7 +172,7 @@ const BuildOnTreasure = () => {
 
           <BaseCard
             title="Treasure Identity & Login"
-            description="Drive UA and retention through frictionless onboarding wih familiar authentication, and segment your audiences for customized player experiences."
+            description="Bring players into your game through frictionless onboarding. Tap into powerful segmentation tools to tailor experiences for players."
             className="col-span-4"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
@@ -223,7 +229,7 @@ const BuildOnTreasure = () => {
           </BaseCard>
           <BaseCard
             title="... and much more"
-            description="Our Treasure Platform hosts a native marketplace, decentralized exchange (AMM), seamless payments and onramps for fiat and crypto, analytics, and LiveOps campaigns."
+            description="Native marketplace built for gaming, decentralized exchange, payments, analytics, LiveOps, ... the list goes on."
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
