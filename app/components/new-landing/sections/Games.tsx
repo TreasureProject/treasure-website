@@ -35,6 +35,7 @@ import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { GamesGrid } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
+import { AnimatePresence, motion } from "framer-motion";
 
 const games = [
   {
@@ -130,11 +131,17 @@ const Games = () => {
   return (
     <div className="relative w-full pt-32 pb-10">
       {/* Background image */}
-      <img
-        src={games[activeGame].background}
-        alt="Background"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-      />
+      <AnimatePresence>
+        <motion.img
+          src={games[activeGame].background}
+          key={games[activeGame].name}
+          alt="Background"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        />
+      </AnimatePresence>
 
       {/* Carousel container */}
       <div className="relative z-50">
