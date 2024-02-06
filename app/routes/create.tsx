@@ -297,12 +297,12 @@ const Partner = () => {
             </h1>
             <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
-                <div className="group-hover:pause flex animate-[marquee_20s_linear_infinite] gap-5 sm:animate-[marquee_40s_linear_infinite]">
+                <div className="group-hover:pause flex animate-[marquee_20s_linear_infinite] gap-5 sm:animate-[marquee_20s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
                 </div>
-                <div className="group-hover:pause animate-[marquee2_20s_linear_infinite absolute] top-0 ml-4 flex gap-5 sm:animate-[marquee2_40s_linear_infinite]">
+                <div className="group-hover:pause animate-[marquee2_20s_linear_infinite absolute] top-0 ml-4 flex gap-5 sm:animate-[marquee2_20s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
