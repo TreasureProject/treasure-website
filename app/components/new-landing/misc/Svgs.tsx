@@ -4858,7 +4858,7 @@ export const BoTGraphicThree = ({ className }: Props) => (
     xmlns="http://www.w3.org/2000/svg"
     className={className}
   >
-    <g clip-path="url(#clip0_947_21143)">
+    <g clipPath="url(#clip0_947_21143)">
       <rect width="837" height="458" fill="#FDE7B0" />
       <mask
         id="mask0_947_21143"
@@ -7649,7 +7649,7 @@ export const BoTGraphicFour = ({ className }: Props) => (
     xmlns="http://www.w3.org/2000/svg"
     className={className}
   >
-    <g clip-path="url(#clip0_948_21762)">
+    <g clipPath="url(#clip0_948_21762)">
       <rect width="620" height="458" fill="#FDE7B0" />
       <mask
         id="mask0_948_21762"

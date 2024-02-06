@@ -117,7 +117,7 @@ export const TwitchIcon = ({ className }: IconProps) => (
     xmlns="http://www.w3.org/2000/svg"
     className={className}
   >
-    <g clip-path="url(#clip0_880_45503)">
+    <g clipPath="url(#clip0_880_45503)">
       <path
         d="M7.22363 11.8379V31.3858H13.9555V35.0521H17.6311L21.3009 31.3846H26.8102L34.1568 24.0568V6.94913H9.05852L7.22363 11.8379ZM11.507 9.39057H31.7083V22.832L27.4226 27.1083H20.6885L17.0187 30.7699V27.1083H11.507V9.39057Z"
         fill="currentColor"
