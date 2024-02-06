@@ -47,6 +47,12 @@ module.exports = {
           },
         },
       },
+      backgroundImage: {
+        "gradient-landing-hero":
+          "linear-gradient(270deg, rgba(13, 20, 32, 0.00) 48.68%, rgba(13, 20, 32, 0.65) 100%)",
+        "gradient-landing-bridgeworld":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 51.04%, rgba(0, 0, 0, 0.20) 100%)",
+      },
       keyframes: {
         slideDown: {
           from: { height: 0 },

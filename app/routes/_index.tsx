@@ -10,13 +10,22 @@ import Partners from "~/components/new-landing/sections/Partners";
 import Games from "~/components/new-landing/sections/Games";
 import Ctas from "~/components/new-landing/sections/Ctas";
 import Bridgeworld from "~/components/new-landing/sections/Bridgeworld";
-import Chain from "~/components/new-landing/sections/Chain";
 import Platform from "~/components/new-landing/sections/Platform";
+import BuildOnTreasure from "~/components/new-landing/sections/BuildOnTreasure";
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import swiperCSS from "swiper/css";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import swiperNavigationCSS from "swiper/css/navigation";
 
 export const headers: HeadersFunction = commonHeaders;
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: keenSliderCSS },
+  { rel: "stylesheet", href: swiperCSS },
+  { rel: "stylesheet", href: swiperNavigationCSS },
 ];
 
 export default function Home() {
@@ -26,13 +35,13 @@ export default function Home() {
 
   return (
     <NewLayout>
-      <main className="bg-new-night-1300 ">
+      <main className="bg-new-night-1300">
         <Hero />
         <Intro />
         <Partners />
         <Games />
         <Platform />
-        <Chain />
+        <BuildOnTreasure />
         <Bridgeworld />
         <Ctas />
       </main>

@@ -149,7 +149,7 @@ export default function Build() {
             <div className="relative z-30 py-16 [grid-area:overlay] sm:py-24">
               <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-12">
                 <div className="text-center">
-                  <p className="text-xl font-bold text-honey-200 sm:text-4xl">
+                  <p className="pt-16 text-xl font-bold text-honey-200 sm:pt-24 sm:text-4xl">
                     Build with Treasure
                   </p>
                   <div className="mt-4 text-night-300 sm:text-xl">
@@ -160,9 +160,10 @@ export default function Build() {
                       </Balancer>
 
                       <Balancer>
-                        Tools to enable and accelerate your journey.{" "}
-                        <span className="font-bold">Everything</span> you need
-                        to supercharge your game.
+                        We empower games to reach their full potential. Our
+                        community-driven ethos, publishing stack, and novel
+                        approach to game building gives developers everything
+                        they need to be successful.
                       </Balancer>
                     </p>
                   </div>
@@ -301,6 +302,7 @@ export default function Build() {
           </div>
         </motion.section>
         <NewTreasureStats type="secondary" />
+        {/*
         <section
           id="information"
           aria-labelledby="information"
@@ -577,6 +579,7 @@ export default function Build() {
             </div>
           </div>
         </section>
+        */}
         <section
           id="reviews"
           aria-labelledby="reviews-title"
