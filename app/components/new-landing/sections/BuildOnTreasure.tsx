@@ -70,7 +70,7 @@ const BaseCard = ({
 }) => (
   <div
     className={twMerge(
-      "relative  h-[460px] rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-6 sm:p-12 lg:p-8 xl:p-12",
+      "relative rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-6 sm:p-12 md:h-[460px] lg:p-8 xl:p-12",
       className
     )}
   >
@@ -152,31 +152,31 @@ const BuildOnTreasure = () => {
         </div>
         <div className="grid-cols-7 gap-6 space-y-6 lg:grid lg:space-y-0">
           <BaseCard
-            title="Gaming Chain"
-            description="Fast, affordable, and fully powered by Treasure’s Infinity Chains."
+            title="Gaming Chains"
+            description="Fast, affordable, and powered by the Treasure Chain and a new network of Infinity Chains."
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <BoTGraphicOne className="absolute left-1/2 -bottom-[48%] w-[110%%] -translate-x-1/2 text-new-light-background  lg:-top-[10%]" />
+              <BoTGraphicOne className="absolute left-1/2 -bottom-[48%] w-[110%%] -translate-x-1/2 text-new-light-background  opacity-30 md:opacity-100 lg:-top-[10%]" />
             </div>
           </BaseCard>
           <BaseCard
             title="Treasure Development Kit"
-            description="Access multi-platform support for popular game engines, deployable smart contracts for tokens and gameplay logic. Manage player identities, access analytics, and tap into a wide range of LiveOps features."
+            description="Enabling Treasure's platform features in-game with multi-platform support, deployable smart contracts, and access to identity, analytics, and LiveOps tooling."
             className="col-span-4"
           >
             <div className="absolute inset-0 h-full overflow-hidden rounded-2xl">
-              <BoTGraphicTwo className="absolute -bottom-[5%] left-1/2  h-auto w-[180%] -translate-x-1/2 text-new-light-background lg:bottom-0 lg:h-full lg:w-auto " />
+              <BoTGraphicTwo className="absolute -bottom-[5%] left-1/2  h-auto w-[180%] -translate-x-1/2 text-new-light-background opacity-30 md:opacity-100 lg:bottom-0 lg:h-full lg:w-auto" />
             </div>
           </BaseCard>
 
           <BaseCard
             title="Treasure Identity & Login"
-            description="Bring players into your game through frictionless onboarding. Tap into powerful segmentation tools to tailor experiences for players."
+            description="Seamless onboarding to bring players into your game. Powerful segmentation tools to personalize player experiences."
             className="col-span-4"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <div className="absolute bottom-10 z-20 sm:-bottom-8 lg:-bottom-[64px] ">
+              <div className="absolute bottom-10 z-20 hidden md:block lg:-bottom-[64px]">
                 <div className="space-y-4">
                   <div className="relative hidden overflow-x-hidden lg:flex">
                     <div className="flex animate-marquee whitespace-nowrap pl-4">
@@ -224,16 +224,16 @@ const BuildOnTreasure = () => {
                   </div>
                 </div>
               </div>
-              <BoTGraphicThree className="absolute left-1/2 -bottom-10 w-[200%] -translate-x-1/2 lg:bottom-0 lg:h-[100%] lg:w-auto " />
+              <BoTGraphicThree className="absolute left-1/2 -bottom-10 w-[200%] -translate-x-1/2 opacity-30 md:opacity-100 lg:bottom-0 lg:h-[100%] lg:w-auto" />
             </div>
           </BaseCard>
           <BaseCard
             title="... and much more"
-            description="Native marketplace built for gaming, decentralized exchange, payments, analytics, LiveOps, ... the list goes on."
+            description="Native marketplace built specifically for gaming, a powerful next generation AMM, streamlined payments, robust analytics... the list goes on."
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <BoTGraphicFour className="absolute bottom-0 left-1/2  w-[108%] -translate-x-1/2 lg:h-[100%] lg:w-auto " />
+              <BoTGraphicFour className="absolute bottom-0 left-1/2  w-[108%] -translate-x-1/2 opacity-30 md:opacity-100 lg:h-[100%] lg:w-auto" />
             </div>
           </BaseCard>
         </div>

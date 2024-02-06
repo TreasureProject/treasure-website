@@ -35,7 +35,7 @@ export default function About() {
   return (
     <Layout>
       <main>
-        <div className="relative bg-night-900 py-16 sm:py-24">
+        <div className="relative bg-night-900 py-16 pt-32 sm:py-24 sm:pt-48">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
             <Badge
               name="About Treasure"

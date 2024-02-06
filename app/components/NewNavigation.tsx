@@ -100,6 +100,11 @@ const dropdownItems: DropDownItems[] = [
     label: "Community",
     items: [
       {
+        label: "Creator Program",
+        type: "internal",
+        target: "/create",
+      },
+      {
         label: "Newsletter",
         type: "external",
         target: LINKS.SUBSTACK,
@@ -124,7 +129,7 @@ const NewNavigation = () => {
   const [latestScroll, setLatestScroll] = useState(0);
   const { scrollY } = useScroll();
   const SOCIAL_LINK_CLASS =
-    "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5  text-new-night-100 flex cursor-pointer items-center rounded-md transition-colors ";
+    "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5  text-new-night-100 flex cursor-pointer items-center rounded-md transition-colors";
   const MOBILE_ITEM_CLASS =
     "hover:bg-new-night-100/10 h-10 w-full cursor-pointer rounded-lg px-4 text-start font-bold text-white transition-colors";
   const GENERIC_HAMBURGER_LINE = `h-[3px] w-5 my-[2px] rounded-full bg-new-night-100 transition ease transform duration-300`;
@@ -145,12 +150,12 @@ const NewNavigation = () => {
   return (
     <div
       className={twMerge(
-        "justify-centerp-0 fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center opacity-100 transition-opacity lg:p-6",
+        "fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-0 p-3 opacity-100 transition-opacity lg:p-6",
         openHamburger && "bg-new-night-1200 lg:bg-transparent",
         !visible && "pointer-events-none opacity-0"
       )}
     >
-      <div className="relative z-[900] flex h-16 w-full items-center justify-between border-white/5 bg-new-night-1200/50 px-6 backdrop-blur-lg md:px-4 lg:h-20 lg:rounded-2xl lg:border lg:bg-new-night-1200/25 lg:px-6">
+      <div className="relative z-[900] flex h-16 w-full items-center justify-between rounded-2xl border border-white/5 bg-new-night-1200/25 bg-new-night-1200/25 px-6 px-6 backdrop-blur-lg md:px-4 lg:h-20">
         <div className="flex items-center gap-0 sm:gap-9">
           <Link to="/">
             <Logo className="w-[148px] xl:w-[160px]" />
@@ -160,7 +165,7 @@ const NewNavigation = () => {
               if (item.items) {
                 return (
                   <button
-                    className="group relative flex h-9 cursor-pointer items-center gap-2.5  rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
+                    className="group relative flex h-9 cursor-pointer items-center gap-2.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
                     key={item.label}
                   >
                     {item.label}
@@ -276,7 +281,7 @@ const NewNavigation = () => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-new-night-1200 py-6  backdrop-blur-2xl lg:hidden"
+            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-new-night-1200 py-6 backdrop-blur-2xl lg:hidden"
           >
             <div className=" flex-1 space-y-6 overflow-hidden px-3 pb-3 sm:px-8">
               <div className="max-h-full w-full overflow-scroll">

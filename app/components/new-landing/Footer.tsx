@@ -20,11 +20,6 @@ const FooterLinks = [
         external: false,
       },
       {
-        title: "Infrastructure",
-        url: "/infrastructure",
-        external: false,
-      },
-      {
         title: "Game Builders Program",
         url: LINKS.DEVELOPERS,
         external: true,
@@ -47,12 +42,12 @@ const FooterLinks = [
       {
         title: "Games",
         url: LINKS.GAMES,
-        external: false,
+        external: true,
       },
       {
         title: "Platform",
         url: LINKS.APP,
-        external: false,
+        external: true,
       },
     ],
   },
@@ -111,17 +106,17 @@ const FooterLinks = [
 const Footer = () => {
   return (
     <div className="space-y-12 bg-new-night-1200 py-12 md:space-y-14 md:py-20">
-      <div className="container flex w-full flex-col justify-between gap-14 xl:flex-row">
-        <div className="space-y-auto relative ">
+      <div className="container relative flex w-full flex-col justify-between gap-14 xl:flex-row">
+        <div className="space-y-auto">
           <Logo className="w-[172px]" />
-          <h1 className="absolute bottom-0 left-0 mt-auto hidden w-max text-5xl font-bold leading-[120%] xl:block">
+          <h1 className="bottom-0 mt-auto hidden w-max text-5xl font-bold leading-[120%] md:absolute md:block">
             The magic <br /> of play.
           </h1>
         </div>
         <div className="flex flex-col gap-10 xl:flex-row">
           <div className="flex flex-col gap-10 md:flex-row">
             {FooterLinks.map((linkSection) => (
-              <div className="space-y-5" key={linkSection.title}>
+              <div className="flex-auto space-y-5" key={linkSection.title}>
                 <p className="font-semibold text-new-night-100">
                   {linkSection.title}
                 </p>
@@ -148,7 +143,7 @@ const Footer = () => {
               <Button color="ruby" href={LINKS.GAMES}>
                 Start Playing
               </Button>
-              <Button color="ruby" to="/build">
+              <Button color="honey" to="/build">
                 Start Building
               </Button>
             </div>
@@ -206,7 +201,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className="text-new-night-500">
-            © 2021-2022 Treasure Technology Foundation
+            © 2024 Treasure Technology Foundation
           </p>
         </div>
       </div>

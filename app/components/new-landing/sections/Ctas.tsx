@@ -17,7 +17,7 @@ const Ctas = () => {
       <div className="container grid grid-cols-1 grid-rows-[auto_1px] gap-y-10 gap-x-16 md:grid-cols-[1fr_1px_1fr] 2xl:grid-cols-[1fr_1px_1fr_1px_1fr_1px_1fr] 2xl:gap-y-0">
         <div className="space-y-4 md:h-60 2xl:space-y-6">
           <h1 className="text-xl font-bold text-new-night-100 2xl:text-3xl">
-            For Studios <br /> and Developers
+            For Studios <br className="hidden xl:block" /> and Developers
           </h1>
           <p className="pb-4 md:pb-0">
             Apply to join our curated portfolio of indie games and pioneer a new
@@ -33,8 +33,8 @@ const Ctas = () => {
             For Content Creators
           </h1>
           <p className="">
-            Passionate about creating content and Treasure games? Join our
-            leading creator program.
+            Passionate about creating content and playing Treasure games? Join
+            our leading creator program.
           </p>
           <div className="bottom-0 left-0 flex gap-4 pt-4 md:absolute md:pt-0">
             <Button color="outline" className="w-max" href={LINKS.CREATORS}>

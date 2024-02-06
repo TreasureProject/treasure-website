@@ -3658,8 +3658,8 @@ export const GamesGrid = ({ className }: Props) => (
         y2="1366"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#D9D9D9" stop-opacity="0" />
-        <stop offset="1" stop-color="#D9D9D9" stop-opacity="0.2" />
+        <stop stopColor="#D9D9D9" stopOpacity="0" />
+        <stop offset="1" stopColor="#D9D9D9" stopOpacity="0.2" />
       </linearGradient>
     </defs>
   </svg>

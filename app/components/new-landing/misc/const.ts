@@ -12,7 +12,7 @@ export const LINKS = {
   APP: "https://app.treasure.lol",
   CREATORS: "https://go.treasure.lol/creators-apply?utm_source=website",
   GAMES: "https://app.treasure.lol/games",
-  LITEPAPER: "https://app.treasure.lol", //todo
+  LITEPAPER: "https://go.treasure.lol/litepaper",
   SUBSTACK: "https://treasuredao.substack.com",
   GITHUB: "https://github.com/TreasureProject",
   PARTNER:

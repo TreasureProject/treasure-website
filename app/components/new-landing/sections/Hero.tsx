@@ -22,7 +22,9 @@ const Hero = () => {
             <Button color="ruby" href={LINKS.APP}>
               Start Playing
             </Button>
-            {/* <Button color="honey">Read Litepaper</Button> */}
+            <Button color="honey" href={LINKS.LITEPAPER}>
+              Read Litepaper
+            </Button>
           </div>
         </div>
       </div>

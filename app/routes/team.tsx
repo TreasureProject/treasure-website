@@ -96,7 +96,7 @@ export default function Team() {
   return (
     <Layout>
       <main>
-        <div className="relative bg-honey-200 py-16 sm:py-24">
+        <div className="relative bg-honey-200 pt-32 pb-16 sm:pt-48 sm:pb-24">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
             <Badge name="Team" bgColor="bg-honey-100" />
             <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
