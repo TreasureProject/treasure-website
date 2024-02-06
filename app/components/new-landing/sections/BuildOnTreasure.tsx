@@ -75,10 +75,10 @@ const BaseCard = ({
     )}
   >
     {children}
-    <h1 className="landing-h2 lg:max-w-auto relative z-20 max-w-[80%] pb-4 text-new-ruby-900 sm:pb-6">
+    <h1 className="lg:max-w-auto relative z-20 max-w-[80%] pb-4 text-2xl font-bold leading-[105%] text-new-ruby-900 sm:pb-6 md:text-3xl">
       {title}
     </h1>
-    <p className="relative z-20 max-w-[480px] text-lg leading-[150%] text-new-night-700">
+    <p className="relative z-20 max-w-[480px] text-base leading-[150%] text-new-night-700 md:text-lg">
       {description}
     </p>
   </div>
