@@ -230,7 +230,7 @@ const Partner = () => {
               <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
             </div>
             {/* This width here */}
-            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl border-2 border-[red] bg-gradient-partner-hero sm:border-[green] md:w-[58%] md:rounded-[16px] md:border-[yellow] lg:left-[11%] lg:h-[50%] lg:border-[pink]">
+            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl border-2 bg-gradient-partner-hero md:w-[58%] md:rounded-[16px] lg:left-[11%] lg:h-[50%]">
               <img
                 src={red_diamond_gif}
                 alt=""
@@ -302,7 +302,7 @@ const Partner = () => {
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
                 </div>
-                <div className="group-hover:pause animate-[marquee2_20s_linear_infinite absolute] top-0 ml-4 flex gap-5 sm:animate-[marquee2_20s_linear_infinite]">
+                <div className="group-hover:pause absolute top-0 ml-4 flex animate-[marquee2_20s_linear_infinite] gap-5 sm:animate-[marquee2_20s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
