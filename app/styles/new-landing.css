@@ -1,0 +1,26 @@
+.container {
+  @apply mx-auto max-w-9xl px-6 sm:px-12 md:px-[60px];
+}
+
+.landing-h1 {
+  @apply text-[32px] font-[635] leading-[105%] md:text-5xl;
+}
+
+.landing-h2 {
+  @apply text-[32px] font-[635] leading-[105%];
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  min-width: 0;
+  flex: 0 0 320px;
+  position: relative;
+  transform: translateX(0) scale(1);
+}
+
+.swiper-slide a {
+  display: block;
+}

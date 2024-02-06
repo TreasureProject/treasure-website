@@ -837,7 +837,7 @@ export const infrastructures = [
     description:
       "Magicswap powers the cross-game economy by supporting the trading of native tokens for games powererd by Treasure with each liquidity pool using MAGIC as the base pair.",
     buttonDescription: "Visit Magicswap",
-    href: "https://magicswap.treasure.lol",
+    href: "https://magicswap.lol",
   },
   {
     name: "Economy",
@@ -904,68 +904,11 @@ export const IndexCTA = [
 
 export const navigation = [
   {
-    name: "Build",
-    links: [
-      {
-        name: "Build with Treasure",
-        href: "/build",
-        isExternal: false,
-      },
-      {
-        name: "Infrastructure",
-        href: "/infrastructure",
-        isExternal: false,
-      },
-      {
-        name: "Game Builders Program",
-        href: "https://docs.treasure.lol/games/game-builders-program",
-        isExternal: true,
-      },
-      {
-        name: "Open Source",
-        href: "https://github.com/TreasureProject",
-        isExternal: true,
-      },
-      {
-        name: "Apply to Partner",
-        href: "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
-        isExternal: true,
-      },
-    ],
-  },
-  {
-    name: "Games",
-    href: "https://app.treasure.lol/games",
-    isExternal: true,
-    group: "Play",
-  },
-  {
-    name: "Platform",
-    href: "https://app.treasure.lol",
-    isExternal: true,
-    group: "Play",
-  },
-  {
     name: "About",
     links: [
       {
-        name: "About Treasure",
+        name: "About Us",
         href: "/about",
-        isExternal: false,
-      },
-      {
-        name: "Team",
-        href: "/team",
-        isExternal: false,
-      },
-      // {
-      //   name: "Blog",
-      //   href: "/blog",
-      //   isExternal: false,
-      // },
-      {
-        name: "Brand Assets",
-        href: "/brand-assets",
         isExternal: false,
       },
       {
@@ -974,8 +917,13 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Newsletter",
-        href: "https://treasuredao.substack.com/",
+        name: "Team",
+        href: "/team",
+        isExternal: false,
+      },
+      {
+        name: "Careers",
+        href: "https://jobs.treasure.lol/",
         isExternal: true,
       },
       {
@@ -984,19 +932,56 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Careers",
-        href: "https://jobs.treasure.lol/",
+        name: "Brand Assets",
+        href: "/brand-assets",
+        isExternal: false,
+      },
+    ],
+  },
+  {
+    name: "Play",
+    href: "https://app.treasure.lol",
+    isExternal: true,
+    group: "Play",
+  },
+  {
+    name: "Build",
+    href: "/build",
+    isExternal: false,
+    group: "Build",
+  },
+  {
+    name: "Solutions",
+    links: [
+      {
+        name: "Platform",
+        href: "https://app.treasure.lol",
         isExternal: true,
+      },
+      {
+        name: "AMM",
+        href: "https://magicswap.lol/",
+        isExternal: true,
+      },
+    ],
+  },
+  {
+    name: "Community",
+    links: [
+      {
+        name: "Newsletter",
+        isExternal: true,
+        href: "https://treasuredao.substack.com/",
       },
       {
         name: "Governance Forum",
-        href: "https://gov.treasure.lol/",
         isExternal: true,
+        href: "https://forum.treasure.lol",
       },
       {
         name: "Snapshot",
-        href: "https://vote.treasure.lol/",
         isExternal: true,
+        href: "https://vote.treasure.lol",
       },
     ],
   },

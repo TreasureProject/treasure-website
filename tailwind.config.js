@@ -3,7 +3,7 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   darkMode: "class",
-  presets: [require('@treasure-project/tailwind-config')],
+  presets: [require('@treasure-project/tailwind-config'), require('./app/components/new-landing/misc/new.tailwind.config')],
   theme: {
     extend: {
       colors: {
