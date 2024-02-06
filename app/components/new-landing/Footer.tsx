@@ -49,6 +49,11 @@ const FooterLinks = [
         url: LINKS.APP,
         external: true,
       },
+      {
+        title: "Creator Program",
+        url: "/create",
+        external: false,
+      },
     ],
   },
   {
