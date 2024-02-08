@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import PLACEHOLDER_IMAGE from "~/../public/img/new-landing/PLR_enSG_1920x1080_SOCIAL_MAHmovieposter3.webp";
-import VIDEO from "~/../public/img/new-landing/trailer.mp4";
+import VIDEO from "~/../public/img/new-landing/Treasure_Mini_Game_Trailer_No_Intro_LR_1080p.mp4";
 
 import { ChevronRightIcon } from "../misc/Icons";
 import { VideoCutOff } from "../misc/Svgs";
@@ -37,7 +37,7 @@ const Intro = () => {
           playsInline
           src={VIDEO}
           loop
-          className="aspect-video w-full"
+          className=" aspect-video w-full bg-red-50"
         />
       </div>
       <div className="container flex flex-col items-center gap-10 py-12 sm:py-14 md:gap-32 xl:flex-row  xl:py-0 ">
@@ -48,6 +48,7 @@ const Intro = () => {
             muted
             src={VIDEO}
             loop
+            playsInline
             className="aspect-video w-full min-w-[560px]"
           />
         </div>

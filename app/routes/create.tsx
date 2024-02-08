@@ -61,7 +61,7 @@ const ApplyNowButton = () => (
     href={FORM_URL}
     target="_blank"
     rel="noreferrer"
-    className="text-md mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-medium transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
+    className="text-md mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-semibold transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
   >
     Apply Now
   </a>
@@ -230,7 +230,7 @@ const Partner = () => {
               <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
             </div>
             {/* This width here */}
-            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl border-2 bg-gradient-partner-hero md:w-[58%] md:rounded-[16px] lg:left-[11%] lg:h-[50%]">
+            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl bg-gradient-partner-hero md:w-[58%] md:rounded-[16px] lg:left-[11%] lg:h-[50%]">
               <img
                 src={red_diamond_gif}
                 alt=""
