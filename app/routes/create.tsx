@@ -62,6 +62,16 @@ const Testimonials = [
     name: "HdOlivares",
     twitter: "hd_olivares",
   },
+  {
+    text: "I’ve really enjoyed exploring new games as part of Treasure create campaign. Getting insights from the team had made covering the Treasure games more valuable.",
+    name: "Gaspode",
+    twitter: "GaspodeWD",
+  },
+  {
+    text: "The Treasure Create Campaign has been instrumental in supporting my aspirations as a content creator. It offers valuable financial support along with essential educational resources tailored to our needs as creators.",
+    name: "RevGuyOfficial",
+    twitter: "RevGuyOfficial",
+  },
 ];
 
 const ApplyNowButton = () => (
@@ -218,7 +228,7 @@ const Partner = () => {
               <img src={a_01_image} alt="" className="animate-move-up-down" />
             </div>
           </div>
-          <div className="flex w-full md:justify-center ">
+          <div className="flex w-full md:pl-10 ">
             <div className="max-w-md space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
@@ -256,7 +266,7 @@ const Partner = () => {
               alt="Platform Illustration"
             />
           </div>
-          <div className="flex w-full md:justify-center ">
+          <div className="flex w-full md:pl-10 ">
             <div className="max-w-sm space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
@@ -283,7 +293,7 @@ const Partner = () => {
             />
             <img src={c_03_image} alt="" className="absolute " />
           </div>
-          <div className="flex w-full md:justify-center ">
+          <div className="flex w-full md:pl-10">
             <div className="max-w-md space-y-3 sm:space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
@@ -296,71 +306,55 @@ const Partner = () => {
             </div>
           </div>
         </div>
-        <div
-          className={twMerge(
-            "wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse"
-          )}
-        >
+        <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse">
           {/* here starts the graphic for this section */}
-          <div className="relative flex w-full flex-col items-center justify-end md:flex-row xl:justify-center">
+          <div className="relative flex w-full flex-col items-center justify-end md:flex-row">
             {/* here starts the tiles part */}
-            <div className="absolute top-2/3 left-0 right-0 w-full translate-x-[6px]  -translate-y-[40px] sm:right-0 md:left-auto md:min-w-[420px] md:translate-y-0 md:translate-x-0 lg:min-w-[512px] xl:right-24 xl:min-w-[620px]">
+            <div className="absolute top-[62%] left-0 right-0 w-full translate-x-[6px] -translate-y-[40px]  sm:right-0 md:top-1/2 md:left-auto md:min-w-[420px] md:translate-y-0 md:translate-x-0 lg:min-w-[512px] xl:right-0 xl:min-w-[720px]">
               {/* Cantelope */}
               <Link
-                className="absolute -left-[14%] top-1/2 -translate-y-1/2 sm:-left-[10%] md:left-0"
+                className="absolute -left-[14%] top-1/2 -translate-y-1/2 transition-transform hover:scale-105 sm:-left-[10%] md:left-0"
                 to="https://twitter.com/TheCantelope"
                 target="_blank"
               >
-                <div className="create-partner-link hidden lg:flex">
-                  @TheCantelope
-                  <ExternalIcon className="w-4" />
-                </div>
                 <img
                   className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
                   src={AVATAR_2_IMAGE}
                   alt=""
                 />
-                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[280px]" />
+                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[320px]" />
               </Link>
               {/* Alliestrasza */}
               <Link
-                className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2"
+                className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 transition-all hover:scale-105"
                 to="https://twitter.com/Alliestrasza"
                 target="_blank"
               >
-                <div className="create-partner-link hidden lg:flex">
-                  @Alliestrasza
-                  <ExternalIcon className="w-4" />
-                </div>
                 <img
                   className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
                   src={AVATAR_1_IMAGE}
                   alt=""
                 />
-                <CreateFrame className="w-[280px] sm:w-[320px] md:w-[232px] lg:w-[264px] xl:w-[320px]" />
+                <CreateFrame className="w-[280px] sm:w-[320px] md:w-[232px] lg:w-[264px] xl:w-[360px]" />
               </Link>
               {/* Juicy */}
 
               <Link
-                className="absolute top-1/2 -right-[10%] -translate-y-1/2 md:right-0"
+                className="absolute top-1/2 -right-[10%] -translate-y-1/2 transition-all hover:scale-105 md:right-0"
                 to="https://twitter.com/JuicyJCR"
                 target="_blank"
               >
-                <div className="create-partner-link hidden lg:flex">
-                  @JuicyJCR
-                  <ExternalIcon className="w-4" />
-                </div>
                 <img
                   className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
                   src={AVATAR_3_IMAGE}
                   alt=""
                 />
-                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[280px]" />
+                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[320px]" />
               </Link>
             </div>
-            <CreateGrid className="w-full md:w-[360px] lg:w-[400px]" />
+            <CreateGrid className="w-full md:w-[360px] lg:w-[440px] xl:w-[512px]" />
           </div>
-          <div className="flex w-full md:justify-center ">
+          <div className="flex w-full md:pl-10 ">
             <div className="max-w-md space-y-3 sm:space-y-10">
               <div className="space-y-4">
                 <div className="space-y-2">
@@ -379,14 +373,18 @@ const Partner = () => {
                   </h1>
                 </div>
                 <p className="create-paragraph sm:text-md">
-                  Explore The A-List, our new elite tier within Treasure Create,
-                  offering established creators unmatched access, premium paid
-                  opportunities, and exposure to indie and web3 gaming. Join us
-                  to shape the future of gaming with Treasure.
+                  Our new elite tier within Treasure Create offers established
+                  creators unmatched access, premium paid opportunities, and
+                  exposure to indie and web3 gaming. Join us to shape the future
+                  of gaming with Treasure.
                 </p>
               </div>
-              <Button color="ruby" className="w-max">
-                Apply now
+              <Button
+                color="ruby"
+                className="w-max"
+                href="mailto:create@treasure.lol"
+              >
+                Get in Touch
               </Button>
             </div>
           </div>
