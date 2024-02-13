@@ -63,12 +63,12 @@ const Testimonials = [
     twitter: "hd_olivares",
   },
   {
-    text: "I’ve really enjoyed exploring new games as part of Treasure create campaign. Getting insights from the team had made covering the Treasure games more valuable.",
+    text: "I’ve really enjoyed exploring new games as part of Treasure Create. Getting insights from the team has made covering the Treasure games more valuable.",
     name: "Gaspode",
     twitter: "GaspodeWD",
   },
   {
-    text: "The Treasure Create Campaign has been instrumental in supporting my aspirations as a content creator. It offers valuable financial support along with essential educational resources tailored to our needs as creators.",
+    text: "Treasure Create Campaigns have been instrumental in supporting my aspirations as a content creator. The program offers valuable financial support along with essential educational resources tailored to our needs as creators",
     name: "RevGuyOfficial",
     twitter: "RevGuyOfficial",
   },
@@ -235,7 +235,7 @@ const Partner = () => {
               </h1>
               <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Join our exclusive content creator program to connect with over
-                150k players, access early playtests, and amplify your reach
+                300k players, access early playtests, and amplify your reach
                 through promotion on official Treasure channels.
               </p>
             </div>
@@ -384,7 +384,7 @@ const Partner = () => {
                 className="w-max"
                 href="mailto:create@treasure.lol"
               >
-                Get in Touch
+                Contact us
               </Button>
             </div>
           </div>
