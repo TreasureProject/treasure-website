@@ -346,10 +346,10 @@ const Partner = () => {
                 to="https://twitter.com/JuicyJCR"
                 target="_blank"
               >
-                <Link className="create-partner-link hidden lg:flex">
+                <div className="create-partner-link hidden lg:flex">
                   @JuicyJCR
                   <ExternalIcon className="w-4" />
-                </Link>
+                </div>
                 <img
                   className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
                   src={AVATAR_3_IMAGE}
