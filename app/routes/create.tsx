@@ -63,12 +63,12 @@ const Testimonials = [
     twitter: "hd_olivares",
   },
   {
-    text: "I’ve really enjoyed exploring new games as part of Treasure Create. Getting insights from the team has made covering the Treasure games more valuable.",
+    text: "I’ve really enjoyed exploring new games as part of Treasure Create. Getting insights from the team has made covering the Treasure games more valuable",
     name: "Gaspode",
     twitter: "GaspodeWD",
   },
   {
-    text: "Treasure Create Campaigns have been instrumental in supporting my aspirations as a content creator. The program offers valuable financial support along with essential educational resources tailored to our needs as creators",
+    text: "Treasure Create Campaigns have been instrumental in supporting my aspirations as a content creator. The program offers valuable financial support along with essential educational resources tailored to our needs as creators.",
     name: "RevGuyOfficial",
     twitter: "RevGuyOfficial",
   },
@@ -90,7 +90,7 @@ const TestimonialCard = ({
 }: {
   testimonial: { text: string; name: string; twitter: string };
 }) => (
-  <div className="flex w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
+  <div className="flex h-[280px] w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[400px] md:w-[460px] md:min-w-[460px] md:p-10 ">
     <p className="sm:text-md text-sm leading-[160%] md:text-lg">
       “{testimonial.text}“
     </p>
