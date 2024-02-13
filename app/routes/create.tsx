@@ -1,9 +1,13 @@
-import { Layout } from "~/components/Layout";
+import { NewLayout as Layout } from "~/components/new-landing/NewLayout";
 
 // Assets
 import { TreasureLogo } from "~/components/Icons";
-import texture_background_image from "../../public/img/illustrations/texture_background.png";
 import tc_intro_video from "../../public/img/TC_INTRO.mp4";
+
+import CREATE_LOGO_IMAGE from "../../public/img/create/Logomark.png";
+import AVATAR_1_IMAGE from "../../public/img/create/avatar_1.png";
+import AVATAR_2_IMAGE from "../../public/img/create/avatar_2.png";
+import AVATAR_3_IMAGE from "../../public/img/create/avatar_3.png";
 
 // Asset Parts for animations
 import a_01_image from "../../public/img/partner-components/A_01.png";
@@ -34,6 +38,10 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Button from "~/components/new-landing/Button";
+import { CreateFrame, CreateGrid } from "~/components/new-landing/misc/Svgs";
+import { ExternalIcon } from "~/components/new-landing/misc/Icons";
+import { Link } from "@remix-run/react";
 
 const FORM_URL =
   "https://forms.clickup.com/9003025951/f/8c9yhgz-3182/QBO3G2H9GDHUXBZ7K5";
@@ -253,7 +261,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
               </h1>
-              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
+              <p className="create-paragraph sm:text-md">
                 Gain <span className="text-ruby-800">MAGIC</span> compensation,
                 exclusive in-game items, and priority beta access, celebrating
                 your dedication to Treasure games.
@@ -280,11 +288,106 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
               </h1>
-              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
+              <p className="create-paragraph sm:text-md">
                 Immerse yourself in a vibrant creator community, connect with
                 game devs, participate in game nights and unique events, and
                 forge unforgettable gaming moments together!
               </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className={twMerge(
+            "wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse"
+          )}
+        >
+          {/* here starts the graphic for this section */}
+          <div className="relative flex w-full flex-col items-center justify-end md:flex-row xl:justify-center">
+            {/* here starts the tiles part */}
+            <div className="absolute top-2/3 left-0 right-0 w-full translate-x-[6px]  -translate-y-[40px] sm:right-0 md:left-auto md:min-w-[420px] md:translate-y-0 md:translate-x-0 lg:min-w-[512px] xl:right-24 xl:min-w-[620px]">
+              {/* Cantelope */}
+              <Link
+                className="absolute -left-[14%] top-1/2 -translate-y-1/2 sm:-left-[10%] md:left-0"
+                to="https://twitter.com/TheCantelope"
+                target="_blank"
+              >
+                <div className="create-partner-link hidden lg:flex">
+                  @TheCantelope
+                  <ExternalIcon className="w-4" />
+                </div>
+                <img
+                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  src={AVATAR_2_IMAGE}
+                  alt=""
+                />
+                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[280px]" />
+              </Link>
+              {/* Alliestrasza */}
+              <Link
+                className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2"
+                to="https://twitter.com/Alliestrasza"
+                target="_blank"
+              >
+                <div className="create-partner-link hidden lg:flex">
+                  @Alliestrasza
+                  <ExternalIcon className="w-4" />
+                </div>
+                <img
+                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  src={AVATAR_1_IMAGE}
+                  alt=""
+                />
+                <CreateFrame className="w-[280px] sm:w-[320px] md:w-[232px] lg:w-[264px] xl:w-[320px]" />
+              </Link>
+              {/* Juicy */}
+
+              <Link
+                className="absolute top-1/2 -right-[10%] -translate-y-1/2 md:right-0"
+                to="https://twitter.com/JuicyJCR"
+                target="_blank"
+              >
+                <Link className="create-partner-link hidden lg:flex">
+                  @JuicyJCR
+                  <ExternalIcon className="w-4" />
+                </Link>
+                <img
+                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  src={AVATAR_3_IMAGE}
+                  alt=""
+                />
+                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[280px]" />
+              </Link>
+            </div>
+            <CreateGrid className="w-full md:w-[360px] lg:w-[400px]" />
+          </div>
+          <div className="flex w-full md:justify-center ">
+            <div className="max-w-md space-y-3 sm:space-y-10">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex -translate-x-2 items-center gap-2">
+                    <img
+                      src={CREATE_LOGO_IMAGE}
+                      alt="Create Logo"
+                      className="w-12"
+                    />
+                    <p className="rounded-md bg-gradient-create-shiny px-3 py-2 text-sm text-new-night-1300">
+                      A-LIST
+                    </p>
+                  </div>
+                  <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
+                    Discover The A-List
+                  </h1>
+                </div>
+                <p className="create-paragraph sm:text-md">
+                  Explore The A-List, our new elite tier within Treasure Create,
+                  offering established creators unmatched access, premium paid
+                  opportunities, and exposure to indie and web3 gaming. Join us
+                  to shape the future of gaming with Treasure.
+                </p>
+              </div>
+              <Button color="ruby" className="w-max">
+                Apply now
+              </Button>
             </div>
           </div>
         </div>
