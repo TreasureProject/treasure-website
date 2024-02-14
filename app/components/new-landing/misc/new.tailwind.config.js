@@ -52,6 +52,8 @@ module.exports = {
           "linear-gradient(270deg, rgba(13, 20, 32, 0.00) 48.68%, rgba(13, 20, 32, 0.65) 100%)",
         "gradient-landing-bridgeworld":
           "linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 51.04%, rgba(0, 0, 0, 0.20) 100%)",
+        "gradient-create-shiny":
+          "radial-gradient(258.32% 208.99% at 2.98% 6.37%, #FEC99D 0%, #FEE6B7 20%, #9FFFEF 39.5%, #78D3F4 58.5%, #58B6FD 79%, #7370CB 100%)",
       },
       keyframes: {
         slideDown: {

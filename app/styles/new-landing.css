@@ -24,3 +24,20 @@
 .swiper-slide a {
   display: block;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.create-paragraph {
+  @apply font-medium leading-[160%] text-night-100;
+}
+
+.create-partner-link {
+  @apply absolute left-1/2 bottom-[25%] z-20 -translate-x-1/2 gap-2 rounded-md border-new-night-1100 bg-new-night-1300/80 px-2.5 py-2 text-sm font-medium;
+}
