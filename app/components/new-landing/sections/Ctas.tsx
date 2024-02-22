@@ -2,15 +2,29 @@ import React from "react";
 import { CtasCutOff } from "../misc/Svgs";
 import Button from "../Button";
 import {
-  ExternalIcon,
   TwitchIcon,
   DiscordIcon,
   TwitterIcon,
   YoutubeIcon,
 } from "../misc/Icons";
 import { LINKS, SOCIAL } from "../misc/const";
+import { Form, useActionData, useNavigation } from "@remix-run/react";
+import type { action } from "~/routes/_index";
 
 const Ctas = () => {
+  const navigation = useNavigation();
+  const data = useActionData<typeof action>();
+
+  const isSubmitting = navigation.state === "submitting";
+
+  const state: "idle" | "success" | "error" | "submitting" = isSubmitting
+    ? "submitting"
+    : data?.success
+    ? "success"
+    : data && !data.success
+    ? "error"
+    : "idle";
+
   return (
     <div className="relative bg-new-ruby-900 py-8 2xl:py-20">
       <CtasCutOff className="absolute top-[1px] left-0 hidden w-[144px] -translate-y-[100%] 2xl:block" />
@@ -37,10 +51,15 @@ const Ctas = () => {
             our leading creator program.
           </p>
           <div className="bottom-0 left-0 flex gap-4 pt-4 md:absolute md:pt-0">
-            <Button color="outline" className="w-max" href={LINKS.CREATORS}>
+            <Button
+              as="a"
+              color="outline"
+              className="w-max"
+              href={LINKS.CREATORS}
+            >
               Apply Now
             </Button>
-            <Button color="outline" className="w-max" to="/create">
+            <Button as="link" color="outline" className="w-max" to="/create">
               Learn More
             </Button>
           </div>
@@ -52,10 +71,37 @@ const Ctas = () => {
           </h1>
 
           <div className="bottom-0 left-0 md:absolute">
-            <Button color="outline" className="w-max" href={LINKS.SUBSTACK}>
-              Subscribe
-              <ExternalIcon className="w-4 " />
-            </Button>
+            <Form method="post">
+              <fieldset disabled={state === "submitting"} className="space-y-1">
+                <label htmlFor="email" className="sr-only">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="meem@treasure.lol"
+                  className="w-full rounded-lg border-2 border-honey-800 bg-honey-100 p-4 font-semibold text-night-800 placeholder:font-normal placeholder:text-night-500 focus-within:border-current focus-within:outline-none focus-within:ring-2 focus-within:ring-current focus-within:ring-offset-2 focus-visible:outline-none"
+                />
+                <Button
+                  as="button"
+                  type="submit"
+                  color="honey"
+                  disabled={state === "submitting" || state === "success"}
+                  className="w-full"
+                >
+                  {state === "submitting"
+                    ? "Submitting..."
+                    : state === "success"
+                    ? "Subscribed!"
+                    : "Subscribe"}
+                </Button>
+                {state === "error" && !data?.success ? (
+                  <p className="text-honey-100">Something went wrong.</p>
+                ) : null}
+              </fieldset>
+              <input type="hidden" name="source" value="Marketing Website" />
+            </Form>
           </div>
         </div>
         <div className="h-[1px] w-full bg-new-night-100/40 md:h-auto md:w-auto" />

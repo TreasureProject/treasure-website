@@ -9,7 +9,8 @@ export type EnvVar =
   | "CONTENFUL_WEBHOOK_NAME"
   | "CLOUDFLARE_AUTH_KEY"
   | "CLOUDFLARE_AUTH_EMAIL"
-  | "CLOUDFLARE_ZONE_ID";
+  | "CLOUDFLARE_ZONE_ID"
+  | "LOOP_ENDPOINT_ID";
 
 export type Env = {
   [key in EnvVar]: string;
