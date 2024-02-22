@@ -1,4 +1,10 @@
-import type { HeadersFunction, LinksFunction } from "@remix-run/node";
+import type {
+  ActionArgs,
+  ActionFunction,
+  HeadersFunction,
+  LinksFunction,
+} from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { commonHeaders } from "~/utils/misc.server";
 import { useTranslation } from "react-i18next";
 import keenSliderCSS from "keen-slider/keen-slider.min.css";
@@ -20,6 +26,9 @@ import swiperCSS from "swiper/css";
 // @ts-ignore
 import swiperNavigationCSS from "swiper/css/navigation";
 
+import { email, object, Output, parse, string, ValiError } from "valibot"; // 1.54 kB
+import { useActionData } from "@remix-run/react";
+
 export const headers: HeadersFunction = commonHeaders;
 
 export const links: LinksFunction = () => [
@@ -27,6 +36,44 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: swiperCSS },
   { rel: "stylesheet", href: swiperNavigationCSS },
 ];
+
+export const action = async ({ request }: ActionArgs) => {
+  const formPayload = Object.fromEntries(await request.formData());
+
+  const Schema = object({
+    email: string([email()]),
+    source: string(),
+  });
+
+  try {
+    const parsed = parse(Schema, formPayload);
+
+    const params = new URLSearchParams(parsed).toString();
+
+    const res = await fetch(
+      `https://app.loops.so/api/newsletter-form/${process.env.LOOP_ENDPOINT_ID}`,
+      {
+        method: "POST",
+        body: params,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    );
+
+    if (res.status === 200) {
+      return json({ success: true });
+    } else {
+      throw new Error(`form not submitted ${res.status}`);
+    }
+  } catch (e) {
+    if (e instanceof ValiError) {
+      console.error(`form not submitted ${e}`);
+      return json({ success: false, error: e.message });
+    }
+    return json({ success: false, error: (e as any).message as string });
+  }
+};
 
 export default function Home() {
   const { t } = useTranslation("index", {
