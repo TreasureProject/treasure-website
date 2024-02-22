@@ -117,7 +117,12 @@ const Bridgeworld = () => {
               Bridgeworld is the center of the Treasure multiverse connecting
               our ecosystem’s loved IP and games together.
             </p>
-            <Button className="w-max" color="ruby" href={LINKS.BRIDGEWORLD}>
+            <Button
+              as="a"
+              className="w-max"
+              color="ruby"
+              href={LINKS.BRIDGEWORLD}
+            >
               Explore Bridgeworld
             </Button>
           </div>
@@ -134,12 +139,16 @@ const Bridgeworld = () => {
               of games and players.
             </p>
             <div className="flex gap-6">
-              <button onClick={openModal}>
-                <Button className="w-max" color="ruby">
-                  Get $MAGIC
-                </Button>
-              </button>
               <Button
+                as="button"
+                onClick={openModal}
+                className="w-max"
+                color="ruby"
+              >
+                Get $MAGIC
+              </Button>
+              <Button
+                as="a"
                 className="w-max"
                 color="float"
                 href={LINKS.WHAT_IS_MAGIC}

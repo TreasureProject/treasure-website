@@ -137,16 +137,21 @@ const BuildOnTreasure = () => {
             shoulder-to-shoulder game support.
           </p>
           <div className="flex gap-6">
-            <Button color="ruby" className="w-max" href={LINKS.LITEPAPER}>
+            <Button
+              as="a"
+              color="ruby"
+              className="w-max"
+              href={LINKS.LITEPAPER}
+            >
               Read Litepaper
             </Button>
             <Button
+              as="a"
               color="float"
               className="w-max text-new-ruby-900"
               href="/build"
             >
               Learn More
-              <ChevronRightIcon className="w-4" />
             </Button>
           </div>
         </div>

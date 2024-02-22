@@ -380,6 +380,7 @@ const Partner = () => {
                 </p>
               </div>
               <Button
+                as="a"
                 color="ruby"
                 className="w-max"
                 href="mailto:create@treasure.lol"

@@ -245,7 +245,7 @@ const NewNavigation = () => {
               <TwitchIcon className="w-6" />
             </a>
           </div>
-          <Button color="ruby" href={LINKS.APP}>
+          <Button as="a" color="ruby" href={LINKS.APP}>
             Start Playing
           </Button>
         </div>
@@ -333,8 +333,12 @@ const NewNavigation = () => {
               </div>
             </div>
             <div className="space-y-2 border-t border-white/5 p-6 pb-0 sm:p-8">
-              <Button color="ruby">Start Building</Button>
-              <Button color="ruby">Start Playing</Button>
+              <Button as="button" color="ruby">
+                Start Building
+              </Button>
+              <Button as="button" color="ruby">
+                Start Playing
+              </Button>
               {/* <Button color="honey">Read Litepaper</Button> */}
               <div className="flex items-center gap-4 pt-2 text-new-night-100">
                 <a href={SOCIAL.DISCORD} target="_blank" rel="noreferrer">
