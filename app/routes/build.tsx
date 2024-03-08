@@ -235,7 +235,7 @@ export default function Build() {
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </a>
-
+                  {/*
                   <Link
                     to="/infrastructure"
                     prefetch="intent"
@@ -296,6 +296,7 @@ export default function Build() {
                       }}
                     />
                   </div>
+                  */}
                 </div>
               </div>
             </div>
