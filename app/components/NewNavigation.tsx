@@ -121,6 +121,7 @@ const dropdownItems: DropDownItems[] = [
       },
     ],
   },
+  { label: "Shop", type: "external", target: "https://shop.treasure.lol" },
 ];
 
 const NewNavigation = () => {
