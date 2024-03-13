@@ -3,12 +3,19 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   darkMode: "class",
-  presets: [require('@treasure-project/tailwind-config')],
+  presets: [require('@treasure-project/tailwind-config'), require('./app/components/new-landing/misc/new.tailwind.config')],
   theme: {
     extend: {
       colors: {
         "tr-green": "#4FC74F",
-        "tr-blue":"#28A0F0"
+        "tr-blue": "#28A0F0",
+        partner: {
+          background: "#020228"
+        },
+      },
+      backgroundImage: {
+        "gradient-partner-hero": "linear-gradient(104deg, #020228 55.79%, #396AF3 115.73%)",
+        "gradient-partner-placeholder": "linear-gradient(156deg, #001348 74.03%, #396AF3 167.04%)"
       },
       animation: {
         marquee: "marquee 80s linear infinite",
@@ -17,7 +24,10 @@ module.exports = {
         "marquee-left2": "marquee-left2 80s linear infinite",
         marquee3: 'marquee3 var(--marquee-duration) linear infinite',
         'fade-in': 'fade-in 0.5s linear forwards',
-
+        "move-up-down": "move-up-down 4s ease-in-out infinite",
+        "move-up-down2": "move-up-down2 5s ease-in-out .5s infinite",
+        stretch: "stretch-animation 3s linear infinite",
+        pulse2: "pulse2 1s none infinite",
       },
       keyframes: {
         marquee: {
@@ -49,6 +59,26 @@ module.exports = {
             opacity: 1,
           },
         },
+        "move-up-down": {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-32px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        "move-up-down2": {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-16px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        "stretch-animation": {
+          "0%": { width: "100%" },
+          "50%": { width: "1000%" },
+          "100%": { width: "100%" },
+        },
+        pulse2: {
+          "0%": { opacity: 0 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        }
       },
       typography: ({ theme }) => ({
         night: {

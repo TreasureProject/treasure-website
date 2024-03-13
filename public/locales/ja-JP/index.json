@@ -1,7 +1,7 @@
 {
   "common": {
     "Learn": "学ぶ",
-    "Discover": "見つける",
+    "Play": "遊ぶ",
     "Build": "作る",
     "Contribute": "貢献する",
     "LP": "LP",
@@ -18,7 +18,7 @@
     "What is MAGIC?": "MAGICとは",
     "About Treasure": "Treasureについて",
     "Blog": "ブログ",
-    "Ecosystem Careers": "エコシステムキャリア",
+    "Careers": "エコシステムキャリア",
     "Snapshot": "スナップショット",
     "Open Source": "オープンソース",
     "About": "Treasureについて",
@@ -31,7 +31,7 @@
     "Community": "コミュニティ",
     "Infrastructure": "インフラストラクチャー",
     "Why Treasure": "なぜ Treasure?",
-    "Apply for Partnership": "パートナーシップを申し込む",
+    "Apply to Partner": "パートナーシップを申し込む",
     "Brand Assets": "ブランドアセット",
     "Governance Forum": "ガバナンスフォーラム",
     "Vote on Snapshot": "スナップショットに投票",
@@ -39,7 +39,7 @@
     "Guilds": "ギルド",
     "Community Initiatives": "コミュニティイニシエーション",
     "Talent": "タレント",
-    "MagicSwap": "MagicSwap",
+    "Magicswap": "Magicswap",
     "MAGIC-ETH LP": "MAGIC-ETH LP",
     "Balancer Crystals": "Balancer Crystals",
     "Platform": "Platform"

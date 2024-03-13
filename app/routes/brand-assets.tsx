@@ -54,7 +54,7 @@ const ResourceNavigation = [
     hash: "colors",
   },
   {
-    name: "Media Kit Download",
+    name: "Media Kit",
     hash: "media-kit",
   },
 ];
@@ -172,7 +172,7 @@ export default function Resources() {
   return (
     <Layout>
       <main>
-        <div className="relative bg-honey-50 py-16 sm:py-24">
+        <div className="relative bg-honey-50 pt-32 pb-16 sm:pt-48 sm:pb-24">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
             <h2 className="mt-12 text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
               Treasure Brand Assets
@@ -329,6 +329,7 @@ export default function Resources() {
                   </div>
                 </div>
                 <div className="mt-28 scroll-mt-28 space-y-14" id="media-kit">
+                  {/*
                   <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-9 sm:p-10 xl:auto-rows-[23rem]">
                     <div className="order-1 col-span-6 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8">
                       <p className="text-lg font-bold text-ruby-900 xl:text-4xl">
@@ -360,6 +361,7 @@ export default function Resources() {
                       />
                     </div>
                   </div>
+                  */}
                   <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-9 sm:p-10 xl:auto-rows-[23rem]">
                     <div className="order-1 col-span-6 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8">
                       <p className="text-lg font-bold text-ruby-900 xl:text-4xl">

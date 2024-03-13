@@ -1,8 +1,8 @@
 export function getSocialMetas({
   url,
   title = generateTitle(),
-  description = "Treasure is the decentralized gaming ecosystem bringing games and players together through MAGIC.",
-  keywords = "treasure, NFT, DeFi, games, community, imagination, magic",
+  description = "Treasure is building a gaming and entertainment powerhouse, built and owned by all.",
+  keywords = "Treasure, gaming, games, web3, NFT, DeFi, GameFi, community, DAO, TreasureDAO",
   image,
 }: {
   image?: string;
@@ -47,7 +47,7 @@ export function generateTitle(title?: string) {
   const prettifiedTitle = prettify(removeStartingSlash(title || ""));
   return prettifiedTitle !== ""
     ? `${prettifiedTitle} | Treasure`
-    : "Treasure - The Decentralized Gaming Ecosystem";
+    : "Treasure | The Decentralized Gaming Ecosystem";
 }
 
 function removeTrailingSlash(s: string) {

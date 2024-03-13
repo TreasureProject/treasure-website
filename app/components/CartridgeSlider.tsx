@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { useKeenSlider } from "keen-slider/react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
@@ -111,8 +112,16 @@ export const CartridgeSlider = () => {
         ))}
       </div>
       <div className="mt-12 flex justify-center">
-        <CTAButton as="link" type="primary" to="/games" className="mx-auto">
-          View all games
+        <CTAButton
+          as="link"
+          type="primary"
+          to="https://app.treasure.lol/games"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="mx-auto"
+        >
+          View all games{" "}
+          <ArrowTopRightOnSquareIcon className="ml-1.5 h-4 w-4 fill-ruby-200 [&>path]:stroke-ruby-200 [&>path]:stroke-[1] group-hover:[&>path]:stroke-white" />
         </CTAButton>
       </div>
     </div>

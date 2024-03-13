@@ -86,10 +86,6 @@ export const Footer = () => {
                       (lang) => (
                         <Menu.Item key={lang}>
                           {({ active }) => {
-                            console.log(
-                              `${location.pathname}/?lng=${lang}`,
-                              location
-                            );
                             return (
                               <Link
                                 className={`${
@@ -131,7 +127,7 @@ export const Footer = () => {
                       {links.map(({ name, isExternal, href }) => (
                         <li
                           key={name}
-                          className="items-center justify-center space-x-1 sm:justify-start"
+                          className="items-center justify-center space-x-2 sm:justify-start"
                         >
                           {isExternal ? (
                             <a

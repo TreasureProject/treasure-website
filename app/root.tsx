@@ -21,14 +21,16 @@ import {
 } from "@remix-run/react";
 
 import styles from "./styles/tailwind.css";
+import newlandingStyles from "./styles/new-landing.css";
+import nProgressStyles from "./styles/nProgress.css";
 
 import { getDomainUrl } from "./utils/misc.server";
 import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
 import NProgress from "nprogress";
-import nProgressStyles from "./styles/nProgress.css";
 import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
 import { Layout } from "./components/Layout";
+import { NewLayout } from "./components/new-landing/NewLayout";
 import { i18nCookie } from "./utils/cookie";
 import {
   ThemeBody,
@@ -42,6 +44,7 @@ import { AppContextProvider } from "./context/App";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
   { rel: "stylesheet", href: nProgressStyles },
+  { rel: "stylesheet", href: newlandingStyles },
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
@@ -206,7 +209,7 @@ function App() {
         <ThemeHead ssrTheme={Boolean(data.theme)} />
       </head>
       <body
-        className="h-full bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
+        className="max-w-screen h-full overflow-x-hidden bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
         id="top"
       >
         <AppContextProvider>
@@ -257,13 +260,13 @@ export function CatchBoundary() {
         </head>
         <body className="bg-honey-25 antialiased" id="top">
           <AppContextProvider>
-            <Layout>
-              <div className="flex h-full flex-col items-center justify-center py-24">
-                <p className="text-[0.6rem] text-night-500 sm:text-base">
+            <NewLayout>
+              <div className="flex h-full flex-col items-center justify-center pt-48 pb-24">
+                <p className="text-3xl font-bold leading-[105%] text-honey-900 sm:text-6xl">
                   {message ? message : "Page not found"}
                 </p>
               </div>
-            </Layout>
+            </NewLayout>
           </AppContextProvider>
           <Scripts />
         </body>

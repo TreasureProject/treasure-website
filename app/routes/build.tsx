@@ -149,7 +149,7 @@ export default function Build() {
             <div className="relative z-30 py-16 [grid-area:overlay] sm:py-24">
               <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-12">
                 <div className="text-center">
-                  <p className="text-xl font-bold text-honey-200 sm:text-4xl">
+                  <p className="pt-16 text-xl font-bold text-honey-200 sm:pt-24 sm:text-4xl">
                     Build with Treasure
                   </p>
                   <div className="mt-4 text-night-300 sm:text-xl">
@@ -160,9 +160,10 @@ export default function Build() {
                       </Balancer>
 
                       <Balancer>
-                        Tools to enable and accelerate your journey.{" "}
-                        <span className="font-bold">Everything</span> you need
-                        to supercharge your game.
+                        We empower games to reach their full potential. Our
+                        community-driven ethos, publishing stack, and novel
+                        approach to game building gives developers everything
+                        they need to be successful.
                       </Balancer>
                     </p>
                   </div>
@@ -234,7 +235,7 @@ export default function Build() {
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </a>
-
+                  {/*
                   <Link
                     to="/infrastructure"
                     prefetch="intent"
@@ -295,12 +296,14 @@ export default function Build() {
                       }}
                     />
                   </div>
+                  */}
                 </div>
               </div>
             </div>
           </div>
         </motion.section>
         <NewTreasureStats type="secondary" />
+        {/*
         <section
           id="information"
           aria-labelledby="information"
@@ -376,7 +379,7 @@ export default function Build() {
                       <li className="flex items-center space-x-2.5">
                         <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
                         <p className="text-base sm:text-xl">
-                          Tap into powerful cross-game trading with MagicSwap
+                          Tap into powerful cross-game trading with Magicswap
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
@@ -577,6 +580,7 @@ export default function Build() {
             </div>
           </div>
         </section>
+        */}
         <section
           id="reviews"
           aria-labelledby="reviews-title"
@@ -658,7 +662,7 @@ export default function Build() {
                 </div>
               </div>
               <NewCard
-                title="Ecosystem Careers"
+                title="Careers"
                 description="Join the team at Treasure and our games to build the future of gaming in web3."
                 image={TreasureTeamImg}
               >
