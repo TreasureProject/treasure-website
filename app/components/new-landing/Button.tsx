@@ -1,6 +1,12 @@
-import type { ReactNode } from "react";
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from "react";
 import { twMerge } from "tailwind-merge";
 import { Link } from "@remix-run/react";
+import type { RemixLinkProps } from "@remix-run/react/dist/components";
+import { ExternalIcon } from "./misc/Icons";
 
 const colors = {
   ruby: "bg-new-ruby-900 border border-new-ruby-800 text-new-honey-100  hover:bg-new-ruby-800 hover:border-new-ruby-700 hover:text-new-honey-100",
@@ -10,45 +16,62 @@ const colors = {
   float: "bg-transparent text-new-night-100 hover:bg-new-night-100/5",
 };
 
-interface Props {
-  color: "ruby" | "honey" | "outline" | "float";
-  to?: string;
-  href?: string;
-  children: ReactNode;
+type BaseProps = {
+  children: React.ReactNode;
   className?: string;
-}
+  color: "ruby" | "honey" | "outline" | "float";
+};
 
-const Button = ({ color = "ruby", children, className, to, href }: Props) => {
-  if (to || href) {
+export type ButtonAsLink = BaseProps &
+  Omit<RemixLinkProps, keyof BaseProps> & {
+    as?: "link";
+  };
+
+export type ButtonAsButton = BaseProps &
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
+    as: "button";
+  };
+
+type ButtonAsExternal = BaseProps &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & {
+    as: "a";
+    hideExternalIcon?: boolean;
+    href: string;
+  };
+
+type ButtonProps = ButtonAsExternal | ButtonAsLink | ButtonAsButton;
+
+const Button = (props: ButtonProps) => {
+  const style = twMerge(
+    "flex h-12 cursor-pointer items-center justify-center gap-1 rounded-md px-4 text-center font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed",
+    colors[props.color],
+    props.className
+  );
+  if (props.as === "a") {
+    const { hideExternalIcon, as: _, ...rest } = props;
     return (
-      <Link
-        to={`${to ? to : href}`}
-        target={href ? "_blank" : "_self"}
-        className={twMerge(
-          " flex h-12 cursor-pointer items-center justify-center gap-1 rounded-md px-4 text-center font-medium transition-colors focus:outline-none",
-          colors[color],
-          className
-        )}
-      >
-        <p className="flex items-center justify-center gap-1 text-center font-semibold">
-          {children}
-        </p>
-      </Link>
+      <a {...rest} rel="noopender noreferrer" target="_blank" className={style}>
+        {props.children}
+        {!hideExternalIcon && <ExternalIcon className="w-4" />}
+      </a>
     );
   }
 
+  if (props.as === "button") {
+    const { as: _, ...rest } = props;
+    return (
+      <button {...rest} className={style}>
+        {props.children}
+      </button>
+    );
+  }
+
+  const { as: __, ...rest } = props;
+
   return (
-    <div
-      className={twMerge(
-        " flex h-12 cursor-pointer items-center justify-center gap-1 rounded-md px-4 text-center font-medium transition-colors focus:outline-none",
-        colors[color],
-        className
-      )}
-    >
-      <p className="flex items-center justify-center gap-1 text-center font-semibold">
-        {children}
-      </p>
-    </div>
+    <Link {...rest} className={style}>
+      {props.children}
+    </Link>
   );
 };
 

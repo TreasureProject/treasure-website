@@ -1,9 +1,13 @@
-import { Layout } from "~/components/Layout";
+import { NewLayout as Layout } from "~/components/new-landing/NewLayout";
 
 // Assets
 import { TreasureLogo } from "~/components/Icons";
-import texture_background_image from "../../public/img/illustrations/texture_background.png";
 import tc_intro_video from "../../public/img/TC_INTRO.mp4";
+
+import CREATE_LOGO_IMAGE from "../../public/img/create/Logomark.png";
+import AVATAR_1_IMAGE from "../../public/img/create/avatar_1.png";
+import AVATAR_2_IMAGE from "../../public/img/create/avatar_2.png";
+import AVATAR_3_IMAGE from "../../public/img/create/avatar_3.png";
 
 // Asset Parts for animations
 import a_01_image from "../../public/img/partner-components/A_01.png";
@@ -34,6 +38,10 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Button from "~/components/new-landing/Button";
+import { CreateFrame, CreateGrid } from "~/components/new-landing/misc/Svgs";
+import { ExternalIcon } from "~/components/new-landing/misc/Icons";
+import { Link } from "@remix-run/react";
 
 const FORM_URL =
   "https://forms.clickup.com/9003025951/f/8c9yhgz-3182/QBO3G2H9GDHUXBZ7K5";
@@ -54,6 +62,16 @@ const Testimonials = [
     name: "HdOlivares",
     twitter: "hd_olivares",
   },
+  {
+    text: "I’ve really enjoyed exploring new games as part of Treasure Create. Getting insights from the team has made covering the Treasure games more valuable",
+    name: "Gaspode",
+    twitter: "GaspodeWD",
+  },
+  {
+    text: "Treasure Create Campaigns have been instrumental in supporting my aspirations as a content creator. The program offers valuable financial support along with essential educational resources tailored to our needs as creators.",
+    name: "RevGuyOfficial",
+    twitter: "RevGuyOfficial",
+  },
 ];
 
 const ApplyNowButton = () => (
@@ -61,7 +79,7 @@ const ApplyNowButton = () => (
     href={FORM_URL}
     target="_blank"
     rel="noreferrer"
-    className="text-md mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-medium transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
+    className="text-md mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-semibold transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
   >
     Apply Now
   </a>
@@ -72,7 +90,7 @@ const TestimonialCard = ({
 }: {
   testimonial: { text: string; name: string; twitter: string };
 }) => (
-  <div className="flex w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[360px] md:w-[460px] md:min-w-[460px] md:p-10 ">
+  <div className="flex h-[280px] w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[400px] md:w-[460px] md:min-w-[460px] md:p-10 ">
     <p className="sm:text-md text-sm leading-[160%] md:text-lg">
       “{testimonial.text}“
     </p>
@@ -210,14 +228,14 @@ const Partner = () => {
               <img src={a_01_image} alt="" className="animate-move-up-down" />
             </div>
           </div>
-          <div className="flex w-full md:justify-center ">
+          <div className="flex w-full md:pl-10 ">
             <div className="max-w-md space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
               </h1>
               <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
                 Join our exclusive content creator program to connect with over
-                150k players, access early playtests, and amplify your reach
+                300k players, access early playtests, and amplify your reach
                 through promotion on official Treasure channels.
               </p>
             </div>
@@ -230,7 +248,7 @@ const Partner = () => {
               <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
             </div>
             {/* This width here */}
-            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl border-2 border-[red] bg-gradient-partner-hero sm:border-[green] md:w-[58%] md:rounded-[16px] md:border-[yellow] lg:left-[11%] lg:h-[50%] lg:border-[pink]">
+            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl bg-gradient-partner-hero md:w-[58%] md:rounded-[16px] lg:left-[11%] lg:h-[50%]">
               <img
                 src={red_diamond_gif}
                 alt=""
@@ -248,12 +266,12 @@ const Partner = () => {
               alt="Platform Illustration"
             />
           </div>
-          <div className="flex w-full md:justify-center ">
+          <div className="flex w-full md:pl-10 ">
             <div className="max-w-sm space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Unlock Rewards
               </h1>
-              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
+              <p className="create-paragraph sm:text-md">
                 Gain <span className="text-ruby-800">MAGIC</span> compensation,
                 exclusive in-game items, and priority beta access, celebrating
                 your dedication to Treasure games.
@@ -275,16 +293,100 @@ const Partner = () => {
             />
             <img src={c_03_image} alt="" className="absolute " />
           </div>
-          <div className="flex w-full md:justify-center ">
+          <div className="flex w-full md:pl-10">
             <div className="max-w-md space-y-3 sm:space-y-6">
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Join an exciting community
               </h1>
-              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
+              <p className="create-paragraph sm:text-md">
                 Immerse yourself in a vibrant creator community, connect with
                 game devs, participate in game nights and unique events, and
                 forge unforgettable gaming moments together!
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse">
+          {/* here starts the graphic for this section */}
+          <div className="relative flex w-full flex-col items-center justify-end md:flex-row">
+            {/* here starts the tiles part */}
+            <div className="absolute top-[62%] left-0 right-0 w-full translate-x-[6px] -translate-y-[40px]  sm:right-0 md:top-1/2 md:left-auto md:min-w-[420px] md:translate-y-0 md:translate-x-0 lg:min-w-[512px] xl:right-0 xl:min-w-[720px]">
+              {/* Cantelope */}
+              <Link
+                className="absolute -left-[14%] top-1/2 -translate-y-1/2 transition-transform hover:scale-105 sm:-left-[10%] md:left-0"
+                to="https://twitter.com/TheCantelope"
+                target="_blank"
+              >
+                <img
+                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  src={AVATAR_2_IMAGE}
+                  alt=""
+                />
+                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[320px]" />
+              </Link>
+              {/* Alliestrasza */}
+              <Link
+                className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 transition-all hover:scale-105"
+                to="https://twitter.com/Alliestrasza"
+                target="_blank"
+              >
+                <img
+                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  src={AVATAR_1_IMAGE}
+                  alt=""
+                />
+                <CreateFrame className="w-[280px] sm:w-[320px] md:w-[232px] lg:w-[264px] xl:w-[360px]" />
+              </Link>
+              {/* Juicy */}
+
+              <Link
+                className="absolute top-1/2 -right-[10%] -translate-y-1/2 transition-all hover:scale-105 md:right-0"
+                to="https://twitter.com/JuicyJCR"
+                target="_blank"
+              >
+                <img
+                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  src={AVATAR_3_IMAGE}
+                  alt=""
+                />
+                <CreateFrame className="w-[240px] sm:w-[280px] md:w-[200px] lg:w-[240px] xl:w-[320px]" />
+              </Link>
+            </div>
+            <CreateGrid className="w-full md:w-[360px] lg:w-[440px] xl:w-[512px]" />
+          </div>
+          <div className="flex w-full md:pl-10 ">
+            <div className="max-w-md space-y-3 sm:space-y-10">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex -translate-x-2 items-center gap-2">
+                    <img
+                      src={CREATE_LOGO_IMAGE}
+                      alt="Create Logo"
+                      className="w-12"
+                    />
+                    <p className="rounded-md bg-gradient-create-shiny px-3 py-2 text-sm text-new-night-1300">
+                      A-LIST
+                    </p>
+                  </div>
+                  <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
+                    Discover The A-List
+                  </h1>
+                </div>
+                <p className="create-paragraph sm:text-md">
+                  Our new elite tier within Treasure Create offers established
+                  creators unmatched access, premium paid opportunities, and
+                  exposure to indie and web3 gaming. Join us to shape the future
+                  of gaming with Treasure.
+                </p>
+              </div>
+              <Button
+                as="a"
+                color="ruby"
+                className="w-max"
+                href="mailto:create@treasure.lol"
+              >
+                Contact us
+              </Button>
             </div>
           </div>
         </div>
@@ -297,12 +399,12 @@ const Partner = () => {
             </h1>
             <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
-                <div className="group-hover:pause flex animate-[marquee_20s_linear_infinite] gap-5 sm:animate-[marquee_40s_linear_infinite]">
+                <div className="group-hover:pause flex animate-[marquee_20s_linear_infinite] gap-5 sm:animate-[marquee_20s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}
                 </div>
-                <div className="group-hover:pause animate-[marquee2_20s_linear_infinite absolute] top-0 ml-4 flex gap-5 sm:animate-[marquee2_40s_linear_infinite]">
+                <div className="group-hover:pause absolute top-0 ml-4 flex animate-[marquee2_20s_linear_infinite] gap-5 sm:animate-[marquee2_20s_linear_infinite]">
                   {Testimonials.map((testimonial, i) => (
                     <TestimonialCard testimonial={testimonial} key={i} />
                   ))}

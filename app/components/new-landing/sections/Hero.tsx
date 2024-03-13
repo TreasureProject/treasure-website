@@ -19,10 +19,10 @@ const Hero = () => {
             and owned by all.
           </p>
           <div className="flex gap-4">
-            <Button color="ruby" href={LINKS.APP}>
+            <Button as="a" color="ruby" href={LINKS.APP}>
               Start Playing
             </Button>
-            <Button color="honey" href={LINKS.LITEPAPER}>
+            <Button as="a" color="honey" href={LINKS.LITEPAPER}>
               Read Litepaper
             </Button>
           </div>

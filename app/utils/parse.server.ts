@@ -1,8 +1,7 @@
 import type { RenderNode } from "@contentful/rich-text-html-renderer";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Block, Inline } from "@contentful/rich-text-types";
-import { INLINES } from "@contentful/rich-text-types";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { INLINES, BLOCKS } from "@contentful/rich-text-types";
 import type { GetBlogPostQuery } from "~/graphql/app.generated";
 import { slugify, toWebp } from "./lib";
 import highlightjs from "highlight.js";

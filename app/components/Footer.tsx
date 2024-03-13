@@ -86,10 +86,6 @@ export const Footer = () => {
                       (lang) => (
                         <Menu.Item key={lang}>
                           {({ active }) => {
-                            console.log(
-                              `${location.pathname}/?lng=${lang}`,
-                              location
-                            );
                             return (
                               <Link
                                 className={`${

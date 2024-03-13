@@ -115,10 +115,14 @@ const Bridgeworld = () => {
             </div>
             <p className="font-medium leading-[150%]">
               Bridgeworld is the center of the Treasure multiverse connecting
-              all our ecosystem’s our loved IP and game communities together
-              through stories and gameplay.
+              our ecosystem’s loved IP and games together.
             </p>
-            <Button className="w-max" color="ruby" href={LINKS.BRIDGEWORLD}>
+            <Button
+              as="a"
+              className="w-max"
+              color="ruby"
+              href={LINKS.BRIDGEWORLD}
+            >
               Explore Bridgeworld
             </Button>
           </div>
@@ -131,17 +135,20 @@ const Bridgeworld = () => {
               </div>
             </div>
             <p className="font-medium leading-[150%]">
-              Flowing through all of Treasure is a little bit of $MAGIC – a
-              token that powers the ecosystem and connects our network of games
-              and players together.
+              $MAGIC flows throughout Treasure to power and connect our network
+              of games and players.
             </p>
             <div className="flex gap-6">
-              <button onClick={openModal}>
-                <Button className="w-max" color="ruby">
-                  Get $MAGIC
-                </Button>
-              </button>
               <Button
+                as="button"
+                onClick={openModal}
+                className="w-max"
+                color="ruby"
+              >
+                Get $MAGIC
+              </Button>
+              <Button
+                as="a"
                 className="w-max"
                 color="float"
                 href={LINKS.WHAT_IS_MAGIC}

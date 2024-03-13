@@ -1,5 +1,5 @@
 import Button from "../Button";
-import { AppleIcon, PlatformGrid, WindowsIcon } from "../misc/Svgs";
+import { PlatformGrid } from "../misc/Svgs";
 
 import UI_IMAGE from "~/../public/img/new-landing/platform/UI.webp";
 import BADGE_IMAGE from "~/../public/img/new-landing/platform/Quest_Tile_Badge.webp";
@@ -26,7 +26,7 @@ const Platform = () => {
             for games.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button color="ruby" className="w-max" href={LINKS.APP}>
+            <Button as="a" color="ruby" className="w-max" href={LINKS.APP}>
               Start Playing
             </Button>
             {/* <Button color="honey" className="w-max">
