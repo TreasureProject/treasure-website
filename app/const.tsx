@@ -100,7 +100,6 @@ import CrisisImg from "../public/img/pfps/Crisis.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
 import GinaImg from "../public/img/pfps/Gina.png";
-import JakeImg from "../public/img/pfps/Jake.png";
 import JenImg from "../public/img/pfps/Jen.png";
 import JohnImg from "../public/img/pfps/John.png";
 import JoshImg from "../public/img/pfps/Josh.png";
@@ -110,15 +109,13 @@ import KarelImg from "../public/img/pfps/Karel.png";
 import MouseDevImg from "../public/img/pfps/MouseDev.webp";
 import MulfImg from "../public/img/pfps/Mulf.png";
 import PeitaImg from "../public/img/pfps/Peita.png";
+import PeterImg from "../public/img/pfps/Peter.webp";
 import PreeminentImg from "../public/img/pfps/Preeminent.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
-import T1DevImg from "../public/img/pfps/t1dev.png";
-import RaeImg from "../public/img/pfps/Rae.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
-import RayhaanImg from "../public/img/pfps/Rayhaan.png";
 import WagingBullImg from "../public/img/pfps/Wagingbull.png";
 import YuriImg from "../public/img/pfps/Yuri.png";
 import DefaultImg from "../public/img/pfps/default.png";
@@ -204,7 +201,14 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/864206375492124702",
     twitterLink: "https://twitter.com/GinaBlaster",
     image: GinaImg,
-    team: "Core",
+    team: "Creative",
+  },
+  {
+    name: "Peter DiCicco",
+    title: "Narrative Director",
+    twitterLink: "https://twitter.com/PeterDiCicco",
+    image: PeterImg,
+    team: "Creative",
   },
   {
     name: "Peita",
@@ -262,20 +266,6 @@ export const teamMembers = [
     team: "Creative",
   },
   {
-    name: "Rae",
-    title: "People Operations Consultant",
-    image: RaeImg,
-    team: "Operations",
-  },
-  {
-    name: "Simmayor",
-    title: "Product Manager",
-    discordLink: "https://discordapp.com/users/366404971354390533",
-    twitterLink: "https://twitter.com/SimMay0r",
-    image: JakeImg,
-    team: "Product & Engineering",
-  },
-  {
     name: "Antlion",
     title: "Backend Engineer",
     discordLink: "https://discordapp.com/users/397537602988670977",
@@ -313,14 +303,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/601936617820782592",
     twitterLink: "https://twitter.com/waging_bull",
     image: WagingBullImg,
-    team: "Product & Engineering",
-  },
-  {
-    name: "t1dev",
-    title: "Solidity Developer",
-    discordLink: "https://discordapp.com/users/175078706136612864",
-    twitterLink: "https://twitter.com/pr0zy",
-    image: T1DevImg,
     team: "Product & Engineering",
   },
   {
@@ -383,14 +365,6 @@ export const teamMembers = [
     title: "Pixel Artist",
     discordLink: "https://discordapp.com/users/277435777783169024",
     image: AnimenImg,
-    team: "Smol",
-  },
-  {
-    name: "Rayhaan",
-    title: "Community Manager",
-    discordLink: "https://discordapp.com/users/240658497207926784",
-    twitterLink: "https://twitter.com/rayhaan_jay",
-    image: RayhaanImg,
     team: "Smol",
   },
 ];
