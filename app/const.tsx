@@ -93,14 +93,16 @@ import IconMagicImg from "../public/img/icons/Magic.svg";
 import IconCommunityImg from "../public/img/icons/Community.svg";
 
 // Team
+import AndyImg from "../public/img/pfps/Andy.png";
 import AnimenImg from "../public/img/pfps/Animen.png";
 import AntlionImg from "../public/img/pfps/Antlion.png";
 import BasImg from "../public/img/pfps/Bas.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
+import DanielImg from "../public/img/pfps/Daniel.png";
+import DeathMonkeyImg from "../public/img/pfps/DeathMonkey.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
 import GinaImg from "../public/img/pfps/Gina.png";
-import JakeImg from "../public/img/pfps/Jake.png";
 import JenImg from "../public/img/pfps/Jen.png";
 import JohnImg from "../public/img/pfps/John.png";
 import JoshImg from "../public/img/pfps/Josh.png";
@@ -109,17 +111,17 @@ import JustCheeseImg from "../public/img/pfps/JustCheese.png";
 import KarelImg from "../public/img/pfps/Karel.png";
 import MouseDevImg from "../public/img/pfps/MouseDev.webp";
 import MulfImg from "../public/img/pfps/Mulf.png";
+import NoisewarImg from "../public/img/pfps/Noisewar.png";
 import PeitaImg from "../public/img/pfps/Peita.png";
+import PeterImg from "../public/img/pfps/Peter.webp";
 import PreeminentImg from "../public/img/pfps/Preeminent.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
-import T1DevImg from "../public/img/pfps/t1dev.png";
-import RaeImg from "../public/img/pfps/Rae.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
-import RayhaanImg from "../public/img/pfps/Rayhaan.png";
 import WagingBullImg from "../public/img/pfps/Wagingbull.png";
+import YenImg from "../public/img/pfps/Yen.png";
 import YuriImg from "../public/img/pfps/Yuri.png";
 import DefaultImg from "../public/img/pfps/default.png";
 
@@ -204,7 +206,14 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/864206375492124702",
     twitterLink: "https://twitter.com/GinaBlaster",
     image: GinaImg,
-    team: "Core",
+    team: "Creative",
+  },
+  {
+    name: "Peter DiCicco",
+    title: "Narrative Director",
+    twitterLink: "https://twitter.com/PeterDiCicco",
+    image: PeterImg,
+    team: "Creative",
   },
   {
     name: "Peita",
@@ -228,6 +237,12 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/212333834501357578",
     twitterLink: "https://twitter.com/Z_Keen",
     image: ZakImg,
+    team: "Creative",
+  },
+  {
+    name: "daniel",
+    title: "Brand Designer",
+    image: DanielImg,
     team: "Creative",
   },
   {
@@ -255,24 +270,38 @@ export const teamMembers = [
     team: "Marketing",
   },
   {
-    name: "Yen",
-    title: "Artist",
-    twitterLink: "https://twitter.com/YenLeeArt",
-    image: DefaultImg,
+    name: "DeathMonkey",
+    title: "Social Content Creator",
+    discordLink: "https://discordapp.com/users/221421997488340993",
+    twitterLink: "https://twitter.com/deathorcrypto",
+    image: DeathMonkeyImg,
+    team: "Marketing",
+  },
+  {
+    name: "andy",
+    title: "Principal Artist",
+    image: AndyImg,
     team: "Creative",
   },
   {
-    name: "Rae",
-    title: "People Operations Consultant",
-    image: RaeImg,
-    team: "Operations",
+    name: "Yen",
+    title: "Artist",
+    twitterLink: "https://twitter.com/YenLeeArt",
+    image: YenImg,
+    team: "Creative",
   },
   {
-    name: "Simmayor",
+    name: "noisewar",
+    title: "Executive Producer",
+    discordLink: "https://discordapp.com/users/344520580290052096",
+    twitterLink: "https://twitter.com/warandnoise",
+    image: NoisewarImg,
+    team: "Product & Engineering",
+  },
+  {
+    name: "jon",
     title: "Product Manager",
-    discordLink: "https://discordapp.com/users/366404971354390533",
-    twitterLink: "https://twitter.com/SimMay0r",
-    image: JakeImg,
+    image: DefaultImg,
     team: "Product & Engineering",
   },
   {
@@ -284,7 +313,7 @@ export const teamMembers = [
     team: "Product & Engineering",
   },
   {
-    name: "Rappzula",
+    name: "rappzula",
     title: "Full-Stack Engineer",
     discordLink: "https://discordapp.com/users/690989750127165581",
     twitterLink: "https://twitter.com/0xrappzula",
@@ -300,7 +329,7 @@ export const teamMembers = [
     team: "Product & Engineering",
   },
   {
-    name: "Frannyverse",
+    name: "frannyverse",
     title: "Front-End Engineer",
     discordLink: "https://discordapp.com/users/766502243699523615",
     twitterLink: "https://twitter.com/fr4nnyverse",
@@ -316,15 +345,7 @@ export const teamMembers = [
     team: "Product & Engineering",
   },
   {
-    name: "t1dev",
-    title: "Solidity Developer",
-    discordLink: "https://discordapp.com/users/175078706136612864",
-    twitterLink: "https://twitter.com/pr0zy",
-    image: T1DevImg,
-    team: "Product & Engineering",
-  },
-  {
-    name: "Crisis",
+    name: "crisis",
     title: "Full-Stack Engineer",
     discordLink: "https://discordapp.com/users/351558969568788482",
     twitterLink: "https://twitter.com/crisidot",
@@ -385,33 +406,16 @@ export const teamMembers = [
     image: AnimenImg,
     team: "Smol",
   },
-  {
-    name: "Rayhaan",
-    title: "Community Manager",
-    discordLink: "https://discordapp.com/users/240658497207926784",
-    twitterLink: "https://twitter.com/rayhaan_jay",
-    image: RayhaanImg,
-    team: "Smol",
-  },
 ];
 
-export const teamCore = teamMembers.filter((member) => member.team === "Core");
-export const teamCreative = teamMembers.filter(
-  (member) => member.team === "Creative"
-);
-export const teamMarketing = teamMembers.filter(
-  (member) => member.team === "Marketing"
-);
-export const teamProduct = teamMembers.filter(
-  (member) => member.team === "Product & Engineering"
-);
-export const teamEcosystem = teamMembers.filter(
-  (member) => member.team === "Ecosystem"
-);
-export const teamSmol = teamMembers.filter((member) => member.team === "Smol");
-export const teamOperations = teamMembers.filter(
-  (member) => member.team === "Operations"
-);
+export const teams = [
+  "Core",
+  "Creative",
+  "Marketing",
+  "Product & Engineering",
+  "Ecosystem",
+  "Smol",
+];
 
 export type MemberT = (typeof teamMembers)[number];
 

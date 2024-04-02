@@ -2,15 +2,7 @@ import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { DiscordIcon, XIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
-import {
-  teamCore,
-  teamEcosystem,
-  teamCreative,
-  teamMarketing,
-  teamProduct,
-  teamSmol,
-  teamOperations,
-} from "~/const";
+import { teams, teamMembers } from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.webp";
 import DefaultPfpImg from "@/img/pfps/default.png";
@@ -125,76 +117,23 @@ export default function Team() {
           </div>
         </div>
         <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Core
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamCore.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
+          {teams.map((team) => (
+            <div
+              key={team}
+              className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
+            >
+              <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+                {team}
+              </p>
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+                {teamMembers
+                  .filter((member) => member.team === team)
+                  .map((member) => (
+                    <TeamCard key={member.name} member={member} />
+                  ))}
+              </div>
             </div>
-          </div>
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Ecosystem
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamEcosystem.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Creative
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamCreative.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Product & Engineering
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamProduct.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Marketing
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamMarketing.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Smol
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamSmol.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-              Operations
-            </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-              {teamOperations.map((member) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
         <div className="relative bg-honey-200 py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
