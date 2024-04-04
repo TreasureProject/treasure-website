@@ -105,6 +105,7 @@ import FrannyImg from "../public/img/pfps/Franny.png";
 import GinaImg from "../public/img/pfps/Gina.png";
 import JenImg from "../public/img/pfps/Jen.png";
 import JohnImg from "../public/img/pfps/John.png";
+import JonImg from "../public/img/pfps/Jon.png";
 import JoshImg from "../public/img/pfps/Josh.png";
 import JpegapeImg from "../public/img/pfps/Jpegape.png";
 import JustCheeseImg from "../public/img/pfps/JustCheese.png";
@@ -301,7 +302,7 @@ export const teamMembers = [
   {
     name: "jon",
     title: "Product Manager",
-    image: DefaultImg,
+    image: JonImg,
     team: "Product & Engineering",
   },
   {
