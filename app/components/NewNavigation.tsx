@@ -334,11 +334,12 @@ const NewNavigation = () => {
               </div>
             </div>
             <div className="space-y-2 border-t border-white/5 p-6 pb-0 sm:p-8">
-              <Button as="button" color="ruby">
-                Start Building
+              <Button color="ruby" href={LINKS.APP}>
+                Start Playing{" "}
+                <ExternalIcon className="block w-3 text-new-night-600 group-hover:text-night-100" />
               </Button>
-              <Button as="button" color="ruby">
-                Start Playing
+              <Button color="honey" to="/build">
+                Start Building
               </Button>
               {/* <Button color="honey">Read Litepaper</Button> */}
               <div className="flex items-center gap-4 pt-2 text-new-night-100">
