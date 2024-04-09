@@ -336,7 +336,6 @@ const NewNavigation = () => {
             <div className="space-y-2 border-t border-white/5 p-6 pb-0 sm:p-8">
               <Button as="a" color="ruby" href={LINKS.APP}>
                 Start Playing{" "}
-                <ExternalIcon className="block w-3 text-new-night-600 group-hover:text-night-100" />
               </Button>
               <Button color="honey" to="/build">
                 Start Building
