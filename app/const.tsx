@@ -124,7 +124,6 @@ import ZakImg from "../public/img/pfps/Zak.png";
 import WagingBullImg from "../public/img/pfps/Wagingbull.png";
 import YenImg from "../public/img/pfps/Yen.png";
 import YuriImg from "../public/img/pfps/Yuri.png";
-import DefaultImg from "../public/img/pfps/default.png";
 
 // Twitter
 import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.webp";

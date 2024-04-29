@@ -1,7 +1,6 @@
 import {
   ArrowDownIcon,
   ArrowTopRightOnSquareIcon,
-  CheckCircleIcon,
 } from "@heroicons/react/24/solid";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Badge } from "~/components/Badge";
@@ -9,18 +8,12 @@ import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import { arbitrumPartners, builderTweets, featuredCartridges } from "~/const";
-import LogomarkImg from "@/img/resources/treasure/logomark.png";
+import { arbitrumPartners, builderTweets } from "~/const";
 import BgHeroImg from "@/img/bg-hero.jpg";
 import Balancer from "react-wrap-balancer";
 
 import { Link } from "@remix-run/react";
 import TreasureTeamImg from "@/img/TreasureTeam.webp";
-import EcosystemFlywheelImg from "@/img/illustrations/Ecosystem_Flywheel.webp";
-import InfrastructureImg from "@/img/illustrations/Infrastructure.webp";
-import InfrastructureMobileImg from "@/img/illustrations/Infrastructure-mobile.webp";
-import GamingExperiencesImg from "@/img/illustrations/Gaming_Experiences.webp";
-import GamingExperiencesMobileImg from "@/img/illustrations/Gaming_Experiences-mobile.webp";
 
 // Icons
 import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
