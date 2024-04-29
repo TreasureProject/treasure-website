@@ -155,15 +155,9 @@ export default function Build() {
                   <div className="mt-4 text-night-300 sm:text-xl">
                     <p>
                       <Balancer>
-                        Vibrant community of builders and players. Immersive
-                        gaming experiences.
-                      </Balancer>
-
-                      <Balancer>
                         We empower games to reach their full potential. Our
-                        community-driven ethos, publishing stack, and novel
-                        approach to game building gives developers everything
-                        they need to be successful.
+                        community-driven ethos and publishing stack gives
+                        builders everything they need to be successful.
                       </Balancer>
                     </p>
                   </div>
@@ -193,27 +187,27 @@ export default function Build() {
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </a>
-                  <a
-                    href="https://github.com/TreasureProject"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative col-span-4 bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-3 lg:col-end-4"
+                  <Link
+                    to="/infrastructure"
+                    prefetch="intent"
+                    className="relative col-span-4 rounded-bl-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-3 lg:col-end-4"
                   >
                     <div className="flex flex-col items-start">
                       <img
-                        src={OpenSourceIcon}
+                        src={InfraIcon}
                         className="h-12"
-                        alt="Open Source Icon"
+                        alt="Infrastructure Icon"
                       />
                       <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                        Open Source
+                        Development Kit
                       </p>
                       <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
-                        Shared code to help you bring your ideas to life
+                        Explore the documentation for the Treasure Development
+                        Kit (TDK)
                       </p>
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                  </a>
+                  </Link>
                   <a
                     href="https://docs.treasure.lol/"
                     target="_blank"
@@ -235,27 +229,27 @@ export default function Build() {
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </a>
-                  {/*
-                  <Link
-                    to="/infrastructure"
-                    prefetch="intent"
-                    className="relative col-span-4 rounded-bl-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-2"
+                  <a
+                    href="https://github.com/TreasureProject"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative col-span-4 bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-2"
                   >
                     <div className="flex flex-col items-start">
                       <img
-                        src={InfraIcon}
+                        src={OpenSourceIcon}
                         className="h-12"
-                        alt="Infrastructure Icon"
+                        alt="Open Source Icon"
                       />
                       <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                        Infrastructure
+                        Open Source
                       </p>
                       <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
-                        Tap into powerful tools and infra built by Treasure
+                        Shared code to help you bring your ideas to life
                       </p>
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
-                  </Link>
+                  </a>
                   <Link
                     to="/interoperability"
                     prefetch="intent"
@@ -268,13 +262,14 @@ export default function Build() {
                         alt="Interoperability Icon"
                       />
                       <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                        Interoperability
+                        Treasure Ruby
                       </p>
                       <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
-                        Derive network value through a vibrant ecosystem of
-                        connected communities and shared gaming experiences
+                        Explore the Treasure Chain's testnet environment: deploy
+                        smart contracts, obtain testnet MAGIC, and more
                       </p>
                     </div>
+                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </Link>
                   <div className="relative col-span-4 flex items-center rounded-br-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-4 lg:col-end-5">
                     <div className="flex flex-col items-start">
@@ -296,7 +291,6 @@ export default function Build() {
                       }}
                     />
                   </div>
-                  */}
                 </div>
               </div>
             </div>

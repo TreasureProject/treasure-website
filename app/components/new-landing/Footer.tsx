@@ -20,6 +20,11 @@ const FooterLinks = [
         external: false,
       },
       {
+        title: "Treasure Portal",
+        url: LINKS.PORTAL,
+        external: true,
+      },
+      {
         title: "Game Builders Program",
         url: LINKS.DEVELOPERS,
         external: true,

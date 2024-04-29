@@ -49,11 +49,6 @@ const dropdownItems: DropDownItems[] = [
         type: "external",
         target: LINKS.WHAT_IS_MAGIC,
       },
-      // {
-      //   label: "Infrastructure",
-      //   type: "internal",
-      //   target: "/infrastructure",
-      // },
       {
         label: "Team",
         type: "internal",
@@ -78,12 +73,12 @@ const dropdownItems: DropDownItems[] = [
   },
   {
     label: "Build",
-    target: "/build",
-    type: "internal",
-  },
-  {
-    label: "Solutions",
     items: [
+      {
+        label: "Build on Treasure",
+        target: "/build",
+        type: "internal",
+      },
       {
         label: "Platform",
         type: "external",
@@ -95,6 +90,11 @@ const dropdownItems: DropDownItems[] = [
         target: "https://magicswap.lol",
       },
     ],
+  },
+  {
+    label: "Portal",
+    target: LINKS.PORTAL,
+    type: "external",
   },
   {
     label: "Community",
@@ -119,9 +119,13 @@ const dropdownItems: DropDownItems[] = [
         type: "external",
         target: LINKS.SNAPSHOT,
       },
+      {
+        label: "Shop",
+        type: "external",
+        target: LINKS.SHOP,
+      },
     ],
   },
-  { label: "Shop", type: "external", target: "https://shop.treasure.lol" },
 ];
 
 const NewNavigation = () => {
@@ -166,7 +170,7 @@ const NewNavigation = () => {
               if (item.items) {
                 return (
                   <button
-                    className="group relative flex h-9 cursor-pointer items-center gap-2.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
+                    className="group relative flex h-9 cursor-pointer items-center gap-2.5 rounded-lg px-3.5 text-sm font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10 lg:text-base"
                     key={item.label}
                   >
                     {item.label}
@@ -202,7 +206,7 @@ const NewNavigation = () => {
                   to={item.target ? item.target : "/"}
                   target={item.type === "external" ? "_blank" : "_self"}
                   key={index}
-                  className="flex h-9 items-center gap-1.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
+                  className="flex h-9 items-center gap-1.5 rounded-lg px-3.5 text-sm font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10 lg:text-base"
                 >
                   {item.label}
                   {item.type === "external" && <ExternalIcon className="w-4" />}
@@ -247,7 +251,7 @@ const NewNavigation = () => {
             </a>
           </div>
           <Button as="a" color="ruby" href={LINKS.APP}>
-            Start Playing
+            Play Now
           </Button>
         </div>
         <button
@@ -335,10 +339,10 @@ const NewNavigation = () => {
             </div>
             <div className="space-y-2 border-t border-white/5 p-6 pb-0 sm:p-8">
               <Button as="a" color="ruby" href={LINKS.APP}>
-                Start Playing{" "}
+                Play Now{" "}
               </Button>
               <Button color="honey" to="/build">
-                Start Building
+                Build with Treasure
               </Button>
               {/* <Button color="honey">Read Litepaper</Button> */}
               <div className="flex items-center gap-4 pt-2 text-new-night-100">

@@ -10,6 +10,7 @@ export const LINKS = {
   DEVELOPERS:
     "https://docs.treasure.lol/for-game-developers/game-builders-program",
   APP: "https://app.treasure.lol",
+  PORTAL: "https://portal.treasure.lol",
   CREATORS: "https://go.treasure.lol/creators-apply?utm_source=website",
   GAMES: "https://app.treasure.lol/games",
   LITEPAPER: "https://go.treasure.lol/litepaper",
@@ -23,4 +24,5 @@ export const LINKS = {
   GOVERNANCE: "https://forum.treasure.lol",
   SNAPSHOT: "https://vote.treasure.lol",
   BRIDGEWORLD: "https://bridgeworld.treasure.lol",
+  SHOP: "https://shop.treasure.lol",
 };
