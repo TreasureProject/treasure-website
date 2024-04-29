@@ -1,19 +1,13 @@
 import React from "react";
 import Button from "../Button";
 import { twMerge } from "tailwind-merge";
-import {
-  ChevronRightIcon,
-  DiscordIcon,
-  SteamIcon,
-  TwitterIcon,
-} from "../misc/Icons";
+import { DiscordIcon, SteamIcon, TwitterIcon } from "../misc/Icons";
 import {
   Badge,
   BoTGraphicFour,
   BoTGraphicOne,
   BoTGraphicThree,
   BoTGraphicTwo,
-  LandingCutOff,
 } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
 

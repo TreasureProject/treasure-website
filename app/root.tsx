@@ -29,7 +29,6 @@ import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
 import NProgress from "nprogress";
 import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
-import { Layout } from "./components/Layout";
 import { NewLayout } from "./components/new-landing/NewLayout";
 import { i18nCookie } from "./utils/cookie";
 import {
