@@ -103,7 +103,6 @@ import DeathMonkeyImg from "../public/img/pfps/DeathMonkey.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
 import GinaImg from "../public/img/pfps/Gina.png";
-import JenImg from "../public/img/pfps/Jen.png";
 import JohnImg from "../public/img/pfps/John.png";
 import JonImg from "../public/img/pfps/Jon.png";
 import JoshImg from "../public/img/pfps/Josh.png";
@@ -118,13 +117,13 @@ import PeterImg from "../public/img/pfps/Peter.webp";
 import PreeminentImg from "../public/img/pfps/Preeminent.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
+import SargonImg from "../public/img/pfps/Sargon.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
 import WagingBullImg from "../public/img/pfps/Wagingbull.png";
 import YenImg from "../public/img/pfps/Yen.png";
 import YuriImg from "../public/img/pfps/Yuri.png";
-import DefaultImg from "../public/img/pfps/default.png";
 
 // Twitter
 import OfficialAbengerImg from "../public/img/twitter/OfficialAbenger.webp";
@@ -247,14 +246,6 @@ export const teamMembers = [
     team: "Creative",
   },
   {
-    name: "Jen Stuber",
-    title: "Community Manager",
-    discordLink: "https://discordapp.com/users/104317183521198080",
-    twitterLink: "https://twitter.com/JenniferStuber",
-    image: JenImg,
-    team: "Marketing",
-  },
-  {
     name: "Josh",
     title: "Live Ops Coordinator",
     discordLink: "https://discordapp.com/users/851329871137472557",
@@ -290,6 +281,12 @@ export const teamMembers = [
     twitterLink: "https://twitter.com/YenLeeArt",
     image: YenImg,
     team: "Creative",
+  },
+  {
+    name: "Sargon",
+    title: "Director of Infrastructure",
+    image: SargonImg,
+    team: "Product & Engineering",
   },
   {
     name: "noisewar",
