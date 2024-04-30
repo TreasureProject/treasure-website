@@ -109,7 +109,6 @@ import JoshImg from "../public/img/pfps/Josh.png";
 import JpegapeImg from "../public/img/pfps/Jpegape.png";
 import JustCheeseImg from "../public/img/pfps/JustCheese.png";
 import KarelImg from "../public/img/pfps/Karel.png";
-import MattImg from "../public/img/pfps/Matt.png";
 import MouseDevImg from "../public/img/pfps/MouseDev.webp";
 import MulfImg from "../public/img/pfps/Mulf.png";
 import NoisewarImg from "../public/img/pfps/Noisewar.png";
@@ -118,6 +117,7 @@ import PeterImg from "../public/img/pfps/Peter.webp";
 import PreeminentImg from "../public/img/pfps/Preeminent.png";
 import RappzulaImg from "../public/img/pfps/Rappzula.png";
 import SambinoImg from "../public/img/pfps/Sambino.png";
+import SargonImg from "../public/img/pfps/Sargon.png";
 import VinnyImg from "../public/img/pfps/Vinny.png";
 import XImg from "../public/img/pfps/X_.webp";
 import ZakImg from "../public/img/pfps/Zak.png";
@@ -283,9 +283,9 @@ export const teamMembers = [
     team: "Creative",
   },
   {
-    name: "Matt",
+    name: "Sargon",
     title: "Director of Infrastructure",
-    image: MattImg,
+    image: SargonImg,
     team: "Product & Engineering",
   },
   {
