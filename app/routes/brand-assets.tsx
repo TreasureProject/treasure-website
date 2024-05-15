@@ -23,7 +23,6 @@ import treasureSpacingImg from "../../public/img/resources/treasure/spacing.png"
 import magicSpacingImg from "../../public/img/resources/magic/spacing.png";
 import { ColorPalette } from "~/components/ColorPalette";
 
-import brandGuidelinesImg from "../../public/img/brand-guidelines.png";
 import mediaKitImg from "../../public/img/media-kit.jpg";
 
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
