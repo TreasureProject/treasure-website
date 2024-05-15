@@ -37,10 +37,9 @@ import {
   motion,
   useMotionValueEvent,
 } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Button from "~/components/new-landing/Button";
 import { CreateFrame, CreateGrid } from "~/components/new-landing/misc/Svgs";
-import { ExternalIcon } from "~/components/new-landing/misc/Icons";
 import { Link } from "@remix-run/react";
 
 const FORM_URL =
