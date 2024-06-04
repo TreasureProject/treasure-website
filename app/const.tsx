@@ -98,7 +98,6 @@ import AnimenImg from "../public/img/pfps/Animen.png";
 import AntlionImg from "../public/img/pfps/Antlion.png";
 import BasImg from "../public/img/pfps/Bas.png";
 import CrisisImg from "../public/img/pfps/Crisis.png";
-import DanielImg from "../public/img/pfps/Daniel.png";
 import DeathMonkeyImg from "../public/img/pfps/DeathMonkey.png";
 import Ent1T7Img from "../public/img/pfps/ENT1T7.png";
 import FrannyImg from "../public/img/pfps/Franny.png";
@@ -109,7 +108,6 @@ import JoshImg from "../public/img/pfps/Josh.png";
 import JpegapeImg from "../public/img/pfps/Jpegape.png";
 import JustCheeseImg from "../public/img/pfps/JustCheese.png";
 import KarelImg from "../public/img/pfps/Karel.png";
-import MouseDevImg from "../public/img/pfps/MouseDev.webp";
 import MulfImg from "../public/img/pfps/Mulf.png";
 import NoisewarImg from "../public/img/pfps/Noisewar.png";
 import PeitaImg from "../public/img/pfps/Peita.png";
@@ -240,12 +238,6 @@ export const teamMembers = [
     team: "Creative",
   },
   {
-    name: "daniel",
-    title: "Brand Designer",
-    image: DanielImg,
-    team: "Creative",
-  },
-  {
     name: "Josh",
     title: "Live Ops Coordinator",
     discordLink: "https://discordapp.com/users/851329871137472557",
@@ -356,14 +348,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/938500876438487061",
     twitterLink: "https://twitter.com/VinnyDev1",
     image: VinnyImg,
-    team: "Product & Engineering",
-  },
-  {
-    name: "Mouse Dev",
-    title: "Solidity Developer",
-    discordLink: "https://discordapp.com/users/888112902266044436",
-    twitterLink: "https://twitter.com/_MouseDev ",
-    image: MouseDevImg,
     team: "Product & Engineering",
   },
   {
