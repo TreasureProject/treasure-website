@@ -172,7 +172,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/397537602988670977",
     twitterLink: "https://twitter.com/karelvuong",
     image: KarelImg,
-    team: "Core",
   },
   {
     name: "John Patten",
@@ -180,7 +179,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/882718244920754238",
     twitterLink: "https://twitter.com/jpatten__",
     image: JohnImg,
-    team: "Core",
   },
   {
     name: "Yuri Visser",
@@ -188,7 +186,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/554674918562988072",
     twitterLink: "https://twitter.com/aphexyuri",
     image: YuriImg,
-    team: "Core",
   },
   {
     name: "Sam Udeschini",
@@ -196,7 +193,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/864206375492124702",
     twitterLink: "https://twitter.com/sambino_eth",
     image: SambinoImg,
-    team: "Core",
   },
   {
     name: "Gina Snoke",
@@ -204,14 +200,12 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/864206375492124702",
     twitterLink: "https://twitter.com/GinaBlaster",
     image: GinaImg,
-    team: "Creative",
   },
   {
     name: "Peter DiCicco",
     title: "Narrative Director",
     twitterLink: "https://twitter.com/PeterDiCicco",
     image: PeterImg,
-    team: "Creative",
   },
   {
     name: "Peita",
@@ -219,7 +213,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/1031951650392387695",
     twitterLink: "https://twitter.com/pugmassacre",
     image: PeitaImg,
-    team: "Ecosystem",
   },
   {
     name: "Jpegape",
@@ -227,7 +220,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/757087781515165706",
     twitterLink: "https://twitter.com/Jpegape1",
     image: JpegapeImg,
-    team: "Ecosystem",
   },
   {
     name: "Zak Keen",
@@ -235,7 +227,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/212333834501357578",
     twitterLink: "https://twitter.com/Z_Keen",
     image: ZakImg,
-    team: "Creative",
   },
   {
     name: "Josh",
@@ -243,7 +234,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/851329871137472557",
     twitterLink: "https://twitter.com/ReadyPlayerJay",
     image: JoshImg,
-    team: "Marketing",
   },
   {
     name: "X",
@@ -251,7 +241,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/390264760748474368",
     twitterLink: "https://twitter.com/cxf_0886",
     image: XImg,
-    team: "Marketing",
   },
   {
     name: "DeathMonkey",
@@ -259,26 +248,22 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/221421997488340993",
     twitterLink: "https://twitter.com/deathorcrypto",
     image: DeathMonkeyImg,
-    team: "Marketing",
   },
   {
     name: "andy",
     title: "Principal Artist",
     image: AndyImg,
-    team: "Creative",
   },
   {
     name: "Yen",
     title: "Artist",
     twitterLink: "https://twitter.com/YenLeeArt",
     image: YenImg,
-    team: "Creative",
   },
   {
     name: "Sargon",
     title: "Director of Infrastructure",
     image: SargonImg,
-    team: "Product & Engineering",
   },
   {
     name: "noisewar",
@@ -286,13 +271,12 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/344520580290052096",
     twitterLink: "https://twitter.com/warandnoise",
     image: NoisewarImg,
-    team: "Product & Engineering",
   },
   {
     name: "jon",
     title: "Product Manager",
+    discordLink: "https://discordapp.com/users/559502052363993120",
     image: JonImg,
-    team: "Product & Engineering",
   },
   {
     name: "Antlion",
@@ -300,7 +284,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/397537602988670977",
     twitterLink: "https://twitter.com/0xAntlion",
     image: AntlionImg,
-    team: "Product & Engineering",
   },
   {
     name: "rappzula",
@@ -308,7 +291,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/690989750127165581",
     twitterLink: "https://twitter.com/0xrappzula",
     image: RappzulaImg,
-    team: "Product & Engineering",
   },
   {
     name: "Mulf",
@@ -316,7 +298,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/696481332158660698",
     twitterLink: "https://twitter.com/0xMulf ",
     image: MulfImg,
-    team: "Product & Engineering",
   },
   {
     name: "frannyverse",
@@ -324,7 +305,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/766502243699523615",
     twitterLink: "https://twitter.com/fr4nnyverse",
     image: FrannyImg,
-    team: "Product & Engineering",
   },
   {
     name: "wagingbull",
@@ -332,7 +312,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/601936617820782592",
     twitterLink: "https://twitter.com/waging_bull",
     image: WagingBullImg,
-    team: "Product & Engineering",
   },
   {
     name: "crisis",
@@ -340,7 +319,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/351558969568788482",
     twitterLink: "https://twitter.com/crisidot",
     image: CrisisImg,
-    team: "Product & Engineering",
   },
   {
     name: "Vinny",
@@ -348,7 +326,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/938500876438487061",
     twitterLink: "https://twitter.com/VinnyDev1",
     image: VinnyImg,
-    team: "Product & Engineering",
   },
   {
     name: "jcheese",
@@ -356,14 +333,12 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/353057125137645568",
     twitterLink: "https://twitter.com/jc_1917",
     image: JustCheeseImg,
-    team: "Product & Engineering",
   },
   {
     name: "Bas",
     title: "Product Designer",
-    image: BasImg,
-    team: "Creative",
     twitterLink: "https://twitter.com/bas_vdg",
+    image: BasImg,
   },
   {
     name: "ENT",
@@ -371,7 +346,6 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/354679433853927445",
     twitterLink: "https://twitter.com/ENT1T7",
     image: Ent1T7Img,
-    team: "Creative",
   },
   {
     name: "Preeminent",
@@ -379,24 +353,13 @@ export const teamMembers = [
     discordLink: "https://discordapp.com/users/797371848627191818",
     twitterLink: "https://twitter.com/mikelauofficial",
     image: PreeminentImg,
-    team: "Smol",
   },
   {
     name: "Animen",
     title: "Pixel Artist",
     discordLink: "https://discordapp.com/users/277435777783169024",
     image: AnimenImg,
-    team: "Smol",
   },
-];
-
-export const teams = [
-  "Core",
-  "Creative",
-  "Marketing",
-  "Product & Engineering",
-  "Ecosystem",
-  "Smol",
 ];
 
 export type MemberT = (typeof teamMembers)[number];

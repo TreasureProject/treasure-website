@@ -2,7 +2,7 @@ import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { DiscordIcon, XIcon } from "~/components/Icons";
 import type { MemberT } from "~/const";
-import { teams, teamMembers } from "~/const";
+import { teamMembers } from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.webp";
 import DefaultPfpImg from "@/img/pfps/default.png";
@@ -92,7 +92,7 @@ export default function Team() {
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
             <Badge name="Team" bgColor="bg-honey-100" />
             <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
-              Meet the people behind Treasure
+              Meet the people building Treasure
             </h2>
           </div>
           <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
@@ -100,13 +100,7 @@ export default function Team() {
               <p>
                 We are a collective of seasoned builders growing the expansive
                 platform and decentralized game console that is Treasure.
-              </p>
-
-              <p>
-                Treasure comprises a globally distributed team of developers,
-                product managers, artists, brand builders, marketers,
-                economists, and gamers. All supported by a intimate and vibrant
-                network of DAO contributors and passionate community members.
+                Distributed and community-first.
               </p>
               <img
                 src={TreasureTeamImg}
@@ -117,23 +111,13 @@ export default function Team() {
           </div>
         </div>
         <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
-          {teams.map((team) => (
-            <div
-              key={team}
-              className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
-            >
-              <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-                {team}
-              </p>
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-                {teamMembers
-                  .filter((member) => member.team === team)
-                  .map((member) => (
-                    <TeamCard key={member.name} member={member} />
-                  ))}
-              </div>
+          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {teamMembers.map((member) => (
+                <TeamCard key={member.name} member={member} />
+              ))}
             </div>
-          ))}
+          </div>
         </div>
         <div className="relative bg-honey-200 py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
