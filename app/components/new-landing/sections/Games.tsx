@@ -7,8 +7,8 @@ import { Keyboard } from "swiper/modules";
 import BEACON_COVER from "~/../public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
 import BEACON_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.webp";
 
-import KAIJU_CARDS_COVER from "~/../public/img/new-landing/game-covers/The_Kaiju_Cards_Game_Cover.webp";
-import KAIJU_CARDS_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Kaiju_Cards_Game_Background.webp";
+import SMOL_CARDS_COVER from "~/../public/img/new-landing/game-covers/The_Smolbound_Game_Cover.webp";
+import SMOL_CARDS_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Smolbound_Game_Background.webp";
 
 import KOTE_COVER from "~/../public/img/new-landing/game-covers/The_KOTE_Game_Cover.webp";
 import KOTE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_KOTE_Game_Background.webp";
@@ -45,10 +45,10 @@ const games = [
     link: "https://app.treasure.lol/games/the-beacon",
   },
   {
-    name: "Kaiju Cards",
-    cover: KAIJU_CARDS_COVER,
-    background: KAIJU_CARDS_BACKGROUND,
-    link: "https://app.treasure.lol/games/kaiju-cards",
+    name: "Smol Bound",
+    cover: SMOL_CARDS_COVER,
+    background: SMOL_CARDS_BACKGROUND,
+    link: "https://app.treasure.lol/games/smolverse",
   },
   {
     name: "Kuroro Beast",
