@@ -4,32 +4,32 @@ import type { SwiperClass } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard } from "swiper/modules";
 
-import BEACON_COVER from "~/../public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
-import BEACON_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.webp";
+import BEACON_COVER from "public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
+import BEACON_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.webp";
 
-import SMOLBOUND_CARDS_COVER from "~/../public/img/new-landing/game-covers/The_Smolbound_Game_Cover.webp";
-import SMOLBOUND_CARDS_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Smolbound_Game_Background.webp";
+import SMOLBOUND_CARDS_COVER from "public/img/new-landing/game-covers/The_Smolbound_Game_Cover.webp";
+import SMOLBOUND_CARDS_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Smolbound_Game_Background.webp";
 
-import KOTE_COVER from "~/../public/img/new-landing/game-covers/The_KOTE_Game_Cover.webp";
-import KOTE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_KOTE_Game_Background.webp";
+import KOTE_COVER from "public/img/new-landing/game-covers/The_KOTE_Game_Cover.webp";
+import KOTE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_KOTE_Game_Background.webp";
 
-import KURORO_BEAST_COVER from "~/../public/img/new-landing/game-covers/The_Kuroro_Game_Cover_2.webp";
-import KURORO_BEAST_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Kuroro_Game_Background.webp";
+import KURORO_BEAST_COVER from "public/img/new-landing/game-covers/The_Kuroro_Game_Cover_2.webp";
+import KURORO_BEAST_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Kuroro_Game_Background.webp";
 
-import MAH_COVER from "~/../public/img/new-landing/game-covers/The_MAH_Game_Cover.webp";
-import MAH_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_MAH_Game_Background.webp";
+import MAH_COVER from "public/img/new-landing/game-covers/The_MAH_Game_Cover.webp";
+import MAH_BACKGROUND from "public/img/new-landing/game-backgrounds/The_MAH_Game_Background.webp";
 
-import ZEEVERSE_COVER from "~/../public/img/new-landing/game-covers/The_Zeeverse_Game_Cover.webp";
-import ZEEVERSE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Zeeverse_Game_Background.webp";
+import ZEEVERSE_COVER from "public/img/new-landing/game-covers/The_Zeeverse_Game_Cover.webp";
+import ZEEVERSE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Zeeverse_Game_Background.webp";
 
-import BITMATES_COVER from "~/../public/img/new-landing/game-covers/The_Bitmates_Game_Cover.webp";
-import BITMATES_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Bitmates_Game_Background.webp";
+import BITMATES_COVER from "public/img/new-landing/game-covers/The_Bitmates_Game_Cover.webp";
+import BITMATES_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Bitmates_Game_Background.webp";
 
-import REALM_COVER from "~/../public/img/new-landing/game-covers/The_Realm_Game_Cover.webp";
-import REALM_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Realm_Game_Background.webp";
+import REALM_COVER from "public/img/new-landing/game-covers/The_Realm_Game_Cover.webp";
+import REALM_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Realm_Game_Background.webp";
 
-import TOE_COVER from "~/../public/img/new-landing/game-covers/The_Toe_Game_Cover.webp";
-import TOE_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_ToE_Game_Background.webp";
+import TOE_COVER from "public/img/new-landing/game-covers/The_Toe_Game_Cover.webp";
+import TOE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_ToE_Game_Background.webp";
 
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
