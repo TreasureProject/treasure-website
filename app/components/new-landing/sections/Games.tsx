@@ -7,7 +7,7 @@ import { Keyboard } from "swiper/modules";
 import BEACON_COVER from "~/../public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
 import BEACON_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.webp";
 
-import SMOL_CARDS_COVER from "~/../public/img/new-landing/game-covers/The_Smolbound_Game_Cover.webp";
+import SMOL_CARDS_COVER from "~/../public/img/new-landing/game-covers/The_Smolbound_Game_cover.webp";
 import SMOL_CARDS_BACKGROUND from "~/../public/img/new-landing/game-backgrounds/The_Smolbound_Game_Background.webp";
 
 import KOTE_COVER from "~/../public/img/new-landing/game-covers/The_KOTE_Game_Cover.webp";
