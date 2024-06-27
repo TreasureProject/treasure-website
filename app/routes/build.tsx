@@ -247,7 +247,7 @@ export default function Build() {
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </Link>
                   <Link
-                    to="https://tdk-docs.treasure.lol//"
+                    to="https://docs.treasure.lol/tdk/introduction"
                     target="_blank"
                     rel="noopener noreferrer"
                     prefetch="intent"
