@@ -1,8 +1,6 @@
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { DiscordIcon, XIcon } from "~/components/Icons";
-import type { MemberT } from "~/const";
-import { teams, teamMembers } from "~/const";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.webp";
 import DefaultPfpImg from "@/img/pfps/default.png";
@@ -17,6 +15,7 @@ import {
 } from "~/utils/seo";
 import { commonHeaders } from "~/utils/misc.server";
 import { Layout } from "~/components/Layout";
+import { useLoaderData } from "@remix-run/react";
 
 export const headers: HeadersFunction = commonHeaders;
 
@@ -34,7 +33,7 @@ export const meta: MetaFunction = ({ parentsData }) => {
   });
 };
 
-const TeamCard = ({ member }: { member: MemberT }) => {
+const TeamCard = ({ member }: { member: Member }) => {
   const hasSocials = member.twitterLink || member.discordLink;
   return (
     <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-4 py-3 md:px-9 md:py-8">
@@ -84,7 +83,83 @@ const TeamCard = ({ member }: { member: MemberT }) => {
   );
 };
 
+type Member = {
+  name: string;
+  title: string;
+  twitterLink?: string;
+  discordLink?: string;
+  image: string;
+};
+
+type GroupedMembers = {
+  [group: string]: Member[];
+};
+
+function parseIssueContent(issueContent: string): GroupedMembers {
+  const groups: GroupedMembers = {};
+  let currentGroup = "";
+  let currentMember: Partial<Member> = {};
+
+  const lines = issueContent.split("\n");
+
+  for (const line of lines) {
+    const trimmedLine = line.trim();
+
+    // Handle new group
+    if (trimmedLine.startsWith("## ")) {
+      if (currentGroup && currentMember.name) {
+        groups[currentGroup].push(currentMember as Member);
+      }
+      currentGroup = trimmedLine.replace("## ", "");
+      groups[currentGroup] = [];
+      currentMember = {};
+
+      // Handle new member
+    } else if (trimmedLine.startsWith("### ")) {
+      if (currentMember.name) {
+        groups[currentGroup].push(currentMember as Member);
+      }
+      currentMember = { name: trimmedLine.replace("### ", "") };
+
+      // Handle member details
+    } else if (trimmedLine.startsWith("- **Title**:")) {
+      currentMember.title = trimmedLine.split(": ")[1].trim();
+    } else if (trimmedLine.startsWith("- **Image**:")) {
+      currentMember.image = trimmedLine.split(": ")[1].trim();
+    } else if (trimmedLine.startsWith("- **Twitter**:")) {
+      currentMember.twitterLink = trimmedLine.split(": ")[1].trim();
+    } else if (trimmedLine.startsWith("- **Discord**:")) {
+      currentMember.discordLink = trimmedLine.split(": ")[1].trim();
+    }
+  }
+
+  // Add the last member to the current group
+  if (currentGroup && currentMember.name) {
+    groups[currentGroup].push(currentMember as Member);
+  }
+
+  return groups;
+}
+
+export const loader = async () => {
+  const response = await fetch(
+    "https://api.github.com/repos/treasureProject/treasure-website/issues/290",
+    {
+      headers: {
+        Accept: "application/vnd.github.v3+json",
+        Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+      },
+    }
+  );
+
+  const res = await response.json();
+
+  return { teamMembers: parseIssueContent(res.body) };
+};
+
 export default function Team() {
+  const { teamMembers } = useLoaderData<typeof loader>();
+
   return (
     <Layout>
       <main>
@@ -96,7 +171,7 @@ export default function Team() {
             </h2>
           </div>
           <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
-            <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 px-14 pt-14 text-base text-night-700 sm:text-xl">
+            <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-14 text-base text-night-700 sm:text-xl">
               <p>
                 We are a collective of seasoned builders growing the expansive
                 platform and decentralized game console that is Treasure.
@@ -108,16 +183,11 @@ export default function Team() {
                 economists, and gamers. All supported by a intimate and vibrant
                 network of DAO contributors and passionate community members.
               </p>
-              <img
-                src={TreasureTeamImg}
-                alt="Treasure Team"
-                className="w-full"
-              />
             </div>
           </div>
         </div>
         <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
-          {teams.map((team) => (
+          {Object.entries(teamMembers).map(([team, members]) => (
             <div
               key={team}
               className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
@@ -126,14 +196,29 @@ export default function Team() {
                 {team}
               </p>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-                {teamMembers
-                  .filter((member) => member.team === team)
-                  .map((member) => (
-                    <TeamCard key={member.name} member={member} />
-                  ))}
+                {members.map((member) => (
+                  <TeamCard key={member.name} member={member} />
+                ))}
               </div>
             </div>
           ))}
+          {/* {teams.map((team) => (
+						<div
+							key={team}
+							className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
+						>
+							<p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+								{team}
+							</p>
+							<div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+								{teamMembers
+									.filter((member) => member.team === team)
+									.map((member) => (
+										<TeamCard key={member.name} member={member} />
+									))}
+							</div>
+						</div>
+					))} */}
         </div>
         <div className="relative bg-honey-200 py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
