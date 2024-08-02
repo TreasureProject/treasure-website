@@ -3,7 +3,6 @@ import { CTAButton } from "~/components/Button";
 import { DiscordIcon, XIcon } from "~/components/Icons";
 import classNames from "clsx";
 import TreasureTeamImg from "@/img/TreasureTeam.webp";
-import DefaultPfpImg from "@/img/pfps/default.png";
 
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import type { RootLoaderData } from "~/root";
@@ -39,7 +38,7 @@ const TeamCard = ({ member }: { member: Member }) => {
     <div className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-4 py-3 md:px-9 md:py-8">
       <img
         className="w-full bg-honey-100 object-contain"
-        src={member.image ?? DefaultPfpImg}
+        src={member.image}
         alt={member.name}
       />
       <div
