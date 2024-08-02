@@ -8,11 +8,11 @@ Selecting anything other than `master` will trigger a deploy to the staging envi
 
 ## Managing team members
 
-1. Add the new member's pfp under ![here](https://github.com/TreasureProject/treasure-website-team-images/issues/1). Drag-and-drop the image to the comment box.
+1. Add the new member's pfp under [here](https://github.com/TreasureProject/treasure-website-team-images/issues/1). Drag-and-drop the image to the comment box.
 
 2. After it uploads, you'll see github generate a link to the image. Copy the link.
 
-3. Go ![here](https://github.com/TreasureProject/treasure-website/issues/290) and click on the `edit` button on the top right.
+3. Go [here](https://github.com/TreasureProject/treasure-website/issues/290) and click on the `edit` button on the top right.
 
 4. Add the new member's name and the link to their pfp in the following format:
 ```markdown
