@@ -85,12 +85,12 @@ const dropdownItems: DropDownItems[] = [
     label: "Solutions",
     items: [
       {
-        label: "Platform",
+        label: "Treasure App",
         type: "external",
         target: "https://app.treasure.lol",
       },
       {
-        label: "AMM",
+        label: "Magicswap",
         type: "external",
         target: "https://magicswap.lol",
       },
@@ -121,7 +121,6 @@ const dropdownItems: DropDownItems[] = [
       },
     ],
   },
-  { label: "Shop", type: "external", target: "https://shop.treasure.lol" },
 ];
 
 const NewNavigation = () => {

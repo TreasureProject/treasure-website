@@ -25,8 +25,13 @@ const FooterLinks = [
         external: true,
       },
       {
-        title: "Open Source",
+        title: "GitHub",
         url: LINKS.GITHUB,
+        external: true,
+      },
+      {
+        title: "Developer Documentation",
+        url: LINKS.DOCUMENTATION,
         external: true,
       },
       {
@@ -45,7 +50,7 @@ const FooterLinks = [
         external: true,
       },
       {
-        title: "Platform",
+        title: "Treasure App",
         url: LINKS.APP,
         external: true,
       },
@@ -57,7 +62,7 @@ const FooterLinks = [
     ],
   },
   {
-    title: "About",
+    title: "Treasure",
     links: [
       {
         title: "About",
@@ -82,11 +87,6 @@ const FooterLinks = [
       {
         title: "Newsletter",
         url: LINKS.SUBSTACK,
-        external: true,
-      },
-      {
-        title: "Documentation",
-        url: LINKS.DOCUMENTATION,
         external: true,
       },
       {
@@ -149,7 +149,7 @@ const Footer = () => {
                 Start Playing
               </Button>
               <Button color="honey" to="/build">
-                Start Building
+                Build with Treasure
               </Button>
             </div>
             <div className="bottom-0 right-0 flex gap-1.5 xl:absolute">

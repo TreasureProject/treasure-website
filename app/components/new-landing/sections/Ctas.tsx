@@ -31,11 +31,11 @@ const Ctas = () => {
       <div className="container grid grid-cols-1 grid-rows-[auto_1px] gap-y-10 gap-x-16 md:grid-cols-[1fr_1px_1fr] 2xl:grid-cols-[1fr_1px_1fr_1px_1fr_1px_1fr] 2xl:gap-y-0">
         <div className="space-y-4 md:h-60 2xl:space-y-6">
           <h1 className="text-xl font-bold text-new-night-100 lg:text-3xl">
-            For Studios <br className="hidden xl:block" /> and Developers
+            For Developers
           </h1>
           <p className="pb-4 md:pb-0">
-            Apply to join our curated portfolio of indie games and pioneer a new
-            era of gaming with Treasure.
+            Apply to get top notch support and usher in a new era of gaming with
+            Treasure.
           </p>
           <Button color="outline" className="w-max" to="/build">
             Learn More
@@ -44,13 +44,13 @@ const Ctas = () => {
         <div className="bg-new-night-100/40" />
         <div className="relative space-y-4 md:h-60 2xl:space-y-6">
           <h1 className="text-xl font-bold text-new-night-100 lg:text-3xl">
-            For Content Creators
+            For Creators
           </h1>
           <p className="">
             Passionate about creating content and playing Treasure games? Join
             our leading creator program.
           </p>
-          <div className="bottom-0 left-0 flex gap-4 pt-4 md:absolute md:pt-0">
+          <div className="flex gap-4 pt-4 md:pt-0">
             <Button
               as="a"
               color="outline"
@@ -67,7 +67,7 @@ const Ctas = () => {
         <div className="h-[1px] w-full bg-new-night-100/40 md:col-span-3  md:h-auto  2xl:col-span-1 2xl:w-auto" />
         <div className="relative space-y-6 md:h-60">
           <h1 className="max-w-[300px] text-xl font-bold text-new-night-100 md:max-w-none lg:text-3xl">
-            Get the latest Treasure news
+            Get the latest
           </h1>
 
           <div className="bottom-0 left-0 md:absolute">

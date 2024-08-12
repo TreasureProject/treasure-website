@@ -550,17 +550,17 @@ export const partners = [
 
 export const infrastructures = [
   {
-    name: "Platform",
+    name: "App",
     icon: (
       <MagicLogoIcon className="h-10 w-10 text-ruby-900" aria-hidden="true" />
     ),
     description:
       "Play, collect, trade, compete, and discover your new favorite games on Treasure.",
-    buttonDescription: "Visit Platform",
+    buttonDescription: "Visit App",
     href: "https://app.treasure.lol",
   },
   {
-    name: "AMM",
+    name: "Magicswap",
     icon: <AMMIcon className="h-10 w-10" aria-hidden="true" />,
     description:
       "Magicswap powers the cross-game economy by supporting the trading of native tokens for games powererd by Treasure with each liquidity pool using MAGIC as the base pair.",
@@ -612,7 +612,7 @@ export const IndexCTA = [
     isExternal: true,
   },
   {
-    name: "Platform",
+    name: "App",
     description:
       "Play, collect, trade, compete, and discover games on Treasure.",
     icon: (
@@ -622,7 +622,7 @@ export const IndexCTA = [
     isExternal: true,
   },
   {
-    name: "AMM",
+    name: "Magicswap",
     description: "Magicswap powers the cross-game economy.",
     icon: <AMMIcon className="h-8 w-8" aria-hidden="true" />,
     href: "https://magicswap.lol/",
@@ -655,11 +655,6 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Documentation",
-        href: "https://docs.treasure.lol/",
-        isExternal: true,
-      },
-      {
         name: "Brand Assets",
         href: "/brand-assets",
         isExternal: false,
@@ -682,13 +677,18 @@ export const navigation = [
     name: "Solutions",
     links: [
       {
-        name: "Platform",
+        name: "App",
         href: "https://app.treasure.lol",
         isExternal: true,
       },
       {
-        name: "AMM",
+        name: "Magicswap",
         href: "https://magicswap.lol/",
+        isExternal: true,
+      },
+      {
+        name: "Developer Documentation",
+        href: "https://docs.treasure.lol/",
         isExternal: true,
       },
     ],

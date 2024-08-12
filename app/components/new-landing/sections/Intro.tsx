@@ -21,7 +21,7 @@ const Intro = () => {
             build new experiences together. Where you can truly own your assets.
             And share in the collective growth of our ecosystem.
             <br />
-            <br /> All made possible by the blockchain.
+            <br /> All made possible at Treasure.
           </p>
         </div>
       </div>
@@ -50,12 +50,12 @@ const Intro = () => {
         </div>
         <div className=" w-full items-center gap-7  space-y-7 xl:max-w-md ">
           <h1 className="max-w-sm  text-3xl font-bold leading-[107%] text-ruby-900 sm:text-5xl">
-            We level up game builders
+            We level up game makers
           </h1>
           <p className="leading-[150%] text-new-night-700">
-            We empower games to reach their full potential. Our community-driven
-            ethos, publishing stack, and novel approach to game building gives
-            developers everything they need to be successful.
+            Our community, end-to-end tech stack, and novel approach to
+            publishing gives independent game builders everything they need to
+            be successful.
           </p>
           <Button color="ruby" className="w-max" to="/build">
             Build with Treasure

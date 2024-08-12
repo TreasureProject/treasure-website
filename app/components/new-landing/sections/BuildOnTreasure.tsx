@@ -131,27 +131,20 @@ const BuildOnTreasure = () => {
         <div className="mx-auto flex max-w-2xl flex-col items-center space-y-7">
           <h1 className="landing-h1  text-new-ruby-900">Build on Treasure</h1>
           <p className="text-center leading-[150%] text-new-night-700">
-            We equip our game builders with the tools they need to be
-            successful. Everything from our publishing stack, bottom-up
-            distribution through a passionate player community, and
-            shoulder-to-shoulder game support.
+            Arming game builders with everything they need to be successful
+            since 2021.
           </p>
           <div className="flex gap-6">
-            <Button
-              as="a"
-              color="ruby"
-              className="w-max"
-              href={LINKS.LITEPAPER}
-            >
-              Read Litepaper
+            <Button color="ruby" className="w-max" to="/build">
+              Start Building
             </Button>
             <Button
               as="a"
               color="float"
               className="w-max text-new-ruby-900"
-              href="/build"
+              href={LINKS.LITEPAPER}
             >
-              Learn More
+              Read Litepaper
             </Button>
           </div>
         </div>

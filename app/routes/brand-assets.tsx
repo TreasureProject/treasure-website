@@ -41,11 +41,11 @@ import { Layout } from "~/components/Layout";
 
 const ResourceNavigation = [
   {
-    name: "Treasure",
-    hash: "treasure",
+    name: "Treasure Logo",
+    hash: "logo",
   },
   {
-    name: "Magic",
+    name: "MAGIC",
     hash: "magic",
   },
   {
@@ -171,13 +171,15 @@ export default function Resources() {
   return (
     <Layout>
       <main>
-        <div className="relative bg-honey-50 pt-32 pb-16 sm:pt-48 sm:pb-24">
+        <div className="relative bg-night-900 py-8 pt-32 sm:py-16 sm:pt-48">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
-            <h2 className="mt-12 text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
+            <h2 className="mt-12 text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
               Treasure Brand Assets
             </h2>
           </div>
-          <div className="mx-auto mt-16 max-w-md px-4 sm:max-w-9xl sm:px-20">
+        </div>
+        <div className="relative bg-honey-50 py-8 sm:py-24">
+          <div className="mx-auto max-w-md px-4 sm:max-w-9xl sm:px-20">
             <div className="grid py-12 xl:grid-cols-8 xl:gap-24">
               <aside className="col-span-2 hidden w-max xl:block">
                 <div className="sticky top-28 rounded-1.9xl border-2 border-honey-200 bg-honey-100 p-10">
@@ -209,7 +211,7 @@ export default function Resources() {
                   </ul>
                 </div>
               </aside>
-              <div className="col-span-6 col-start-3">
+              <div id="logo" className="col-span-6 col-start-3 scroll-mt-28">
                 <div className="space-y-20 divide-y-2 divide-honey-300 sm:space-y-28">
                   {(Object.keys(Assets) as (keyof typeof Assets)[]).map(
                     (asset, i) => {

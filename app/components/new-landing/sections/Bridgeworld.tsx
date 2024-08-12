@@ -114,8 +114,8 @@ const Bridgeworld = () => {
               </h1>
             </div>
             <p className="font-medium leading-[150%]">
-              Bridgeworld is the center of the Treasure multiverse connecting
-              our ecosystem’s loved IP and games together.
+              Bridgeworld is the center of the Treasure multiverse that connects
+              our ecosystem’s loved IP together.
             </p>
             <Button
               as="a"
@@ -135,8 +135,8 @@ const Bridgeworld = () => {
               </div>
             </div>
             <p className="font-medium leading-[150%]">
-              $MAGIC flows throughout Treasure to power and connect our network
-              of games and players.
+              $MAGIC flows throughout Treasure to power and connect our gaming
+              network.
             </p>
             <div className="flex gap-6">
               <Button

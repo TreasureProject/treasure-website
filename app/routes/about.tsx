@@ -43,14 +43,14 @@ export default function About() {
               textColor="text-night-200"
             />
             <h2 className="mt-12 text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
-              The decentralized gaming ecosystem
+              The decentralized game console
             </h2>
           </div>
           <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">
             <div className="rounded-2xl border-2 border-night-800 px-4 py-20 sm:p-20">
               <p className="text-base font-bold text-night-500 sm:text-2xl">
-                Treasure is building the decentralized gaming ecosystem to
-                transform game publishing.
+                Treasure is building the decentralized game console bring games
+                and IP born out of web3 into the mainstream.
               </p>
               <ol className="mt-24 list-none space-y-20 text-sm text-gray-500 [counter-reset:line] sm:mt-10 sm:ml-12 sm:space-y-4 sm:text-lg">
                 <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">
@@ -67,22 +67,17 @@ export default function About() {
                   <span className="font-bold text-honey-50">
                     Infrastructure:
                   </span>{" "}
-                  The shared economic engine, tooling and resources that powers
-                  the ecosystem and empowers builders.
+                  Decentralized infrastructure and tooling that arms builders
+                  and game makers to bring their imagination to life.
                 </li>
               </ol>
               <p className="mt-10 px-4 text-sm font-bold text-honey-200 sm:text-xl">
-                All connected by a dual resource model:
+                All connected by:
               </p>
               <div className="mx-auto mt-10 block w-full rounded-tag bg-night-800 px-2.5 py-3 sm:w-max sm:py-1.5">
                 <h3 className="flex items-center justify-center space-x-2 text-sm font-bold text-white sm:text-lg">
                   <MagicIcon />
-                  <span>Powers everything</span>
-                </h3>
-              </div>
-              <div className="mx-auto mt-5 block rounded-tag bg-night-800 px-2.5 py-3 sm:w-max sm:py-1.5">
-                <h3 className="text-sm font-bold text-honey-50 sm:text-lg">
-                  NFTs as composable resources
+                  <span>which powers everything</span>
                 </h3>
               </div>
             </div>
@@ -90,6 +85,7 @@ export default function About() {
         </div>
         <NewTreasureStats type="secondary" />
 
+        {/*
         <div className="relative bg-honey-100 pt-16">
           <div className="mx-auto max-w-3xl px-8 text-center sm:px-6 lg:max-w-7xl lg:px-12">
             <h2 className="text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
@@ -158,6 +154,7 @@ export default function About() {
             </div>
           </div>
         </div>
+         */}
         <BuildWithTreasure />
       </main>
     </Layout>

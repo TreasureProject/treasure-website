@@ -8,19 +8,20 @@ export const SOCIAL = {
 export const LINKS = {
   BUILD: "/build",
   DEVELOPERS:
-    "https://docs.treasure.lol/for-game-developers/game-builders-program",
-  APP: "https://app.treasure.lol",
-  CREATORS: "https://go.treasure.lol/creators-apply?utm_source=website",
-  GAMES: "https://app.treasure.lol/games",
-  LITEPAPER: "https://go.treasure.lol/litepaper",
-  SUBSTACK: "https://treasuredao.substack.com",
-  GITHUB: "https://github.com/TreasureProject",
+    "https://docs.treasure.lol/ecosystem/builders-program/introduction?utm_source=marketing_site",
+  APP: "https://app.treasure.lol?utm_source=marketing_site",
+  CREATORS:
+    "https://go.treasure.lol/creator-application?utm_source=marketing_site",
+  GAMES: "https://app.treasure.lol/games?utm_source=marketing_site",
+  LITEPAPER: "https://go.treasure.lol/litepaper?utm_source=marketing_site",
+  SUBSTACK: "https://treasuredao.substack.com?utm_source=marketing_site",
+  GITHUB: "https://github.com/TreasureProject?utm_source=marketing_site",
   PARTNER:
     "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
-  WHAT_IS_MAGIC: "https://docs.treasure.lol/about-treasure/what-is-magic",
-  DOCUMENTATION: "https://docs.treasure.lol/about-treasure/readme",
-  CAREERS: "https://jobs.treasure.lol",
-  GOVERNANCE: "https://forum.treasure.lol",
-  SNAPSHOT: "https://vote.treasure.lol",
-  BRIDGEWORLD: "https://bridgeworld.treasure.lol",
+  WHAT_IS_MAGIC: "https://docs.treasure.lol/magic?utm_source=marketing_site",
+  DOCUMENTATION: "https://docs.treasure.lol/?utm_source=marketing_site",
+  CAREERS: "https://jobs.treasure.lol?utm_source=marketing_site",
+  GOVERNANCE: "https://forum.treasure.lol?utm_source=marketing_site",
+  SNAPSHOT: "https://vote.treasure.lol?utm_source=marketing_site",
+  BRIDGEWORLD: "https://bridgeworld.treasure.lol?utm_source=marketing_site",
 };
