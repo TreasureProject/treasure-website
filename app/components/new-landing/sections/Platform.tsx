@@ -32,12 +32,12 @@ const Platform = () => {
             Discover <br className="hidden xl:block" /> the magic
           </h1>
           <p className="inline-block max-w-md leading-[150%] text-night-400">
-            Play, compete, and unlock rewards all on the Treasure App – our
-            destination for games.
+            Play, collect rewards, and discover our ecosystem on the App – our
+            destination for games. <em>Desktop launcher coming soon!</em>
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.APP}>
-              Start Playing
+              Explore Treasure
             </Button>
             {/* <Button color="honey" className="w-max">
               Download Launcher{" "}
@@ -78,12 +78,12 @@ const Platform = () => {
             <br className="hidden xl:block" /> 'em all
           </h1>
           <p className="inline-block max-w-md leading-[150%] text-night-400">
-            Discover the ultimate marketplace where players can collect, trade,
-            and sell NFTs and in-game items.
+            Discover the ultimate marketplace to collect, trade, and sell NFTs
+            and in-game items.
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.MARKET}>
-              Start Collecting
+              Trade Items
             </Button>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Platform = () => {
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.MAGICSWAP}>
-              Start Swapping
+              Swap
             </Button>
             <Button as="a" color="honey" href={LINKS.MAGICSWAP_DOCS}>
               Learn More{" "}
