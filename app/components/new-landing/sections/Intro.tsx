@@ -48,11 +48,11 @@ const Intro = () => {
             className="aspect-video w-full min-w-[560px]"
           />
         </div>
-        <div className=" w-full items-center gap-7  space-y-7 xl:max-w-md ">
-          <h1 className="max-w-sm  text-3xl font-bold leading-[107%] text-ruby-900 sm:text-5xl">
+        <div className=" flex w-full flex-col items-center space-y-7 xl:max-w-md xl:items-start">
+          <h1 className="text-center text-3xl font-bold leading-[107%] text-ruby-900 sm:text-5xl xl:max-w-sm xl:text-left">
             We level up game makers
           </h1>
-          <p className="leading-[150%] text-new-night-700">
+          <p className="max-w-lg text-center leading-[150%] text-new-night-700 xl:max-w-full xl:text-left">
             Our community, end-to-end tech stack, and novel approach to
             publishing gives independent game builders everything they need to
             be successful.
