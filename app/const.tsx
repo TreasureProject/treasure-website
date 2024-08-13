@@ -650,11 +650,6 @@ export const navigation = [
         isExternal: false,
       },
       {
-        name: "Careers",
-        href: "https://jobs.treasure.lol/",
-        isExternal: true,
-      },
-      {
         name: "Brand Assets",
         href: "/brand-assets",
         isExternal: false,
@@ -674,7 +669,7 @@ export const navigation = [
     group: "Build",
   },
   {
-    name: "Solutions",
+    name: "Ecosystem",
     links: [
       {
         name: "App",

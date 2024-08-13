@@ -82,7 +82,7 @@ const dropdownItems: DropDownItems[] = [
     type: "internal",
   },
   {
-    label: "Solutions",
+    label: "Ecosystem",
     items: [
       {
         label: "Treasure App",
@@ -93,6 +93,11 @@ const dropdownItems: DropDownItems[] = [
         label: "Magicswap",
         type: "external",
         target: "https://magicswap.lol",
+      },
+      {
+        label: "Developer Documentation",
+        type: "external",
+        target: "https://docs.treasure.lol/",
       },
     ],
   },
