@@ -206,11 +206,33 @@ function App() {
         <Meta />
         <Links />
         <ThemeHead ssrTheme={Boolean(data.theme)} />
+        {process.env.NODE_ENV === "production" ? (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5MRRZJ');`,
+            }}
+          />
+        ) : null}
       </head>
       <body
         className="max-w-screen h-full overflow-x-hidden bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
         id="top"
       >
+        {process.env.NODE_ENV === "production" ? (
+          <noscript>
+            <iframe
+              title="Google Tag Manager"
+              src="https://www.googletagmanager.com/ns.html?id=GTM-M5MRRZJ"
+              height="0"
+              width="0"
+              className="invisible hidden"
+            ></iframe>
+          </noscript>
+        ) : null}
         <AppContextProvider>
           <Outlet />
         </AppContextProvider>
@@ -218,25 +240,6 @@ function App() {
         <Scripts />
         <ScrollRestoration />
         <LiveReload />
-        <script
-          src="https://efficient-bloc-party.treasure.lol/script.js"
-          data-site="XBZCEUKN"
-          defer
-          data-auto="false"
-        />
-        {process.env.NODE_ENV === "production" ? (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.addEventListener('load', function() {
-             if (!window.location.host === "treasure-website-staging.fly.dev" && !new URLSearchParams(window.location.search).has('preview')) {
-              window.fathom.trackPageview();
-             }
-            })
-          `,
-            }}
-          />
-        ) : null}
       </body>
     </html>
   );

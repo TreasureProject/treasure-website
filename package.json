@@ -45,6 +45,7 @@
     "isbot": "^3.6.7",
     "keen-slider": "^6.8.5",
     "lucide-react": "^0.125.0",
+    "next": "^14.2.5",
     "nprogress": "^0.2.0",
     "pretty-cache-header": "^1.0.0",
     "react": "^18.2.0",
