@@ -39,6 +39,7 @@ import {
 } from "./utils/theme-provider";
 import { getThemeSession } from "./utils/theme.server";
 import { AppContextProvider } from "./context/App";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -257,6 +258,7 @@ export function CatchBoundary() {
           <Meta />
           <Links />
         </head>
+        <GoogleTagManager gtmId="GTM-M5MRRZJ" />
         <body className="bg-honey-25 antialiased" id="top">
           <AppContextProvider>
             <NewLayout>
