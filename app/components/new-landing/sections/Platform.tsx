@@ -107,7 +107,7 @@ const Platform = () => {
           </h1>
           <p className="inline-block max-w-md leading-[150%] text-night-400">
             Permissionless AMM with universal token compatibility powering
-            in-game exchanges (GEX)
+            in-game exchanges (GEX) and more
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.MAGICSWAP}>
