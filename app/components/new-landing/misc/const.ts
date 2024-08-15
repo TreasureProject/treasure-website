@@ -13,6 +13,10 @@ export const LINKS = {
   CREATORS:
     "https://go.treasure.lol/creator-application?utm_source=marketing_site",
   GAMES: "https://app.treasure.lol/games?utm_source=marketing_site",
+  MARKET: "https://market.treasure.lol/?utm_source=marketing_site",
+  MAGICSWAP: "https://v2.magicswap.lol/?utm_source=marketing_site",
+  MAGICSWAP_DOCS:
+    "https://docs.treasure.lol/magicswap/?utm_source=marketing_site",
   LITEPAPER: "https://go.treasure.lol/litepaper?utm_source=marketing_site",
   SUBSTACK: "https://treasuredao.substack.com?utm_source=marketing_site",
   GITHUB: "https://github.com/TreasureProject?utm_source=marketing_site",

@@ -32,27 +32,27 @@ const users = [
   },
   {
     image: AVATAR_JOHN_IMAGE,
-    name: "John#0000",
+    name: "John#1337",
     rank: 3,
   },
   {
     image: AVATAR_KAREL_IMAGE,
-    name: "Gamer#0000",
+    name: "Karel#7171",
     rank: 16,
   },
   {
     image: AVATAR_SAMBINO_IMAGE,
-    name: "Sambino#0000",
+    name: "Sambino#4201",
     rank: 11,
   },
   {
     image: AVATAR_SIMMAYOR_IMAGE,
-    name: "Simmayor#0000",
+    name: "Simmayor#6969",
     rank: 23,
   },
   {
     image: AVATAR_ZAK_IMAGE,
-    name: "Zak#0000",
+    name: "Zak#8888",
     rank: 7,
   },
 ];
@@ -131,8 +131,8 @@ const BuildOnTreasure = () => {
         <div className="mx-auto flex max-w-2xl flex-col items-center space-y-7">
           <h1 className="landing-h1  text-new-ruby-900">Build on Treasure</h1>
           <p className="text-center leading-[150%] text-new-night-700">
-            Arming game builders with everything they need to be successful
-            since 2021.
+            Arming developers and game makers with everything they need to be
+            successful since 2021.
           </p>
           <div className="flex gap-6">
             <Button color="ruby" className="w-max" to="/build">
@@ -150,7 +150,7 @@ const BuildOnTreasure = () => {
         </div>
         <div className="grid-cols-7 gap-6 space-y-6 lg:grid lg:space-y-0">
           <BaseCard
-            title="Gaming Chains"
+            title="Gaming L2"
             description="Fast, affordable, and powered by the Treasure Chain and a new network of Infinity Chains."
             className="col-span-3"
           >
