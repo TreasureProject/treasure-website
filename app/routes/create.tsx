@@ -43,7 +43,7 @@ import { CreateFrame, CreateGrid } from "~/components/new-landing/misc/Svgs";
 import { Link } from "@remix-run/react";
 
 const FORM_URL =
-  "https://forms.clickup.com/9003025951/f/8c9yhgz-3182/QBO3G2H9GDHUXBZ7K5";
+  "https://noteforms.com/forms/treasure-create-program-application-v5jlfp";
 
 const Testimonials = [
   {
