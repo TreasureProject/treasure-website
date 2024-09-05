@@ -20,8 +20,7 @@ export const LINKS = {
   LITEPAPER: "https://go.treasure.lol/litepaper?utm_source=marketing_site",
   SUBSTACK: "https://treasuredao.substack.com?utm_source=marketing_site",
   GITHUB: "https://github.com/TreasureProject?utm_source=marketing_site",
-  PARTNER:
-    "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
+  PARTNER: "https://treasure.deform.cc/ecosystem-application",
   WHAT_IS_MAGIC: "https://docs.treasure.lol/magic?utm_source=marketing_site",
   DOCUMENTATION: "https://docs.treasure.lol/?utm_source=marketing_site",
   CAREERS: "https://jobs.treasure.lol?utm_source=marketing_site",
