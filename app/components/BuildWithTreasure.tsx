@@ -22,14 +22,14 @@ export const BuildWithTreasure = () => {
                 Build with Treasure
               </p>
               <p className="text-sm text-night-100 sm:text-base lg:text-lg">
-                Apply to become an official Treasure Game Partner to supercharge
-                your game.
+                Apply to join Treasure's Builders Program to supercharge your
+                project.
               </p>
             </div>
             <div className="mt-8">
               <CTAButton
                 as="a"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform"
+                href="https://treasure.deform.cc/ecosystem-application"
               >
                 Start building
               </CTAButton>

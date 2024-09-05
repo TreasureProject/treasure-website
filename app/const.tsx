@@ -448,11 +448,11 @@ export const WhyTreasureCardList = [
     href: "https://docs.treasure.lol/games/game-builders-program",
   },
   {
-    name: "Apply to Partner",
+    name: "Build with Treasure",
     description:
-      "Express your interest in becoming a partner cartridge with Treasure.",
+      "Interested in joining Treasure's Builders Program? Submit your application.",
     buttonDescription: "Learn more",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSeeom1s9R48ZGRXzx5B-MeYahfVa2DoKVBqS8hu63wwLxykpQ/viewform",
+    href: "https://treasure.deform.cc/ecosystem-application",
   },
 ];
 
