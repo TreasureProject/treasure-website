@@ -28,7 +28,7 @@ import BITMATES_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Bit
 import REALM_COVER from "public/img/new-landing/game-covers/The_Realm_Game_Cover.webp";
 import REALM_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Realm_Game_Background.webp";
 
-import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Synergy_Land_Game_Cover.webp";
+import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Synergy_Land_Cover.webp";
 import SYNERGY_LAND_BACKGROUND from "public/img/new-landing/game-backgrounds/Synergy_Land_Game_Background.webp";
 
 import { twMerge } from "tailwind-merge";
