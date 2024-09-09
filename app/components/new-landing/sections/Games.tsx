@@ -28,8 +28,8 @@ import BITMATES_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Bit
 import REALM_COVER from "public/img/new-landing/game-covers/The_Realm_Game_Cover.webp";
 import REALM_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Realm_Game_Background.webp";
 
-import TOE_COVER from "public/img/new-landing/game-covers/The_Toe_Game_Cover.webp";
-import TOE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_ToE_Game_Background.webp";
+import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Synergy_Land_Cover.webp";
+import SYNERGY_LAND_BACKGROUND from "public/img/new-landing/game-backgrounds/Synergy_Land_Game_Background.webp";
 
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
@@ -49,6 +49,12 @@ const games = [
     cover: SMOLBOUND_CARDS_COVER,
     background: SMOLBOUND_CARDS_BACKGROUND,
     link: "https://app.treasure.lol/games/smolverse",
+  },
+  {
+    name: "Synergy Land",
+    cover: SYNERGY_LAND_COVER,
+    background: SYNERGY_LAND_BACKGROUND,
+    link: "https://app.treasure.lol/games/synergy-land",
   },
   {
     name: "Kuroro Beast",
@@ -80,12 +86,7 @@ const games = [
     background: ZEEVERSE_BACKGROUND,
     link: "https://app.treasure.lol/games/zeeverse",
   },
-  {
-    name: "TOE",
-    cover: TOE_COVER,
-    background: TOE_BACKGROUND,
-    link: "https://app.treasure.lol/games/tales-of-elleria",
-  },
+
   {
     name: "KOTE",
     cover: KOTE_COVER,
