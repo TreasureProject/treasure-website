@@ -205,6 +205,7 @@ function App() {
       <head>
         <Meta />
         <Links />
+        <link rel="canonical" href="https://treasure.lol/" />
         <ThemeHead ssrTheme={Boolean(data.theme)} />
         {process.env.NODE_ENV === "production" ? (
           <script
