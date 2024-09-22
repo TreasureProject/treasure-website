@@ -49,8 +49,8 @@ export default function About() {
           <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-4xl sm:px-8 lg:px-20">
             <div className="rounded-2xl border-2 border-night-800 px-4 py-20 sm:p-20">
               <p className="text-base font-bold text-night-500 sm:text-2xl">
-                Treasure is building the decentralized game console bring games
-                and IP born out of web3 into the mainstream.
+                Treasure is building the decentralized game console to bring
+                games and IP born out of web3 into the mainstream.
               </p>
               <ol className="mt-24 list-none space-y-20 text-sm text-gray-500 [counter-reset:line] sm:mt-10 sm:ml-12 sm:space-y-4 sm:text-lg">
                 <li className="relative text-center before:absolute before:-top-14 before:left-0 before:right-0 before:mx-auto before:inline-flex before:h-8 before:w-8 before:items-center before:justify-center before:rounded-full before:bg-ruby-900 before:p-2.5 before:tabular-nums before:text-honey-300 before:[counter-increment:line] before:![content:counter(line)] sm:text-left before:sm:top-1.5 before:sm:-left-16 before:sm:mx-0 before:sm:h-10 before:sm:w-10">

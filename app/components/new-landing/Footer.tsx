@@ -55,6 +55,11 @@ const FooterLinks = [
         external: true,
       },
       {
+        title: "Treasure Market",
+        url: LINKS.MARKET,
+        external: true,
+      },
+      {
         title: "Creator Program",
         url: "/create",
         external: false,

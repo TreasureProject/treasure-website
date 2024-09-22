@@ -87,17 +87,22 @@ const dropdownItems: DropDownItems[] = [
       {
         label: "Treasure App",
         type: "external",
-        target: "https://app.treasure.lol",
+        target: LINKS.APP,
+      },
+      {
+        label: "Treasure Market",
+        type: "external",
+        target: LINKS.MARKET,
       },
       {
         label: "Magicswap",
         type: "external",
-        target: "https://magicswap.lol",
+        target: LINKS.MAGICSWAP,
       },
       {
         label: "Developer Documentation",
         type: "external",
-        target: "https://docs.treasure.lol/",
+        target: LINKS.DOCUMENTATION,
       },
     ],
   },
