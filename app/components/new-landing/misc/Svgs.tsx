@@ -31,27 +31,6 @@ export const Badge = ({ className }: Props) => (
   </svg>
 );
 
-export const BoTCutoff = ({ className }: Props) => (
-  <svg
-    viewBox="0 0 103 80"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M1 0H101H102H103V79H101.115H101V76.0117C99.959 61.8369 91.9336 48.981 79.4873 41.7861L17.873 6.28418C12.6553 3.27539 1 2 1 2V0ZM101.115 79C101.115 79.0103 101.115 79.0205 101.115 79.0308Z"
-      fill="currentColor"
-    />
-    <path
-      d="M1.00001 2.01263C6.811 1.85037 12.6557 3.27557 17.8731 6.28412L79.4878 41.7861C92.849 49.5102 101.115 63.759 101.115 79.1592"
-      stroke="#FACE61"
-      strokeWidth="2"
-    />
-  </svg>
-);
-
 export const VideoCutOff = ({ className }: Props) => (
   <svg
     viewBox="0 0 114 89"
@@ -134,131 +113,6 @@ export const MagicLogo = ({ className }: Props) => (
     <path
       d="M12.3715 27.9657L9.77828 27.0836C8.82176 26.7648 8.10968 25.9572 7.91837 24.9689L6.82367 19.5598C6.79179 19.4217 6.67489 19.326 6.53673 19.326C6.39856 19.326 6.27102 19.4217 6.24977 19.5598L5.15508 24.9689C4.95315 25.9572 4.24107 26.7648 3.29518 27.0836L0.701935 27.9657C0.585027 28.0082 0.5 28.1144 0.5 28.242C0.5 28.3695 0.585027 28.4864 0.701935 28.5183L3.29518 29.4003C4.2517 29.7191 4.96378 30.5267 5.15508 31.515L6.24977 36.9241C6.28165 37.0622 6.39856 37.1579 6.53673 37.1579C6.67489 37.1579 6.80242 37.0622 6.82367 36.9241L7.91837 31.515C8.12031 30.5267 8.83238 29.7191 9.77828 29.4003L12.3715 28.5183C12.4884 28.4758 12.5734 28.3695 12.5734 28.242C12.5734 28.1144 12.4884 27.9975 12.3715 27.9657"
       fill="white"
-    />
-  </svg>
-);
-
-export const CirclesGraphic = ({ className }: Props) => (
-  <svg
-    viewBox="0 0 1540 1540"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <circle
-      cx="769.544"
-      cy="769.547"
-      r="279.728"
-      transform="rotate(29.5798 769.544 769.547)"
-      stroke="#FACE61"
-      strokeWidth="2"
-      strokeDasharray="4 4"
-    />
-    <circle
-      cx="769.528"
-      cy="769.413"
-      r="507.619"
-      transform="rotate(-16.9982 769.528 769.413)"
-      stroke="#FCE2A0"
-      strokeWidth="2"
-      strokeDasharray="4 4"
-    />
-    <circle
-      cx="769.547"
-      cy="769.547"
-      r="738.266"
-      transform="rotate(2.39774 769.547 769.547)"
-      stroke="#FDEBC0"
-      strokeWidth="2"
-      strokeDasharray="4 4"
-    />
-    <rect
-      x="522.485"
-      y="615.537"
-      width="22.0539"
-      height="22.0539"
-      rx="4"
-      transform="rotate(29.5798 522.485 615.537)"
-      fill="#FACE61"
-    />
-    <rect
-      x="270.224"
-      y="910.342"
-      width="22.0539"
-      height="22.0539"
-      rx="4"
-      transform="rotate(-16.9982 270.224 910.342)"
-      fill="#FCE2A0"
-    />
-    <rect
-      x="21.3915"
-      y="726.681"
-      width="22.0539"
-      height="22.0539"
-      rx="4"
-      transform="rotate(2.39774 21.3915 726.681)"
-      fill="#FEF0D0"
-    />
-    <rect
-      x="1010.77"
-      y="892.692"
-      width="22.0539"
-      height="22.0539"
-      rx="4"
-      transform="rotate(29.5798 1010.77 892.692)"
-      fill="#FACE61"
-    />
-    <rect
-      x="1242.14"
-      y="613.23"
-      width="22.0539"
-      height="22.0539"
-      rx="4"
-      transform="rotate(-16.9982 1242.14 613.23)"
-      fill="#FCE2A0"
-    />
-    <rect
-      x="1498.63"
-      y="788.537"
-      width="22.0539"
-      height="22.0539"
-      rx="4"
-      transform="rotate(2.39774 1498.63 788.537)"
-      fill="#FDEBC0"
-    />
-  </svg>
-);
-
-export const WindowsIcon = ({ className }: Props) => (
-  <svg
-    viewBox="0 0 16 16"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <rect
-      width="5.69491"
-      height="5.69491"
-      transform="matrix(1 0 0 -1 2 14)"
-      fill="currentColor"
-    />
-    <rect
-      width="5.69491"
-      height="5.69491"
-      transform="matrix(1 0 0 -1 8.30508 14)"
-      fill="currentColor"
-    />
-    <rect
-      width="5.69491"
-      height="5.69491"
-      transform="matrix(1 0 0 -1 2 7.6951)"
-      fill="currentColor"
-    />
-    <rect
-      width="5.69491"
-      height="5.69491"
-      transform="matrix(1 0 0 -1 8.30508 7.6951)"
-      fill="currentColor"
     />
   </svg>
 );
@@ -11791,20 +11645,6 @@ export const BoTGraphicFour = ({ className }: Props) => (
         <rect width="620" height="458" fill="white" />
       </clipPath>
     </defs>
-  </svg>
-);
-
-export const AppleIcon = ({ className }: Props) => (
-  <svg
-    viewBox="0 0 16 16"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <path
-      d="M11.5698 7.42383C11.5881 9.47516 13.3062 10.1578 13.3253 10.1665C13.3107 10.2146 13.0508 11.1393 12.4201 12.0944C11.8749 12.9202 11.3091 13.7429 10.4178 13.7599C9.54195 13.7767 9.26032 13.2217 8.25901 13.2217C7.258 13.2217 6.9451 13.7429 6.11603 13.7767C5.25567 13.8104 4.60052 12.8837 4.05081 12.061C2.92756 10.3781 2.06916 7.3055 3.22177 5.23145C3.79437 4.20147 4.81763 3.54924 5.9283 3.53252C6.77315 3.51582 7.57059 4.12155 8.08706 4.12155C8.6032 4.12155 9.57226 3.3931 10.591 3.50008C11.0175 3.51848 12.2146 3.67861 12.9833 4.84467C12.9214 4.88446 11.5549 5.70885 11.5698 7.42383ZM9.92375 2.38669C10.3805 1.81371 10.688 1.01606 10.6041 0.222412C9.94568 0.249835 9.14952 0.677087 8.67727 1.24975C8.25403 1.75688 7.88338 2.56856 7.98338 3.34651C8.71725 3.40535 9.46695 2.96004 9.92375 2.38669Z"
-      fill="currentColor"
-    />
   </svg>
 );
 

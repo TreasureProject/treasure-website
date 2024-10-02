@@ -1,14 +1,7 @@
 // from https://github.com/remix-run/examples/blob/main/dark-mode/app/utils/theme-provider.tsx
 import { useFetcher } from "@remix-run/react";
 import type { Dispatch, ReactNode, SetStateAction } from "react";
-import {
-  createContext,
-  createElement,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 enum Theme {
   DARK = "dark",
@@ -243,50 +236,8 @@ function useTheme() {
   return context;
 }
 
-/**
- * This allows you to render something that depends on the theme without
- * worrying about whether it'll SSR properly when we don't actually know
- * the user's preferred theme.
- */
-function Themed({
-  dark,
-  light,
-  initialOnly = false,
-}: {
-  dark: ReactNode | string;
-  light: ReactNode | string;
-  initialOnly?: boolean;
-}) {
-  const [theme] = useTheme();
-  const [initialTheme] = useState(theme);
-  const themeToReference = initialOnly ? initialTheme : theme;
-  const serverRenderWithUnknownTheme =
-    !theme && typeof document === "undefined";
-
-  if (serverRenderWithUnknownTheme) {
-    // stick them both in and our little script will update the DOM to match
-    // what we'll render in the client during hydration.
-    return (
-      <>
-        {createElement("dark-mode", null, dark)}
-        {createElement("light-mode", null, light)}
-      </>
-    );
-  }
-
-  return <>{themeToReference === "light" ? light : dark}</>;
-}
-
 function isTheme(value: unknown): value is Theme {
   return typeof value === "string" && themes.includes(value as Theme);
 }
 
-export {
-  isTheme,
-  Theme,
-  Themed,
-  ThemeBody,
-  ThemeHead,
-  ThemeProvider,
-  useTheme,
-};
+export { isTheme, Theme, ThemeBody, ThemeHead, ThemeProvider, useTheme };

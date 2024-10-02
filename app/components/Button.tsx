@@ -1,7 +1,5 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import { Link } from "@remix-run/react";
-import type { RemixLinkProps } from "@remix-run/react/dist/components";
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import type { AnchorHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 type BaseProps = {
@@ -10,16 +8,6 @@ type BaseProps = {
   type?: "primary" | "secondary";
 };
 
-export type ButtonAsLink = BaseProps &
-  Omit<RemixLinkProps, keyof BaseProps> & {
-    as?: "link";
-  };
-
-export type ButtonAsButton = BaseProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
-    as: "button";
-  };
-
 type ButtonAsExternal = BaseProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & {
     as: "a";
@@ -27,7 +15,7 @@ type ButtonAsExternal = BaseProps &
     href: string;
   };
 
-type ButtonProps = ButtonAsExternal | ButtonAsLink | ButtonAsButton;
+type ButtonProps = ButtonAsExternal;
 
 export const CTAButton = (props: ButtonProps) => {
   const style = twMerge(
@@ -36,36 +24,19 @@ export const CTAButton = (props: ButtonProps) => {
     props.className
   );
 
-  if (props.as === "button") {
-    const { type: _, ...rest } = props;
-    return (
-      <button {...rest} className={style}>
-        {props.children}
-      </button>
-    );
-  }
-
-  if (props.as === "a") {
-    const { hideExternalIcon, as: _, ...rest } = props;
-    return (
-      <a {...rest} className={style} rel="noopener noreferrer" target="_blank">
-        {props.children}
-        {!hideExternalIcon && (
-          <ArrowTopRightOnSquareIcon
-            className={twMerge(
-              "ml-1.5 h-4 w-4 transition-colors [&>path]:stroke-ruby-900 [&>path]:stroke-[1] group-hover:[&>path]:stroke-white",
-              props.type === "primary" && "[&>path]:stroke-white"
-            )}
-            aria-hidden="true"
-          />
-        )}
-      </a>
-    );
-  }
-
+  const { hideExternalIcon, as: _, ...rest } = props;
   return (
-    <Link {...props} className={style}>
+    <a {...rest} className={style} rel="noopener noreferrer" target="_blank">
       {props.children}
-    </Link>
+      {!hideExternalIcon && (
+        <ArrowTopRightOnSquareIcon
+          className={twMerge(
+            "ml-1.5 h-4 w-4 transition-colors [&>path]:stroke-ruby-900 [&>path]:stroke-[1] group-hover:[&>path]:stroke-white",
+            props.type === "primary" && "[&>path]:stroke-white"
+          )}
+          aria-hidden="true"
+        />
+      )}
+    </a>
   );
 };

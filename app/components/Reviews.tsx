@@ -2,7 +2,6 @@ import React, { useMemo, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 import { useInView } from "framer-motion";
 import { playerTweets } from "~/const";
-import { Badge } from "./Badge";
 import { QuoteIcon } from "./Icons";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { ClientOnly } from "remix-utils";
@@ -125,25 +124,5 @@ function TweetsGrid() {
         </>
       )}
     </div>
-  );
-}
-
-export function Reviews() {
-  return (
-    <section
-      id="reviews"
-      aria-labelledby="reviews-title"
-      className="relative bg-honey-50 pt-20 pb-16 sm:pt-32 sm:pb-24"
-    >
-      <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
-        <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-          <p className="mt-12 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-4xl">
-            Enjoyed by many (and counting)
-          </p>
-          <Badge name="Wall Of Love" />
-        </div>
-        <TweetsGrid />
-      </div>
-    </section>
   );
 }

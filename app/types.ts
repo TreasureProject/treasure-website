@@ -15,5 +15,3 @@ export type EnvVar =
 export type Env = {
   [key in EnvVar]: string;
 };
-
-export type Optional<T> = T | undefined;

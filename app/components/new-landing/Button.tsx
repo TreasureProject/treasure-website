@@ -1,11 +1,5 @@
-import type {
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-  ReactNode,
-} from "react";
+import type { AnchorHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
-import { Link } from "@remix-run/react";
-import type { RemixLinkProps } from "@remix-run/react/dist/components";
 import { ExternalIcon } from "./misc/Icons";
 
 const colors = {
@@ -22,16 +16,6 @@ type BaseProps = {
   color: "ruby" | "honey" | "outline" | "float";
 };
 
-export type ButtonAsLink = BaseProps &
-  Omit<RemixLinkProps, keyof BaseProps> & {
-    as?: "link";
-  };
-
-export type ButtonAsButton = BaseProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
-    as: "button";
-  };
-
 type ButtonAsExternal = BaseProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & {
     as: "a";
@@ -39,7 +23,7 @@ type ButtonAsExternal = BaseProps &
     href: string;
   };
 
-type ButtonProps = ButtonAsExternal | ButtonAsLink | ButtonAsButton;
+type ButtonProps = ButtonAsExternal;
 
 const Button = (props: ButtonProps) => {
   const style = twMerge(
@@ -47,31 +31,12 @@ const Button = (props: ButtonProps) => {
     colors[props.color],
     props.className
   );
-  if (props.as === "a") {
-    const { hideExternalIcon, as: _, ...rest } = props;
-    return (
-      <a {...rest} rel="noopender noreferrer" target="_blank" className={style}>
-        {props.children}
-        {!hideExternalIcon && <ExternalIcon className="w-4" />}
-      </a>
-    );
-  }
-
-  if (props.as === "button") {
-    const { as: _, ...rest } = props;
-    return (
-      <button {...rest} className={style}>
-        {props.children}
-      </button>
-    );
-  }
-
-  const { as: __, ...rest } = props;
-
+  const { hideExternalIcon, as: _, ...rest } = props;
   return (
-    <Link {...rest} className={style}>
+    <a {...rest} rel="noopender noreferrer" target="_blank" className={style}>
       {props.children}
-    </Link>
+      {!hideExternalIcon && <ExternalIcon className="w-4" />}
+    </a>
   );
 };
 
