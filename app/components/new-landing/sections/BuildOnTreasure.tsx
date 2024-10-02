@@ -11,12 +11,12 @@ import {
 } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
 
-import AVATAR_GAMER_IMAGE from "~/../public/img/new-landing/avatars/avatar_gamer.jpg";
-import AVATAR_JOHN_IMAGE from "~/../public/img/new-landing/avatars/avatar_john.jpg";
-import AVATAR_KAREL_IMAGE from "~/../public/img/new-landing/avatars/avatar_karel.jpg";
-import AVATAR_SAMBINO_IMAGE from "~/../public/img/new-landing/avatars/avatar_sambino.jpg";
-import AVATAR_SIMMAYOR_IMAGE from "~/../public/img/new-landing/avatars/avatar_simmayor.jpg";
-import AVATAR_ZAK_IMAGE from "~/../public/img/new-landing/avatars/avatar_zak.jpg";
+import AVATAR_GAMER_IMAGE from "@/img/new-landing/avatars/avatar_gamer.jpg";
+import AVATAR_JOHN_IMAGE from "@/img/new-landing/avatars/avatar_john.jpg";
+import AVATAR_KAREL_IMAGE from "@/img/new-landing/avatars/avatar_karel.jpg";
+import AVATAR_SAMBINO_IMAGE from "@/img/new-landing/avatars/avatar_sambino.jpg";
+import AVATAR_SIMMAYOR_IMAGE from "@/img/new-landing/avatars/avatar_simmayor.jpg";
+import AVATAR_ZAK_IMAGE from "@/img/new-landing/avatars/avatar_zak.jpg";
 
 const users = [
   {

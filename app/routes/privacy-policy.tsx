@@ -242,7 +242,7 @@ export default function Resources() {
                       connection with the provision of the Site;
                     </li>
                     <li>
-                      to fulfill any obligations related to Treasure’s smart
+                      to fulfill any obligations related to Treasure's smart
                       contract or the Terms of Use; and
                     </li>
                     <li>to communicate with you.</li>
@@ -310,7 +310,7 @@ export default function Resources() {
                   </ul>
                   <p className="mt-5">
                     Treasure does not share your personal information with third
-                    parties for those third parties’ direct marketing purposes.
+                    parties for those third parties' direct marketing purposes.
                   </p>
 
                   <p className="mt-5 font-bold text-night-100">

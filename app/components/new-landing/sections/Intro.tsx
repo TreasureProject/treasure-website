@@ -1,4 +1,4 @@
-import VIDEO from "~/../public/img/new-landing/Treasure_Trailer_Website_02102024.mp4";
+import VIDEO from "@/img/new-landing/Treasure_Trailer_Website_02102024.mp4";
 
 import Button from "../Button";
 import { VideoCutOff } from "../misc/Svgs";
@@ -17,7 +17,7 @@ const Intro = () => {
         </div>
         <div className="max-w-md space-y-7 md:space-y-12">
           <p className="text-new-night-700 leading-[150%]">
-            We’re shaping a future where developers, creators, and players can
+            We're shaping a future where developers, creators, and players can
             build new experiences together. Where you can truly own your assets.
             And share in the collective growth of our ecosystem.
             <br />

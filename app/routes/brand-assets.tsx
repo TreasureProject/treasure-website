@@ -4,26 +4,26 @@ import { useHydrated } from "remix-utils/use-hydrated";
 import { Badge } from "~/components/Badge";
 
 // Logos
-import treasureLogoKnockoutImg from "../../public/img/resources/treasure/logo-knockout.png";
+import treasureLogoKnockoutImg from "@/img/resources/treasure/logo-knockout.png";
 
-import magicLogoDarkImg from "../../public/img/resources/magic/logo-dark.png";
-import treasureLogoDarkImg from "../../public/img/resources/treasure/logo-dark.png";
+import magicLogoDarkImg from "@/img/resources/magic/logo-dark.png";
+import treasureLogoDarkImg from "@/img/resources/treasure/logo-dark.png";
 
-import magicLogoLightImg from "../../public/img/resources/magic/logo-light.png";
-import treasureLogoLightImg from "../../public/img/resources/treasure/logo-light.png";
+import magicLogoLightImg from "@/img/resources/magic/logo-light.png";
+import treasureLogoLightImg from "@/img/resources/treasure/logo-light.png";
 
-import magicLogomarkDarkImg from "../../public/img/resources/magic/logomark-dark.png";
-import magicLogomarkLightImg from "../../public/img/resources/magic/logomark-light.png";
-import treasureLogomarkKnockoutImg from "../../public/img/resources/treasure/logomark-knockout.png";
+import magicLogomarkDarkImg from "@/img/resources/magic/logomark-dark.png";
+import magicLogomarkLightImg from "@/img/resources/magic/logomark-light.png";
+import treasureLogomarkKnockoutImg from "@/img/resources/treasure/logomark-knockout.png";
 // Logomarks
-import treasureLogomarkImg from "../../public/img/resources/treasure/logomark.png";
+import treasureLogomarkImg from "@/img/resources/treasure/logomark.png";
 
-import { ColorPalette } from "~/components/ColorPalette";
-import magicSpacingImg from "../../public/img/resources/magic/spacing.png";
+import magicSpacingImg from "@/img/resources/magic/spacing.png";
 // Spacing
-import treasureSpacingImg from "../../public/img/resources/treasure/spacing.png";
+import treasureSpacingImg from "@/img/resources/treasure/spacing.png";
+import { ColorPalette } from "~/components/ColorPalette";
 
-import mediaKitImg from "../../public/img/media-kit.jpg";
+import mediaKitImg from "@/img/media-kit.jpg";
 
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { HashtagIcon } from "@heroicons/react/24/solid";

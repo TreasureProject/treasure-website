@@ -1,14 +1,14 @@
+import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 
-import { useMotionValueEvent, useScroll } from "framer-motion";
-import BACKGROUND_IMAGE from "~/../public/img/new-landing/bridgeworld/BW_WorldMap_shrouded_blurred_with_mask.webp";
-import ISLAND_IMAGE from "~/../public/img/new-landing/bridgeworld/Bridgeworld_Meem_Portal_Island.webp";
-import ROCK_1_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_1.webp";
-import ROCK_2_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_2.webp";
-import ROCK_3_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_3.webp";
-import ROCK_4_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_4.webp";
-import ROCK_5_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_5.webp";
-import MAGIC_IMAGE from "~/../public/img/new-landing/bridgeworld/Magic_Illustration.webp";
+import BACKGROUND_IMAGE from "@/img/new-landing/bridgeworld/BW_WorldMap_shrouded_blurred_with_mask.webp";
+import ISLAND_IMAGE from "@/img/new-landing/bridgeworld/Bridgeworld_Meem_Portal_Island.webp";
+import ROCK_1_IMAGE from "@/img/new-landing/bridgeworld/Floating_Rock_1.webp";
+import ROCK_2_IMAGE from "@/img/new-landing/bridgeworld/Floating_Rock_2.webp";
+import ROCK_3_IMAGE from "@/img/new-landing/bridgeworld/Floating_Rock_3.webp";
+import ROCK_4_IMAGE from "@/img/new-landing/bridgeworld/Floating_Rock_4.webp";
+import ROCK_5_IMAGE from "@/img/new-landing/bridgeworld/Floating_Rock_5.webp";
+import MAGIC_IMAGE from "@/img/new-landing/bridgeworld/Magic_Illustration.webp";
 import { useAppContext } from "~/context/App";
 import Button from "../Button";
 import { ChevronRightIcon } from "../misc/Icons";
@@ -115,7 +115,7 @@ const Bridgeworld = () => {
             </div>
             <p className="font-medium leading-[150%]">
               Bridgeworld is the center of the Treasure multiverse that connects
-              our ecosystem’s loved IP together.
+              our ecosystem's loved IP together.
             </p>
             <Button
               as="a"

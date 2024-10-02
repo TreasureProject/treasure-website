@@ -304,7 +304,7 @@ export default function Resources() {
                     </li>
                     <li>
                       Jeopardize the security of your Digital Wallet or anyone
-                      else’s Digital Wallet;
+                      else's Digital Wallet;
                     </li>
                     <li>
                       Impersonate or attempt to impersonate another individual,
@@ -372,7 +372,7 @@ export default function Resources() {
                     </li>
                     <li>
                       Engage in any other conduct that restricts or inhibits
-                      anyone’s use or enjoyment of the Platform, or which, as
+                      anyone's use or enjoyment of the Platform, or which, as
                       determined by us, may harm or offend Treasure or its
                       users, or otherwise expose them to any liability;{" "}
                     </li>
@@ -398,7 +398,7 @@ export default function Resources() {
                     <span className="font-bold text-night-100">
                       “Third-Party Services”
                     </span>
-                    ) as well as Treasure’s proprietary technology. Certain
+                    ) as well as Treasure's proprietary technology. Certain
                     functionality of the Platform may incorporate, use or
                     otherwise depend on Third-Party Services. If any event were
                     to disrupt any functionality dependent on a Third-Party
@@ -616,7 +616,7 @@ export default function Resources() {
                     time to time, interruptions, errors, delays, or other
                     deficiencies in providing access to the Platform or a
                     Third-Party Service may occur due to a variety of factors,
-                    some of which are outside of Treasure’s control, and some
+                    some of which are outside of Treasure's control, and some
                     which may require or result in scheduled maintenance or
                     unscheduled downtime of the Platform (collectively,{" "}
                     <span className="font-bold text-night-100">“Downtime”</span>
@@ -739,7 +739,7 @@ export default function Resources() {
                   <ul className="mt-5 list-disc pl-10">
                     <li>
                       <span className="font-bold text-night-100">
-                        NFTs’ values are subjective.
+                        NFTs' values are subjective.
                       </span>{" "}
                       The potential value of NFTs are subjective in nature and
                       subject to volatility and fluctuations in the price of
@@ -863,7 +863,7 @@ export default function Resources() {
                     to grant motions dispositive of all or part of any claim, to
                     award monetary damages, and to grant any non-monetary remedy
                     or relief available to an individual under applicable law,
-                    the arbitral forum’s rules, and these Terms (including the
+                    the arbitral forum's rules, and these Terms (including the
                     Arbitration Agreement). The arbitrator has the same
                     authority to award relief on an individual basis that a
                     judge in a court of law would have. The award of the
@@ -1004,7 +1004,7 @@ export default function Resources() {
                     You agree to defend, indemnify and hold harmless the
                     Treasure Parties from and against any and all claims, costs,
                     proceedings, demands, losses, damages, and expenses
-                    (including, without limitation, reasonable attorney’s fees
+                    (including, without limitation, reasonable attorney's fees
                     and legal costs) of any kind or nature relating to third
                     party claims arising out of (a) any actual or alleged breach
                     of these Terms by you, a co-conspirator, anyone using your

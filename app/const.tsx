@@ -1,38 +1,39 @@
-import OnekxImg from "../public/img/partners/1kx.svg";
+import OnekxImg from "@/img/partners/1kx.svg";
 // Investors
-import AcadArenaImg from "../public/img/partners/AcadArena.svg";
-import AndrewGreenImg from "../public/img/partners/AndrewGreen.svg";
-import BlackPoolImg from "../public/img/partners/BlackPool.svg";
-import DefiVaderImg from "../public/img/partners/DefiVader.svg";
-import DigitalStrategiesImg from "../public/img/partners/DigitalStrategies.png";
-import IncentiveDesignTheoryImg from "../public/img/partners/IncentiveDesignTheory.svg";
-import JasonChoiImg from "../public/img/partners/JasonChoi.svg";
-import JihoImg from "../public/img/partners/Jiho.svg";
-import MeritCircleImg from "../public/img/partners/MeritCircle.svg";
-import Metat8Img from "../public/img/partners/Metat8.svg";
-import NeonImg from "../public/img/partners/Neon.svg";
-import ReadyPlayerImg from "../public/img/partners/ReadyPlayer.svg";
-import RyanDelphiImg from "../public/img/partners/RyanDelphi.svg";
+import AcadArenaImg from "@/img/partners/AcadArena.svg";
+import AndrewGreenImg from "@/img/partners/AndrewGreen.svg";
+import BlackPoolImg from "@/img/partners/BlackPool.svg";
+import DefiVaderImg from "@/img/partners/DefiVader.svg";
+import DigitalStrategiesImg from "@/img/partners/DigitalStrategies.png";
+import IncentiveDesignTheoryImg from "@/img/partners/IncentiveDesignTheory.svg";
+import JasonChoiImg from "@/img/partners/JasonChoi.svg";
+import JihoImg from "@/img/partners/Jiho.svg";
+import MeritCircleImg from "@/img/partners/MeritCircle.svg";
+import Metat8Img from "@/img/partners/Metat8.svg";
+import NeonImg from "@/img/partners/Neon.svg";
+import ReadyPlayerImg from "@/img/partners/ReadyPlayer.svg";
+import RyanDelphiImg from "@/img/partners/RyanDelphi.svg";
 
-import BinanceImg from "../public/img/magic-list/binance.svg";
-import CoinbaseImg from "../public/img/magic-list/coinbase.svg";
-import MoonPayImg from "../public/img/magic-list/moonpay.svg";
 // MAGIC
-import SushiSwapImg from "../public/img/magic-list/sushiswap.svg";
+import BinanceImg from "@/img/magic-list/binance.svg";
+import CoinbaseImg from "@/img/magic-list/coinbase.svg";
+import MoonPayImg from "@/img/magic-list/moonpay.svg";
+import SushiSwapImg from "@/img/magic-list/sushiswap.svg";
 
 // Stat Icons
-import IconArbitrumImg from "../public/img/icons/Arbitrum.svg";
-import IconCommunityImg from "../public/img/icons/Community.svg";
-import IconGamesImg from "../public/img/icons/Games.svg";
-import IconGrowthImg from "../public/img/icons/Growth.svg";
-import IconMagicImg from "../public/img/icons/Magic.svg";
-import IconSushiImg from "../public/img/icons/Sushi.svg";
+import IconArbitrumImg from "@/img/icons/Arbitrum.svg";
+import IconCommunityImg from "@/img/icons/Community.svg";
+import IconGamesImg from "@/img/icons/Games.svg";
+import IconGrowthImg from "@/img/icons/Growth.svg";
+import IconMagicImg from "@/img/icons/Magic.svg";
+import IconSushiImg from "@/img/icons/Sushi.svg";
 
-import DiegoImg from "../public/img/twitter/Diego.webp";
-import FlookImg from "../public/img/twitter/Flook.webp";
 // Twitter
-import SmasheImg from "../public/img/twitter/Smashe.webp";
+import DiegoImg from "@/img/twitter/Diego.webp";
+import FlookImg from "@/img/twitter/Flook.webp";
+import SmasheImg from "@/img/twitter/Smashe.webp";
 
+// Arbitrum Partners
 import ArbitrumPartner1Img from "@/img/arbitrum-partners/Partners-1.webp";
 import ArbitrumPartner2Img from "@/img/arbitrum-partners/Partners-2.webp";
 import ArbitrumPartner3Img from "@/img/arbitrum-partners/Partners-3.webp";
@@ -48,7 +49,6 @@ import ArbitrumPartner12Img from "@/img/arbitrum-partners/Partners-12.webp";
 import ArbitrumPartner13Img from "@/img/arbitrum-partners/Partners-13.webp";
 import ArbitrumPartner14Img from "@/img/arbitrum-partners/Partners-14.webp";
 import ArbitrumPartner15Img from "@/img/arbitrum-partners/Partners-15.webp";
-// Arbitrum Partners
 import ArbitrumPartnerImg from "@/img/arbitrum-partners/Partners.webp";
 
 import { DiscordIcon, XIcon } from "~/components/Icons";

@@ -1,32 +1,32 @@
 import { NewLayout as Layout } from "~/components/new-landing/NewLayout";
 
+import tc_intro_video from "@/img/TC_INTRO.mp4";
 // Assets
 import { TreasureLogo } from "~/components/Icons";
-import tc_intro_video from "../../public/img/TC_INTRO.mp4";
 
-import CREATE_LOGO_IMAGE from "../../public/img/create/Logomark.png";
-import AVATAR_1_IMAGE from "../../public/img/create/avatar_1.png";
-import AVATAR_2_IMAGE from "../../public/img/create/avatar_2.png";
-import AVATAR_3_IMAGE from "../../public/img/create/avatar_3.png";
+import CREATE_LOGO_IMAGE from "@/img/create/Logomark.png";
+import AVATAR_1_IMAGE from "@/img/create/avatar_1.png";
+import AVATAR_2_IMAGE from "@/img/create/avatar_2.png";
+import AVATAR_3_IMAGE from "@/img/create/avatar_3.png";
 
 // Asset Parts for animations
-import a_01_image from "../../public/img/partner-components/A_01.png";
-import a_02_image from "../../public/img/partner-components/A_02.png";
-import b_01_image from "../../public/img/partner-components/B_01.png";
-import c_01_image from "../../public/img/partner-components/C_01.png";
-import c_02_image from "../../public/img/partner-components/C_02.png";
-import c_03_image from "../../public/img/partner-components/C_03.png";
-import red_diamond_gif from "../../public/img/partner-components/red_diamond.gif";
-import tile_01_desktop_image from "../../public/img/partner-components/tiles/TILE_01_DESKTOP.png";
-import tile_01_mobile_image from "../../public/img/partner-components/tiles/TILE_01_MOBILE.png";
-import tile_02_desktop_image from "../../public/img/partner-components/tiles/TILE_02_DESKTOP.png";
-import tile_02_mobile_image from "../../public/img/partner-components/tiles/TILE_02_MOBILE.png";
-import tile_03_desktop_image from "../../public/img/partner-components/tiles/TILE_03_DESKTOP.png";
-import tile_03_mobile_image from "../../public/img/partner-components/tiles/TILE_03_MOBILE.png";
-import tile_04_desktop_image from "../../public/img/partner-components/tiles/TILE_04_DESKTOP.png";
-import tile_04_mobile_image from "../../public/img/partner-components/tiles/TILE_04_MOBILE.png";
-import tile_05_desktop_image from "../../public/img/partner-components/tiles/TILE_05_DESKTOP.png";
-import tile_05_mobile_image from "../../public/img/partner-components/tiles/TILE_05_MOBILE.png";
+import a_01_image from "@/img/partner-components/A_01.png";
+import a_02_image from "@/img/partner-components/A_02.png";
+import b_01_image from "@/img/partner-components/B_01.png";
+import c_01_image from "@/img/partner-components/C_01.png";
+import c_02_image from "@/img/partner-components/C_02.png";
+import c_03_image from "@/img/partner-components/C_03.png";
+import red_diamond_gif from "@/img/partner-components/red_diamond.gif";
+import tile_01_desktop_image from "@/img/partner-components/tiles/TILE_01_DESKTOP.png";
+import tile_01_mobile_image from "@/img/partner-components/tiles/TILE_01_MOBILE.png";
+import tile_02_desktop_image from "@/img/partner-components/tiles/TILE_02_DESKTOP.png";
+import tile_02_mobile_image from "@/img/partner-components/tiles/TILE_02_MOBILE.png";
+import tile_03_desktop_image from "@/img/partner-components/tiles/TILE_03_DESKTOP.png";
+import tile_03_mobile_image from "@/img/partner-components/tiles/TILE_03_MOBILE.png";
+import tile_04_desktop_image from "@/img/partner-components/tiles/TILE_04_DESKTOP.png";
+import tile_04_mobile_image from "@/img/partner-components/tiles/TILE_04_MOBILE.png";
+import tile_05_desktop_image from "@/img/partner-components/tiles/TILE_05_DESKTOP.png";
+import tile_05_mobile_image from "@/img/partner-components/tiles/TILE_05_MOBILE.png";
 
 import { Link } from "@remix-run/react";
 import type { MotionValue } from "framer-motion";
@@ -57,12 +57,12 @@ const Testimonials = [
     twitter: "Attis_gaming",
   },
   {
-    text: "Stepping into the world of Treasure Create felt like I’d won the golden ticket to Willy Wonka’s game factory! The campaigns are super organized. And the game developers? Always ready to chat, answer my zillion questions, and above all, value my feedback.",
+    text: "Stepping into the world of Treasure Create felt like I'd won the golden ticket to Willy Wonka's game factory! The campaigns are super organized. And the game developers? Always ready to chat, answer my zillion questions, and above all, value my feedback.",
     name: "HdOlivares",
     twitter: "hd_olivares",
   },
   {
-    text: "I’ve really enjoyed exploring new games as part of Treasure Create. Getting insights from the team has made covering the Treasure games more valuable",
+    text: "I've really enjoyed exploring new games as part of Treasure Create. Getting insights from the team has made covering the Treasure games more valuable",
     name: "Gaspode",
     twitter: "GaspodeWD",
   },

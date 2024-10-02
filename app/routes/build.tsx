@@ -6,7 +6,6 @@ import {
   CheckCircleIcon,
 } from "@heroicons/react/24/solid";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import Balancer from "react-wrap-balancer";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
@@ -149,10 +148,9 @@ export default function Build() {
                   </p>
                   <div className="mt-4 text-night-300 sm:text-xl">
                     <p>
-                      <Balancer>
-                        Empowering developers to reach their full potential and
-                        bring on-chain games to the masses.
-                      </Balancer>
+                      Empowering developers to reach their full potential
+                      <br />
+                      and bring on-chain games to the masses.
                     </p>
                   </div>
                 </div>
@@ -175,7 +173,7 @@ export default function Build() {
                         Join Treasure's Builders Program
                       </p>
                       <p className="mt-1.5 text-night-500 text-sm md:text-base md:leading-6 lg:text-md 2xl:text-lg">
-                        Let’s partner to grow together over the long-term
+                        Let's partner to grow together over the long-term
                       </p>
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-[1] [&>path]:stroke-night-600" />
@@ -494,78 +492,6 @@ export default function Build() {
             </motion.a>
           </motion.div>
         </section>
-        {/*
-        <section
-          id="powered-by-treasure-games-list"
-          aria-labelledby="powered-by-treasure-games-list"
-          className="relative bg-night-900 py-8 sm:py-16"
-        >
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
-            <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between">
-              <div className="space-y-5 text-center sm:max-w-sm sm:text-left">
-                <p className="whitespace-nowrap text-xl font-bold text-honey-200 sm:text-4xl">
-                  Featured Games
-                </p>
-                <p className="text-sm text-night-500 sm:text-lg">
-                  Games powered by Treasure through MAGIC, imagination, and
-                  interoperability.
-                </p>
-              </div>
-              <div className="mt-4 flex flex-col items-center space-y-1 rounded-1.5xl border-2 border-night-800 px-5 py-3.5 sm:mt-0">
-                <p className="text-xs text-night-600 sm:text-sm">
-                  Integrated games
-                </p>
-                <span className="text-base font-bold text-honey-300 sm:text-xl">
-                  +10
-                </span>
-              </div>
-            </div>
-            <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-3">
-              {featuredCartridges.map((cartridge) => {
-                return (
-                  <a
-                    href={cartridge.websiteLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group grid overflow-hidden rounded-lg border border-night-900/50 shadow-2xl shadow-black/25 [grid-template-areas:'overlay']"
-                    key={cartridge.name}
-                  >
-                    <div
-                      className="relative z-10 [grid-area:overlay]"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #0000 20%, #0000 80%, rgba(0, 0, 0, 0.6) 99%), linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
-                      }}
-                    ></div>
-                    <div className="relative aspect-square [grid-area:overlay] [background-image:linear-gradient(to_bottom,#000,#0000_70%)] sm:aspect-auto">
-                      <img
-                        src={cartridge.image}
-                        className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                        alt=""
-                      />
-                    </div>
-                    <div className="relative z-20 flex flex-col justify-between p-6 [grid-area:overlay]">
-                      <p className="max-w-[70%] text-2xl font-bold text-honey-25">
-                        {cartridge.name}
-                      </p>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
-            <div className="mt-12 flex justify-center">
-              <CTAButton
-                as="link"
-                type="primary"
-                to="/games"
-                className="mx-auto"
-              >
-                View all games
-              </CTAButton>
-            </div>
-          </div>
-        </section>
-        */}
         <section
           id="reviews"
           aria-labelledby="reviews-title"
@@ -598,11 +524,11 @@ export default function Build() {
             <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
               <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
                 <p className="font-bold text-2xl text-honey-200 xl:text-4xl">
-                  You’re in good company on Arbitrum
+                  You're in good company on Arbitrum
                 </p>
                 <p className="text-night-500 text-sm sm:text-base">
                   The Arbitrum ecosystem is vast and reaches beyond Treasure.
-                  It’s home to other great dapps, protocols, social platforms
+                  It's home to other great dapps, protocols, social platforms
                   and has everything you need to build.
                 </p>
                 <div>

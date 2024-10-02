@@ -1,14 +1,14 @@
 import Button from "../Button";
 import { PlatformGrid } from "../misc/Svgs";
 
-import APP_LOGO from "~/../public/img/new-landing/platform/app-logo.svg";
-import APP_SCREEN_IMAGE from "~/../public/img/new-landing/platform/app-screen.webp";
-import CHEST_IMAGE from "~/../public/img/new-landing/platform/chest.webp";
-import GEM_IMAGE from "~/../public/img/new-landing/platform/gem.webp";
-import MAGICSWAP_LOGO from "~/../public/img/new-landing/platform/magicswap-logo.svg";
-import MAGICSWAP_SCREEN_IMAGE from "~/../public/img/new-landing/platform/magicswap-screen.webp";
-import MARKET_LOGO from "~/../public/img/new-landing/platform/market-logo.svg";
-import MARKET_SCREEN_IMAGE from "~/../public/img/new-landing/platform/market-screen.webp";
+import APP_LOGO from "@/img/new-landing/platform/app-logo.svg";
+import APP_SCREEN_IMAGE from "@/img/new-landing/platform/app-screen.webp";
+import CHEST_IMAGE from "@/img/new-landing/platform/chest.webp";
+import GEM_IMAGE from "@/img/new-landing/platform/gem.webp";
+import MAGICSWAP_LOGO from "@/img/new-landing/platform/magicswap-logo.svg";
+import MAGICSWAP_SCREEN_IMAGE from "@/img/new-landing/platform/magicswap-screen.webp";
+import MARKET_LOGO from "@/img/new-landing/platform/market-logo.svg";
+import MARKET_SCREEN_IMAGE from "@/img/new-landing/platform/market-screen.webp";
 import { LINKS } from "../misc/const";
 
 const Platform = () => {

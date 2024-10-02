@@ -106,11 +106,11 @@ export default function About() {
                     MAGIC was designed to be increasingly scarce (emissions
                     declining as complexity of the economy increases), as it
                     weaves an ever-growing web of narrative bridges within
-                    Treasure’s ecosystem of metaverses.
+                    Treasure's ecosystem of metaverses.
                   </p>
                   <p>
                     Players are able to earn and use MAGIC through playing
-                    Bridgeworld (one of Treasure’s flagship products) and other
+                    Bridgeworld (one of Treasure's flagship products) and other
                     game cartridges. Staked MAGIC in the Atlas Mine also enables
                     holders to govern the broader Treasure ecosystem.
                   </p>
@@ -139,7 +139,7 @@ export default function About() {
                     create bridges between game worlds.
                   </p>
                   <p>
-                    All reinforcing Treasure’s thesis of true and novel form of
+                    All reinforcing Treasure's thesis of true and novel form of
                     interoperability.
                   </p>
                 </div>
