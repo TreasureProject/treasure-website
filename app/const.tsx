@@ -1,10 +1,7 @@
 // Games (Powered by Treasure) - Logos
 import BWTextImg from "../public/img/games/logos/bridgeworld.webp";
 import BattleflyLogoImg from "../public/img/games/logos/Battlefly.svg";
-import KuroroLogoImg from "../public/img/games/logos/Kuroro.svg";
 import KoteLogoImg from "../public/img/games/logos/KOTE.webp";
-import KaijuCardsLogoImg from "../public/img/games/logos/KaijuCards.webp";
-import MAHLogoImg from "../public/img/games/logos/MAH.webp";
 import RealmLogoImg from "../public/img/games/logos/Realm.webp";
 import SmolverseLogoImg from "../public/img/games/logos/Smolverse.svg";
 import TheBeaconLogoImg from "../public/img/games/logos/The_Beacon.webp";
@@ -17,9 +14,6 @@ import BattleFlyImg from "@/img/games/cards/Battlefly.webp";
 import BridgeworldImg from "@/img/games/cards/Bridgeworld.webp";
 import KnightsOfTheEtherImg from "@/img/games/cards/Knights_of_the_Ether.webp";
 import RealmverseImg from "@/img/games/cards/Realmverse.webp";
-import KaijuCardsImg from "@/img/games/cards/KaijuCards.webp";
-import KuroroImg from "@/img/games/cards/Kuroro.webp";
-import MAHImg from "@/img/games/cards/MAH.webp";
 import TalesOfElleriaImg from "@/img/games/cards/Tales_of_Elleria.webp";
 import TheBeaconImg from "@/img/games/cards/The_Beacon.webp";
 import SmolverseImg from "@/img/games/cards/Smolverse.webp";
@@ -31,9 +25,6 @@ import BattleflySliderImg from "@/img/games/slides/Battlefly.webp";
 import BridgeworldSliderImg from "@/img/games/slides/Bridgeworld.webp";
 import KOTESliderImg from "@/img/games/slides/KOTE.webp";
 import RealmSliderImg from "@/img/games/slides/Realm.webp";
-import KaijuCardsSliderImg from "@/img/games/slides/KaijuCards.webp";
-import KuroroSliderImg from "@/img/games/slides/Kuroro.webp";
-import MAHSliderImg from "@/img/games/slides/MAH.webp";
 import SmolverseSliderImg from "@/img/games/slides/Smolverse.webp";
 import TheBeaconSliderImg from "@/img/games/slides/The_Beacon.webp";
 import TOESliderImg from "@/img/games/slides/TOE.webp";
@@ -45,9 +36,6 @@ import BattleflyIconImg from "@/img/games/icons/battlefly.webp";
 import BridgeworldIconImg from "@/img/games/icons/bridgeworld.webp";
 import KOTEIconImg from "@/img/games/icons/kote.webp";
 import RealmIconImg from "@/img/games/icons/realm.webp";
-import KaijuCardsIconImg from "@/img/games/icons/kaijucards.webp";
-import KuroroIconImg from "@/img/games/icons/kuroro.webp";
-import MAHIconImg from "@/img/games/icons/MAH.webp";
 import SmolverseIconImg from "@/img/games/icons/smolverse.webp";
 import TheBeaconIconImg from "@/img/games/icons/thebeacon.webp";
 import TOEIconImg from "@/img/games/icons/talesofelleria.webp";
@@ -712,18 +700,6 @@ export const navigation = [
 
 export const cartridges = [
   {
-    name: "Mighty Action Heroes",
-    image: MAHImg,
-    websiteLink: "https://app.treasure.lol/games/mighty-action-heroes",
-    logo: MAHLogoImg,
-    sliderImage: MAHSliderImg,
-    iconImage: MAHIconImg,
-    description:
-      "Unleash mayhem in the world’s mightiest action movie-inspired battle royale.",
-    core: true,
-    featured: true,
-  },
-  {
     name: "Zeeverse",
     image: ZeeImg,
     websiteLink: "https://app.treasure.lol/games/zeeverse",
@@ -744,30 +720,6 @@ export const cartridges = [
     iconImage: TheBeaconIconImg,
     description:
       "A fantasy action roguelite RPG. Venture into dungeons, defeat evils & expand the Beacon's protective light!",
-    core: true,
-    featured: true,
-  },
-  {
-    name: "Kaiju Cards",
-    image: KaijuCardsImg,
-    websiteLink: "https://app.treasure.lol/games/kaiju-cards",
-    logo: KaijuCardsLogoImg,
-    sliderImage: KaijuCardsSliderImg,
-    iconImage: KaijuCardsIconImg,
-    description:
-      "Battle through Good Earth and unleash your tactical brilliance in this roguelite deckbuilder.",
-    core: true,
-    featured: true,
-  },
-  {
-    name: "Kuroro",
-    image: KuroroImg,
-    websiteLink: "https://app.treasure.lol/games/kuroro-beasts",
-    logo: KuroroLogoImg,
-    sliderImage: KuroroSliderImg,
-    iconImage: KuroroIconImg,
-    description:
-      "Kuroro is a gaming ecosystem where Beasts roam free and Trainers set out to explore, collect, craft, battle and master the elements.",
     core: true,
     featured: true,
   },

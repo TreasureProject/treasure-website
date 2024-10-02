@@ -1,4 +1,4 @@
-import VIDEO from "~/../public/img/new-landing/Treasure_Mini_Game_Trailer_No_Intro_LR_1080p.mp4";
+import VIDEO from "~/../public/img/new-landing/Treasure_Trailer_Website_02102024.mp4";
 
 import { VideoCutOff } from "../misc/Svgs";
 import Button from "../Button";

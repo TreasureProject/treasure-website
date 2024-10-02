@@ -13,12 +13,6 @@ import SMOLBOUND_CARDS_BACKGROUND from "public/img/new-landing/game-backgrounds/
 import KOTE_COVER from "public/img/new-landing/game-covers/The_KOTE_Game_Cover.webp";
 import KOTE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_KOTE_Game_Background.webp";
 
-import KURORO_BEAST_COVER from "public/img/new-landing/game-covers/The_Kuroro_Game_Cover_2.webp";
-import KURORO_BEAST_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Kuroro_Game_Background.webp";
-
-import MAH_COVER from "public/img/new-landing/game-covers/The_MAH_Game_Cover.webp";
-import MAH_BACKGROUND from "public/img/new-landing/game-backgrounds/The_MAH_Game_Background.webp";
-
 import ZEEVERSE_COVER from "public/img/new-landing/game-covers/The_Zeeverse_Game_Cover.webp";
 import ZEEVERSE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Zeeverse_Game_Background.webp";
 
@@ -55,18 +49,6 @@ const games = [
     cover: SYNERGY_LAND_COVER,
     background: SYNERGY_LAND_BACKGROUND,
     link: "https://app.treasure.lol/games/synergy-land",
-  },
-  {
-    name: "Kuroro Beast",
-    cover: KURORO_BEAST_COVER,
-    background: KURORO_BEAST_BACKGROUND,
-    link: "https://app.treasure.lol/games/kuroro-beasts",
-  },
-  {
-    name: "MAH",
-    cover: MAH_COVER,
-    background: MAH_BACKGROUND,
-    link: "https://app.treasure.lol/games/mighty-action-heroes",
   },
   {
     name: "Bitmates",
