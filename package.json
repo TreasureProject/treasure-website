@@ -72,12 +72,9 @@
     "vite-tsconfig-paths": "^5.0.1"
   },
   "engines": {
-    "node": ">=14"
-  },
-  "volta": {
-    "node": "16.7.0"
+    "node": ">=20"
   },
   "lint-staged": {
-    "app/**/{*.ts,*.tsx}": "npm run lint"
+    "app/**/{*.ts,*.tsx}": "npm run fix"
   }
 }

@@ -20,9 +20,12 @@ import {
 } from "@remix-run/react";
 import * as React from "react";
 
-import nProgressStyles from "./styles/nProgress.css";
-import newlandingStyles from "./styles/new-landing.css";
-import styles from "./styles/tailwind.css";
+import "keen-slider/keen-slider.min.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "./styles/nProgress.css";
+import "./styles/new-landing.css";
+import "./styles/tailwind.css";
 
 import NProgress from "nprogress";
 import { useTranslation } from "react-i18next";
@@ -41,9 +44,6 @@ import {
 import { getThemeSession } from "./utils/theme.server";
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-  { rel: "stylesheet", href: nProgressStyles },
-  { rel: "stylesheet", href: newlandingStyles },
   {
     rel: "apple-touch-icon",
     sizes: "180x180",

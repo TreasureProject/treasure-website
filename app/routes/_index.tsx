@@ -1,11 +1,5 @@
-import type {
-  ActionFunction,
-  HeadersFunction,
-  LinksFunction,
-} from "@remix-run/node";
+import type { ActionFunction, HeadersFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import keenSliderCSS from "keen-slider/keen-slider.min.css";
-import swiperCSS from "swiper/swiper-bundle.css";
 import { ValiError, email, object, parse, string } from "valibot";
 
 import { NewLayout } from "~/components/new-landing/NewLayout";
@@ -20,11 +14,6 @@ import Platform from "~/components/new-landing/sections/Platform";
 import { commonHeaders } from "~/utils/misc.server";
 
 export const headers: HeadersFunction = commonHeaders;
-
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: keenSliderCSS },
-  { rel: "stylesheet", href: swiperCSS },
-];
 
 export const action: ActionFunction = async ({ request }) => {
   const formPayload = Object.fromEntries(await request.formData());
