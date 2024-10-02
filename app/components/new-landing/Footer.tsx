@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+import Button from "./Button";
 import {
   DiscordIcon,
   ExternalIcon,
@@ -6,8 +8,6 @@ import {
   YoutubeIcon,
 } from "./misc/Icons";
 import { Logo } from "./misc/Logo";
-import { Link } from "@remix-run/react";
-import Button from "./Button";
 import { LINKS, SOCIAL } from "./misc/const";
 
 const FooterLinks = [
@@ -119,7 +119,7 @@ const Footer = () => {
       <div className="container relative flex w-full flex-col justify-between gap-14 xl:flex-row">
         <div className="space-y-auto">
           <Logo className="w-[172px]" />
-          <h1 className="bottom-0 mt-auto hidden w-max text-5xl font-bold leading-[120%] md:absolute md:block">
+          <h1 className="bottom-0 mt-auto hidden w-max font-bold text-5xl leading-[120%] md:absolute md:block">
             The magic <br /> of play.
           </h1>
         </div>
@@ -148,7 +148,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="relative bottom-0 right-0 flex flex-col gap-6 md:items-end md:pl-24">
+          <div className="relative right-0 bottom-0 flex flex-col gap-6 md:items-end md:pl-24">
             <div className="w-max space-y-4">
               <Button as="a" color="ruby" href={LINKS.GAMES}>
                 Start Playing
@@ -157,7 +157,7 @@ const Footer = () => {
                 Build with Treasure
               </Button>
             </div>
-            <div className="bottom-0 right-0 flex gap-1.5 xl:absolute">
+            <div className="right-0 bottom-0 flex gap-1.5 xl:absolute">
               <a
                 href={SOCIAL.DISCORD}
                 target="_blank"
@@ -195,7 +195,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container">
-        <div className="flex flex-col  gap-4 border-t border-new-night-800 pt-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-4 border-new-night-800 border-t pt-6 md:flex-row md:items-center md:justify-between">
           <div className="flex gap-6">
             <Link
               to="/terms-of-service"

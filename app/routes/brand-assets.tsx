@@ -1,43 +1,43 @@
 import { Link, useLocation } from "@remix-run/react";
-import { Badge } from "~/components/Badge";
 import classNames from "clsx";
-import { useHydrated } from "remix-utils";
+import { useHydrated } from "remix-utils/use-hydrated";
+import { Badge } from "~/components/Badge";
 
 // Logos
 import treasureLogoKnockoutImg from "../../public/img/resources/treasure/logo-knockout.png";
 
-import treasureLogoDarkImg from "../../public/img/resources/treasure/logo-dark.png";
 import magicLogoDarkImg from "../../public/img/resources/magic/logo-dark.png";
+import treasureLogoDarkImg from "../../public/img/resources/treasure/logo-dark.png";
 
-import treasureLogoLightImg from "../../public/img/resources/treasure/logo-light.png";
 import magicLogoLightImg from "../../public/img/resources/magic/logo-light.png";
+import treasureLogoLightImg from "../../public/img/resources/treasure/logo-light.png";
 
-// Logomarks
-import treasureLogomarkImg from "../../public/img/resources/treasure/logomark.png";
-import treasureLogomarkKnockoutImg from "../../public/img/resources/treasure/logomark-knockout.png";
 import magicLogomarkDarkImg from "../../public/img/resources/magic/logomark-dark.png";
 import magicLogomarkLightImg from "../../public/img/resources/magic/logomark-light.png";
+import treasureLogomarkKnockoutImg from "../../public/img/resources/treasure/logomark-knockout.png";
+// Logomarks
+import treasureLogomarkImg from "../../public/img/resources/treasure/logomark.png";
 
+import { ColorPalette } from "~/components/ColorPalette";
+import magicSpacingImg from "../../public/img/resources/magic/spacing.png";
 // Spacing
 import treasureSpacingImg from "../../public/img/resources/treasure/spacing.png";
-import magicSpacingImg from "../../public/img/resources/magic/spacing.png";
-import { ColorPalette } from "~/components/ColorPalette";
 
 import mediaKitImg from "../../public/img/media-kit.jpg";
 
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { HashtagIcon } from "@heroicons/react/24/solid";
 
+import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import { Layout } from "~/components/Layout";
 import type { RootLoaderData } from "~/root";
+import { commonHeaders } from "~/utils/misc.server";
 import {
   generateTitle,
   genericImagePath,
   getSocialMetas,
   getUrl,
 } from "~/utils/seo";
-import { commonHeaders } from "~/utils/misc.server";
-import type { HeadersFunction, MetaFunction } from "@remix-run/node";
-import { Layout } from "~/components/Layout";
 
 const ResourceNavigation = [
   {
@@ -149,17 +149,12 @@ const Assets = {
 
 export const headers: HeadersFunction = commonHeaders;
 
-export const meta: MetaFunction = ({ parentsData }) => {
-  const {
-    root: { requestInfo },
-  } = parentsData as {
-    root: RootLoaderData;
-  };
-
+export const meta: MetaFunction = ({ matches }) => {
+  const rootLoaderData = matches[0]?.data as RootLoaderData | undefined;
   return getSocialMetas({
     title: generateTitle("Brand Assets"),
-    url: getUrl(requestInfo),
-    image: genericImagePath(requestInfo.origin, "brand-assets"),
+    url: getUrl(rootLoaderData?.origin, rootLoaderData?.path),
+    image: genericImagePath(rootLoaderData?.origin, "brand-assets"),
   });
 };
 
@@ -173,7 +168,7 @@ export default function Resources() {
       <main>
         <div className="relative bg-night-900 py-8 pt-32 sm:py-16 sm:pt-48">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
-            <h2 className="mt-12 text-3xl font-bold tracking-tight text-honey-200 sm:text-5xl">
+            <h2 className="mt-12 font-bold text-3xl text-honey-200 tracking-tight sm:text-5xl">
               Treasure Brand Assets
             </h2>
           </div>
@@ -190,7 +185,7 @@ export default function Resources() {
                     size="sm"
                     className="rounded-[10px]"
                   />
-                  <ul className="mt-10 border-l-2 border-honey-600">
+                  <ul className="mt-10 border-honey-600 border-l-2">
                     {ResourceNavigation.map((item) => {
                       return (
                         <li
@@ -199,7 +194,7 @@ export default function Resources() {
                             currentHash === item.hash
                               ? "border-ruby-900 font-bold text-ruby-900"
                               : "border-transparent text-night-700",
-                            "-ml-[2px] border-l-2 py-1 pl-4 hover:border-ruby-700 hover:text-ruby-800"
+                            "-ml-[2px] border-l-2 py-1 pl-4 hover:border-ruby-700 hover:text-ruby-800",
                           )}
                         >
                           <Link to={`/brand-assets#${item.hash}`}>
@@ -218,7 +213,7 @@ export default function Resources() {
                       const assetTypes = Assets[asset];
 
                       const assetTypekeys = Object.keys(
-                        assetTypes
+                        assetTypes,
                       ) as (keyof typeof assetTypes)[];
 
                       return (
@@ -226,7 +221,7 @@ export default function Resources() {
                           key={asset}
                           className={classNames(
                             i > 0 && "[&>*]:mt-20 [&>*]:sm:mt-28",
-                            "space-y-12 sm:space-y-20"
+                            "space-y-12 sm:space-y-20",
                           )}
                         >
                           {assetTypekeys.map((type, i) => {
@@ -243,7 +238,7 @@ export default function Resources() {
                                 {i === 0 ? (
                                   <Link
                                     to={`/brand-assets#${asset.toLowerCase()}`}
-                                    className="group inline-flex items-center text-xl font-bold text-night-900 sm:text-3xl"
+                                    className="group inline-flex items-center font-bold text-night-900 text-xl sm:text-3xl"
                                   >
                                     <span>
                                       {asset} {type}
@@ -251,7 +246,7 @@ export default function Resources() {
                                     <HashtagIcon className="ml-2 inline-block h-7 w-7 text-night-900/50 opacity-0 group-hover:opacity-100" />
                                   </Link>
                                 ) : (
-                                  <h3 className="group text-xl font-bold text-night-900 sm:text-3xl">
+                                  <h3 className="group font-bold text-night-900 text-xl sm:text-3xl">
                                     {asset} {type}
                                   </h3>
                                 )}
@@ -270,7 +265,7 @@ export default function Resources() {
                                         <div
                                           className={classNames(
                                             image.bg,
-                                            "flex h-60 items-center justify-center rounded-1.5xl border-2 border-honey-100 px-8"
+                                            "flex h-60 items-center justify-center rounded-1.5xl border-2 border-honey-100 px-8",
                                           )}
                                         >
                                           <img
@@ -315,11 +310,11 @@ export default function Resources() {
                           })}
                         </div>
                       );
-                    }
+                    },
                   )}
                   <div className="[&>*]:mt-20 [&>*]:sm:mt-28">
                     <div id="colors" className="scroll-mt-28">
-                      <h3 className="text-3xl font-bold text-night-900">
+                      <h3 className="font-bold text-3xl text-night-900">
                         Colors
                       </h3>
 
@@ -365,16 +360,16 @@ export default function Resources() {
                   */}
                   <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-9 sm:p-10 xl:auto-rows-[23rem]">
                     <div className="order-1 col-span-6 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8">
-                      <p className="text-lg font-bold text-ruby-900 xl:text-4xl">
+                      <p className="font-bold text-lg text-ruby-900 xl:text-4xl">
                         Media Kit
                       </p>
-                      <p className="text-xs text-night-700 xl:text-2xl">
+                      <p className="text-night-700 text-xs xl:text-2xl">
                         Download our media kit and receive all logo variations
                         for Treasure and MAGIC.
                       </p>
                       <div>
                         <a
-                          className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 hover:bg-ruby-900 hover:text-white sm:text-base"
+                          className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 font-bold text-ruby-900 text-xs shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
                           href="https://drive.google.com/uc?export=download&id=1HMkqE2QPzUUnJD8-3WV8cOZo8LmnXfO5"
                           download
                         >

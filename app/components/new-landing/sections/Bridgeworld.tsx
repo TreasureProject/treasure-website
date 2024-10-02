@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 
+import { useMotionValueEvent, useScroll } from "framer-motion";
 import BACKGROUND_IMAGE from "~/../public/img/new-landing/bridgeworld/BW_WorldMap_shrouded_blurred_with_mask.webp";
 import ISLAND_IMAGE from "~/../public/img/new-landing/bridgeworld/Bridgeworld_Meem_Portal_Island.webp";
 import ROCK_1_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_1.webp";
@@ -8,11 +9,10 @@ import ROCK_3_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_
 import ROCK_4_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_4.webp";
 import ROCK_5_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_5.webp";
 import MAGIC_IMAGE from "~/../public/img/new-landing/bridgeworld/Magic_Illustration.webp";
-import Button from "../Button";
-import { MagicLogo } from "../misc/Svgs";
-import { ChevronRightIcon } from "../misc/Icons";
-import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useAppContext } from "~/context/App";
+import Button from "../Button";
+import { ChevronRightIcon } from "../misc/Icons";
+import { MagicLogo } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
 
 const Bridgeworld = () => {
@@ -37,12 +37,12 @@ const Bridgeworld = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-[1400px] w-screen py-12 px-7 md:h-[1580px] md:py-20 md:px-14 xl:h-[1140px] xl:px-20 xl:py-0 xl:pt-48"
+      className="relative h-[1400px] w-screen px-7 py-12 md:h-[1580px] md:px-14 md:py-20 xl:h-[1140px] xl:px-20 xl:py-0 xl:pt-48"
     >
       <div className="absolute inset-0 z-10 block bg-gradient-landing-bridgeworld bg-blend-multiply md:hidden" />
       <div className="container relative h-full">
-        <div className="absolute top-1/2 left-[35%] z-[90] aspect-square min-w-[680px] max-w-[880px] -translate-x-1/2 -translate-y-1/2 sm:top-[55%] sm:left-[45%] sm:min-w-[800px] md:top-1/2 md:w-full lg:top-[55%] lg:max-w-[960px] xl:top-1/2 xl:left-0 xl:w-[72%]  xl:-translate-x-1/4">
-          <div className="translate-y-[72px] xl:-translate-y-0">
+        <div className="-translate-x-1/2 -translate-y-1/2 xl:-translate-x-1/4 absolute top-1/2 left-[35%] z-[90] aspect-square min-w-[680px] max-w-[880px] sm:top-[55%] sm:left-[45%] sm:min-w-[800px] md:top-1/2 md:w-full lg:top-[55%] lg:max-w-[960px] xl:top-1/2 xl:left-0 xl:w-[72%]">
+          <div className="xl:-translate-y-0 translate-y-[72px]">
             <div
               className="t relative h-max 2xl:min-w-[1100px]"
               style={{
@@ -103,13 +103,13 @@ const Bridgeworld = () => {
             </div>
           </div>
         </div>
-        <div className="right-0 top-1/2 z-10 space-y-20 pr-20 xl:absolute xl:max-w-lg xl:-translate-y-1/2 xl:pb-48">
-          <div className="absolute left-0 top-0 z-10 max-w-[560px] space-y-7 xl:relative">
+        <div className="xl:-translate-y-1/2 top-1/2 right-0 z-10 space-y-20 pr-20 xl:absolute xl:max-w-lg xl:pb-48">
+          <div className="absolute top-0 left-0 z-10 max-w-[560px] space-y-7 xl:relative">
             <div>
-              <h1 className="text-lg font-bold leading-[105%] text-new-night-100 md:text-2xl">
+              <h1 className="font-bold text-lg text-new-night-100 leading-[105%] md:text-2xl">
                 Welcome to
               </h1>
-              <h1 className="text-3xl font-bold leading-[105%] text-new-night-100 md:text-5xl">
+              <h1 className="font-bold text-3xl text-new-night-100 leading-[105%] md:text-5xl">
                 Bridgeworld
               </h1>
             </div>
@@ -129,7 +129,7 @@ const Bridgeworld = () => {
           <div className="p absolute bottom-0 left-0 z-10 w-full max-w-[560px] space-y-6 xl:relative">
             <div className="flex items-center gap-7">
               <img src={MAGIC_IMAGE} alt="Magic" className="w-24 md:w-40" />
-              <div className="border-l border-new-night-100 pl-7">
+              <div className="border-new-night-100 border-l pl-7">
                 <p className="leading-[150%]">Powered By</p>
                 <MagicLogo className="w-44" />
               </div>

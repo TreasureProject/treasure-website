@@ -8,8 +8,8 @@ import { LINKS } from "../misc/const";
 const Hero = () => {
   return (
     <div className="relative h-screen max-h-[1024px] w-screen">
-      <div className="container relative z-30 flex h-full flex-col justify-between pb-12 pt-32 sm:pb-20 sm:pt-48">
-        <h1 className="max-w-[240px] text-5xl font-bold leading-[105%] text-new-night-100 sm:max-w-lg sm:text-8xl">
+      <div className="container relative z-30 flex h-full flex-col justify-between pt-32 pb-12 sm:pt-48 sm:pb-20">
+        <h1 className="max-w-[240px] font-bold text-5xl text-new-night-100 leading-[105%] sm:max-w-lg sm:text-8xl">
           The magic of play.
         </h1>
 
@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <LandingCutOff className="absolute right-0 -bottom-[1px] z-20 w-[80px] text-new-light-background sm:w-[128px]" />
+      <LandingCutOff className="-bottom-[1px] absolute right-0 z-20 w-[80px] text-new-light-background sm:w-[128px]" />
       <div className=" absolute inset-0 z-10 h-full w-full bg-gradient-landing-hero" />
       <img
         src={SPLASHART_IMAGE}

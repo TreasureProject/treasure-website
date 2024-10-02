@@ -1,5 +1,3 @@
-import React from "react";
-
 const TileGrid = () => (
   <svg
     width="1874"

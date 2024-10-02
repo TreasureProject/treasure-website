@@ -1,35 +1,35 @@
-import { useEffect, useRef, useState } from "react";
 import { Link } from "@remix-run/react";
+import { useEffect, useRef, useState } from "react";
+import { Keyboard } from "swiper/modules";
 import type { SwiperClass } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard } from "swiper/modules";
 
-import BEACON_COVER from "public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
 import BEACON_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.webp";
+import BEACON_COVER from "public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
 
-import SMOLBOUND_CARDS_COVER from "public/img/new-landing/game-covers/The_Smolbound_Game_Cover.webp";
 import SMOLBOUND_CARDS_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Smolbound_Game_Background.webp";
+import SMOLBOUND_CARDS_COVER from "public/img/new-landing/game-covers/The_Smolbound_Game_Cover.webp";
 
-import KOTE_COVER from "public/img/new-landing/game-covers/The_KOTE_Game_Cover.webp";
 import KOTE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_KOTE_Game_Background.webp";
+import KOTE_COVER from "public/img/new-landing/game-covers/The_KOTE_Game_Cover.webp";
 
-import ZEEVERSE_COVER from "public/img/new-landing/game-covers/The_Zeeverse_Game_Cover.webp";
 import ZEEVERSE_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Zeeverse_Game_Background.webp";
+import ZEEVERSE_COVER from "public/img/new-landing/game-covers/The_Zeeverse_Game_Cover.webp";
 
-import BITMATES_COVER from "public/img/new-landing/game-covers/The_Bitmates_Game_Cover.webp";
 import BITMATES_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Bitmates_Game_Background.webp";
+import BITMATES_COVER from "public/img/new-landing/game-covers/The_Bitmates_Game_Cover.webp";
 
-import REALM_COVER from "public/img/new-landing/game-covers/The_Realm_Game_Cover.webp";
 import REALM_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Realm_Game_Background.webp";
+import REALM_COVER from "public/img/new-landing/game-covers/The_Realm_Game_Cover.webp";
 
-import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Synergy_Land_Cover.webp";
 import SYNERGY_LAND_BACKGROUND from "public/img/new-landing/game-backgrounds/Synergy_Land_Game_Background.webp";
+import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Synergy_Land_Cover.webp";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { GamesGrid } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
-import { AnimatePresence, motion } from "framer-motion";
 
 const games = [
   {
@@ -116,8 +116,8 @@ const Games = () => {
       {/* Background image */}
       <AnimatePresence>
         <motion.img
-          src={games[activeGame].background}
-          key={games[activeGame].name}
+          src={games[activeGame]?.background}
+          key={games[activeGame]?.name}
           alt="Background"
           className="absolute inset-0 h-full w-full object-cover object-center"
           initial={{ opacity: 0 }}
@@ -142,11 +142,16 @@ const Games = () => {
             setActiveGame(swiper.realIndex);
           }}
           slidesPerView="auto"
-          onSwiper={(swiper: SwiperClass) => (swiperRef.current = swiper)}
+          onSwiper={(swiper: SwiperClass) => {
+            swiperRef.current = swiper;
+          }}
           onProgress={(swiper: SwiperClass) => {
             const zIndexMax = swiper.slides.length;
             for (let i = 0; i < swiper.slides.length; i++) {
               const slideEl = swiper.slides[i];
+              if (!slideEl) {
+                continue;
+              }
 
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
@@ -180,13 +185,13 @@ const Games = () => {
                   rel="noreferrer"
                   className={twMerge(
                     "overflow-hidden rounded-2xl border-2 border-new-night-700",
-                    activeGame === i && "border-new-night-500"
+                    activeGame === i && "border-new-night-500",
                   )}
                 >
                   <img
                     className="h-full w-full object-cover object-center"
-                    alt={gameByIndex(i).name}
-                    src={gameByIndex(i).cover}
+                    alt={gameByIndex(i)?.name}
+                    src={gameByIndex(i)?.cover}
                   />
                 </a>
               </SwiperSlide>
@@ -194,7 +199,7 @@ const Games = () => {
           })}
         </Swiper>
       </div>
-      <div className="to-transaprent absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-new-night-1300" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-new-night-1300 to-transaprent" />
       <GamesGrid className="absolute inset-0 z-[5] min-h-[600px] opacity-25" />
       {/* View All Games link */}
       <Link

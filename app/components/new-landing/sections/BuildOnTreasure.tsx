@@ -1,19 +1,13 @@
-import React from "react";
-import Button from "../Button";
+import type React from "react";
 import { twMerge } from "tailwind-merge";
-import {
-  ChevronRightIcon,
-  DiscordIcon,
-  SteamIcon,
-  TwitterIcon,
-} from "../misc/Icons";
+import Button from "../Button";
+import { DiscordIcon, SteamIcon, TwitterIcon } from "../misc/Icons";
 import {
   Badge,
   BoTGraphicFour,
   BoTGraphicOne,
   BoTGraphicThree,
   BoTGraphicTwo,
-  LandingCutOff,
 } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
 
@@ -71,14 +65,14 @@ const BaseCard = ({
   <div
     className={twMerge(
       "relative rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-6 sm:p-12 md:h-[460px] lg:p-8 xl:p-12",
-      className
+      className,
     )}
   >
     {children}
-    <h1 className="lg:max-w-auto relative z-20 max-w-[80%] pb-4 text-2xl font-bold leading-[105%] text-new-ruby-900 sm:pb-6 md:text-3xl">
+    <h1 className="relative z-20 max-w-[80%] pb-4 font-bold text-2xl text-new-ruby-900 leading-[105%] sm:pb-6 md:text-3xl lg:max-w-auto">
       {title}
     </h1>
-    <p className="relative z-20 max-w-[480px] text-base leading-[150%] text-new-night-700 md:text-lg">
+    <p className="relative z-20 max-w-[480px] text-base text-new-night-700 leading-[150%] md:text-lg">
       {description}
     </p>
   </div>
@@ -93,7 +87,7 @@ const SocialCard = ({
   rank: number;
   username: string;
 }) => (
-  <div className="ml-4 h-[120px] w-[280px] space-y-3.5 rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-3.5  ">
+  <div className="ml-4 h-[120px] w-[280px] space-y-3.5 rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-3.5 ">
     <div className="flex gap-3">
       <img
         src={image}
@@ -102,7 +96,7 @@ const SocialCard = ({
       />
       <div className="flex items-center gap-1">
         <div className="relative">
-          <p className="text-new-background-light absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm font-bold">
+          <p className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 font-bold text-new-background-light text-sm">
             {rank}
           </p>
           <Badge className="w-5 text-new-ruby-900" />
@@ -129,8 +123,8 @@ const BuildOnTreasure = () => {
     <div className="bg-new-honey-200 py-10 md:py-20 ">
       <div className="container space-y-10">
         <div className="mx-auto flex max-w-2xl flex-col items-center space-y-7">
-          <h1 className="landing-h1  text-new-ruby-900">Build on Treasure</h1>
-          <p className="text-center leading-[150%] text-new-night-700">
+          <h1 className="landing-h1 text-new-ruby-900">Build on Treasure</h1>
+          <p className="text-center text-new-night-700 leading-[150%]">
             Arming developers and game makers with everything they need to be
             successful since 2021.
           </p>
@@ -155,7 +149,7 @@ const BuildOnTreasure = () => {
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <BoTGraphicOne className="absolute left-1/2 -bottom-[48%] w-[110%%] -translate-x-1/2 text-new-light-background  opacity-30 md:opacity-100 lg:-top-[10%]" />
+              <BoTGraphicOne className="-bottom-[48%] -translate-x-1/2 lg:-top-[10%] absolute left-1/2 w-[110%%] text-new-light-background opacity-30 md:opacity-100" />
             </div>
           </BaseCard>
           <BaseCard
@@ -164,7 +158,7 @@ const BuildOnTreasure = () => {
             className="col-span-4"
           >
             <div className="absolute inset-0 h-full overflow-hidden rounded-2xl">
-              <BoTGraphicTwo className="absolute -bottom-[5%] left-1/2  h-auto w-[180%] -translate-x-1/2 text-new-light-background opacity-30 md:opacity-100 lg:bottom-0 lg:h-full lg:w-auto" />
+              <BoTGraphicTwo className="-bottom-[5%] -translate-x-1/2 absolute left-1/2 h-auto w-[180%] text-new-light-background opacity-30 md:opacity-100 lg:bottom-0 lg:h-full lg:w-auto" />
             </div>
           </BaseCard>
 
@@ -174,7 +168,7 @@ const BuildOnTreasure = () => {
             className="col-span-4"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <div className="absolute bottom-10 z-20 hidden md:block lg:-bottom-[64px]">
+              <div className="lg:-bottom-[64px] absolute bottom-10 z-20 hidden md:block">
                 <div className="space-y-4">
                   <div className="relative hidden overflow-x-hidden lg:flex">
                     <div className="flex animate-marquee whitespace-nowrap pl-4">
@@ -222,7 +216,7 @@ const BuildOnTreasure = () => {
                   </div>
                 </div>
               </div>
-              <BoTGraphicThree className="absolute left-1/2 -bottom-10 w-[200%] -translate-x-1/2 opacity-30 md:opacity-100 lg:bottom-0 lg:h-[100%] lg:w-auto" />
+              <BoTGraphicThree className="-bottom-10 -translate-x-1/2 absolute left-1/2 w-[200%] opacity-30 md:opacity-100 lg:bottom-0 lg:h-[100%] lg:w-auto" />
             </div>
           </BaseCard>
           <BaseCard
@@ -231,7 +225,7 @@ const BuildOnTreasure = () => {
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <BoTGraphicFour className="absolute bottom-0 left-1/2  w-[108%] -translate-x-1/2 opacity-30 md:opacity-100 lg:h-[100%] lg:w-auto" />
+              <BoTGraphicFour className="-translate-x-1/2 absolute bottom-0 left-1/2 w-[108%] opacity-30 md:opacity-100 lg:h-[100%] lg:w-auto" />
             </div>
           </BaseCard>
         </div>

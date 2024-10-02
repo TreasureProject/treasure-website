@@ -1,3 +1,5 @@
+import type { MetaDescriptor } from "@remix-run/node";
+
 export function getSocialMetas({
   url,
   title = generateTitle(),
@@ -10,33 +12,39 @@ export function getSocialMetas({
   title?: string;
   description?: string;
   keywords?: string;
-}) {
-  return {
-    title,
-    description,
-    keywords,
-    image,
-    "og:url": url,
-    "og:title": title,
-    "og:description": description,
-    "og:image": image,
-    "twitter:card": image ? "summary_large_image" : "summary",
-    "twitter:creator": "@Treasure_DAO",
-    "twitter:site": "@Treasure_DAO",
-    "twitter:title": title,
-    "twitter:description": description,
-    "twitter:image": image,
-    "twitter:alt": title,
-  };
+}): MetaDescriptor[] {
+  return [
+    { title },
+    { name: "description", content: description },
+    { name: "keywords", content: keywords },
+    { name: "image", content: image },
+    { property: "og:url", content: url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:image", content: image },
+    {
+      property: "twitter:card",
+      content: image ? "summary_large_image" : "summary",
+    },
+    { property: "twitter:creator", content: "@Treasure_DAO" },
+    { property: "twitter:site", content: "@Treasure_DAO" },
+    { property: "twitter:title", content: title },
+    { property: "twitter:description", content: description },
+    { property: "twitter:image", content: image },
+    { property: "twitter:alt", content: title },
+  ];
 }
 
-export const genericImagePath = (origin: string, pathname: string) =>
-  `${origin}/img/meta/${pathname}.jpg`;
+export const genericImagePath = (
+  origin = "https://treasure.lol",
+  pathname = "home",
+) => `${origin}/img/meta/${pathname}.jpg`;
 
 function prettify(str: string) {
-  return str.replace(/(-|^)([^-]?)/g, function (_, prep, letter) {
-    return (prep && " ") + letter.toUpperCase();
-  });
+  return str.replace(
+    /(-|^)([^-]?)/g,
+    (_, prep, letter) => (prep && " ") + letter.toUpperCase(),
+  );
 }
 
 function removeStartingSlash(s: string) {
@@ -54,8 +62,6 @@ function removeTrailingSlash(s: string) {
   return s.endsWith("/") ? s.slice(0, -1) : s;
 }
 
-export function getUrl(requestInfo?: { origin: string; path: string }) {
-  return removeTrailingSlash(
-    `${requestInfo?.origin ?? "https://treasure.lol"}${requestInfo?.path ?? ""}`
-  );
+export function getUrl(origin = "https://treasure.lol", path = "") {
+  return removeTrailingSlash(origin + path);
 }

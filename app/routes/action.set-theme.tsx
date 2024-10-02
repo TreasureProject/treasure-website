@@ -1,10 +1,10 @@
-import type { ActionArgs } from "@remix-run/node";
+import type { ActionFunction } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 
+import { Theme, isTheme } from "~/utils/theme-provider";
 import { getThemeSession } from "~/utils/theme.server";
-import { isTheme, Theme } from "~/utils/theme-provider";
 
-export const action = async ({ request }: ActionArgs) => {
+export const action: ActionFunction = async ({ request }) => {
   const themeSession = await getThemeSession(request);
   const requestText = await request.text();
   const form = new URLSearchParams(requestText);
@@ -27,7 +27,7 @@ export const action = async ({ request }: ActionArgs) => {
           ? themeSession.reset()
           : themeSession.commit()),
       },
-    }
+    },
   );
 };
 

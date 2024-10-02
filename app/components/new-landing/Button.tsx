@@ -1,4 +1,6 @@
-import type { AnchorHTMLAttributes } from "react";
+import { Link } from "@remix-run/react";
+import type { RemixLinkProps } from "@remix-run/react/dist/components";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 import { ExternalIcon } from "./misc/Icons";
 
@@ -16,6 +18,16 @@ type BaseProps = {
   color: "ruby" | "honey" | "outline" | "float";
 };
 
+export type ButtonAsLink = BaseProps &
+  Omit<RemixLinkProps, keyof BaseProps> & {
+    as?: "link";
+  };
+
+export type ButtonAsButton = BaseProps &
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
+    as: "button";
+  };
+
 type ButtonAsExternal = BaseProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & {
     as: "a";
@@ -23,20 +35,39 @@ type ButtonAsExternal = BaseProps &
     href: string;
   };
 
-type ButtonProps = ButtonAsExternal;
+type ButtonProps = ButtonAsExternal | ButtonAsLink | ButtonAsButton;
 
 const Button = (props: ButtonProps) => {
   const style = twMerge(
     "flex h-12 cursor-pointer items-center justify-center gap-1 rounded-md px-4 text-center font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed",
     colors[props.color],
-    props.className
+    props.className,
   );
-  const { hideExternalIcon, as: _, ...rest } = props;
+  if (props.as === "a") {
+    const { hideExternalIcon, as: _, ...rest } = props;
+    return (
+      <a {...rest} rel="noopender noreferrer" target="_blank" className={style}>
+        {props.children}
+        {!hideExternalIcon && <ExternalIcon className="w-4" />}
+      </a>
+    );
+  }
+
+  if (props.as === "button") {
+    const { as: _, ...rest } = props;
+    return (
+      <button {...rest} className={style}>
+        {props.children}
+      </button>
+    );
+  }
+
+  const { as: __, ...rest } = props;
+
   return (
-    <a {...rest} rel="noopender noreferrer" target="_blank" className={style}>
+    <Link {...rest} className={style}>
       {props.children}
-      {!hideExternalIcon && <ExternalIcon className="w-4" />}
-    </a>
+    </Link>
   );
 };
 

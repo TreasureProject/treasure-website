@@ -1,27 +1,22 @@
+import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import { Layout } from "~/components/Layout";
 import type { RootLoaderData } from "~/root";
+import { commonHeaders } from "~/utils/misc.server";
 import {
   generateTitle,
   genericImagePath,
   getSocialMetas,
   getUrl,
 } from "~/utils/seo";
-import { commonHeaders } from "~/utils/misc.server";
-import type { HeadersFunction, MetaFunction } from "@remix-run/node";
-import { Layout } from "~/components/Layout";
 
 export const headers: HeadersFunction = commonHeaders;
 
-export const meta: MetaFunction = ({ parentsData }) => {
-  const {
-    root: { requestInfo },
-  } = parentsData as {
-    root: RootLoaderData;
-  };
-
+export const meta: MetaFunction = ({ matches }) => {
+  const rootLoaderData = matches[0]?.data as RootLoaderData | undefined;
   return getSocialMetas({
     title: generateTitle("/interoperability"),
-    url: getUrl(requestInfo),
-    image: genericImagePath(requestInfo.origin, "brand-assets"),
+    url: getUrl(rootLoaderData?.origin, rootLoaderData?.path),
+    image: genericImagePath(rootLoaderData?.origin, "brand-assets"),
   });
 };
 
@@ -31,13 +26,13 @@ export default function Resources() {
       <main>
         <div className="relative bg-night-900 pt-32 pb-16 sm:pt-48 sm:pb-24">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
-            <h2 className="mt-12 text-3xl font-bold tracking-tight text-honey-900 sm:text-5xl">
+            <h2 className="mt-12 font-bold text-3xl text-honey-900 tracking-tight sm:text-5xl">
               Privacy Policy
             </h2>
           </div>
           <div className="mx-auto mt-16 max-w-md px-4 sm:max-w-6xl sm:px-20">
             <div className="grid pb-12">
-              <div className="col-span-6 space-y-5 text-sm text-night-400 sm:text-justify sm:text-base">
+              <div className="col-span-6 space-y-5 text-night-400 text-sm sm:text-justify sm:text-base">
                 <div>
                   <p>
                     <span className="font-bold text-night-100">
@@ -118,7 +113,7 @@ export default function Resources() {
                 </div>
 
                 <div>
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     1. Information Voluntarily Provided By You
                   </h3>
                   <p className="mt-5">
@@ -174,7 +169,7 @@ export default function Resources() {
                 </div>
 
                 <div>
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     2. Information Collected Automatically
                   </h3>
                   <p className="mt-5">
@@ -196,7 +191,7 @@ export default function Resources() {
                 </div>
 
                 <div>
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     3. Information Received From a Third Party Source
                   </h3>
                   <p className="mt-5">

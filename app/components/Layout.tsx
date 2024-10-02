@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 import NewNavigation from "./NewNavigation";
 import Footer from "./new-landing/Footer";

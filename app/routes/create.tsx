@@ -18,29 +18,29 @@ import c_02_image from "../../public/img/partner-components/C_02.png";
 import c_03_image from "../../public/img/partner-components/C_03.png";
 import red_diamond_gif from "../../public/img/partner-components/red_diamond.gif";
 import tile_01_desktop_image from "../../public/img/partner-components/tiles/TILE_01_DESKTOP.png";
-import tile_02_desktop_image from "../../public/img/partner-components/tiles/TILE_02_DESKTOP.png";
-import tile_03_desktop_image from "../../public/img/partner-components/tiles/TILE_03_DESKTOP.png";
-import tile_04_desktop_image from "../../public/img/partner-components/tiles/TILE_04_DESKTOP.png";
-import tile_05_desktop_image from "../../public/img/partner-components/tiles/TILE_05_DESKTOP.png";
 import tile_01_mobile_image from "../../public/img/partner-components/tiles/TILE_01_MOBILE.png";
+import tile_02_desktop_image from "../../public/img/partner-components/tiles/TILE_02_DESKTOP.png";
 import tile_02_mobile_image from "../../public/img/partner-components/tiles/TILE_02_MOBILE.png";
+import tile_03_desktop_image from "../../public/img/partner-components/tiles/TILE_03_DESKTOP.png";
 import tile_03_mobile_image from "../../public/img/partner-components/tiles/TILE_03_MOBILE.png";
+import tile_04_desktop_image from "../../public/img/partner-components/tiles/TILE_04_DESKTOP.png";
 import tile_04_mobile_image from "../../public/img/partner-components/tiles/TILE_04_MOBILE.png";
+import tile_05_desktop_image from "../../public/img/partner-components/tiles/TILE_05_DESKTOP.png";
 import tile_05_mobile_image from "../../public/img/partner-components/tiles/TILE_05_MOBILE.png";
 
-import TileGrid from "~/components/decoration/TileGrid";
-import { twMerge } from "tailwind-merge";
+import { Link } from "@remix-run/react";
 import type { MotionValue } from "framer-motion";
 import {
-  useScroll,
-  useTransform,
   motion,
   useMotionValueEvent,
+  useScroll,
+  useTransform,
 } from "framer-motion";
 import { useRef } from "react";
+import { twMerge } from "tailwind-merge";
+import TileGrid from "~/components/decoration/TileGrid";
 import Button from "~/components/new-landing/Button";
 import { CreateFrame, CreateGrid } from "~/components/new-landing/misc/Svgs";
-import { Link } from "@remix-run/react";
 
 const FORM_URL =
   "https://noteforms.com/forms/treasure-create-program-application-v5jlfp";
@@ -78,7 +78,7 @@ const ApplyNowButton = () => (
     href={FORM_URL}
     target="_blank"
     rel="noreferrer"
-    className="text-md mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-semibold transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
+    className="mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-semibold text-md transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
   >
     Apply Now
   </a>
@@ -90,7 +90,7 @@ const TestimonialCard = ({
   testimonial: { text: string; name: string; twitter: string };
 }) => (
   <div className="flex h-[280px] w-[300px] flex-col justify-between rounded-3xl border border-white p-4 sm:h-[400px] md:w-[460px] md:min-w-[460px] md:p-10 ">
-    <p className="sm:text-md text-sm leading-[160%] md:text-lg">
+    <p className="text-sm leading-[160%] sm:text-md md:text-lg">
       “{testimonial.text}“
     </p>
     <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
@@ -100,12 +100,12 @@ const TestimonialCard = ({
         className="h-11 w-11 rounded-full sm:h-14 sm:w-14 md:h-[72px] md:w-[72px]"
       />
       <div>
-        <p className="md:text-md text-sm font-bold leading-[160%] tracking-wider">
+        <p className="font-bold text-sm leading-[160%] tracking-wider md:text-md">
           {testimonial.name}
         </p>
         <a
           href={`https://twitter.com/${testimonial.twitter}`}
-          className="md:text-md text-sm transition-colors hover:text-ruby-800 hover:underline"
+          className="text-sm transition-colors hover:text-ruby-800 hover:underline md:text-md"
         >
           @{testimonial.twitter}
         </a>
@@ -144,10 +144,10 @@ const Partner = () => {
               </h1>
               <ApplyNowButton />
             </div>
-            <div className=" -20 absolute -right-1/2 top-[180%] w-screen -translate-x-1/2 -translate-y-1/2 sm:top-[140%] lg:top-[80%] lg:-right-16 lg:w-[960px] lg:translate-x-0 lg:translate-y-0">
+            <div className=" -20 -right-1/2 -translate-x-1/2 -translate-y-1/2 lg:-right-16 absolute top-[180%] w-screen sm:top-[140%] lg:top-[80%] lg:w-[960px] lg:translate-x-0 lg:translate-y-0">
               {" "}
-              <TreasureLogo className="absolute top-1/2 left-1/2 z-[25] w-16 -translate-x-1/2 -translate-y-1/2 lg:w-[120px]" />
-              <TreasureLogo className="absolute top-1/2 left-1/2 w-[96px] -translate-x-1/2 -translate-y-1/2 animate-pulse opacity-75 blur-[28px] lg:w-[160px] lg:blur-[64px]" />
+              <TreasureLogo className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-[25] w-16 lg:w-[120px]" />
+              <TreasureLogo className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 w-[96px] animate-pulse opacity-75 blur-[28px] lg:w-[160px] lg:blur-[64px]" />
               <motion.img
                 src={tile_01_desktop_image}
                 alt=""
@@ -200,7 +200,7 @@ const Partner = () => {
               />
             </div>
           </div>
-          <div className="absolute left-0 bottom-0 z-30 h-1/2 w-screen bg-gradient-to-t from-partner-background via-partner-background to-transparent" />
+          <div className="absolute bottom-0 left-0 z-30 h-1/2 w-screen bg-gradient-to-t from-partner-background via-partner-background to-transparent" />
 
           <div className="absolute top-1/4 right-0 z-10 hidden translate-x-1/2 opacity-60 lg:block">
             <TileGrid />
@@ -209,7 +209,7 @@ const Partner = () => {
             <div className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-partner-placeholder md:rounded-[40px]">
               <video src={tc_intro_video} autoPlay muted />
             </div>
-            <p className="max-w-lg px-4 font-[Satoshi] text-base font-light leading-[160%] text-[white] sm:px-0 md:text-lg">
+            <p className="max-w-lg px-4 font-[Satoshi] font-light text-[white] text-base leading-[160%] sm:px-0 md:text-lg">
               Welcome to Treasure Create, your gateway to web3 gaming! Join our
               exclusive creator program to champion Treasure games, boost your
               online presence, and explore unique opportunities in the web3
@@ -221,9 +221,9 @@ const Partner = () => {
       </div>
       <div className="space-y-24 bg-partner-background py-20 md:space-y-8">
         <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row md:gap-12">
-          <div className="relative flex w-full  items-center justify-center">
+          <div className="relative flex w-full items-center justify-center">
             <img src={a_02_image} alt="" className="" />
-            <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 w-full">
               <img src={a_01_image} alt="" className="animate-move-up-down" />
             </div>
           </div>
@@ -232,7 +232,7 @@ const Partner = () => {
               <h1 className="font-[Millik] text-xl leading-[120%] md:text-2xl lg:text-3xl">
                 Grow Your Platform
               </h1>
-              <p className="sm:text-md font-[satoshi] text-base font-light leading-[160%]">
+              <p className="font-[satoshi] font-light text-base leading-[160%] sm:text-md">
                 Join our exclusive content creator program to connect with over
                 300k players, access early playtests, and amplify your reach
                 through promotion on official Treasure channels.
@@ -242,22 +242,22 @@ const Partner = () => {
         </div>
         <div className="wrapper flex max-w-[512px] flex-col items-center justify-center gap-6 sm:max-w-[580px] md:max-w-8xl md:flex-row-reverse md:gap-12">
           <div className="relative flex w-full items-center justify-center">
-            <div className="absolute left-1/2 right-1/2 h-0 w-0">
-              <div className="absolute top-0 left-0 h-0 w-0 border-t-8 border-l-4 border-r-4 border-solid border-transparent"></div>
-              <div className="border-t-6 absolute top-0 left-0 h-0 w-0 border-l-2 border-r-2 bg-red-500"></div>
+            <div className="absolute right-1/2 left-1/2 h-0 w-0">
+              <div className="absolute top-0 left-0 h-0 w-0 border-transparent border-t-8 border-r-4 border-l-4 border-solid" />
+              <div className="absolute top-0 left-0 h-0 w-0 border-t-6 border-r-2 border-l-2 bg-red-500" />
             </div>
             {/* This width here */}
-            <div className="flex-items-center absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] justify-center rounded-xl bg-gradient-partner-hero md:w-[58%] md:rounded-[16px] lg:left-[11%] lg:h-[50%]">
+            <div className="absolute top-[24.5%] left-[5%] z-20 h-[52%] w-[67%] flex-items-center justify-center rounded-xl bg-gradient-partner-hero md:w-[58%] md:rounded-[16px] lg:left-[11%] lg:h-[50%]">
               <img
                 src={red_diamond_gif}
                 alt=""
-                className="absolute left-1/2 top-1/2 w-[33%] -translate-y-1/2 -translate-x-1/2"
+                className="-translate-y-1/2 -translate-x-1/2 absolute top-1/2 left-1/2 w-[33%]"
               />
               <div className="absolute top-[8%] left-[5%] flex h-[4%] w-[10%] items-center gap-[4px] md:top-[5%] md:left-[3%] ">
                 <div className="aspect-square h-full rounded-full bg-[#396AF3]" />
                 <div className="h-full animate-stretch rounded-full bg-[#396AF3]" />
               </div>
-              <div className="absolute top-[8%] right-[5%] z-10 h-[4%] w-[8%] animate-pulse2 rounded-full bg-[#396AF3] md:right-[3%] md:top-[5%]" />
+              <div className="absolute top-[8%] right-[5%] z-10 h-[4%] w-[8%] animate-pulse2 rounded-full bg-[#396AF3] md:top-[5%] md:right-[3%]" />
             </div>
             <img
               src={b_01_image}
@@ -280,7 +280,7 @@ const Partner = () => {
         </div>
         <div
           className={twMerge(
-            "wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row"
+            "wrapper flex max-w-[512px] flex-col items-center justify-center gap-12 sm:max-w-[580px] md:max-w-8xl md:flex-row",
           )}
         >
           <div className="relative flex w-full flex-col items-center justify-center md:flex-row">
@@ -309,15 +309,15 @@ const Partner = () => {
           {/* here starts the graphic for this section */}
           <div className="relative flex w-full flex-col items-center justify-end md:flex-row">
             {/* here starts the tiles part */}
-            <div className="absolute top-[62%] left-0 right-0 w-full translate-x-[6px] -translate-y-[40px]  sm:right-0 md:top-1/2 md:left-auto md:min-w-[420px] md:translate-y-0 md:translate-x-0 lg:min-w-[512px] xl:right-0 xl:min-w-[720px]">
+            <div className="-translate-y-[40px] absolute top-[62%] right-0 left-0 w-full translate-x-[6px] sm:right-0 md:top-1/2 md:left-auto md:min-w-[420px] md:translate-x-0 md:translate-y-0 lg:min-w-[512px] xl:right-0 xl:min-w-[720px]">
               {/* Cantelope */}
               <Link
-                className="absolute -left-[14%] top-1/2 -translate-y-1/2 transition-transform hover:scale-105 sm:-left-[10%] md:left-0"
+                className="-left-[14%] -translate-y-1/2 sm:-left-[10%] absolute top-1/2 transition-transform hover:scale-105 md:left-0"
                 to="https://twitter.com/TheCantelope"
                 target="_blank"
               >
                 <img
-                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-10 w-[65%]"
                   src={AVATAR_2_IMAGE}
                   alt=""
                 />
@@ -325,12 +325,12 @@ const Partner = () => {
               </Link>
               {/* Alliestrasza */}
               <Link
-                className="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 transition-all hover:scale-105"
+                className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-30 transition-all hover:scale-105"
                 to="https://twitter.com/Alliestrasza"
                 target="_blank"
               >
                 <img
-                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-10 w-[65%]"
                   src={AVATAR_1_IMAGE}
                   alt=""
                 />
@@ -339,12 +339,12 @@ const Partner = () => {
               {/* Juicy */}
 
               <Link
-                className="absolute top-1/2 -right-[10%] -translate-y-1/2 transition-all hover:scale-105 md:right-0"
+                className="-right-[10%] -translate-y-1/2 absolute top-1/2 transition-all hover:scale-105 md:right-0"
                 to="https://twitter.com/JuicyJCR"
                 target="_blank"
               >
                 <img
-                  className="absolute left-1/2 top-1/2 z-10 w-[65%] -translate-x-1/2 -translate-y-1/2"
+                  className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-10 w-[65%]"
                   src={AVATAR_3_IMAGE}
                   alt=""
                 />
@@ -357,13 +357,13 @@ const Partner = () => {
             <div className="max-w-md space-y-3 sm:space-y-10">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <div className="flex -translate-x-2 items-center gap-2">
+                  <div className="-translate-x-2 flex items-center gap-2">
                     <img
                       src={CREATE_LOGO_IMAGE}
                       alt="Create Logo"
                       className="w-12"
                     />
-                    <p className="rounded-md bg-gradient-create-shiny px-3 py-2 text-sm text-new-night-1300">
+                    <p className="rounded-md bg-gradient-create-shiny px-3 py-2 text-new-night-1300 text-sm">
                       A-LIST
                     </p>
                   </div>
@@ -399,13 +399,19 @@ const Partner = () => {
             <div className="group relative [-webkit-mask-image:linear-gradient(to_right,#0000_0%,#000_30%,#000_70%,#0000_100%)]">
               <div className="relative flex gap-5 overflow-x-hidden">
                 <div className="group-hover:pause flex animate-[marquee_20s_linear_infinite] gap-5 sm:animate-[marquee_20s_linear_infinite]">
-                  {Testimonials.map((testimonial, i) => (
-                    <TestimonialCard testimonial={testimonial} key={i} />
+                  {Testimonials.map((testimonial) => (
+                    <TestimonialCard
+                      testimonial={testimonial}
+                      key={testimonial.name}
+                    />
                   ))}
                 </div>
                 <div className="group-hover:pause absolute top-0 ml-4 flex animate-[marquee2_20s_linear_infinite] gap-5 sm:animate-[marquee2_20s_linear_infinite]">
-                  {Testimonials.map((testimonial, i) => (
-                    <TestimonialCard testimonial={testimonial} key={i} />
+                  {Testimonials.map((testimonial) => (
+                    <TestimonialCard
+                      testimonial={testimonial}
+                      key={testimonial.name}
+                    />
                   ))}
                 </div>
               </div>

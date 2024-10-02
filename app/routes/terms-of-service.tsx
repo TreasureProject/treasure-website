@@ -1,27 +1,22 @@
+import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import { Layout } from "~/components/Layout";
 import type { RootLoaderData } from "~/root";
+import { commonHeaders } from "~/utils/misc.server";
 import {
   generateTitle,
   genericImagePath,
   getSocialMetas,
   getUrl,
 } from "~/utils/seo";
-import { commonHeaders } from "~/utils/misc.server";
-import type { HeadersFunction, MetaFunction } from "@remix-run/node";
-import { Layout } from "~/components/Layout";
 
 export const headers: HeadersFunction = commonHeaders;
 
-export const meta: MetaFunction = ({ parentsData }) => {
-  const {
-    root: { requestInfo },
-  } = parentsData as {
-    root: RootLoaderData;
-  };
-
+export const meta: MetaFunction = ({ matches }) => {
+  const rootLoaderData = matches[0]?.data as RootLoaderData | undefined;
   return getSocialMetas({
     title: generateTitle("Terms of Service"),
-    url: getUrl(requestInfo),
-    image: genericImagePath(requestInfo.origin, "brand-assets"),
+    url: getUrl(rootLoaderData?.origin, rootLoaderData?.path),
+    image: genericImagePath(rootLoaderData?.origin, "brand-assets"),
   });
 };
 
@@ -31,13 +26,13 @@ export default function Resources() {
       <main>
         <div className="relative bg-night-900 pt-32 pb-16 sm:pt-48 sm:pb-24">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
-            <h2 className="mt-12 text-3xl font-bold tracking-tight text-honey-900 sm:text-5xl">
+            <h2 className="mt-12 font-bold text-3xl text-honey-900 tracking-tight sm:text-5xl">
               Terms of Service
             </h2>
           </div>
           <div className="mx-auto mt-16 max-w-md px-4 sm:max-w-6xl sm:px-20">
             <div className="grid pb-12">
-              <div className="col-span-6 space-y-5 text-sm text-night-400 sm:text-justify sm:text-base">
+              <div className="col-span-6 space-y-5 text-night-400 text-sm sm:text-justify sm:text-base">
                 <div>
                   <p>
                     <span className="font-bold text-night-100">
@@ -80,6 +75,7 @@ export default function Resources() {
                       href="app.treasure.lol"
                       className="text-honey-900 underline"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       app.treasure.lol
                     </a>
@@ -94,7 +90,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     1. YOUR ACCEPTANCE OF THESE TERMS; ARBITRATION DISCLAIMER
                   </h3>
                   <p>
@@ -132,7 +128,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     2. CHANGES TO TERMS
                   </h3>
                   <p>
@@ -150,10 +146,10 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     3. TREASURE PLATFORM
                   </h3>
-                  <h4 className="group mb-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
                     3.1 Platform Ecosystem
                   </h4>
                   <p>
@@ -174,7 +170,7 @@ export default function Resources() {
                     ).
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     3.2 Marketplace and Digital Assets
                   </h4>
                   <p>
@@ -213,7 +209,7 @@ export default function Resources() {
                     parties.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     3.3 Access and Use of the Platform
                   </h4>
                   <p>
@@ -248,7 +244,7 @@ export default function Resources() {
                     law.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     3.4 User Generated Content
                   </h4>
                   <p>
@@ -266,7 +262,7 @@ export default function Resources() {
                     of anyone else, including Treasure.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     3.5 Digital Wallet
                   </h4>
                   <p>
@@ -293,7 +289,7 @@ export default function Resources() {
                     Asset.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     3.6 Prohibitions
                   </h4>
                   <p>You agree not to use the Platform to:</p>
@@ -393,7 +389,7 @@ export default function Resources() {
                     </li>
                   </ol>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     3.7 Third-Party Services Acknowledgement
                   </h4>
                   <p>
@@ -413,10 +409,10 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     4. DIGITAL ASSET PURCHASES
                   </h3>
-                  <h4 className="group mb-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
                     4.1 NFT Terms of Sale
                   </h4>
                   <p>
@@ -444,7 +440,7 @@ export default function Resources() {
                     .
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     4.2 Taxes
                   </h4>
                   <p>
@@ -457,7 +453,7 @@ export default function Resources() {
                     or sale, of any NFTs.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     4.3 Fees
                   </h4>
                   <p>
@@ -481,7 +477,7 @@ export default function Resources() {
                     under all circumstances.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     4.4 Treasure Makes No Representations on Price or Value of
                     NFTs
                   </h4>
@@ -497,10 +493,10 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     5. Ownership of the Platform and User Generated Content
                   </h3>
-                  <h4 className="group mb-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
                     5.1 Ownership of the Platform
                   </h4>
                   <p>
@@ -527,7 +523,7 @@ export default function Resources() {
                     which are specifically excluded and disclaimed.
                   </p>
 
-                  <h4 className="group mb-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
                     5.2 User Generated Content
                   </h4>
                   <p>
@@ -546,7 +542,7 @@ export default function Resources() {
                     lawful purpose.
                   </p>
 
-                  <h4 className="group mb-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
                     5.3 FEEDBACK
                   </h4>
                   <p>
@@ -571,7 +567,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     6. PRIVACY POLICY
                   </h3>
                   <p>
@@ -594,7 +590,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     7. Release of Disputes with Users
                   </h3>
                   <p>
@@ -611,7 +607,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     8. Downtime Disclaimer
                   </h3>
                   <p>
@@ -637,11 +633,11 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     9. DISCLAIMERS; NO REPRESENTATIONS; LIMITATIONS ON OUR
                     LIABILITY
                   </h3>
-                  <h4 className="group mb-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
                     9.1 DISCLAIMER OF WARRANTIES:
                   </h4>
                   <p>
@@ -699,7 +695,7 @@ export default function Resources() {
                     OR A DIGITAL WALLET.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     9.2 Limitation of Liability
                   </h4>
                   <p>
@@ -729,7 +725,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     10. ASSUMPTION OF RISK
                   </h3>
                   <p>
@@ -813,7 +809,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     11. DISPUTE RESOLUTION - ARBITRATION
                   </h3>
                   <p>
@@ -913,7 +909,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     12. COMPLIANCE WITH LAW; DISQUALIFIED PERSONS
                   </h3>
                   <p>
@@ -1001,7 +997,7 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     13. INDEMNIFICATION
                   </h3>
                   <p>
@@ -1022,10 +1018,10 @@ export default function Resources() {
                 </div>
 
                 <div className="space-y-5">
-                  <h3 className="group mb-2 pt-5 text-xl font-bold text-night-100 sm:text-2xl">
+                  <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
                     14. MISCELLANEOUS TERMS
                   </h3>
-                  <h4 className="group mb-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
                     14.1 No Waiver of Rights
                   </h4>
                   <p>
@@ -1042,7 +1038,7 @@ export default function Resources() {
                     exercise of any other right, remedy, power, or privilege.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     14.2 Export Laws
                   </h4>
                   <p>
@@ -1052,7 +1048,7 @@ export default function Resources() {
                     Jurisdiction or Disqualified Person.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     14.3 Assignment
                   </h4>
                   <p>
@@ -1067,7 +1063,7 @@ export default function Resources() {
                     under these Terms.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     14.4 Severability
                   </h4>
                   <p>
@@ -1077,7 +1073,7 @@ export default function Resources() {
                     any other provisions.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     14.5 Governing Law and Jurisdiction
                   </h4>
                   <p>
@@ -1088,7 +1084,7 @@ export default function Resources() {
                     British Virgin Islands for any such action.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     14.6 Entire Agreement
                   </h4>
                   <p>
@@ -1099,7 +1095,7 @@ export default function Resources() {
                     subject matter.
                   </p>
 
-                  <h4 className="group mb-2 pt-2 text-lg font-bold text-night-100 sm:text-xl">
+                  <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
                     14.7 Headings
                   </h4>
                   <p>

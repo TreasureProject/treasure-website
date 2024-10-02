@@ -1,7 +1,7 @@
 export async function getTotalSupply() {
   try {
     const res = await fetch(
-      "https://api.arbiscan.io/api?module=stats&action=tokensupply&contractaddress=0x539bde0d7dbd336b79148aa742883198bbf60342"
+      "https://api.arbiscan.io/api?module=stats&action=tokensupply&contractaddress=0x539bde0d7dbd336b79148aa742883198bbf60342",
     );
 
     const data: { status: string; message: string; result: string } =
@@ -20,7 +20,7 @@ export async function getUtilization() {
       {
         body: '{"query":"{atlasMines{utilization}}","variables":null}',
         method: "POST",
-      }
+      },
     );
 
     const {

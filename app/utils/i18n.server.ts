@@ -1,8 +1,9 @@
+import { resolve } from "node:path";
 import Backend from "i18next-fs-backend";
-import { RemixI18Next } from "remix-i18next";
+import { RemixI18Next } from "remix-i18next/server";
+
 import { supportedLngs } from "../const";
 import { i18nCookie } from "./cookie";
-import { resolve } from "node:path";
 
 export const i18n = new RemixI18Next({
   detection: {

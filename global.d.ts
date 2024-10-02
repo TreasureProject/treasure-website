@@ -1,7 +1,5 @@
 import type { Env, EnvVar } from "~/types";
 
-export {};
-
 declare global {
   /**
    * To make typescript stop complaining when trying to access window.env

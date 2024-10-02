@@ -13,5 +13,5 @@ export const contenfulDeliverySdk = (preview = false) =>
             : process.env.CONTENTFUL_DELIVERY_TOKEN
         }`,
       },
-    })
+    }),
   );

@@ -1,8 +1,6 @@
-import * as React from "react";
 import type {
-  HtmlMetaDescriptor,
   LinksFunction,
-  LoaderArgs,
+  LoaderFunctionArgs,
   MetaFunction,
   SerializeFrom,
 } from "@remix-run/node";
@@ -14,23 +12,26 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
+  isRouteErrorResponse,
   useFetchers,
-  useCatch,
+  useLoaderData,
   useNavigation,
+  useRouteError,
 } from "@remix-run/react";
+import * as React from "react";
 
-import styles from "./styles/tailwind.css";
-import newlandingStyles from "./styles/new-landing.css";
 import nProgressStyles from "./styles/nProgress.css";
+import newlandingStyles from "./styles/new-landing.css";
+import styles from "./styles/tailwind.css";
 
-import { getDomainUrl } from "./utils/misc.server";
-import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
 import NProgress from "nprogress";
-import { i18n } from "./utils/i18n.server";
 import { useTranslation } from "react-i18next";
 import { NewLayout } from "./components/new-landing/NewLayout";
+import { AppContextProvider } from "./context/App";
 import { i18nCookie } from "./utils/cookie";
+import { i18n } from "./utils/i18n.server";
+import { getDomainUrl } from "./utils/misc.server";
+import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
 import {
   ThemeBody,
   ThemeHead,
@@ -38,7 +39,6 @@ import {
   useTheme,
 } from "./utils/theme-provider";
 import { getThemeSession } from "./utils/theme.server";
-import { AppContextProvider } from "./context/App";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -106,28 +106,11 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = ({ data }) => {
-  let tags: HtmlMetaDescriptor = {
-    robots: "index, follow",
-    charset: "utf-8",
-    viewport: "width=device-width,initial-scale=1",
-    "theme-color": "#ffffff",
-    "msapplication-TileColor": "#ffc40d",
-  };
-
-  if (data) {
-    const { requestInfo } = data as RootLoaderData;
-    if (requestInfo) {
-      tags = {
-        ...tags,
-        ...getSocialMetas({
-          url: getUrl(requestInfo),
-          image: genericImagePath(requestInfo.origin, "home"),
-        }),
-      };
-    }
-  }
-
-  return tags;
+  const loaderData = data as RootLoaderData | undefined;
+  return getSocialMetas({
+    url: getUrl(loaderData?.origin, loaderData?.path),
+    image: genericImagePath(loaderData?.origin, "home"),
+  });
 };
 
 function useChangeLanguage(locale: string) {
@@ -137,24 +120,21 @@ function useChangeLanguage(locale: string) {
   }, [locale, i18n]);
 }
 
-export const loader = async ({ request }: LoaderArgs) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const themeSession = await getThemeSession(request);
   const locale = await i18n.getLocale(request);
-
   return json(
     {
       locale,
-      requestInfo: {
-        origin: getDomainUrl(request),
-        path: new URL(request.url).pathname,
-      },
       theme: themeSession.getTheme(),
+      origin: getDomainUrl(request),
+      path: new URL(request.url).pathname,
     },
     {
       headers: {
         "Set-Cookie": await i18nCookie.serialize(locale),
       },
-    }
+    },
   );
 };
 
@@ -183,7 +163,7 @@ function App() {
       if (states.every((state) => state === "idle")) return "idle";
       return "loading";
     },
-    [transition.state, fetchers]
+    [transition.state, fetchers],
   );
 
   useChangeLanguage(data.locale);
@@ -194,7 +174,7 @@ function App() {
     if (state === "loading") NProgress.start();
     // when the state is idle then we can to complete the progress bar
     if (state === "idle") NProgress.done();
-  }, [state, transition.state]);
+  }, [state]);
 
   return (
     <html
@@ -203,6 +183,11 @@ function App() {
       className={`h-full ${theme ?? ""}`}
     >
       <head>
+        <meta name="robots" content="index, follow" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#ffc40d" />
         <Meta />
         <Links />
         <link rel="canonical" href="https://treasure.lol/" />
@@ -220,7 +205,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         ) : null}
       </head>
       <body
-        className="max-w-screen h-full overflow-x-hidden bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
+        className="h-full max-w-screen overflow-x-hidden bg-honey-50 antialiased selection:bg-honey-900 dark:bg-[#0B111C]"
         id="top"
       >
         {process.env.NODE_ENV === "production" ? (
@@ -231,7 +216,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               height="0"
               width="0"
               className="invisible hidden"
-            ></iframe>
+            />
           </noscript>
         ) : null}
         <AppContextProvider>
@@ -247,16 +232,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 export function CatchBoundary() {
-  const caught = useCatch();
-  let message: string | undefined;
-  try {
-    message = message = JSON.parse(caught.data)?.message;
-  } catch (err) {
-    console.warn("Error parsing catch boundary data", err);
-  }
-  if (caught.status === 404) {
+  const error = useRouteError();
+
+  if (isRouteErrorResponse(error) && error.status === 404) {
     return (
-      <html>
+      <html lang="en">
         <head>
           <Meta />
           <Links />
@@ -265,8 +245,8 @@ export function CatchBoundary() {
           <AppContextProvider>
             <NewLayout>
               <div className="flex h-full flex-col items-center justify-center pt-48 pb-24">
-                <p className="text-3xl font-bold leading-[105%] text-honey-900 sm:text-6xl">
-                  {message ? message : "Page not found"}
+                <p className="font-bold text-3xl text-honey-900 leading-[105%] sm:text-6xl">
+                  {error.data.message ?? "Page not found"}
                 </p>
               </div>
             </NewLayout>
@@ -276,7 +256,8 @@ export function CatchBoundary() {
       </html>
     );
   }
-  throw new Error(`Unhandled error: ${caught.status}`);
+
+  throw new Error(`Unhandled error: ${error}`);
 }
 
 export default function AppWithProviders() {

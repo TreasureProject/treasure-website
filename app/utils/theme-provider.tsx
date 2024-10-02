@@ -33,9 +33,8 @@ function ThemeProvider({
     if (specifiedTheme) {
       if (themes.includes(specifiedTheme)) {
         return specifiedTheme;
-      } else {
-        return null;
       }
+      return null;
     }
 
     // there's no way for us to know what the theme should be in this context
@@ -75,7 +74,7 @@ function ThemeProvider({
 
     persistThemeRef.current.submit(
       { theme },
-      { action: "/action/set-theme", method: "post" }
+      { action: "/action/set-theme", method: "post" },
     );
   }, [theme]);
 

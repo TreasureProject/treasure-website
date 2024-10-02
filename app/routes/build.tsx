@@ -1,58 +1,53 @@
+import BgHeroImg from "@/img/bg-hero.jpg";
+import LogomarkImg from "@/img/resources/treasure/logomark.png";
 import {
   ArrowDownIcon,
   ArrowTopRightOnSquareIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/solid";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import Balancer from "react-wrap-balancer";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import { arbitrumPartners, builderTweets } from "~/const";
-import LogomarkImg from "@/img/resources/treasure/logomark.png";
-import BgHeroImg from "@/img/bg-hero.jpg";
-import Balancer from "react-wrap-balancer";
+import { arbitrumPartners, tweets } from "~/const";
 
-import { Link } from "@remix-run/react";
 import TreasureTeamImg from "@/img/TreasureTeam.webp";
 import EcosystemFlywheelImg from "@/img/illustrations/Ecosystem_Flywheel.webp";
-import InfrastructureImg from "@/img/illustrations/Infrastructure.webp";
-import InfrastructureMobileImg from "@/img/illustrations/Infrastructure-mobile.webp";
-import GamingExperiencesImg from "@/img/illustrations/Gaming_Experiences.webp";
 import GamingExperiencesMobileImg from "@/img/illustrations/Gaming_Experiences-mobile.webp";
+import GamingExperiencesImg from "@/img/illustrations/Gaming_Experiences.webp";
+import InfrastructureMobileImg from "@/img/illustrations/Infrastructure-mobile.webp";
+import InfrastructureImg from "@/img/illustrations/Infrastructure.webp";
+import { Link } from "@remix-run/react";
 
 // Icons
 import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
 import OpenSourceIcon from "@/img/icons/Badge_Open_Source.svg";
+import DocIcon from "@/img/icons/Docs.svg";
 import InfraIcon from "@/img/icons/Infra.svg";
 import InteropIcon from "@/img/icons/Interop.svg";
-import DocIcon from "@/img/icons/Docs.svg";
-import { ClientOnly } from "remix-utils";
+import { ClientOnly } from "remix-utils/client-only";
 
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import { twMerge } from "tailwind-merge";
+import { Layout } from "~/components/Layout";
 import type { RootLoaderData } from "~/root";
+import { commonHeaders } from "~/utils/misc.server";
 import {
   generateTitle,
   genericImagePath,
   getSocialMetas,
   getUrl,
 } from "~/utils/seo";
-import { commonHeaders } from "~/utils/misc.server";
-import { twMerge } from "tailwind-merge";
-import { Layout } from "~/components/Layout";
 
-export const meta: MetaFunction = ({ parentsData }) => {
-  const {
-    root: { requestInfo },
-  } = parentsData as {
-    root: RootLoaderData;
-  };
-
+export const meta: MetaFunction = ({ matches }) => {
+  const rootLoaderData = matches[0]?.data as RootLoaderData | undefined;
   return getSocialMetas({
     title: generateTitle("/build"),
-    url: getUrl(requestInfo),
-    image: genericImagePath(requestInfo.origin, "build"),
+    url: getUrl(rootLoaderData?.origin, rootLoaderData?.path),
+    image: genericImagePath(rootLoaderData?.origin, "build"),
   });
 };
 
@@ -78,7 +73,7 @@ const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
       <div
         className={twMerge(
           "flex whitespace-nowrap",
-          to === "left" ? "animate-marquee" : "animate-marquee-left"
+          to === "left" ? "animate-marquee" : "animate-marquee-left",
         )}
       >
         {arbitrumPartners
@@ -91,7 +86,7 @@ const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
       <div
         className={twMerge(
           "absolute top-0 flex whitespace-nowrap",
-          to === "left" ? "animate-marquee2" : "animate-marquee-left2"
+          to === "left" ? "animate-marquee2" : "animate-marquee-left2",
         )}
       >
         {arbitrumPartners.map((partner, i) => (
@@ -141,15 +136,15 @@ export default function Build() {
                 },
               }}
             />
-            <div className="relative z-10 bg-gradient-to-b from-[#0D142098] to-[#101827] [grid-area:overlay]"></div>
+            <div className="relative z-10 bg-gradient-to-b from-[#0D142098] to-[#101827] [grid-area:overlay]" />
             <motion.div
               style={style}
               className="relative z-20 bg-[linear-gradient(to_bottom,#0d142095_40%,#0d142096_50%,#0d142097_60%,#0d1420_100%)] [grid-area:overlay]"
-            ></motion.div>
+            />
             <div className="relative z-30 py-16 [grid-area:overlay] sm:py-24">
               <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-12">
                 <div className="text-center">
-                  <p className="pt-16 text-xl font-bold text-honey-200 sm:pt-24 sm:text-4xl">
+                  <p className="pt-16 font-bold text-honey-200 text-xl sm:pt-24 sm:text-4xl">
                     Build with Treasure
                   </p>
                   <div className="mt-4 text-night-300 sm:text-xl">
@@ -176,14 +171,14 @@ export default function Build() {
                         className="h-12"
                         alt="Game Partner Icon"
                       />
-                      <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
+                      <p className="mt-3 font-bold text-honey-200 text-lg sm:text-2xl">
                         Join Treasure's Builders Program
                       </p>
-                      <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
+                      <p className="mt-1.5 text-night-500 text-sm md:text-base md:leading-6 lg:text-md 2xl:text-lg">
                         Let’s partner to grow together over the long-term
                       </p>
                     </div>
-                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
+                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-[1] [&>path]:stroke-night-600" />
                   </a>
                   <a
                     href="https://github.com/TreasureProject"
@@ -197,14 +192,14 @@ export default function Build() {
                         className="h-12"
                         alt="Open Source Icon"
                       />
-                      <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
+                      <p className="mt-3 font-bold text-honey-200 text-lg sm:text-2xl">
                         Open Source
                       </p>
-                      <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
+                      <p className="mt-1.5 text-night-500 text-sm md:text-base md:leading-6 lg:text-md 2xl:text-lg">
                         Shared code to help you bring your ideas to life
                       </p>
                     </div>
-                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
+                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-[1] [&>path]:stroke-night-600" />
                   </a>
                   <a
                     href="https://go.treasure.lol/litepaper"
@@ -218,15 +213,15 @@ export default function Build() {
                         className="h-12"
                         alt="Documentation Icon"
                       />
-                      <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
+                      <p className="mt-3 font-bold text-honey-200 text-lg sm:text-2xl">
                         Litepaper
                       </p>
-                      <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
+                      <p className="mt-1.5 text-night-500 text-sm md:text-base md:leading-6 lg:text-md 2xl:text-lg">
                         Learn about our vision to unlock a new frontier for
                         developers
                       </p>
                     </div>
-                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
+                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-[1] [&>path]:stroke-night-600" />
                   </a>
                   <Link
                     to="https://portal.treasure.lol//"
@@ -237,14 +232,14 @@ export default function Build() {
                   >
                     <div className="flex flex-col items-start">
                       <img src={InfraIcon} className="h-12" alt="Chain Icon" />
-                      <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
+                      <p className="mt-3 font-bold text-honey-200 text-lg sm:text-2xl">
                         Treasure Chain
                       </p>
-                      <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
+                      <p className="mt-1.5 text-night-500 text-sm md:text-base md:leading-6 lg:text-md 2xl:text-lg">
                         Explore and build on the Treasure Chain L2
                       </p>
                     </div>
-                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
+                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-[1] [&>path]:stroke-night-600" />
                   </Link>
                   <Link
                     to="https://docs.treasure.lol/tdk/introduction"
@@ -255,27 +250,28 @@ export default function Build() {
                   >
                     <div className="flex flex-col items-start">
                       <img src={InteropIcon} className="h-12" alt="TDK Icon" />
-                      <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
+                      <p className="mt-3 font-bold text-honey-200 text-lg sm:text-2xl">
                         Treasure Development Kit
                       </p>
-                      <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
+                      <p className="mt-1.5 text-night-500 text-sm md:text-base md:leading-6 lg:text-md 2xl:text-lg">
                         Leverage the Treasure Development Kit (TDK) to bring
                         Treasure's platform features in-game
                       </p>
                     </div>
-                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
+                    <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-[1] [&>path]:stroke-night-600" />
                   </Link>
                   <div className="relative col-span-4 flex items-center rounded-br-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-4 lg:col-end-5">
                     <div className="flex flex-col items-start">
-                      <p className="text-lg font-bold text-honey-200 sm:text-2xl">
+                      <p className="font-bold text-honey-200 text-lg sm:text-2xl">
                         Learn more
                       </p>
-                      <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
+                      <p className="mt-1.5 text-night-500 text-sm md:text-base md:leading-6 lg:text-md 2xl:text-lg">
                         Discover how we supercharge games
                       </p>
                     </div>
-                    <ArrowDownIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
+                    <ArrowDownIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-[1] [&>path]:stroke-night-600" />
                     <button
+                      type="button"
                       className="absolute inset-0 h-full w-full"
                       onClick={() => {
                         // scroll to #information
@@ -308,26 +304,26 @@ export default function Build() {
                 </div>
                 <div className="flex items-center justify-center p-0 lg:col-span-4 lg:p-14">
                   <div>
-                    <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
+                    <h3 className="font-bold text-night-900 text-xl sm:text-3xl">
                       Join a vibrant and intimate ecosystem
                     </h3>
                     <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Tap into the most engaged community to bootstrap
                           adoption
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Build together with game developers working towards
                           common goals
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Never work in isolation and benefit from success of
                           the ecosystem
@@ -352,25 +348,25 @@ export default function Build() {
                 </div>
                 <div className="flex items-center justify-center p-0 lg:col-span-4 lg:p-14">
                   <div>
-                    <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
+                    <h3 className="font-bold text-night-900 text-xl sm:text-3xl">
                       Leverage immersive gaming experiences
                     </h3>
                     <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Form deeper connections with your community through
                           meta-progression and game player funnels
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Tap into powerful cross-game trading with Magicswap
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Enhance player retention and engagement through
                           cross-game resources and interoperability
@@ -395,26 +391,26 @@ export default function Build() {
                 </div>
                 <div className="flex items-center justify-center p-0 lg:col-span-4 lg:p-14">
                   <div>
-                    <h3 className="text-xl font-bold text-night-900 sm:text-3xl">
+                    <h3 className="font-bold text-night-900 text-xl sm:text-3xl">
                       Access powerful enablers and accelerants
                     </h3>
                     <ol className="mt-10 space-y-4 text-base text-night-800 sm:text-xl">
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Elevate your game with expert advisory and incentives
                           through the Game Builders Program
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Supercharge your go-to-market through extensive reach,
                           authentic content and deep audience understanding
                         </p>
                       </li>
                       <li className="flex items-center space-x-2.5">
-                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-white [&>path]:stroke-[1]" />
+                        <CheckCircleIcon className="h-6 w-6 flex-shrink-0 text-ruby-900 [&>path]:stroke-[1] [&>path]:stroke-white" />
                         <p className="text-base sm:text-xl">
                           Build faster with our toolkit and infrastructure for
                           game builders
@@ -457,44 +453,45 @@ export default function Build() {
                   opacity: 1,
                 },
               }}
-            ></motion.a>
-            <motion.div
-              initial={{
-                opacity: 0,
-              }}
-              variants={{
-                hover: {
-                  opacity: 1,
-                },
-              }}
-              className="absolute right-4 -bottom-4 h-9 w-1/2 bg-red-500 blur-xl"
-            ></motion.div>
-            <motion.div
-              initial={{
-                opacity: 0,
-              }}
-              variants={{
-                hover: {
-                  opacity: 1,
-                },
-              }}
-              className="absolute left-4 -bottom-4 h-9 w-1/2 bg-blue-500 blur-xl"
-            ></motion.div>
-            <img
-              src={LogomarkImg}
-              alt="Treasure Logomark"
-              className="pointer-events-none relative z-10 h-8"
-            />
-            <motion.span
-              variants={{
-                hover: {
-                  color: "#fff",
-                },
-              }}
-              className="pointer-events-none relative z-10 text-2xl font-bold text-night-900"
             >
-              #PoweredByTreasure
-            </motion.span>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                variants={{
+                  hover: {
+                    opacity: 1,
+                  },
+                }}
+                className="-bottom-4 absolute right-4 h-9 w-1/2 bg-red-500 blur-xl"
+              />
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                variants={{
+                  hover: {
+                    opacity: 1,
+                  },
+                }}
+                className="-bottom-4 absolute left-4 h-9 w-1/2 bg-blue-500 blur-xl"
+              />
+              <img
+                src={LogomarkImg}
+                alt="Treasure Logomark"
+                className="pointer-events-none relative z-10 h-8"
+              />
+              <motion.span
+                variants={{
+                  hover: {
+                    color: "#fff",
+                  },
+                }}
+                className="pointer-events-none relative z-10 font-bold text-2xl text-night-900"
+              >
+                #PoweredByTreasure
+              </motion.span>
+            </motion.a>
           </motion.div>
         </section>
         {/*
@@ -576,7 +573,7 @@ export default function Build() {
         >
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="flex flex-col-reverse items-center sm:flex-row sm:items-start sm:justify-between">
-              <p className="mt-12 text-center text-xl font-bold text-night-900 sm:mt-0 sm:text-left sm:text-3xl">
+              <p className="mt-12 text-center font-bold text-night-900 text-xl sm:mt-0 sm:text-left sm:text-3xl">
                 What our game partners are saying about us
               </p>
               <Badge className="flex-shrink-0" name="Partner Testimonials" />
@@ -584,7 +581,7 @@ export default function Build() {
             <div className="mt-16 grid grid-cols-1 items-center gap-10 xl:grid-cols-3">
               <ClientOnly>
                 {() =>
-                  builderTweets.map((tweet) => (
+                  tweets.map((tweet) => (
                     <Tweet {...tweet} key={tweet.username} />
                   ))
                 }
@@ -600,10 +597,10 @@ export default function Build() {
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
               <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
-                <p className="text-2xl font-bold text-honey-200 xl:text-4xl">
+                <p className="font-bold text-2xl text-honey-200 xl:text-4xl">
                   You’re in good company on Arbitrum
                 </p>
-                <p className="text-sm text-night-500 sm:text-base">
+                <p className="text-night-500 text-sm sm:text-base">
                   The Arbitrum ecosystem is vast and reaches beyond Treasure.
                   It’s home to other great dapps, protocols, social platforms
                   and has everything you need to build.
@@ -629,12 +626,12 @@ export default function Build() {
         >
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="grid auto-rows-[15rem] grid-cols-1 gap-10 sm:auto-rows-[20rem] lg:grid-cols-2">
-              <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
+              <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-center bg-cover bg-honey-50 bg-no-repeat p-10">
                 <div className="space-y-2.5">
-                  <p className="text-2xl font-bold text-honey-100 sm:text-4xl">
+                  <p className="font-bold text-2xl text-honey-100 sm:text-4xl">
                     Build with Treasure
                   </p>
-                  <p className="text-sm text-night-100 sm:text-lg">
+                  <p className="text-night-100 text-sm sm:text-lg">
                     Apply to join Treasure's Builders Program to supercharge
                     your project.
                   </p>

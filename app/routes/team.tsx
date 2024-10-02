@@ -1,34 +1,29 @@
+import TreasureTeamImg from "@/img/TreasureTeam.webp";
+import classNames from "clsx";
 import { Badge } from "~/components/Badge";
 import { CTAButton } from "~/components/Button";
 import { DiscordIcon, XIcon } from "~/components/Icons";
-import classNames from "clsx";
-import TreasureTeamImg from "@/img/TreasureTeam.webp";
 
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { Layout } from "~/components/Layout";
 import type { RootLoaderData } from "~/root";
+import { commonHeaders } from "~/utils/misc.server";
 import {
   generateTitle,
   genericImagePath,
   getSocialMetas,
   getUrl,
 } from "~/utils/seo";
-import { commonHeaders } from "~/utils/misc.server";
-import { Layout } from "~/components/Layout";
-import { useLoaderData } from "@remix-run/react";
 
 export const headers: HeadersFunction = commonHeaders;
 
-export const meta: MetaFunction = ({ parentsData }) => {
-  const {
-    root: { requestInfo },
-  } = parentsData as {
-    root: RootLoaderData;
-  };
-
+export const meta: MetaFunction = ({ matches }) => {
+  const rootLoaderData = matches[0]?.data as RootLoaderData | undefined;
   return getSocialMetas({
     title: generateTitle("/team"),
-    url: getUrl(requestInfo),
-    image: genericImagePath(requestInfo.origin, "team"),
+    url: getUrl(rootLoaderData?.origin, rootLoaderData?.path),
+    image: genericImagePath(rootLoaderData?.origin, "team"),
   });
 };
 
@@ -44,14 +39,14 @@ const TeamCard = ({ member }: { member: Member }) => {
       <div
         className={classNames(
           !hasSocials && "flex flex-col",
-          "mt-5 space-y-3 text-center md:mt-7"
+          "mt-5 space-y-3 text-center md:mt-7",
         )}
       >
-        <p className="text-lg font-bold text-night-900 md:text-xl lg:text-2xl">
+        <p className="font-bold text-lg text-night-900 md:text-xl lg:text-2xl">
           {member.name}
         </p>
         <div className="items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
-          <h3 className="font-mono text-xs font-medium text-ruby-900 md:text-base">
+          <h3 className="font-medium font-mono text-ruby-900 text-xs md:text-base">
             {member.title}
           </h3>
         </div>
@@ -107,7 +102,7 @@ function parseIssueContent(issueContent: string): GroupedMembers {
     // Handle new group
     if (trimmedLine.startsWith("## ")) {
       if (currentGroup && currentMember.name) {
-        groups[currentGroup].push(currentMember as Member);
+        groups[currentGroup]?.push(currentMember as Member);
       }
       currentGroup = trimmedLine.replace("## ", "");
       groups[currentGroup] = [];
@@ -116,25 +111,25 @@ function parseIssueContent(issueContent: string): GroupedMembers {
       // Handle new member
     } else if (trimmedLine.startsWith("### ")) {
       if (currentMember.name) {
-        groups[currentGroup].push(currentMember as Member);
+        groups[currentGroup]?.push(currentMember as Member);
       }
       currentMember = { name: trimmedLine.replace("### ", "") };
 
       // Handle member details
     } else if (trimmedLine.startsWith("- **Title**:")) {
-      currentMember.title = trimmedLine.split(": ")[1].trim();
+      currentMember.title = trimmedLine.split(": ")[1]?.trim();
     } else if (trimmedLine.startsWith("- **Image**:")) {
-      currentMember.image = trimmedLine.split(": ")[1].trim();
+      currentMember.image = trimmedLine.split(": ")[1]?.trim();
     } else if (trimmedLine.startsWith("- **Twitter**:")) {
-      currentMember.twitterLink = trimmedLine.split(": ")[1].trim();
+      currentMember.twitterLink = trimmedLine.split(": ")[1]?.trim();
     } else if (trimmedLine.startsWith("- **Discord**:")) {
-      currentMember.discordLink = trimmedLine.split(": ")[1].trim();
+      currentMember.discordLink = trimmedLine.split(": ")[1]?.trim();
     }
   }
 
   // Add the last member to the current group
   if (currentGroup && currentMember.name) {
-    groups[currentGroup].push(currentMember as Member);
+    groups[currentGroup]?.push(currentMember as Member);
   }
 
   return groups;
@@ -148,12 +143,11 @@ export const loader = async () => {
         Accept: "application/vnd.github.v3+json",
         Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
       },
-    }
+    },
   );
 
   const res = await response.json();
-
-  return { teamMembers: parseIssueContent(res.body) };
+  return { teamMembers: res.body ? parseIssueContent(res.body) : {} };
 };
 
 export default function Team() {
@@ -165,7 +159,7 @@ export default function Team() {
         <div className="relative bg-honey-200 pt-32 pb-16 sm:pt-48 sm:pb-24">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
             <Badge name="Team" bgColor="bg-honey-100" />
-            <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
+            <h2 className="mt-12 text-center font-bold text-3xl text-ruby-900 tracking-tight sm:text-5xl">
               Meet the people behind Treasure
             </h2>
           </div>
@@ -191,7 +185,7 @@ export default function Team() {
               key={team}
               className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
             >
-              <p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+              <p className="mb-4 text-left font-bold text-2xl text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
                 {team}
               </p>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
@@ -201,32 +195,15 @@ export default function Team() {
               </div>
             </div>
           ))}
-          {/* {teams.map((team) => (
-						<div
-							key={team}
-							className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
-						>
-							<p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-								{team}
-							</p>
-							<div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-								{teamMembers
-									.filter((member) => member.team === team)
-									.map((member) => (
-										<TeamCard key={member.name} member={member} />
-									))}
-							</div>
-						</div>
-					))} */}
         </div>
         <div className="relative bg-honey-200 py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
               <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-                <p className="text-lg font-bold text-ruby-900 sm:text-2xl xl:text-4xl">
+                <p className="font-bold text-lg text-ruby-900 sm:text-2xl xl:text-4xl">
                   Join the team
                 </p>
-                <p className="text-xs text-night-700 sm:text-base lg:text-lg xl:text-2xl">
+                <p className="text-night-700 text-xs sm:text-base lg:text-lg xl:text-2xl">
                   Want to contribute to Treasure and have a ton of fun while
                   doing it? We'd love to chat!
                 </p>

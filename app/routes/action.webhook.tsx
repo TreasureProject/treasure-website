@@ -1,6 +1,5 @@
-import type { ActionArgs } from "@remix-run/node";
+import type { ActionFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { badRequest } from "remix-utils";
 import { contenfulDeliverySdk } from "~/utils/client.server";
 
 const BASE_URL = "https://treasure.lol/blog";
@@ -167,7 +166,7 @@ const purgeCloudflare = async (urls: string[]) => {
           "X-Auth-Key": process.env.CLOUDFLARE_AUTH_KEY,
           "X-Auth-Email": process.env.CLOUDFLARE_AUTH_EMAIL,
         },
-      }
+      },
     );
   } catch (e) {
     console.error(JSON.stringify(e));
@@ -175,35 +174,28 @@ const purgeCloudflare = async (urls: string[]) => {
   }
 };
 
-export const action = async (args: ActionArgs) => {
-  const { request } = args;
-
+export const action: ActionFunction = async ({ request }) => {
   const webhookName = request.headers.get("x-contentful-webhook-name");
-
   if (webhookName !== process.env.CONTENFUL_WEBHOOK_NAME) {
-    throw badRequest("Invalid webhook name");
+    throw json("Invalid webhook name", 400);
   }
 
   if (request.method !== "POST") {
-    throw badRequest("Invalid method");
+    throw json("Invalid method", 405);
   }
 
   const payload = (await request.json()) as EntryEvent | DeleteEntryEvent;
-
   const previewClient = payload.sys.type === "DeletedEntry";
-
   const blog = await contenfulDeliverySdk(previewClient).findBlogById({
     id: payload.sys.id,
     preview: previewClient,
   });
 
   if (!blog.blogPost) {
-    throw badRequest("Blog not found");
+    throw json("Blog not found", 404);
   }
 
   const urls = [BASE_URL, `${BASE_URL}/${blog.blogPost.slug}`];
-
   await purgeCloudflare(urls);
-
   return json({ success: true });
 };

@@ -1,24 +1,24 @@
-import React, { useState } from "react";
 import * as RA from "@radix-ui/react-accordion";
-import { Logo } from "./new-landing/misc/Logo";
-import {
-  ChevronDownIcon,
-  ExternalIcon,
-  DiscordIcon,
-  TwitterIcon,
-  TwitchIcon,
-  YoutubeIcon,
-} from "./new-landing/misc/Icons";
-import { twMerge } from "tailwind-merge";
-import Button from "./new-landing/Button";
 import { Link } from "@remix-run/react";
-import { LINKS, SOCIAL } from "./new-landing/misc/const";
 import {
   AnimatePresence,
   motion,
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
+import React, { useState } from "react";
+import { twMerge } from "tailwind-merge";
+import Button from "./new-landing/Button";
+import {
+  ChevronDownIcon,
+  DiscordIcon,
+  ExternalIcon,
+  TwitchIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "./new-landing/misc/Icons";
+import { Logo } from "./new-landing/misc/Logo";
+import { LINKS, SOCIAL } from "./new-landing/misc/const";
 
 type Type = "internal" | "external";
 
@@ -142,7 +142,8 @@ const NewNavigation = () => {
     "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5  text-new-night-100 flex cursor-pointer items-center rounded-md transition-colors";
   const MOBILE_ITEM_CLASS =
     "hover:bg-new-night-100/10 h-10 w-full cursor-pointer rounded-lg px-4 text-start font-bold text-white transition-colors";
-  const GENERIC_HAMBURGER_LINE = `h-[3px] w-5 my-[2px] rounded-full bg-new-night-100 transition ease transform duration-300`;
+  const GENERIC_HAMBURGER_LINE =
+    "h-[3px] w-5 my-[2px] rounded-full bg-new-night-100 transition ease transform duration-300";
 
   const ScrollDelay = 200;
 
@@ -160,9 +161,9 @@ const NewNavigation = () => {
   return (
     <div
       className={twMerge(
-        "fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6",
+        "-translate-x-1/2 fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6",
         openHamburger && "bg-new-night-1200 lg:bg-transparent",
-        !visible && "pointer-events-none opacity-0"
+        !visible && "pointer-events-none opacity-0",
       )}
     >
       <div className="relative z-[900] flex h-16 w-full items-center justify-between rounded-2xl border border-white/5 bg-new-night-1200/25 px-6 backdrop-blur-lg md:px-4 lg:h-20">
@@ -171,36 +172,36 @@ const NewNavigation = () => {
             <Logo className="w-[148px] xl:w-[160px]" />
           </Link>
           <div className="hidden lg:flex">
-            {dropdownItems.map((item, index) => {
+            {dropdownItems.map((item) => {
               if (item.items) {
                 return (
                   <button
-                    className="group relative flex h-9 cursor-pointer items-center gap-2.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
+                    type="button"
+                    className="group relative flex h-9 cursor-pointer items-center gap-2.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors hover:bg-new-night-100/10 focus:outline-none"
                     key={item.label}
                   >
                     {item.label}
-                    <ChevronDownIcon className="w-3 transition-transform group-hover:-rotate-180" />
+                    <ChevronDownIcon className="group-hover:-rotate-180 w-3 transition-transform" />
                     <div className="absolute top-0 left-0 hidden pt-[72px] group-hover:block">
                       <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-2xl lg:backdrop-blur-lg">
-                        {item.items &&
-                          item.items.map((item, index) => (
-                            <Link
-                              to={item.target}
-                              target={
-                                item.type === "external" ? "_blank" : "_self"
-                              }
-                              className={twMerge(
-                                "flex h-11  cursor-pointer items-center gap-3 whitespace-nowrap rounded-md bg-transparent px-2.5 text-new-night-400 transition-colors focus:outline-none hover:bg-new-night-100/5 hover:text-new-night-100",
-                                item.type === "external" && "justify-between"
-                              )}
-                              key={index}
-                            >
-                              {item.label}
-                              {item.type === "external" && (
-                                <ExternalIcon className="w-4" />
-                              )}
-                            </Link>
-                          ))}
+                        {item.items?.map((item) => (
+                          <Link
+                            to={item.target}
+                            target={
+                              item.type === "external" ? "_blank" : "_self"
+                            }
+                            className={twMerge(
+                              "flex h-11 cursor-pointer items-center gap-3 whitespace-nowrap rounded-md bg-transparent px-2.5 text-new-night-400 transition-colors hover:bg-new-night-100/5 hover:text-new-night-100 focus:outline-none",
+                              item.type === "external" && "justify-between",
+                            )}
+                            key={item.label}
+                          >
+                            {item.label}
+                            {item.type === "external" && (
+                              <ExternalIcon className="w-4" />
+                            )}
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   </button>
@@ -210,8 +211,8 @@ const NewNavigation = () => {
                 <Link
                   to={item.target ? item.target : "/"}
                   target={item.type === "external" ? "_blank" : "_self"}
-                  key={index}
-                  className="flex h-9 items-center gap-1.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors focus:outline-none hover:bg-new-night-100/10"
+                  key={item.label}
+                  className="flex h-9 items-center gap-1.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors hover:bg-new-night-100/10 focus:outline-none"
                 >
                   {item.label}
                   {item.type === "external" && <ExternalIcon className="w-4" />}
@@ -260,21 +261,22 @@ const NewNavigation = () => {
           </Button>
         </div>
         <button
+          type="button"
           className="group flex h-11 w-11 cursor-pointer flex-col items-center justify-center rounded-lg bg-new-night-1200/20 lg:hidden"
           onClick={() => setOpenHamburger(!openHamburger)}
         >
           <div
-            className={`${GENERIC_HAMBURGER_LINE} ${
+            className={`${GENERIC_HAMBURGER_LINE}${
               openHamburger && "translate-y-[7px] rotate-45"
             }`}
           />
           <div
-            className={`${GENERIC_HAMBURGER_LINE} ${
+            className={`${GENERIC_HAMBURGER_LINE}${
               openHamburger && "opacity-0"
             }`}
           />
           <div
-            className={`${GENERIC_HAMBURGER_LINE} ${
+            className={`${GENERIC_HAMBURGER_LINE}${
               openHamburger && "-translate-y-[7px] -rotate-45"
             }`}
           />
@@ -295,12 +297,12 @@ const NewNavigation = () => {
           >
             <div className=" flex-1 space-y-6 overflow-hidden px-3 pb-3 sm:px-8">
               <div className="scrollbar-hide max-h-full w-full overflow-scroll">
-                {dropdownItems.map((item, index) => (
+                {dropdownItems.map((item) => (
                   <>
                     {item.items ? (
                       <RA.Root
                         type="single"
-                        key={index}
+                        key={item.label}
                         defaultValue="item-1"
                         collapsible
                       >
@@ -308,20 +310,20 @@ const NewNavigation = () => {
                           <RA.Header className={MOBILE_ITEM_CLASS}>
                             <RA.Trigger className="group flex h-full w-full items-center justify-between">
                               {item.label}
-                              <ChevronDownIcon className="w-4 text-new-night-400 transition-transform group-data-[state=open]:-rotate-180" />
+                              <ChevronDownIcon className="group-data-[state=open]:-rotate-180 w-4 text-new-night-400 transition-transform" />
                             </RA.Trigger>
                           </RA.Header>
-                          <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
-                            {item.items.map((item, index) => (
+                          <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
+                            {item.items.map((item) => (
                               <Link
                                 to={item.target}
                                 target={
                                   item.type === "external" ? "_blank" : "_self"
                                 }
-                                key={index}
+                                key={item.label}
                                 className={twMerge(
                                   MOBILE_ITEM_CLASS,
-                                  "flex items-center gap-2 font-medium text-new-night-100/80"
+                                  "flex items-center gap-2 font-medium text-new-night-100/80",
                                 )}
                               >
                                 {item.label}
@@ -334,7 +336,11 @@ const NewNavigation = () => {
                         </RA.Item>
                       </RA.Root>
                     ) : (
-                      <button className={MOBILE_ITEM_CLASS} key={index}>
+                      <button
+                        type="button"
+                        className={MOBILE_ITEM_CLASS}
+                        key={item.label}
+                      >
                         {item.label}
                       </button>
                     )}
@@ -342,7 +348,7 @@ const NewNavigation = () => {
                 ))}
               </div>
             </div>
-            <div className="space-y-2 border-t border-white/5 p-6 pb-0 sm:p-8">
+            <div className="space-y-2 border-white/5 border-t p-6 pb-0 sm:p-8">
               <Button as="a" color="ruby" href={LINKS.APP}>
                 Start Playing{" "}
               </Button>
