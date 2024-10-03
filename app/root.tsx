@@ -33,13 +33,6 @@ import { i18nCookie } from "./utils/cookie";
 import { i18n } from "./utils/i18n.server";
 import { getDomainUrl } from "./utils/misc.server";
 import { genericImagePath, getSocialMetas, getUrl } from "./utils/seo";
-import {
-  ThemeBody,
-  ThemeHead,
-  ThemeProvider,
-  useTheme,
-} from "./utils/theme-provider";
-import { getThemeSession } from "./utils/theme.server";
 
 export const links: LinksFunction = () => [
   {
@@ -119,12 +112,10 @@ function useChangeLanguage(locale: string) {
 }
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
-  const themeSession = await getThemeSession(request);
   const locale = await i18n.getLocale(request);
   return json(
     {
       locale,
-      theme: themeSession.getTheme(),
       origin: getDomainUrl(request),
       path: new URL(request.url).pathname,
     },
@@ -142,14 +133,10 @@ export const handle = {
   i18n: ["index"],
 };
 
-function App() {
+export default function App() {
   const data = useLoaderData<RootLoaderData>();
-
   const { i18n } = useTranslation();
-  const [theme] = useTheme();
-
   const transition = useNavigation();
-
   const fetchers = useFetchers();
 
   const state = React.useMemo<"idle" | "loading">(
@@ -175,11 +162,7 @@ function App() {
   }, [state]);
 
   return (
-    <html
-      lang={data.locale}
-      dir={i18n.dir()}
-      className={`h-full ${theme ?? ""}`}
-    >
+    <html lang={data.locale} dir={i18n.dir()} className="h-full">
       <head>
         <meta name="robots" content="index, follow" />
         <meta charSet="utf-8" />
@@ -189,7 +172,6 @@ function App() {
         <Meta />
         <Links />
         <link rel="canonical" href="https://treasure.lol/" />
-        <ThemeHead ssrTheme={Boolean(data.theme)} />
         {process.env.NODE_ENV === "production" ? (
           <script
             dangerouslySetInnerHTML={{
@@ -220,7 +202,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <AppContextProvider>
           <Outlet />
         </AppContextProvider>
-        <ThemeBody ssrTheme={Boolean(data.theme)} />
         <Scripts />
         <ScrollRestoration />
       </body>
@@ -255,14 +236,4 @@ export function CatchBoundary() {
   }
 
   throw new Error(`Unhandled error: ${error}`);
-}
-
-export default function AppWithProviders() {
-  const data = useLoaderData<typeof loader>();
-
-  return (
-    <ThemeProvider specifiedTheme={data.theme}>
-      <App />
-    </ThemeProvider>
-  );
 }
