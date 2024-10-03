@@ -10,7 +10,7 @@
     "lint": "biome lint .",
     "fix": "biome check --write --unsafe .",
     "knip": "knip",
-    "typecheck": "tsc -b",
+    "typecheck": "tsc",
     "start": "remix-serve build",
     "prepare": "husky"
   },
