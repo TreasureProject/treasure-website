@@ -27,7 +27,7 @@ import "./styles/tailwind.css";
 
 import NProgress from "nprogress";
 import { useTranslation } from "react-i18next";
-import { NewLayout } from "./components/new-landing/NewLayout";
+import { Layout } from "./components/Layout";
 import { AppContextProvider } from "./context/App";
 import { i18nCookie } from "./utils/cookie";
 import { i18n } from "./utils/i18n.server";
@@ -221,13 +221,13 @@ export function CatchBoundary() {
         </head>
         <body className="bg-honey-25 antialiased" id="top">
           <AppContextProvider>
-            <NewLayout>
+            <Layout>
               <div className="flex h-full flex-col items-center justify-center pt-48 pb-24">
                 <p className="font-bold text-3xl text-honey-900 leading-[105%] sm:text-6xl">
                   {error.data.message ?? "Page not found"}
                 </p>
               </div>
-            </NewLayout>
+            </Layout>
           </AppContextProvider>
           <Scripts />
         </body>

@@ -36,7 +36,7 @@ const Stat = ({
   </div>
 );
 
-export const NewTreasureStats = ({
+export const TreasureStats = ({
   type = "primary",
 }: {
   type?: "primary" | "secondary";

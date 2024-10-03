@@ -6,8 +6,9 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
+
 import Button from "./new-landing/Button";
 import {
   ChevronDownIcon,
@@ -133,7 +134,7 @@ const dropdownItems: DropDownItems[] = [
   },
 ];
 
-const NewNavigation = () => {
+export const Navigation = () => {
   const [visible, setVisible] = useState(true);
   const [openHamburger, setOpenHamburger] = useState(false);
   const [latestScroll, setLatestScroll] = useState(0);
@@ -377,5 +378,3 @@ const NewNavigation = () => {
     </div>
   );
 };
-
-export default NewNavigation;

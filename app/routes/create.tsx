@@ -1,4 +1,4 @@
-import { NewLayout as Layout } from "~/components/new-landing/NewLayout";
+import { Layout } from "~/components/Layout";
 
 import tc_intro_video from "@/img/TC_INTRO.mp4";
 // Assets

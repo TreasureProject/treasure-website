@@ -1,4 +1,4 @@
-export const NewCard = ({
+export const Card = ({
   title,
   description,
   children,

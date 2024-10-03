@@ -2,7 +2,7 @@ import type { ActionFunction, HeadersFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { ValiError, email, object, parse, string } from "valibot";
 
-import { NewLayout } from "~/components/new-landing/NewLayout";
+import { Layout } from "~/components/Layout";
 import Bridgeworld from "~/components/new-landing/sections/Bridgeworld";
 import BuildOnTreasure from "~/components/new-landing/sections/BuildOnTreasure";
 import Ctas from "~/components/new-landing/sections/Ctas";
@@ -54,17 +54,15 @@ export const action: ActionFunction = async ({ request }) => {
 
 export default function Home() {
   return (
-    <NewLayout>
-      <main className="bg-new-night-1300">
-        <Hero />
-        <Intro />
-        <Partners />
-        <Games />
-        <Platform />
-        <BuildOnTreasure />
-        <Bridgeworld />
-        <Ctas />
-      </main>
-    </NewLayout>
+    <Layout>
+      <Hero />
+      <Intro />
+      <Partners />
+      <Games />
+      <Platform />
+      <BuildOnTreasure />
+      <Bridgeworld />
+      <Ctas />
+    </Layout>
   );
 }

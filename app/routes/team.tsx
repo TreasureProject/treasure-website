@@ -155,75 +155,73 @@ export default function Team() {
 
   return (
     <Layout>
-      <main>
-        <div className="relative bg-honey-200 pt-32 pb-16 sm:pt-48 sm:pb-24">
-          <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
-            <Badge name="Team" bgColor="bg-honey-100" />
-            <h2 className="mt-12 text-center font-bold text-3xl text-ruby-900 tracking-tight sm:text-5xl">
-              Meet the people behind Treasure
-            </h2>
-          </div>
-          <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
-            <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-14 text-base text-night-700 sm:text-xl">
-              <p>
-                We are a collective of seasoned builders growing the expansive
-                platform and decentralized game console that is Treasure.
-              </p>
+      <div className="relative bg-honey-200 pt-32 pb-16 sm:pt-48 sm:pb-24">
+        <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
+          <Badge name="Team" bgColor="bg-honey-100" />
+          <h2 className="mt-12 text-center font-bold text-3xl text-ruby-900 tracking-tight sm:text-5xl">
+            Meet the people behind Treasure
+          </h2>
+        </div>
+        <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
+          <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-14 text-base text-night-700 sm:text-xl">
+            <p>
+              We are a collective of seasoned builders growing the expansive
+              platform and decentralized game console that is Treasure.
+            </p>
 
-              <p>
-                Treasure comprises a globally distributed team of developers,
-                product managers, artists, brand builders, marketers,
-                economists, and gamers. All supported by a intimate and vibrant
-                network of DAO contributors and passionate community members.
+            <p>
+              Treasure comprises a globally distributed team of developers,
+              product managers, artists, brand builders, marketers, economists,
+              and gamers. All supported by a intimate and vibrant network of DAO
+              contributors and passionate community members.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
+        {Object.entries(teamMembers).map(([team, members]) => (
+          <div
+            key={team}
+            className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
+          >
+            <p className="mb-4 text-left font-bold text-2xl text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+              {team}
+            </p>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
+              {members.map((member) => (
+                <TeamCard key={member.name} member={member} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="relative bg-honey-200 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
+            <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
+              <p className="font-bold text-lg text-ruby-900 sm:text-2xl xl:text-4xl">
+                Join the team
               </p>
+              <p className="text-night-700 text-xs sm:text-base lg:text-lg xl:text-2xl">
+                Want to contribute to Treasure and have a ton of fun while doing
+                it? We'd love to chat!
+              </p>
+              <div>
+                <CTAButton as="a" href="https://jobs.treasure.lol">
+                  See open roles
+                </CTAButton>
+              </div>
+            </div>
+            <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-2">
+              <img
+                className="h-full w-full object-contain"
+                src={TreasureTeamImg}
+                alt="Treasure Team"
+              />
             </div>
           </div>
         </div>
-        <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
-          {Object.entries(teamMembers).map(([team, members]) => (
-            <div
-              key={team}
-              className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
-            >
-              <p className="mb-4 text-left font-bold text-2xl text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-                {team}
-              </p>
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-                {members.map((member) => (
-                  <TeamCard key={member.name} member={member} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="relative bg-honey-200 py-16 sm:py-24">
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
-              <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-                <p className="font-bold text-lg text-ruby-900 sm:text-2xl xl:text-4xl">
-                  Join the team
-                </p>
-                <p className="text-night-700 text-xs sm:text-base lg:text-lg xl:text-2xl">
-                  Want to contribute to Treasure and have a ton of fun while
-                  doing it? We'd love to chat!
-                </p>
-                <div>
-                  <CTAButton as="a" href="https://jobs.treasure.lol">
-                    See open roles
-                  </CTAButton>
-                </div>
-              </div>
-              <div className="-order-1 col-span-3 overflow-hidden rounded-xl md:order-2">
-                <img
-                  className="h-full w-full object-contain"
-                  src={TreasureTeamImg}
-                  alt="Treasure Team"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+      </div>
     </Layout>
   );
 }
