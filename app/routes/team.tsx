@@ -42,11 +42,11 @@ const TeamCard = ({ member }: { member: Member }) => {
           "mt-5 space-y-3 text-center md:mt-7",
         )}
       >
-        <p className="font-bold text-lg text-night-900 md:text-xl lg:text-2xl">
+        <p className="font-bold text-lg text-silver md:text-xl lg:text-2xl">
           {member.name}
         </p>
         <div className="items-center justify-center rounded-1.5xl bg-honey-100 px-4 py-2.5">
-          <h3 className="font-medium font-mono text-ruby-900 text-xs md:text-base">
+          <h3 className="font-medium font-mono text-ruby text-xs md:text-base">
             {member.title}
           </h3>
         </div>
@@ -158,12 +158,12 @@ export default function Team() {
       <div className="relative bg-honey-200 pt-32 pb-16 sm:pt-48 sm:pb-24">
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
           <Badge name="Team" bgColor="bg-honey-100" />
-          <h2 className="mt-12 text-center font-bold text-3xl text-ruby-900 tracking-tight sm:text-5xl">
+          <h2 className="mt-12 text-center font-bold text-3xl text-ruby tracking-tight sm:text-5xl">
             Meet the people behind Treasure
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-sm px-4 text-center sm:max-w-5xl sm:px-8 lg:px-20">
-          <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-14 text-base text-night-700 sm:text-xl">
+          <div className="space-y-4 rounded-2.5xl border-2 border-honey-300 bg-honey-50 p-14 text-base text-silver-800 sm:text-xl">
             <p>
               We are a collective of seasoned builders growing the expansive
               platform and decentralized game console that is Treasure.
@@ -184,7 +184,7 @@ export default function Team() {
             key={team}
             className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
           >
-            <p className="mb-4 text-left font-bold text-2xl text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
+            <p className="mb-4 text-left font-bold text-2xl text-silver sm:mt-0 sm:text-4xl md:mb-8">
               {team}
             </p>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
@@ -199,10 +199,10 @@ export default function Team() {
         <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
           <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-7 sm:p-10 xl:auto-rows-[28rem]">
             <div className="order-1 col-span-4 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-28">
-              <p className="font-bold text-lg text-ruby-900 sm:text-2xl xl:text-4xl">
+              <p className="font-bold text-lg text-ruby sm:text-2xl xl:text-4xl">
                 Join the team
               </p>
-              <p className="text-night-700 text-xs sm:text-base lg:text-lg xl:text-2xl">
+              <p className="text-silver-800 text-xs sm:text-base lg:text-lg xl:text-2xl">
                 Want to contribute to Treasure and have a ton of fun while doing
                 it? We'd love to chat!
               </p>

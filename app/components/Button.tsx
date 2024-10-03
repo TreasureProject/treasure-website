@@ -31,8 +31,8 @@ type ButtonProps = ButtonAsExternal | ButtonAsLink | ButtonAsButton;
 
 export const CTAButton = (props: ButtonProps) => {
   const style = twMerge(
-    "inline-flex max-w-max cursor-pointer group items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base",
-    props.type === "primary" && "bg-ruby-900 text-white hover:bg-ruby-1000",
+    "inline-flex max-w-max cursor-pointer group items-center rounded-lg border-2 border-ruby bg-honey-100 px-5 py-2 text-xs font-bold text-ruby shadow-sm transition-colors duration-500 hover:bg-ruby hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base",
+    props.type === "primary" && "bg-ruby text-white hover:bg-ruby-1000",
     props.className,
   );
 
@@ -53,7 +53,7 @@ export const CTAButton = (props: ButtonProps) => {
         {!hideExternalIcon && (
           <ArrowTopRightOnSquareIcon
             className={twMerge(
-              "ml-1.5 h-4 w-4 transition-colors [&>path]:stroke-[1] [&>path]:stroke-ruby-900 group-hover:[&>path]:stroke-white",
+              "ml-1.5 h-4 w-4 transition-colors [&>path]:stroke-[1] [&>path]:stroke-ruby group-hover:[&>path]:stroke-white",
               props.type === "primary" && "[&>path]:stroke-white",
             )}
             aria-hidden="true"

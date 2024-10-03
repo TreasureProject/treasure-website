@@ -106,10 +106,10 @@ const Bridgeworld = () => {
         <div className="xl:-translate-y-1/2 top-1/2 right-0 z-10 space-y-20 pr-20 xl:absolute xl:max-w-lg xl:pb-48">
           <div className="absolute top-0 left-0 z-10 max-w-[560px] space-y-7 xl:relative">
             <div>
-              <h1 className="font-bold text-lg text-new-night-100 leading-[105%] md:text-2xl">
+              <h1 className="font-bold text-cream text-lg leading-[105%] md:text-2xl">
                 Welcome to
               </h1>
-              <h1 className="font-bold text-3xl text-new-night-100 leading-[105%] md:text-5xl">
+              <h1 className="font-bold text-3xl text-cream leading-[105%] md:text-5xl">
                 Bridgeworld
               </h1>
             </div>
@@ -129,7 +129,7 @@ const Bridgeworld = () => {
           <div className="p absolute bottom-0 left-0 z-10 w-full max-w-[560px] space-y-6 xl:relative">
             <div className="flex items-center gap-7">
               <img src={MAGIC_IMAGE} alt="Magic" className="w-24 md:w-40" />
-              <div className="border-new-night-100 border-l pl-7">
+              <div className="border-night-100 border-l pl-7">
                 <p className="leading-[150%]">Powered By</p>
                 <MagicLogo className="w-44" />
               </div>

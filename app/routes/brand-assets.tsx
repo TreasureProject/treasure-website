@@ -66,7 +66,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1GJYgZa0x01XnP81N7ISQ-mpu9RM5bIsf",
         size: "635KB",
         image: treasureLogoDarkImg,
-        bg: "bg-honey-25",
+        bg: "bg-honey-200",
         alt: "Dark treasure logo on light background",
       },
       {
@@ -74,7 +74,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1CsXHsAtYHN7EG4p7wOj-lCCaPWQNj6-H",
         size: "635KB",
         image: treasureLogoLightImg,
-        bg: "bg-night-900",
+        bg: "bg-night-1000",
         alt: "Light treasure logo on dark background",
       },
       {
@@ -82,7 +82,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1gWsQxT9i3T0iXbZ_9Iq_7qCwDlG1rWj1",
         size: "610KB",
         image: treasureLogoKnockoutImg,
-        bg: "bg-night-900",
+        bg: "bg-night-1000",
         alt: "Knockout treasure logo on dark background",
       },
     ],
@@ -92,7 +92,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1Y3wetCCwToqgYbTbcCUNDPX046bdg_4C",
         size: "583KB",
         image: treasureLogomarkImg,
-        bg: "bg-honey-25",
+        bg: "bg-honey-200",
         alt: "Treasure logomark on light background",
       },
       {
@@ -100,7 +100,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1GApvcAcNRwvXohwA4UY8mFl_v33B7gU6",
         size: "551KB",
         image: treasureLogomarkKnockoutImg,
-        bg: "bg-night-900",
+        bg: "bg-night-1000",
         alt: "Treasure logomark on dark background",
       },
     ],
@@ -113,7 +113,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1JSl-DJG4glrXqnaNU2F57f4I0OfqNaoN",
         size: "616KB",
         image: magicLogoDarkImg,
-        bg: "bg-honey-25",
+        bg: "bg-honey-200",
         alt: "Dark MAGIC logo on light background",
       },
       {
@@ -121,7 +121,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1H6WC0Cb8zyvOYpMvAYKMbW_xU9lZ9yRy",
         size: "594KB",
         image: magicLogoLightImg,
-        bg: "bg-night-900",
+        bg: "bg-night-1000",
         alt: "Light MAGIC logo on dark background",
       },
     ],
@@ -131,7 +131,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1X0_URqRcw5wZAK7VYy5Ps9SKh_zgCTa4",
         size: "573KB",
         image: magicLogomarkLightImg,
-        bg: "bg-honey-25",
+        bg: "bg-honey-200",
         alt: "Red MAGIC logomark on light background",
       },
       {
@@ -139,7 +139,7 @@ const Assets = {
           "https://drive.google.com/uc?export=download&id=1cP2zeRmIOnFzG-Ch8IrQeW0LgwPGPKK1",
         size: "545KB",
         image: magicLogomarkDarkImg,
-        bg: "bg-night-900",
+        bg: "bg-night-1000",
         alt: "White MAGIC logomark on dark background",
       },
     ],
@@ -165,14 +165,14 @@ export default function Resources() {
 
   return (
     <Layout>
-      <div className="relative bg-night-900 py-8 pt-32 sm:py-16 sm:pt-48">
+      <div className="relative bg-night-1000 py-8 pt-32 sm:py-16 sm:pt-48">
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
-          <h2 className="mt-12 font-bold text-3xl text-honey-200 tracking-tight sm:text-5xl">
+          <h2 className="mt-12 font-bold text-3xl text-cream tracking-tight sm:text-5xl">
             Treasure Brand Assets
           </h2>
         </div>
       </div>
-      <div className="relative bg-honey-50 py-8 sm:py-24">
+      <div className="relative bg-honey-100 py-8 sm:py-24">
         <div className="mx-auto max-w-md px-4 sm:max-w-9xl sm:px-20">
           <div className="grid py-12 xl:grid-cols-8 xl:gap-24">
             <aside className="col-span-2 hidden w-max xl:block">
@@ -180,7 +180,7 @@ export default function Resources() {
                 <Badge
                   name="Content"
                   bgColor="bg-honey-200"
-                  textColor="text-ruby-900"
+                  textColor="text-ruby"
                   size="sm"
                   className="rounded-[10px]"
                 />
@@ -191,8 +191,8 @@ export default function Resources() {
                         key={item.name}
                         className={classNames(
                           currentHash === item.hash
-                            ? "border-ruby-900 font-bold text-ruby-900"
-                            : "border-transparent text-night-700",
+                            ? "border-ruby font-bold text-ruby"
+                            : "border-transparent text-silver-800",
                           "-ml-[2px] border-l-2 py-1 pl-4 hover:border-ruby-700 hover:text-ruby-800",
                         )}
                       >
@@ -235,19 +235,19 @@ export default function Resources() {
                               {i === 0 ? (
                                 <Link
                                   to={`/brand-assets#${asset.toLowerCase()}`}
-                                  className="group inline-flex items-center font-bold text-night-900 text-xl sm:text-3xl"
+                                  className="group inline-flex items-center font-bold text-black text-xl sm:text-3xl"
                                 >
                                   <span>
                                     {asset} {type}
                                   </span>
-                                  <HashtagIcon className="ml-2 inline-block h-7 w-7 text-night-900/50 opacity-0 group-hover:opacity-100" />
+                                  <HashtagIcon className="ml-2 inline-block h-7 w-7 text-black/50 opacity-0 group-hover:opacity-100" />
                                 </Link>
                               ) : (
-                                <h3 className="group font-bold text-night-900 text-xl sm:text-3xl">
+                                <h3 className="group font-bold text-black text-xl sm:text-3xl">
                                   {asset} {type}
                                 </h3>
                               )}
-                              <p className="mt-5 text-base text-night-600 sm:text-xl">
+                              <p className="mt-5 text-base text-night-800 sm:text-xl">
                                 {type !== "Spacing"
                                   ? `Please do not edit, change, distort, recolor, or reconfigure the ${asset} logo.`
                                   : `When using the ${asset} logo, make sure to leave a healthy space around to maintain integrity and limit any obstructions that might end up distorting the readbility and confuse the user.`}
@@ -274,7 +274,7 @@ export default function Resources() {
                                       <div className="mt-5 flex justify-between">
                                         <a
                                           href={image.downloadLink}
-                                          className="flex items-center text-ruby-900"
+                                          className="flex items-center text-ruby"
                                           download
                                         >
                                           <span className="font-bold">
@@ -285,7 +285,7 @@ export default function Resources() {
                                         <Badge
                                           name={image.size}
                                           bgColor="bg-honey-200"
-                                          textColor="text-ruby-900"
+                                          textColor="text-ruby"
                                           size="sm"
                                           className="rounded-[10px]"
                                         />
@@ -311,9 +311,7 @@ export default function Resources() {
                 )}
                 <div className="[&>*]:mt-20 [&>*]:sm:mt-28">
                   <div id="colors" className="scroll-mt-28">
-                    <h3 className="font-bold text-3xl text-night-900">
-                      Colors
-                    </h3>
+                    <h3 className="font-bold text-3xl text-black">Colors</h3>
 
                     <div className="mt-12">
                       <ColorPalette />
@@ -325,16 +323,16 @@ export default function Resources() {
                 {/*
                   <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-9 sm:p-10 xl:auto-rows-[23rem]">
                     <div className="order-1 col-span-6 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8">
-                      <p className="text-lg font-bold text-ruby-900 xl:text-4xl">
+                      <p className="text-lg font-bold text-ruby xl:text-4xl">
                         Brand Guidelines
                       </p>
-                      <p className="text-xs text-night-700 xl:text-2xl">
+                      <p className="text-xs text-silver-800 xl:text-2xl">
                         Building products related to our brand? Check out our
                         brand guidelines.
                       </p>
                       <div>
                         <a
-                          className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 text-xs font-bold text-ruby-900 shadow-sm transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 hover:bg-ruby-900 hover:text-white sm:text-base"
+                          className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby bg-honey-100 px-5 py-2 text-xs font-bold text-ruby shadow-sm transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 hover:bg-ruby hover:text-white sm:text-base"
                           href="https://drive.google.com/uc?export=download&id=18j-7mAXpcVgZZBCxQnwAuHvbqbUZir1N"
                           download
                         >
@@ -357,16 +355,16 @@ export default function Resources() {
                   */}
                 <div className="grid auto-rows-[12rem] grid-cols-1 rounded-2.5xl border-2 border-honey-300 bg-honey-100 p-6 sm:grid-cols-9 sm:p-10 xl:auto-rows-[23rem]">
                   <div className="order-1 col-span-6 flex flex-col justify-center space-y-4 px-4 sm:space-y-6 sm:px-14 xl:space-y-8">
-                    <p className="font-bold text-lg text-ruby-900 xl:text-4xl">
+                    <p className="font-bold text-lg text-ruby xl:text-4xl">
                       Media Kit
                     </p>
-                    <p className="text-night-700 text-xs xl:text-2xl">
+                    <p className="text-silver-800 text-xs xl:text-2xl">
                       Download our media kit and receive all logo variations for
                       Treasure and MAGIC.
                     </p>
                     <div>
                       <a
-                        className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby-900 bg-honey-100 px-5 py-2 font-bold text-ruby-900 text-xs shadow-sm transition-colors duration-500 hover:bg-ruby-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
+                        className="inline-flex cursor-pointer items-center rounded-lg border-2 border-ruby bg-honey-100 px-5 py-2 font-bold text-ruby text-xs shadow-sm transition-colors duration-500 hover:bg-ruby hover:text-white focus:outline-none focus:ring-2 focus:ring-ruby-500 focus:ring-offset-2 sm:text-base"
                         href="https://drive.google.com/uc?export=download&id=1HMkqE2QPzUUnJD8-3WV8cOZo8LmnXfO5"
                         download
                       >

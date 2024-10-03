@@ -14,12 +14,12 @@ import { LINKS } from "../misc/const";
 const Platform = () => {
   return (
     <div
-      className="relative overflow-hidden border-new-ruby-900 border-b py-12 sm:py-20"
+      className="relative overflow-hidden border-ruby border-b py-12 sm:py-20"
       style={{
         background: "linear-gradient(149deg, #0D1420 49.11%, #DC2626 165.09%)",
       }}
     >
-      <div className="absolute top-0 left-0 h-24 w-full bg-gradient-to-t from-transparent to-new-night-1300" />
+      <div className="absolute top-0 left-0 h-24 w-full bg-gradient-to-t from-transparent to-night-900" />
       <PlatformGrid className="-translate-x-1/2 absolute bottom-0 left-1/2 h-[960px]" />
       <div className="container relative z-10 grid grid-cols-1 gap-10 sm:gap-16 xl:grid-cols-3 xl:flex-row xl:items-center xl:gap-40 ">
         <div className="flex flex-col items-center space-y-7 text-center xl:items-start xl:text-left">
@@ -31,7 +31,7 @@ const Platform = () => {
           <h1 className="font-black text-3xl leading-[105%] sm:text-5xl">
             Discover <br className="hidden xl:block" /> the magic
           </h1>
-          <p className="inline-block max-w-md text-night-400 leading-[150%]">
+          <p className="inline-block max-w-md text-silver-300 leading-[150%]">
             Play, collect rewards, and discover our ecosystem on the App – our
             destination for games. <em>Desktop launcher coming soon!</em>
           </p>
@@ -77,7 +77,7 @@ const Platform = () => {
             Gotta collect
             <br className="hidden xl:block" /> 'em all
           </h1>
-          <p className="inline-block max-w-md text-night-400 leading-[150%]">
+          <p className="inline-block max-w-md text-silver-300 leading-[150%]">
             Discover the ultimate marketplace to collect, trade, and sell NFTs
             and in-game items.
           </p>
@@ -105,7 +105,7 @@ const Platform = () => {
           <h1 className="font-black text-3xl leading-[105%] sm:text-5xl">
             AMM for Games <br className="hidden xl:block" /> and Culture
           </h1>
-          <p className="inline-block max-w-md text-night-400 leading-[150%]">
+          <p className="inline-block max-w-md text-silver-300 leading-[150%]">
             Permissionless AMM with universal token compatibility powering
             in-game exchanges (GEX) and more
           </p>

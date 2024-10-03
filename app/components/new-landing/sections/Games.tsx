@@ -184,8 +184,8 @@ const Games = () => {
                   target="_blank"
                   rel="noreferrer"
                   className={twMerge(
-                    "overflow-hidden rounded-2xl border-2 border-new-night-700",
-                    activeGame === i && "border-new-night-500",
+                    "overflow-hidden rounded-2xl border-2 border-silver-800",
+                    activeGame === i && "border-silver-400",
                   )}
                 >
                   <img
@@ -199,7 +199,7 @@ const Games = () => {
           })}
         </Swiper>
       </div>
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-new-night-1300 to-transaprent" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-night-900 to-transaprent" />
       <GamesGrid className="absolute inset-0 z-[5] min-h-[600px] opacity-25" />
       {/* View All Games link */}
       <Link

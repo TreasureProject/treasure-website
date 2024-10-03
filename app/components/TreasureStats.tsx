@@ -26,8 +26,8 @@ const Stat = ({
       </p>
       <p
         className={twMerge(
-          "break-word text-night-600 text-sm lg:text-base lg:leading-5",
-          isSecondary && "text-night-400",
+          "break-word text-silver-600 text-sm lg:text-base lg:leading-5",
+          isSecondary && "text-silver-300",
         )}
       >
         {data.title}
@@ -46,13 +46,13 @@ export const TreasureStats = ({
     <div
       className={twMerge(
         "group relative bg-honey-50 py-8",
-        isSecondary && "bg-night-900",
+        isSecondary && "bg-silver",
       )}
     >
       <div
         className={twMerge(
           "absolute inset-0 z-10 bg-honey-50 [-webkit-mask-image:linear-gradient(to_right,#000_0%,#0000_30%,#0000_70%,#000_100%)]",
-          isSecondary && "bg-night-900",
+          isSecondary && "bg-silver",
         )}
       />
       <div className="relative flex overflow-x-hidden">

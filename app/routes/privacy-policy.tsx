@@ -23,7 +23,7 @@ export const meta: MetaFunction = ({ matches }) => {
 export default function Resources() {
   return (
     <Layout>
-      <div className="relative bg-night-900 pt-32 pb-16 sm:pt-48 sm:pb-24">
+      <div className="relative bg-silver pt-32 pb-16 sm:pt-48 sm:pb-24">
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
           <h2 className="mt-12 font-bold text-3xl text-honey-900 tracking-tight sm:text-5xl">
             Privacy Policy
@@ -31,12 +31,10 @@ export default function Resources() {
         </div>
         <div className="mx-auto mt-16 max-w-md px-4 sm:max-w-6xl sm:px-20">
           <div className="grid pb-12">
-            <div className="col-span-6 space-y-5 text-night-400 text-sm sm:text-justify sm:text-base">
+            <div className="col-span-6 space-y-5 text-silver-300 text-sm sm:text-justify sm:text-base">
               <div>
                 <p>
-                  <span className="font-bold text-night-100">
-                    Effective Date:
-                  </span>{" "}
+                  <span className="font-bold text-cream">Effective Date:</span>{" "}
                   February 16, 2023
                 </p>
               </div>
@@ -44,18 +42,16 @@ export default function Resources() {
               <div>
                 <p>
                   Treasure Project Ltd (
-                  <span className="font-bold text-night-100">"Treasure"</span>,{" "}
-                  <span className="font-bold text-night-100">"we"</span>,{" "}
-                  <span className="font-bold text-night-100">"us"</span>, or{" "}
-                  <span className="font-bold text-night-100">"our"</span>)
+                  <span className="font-bold text-cream">"Treasure"</span>,{" "}
+                  <span className="font-bold text-cream">"we"</span>,{" "}
+                  <span className="font-bold text-cream">"us"</span>, or{" "}
+                  <span className="font-bold text-cream">"our"</span>)
                   recognizes the importance of protecting the privacy of the
                   users of our service. It is our intent to balance our
                   legitimate business interests in collecting and using
                   information received from and about you with your reasonable
                   expectations of privacy. The following privacy policy (
-                  <span className="font-bold text-night-100">
-                    “Privacy Policy”
-                  </span>
+                  <span className="font-bold text-cream">“Privacy Policy”</span>
                   ) is the way we handle information learned about you from your
                   visits to our website available at{" "}
                   <a
@@ -75,13 +71,13 @@ export default function Resources() {
                   </a>
                   , and any other website offered by us that links to this
                   privacy policy (collectively the{" "}
-                  <span className="font-bold text-night-100">“Site”</span>).
+                  <span className="font-bold text-cream">“Site”</span>).
                 </p>
               </div>
 
               <div>
                 <p>
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     PLEASE REVIEW THIS PRIVACY POLICY CAREFULLY
                   </span>{" "}
                   When you submit information to or through the Site, you
@@ -99,7 +95,7 @@ export default function Resources() {
               </div>
 
               <div>
-                <p className="font-bold text-night-100">Personal Information</p>
+                <p className="font-bold text-cream">Personal Information</p>
                 <p>
                   Treasure collects personal information from you when you
                   interact with the Site. This information is collected and
@@ -110,7 +106,7 @@ export default function Resources() {
               </div>
 
               <div>
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   1. Information Voluntarily Provided By You
                 </h3>
                 <p className="mt-5">
@@ -121,14 +117,12 @@ export default function Resources() {
                 </p>
                 <ul className="mt-5 list-disc pl-10">
                   <li>
-                    <span className="font-bold text-night-100">
-                      Contact Data
-                    </span>
-                    , in the form of your email address and other contact
+                    <span className="font-bold text-cream">Contact Data</span>,
+                    in the form of your email address and other contact
                     information you provide.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Profile information
                     </span>
                     , including information you provide about yourself and
@@ -138,13 +132,13 @@ export default function Resources() {
                     cosmetic effects.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Digital Wallet Information
                     </span>
                     , including your digital wallet address.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Transaction Event Data
                     </span>
                     , including but not limited to applicable public IDs related
@@ -152,7 +146,7 @@ export default function Resources() {
                     date and time of the transaction.{" "}
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">Content</span>,
+                    <span className="font-bold text-cream">Content</span>,
                     including any content in messages you may send to us.
                   </li>
                 </ul>
@@ -166,7 +160,7 @@ export default function Resources() {
               </div>
 
               <div>
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   2. Information Collected Automatically
                 </h3>
                 <p className="mt-5">
@@ -187,7 +181,7 @@ export default function Resources() {
               </div>
 
               <div>
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   3. Information Received From a Third Party Source
                 </h3>
                 <p className="mt-5">
@@ -197,7 +191,7 @@ export default function Resources() {
                   such public sources.
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">
+                <p className="mt-5 font-bold text-cream">
                   Cookies and Other Information Collection Tools
                 </p>
                 <p>
@@ -209,7 +203,7 @@ export default function Resources() {
                   cookies, we will inform you by updating this Privacy Policy.
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">
+                <p className="mt-5 font-bold text-cream">
                   How Information is Used
                 </p>
                 <p>
@@ -243,12 +237,12 @@ export default function Resources() {
                   <li>to communicate with you.</li>
                 </ul>
 
-                <p className="mt-5 font-bold text-night-100">
+                <p className="mt-5 font-bold text-cream">
                   Sharing of Information
                 </p>
                 <ul className="mt-2 list-disc pl-10">
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       With Third Party Service Providers Performing Services on
                       Our Behalf.
                     </span>{" "}
@@ -259,7 +253,7 @@ export default function Resources() {
                     data analysis and research on the use of the Site
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       For Legal Purposes.
                     </span>{" "}
                     We also may share information that we collect from users as
@@ -275,7 +269,7 @@ export default function Resources() {
                     may sustain.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Blockchain Platform.
                     </span>{" "}
                     When you engage in a transaction that is recorded on the
@@ -291,7 +285,7 @@ export default function Resources() {
                     combined with other data.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Changes of Control.
                     </span>{" "}
                     We share information in connection with, or during
@@ -308,7 +302,7 @@ export default function Resources() {
                   parties for those third parties' direct marketing purposes.
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">
+                <p className="mt-5 font-bold text-cream">
                   Security Used & Retention of Personal Information
                 </p>
                 <p>
@@ -326,7 +320,7 @@ export default function Resources() {
                   collected, or as required by applicable laws or regulation.
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">
+                <p className="mt-5 font-bold text-cream">
                   Links to External Websites
                 </p>
                 <p>
@@ -338,7 +332,7 @@ export default function Resources() {
                   websites.
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">Do Not Track</p>
+                <p className="mt-5 font-bold text-cream">Do Not Track</p>
                 <p>
                   Our Site does not currently take any action when it receives a
                   Do Not Track request. Do Not Track is a privacy preference
@@ -358,7 +352,7 @@ export default function Resources() {
                   .
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">Children</p>
+                <p className="mt-5 font-bold text-cream">Children</p>
                 <p>
                   We do not knowingly collect or maintain personal information
                   from any person under the age of thirteen. No parts of our
@@ -366,7 +360,7 @@ export default function Resources() {
                   age of thirteen.
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">
+                <p className="mt-5 font-bold text-cream">
                   Questions / Contact Us
                 </p>
                 <p>
@@ -381,7 +375,7 @@ export default function Resources() {
                   .
                 </p>
 
-                <p className="mt-5 font-bold text-night-100">
+                <p className="mt-5 font-bold text-cream">
                   Notification of Changes
                 </p>
                 <p>

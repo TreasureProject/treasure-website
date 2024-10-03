@@ -64,15 +64,15 @@ const BaseCard = ({
 }) => (
   <div
     className={twMerge(
-      "relative rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-6 sm:p-12 md:h-[460px] lg:p-8 xl:p-12",
+      "relative rounded-2xl border border-honey-1100 bg-honey-400 p-6 sm:p-12 md:h-[460px] lg:p-8 xl:p-12",
       className,
     )}
   >
     {children}
-    <h1 className="relative z-20 max-w-[80%] pb-4 font-bold text-2xl text-new-ruby-900 leading-[105%] sm:pb-6 md:text-3xl lg:max-w-auto">
+    <h1 className="relative z-20 max-w-[80%] pb-4 font-bold text-2xl text-ruby leading-[105%] sm:pb-6 md:text-3xl lg:max-w-auto">
       {title}
     </h1>
-    <p className="relative z-20 max-w-[480px] text-base text-new-night-700 leading-[150%] md:text-lg">
+    <p className="relative z-20 max-w-[480px] text-base text-silver-800 leading-[150%] md:text-lg">
       {description}
     </p>
   </div>
@@ -87,7 +87,7 @@ const SocialCard = ({
   rank: number;
   username: string;
 }) => (
-  <div className="ml-4 h-[120px] w-[280px] space-y-3.5 rounded-2xl border border-new-honey-1100 bg-new-honey-400 p-3.5 ">
+  <div className="ml-4 h-[120px] w-[280px] space-y-3.5 rounded-2xl border border-honey-1100 bg-honey-400 p-3.5 ">
     <div className="flex gap-3">
       <img
         src={image}
@@ -96,22 +96,22 @@ const SocialCard = ({
       />
       <div className="flex items-center gap-1">
         <div className="relative">
-          <p className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 font-bold text-new-background-light text-sm">
+          <p className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 font-bold text-background-light text-sm">
             {rank}
           </p>
-          <Badge className="w-5 text-new-ruby-900" />
+          <Badge className="w-5 text-ruby" />
         </div>
-        <p className="text text-new-ruby-900">{username}</p>
+        <p className="text text-ruby">{username}</p>
       </div>
     </div>
-    <div className="flex gap-1 text-new-ruby-900">
-      <div className="flex aspect-square h-8 items-center justify-center rounded-md border border-new-honey-1100">
+    <div className="flex gap-1 text-ruby">
+      <div className="flex aspect-square h-8 items-center justify-center rounded-md border border-honey-1100">
         <TwitterIcon className="w-5" />
       </div>
-      <div className="flex aspect-square h-8 items-center justify-center rounded-md border border-new-honey-1100">
+      <div className="flex aspect-square h-8 items-center justify-center rounded-md border border-honey-1100">
         <DiscordIcon className="w-5" />
       </div>
-      <div className="flex aspect-square h-8 items-center justify-center rounded-md border border-new-honey-1100">
+      <div className="flex aspect-square h-8 items-center justify-center rounded-md border border-honey-1100">
         <SteamIcon className="w-5" />
       </div>
     </div>
@@ -120,11 +120,11 @@ const SocialCard = ({
 
 const BuildOnTreasure = () => {
   return (
-    <div className="bg-new-honey-200 py-10 md:py-20 ">
+    <div className="bg-honey-200 py-10 md:py-20 ">
       <div className="container space-y-10">
         <div className="mx-auto flex max-w-2xl flex-col items-center space-y-7">
-          <h1 className="landing-h1 text-new-ruby-900">Build on Treasure</h1>
-          <p className="text-center text-new-night-700 leading-[150%]">
+          <h1 className="landing-h1 text-ruby">Build on Treasure</h1>
+          <p className="text-center text-silver-800 leading-[150%]">
             Arming developers and game makers with everything they need to be
             successful since 2021.
           </p>
@@ -135,7 +135,7 @@ const BuildOnTreasure = () => {
             <Button
               as="a"
               color="float"
-              className="w-max text-new-ruby-900"
+              className="w-max text-ruby"
               href={LINKS.LITEPAPER}
             >
               Read Litepaper
@@ -149,7 +149,7 @@ const BuildOnTreasure = () => {
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
-              <BoTGraphicOne className="-bottom-[48%] -translate-x-1/2 lg:-top-[10%] absolute left-1/2 w-[110%%] text-new-light-background opacity-30 md:opacity-100" />
+              <BoTGraphicOne className="-bottom-[48%] -translate-x-1/2 lg:-top-[10%] absolute left-1/2 w-[110%%] text-honey-100 opacity-30 md:opacity-100" />
             </div>
           </BaseCard>
           <BaseCard
@@ -158,7 +158,7 @@ const BuildOnTreasure = () => {
             className="col-span-4"
           >
             <div className="absolute inset-0 h-full overflow-hidden rounded-2xl">
-              <BoTGraphicTwo className="-bottom-[5%] -translate-x-1/2 absolute left-1/2 h-auto w-[180%] text-new-light-background opacity-30 md:opacity-100 lg:bottom-0 lg:h-full lg:w-auto" />
+              <BoTGraphicTwo className="-bottom-[5%] -translate-x-1/2 absolute left-1/2 h-auto w-[180%] text-honey-100 opacity-30 md:opacity-100 lg:bottom-0 lg:h-full lg:w-auto" />
             </div>
           </BaseCard>
 

@@ -50,7 +50,7 @@ export const AppContextProvider = ({
           </Dialog.Title>
           <button
             type="button"
-            className="rounded-md bg-night-800 p-2.5 text-honey-50 hover:bg-night-900/50 focus:outline-none focus:ring-2 focus:ring-night-800 focus:ring-offset-2"
+            className="rounded-md bg-night-400 p-2.5 text-honey-50 hover:bg-silver/50 focus:outline-none focus:ring-2 focus:ring-night-400 focus:ring-offset-2"
             onClick={closeModal}
           >
             <span className="sr-only">Close</span>
@@ -61,7 +61,7 @@ export const AppContextProvider = ({
           {magicPurchaseLinks.map((link) => (
             <div
               key={link.name}
-              className="relative flex items-center justify-between rounded-1.5xl border-2 border-night-800 bg-white/[0.02] p-5 shadow-md hover:bg-white/[0.05]"
+              className="relative flex items-center justify-between rounded-1.5xl border-2 border-night-400 bg-white/[0.02] p-5 shadow-md hover:bg-white/[0.05]"
             >
               <p className="font-bold text-base text-white sm:text-xl">
                 <a href={link.url} rel="noopener noreferrer" target="_blank">
@@ -86,7 +86,7 @@ export const AppContextProvider = ({
               href="https://docs.treasure.lol/getting-started/what-is-magic"
               rel="noopener noreferrer"
               target="_blank"
-              className="inline-flex items-center text-ruby-900 decoration-ruby-900 hover:underline"
+              className="inline-flex items-center text-ruby decoration-ruby hover:underline"
             >
               <span>Learn more</span>
               <ArrowTopRightOnSquareIcon className="ml-1 h-3 w-3" />

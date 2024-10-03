@@ -5,11 +5,11 @@ import { twMerge } from "tailwind-merge";
 import { ExternalIcon } from "./misc/Icons";
 
 const colors = {
-  ruby: "bg-new-ruby-900 border border-new-ruby-800 text-new-honey-100  hover:bg-new-ruby-800 hover:border-new-ruby-700 hover:text-new-honey-100",
-  honey: "bg-new-honey-800  text-new-night-1200 ",
+  ruby: "bg-ruby border border-ruby-800 text-honey-100  hover:bg-ruby-800 hover:border-ruby-700 hover:text-honey-100",
+  honey: "bg-honey text-night-800 ",
   outline:
-    "bg-transparent border border-new-night-100 text-new-night-100 hover:bg-new-night-100 hover:text-new-night-1000",
-  float: "bg-transparent text-new-night-100 hover:bg-new-night-100/5",
+    "bg-transparent border border-night-100 text-cream hover:bg-night-100 hover:text-cream0",
+  float: "bg-transparent text-cream hover:bg-night-100/5",
 };
 
 type BaseProps = {

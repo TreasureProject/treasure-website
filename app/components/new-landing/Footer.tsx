@@ -115,7 +115,7 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <div className="space-y-12 bg-new-night-1200 py-12 md:space-y-14 md:py-20">
+    <div className="space-y-12 bg-night-800 py-12 md:space-y-14 md:py-20">
       <div className="container relative flex w-full flex-col justify-between gap-14 xl:flex-row">
         <div className="space-y-auto">
           <Logo className="w-[172px]" />
@@ -127,20 +127,18 @@ const Footer = () => {
           <div className="flex flex-col gap-10 md:flex-row">
             {FooterLinks.map((linkSection) => (
               <div className="flex-auto space-y-5" key={linkSection.title}>
-                <p className="font-semibold text-new-night-100">
-                  {linkSection.title}
-                </p>
+                <p className="font-semibold text-cream">{linkSection.title}</p>
                 <div className="space-y-3">
                   {linkSection.links.map((link) => (
                     <Link
                       to={link.url}
                       target={link.external ? "_blank" : "_self"}
                       key={link.title}
-                      className=" flex cursor-pointer items-center gap-1.5 text-new-night-400 transition-colors hover:text-new-night-100"
+                      className=" flex cursor-pointer items-center gap-1.5 text-silver-300 transition-colors hover:text-cream"
                     >
                       {link.title}
                       {link.external && (
-                        <ExternalIcon className="block w-3 text-new-night-600 group-hover:text-night-100" />
+                        <ExternalIcon className="block w-3 text-silver-600 group-hover:text-cream" />
                       )}
                     </Link>
                   ))}
@@ -162,7 +160,7 @@ const Footer = () => {
                 href={SOCIAL.DISCORD}
                 target="_blank"
                 rel="noreferrer"
-                className="text-new-night-100 "
+                className="text-cream "
               >
                 <DiscordIcon className="w-6" />
               </a>
@@ -170,7 +168,7 @@ const Footer = () => {
                 href={SOCIAL.TWITTER}
                 target="_blank"
                 rel="noreferrer"
-                className="text-new-night-100 "
+                className="text-cream "
               >
                 <TwitterIcon className="w-6" />
               </a>
@@ -178,7 +176,7 @@ const Footer = () => {
                 href={SOCIAL.YOUTUBE}
                 target="_blank"
                 rel="noreferrer"
-                className="text-new-night-100 "
+                className="text-cream "
               >
                 <YoutubeIcon className="w-6" />
               </a>
@@ -186,7 +184,7 @@ const Footer = () => {
                 href={SOCIAL.TWITCH}
                 target="_blank"
                 rel="noreferrer"
-                className="text-new-night-100 "
+                className="text-cream "
               >
                 <TwitchIcon className="w-6" />
               </a>
@@ -195,22 +193,22 @@ const Footer = () => {
         </div>
       </div>
       <div className="container">
-        <div className="flex flex-col gap-4 border-new-night-800 border-t pt-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-4 border-night-400 border-t pt-6 md:flex-row md:items-center md:justify-between">
           <div className="flex gap-6">
             <Link
               to="/terms-of-service"
-              className="cursor-pointer text-new-night-500 hover:text-new-night-100"
+              className="cursor-pointer text-silver-400 hover:text-cream"
             >
               Terms of Service
             </Link>
             <Link
               to="/privacy-policy"
-              className="cursor-pointer text-new-night-500 hover:text-new-night-100"
+              className="cursor-pointer text-silver-400 hover:text-cream"
             >
               Privacy Policy
             </Link>
           </div>
-          <p className="text-new-night-500">
+          <p className="text-silver-400">
             © 2024 Treasure Technology Foundation
           </p>
         </div>

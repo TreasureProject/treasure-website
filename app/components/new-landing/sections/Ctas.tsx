@@ -25,11 +25,11 @@ const Ctas = () => {
         : "idle";
 
   return (
-    <div className="relative bg-new-ruby-900 py-8 2xl:py-20">
+    <div className="relative bg-ruby py-8 2xl:py-20">
       <CtasCutOff className="-translate-y-[100%] absolute top-[1px] left-0 hidden w-[144px] 2xl:block" />
       <div className="container grid grid-cols-1 grid-rows-[auto_1px] gap-x-16 gap-y-10 md:grid-cols-[1fr_1px_1fr] 2xl:grid-cols-[1fr_1px_1fr_1px_1fr_1px_1fr] 2xl:gap-y-0">
         <div className="space-y-4 md:h-60 2xl:space-y-6">
-          <h1 className="font-bold text-new-night-100 text-xl lg:text-3xl">
+          <h1 className="font-bold text-cream text-xl lg:text-3xl">
             For Developers
           </h1>
           <p className="pb-4 md:pb-0">
@@ -40,9 +40,9 @@ const Ctas = () => {
             Learn More
           </Button>
         </div>
-        <div className="bg-new-night-100/40" />
+        <div className="bg-night-100/40" />
         <div className="relative space-y-4 md:h-60 2xl:space-y-6">
-          <h1 className="font-bold text-new-night-100 text-xl lg:text-3xl">
+          <h1 className="font-bold text-cream text-xl lg:text-3xl">
             For Creators
           </h1>
           <p className="">
@@ -63,9 +63,9 @@ const Ctas = () => {
             </Button>
           </div>
         </div>
-        <div className="h-[1px] w-full bg-new-night-100/40 md:col-span-3 md:h-auto 2xl:col-span-1 2xl:w-auto" />
+        <div className="h-[1px] w-full bg-night-100/40 md:col-span-3 md:h-auto 2xl:col-span-1 2xl:w-auto" />
         <div className="relative space-y-6 md:h-60">
-          <h1 className="max-w-[300px] font-bold text-new-night-100 text-xl md:max-w-none lg:text-3xl">
+          <h1 className="max-w-[300px] font-bold text-cream text-xl md:max-w-none lg:text-3xl">
             Get the latest
           </h1>
 
@@ -80,7 +80,7 @@ const Ctas = () => {
                   id="email"
                   name="email"
                   placeholder="meem@treasure.lol"
-                  className="w-full rounded-lg border-2 border-honey-800 bg-honey-100 p-4 font-semibold text-night-800 placeholder:font-normal placeholder:text-night-500 focus-within:border-current focus-within:outline-none focus-within:ring-2 focus-within:ring-current focus-within:ring-offset-2 focus-visible:outline-none"
+                  className="w-full rounded-lg border-2 border-honey bg-honey-100 p-4 font-semibold text-night-400 placeholder:font-normal placeholder:text-silver-400 focus-within:border-current focus-within:outline-none focus-within:ring-2 focus-within:ring-current focus-within:ring-offset-2 focus-visible:outline-none"
                 />
                 <Button
                   as="button"
@@ -103,9 +103,9 @@ const Ctas = () => {
             </Form>
           </div>
         </div>
-        <div className="h-[1px] w-full bg-new-night-100/40 md:h-auto md:w-auto" />
+        <div className="h-[1px] w-full bg-night-100/40 md:h-auto md:w-auto" />
         <div className="relative space-y-6 md:h-60">
-          <h1 className="font-bold text-new-night-100 text-xl lg:text-3xl">
+          <h1 className="font-bold text-cream text-xl lg:text-3xl">
             Join an unmatched community
           </h1>
 
@@ -114,7 +114,7 @@ const Ctas = () => {
               href={SOCIAL.DISCORD}
               target="_blank"
               rel="noreferrer"
-              className="text-new-night-100"
+              className="text-cream"
             >
               <DiscordIcon className="w-10" />
             </a>
@@ -122,7 +122,7 @@ const Ctas = () => {
               href={SOCIAL.TWITTER}
               target="_blank"
               rel="noreferrer"
-              className="text-new-night-100"
+              className="text-cream"
             >
               <TwitterIcon className="w-10" />
             </a>
@@ -130,7 +130,7 @@ const Ctas = () => {
               href={SOCIAL.YOUTUBE}
               target="_blank"
               rel="noreferrer"
-              className="text-new-night-100"
+              className="text-cream"
             >
               <YoutubeIcon className="w-10" />
             </a>
@@ -138,7 +138,7 @@ const Ctas = () => {
               href={SOCIAL.TWITCH}
               target="_blank"
               rel="noreferrer"
-              className="text-new-night-100"
+              className="text-cream"
             >
               <TwitchIcon className="w-10" />
             </a>

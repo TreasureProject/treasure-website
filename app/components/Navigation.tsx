@@ -140,11 +140,11 @@ export const Navigation = () => {
   const [latestScroll, setLatestScroll] = useState(0);
   const { scrollY } = useScroll();
   const SOCIAL_LINK_CLASS =
-    "bg-transparent h-9 w-9 justify-center hover:bg-new-night-100/5  text-new-night-100 flex cursor-pointer items-center rounded-md transition-colors";
+    "bg-transparent h-9 w-9 justify-center hover:bg-night-100/5  text-cream flex cursor-pointer items-center rounded-md transition-colors";
   const MOBILE_ITEM_CLASS =
-    "hover:bg-new-night-100/10 h-10 w-full cursor-pointer rounded-lg px-4 text-start font-bold text-white transition-colors";
+    "hover:bg-night-100/10 h-10 w-full cursor-pointer rounded-lg px-4 text-start font-bold text-white transition-colors";
   const GENERIC_HAMBURGER_LINE =
-    "h-[3px] w-5 my-[2px] rounded-full bg-new-night-100 transition ease transform duration-300";
+    "h-[3px] w-5 my-[2px] rounded-full bg-night-100 transition ease transform duration-300";
 
   const ScrollDelay = 200;
 
@@ -163,11 +163,11 @@ export const Navigation = () => {
     <div
       className={twMerge(
         "-translate-x-1/2 fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6",
-        openHamburger && "bg-new-night-1200 lg:bg-transparent",
+        openHamburger && "bg-night-800 lg:bg-transparent",
         !visible && "pointer-events-none opacity-0",
       )}
     >
-      <div className="relative z-[900] flex h-16 w-full items-center justify-between rounded-2xl border border-white/5 bg-new-night-1200/25 px-6 backdrop-blur-lg md:px-4 lg:h-20">
+      <div className="relative z-[900] flex h-16 w-full items-center justify-between rounded-2xl border border-white/5 bg-night-800/25 px-6 backdrop-blur-lg md:px-4 lg:h-20">
         <div className="flex items-center gap-0 sm:gap-9">
           <Link to="/">
             <Logo className="w-[148px] xl:w-[160px]" />
@@ -178,13 +178,13 @@ export const Navigation = () => {
                 return (
                   <button
                     type="button"
-                    className="group relative flex h-9 cursor-pointer items-center gap-2.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors hover:bg-new-night-100/10 focus:outline-none"
+                    className="group relative flex h-9 cursor-pointer items-center gap-2.5 rounded-lg px-3.5 font-semibold text-cream transition-colors hover:bg-night-100/10 focus:outline-none"
                     key={item.label}
                   >
                     {item.label}
                     <ChevronDownIcon className="group-hover:-rotate-180 w-3 transition-transform" />
                     <div className="absolute top-0 left-0 hidden pt-[72px] group-hover:block">
-                      <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-2xl lg:backdrop-blur-lg">
+                      <div className="rounded-lg border border-night-400 bg-night-1000/80 p-2 backdrop-blur-2xl lg:backdrop-blur-lg">
                         {item.items?.map((item) => (
                           <Link
                             to={item.target}
@@ -192,7 +192,7 @@ export const Navigation = () => {
                               item.type === "external" ? "_blank" : "_self"
                             }
                             className={twMerge(
-                              "flex h-11 cursor-pointer items-center gap-3 whitespace-nowrap rounded-md bg-transparent px-2.5 text-new-night-400 transition-colors hover:bg-new-night-100/5 hover:text-new-night-100 focus:outline-none",
+                              "flex h-11 cursor-pointer items-center gap-3 whitespace-nowrap rounded-md bg-transparent px-2.5 text-silver-300 transition-colors hover:bg-night-100/5 hover:text-cream focus:outline-none",
                               item.type === "external" && "justify-between",
                             )}
                             key={item.label}
@@ -213,7 +213,7 @@ export const Navigation = () => {
                   to={item.target ? item.target : "/"}
                   target={item.type === "external" ? "_blank" : "_self"}
                   key={item.label}
-                  className="flex h-9 items-center gap-1.5 rounded-lg px-3.5 font-semibold text-new-night-100 transition-colors hover:bg-new-night-100/10 focus:outline-none"
+                  className="flex h-9 items-center gap-1.5 rounded-lg px-3.5 font-semibold text-cream transition-colors hover:bg-night-100/10 focus:outline-none"
                 >
                   {item.label}
                   {item.type === "external" && <ExternalIcon className="w-4" />}
@@ -263,7 +263,7 @@ export const Navigation = () => {
         </div>
         <button
           type="button"
-          className="group flex h-11 w-11 cursor-pointer flex-col items-center justify-center rounded-lg bg-new-night-1200/20 lg:hidden"
+          className="group flex h-11 w-11 cursor-pointer flex-col items-center justify-center rounded-lg bg-night-800/20 lg:hidden"
           onClick={() => setOpenHamburger(!openHamburger)}
         >
           <div
@@ -294,7 +294,7 @@ export const Navigation = () => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-new-night-1200 py-6 backdrop-blur-2xl lg:hidden"
+            className="z-[800] flex h-[calc(100vh-64px)] w-full flex-col bg-night-800 py-6 backdrop-blur-2xl lg:hidden"
           >
             <div className=" flex-1 space-y-6 overflow-hidden px-3 pb-3 sm:px-8">
               <div className="scrollbar-hide max-h-full w-full overflow-scroll">
@@ -311,7 +311,7 @@ export const Navigation = () => {
                           <RA.Header className={MOBILE_ITEM_CLASS}>
                             <RA.Trigger className="group flex h-full w-full items-center justify-between">
                               {item.label}
-                              <ChevronDownIcon className="group-data-[state=open]:-rotate-180 w-4 text-new-night-400 transition-transform" />
+                              <ChevronDownIcon className="group-data-[state=open]:-rotate-180 w-4 text-silver-300 transition-transform" />
                             </RA.Trigger>
                           </RA.Header>
                           <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
@@ -324,12 +324,12 @@ export const Navigation = () => {
                                 key={item.label}
                                 className={twMerge(
                                   MOBILE_ITEM_CLASS,
-                                  "flex items-center gap-2 font-medium text-new-night-100/80",
+                                  "flex items-center gap-2 font-medium text-cream/80",
                                 )}
                               >
                                 {item.label}
                                 {item.type === "external" && (
-                                  <ExternalIcon className="w-4 text-new-night-400" />
+                                  <ExternalIcon className="w-4 text-silver-300" />
                                 )}
                               </Link>
                             ))}
@@ -357,7 +357,7 @@ export const Navigation = () => {
                 Start Building
               </Button>
               {/* <Button color="honey">Read Litepaper</Button> */}
-              <div className="flex items-center gap-4 pt-2 text-new-night-100">
+              <div className="flex items-center gap-4 pt-2 text-cream">
                 <a href={SOCIAL.DISCORD} target="_blank" rel="noreferrer">
                   <DiscordIcon className="w-6" />
                 </a>

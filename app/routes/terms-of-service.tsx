@@ -24,7 +24,7 @@ export const meta: MetaFunction = ({ matches }) => {
 export default function Resources() {
   return (
     <Layout>
-      <div className="relative bg-night-900 pt-32 pb-16 sm:pt-48 sm:pb-24">
+      <div className="relative bg-silver pt-32 pb-16 sm:pt-48 sm:pb-24">
         <div className="mx-auto max-w-md px-8 text-center sm:max-w-5xl sm:px-6 lg:px-12">
           <h2 className="mt-12 font-bold text-3xl text-honey-900 tracking-tight sm:text-5xl">
             Terms of Service
@@ -32,12 +32,10 @@ export default function Resources() {
         </div>
         <div className="mx-auto mt-16 max-w-md px-4 sm:max-w-6xl sm:px-20">
           <div className="grid pb-12">
-            <div className="col-span-6 space-y-5 text-night-400 text-sm sm:text-justify sm:text-base">
+            <div className="col-span-6 space-y-5 text-silver-300 text-sm sm:text-justify sm:text-base">
               <div>
                 <p>
-                  <span className="font-bold text-night-100">
-                    Last Revised:
-                  </span>{" "}
+                  <span className="font-bold text-cream">Last Revised:</span>{" "}
                   February 16, 2023
                 </p>
               </div>
@@ -45,26 +43,25 @@ export default function Resources() {
               <div>
                 <p>
                   Treasure Project Ltd (
-                  <span className="font-bold text-night-100">"Treasure"</span>,{" "}
-                  <span className="font-bold text-night-100">"we"</span>,{" "}
-                  <span className="font-bold text-night-100">"our"</span>, or{" "}
-                  <span className="font-bold text-night-100">"us"</span>) offers
-                  a web3 gaming platform and open ecosystem that lets
-                  characters, assets, game loops, and more flow freely between
-                  developed worlds in our ecosystem, as well as the related
-                  marketplace for applicable NFTs and other digital assets.
-                  Please read these Website and Marketplace Terms of Service
-                  (herein the{" "}
-                  <span className="font-bold text-night-100">"Terms"</span>)
-                  very carefully.
+                  <span className="font-bold text-cream">"Treasure"</span>,{" "}
+                  <span className="font-bold text-cream">"we"</span>,{" "}
+                  <span className="font-bold text-cream">"our"</span>, or{" "}
+                  <span className="font-bold text-cream">"us"</span>) offers a
+                  web3 gaming platform and open ecosystem that lets characters,
+                  assets, game loops, and more flow freely between developed
+                  worlds in our ecosystem, as well as the related marketplace
+                  for applicable NFTs and other digital assets. Please read
+                  these Website and Marketplace Terms of Service (herein the{" "}
+                  <span className="font-bold text-cream">"Terms"</span>) very
+                  carefully.
                 </p>
               </div>
 
               <div>
                 <p>
                   These Terms are between you (
-                  <span className="font-bold text-night-100">"you"</span> and{" "}
-                  <span className="font-bold text-night-100">"your"</span>) and
+                  <span className="font-bold text-cream">"you"</span> and{" "}
+                  <span className="font-bold text-cream">"your"</span>) and
                   Treasure. These Terms governs your use of the website located
                   at{" "}
                   <a href="treasure.lol" className="text-honey-900 underline">
@@ -84,13 +81,13 @@ export default function Resources() {
                   tools, mobile applications, web applications, decentralized
                   applications, smart contracts, and APIs offered by Treasure
                   (collectively, including the Site, the{" "}
-                  <span className="font-bold text-night-100">"Platform"</span>
+                  <span className="font-bold text-cream">"Platform"</span>
                   ).
                 </p>
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   1. YOUR ACCEPTANCE OF THESE TERMS; ARBITRATION DISCLAIMER
                 </h3>
                 <p>
@@ -110,7 +107,7 @@ export default function Resources() {
                   register for the Platform.
                 </p>
                 <p>
-                  <span className="font-bold text-night-100 underline">
+                  <span className="font-bold text-cream underline">
                     PLEASE READ THE SECTION ENTITLED “DISPUTE RESOLUTION”
                     CAREFULLY!
                   </span>{" "}
@@ -126,7 +123,7 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   2. CHANGES TO TERMS
                 </h3>
                 <p>
@@ -143,10 +140,10 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   3. TREASURE PLATFORM
                 </h3>
-                <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 font-bold text-cream text-lg sm:text-xl">
                   3.1 Platform Ecosystem
                 </h4>
                 <p>
@@ -160,27 +157,23 @@ export default function Resources() {
                   addition to these Terms. For more information about the
                   Platform and the gaming ecosystem and games offered by
                   Treasure, please see the published materials on the Site (
-                  <span className="font-bold text-night-100">
-                    “Documentation”
-                  </span>
+                  <span className="font-bold text-cream">“Documentation”</span>
                   ).
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   3.2 Marketplace and Digital Assets
                 </h4>
                 <p>
                   The Platform includes a marketplace for users of the Platform
                   to sell or buy non-fungible token (
-                  <span className="font-bold text-night-100">"NFT"</span>) used
-                  in the Platform and applicable Games, and provides information
+                  <span className="font-bold text-cream">"NFT"</span>) used in
+                  the Platform and applicable Games, and provides information
                   about the applicable fungible token used by the Platform,
                   including the main token $MAGIC (collectively{" "}
-                  <span className="font-bold text-night-100">“Tokens”</span>).
-                  NFTs and Tokens are collectively referred to in these Terms as{" "}
-                  <span className="font-bold text-night-100">
-                    "Digital Assets"
-                  </span>
+                  <span className="font-bold text-cream">“Tokens”</span>). NFTs
+                  and Tokens are collectively referred to in these Terms as{" "}
+                  <span className="font-bold text-cream">"Digital Assets"</span>
                   . More information about the $MAGIC Tokens can be found at{" "}
                   <a
                     href="https://docs.treasure.lol/getting-started/what-is-magic"
@@ -203,7 +196,7 @@ export default function Resources() {
                   blockchain or associated third parties.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   3.3 Access and Use of the Platform
                 </h4>
                 <p>
@@ -236,12 +229,12 @@ export default function Resources() {
                   permitted by applicable law.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   3.4 User Generated Content
                 </h4>
                 <p>
                   The Platform enables users to create user generated content (
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     “User Generated Content”
                   </span>
                   ). You agree that you have and will maintain, for yourself and
@@ -253,15 +246,13 @@ export default function Resources() {
                   else, including Treasure.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   3.5 Digital Wallet
                 </h4>
                 <p>
                   Transactions on the Platform, including purchasing or selling
                   an NFT, requires you to link an accepted digital wallet (
-                  <span className="font-bold text-night-100">
-                    “Digital Wallet"
-                  </span>
+                  <span className="font-bold text-cream">“Digital Wallet"</span>
                   ) to the Platform for so long as you use the Platform. We
                   neither own nor control your Digital Wallets, any associated
                   blockchain, or any other Third-Party Services (as defined
@@ -278,7 +269,7 @@ export default function Resources() {
                   including with respect to any such Digital Asset.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   3.6 Prohibitions
                 </h4>
                 <p>You agree not to use the Platform to:</p>
@@ -375,13 +366,13 @@ export default function Resources() {
                   </li>
                 </ol>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   3.7 Third-Party Services Acknowledgement
                 </h4>
                 <p>
                   You acknowledge that the Platform and its functionality
                   includes both services offered by third parties (
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     “Third-Party Services”
                   </span>
                   ) as well as Treasure's proprietary technology. Certain
@@ -394,16 +385,16 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   4. DIGITAL ASSET PURCHASES
                 </h3>
-                <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 font-bold text-cream text-lg sm:text-xl">
                   4.1 NFT Terms of Sale
                 </h4>
                 <p>
                   Users of the Platform may list their applicable NFTs for sale
                   using the marketplace on the Platform (the{" "}
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     “NFT Marketplace”
                   </span>
                   ). All transactions for NFTs are between users as the
@@ -425,7 +416,7 @@ export default function Resources() {
                   .
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   4.2 Taxes
                 </h4>
                 <p>
@@ -438,7 +429,7 @@ export default function Resources() {
                   NFTs.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   4.3 Fees
                 </h4>
                 <p>
@@ -462,7 +453,7 @@ export default function Resources() {
                   circumstances.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   4.4 Treasure Makes No Representations on Price or Value of
                   NFTs
                 </h4>
@@ -478,10 +469,10 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   5. Ownership of the Platform and User Generated Content
                 </h3>
-                <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 font-bold text-cream text-lg sm:text-xl">
                   5.1 Ownership of the Platform
                 </h4>
                 <p>
@@ -494,7 +485,7 @@ export default function Resources() {
                   of the Platform, including any artwork that is created by
                   Treasure or its licensors and incorporated into any NFTs
                   (collectively, the{" "}
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     “Treasure Materials”
                   </span>
                   ). The Platform and Treasure Materials are protected by
@@ -508,7 +499,7 @@ export default function Resources() {
                   excluded and disclaimed.
                 </p>
 
-                <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 font-bold text-cream text-lg sm:text-xl">
                   5.2 User Generated Content
                 </h4>
                 <p>
@@ -526,7 +517,7 @@ export default function Resources() {
                   Content for any lawful purpose.
                 </p>
 
-                <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 font-bold text-cream text-lg sm:text-xl">
                   5.3 FEEDBACK
                 </h4>
                 <p>
@@ -535,7 +526,7 @@ export default function Resources() {
                   suggesting or recommending changes to the Platform, including
                   without limitation, new features or functionality relating
                   thereto, or any comments, questions, suggestions, or the like
-                  (<span className="font-bold text-night-100">"Feedback"</span>
+                  (<span className="font-bold text-cream">"Feedback"</span>
                   ), we are free to use such Feedback irrespective of any other
                   obligation or limitation between you and us governing such
                   Feedback. All Feedback is and will be treated as
@@ -549,7 +540,7 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   6. PRIVACY POLICY
                 </h3>
                 <p>
@@ -572,7 +563,7 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   7. Release of Disputes with Users
                 </h3>
                 <p>
@@ -589,7 +580,7 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   8. Downtime Disclaimer
                 </h3>
                 <p>
@@ -601,7 +592,7 @@ export default function Resources() {
                   some of which are outside of Treasure's control, and some
                   which may require or result in scheduled maintenance or
                   unscheduled downtime of the Platform (collectively,{" "}
-                  <span className="font-bold text-night-100">“Downtime”</span>
+                  <span className="font-bold text-cream">“Downtime”</span>
                   ). Part or all of the Platform may be unavailable during any
                   such period of Downtime, which may include an inability to
                   purchase an NFT at the time you intended. Treasure shall not
@@ -615,11 +606,11 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   9. DISCLAIMERS; NO REPRESENTATIONS; LIMITATIONS ON OUR
                   LIABILITY
                 </h3>
-                <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 font-bold text-cream text-lg sm:text-xl">
                   9.1 DISCLAIMER OF WARRANTIES:
                 </h4>
                 <p>
@@ -676,7 +667,7 @@ export default function Resources() {
                   DIGITAL WALLET.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   9.2 Limitation of Liability
                 </h4>
                 <p>
@@ -684,7 +675,7 @@ export default function Resources() {
                   RESPECTIVE OFFICERS, DIRECTORS, SHAREHOLDERS, EMPLOYEES,
                   CONTRACTORS, SERVICE PROVIDERS, LICENSORS, AND AGENTS (ALL OF
                   THE FOREGOING,{" "}
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     “TREASURE PARTIES”
                   </span>
                   ) SHALL NOT BE LIABLE TO YOU OR ANY THIRD PARTY FOR CONTRACT,
@@ -706,7 +697,7 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   10. ASSUMPTION OF RISK
                 </h3>
                 <p>
@@ -719,7 +710,7 @@ export default function Resources() {
                 </p>
                 <ul className="mt-5 list-disc pl-10">
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       NFTs' values are subjective.
                     </span>{" "}
                     The potential value of NFTs are subjective in nature and
@@ -727,7 +718,7 @@ export default function Resources() {
                     cryptocurrency.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Regulatory uncertainty.
                     </span>{" "}
                     The regulatory regime governing blockchain technologies,
@@ -737,7 +728,7 @@ export default function Resources() {
                     and the utility of NFTs.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Blockchain technology risk.
                     </span>{" "}
                     There are risks associated with using Internet and
@@ -748,7 +739,7 @@ export default function Resources() {
                     access to your Digital Wallet or account.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Digital asset risks.
                     </span>{" "}
                     There are risks associated with purchasing items associated
@@ -761,7 +752,7 @@ export default function Resources() {
                     otherwise interact with any non-fungible tokens.
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       Third-Party Services.
                     </span>{" "}
                     We do not control Third-Party Services like the Ethereum
@@ -772,29 +763,27 @@ export default function Resources() {
                     transactions on these public blockchains.{" "}
                   </li>
                   <li>
-                    <span className="font-bold text-night-100">
-                      IPFS Storage.
-                    </span>{" "}
+                    <span className="font-bold text-cream">IPFS Storage.</span>{" "}
                     We do not store the digital file of the underlying digital
                     artwork associated with any NFT on any Treasure controlled
                     servers. The digital file of the underlying digital artwork
                     is typically linked through the Interplanetary File System (
-                    <span className="font-bold text-night-100">“IPFS”</span>)
-                    using an IPFS node operated by a Third-Party Service. We
-                    have no control over IPFS or the IPFS node nor can we
-                    guarantee that it will always be available.
+                    <span className="font-bold text-cream">“IPFS”</span>) using
+                    an IPFS node operated by a Third-Party Service. We have no
+                    control over IPFS or the IPFS node nor can we guarantee that
+                    it will always be available.
                   </li>
                 </ul>
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   11. DISPUTE RESOLUTION - ARBITRATION
                 </h3>
                 <p>
                   Please read the following arbitration agreement in this
                   section (
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     “Arbitration Agreement”
                   </span>
                   ) carefully as it requires you to arbitrate disputes with
@@ -887,7 +876,7 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   12. COMPLIANCE WITH LAW; DISQUALIFIED PERSONS
                 </h3>
                 <p>
@@ -916,7 +905,7 @@ export default function Resources() {
                     Afghanistan, Central African Republic (the), Congo (the
                     Democratic Republic of the), Libya, Mali, Somalia, Sudan,
                     and Yemen (each an{" "}
-                    <span className="font-bold text-night-100">
+                    <span className="font-bold text-cream">
                       “Excluded Jurisdiction”
                     </span>
                     );{" "}
@@ -965,7 +954,7 @@ export default function Resources() {
                 <p>
                   If you are not authorized to use the Platform under this
                   Section 12, you are deemed a{" "}
-                  <span className="font-bold text-night-100">
+                  <span className="font-bold text-cream">
                     “Disqualified Person”
                   </span>{" "}
                   under these Terms.
@@ -973,7 +962,7 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   13. INDEMNIFICATION
                 </h3>
                 <p>
@@ -994,10 +983,10 @@ export default function Resources() {
               </div>
 
               <div className="space-y-5">
-                <h3 className="group mb-2 pt-5 font-bold text-night-100 text-xl sm:text-2xl">
+                <h3 className="group mb-2 pt-5 font-bold text-cream text-xl sm:text-2xl">
                   14. MISCELLANEOUS TERMS
                 </h3>
-                <h4 className="group mb-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 font-bold text-cream text-lg sm:text-xl">
                   14.1 No Waiver of Rights
                 </h4>
                 <p>
@@ -1014,7 +1003,7 @@ export default function Resources() {
                   remedy, power, or privilege.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   14.2 Export Laws
                 </h4>
                 <p>
@@ -1024,7 +1013,7 @@ export default function Resources() {
                   Jurisdiction or Disqualified Person.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   14.3 Assignment
                 </h4>
                 <p>
@@ -1038,7 +1027,7 @@ export default function Resources() {
                   any of its obligations under these Terms.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   14.4 Severability
                 </h4>
                 <p>
@@ -1048,7 +1037,7 @@ export default function Resources() {
                   any other provisions.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   14.5 Governing Law and Jurisdiction
                 </h4>
                 <p>
@@ -1059,7 +1048,7 @@ export default function Resources() {
                   Virgin Islands for any such action.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   14.6 Entire Agreement
                 </h4>
                 <p>
@@ -1070,7 +1059,7 @@ export default function Resources() {
                   subject matter.
                 </p>
 
-                <h4 className="group mb-2 pt-2 font-bold text-lg text-night-100 sm:text-xl">
+                <h4 className="group mb-2 pt-2 font-bold text-cream text-lg sm:text-xl">
                   14.7 Headings
                 </h4>
                 <p>

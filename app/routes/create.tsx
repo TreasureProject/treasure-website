@@ -78,7 +78,7 @@ const ApplyNowButton = () => (
     href={FORM_URL}
     target="_blank"
     rel="noreferrer"
-    className="mt-6 flex h-10 w-max items-center rounded-md border border-ruby-900 bg-ruby-900 px-4 font-semibold text-md transition-colors hover:bg-transparent hover:text-ruby-900 md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
+    className="mt-6 flex h-10 w-max items-center rounded-md border border-ruby bg-ruby px-4 font-semibold text-md transition-colors hover:bg-transparent hover:text-ruby md:mt-14 md:h-14 md:rounded-lg md:px-8 md:text-lg"
   >
     Apply Now
   </a>
@@ -363,7 +363,7 @@ const Partner = () => {
                       alt="Create Logo"
                       className="w-12"
                     />
-                    <p className="rounded-md bg-gradient-create-shiny px-3 py-2 text-new-night-1300 text-sm">
+                    <p className="rounded-md bg-gradient-create-shiny px-3 py-2 text-night-900 text-sm">
                       A-LIST
                     </p>
                   </div>

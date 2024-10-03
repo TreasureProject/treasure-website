@@ -3,12 +3,19 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   darkMode: "class",
-  presets: [
-    require("@treasure-project/tailwind-config"),
-    require("./app/components/new-landing/misc/new.tailwind.config"),
-  ],
+  presets: [require("@treasure-dev/tailwind-config")],
   theme: {
     extend: {
+      maxWidth: {
+        "8xl": "88rem",
+        "9xl": "100rem",
+      },
+      borderRadius: {
+        tag: "0.55rem",
+        "1.9xl": "15px",
+        "2.5xl": "1.25rem",
+        "1.5xl": "10px",
+      },
       colors: {
         "tr-green": "#4FC74F",
         "tr-blue": "#28A0F0",
@@ -21,6 +28,12 @@ module.exports = {
           "linear-gradient(104deg, #020228 55.79%, #396AF3 115.73%)",
         "gradient-partner-placeholder":
           "linear-gradient(156deg, #001348 74.03%, #396AF3 167.04%)",
+        "gradient-landing-hero":
+          "linear-gradient(270deg, rgba(13, 20, 32, 0.00) 48.68%, rgba(13, 20, 32, 0.65) 100%)",
+        "gradient-landing-bridgeworld":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 51.04%, rgba(0, 0, 0, 0.20) 100%)",
+        "gradient-create-shiny":
+          "radial-gradient(258.32% 208.99% at 2.98% 6.37%, #FEC99D 0%, #FEE6B7 20%, #9FFFEF 39.5%, #78D3F4 58.5%, #58B6FD 79%, #7370CB 100%)",
       },
       animation: {
         marquee: "marquee 80s linear infinite",
@@ -33,6 +46,8 @@ module.exports = {
         "move-up-down2": "move-up-down2 5s ease-in-out .5s infinite",
         stretch: "stretch-animation 3s linear infinite",
         pulse2: "pulse2 1s none infinite",
+        slideDown: "slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)",
+        slideUp: "slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)",
       },
       keyframes: {
         marquee: {
@@ -84,6 +99,14 @@ module.exports = {
           "50%": { opacity: 1 },
           "100%": { opacity: 0 },
         },
+        slideDown: {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        slideUp: {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
       },
       typography: ({ theme }) => ({
         night: {
@@ -126,8 +149,8 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
+    require("tailwindcss-animate"),
     require("tailwind-scrollbar"),
   ],
 };

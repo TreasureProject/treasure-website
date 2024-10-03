@@ -43,11 +43,11 @@
 }
 
 .create-paragraph {
-  @apply font-medium leading-[160%] text-night-100;
+  @apply font-medium leading-[160%] text-cream;
 }
 
 .create-partner-link {
-  @apply absolute left-1/2 bottom-[25%] z-20 -translate-x-1/2 gap-2 rounded-md border-new-night-1100 bg-new-night-1300/80 px-2.5 py-2 text-sm font-medium;
+  @apply absolute left-1/2 bottom-[25%] z-20 -translate-x-1/2 gap-2 rounded-md border-silver-800 bg-night-900/80 px-2.5 py-2 text-sm font-medium;
 }
 
 @font-face {

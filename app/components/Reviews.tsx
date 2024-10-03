@@ -39,7 +39,7 @@ export function Tweet({
       <figure className="space-y-8">
         <QuoteIcon />
 
-        <blockquote className="text-night-800 text-sm sm:text-xl">
+        <blockquote className="text-night-400 text-sm sm:text-xl">
           <props.tweet />
         </blockquote>
         <figcaption className="flex text-gray-600 text-sm">

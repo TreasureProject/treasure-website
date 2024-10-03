@@ -24,7 +24,7 @@ export const Badge = ({
     >
       <h3
         className={classNames(
-          textColor ?? "text-ruby-900",
+          textColor ?? "text-ruby",
           size === "sm" ? "text-sm" : "text-base",
           "font-medium font-mono uppercase",
         )}
