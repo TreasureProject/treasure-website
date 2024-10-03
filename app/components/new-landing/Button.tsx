@@ -18,12 +18,12 @@ type BaseProps = {
   color: "ruby" | "honey" | "outline" | "float";
 };
 
-export type ButtonAsLink = BaseProps &
+type ButtonAsLink = BaseProps &
   Omit<RemixLinkProps, keyof BaseProps> & {
     as?: "link";
   };
 
-export type ButtonAsButton = BaseProps &
+type ButtonAsButton = BaseProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & {
     as: "button";
   };

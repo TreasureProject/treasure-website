@@ -7,7 +7,6 @@ import type {
 import { json } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -24,7 +23,6 @@ import "keen-slider/keen-slider.min.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./styles/nProgress.css";
-import "./styles/new-landing.css";
 import "./styles/tailwind.css";
 
 import NProgress from "nprogress";
@@ -225,7 +223,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ThemeBody ssrTheme={Boolean(data.theme)} />
         <Scripts />
         <ScrollRestoration />
-        <LiveReload />
       </body>
     </html>
   );

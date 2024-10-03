@@ -33,12 +33,6 @@ jobs:
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
 
-      - name: Generate code
-        run: npm run codegen
-        env:
-          CONTENTFUL_ENDPOINT: ${{ secrets.CONTENTFUL_ENDPOINT }}
-          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
-
       - name: 🔎 Type check
         run: npm run typecheck --if-present
 
@@ -87,8 +81,6 @@ jobs:
           tags: registry.fly.io/${{ steps.app_name.outputs.value }}:${{ needs.setup.outputs.sanitized_ref_name }}-${{ github.sha }}
           build-args: |
             COMMIT_SHA=${{ github.sha }}
-            CONTENTFUL_ENDPOINT=${{ secrets.CONTENTFUL_ENDPOINT }}
-            CONTENTFUL_DELIVERY_TOKEN=${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,mode=max,dest=/tmp/.buildx-cache-new
 

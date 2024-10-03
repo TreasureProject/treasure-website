@@ -5,7 +5,6 @@
       ".graphclient/**",
       ".husky/**",
       "app/entry.server.tsx",
-      "app/graphql/app.generated.ts",
       "build/**",
       "dist/**",
       "node_modules/",

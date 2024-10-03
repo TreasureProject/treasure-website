@@ -2,48 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply mx-auto max-w-9xl px-4 sm:px-6 lg:px-12;
-}
-
 .wrapper {
   @apply relative mx-auto max-w-8xl px-4 sm:px-5 md:px-8;
 }
 
-.latestPost {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-areas:
-    "image image image image"
-    "info info info info"
-    "title title title title"
-    "excerpt excerpt excerpt excerpt"
-    "author author author author"
-    "readMore readMore readMore readMore";
+.container {
+  @apply mx-auto max-w-9xl px-6 sm:px-12 md:px-[60px];
 }
 
-@screen lg {
-  .latestPost {
-    grid-template-areas:
-      "image image image info info"
-      "image image image title title"
-      "image image image excerpt excerpt"
-      "image image image author author"
-      "image image image readMore readMore";
-
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
+.landing-h1 {
+  @apply text-[32px] font-[635] leading-[105%] md:text-5xl;
 }
 
-.post {
-  grid-template-areas:
-    "image image"
-    "image image"
-    "info info"
-    "title title"
-    "author author";
-  display: grid;
-  grid-template-rows: repeat(5, minmax(0, min-content));
+.landing-h2 {
+  @apply text-[32px] font-[635] leading-[105%];
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  min-width: 0;
+  flex: 0 0 320px;
+  position: relative;
+  transform: translateX(0) scale(1);
+}
+
+.swiper-slide a {
+  display: block;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.create-paragraph {
+  @apply font-medium leading-[160%] text-night-100;
+}
+
+.create-partner-link {
+  @apply absolute left-1/2 bottom-[25%] z-20 -translate-x-1/2 gap-2 rounded-md border-new-night-1100 bg-new-night-1300/80 px-2.5 py-2 text-sm font-medium;
 }
 
 @font-face {

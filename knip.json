@@ -1,0 +1,4 @@
+{
+  "ignore": ["./postcss.config.cjs", "./vite.config.ts"],
+  "ignoreDependencies": ["autoprefixer", "vite-tsconfig-paths"]
+}

@@ -1,19 +1,3 @@
-import OnekxImg from "@/img/partners/1kx.svg";
-// Investors
-import AcadArenaImg from "@/img/partners/AcadArena.svg";
-import AndrewGreenImg from "@/img/partners/AndrewGreen.svg";
-import BlackPoolImg from "@/img/partners/BlackPool.svg";
-import DefiVaderImg from "@/img/partners/DefiVader.svg";
-import DigitalStrategiesImg from "@/img/partners/DigitalStrategies.png";
-import IncentiveDesignTheoryImg from "@/img/partners/IncentiveDesignTheory.svg";
-import JasonChoiImg from "@/img/partners/JasonChoi.svg";
-import JihoImg from "@/img/partners/Jiho.svg";
-import MeritCircleImg from "@/img/partners/MeritCircle.svg";
-import Metat8Img from "@/img/partners/Metat8.svg";
-import NeonImg from "@/img/partners/Neon.svg";
-import ReadyPlayerImg from "@/img/partners/ReadyPlayer.svg";
-import RyanDelphiImg from "@/img/partners/RyanDelphi.svg";
-
 // MAGIC
 import BinanceImg from "@/img/magic-list/binance.svg";
 import CoinbaseImg from "@/img/magic-list/coinbase.svg";
@@ -123,65 +107,6 @@ export const tweets = [
     ),
   },
 ] as const;
-
-export const partners = [
-  {
-    name: "1kx",
-    image: OnekxImg,
-  },
-  {
-    name: "BlackPool",
-    image: BlackPoolImg,
-  },
-  {
-    name: "NEON DAO",
-    image: NeonImg,
-  },
-  {
-    name: "AcadArena",
-    image: AcadArenaImg,
-  },
-  {
-    name: "Ready Player DAO",
-    image: ReadyPlayerImg,
-  },
-  {
-    name: "Merit Circle",
-    image: MeritCircleImg,
-  },
-  {
-    name: "Incentive Design Theory",
-    image: IncentiveDesignTheoryImg,
-  },
-  {
-    name: "Jiho",
-    image: JihoImg,
-  },
-  {
-    name: "Jason Choi",
-    image: JasonChoiImg,
-  },
-  {
-    name: "Ryan Delphi",
-    image: RyanDelphiImg,
-  },
-  {
-    name: "Andrew Green",
-    image: AndrewGreenImg,
-  },
-  {
-    name: "Defi Vader",
-    image: DefiVaderImg,
-  },
-  {
-    name: "Metat8",
-    image: Metat8Img,
-  },
-  {
-    name: "Digital Strategies",
-    image: DigitalStrategiesImg,
-  },
-];
 
 export const socials = [
   {
