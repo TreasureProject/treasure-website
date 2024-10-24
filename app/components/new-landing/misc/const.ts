@@ -10,9 +10,9 @@ export const LINKS = {
   DEVELOPERS:
     "https://docs.treasure.lol/ecosystem/builders-program/introduction?utm_source=marketing_site",
   APP: "https://app.treasure.lol?utm_source=marketing_site",
+  GAMES: "https://app.treasure.lol/games?utm_source=marketing_site",
   CREATORS:
     "https://go.treasure.lol/creator-application?utm_source=marketing_site",
-  GAMES: "https://app.treasure.lol/games?utm_source=marketing_site",
   MARKET: "https://market.treasure.lol/?utm_source=marketing_site",
   MAGICSWAP: "https://magicswap.lol/?utm_source=marketing_site",
   MAGICSWAP_DOCS:
@@ -26,5 +26,5 @@ export const LINKS = {
   CAREERS: "https://jobs.treasure.lol?utm_source=marketing_site",
   GOVERNANCE: "https://forum.treasure.lol?utm_source=marketing_site",
   SNAPSHOT: "https://vote.treasure.lol?utm_source=marketing_site",
-  BRIDGEWORLD: "https://bridgeworld.treasure.lol?utm_source=marketing_site",
+  BRIDGEWORLD: "https://bridgeworld.gg?utm_source=marketing_site",
 };

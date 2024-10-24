@@ -121,6 +121,7 @@ import {
   XIcon,
   UsersIcon,
 } from "~/components/Icons";
+import { LINKS, SOCIAL } from "./components/new-landing/misc/const";
 
 export const teams = [
   "Core",
@@ -545,7 +546,7 @@ export const infrastructures = [
     description:
       "Play, collect, trade, compete, and discover your new favorite games on Treasure.",
     buttonDescription: "Visit App",
-    href: "https://app.treasure.lol",
+    href: LINKS.APP,
   },
   {
     name: "Magicswap",
@@ -553,7 +554,7 @@ export const infrastructures = [
     description:
       "Magicswap powers the cross-game economy by supporting the trading of native tokens for games powererd by Treasure with each liquidity pool using MAGIC as the base pair.",
     buttonDescription: "Visit Magicswap",
-    href: "https://magicswap.lol",
+    href: LINKS.MAGICSWAP,
   },
   {
     name: "Economy",
@@ -561,7 +562,7 @@ export const infrastructures = [
     description:
       "Bridgeworld powers the shared economy for Treasure through a generalised economic framework designed to foster cross-metaverse relationships and resource sharing.",
     buttonDescription: "Discover Bridgeworld",
-    href: "https://bridgeworld.treasure.lol",
+    href: LINKS.BRIDGEWORLD,
   },
 ];
 
@@ -596,7 +597,7 @@ export const IndexCTA = [
     name: "Games",
     description: "Games powered by Treasure through MAGIC.",
     icon: <CartridgesIcon className="h-8 w-8" aria-hidden="true" />,
-    href: "https://app.treasure.lol/",
+    href: LINKS.GAMES,
     isExternal: true,
   },
   {
@@ -606,14 +607,14 @@ export const IndexCTA = [
     icon: (
       <MagicLogoIcon className="h-7 w-7 text-ruby-900" aria-hidden="true" />
     ),
-    href: "https://app.treasure.lol",
+    href: LINKS.APP,
     isExternal: true,
   },
   {
     name: "Magicswap",
     description: "Magicswap powers the cross-game economy.",
     icon: <AMMIcon className="h-8 w-8" aria-hidden="true" />,
-    href: "https://magicswap.lol/",
+    href: LINKS.MAGICSWAP,
     isExternal: true,
   },
 ];
@@ -820,12 +821,12 @@ export type CartridgeT = (typeof cartridges)[number];
 export const socials = [
   {
     name: "Discord",
-    href: "http://discord.gg/treasuredao",
+    href: SOCIAL.DISCORD,
     icon: (props: { className?: string }) => <DiscordIcon {...props} />,
   },
   {
     name: "X",
-    href: "https://x.com/Treasure_DAO",
+    href: SOCIAL.TWITTER,
     icon: (props: { className?: string }) => <XIcon {...props} />,
   },
 ];
