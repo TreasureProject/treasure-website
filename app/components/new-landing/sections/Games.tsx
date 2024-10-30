@@ -25,6 +25,9 @@ import REALM_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Realm_
 import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Synergy_Land_Cover.webp";
 import SYNERGY_LAND_BACKGROUND from "public/img/new-landing/game-backgrounds/Synergy_Land_Game_Background.webp";
 
+import WANDERERS_COVER from "public/img/new-landing/game-covers/Wanderers_Game_Cover.webp";
+import WANDERERS_BACKGROUND from "public/img/new-landing/game-backgrounds/Wanderers_Game_Background.webp";
+
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { GamesGrid } from "../misc/Svgs";
@@ -74,6 +77,12 @@ const games = [
     cover: KOTE_COVER,
     background: KOTE_BACKGROUND,
     link: "https://app.treasure.lol/games/kote",
+  },
+  {
+    name: "Wanderers",
+    cover: WANDERERS_COVER,
+    background: WANDERERS_BACKGROUND,
+    link: "https://app.treasure.lol/games/wanderers",
   },
 ] as const;
 
