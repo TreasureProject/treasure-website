@@ -28,6 +28,12 @@ import SYNERGY_LAND_BACKGROUND from "public/img/new-landing/game-backgrounds/Syn
 import WANDERERS_COVER from "public/img/new-landing/game-covers/Wanderers_Game_Cover.webp";
 import WANDERERS_BACKGROUND from "public/img/new-landing/game-backgrounds/Wanderers_Game_Background.webp";
 
+import BRIDGEWORLD_COVER from "public/img/new-landing/game-covers/Bridgeworld_Game_Cover.webp";
+import BRIDGEWORLD_BACKGROUND from "public/img/new-landing/game-backgrounds/Bridgeworld_Game_Background.webp";
+
+import UNCHAINED_COVER from "public/img/new-landing/game-covers/Unchained_Game_Cover.webp";
+import UNCHAINED_BACKGROUND from "public/img/new-landing/game-backgrounds/Unchained_Game_Background.webp";
+
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { GamesGrid } from "../misc/Svgs";
@@ -83,6 +89,18 @@ const games = [
     cover: WANDERERS_COVER,
     background: WANDERERS_BACKGROUND,
     link: "https://app.treasure.lol/games/wanderers",
+  },
+  {
+    name: "Bridgeworld",
+    cover: BRIDGEWORLD_COVER,
+    background: BRIDGEWORLD_BACKGROUND,
+    link: "https://app.treasure.lol/games/bridgeworld",
+  },
+  {
+    name: "Unchained",
+    cover: UNCHAINED_COVER,
+    background: UNCHAINED_BACKGROUND,
+    link: "https://app.treasure.lol/games/unchained",
   },
 ] as const;
 
