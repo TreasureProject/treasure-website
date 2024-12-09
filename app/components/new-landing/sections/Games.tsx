@@ -229,7 +229,7 @@ const Games = () => {
         target="_blank"
         className="relative z-10 mt-8 flex w-full items-center justify-center gap-1.5 font-semibold leading-[160%] transition-opacity hover:opacity-75"
       >
-        View All Games <ChevronRightIcon className="w-4" />
+        All Games <ChevronRightIcon className="w-4" />
       </Link>
     </div>
   );

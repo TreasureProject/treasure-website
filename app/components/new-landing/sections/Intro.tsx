@@ -12,7 +12,7 @@ const Intro = () => {
             Pioneering a new era of gaming
           </h1>
           <p className="font-semibold uppercase leading-[150%] text-ruby-900">
-            Powered by $MAGIC
+            Powered by MAGIC
           </p>
         </div>
         <div className="max-w-md space-y-7 md:space-y-12">

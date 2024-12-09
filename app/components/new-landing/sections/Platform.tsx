@@ -103,11 +103,11 @@ const Platform = () => {
             className="inline-block h-[42px]"
           />
           <h1 className="text-3xl font-black leading-[105%] sm:text-5xl">
-            AMM for Games <br className="hidden xl:block" /> and Culture
+            The Imagination AMM
           </h1>
           <p className="inline-block max-w-md leading-[150%] text-night-400">
-            Permissionless AMM with universal token compatibility powering
-            in-game exchanges (GEX) and more
+            Permissionless AMM with universal token compatibility. Powering
+            in-game exchanges (GEX), NFT memecoins, and more.
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.MAGICSWAP}>

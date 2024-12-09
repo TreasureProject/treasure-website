@@ -135,7 +135,7 @@ const Bridgeworld = () => {
               </div>
             </div>
             <p className="font-medium leading-[150%]">
-              $MAGIC flows throughout Treasure to power and connect our gaming
+              MAGIC is the native token of Treasure that powers the entire
               network.
             </p>
             <div className="flex gap-6">
@@ -145,7 +145,7 @@ const Bridgeworld = () => {
                 className="w-max"
                 color="ruby"
               >
-                Get $MAGIC
+                Get MAGIC
               </Button>
               <Button
                 as="a"
@@ -154,7 +154,6 @@ const Bridgeworld = () => {
                 href={LINKS.WHAT_IS_MAGIC}
               >
                 Learn More
-                <ChevronRightIcon className="w-4" />
               </Button>
             </div>
           </div>
