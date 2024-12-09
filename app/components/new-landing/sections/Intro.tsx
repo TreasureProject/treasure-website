@@ -2,6 +2,7 @@ import VIDEO from "~/../public/img/new-landing/Treasure_Trailer_Website_02102024
 
 import { VideoCutOff } from "../misc/Svgs";
 import Button from "../Button";
+import { Link } from "@remix-run/react";
 
 const Intro = () => {
   return (
@@ -12,16 +13,30 @@ const Intro = () => {
             Pioneering a new era of gaming
           </h1>
           <p className="font-semibold uppercase leading-[150%] text-ruby-900">
-            Powered by MAGIC
+            Powered by $MAGIC
           </p>
         </div>
         <div className="max-w-md space-y-7 md:space-y-12">
           <p className="leading-[150%] text-new-night-700">
-            We’re shaping a future where developers, creators, and players can
-            build new experiences together. Where you can truly own your assets.
-            And share in the collective growth of our ecosystem.
+            {/* We’re creating a new paradigm where builders and players can create
+            new experiences together. Where value is unlocked, flowing across
+            the ecosystem. And where the future of interactive entertainment
+            will live.
             <br />
-            <br /> All made possible at Treasure.
+            <br />  */}
+            Treasure is a powerful EVM blockchain built for the next generation
+            of gaming. Leading tech. A global, passionate community. Governed by
+            the ecosystem.
+            <br />
+            <br />
+            Treasure is powered by its ecosystem token{" "}
+            <Link
+              to="https://docs.treasure.lol/magic"
+              className="text-black underline underline-offset-4"
+            >
+              MAGIC
+            </Link>{" "}
+            and is a member of the ZKsync Elastic Chain.
           </p>
         </div>
       </div>
@@ -53,12 +68,11 @@ const Intro = () => {
             We level up game makers
           </h1>
           <p className="max-w-lg text-center leading-[150%] text-new-night-700 xl:max-w-full xl:text-left">
-            Our community, end-to-end tech stack, and novel approach to
-            publishing gives independent game builders everything they need to
-            be successful.
+            Our end-to-end tech stack and distribution flywheel gives game
+            builders everything they need to win.
           </p>
           <Button color="ruby" className="w-max" to="/build">
-            Build with Treasure
+            Build on Treasure
           </Button>
         </div>
       </div>

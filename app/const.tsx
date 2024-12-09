@@ -387,26 +387,9 @@ export const tweets = [
     ),
     type: "builder",
   },
-  {
-    profileImage: SmasheImg,
-    username: "Tales of Elleria",
-    userlink: "https://twitter.com/Smashe__",
-    handle: "Smashe - Co Founder",
-    link: "https://twitter.com/TalesofElleria",
-    tweet: () => (
-      <>
-        Building with Treasure has been a fantastic experience. The sincerity
-        behind their support, as well as opportunities provided is unparalleled
-        throughout web3. From social outreach to marketplace integration,
-        Treasure has been swift and helpful in all aspects.
-      </>
-    ),
-    type: "builder",
-  },
 ] as const;
 
 export const playerTweets = tweets.filter((tweet) => tweet.type === "player");
-
 export const builderTweets = tweets.filter((tweet) => tweet.type === "builder");
 
 export const communityInfrastructure = [
@@ -437,9 +420,9 @@ export const WhyTreasureCardList = [
     href: "https://docs.treasure.lol/games/game-builders-program",
   },
   {
-    name: "Build with Treasure",
+    name: "Build on Treasure",
     description:
-      "Interested in joining Treasure's Builders Program? Submit your application.",
+      "Interested in joining the Treasure Builders Program? Submit your application.",
     buttonDescription: "Learn more",
     href: "https://treasure.deform.cc/ecosystem-application",
   },
@@ -671,7 +654,7 @@ export const navigation = [
         isExternal: true,
       },
       {
-        name: "Developer Documentation",
+        name: "Docs",
         href: "https://docs.treasure.lol/",
         isExternal: true,
       },

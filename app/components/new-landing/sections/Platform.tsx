@@ -37,7 +37,7 @@ const Platform = () => {
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.APP}>
-              Explore Treasure
+              Launch App
             </Button>
             {/* <Button color="honey" className="w-max">
               Download Launcher{" "}
@@ -83,7 +83,7 @@ const Platform = () => {
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.MARKET}>
-              Trade Items
+              Visit Market
             </Button>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Platform = () => {
           </p>
           <div className="flex gap-3 sm:flex-row">
             <Button as="a" color="ruby" href={LINKS.MAGICSWAP}>
-              Swap
+              Start Trading
             </Button>
             <Button as="a" color="honey" href={LINKS.MAGICSWAP_DOCS}>
               Learn More{" "}

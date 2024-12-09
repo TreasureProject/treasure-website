@@ -78,7 +78,7 @@ const BaseCard = ({
     <h1 className="lg:max-w-auto relative z-20 max-w-[80%] pb-4 text-2xl font-bold leading-[105%] text-new-ruby-900 sm:pb-6 md:text-3xl">
       {title}
     </h1>
-    <p className="relative z-20 max-w-[480px] text-base leading-[150%] text-new-night-700 md:text-lg">
+    <p className="relative z-20 text-lg leading-[150%] text-new-night-700 md:text-xl">
       {description}
     </p>
   </div>
@@ -131,27 +131,19 @@ const BuildOnTreasure = () => {
         <div className="mx-auto flex max-w-2xl flex-col items-center space-y-7">
           <h1 className="landing-h1  text-new-ruby-900">Build on Treasure</h1>
           <p className="text-center leading-[150%] text-new-night-700">
-            Arming developers and game makers with everything they need to be
-            successful since 2021.
+            It's inevitable — the next generation of games will be onchain and
+            player-driven. And you're going to build it on Treasure.
           </p>
           <div className="flex gap-6">
             <Button color="ruby" className="w-max" to="/build">
               Start Building
             </Button>
-            <Button
-              as="a"
-              color="float"
-              className="w-max text-new-ruby-900"
-              href={LINKS.LITEPAPER}
-            >
-              Read Litepaper
-            </Button>
           </div>
         </div>
         <div className="grid-cols-7 gap-6 space-y-6 lg:grid lg:space-y-0">
           <BaseCard
-            title="Gaming L2"
-            description="Fast, affordable, and powered by the Treasure Chain and a new network of Infinity Chains."
+            title="Treasure Chain"
+            description="L2 built for next gen gaming. Fully integrated tech stack. Fast. Affordable. And packed with players."
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
@@ -160,7 +152,7 @@ const BuildOnTreasure = () => {
           </BaseCard>
           <BaseCard
             title="Treasure Development Kit"
-            description="Enabling Treasure's platform features in-game with multi-platform support, deployable smart contracts, and access to identity, analytics, and LiveOps tooling."
+            description="Bring the blockchain in-game. Don't just do what's already been done before, move the needle on Treasure."
             className="col-span-4"
           >
             <div className="absolute inset-0 h-full overflow-hidden rounded-2xl">
@@ -169,8 +161,8 @@ const BuildOnTreasure = () => {
           </BaseCard>
 
           <BaseCard
-            title="Treasure Identity & Login"
-            description="Seamless onboarding to bring players into your game. Powerful segmentation tools to personalize player experiences."
+            title="Treasure Connect"
+            description="Seamless, familiar onboarding for players of all stripes. Make a great game and bring it to the world."
             className="col-span-4"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">
@@ -227,7 +219,7 @@ const BuildOnTreasure = () => {
           </BaseCard>
           <BaseCard
             title="... and much more"
-            description="Native marketplace built specifically for gaming, a powerful next generation AMM, streamlined payments, robust analytics... the list goes on."
+            description="Seamless interoperability, massive distribution, in-game exchanges, powerful builder-player flywheel... the list goes on."
             className="col-span-3"
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl">

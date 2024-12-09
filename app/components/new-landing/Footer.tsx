@@ -12,37 +12,22 @@ import { LINKS, SOCIAL } from "./misc/const";
 
 const FooterLinks = [
   {
-    title: "Build",
+    title: "Developers",
     links: [
       {
-        title: "Build with Treasure",
+        title: "Build on Treasure",
         url: "/build",
         external: false,
       },
       {
-        title: "Game Builders Program",
-        url: LINKS.DEVELOPERS,
-        external: true,
-      },
-      {
-        title: "GitHub",
-        url: LINKS.GITHUB,
-        external: true,
-      },
-      {
-        title: "Developer Documentation",
+        title: "Docs",
         url: LINKS.DOCUMENTATION,
-        external: true,
-      },
-      {
-        title: "Apply to Partner",
-        url: LINKS.PARTNER,
         external: true,
       },
     ],
   },
   {
-    title: "Play",
+    title: "Ecosystem",
     links: [
       {
         title: "Games",
@@ -50,13 +35,18 @@ const FooterLinks = [
         external: true,
       },
       {
-        title: "Treasure App",
-        url: LINKS.APP,
+        title: "Treasurescan",
+        url: LINKS.EXPLORER,
         external: true,
       },
       {
         title: "Treasure Market",
         url: LINKS.MARKET,
+        external: true,
+      },
+      {
+        title: "Magicswap",
+        url: LINKS.MAGICSWAP,
         external: true,
       },
       {
@@ -75,28 +65,13 @@ const FooterLinks = [
         external: false,
       },
       {
-        title: "Team",
-        url: "/team",
-        external: false,
-      },
-      {
         title: "Brand Assets",
         url: "/brand-assets",
         external: false,
       },
       {
-        title: "What is MAGIC",
+        title: "MAGIC",
         url: LINKS.WHAT_IS_MAGIC,
-        external: true,
-      },
-      {
-        title: "Newsletter",
-        url: LINKS.SUBSTACK,
-        external: true,
-      },
-      {
-        title: "Careers",
-        url: LINKS.CAREERS,
         external: true,
       },
       {

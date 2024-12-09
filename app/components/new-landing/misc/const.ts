@@ -10,6 +10,8 @@ export const LINKS = {
   DEVELOPERS:
     "https://docs.treasure.lol/ecosystem/builders-program/introduction?utm_source=marketing_site",
   APP: "https://app.treasure.lol?utm_source=marketing_site",
+  ABOUT: "https://docs.treasure.lol/introduction?utm_source=marketing_site",
+  EXPLORER: "https://treasurescan.io?utm_source=marketing_site",
   GAMES: "https://app.treasure.lol/games?utm_source=marketing_site",
   CREATORS:
     "https://go.treasure.lol/creator-application?utm_source=marketing_site",

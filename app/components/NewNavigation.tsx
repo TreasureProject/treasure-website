@@ -40,29 +40,19 @@ const dropdownItems: DropDownItems[] = [
     label: "About",
     items: [
       {
-        label: "About Us",
-        type: "internal",
-        target: "/about",
+        label: "About Treasure",
+        type: "external",
+        target: LINKS.ABOUT,
       },
       {
         label: "What is MAGIC?",
         type: "external",
         target: LINKS.WHAT_IS_MAGIC,
       },
-      // {
-      //   label: "Infrastructure",
-      //   type: "internal",
-      //   target: "/infrastructure",
-      // },
       {
-        label: "Team",
+        label: "Contributors",
         type: "internal",
         target: "/team",
-      },
-      {
-        label: "Careers",
-        type: "external",
-        target: LINKS.CAREERS,
       },
       {
         label: "Brand Assets",
@@ -72,23 +62,13 @@ const dropdownItems: DropDownItems[] = [
     ],
   },
   {
-    label: "Play",
+    label: "Games",
     target: LINKS.APP,
     type: "external",
   },
   {
-    label: "Build",
-    target: "/build",
-    type: "internal",
-  },
-  {
     label: "Ecosystem",
     items: [
-      {
-        label: "Treasure App",
-        type: "external",
-        target: LINKS.APP,
-      },
       {
         label: "Treasure Market",
         type: "external",
@@ -100,11 +80,16 @@ const dropdownItems: DropDownItems[] = [
         target: LINKS.MAGICSWAP,
       },
       {
-        label: "Developer Documentation",
+        label: "Docs",
         type: "external",
         target: LINKS.DOCUMENTATION,
       },
     ],
+  },
+  {
+    label: "Build",
+    target: "/build",
+    type: "internal",
   },
   {
     label: "Community",
@@ -256,7 +241,7 @@ const NewNavigation = () => {
             </a>
           </div>
           <Button as="a" color="ruby" href={LINKS.APP}>
-            Start Playing
+            Launch App
           </Button>
         </div>
         <button
@@ -344,10 +329,7 @@ const NewNavigation = () => {
             </div>
             <div className="space-y-2 border-t border-white/5 p-6 pb-0 sm:p-8">
               <Button as="a" color="ruby" href={LINKS.APP}>
-                Start Playing{" "}
-              </Button>
-              <Button color="honey" to="/build">
-                Start Building
+                Launch App{" "}
               </Button>
               {/* <Button color="honey">Read Litepaper</Button> */}
               <div className="flex items-center gap-4 pt-2 text-new-night-100">
