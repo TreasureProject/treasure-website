@@ -150,11 +150,8 @@ const Footer = () => {
           </div>
           <div className="relative bottom-0 right-0 flex flex-col gap-6 md:items-end md:pl-24">
             <div className="w-max space-y-4">
-              <Button as="a" color="ruby" href={LINKS.GAMES}>
-                Start Playing
-              </Button>
-              <Button color="honey" to="/build">
-                Build with Treasure
+              <Button as="a" color="ruby" href={LINKS.APP}>
+                Launch App
               </Button>
             </div>
             <div className="bottom-0 right-0 flex gap-1.5 xl:absolute">
