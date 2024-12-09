@@ -1,7 +1,7 @@
 export function getSocialMetas({
   url,
   title = generateTitle(),
-  description = "Treasure is building a gaming and entertainment powerhouse, built and owned by all.",
+  description = "The decentralized game console. Discover the MAGIC of play.",
   keywords = "Treasure, gaming, games, web3, NFT, DeFi, GameFi, community, DAO, TreasureDAO",
   image,
 }: {
@@ -16,10 +16,12 @@ export function getSocialMetas({
     description,
     keywords,
     image,
-    "og:url": url,
     "og:title": title,
     "og:description": description,
     "og:image": image,
+    "og:type": "website",
+    "og:site_name": "Treasure",
+    "og:url": url,
     "twitter:card": image ? "summary_large_image" : "summary",
     "twitter:creator": "@Treasure_DAO",
     "twitter:site": "@Treasure_DAO",
@@ -47,7 +49,7 @@ export function generateTitle(title?: string) {
   const prettifiedTitle = prettify(removeStartingSlash(title || ""));
   return prettifiedTitle !== ""
     ? `${prettifiedTitle} | Treasure`
-    : "Treasure | The Decentralized Gaming Ecosystem";
+    : "Treasure | Decentralized Game Console";
 }
 
 function removeTrailingSlash(s: string) {
