@@ -70,6 +70,11 @@ const dropdownItems: DropDownItems[] = [
     label: "Ecosystem",
     items: [
       {
+        label: "Ecosystem Integrations",
+        type: "internal",
+        target: "/ecosystem",
+      },
+      {
         label: "Treasure Market",
         type: "external",
         target: LINKS.MARKET,
@@ -145,7 +150,7 @@ const NewNavigation = () => {
   return (
     <div
       className={twMerge(
-        "fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6",
+        "fixed left-1/2 top-0 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6",
         openHamburger && "bg-new-night-1200 lg:bg-transparent",
         !visible && "pointer-events-none opacity-0"
       )}
@@ -165,7 +170,7 @@ const NewNavigation = () => {
                   >
                     {item.label}
                     <ChevronDownIcon className="w-3 transition-transform group-hover:-rotate-180" />
-                    <div className="absolute top-0 left-0 hidden pt-[72px] group-hover:block">
+                    <div className="absolute left-0 top-0 hidden pt-[72px] group-hover:block">
                       <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-2xl lg:backdrop-blur-lg">
                         {item.items &&
                           item.items.map((item, index) => (
@@ -296,7 +301,7 @@ const NewNavigation = () => {
                               <ChevronDownIcon className="w-4 text-new-night-400 transition-transform group-data-[state=open]:-rotate-180" />
                             </RA.Trigger>
                           </RA.Header>
-                          <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                          <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
                             {item.items.map((item, index) => (
                               <Link
                                 to={item.target}
