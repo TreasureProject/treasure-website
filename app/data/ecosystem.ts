@@ -20,7 +20,8 @@ export const ecosystem = [
   {
     name: "Blightfell",
     type: "Game",
-    description: "",
+    description:
+      "Blightfell is the first web3 deckbuilding roguelike game where players battle through randomly generated maps and upgrade their gear to dominate the leaderboards. ",
     url: "knightsoftheether.com",
     gameUrl: "app.treasure.lol/games/blightfell",
     image: "/img/ecosystem/blightfell.webp",
@@ -29,7 +30,7 @@ export const ecosystem = [
     name: "Brave",
     type: "Wallet",
     description:
-      "Brave is on a mission to protect your privacy online. We make a suite of internet privacy tools—including our browser and search engine—that shield you from the ads, trackers, and other creepy stuff trying to follow you across the web.",
+      "Brave is on a mission to protect your privacy online, featuring a browser, search, engine, and a suite of internet privacy tools that shield you from ads, trackers, and more.",
     url: "brave.com",
     image: "/img/ecosystem/brave.webp",
   },
@@ -43,7 +44,8 @@ export const ecosystem = [
   {
     name: "Calamity",
     type: "Game",
-    description: "",
+    description:
+      "Calamity is a retro-style 2D top-down sandbox MMORPG with real-time combat.",
     url: "hub.xyz/calamity",
     gameUrl: "app.treasure.lol/games/calamity",
     image: "/img/ecosystem/calamity.webp",
@@ -82,7 +84,8 @@ export const ecosystem = [
   {
     name: "Dreamrunner",
     type: "Game",
-    description: "",
+    description:
+      "Dreamrunner is an upcoming multiplayer action RPG from Merlyn Labs. Defeat Delves, unlock upgrades, and make your dreams come true.",
     url: "x.com/DreamrunnerGG",
     gameUrl: "app.treasure.lol/games/dreamrunner",
     image: "/img/ecosystem/dreamrunner.webp",
@@ -184,7 +187,8 @@ export const ecosystem = [
   {
     name: "Smithonia",
     type: "Game",
-    description: "",
+    description:
+      "Smithonia is a dark-fantasy universe MMORPG and MOBA, where Humans, Elves, Orcs and Dwarves vie for control of the land.",
     url: "smithonia.com",
     gameUrl: "app.treasure.lol/games/smithonia",
     image: "/img/ecosystem/smithonia.webp",
@@ -218,7 +222,7 @@ export const ecosystem = [
   {
     name: "Treasure Market",
     type: "NFT",
-    description: "",
+    description: "Treasure Market is the native NFT marketplace of Treasure.",
     url: "market.treasure.lol",
     image: "/img/ecosystem/treasure-market.webp",
   },
@@ -233,7 +237,8 @@ export const ecosystem = [
   {
     name: "Unchained",
     type: "Game",
-    description: "",
+    description:
+      "Unchained is a unique PvP dungeon crawler extraction looter that you can play from the seat of your desk, a bus, or a toilet.",
     url: "unchnd.xyz",
     gameUrl: "app.treasure.lol/games/unchained",
     image: "/img/ecosystem/unchained.webp",
@@ -258,7 +263,8 @@ export const ecosystem = [
   {
     name: "Wanderers",
     type: "Game",
-    description: "",
+    description:
+      "Wanderers is a F2P action roguelite game that combines unique deckbuilding mechanics with rich sci-fi storytelling.",
     url: "wanderers.ai",
     gameUrl: "app.treasure.lol/games/wanderers",
     image: "/img/ecosystem/wanderers.webp",
