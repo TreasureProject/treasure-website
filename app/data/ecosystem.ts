@@ -3,7 +3,7 @@ export const ecosystem = [
     name: "The Beacon",
     type: "Game",
     description:
-      "The Beacon is a fantasy action roguelite RPG. Venture into dungeons, defeat evils, expand the Beacon's protective light & keep humanity safe!",
+      "The Beacon is a fantasy action roguelite RPG. Venture into dungeons, defeat evils, and expand the Beacon's protective light to keep humanity safe!",
     url: "thebeacon.gg",
     gameUrl: "app.treasure.lol/games/the-beacon",
     image: "/img/ecosystem/the-beacon.webp",
@@ -12,7 +12,7 @@ export const ecosystem = [
     name: "Bitmates",
     type: "Game",
     description:
-      "Explore, gather resources, and interact with other players in the world of Bitmates. An MMO where monkeys rule the lands.",
+      "Bitmates is an MMORPG with an expansive world full of fun and adventure! Complete missions, defeat daunting enemies, gather precious resources, and meet friendly NPCs.",
     url: "bitmates.io",
     gameUrl: "app.treasure.lol/games/bitmates",
     image: "/img/ecosystem/bitmates.webp",
@@ -21,7 +21,7 @@ export const ecosystem = [
     name: "Blightfell",
     type: "Game",
     description:
-      "Blightfell is the first web3 deckbuilding roguelike game where players battle through randomly generated maps and upgrade their gear to dominate the leaderboards. ",
+      "Blightfell is a mobile, PvP Autobattler with a twist. Select the best cards as you fight through epic maps and upgrade your Knight's gear to climb the leaderboards.",
     url: "knightsoftheether.com",
     gameUrl: "app.treasure.lol/games/blightfell",
     image: "/img/ecosystem/blightfell.webp",
@@ -45,7 +45,7 @@ export const ecosystem = [
     name: "Calamity",
     type: "Game",
     description:
-      "Calamity is a retro-style 2D top-down sandbox MMORPG with real-time combat.",
+      "Calamity is a 2D top-down sandbox MMORPG with real-time combat. Explore dungeons, master diverse skills, trade valuable loot, and engage in various dungeon modes with boss fights.",
     url: "hub.xyz/calamity",
     gameUrl: "app.treasure.lol/games/calamity",
     image: "/img/ecosystem/calamity.webp",
@@ -85,7 +85,7 @@ export const ecosystem = [
     name: "Dreamrunner",
     type: "Game",
     description:
-      "Dreamrunner is an upcoming multiplayer action RPG from Merlyn Labs. Defeat Delves, unlock upgrades, and make your dreams come true.",
+      "Dreamrunner is a multiplayer ARPG from the studio behind Knights of the Ether. Upgrade Equipment, select Fate Cards, and improve your Skills in this fast-paced dungeon crawler.",
     url: "x.com/DreamrunnerGG",
     gameUrl: "app.treasure.lol/games/dreamrunner",
     image: "/img/ecosystem/dreamrunner.webp",
@@ -197,7 +197,7 @@ export const ecosystem = [
     name: "Smolbound",
     type: "Game",
     description:
-      "The world’s first ever-growing life sim RPG with a Smol twist.",
+      "The world’s first ever-growing life sim RPG with a Smol twist. Craft structures and tools, fish with other characters, farm for resources and grow your own weapons.",
     url: "smolbound.com",
     gameUrl: "app.treasure.lol/games/smolbound",
     image: "/img/ecosystem/smolbound.webp",
@@ -206,7 +206,7 @@ export const ecosystem = [
     name: "Synergy Land",
     type: "Game",
     description:
-      "Synergy Land is an Action RPG game that integrates MOBA mechanics.",
+      "Synergy Land is an Action RPG set in an explorable fantasy world. Explore dungeons and undertake great adventures against powerful creatures to collect unique NFTs.",
     url: "synergyland.live",
     gameUrl: "app.treasure.lol/games/synergy-land",
     image: "/img/ecosystem/synergy-land.webp",
@@ -247,7 +247,7 @@ export const ecosystem = [
     name: "Variance",
     type: "Game",
     description:
-      "Variance is an action roguelite + metroidvanian powered by a digital economy. Explorer new levels, master special attacks and discover her legacy.",
+      "Variance is a F2P roguelite and metroidvania powered by a digital economy. Explore vast, interconnected dungeons, face challenging enemies, and unlock powerful abilities.",
     url: "playvariance.com",
     gameUrl: "app.treasure.lol/games/variance",
     image: "/img/ecosystem/variance.webp",
@@ -264,7 +264,7 @@ export const ecosystem = [
     name: "Wanderers",
     type: "Game",
     description:
-      "Wanderers is a F2P action roguelite game that combines unique deckbuilding mechanics with rich sci-fi storytelling.",
+      "Wanderers is a F2P sci-fi roguelite game with novel deck building elements. Hack, slash, shoot and dash your way through this high stakes adventure.",
     url: "wanderers.ai",
     gameUrl: "app.treasure.lol/games/wanderers",
     image: "/img/ecosystem/wanderers.webp",
@@ -273,7 +273,7 @@ export const ecosystem = [
     name: "Zeeverse",
     type: "Game",
     description:
-      "Zeeverse is a monster-tamer MMORPG set in an indigenous fantasy world.",
+      "Zeeverse is a monster-tamer MMORPG set in an indigenous fantasy world. Explore a mythical Spirit Realm, train your Zees, and take part in a rich onchain economy.",
     url: "zee-verse.com",
     gameUrl: "app.treasure.lol/games/zeeverse",
     image: "/img/ecosystem/zeeverse.webp",
