@@ -70,7 +70,7 @@ const dropdownItems: DropDownItems[] = [
     label: "Ecosystem",
     items: [
       {
-        label: "Ecosystem Integrations",
+        label: "Ecosystem Apps",
         type: "internal",
         target: "/ecosystem",
       },
