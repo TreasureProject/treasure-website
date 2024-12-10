@@ -5,7 +5,7 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "npm run codegen && remix build && remix-sitemap",
+    "build": "npm run codegen && remix build",
     "build:remix": "remix build",
     "build:sitemap": "remix-sitemap",
     "dev": "npm-run-all --parallel dev:*",
