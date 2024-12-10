@@ -88,7 +88,7 @@ const AppMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
         {filteredEcosystem
           .sort(() => Math.random() - 0.5)
           .map((app, i) => (
-            <EcosystemApp app={app} key={app} index={i} />
+            <EcosystemApp app={app} key={app.name} index={i} />
           ))}
       </div>
       {/* Needed for infinity loop */}
@@ -99,7 +99,7 @@ const AppMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
         )}
       >
         {filteredEcosystem.map((app, i) => (
-          <EcosystemApp app={app} key={app} index={i} />
+          <EcosystemApp app={app} key={app.name} index={i} />
         ))}
       </div>
     </div>
