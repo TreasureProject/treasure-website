@@ -1,8 +1,8 @@
 export function getSocialMetas({
   url,
   title = generateTitle(),
-  description = "The decentralized game console. Discover the MAGIC of play.",
-  keywords = "Treasure, gaming, games, web3, NFT, DeFi, GameFi, community, DAO, TreasureDAO",
+  description = "The decentralized game console. Discover the magic of play on Treasure.",
+  keywords = "Treasure, games, web3 gaming, play to earn, P2E, NFT, DeFi, GameFi, community, DAO, TreasureDAO, crypto gaming, metaverse",
   image,
 }: {
   image?: string;
