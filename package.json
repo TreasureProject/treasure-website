@@ -6,6 +6,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "npm run codegen && remix build",
+    "build:remix": "remix build",
+    "build:sitemap": "remix-sitemap",
     "dev": "npm-run-all --parallel dev:*",
     "dev:remix": "remix dev",
     "dev:codegen": "npm run codegen -- --watch",
@@ -53,6 +55,7 @@
     "react-i18next": "^12.2.0",
     "react-wrap-balancer": "^0.4.0",
     "remix-i18next": "^5.1.0",
+    "remix-sitemap": "^3.2.0",
     "remix-utils": "^6.0.0",
     "slugify": "^1.6.5",
     "swiper": "^11.0.5",
