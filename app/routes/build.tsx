@@ -9,7 +9,7 @@ import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import { arbitrumPartners, builderTweets } from "~/const";
+import { ecosystem } from "~/data/ecosystem";
 import LogomarkImg from "@/img/resources/treasure/logomark.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
 import Balancer from "react-wrap-balancer";
@@ -58,21 +58,25 @@ export const meta: MetaFunction = ({ parentsData }) => {
 
 export const headers: HeadersFunction = commonHeaders;
 
-const Partner = ({
-  partner,
+const EcosystemApp = ({
+  app,
   index,
 }: {
-  partner: (typeof arbitrumPartners)[number];
+  app: (typeof ecosystem)[number];
   index: number;
 }) => {
   return (
-    <div key={partner} className="mx-3 w-16 lg:mx-4">
-      <img src={partner} alt={`Partner ${index}`} />
+    <div key={app.name} className="mx-3 w-16 lg:mx-4">
+      <img src={app.image} alt={`App ${index}`} />
     </div>
   );
 };
 
-const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
+const AppMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
+  const filteredEcosystem = ecosystem.filter(
+    (app) => app.type.toLowerCase() != "game"
+  );
+
   return (
     <div className="relative flex flex-1 overflow-x-hidden [-webkit-mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)]">
       <div
@@ -81,10 +85,10 @@ const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
           to === "left" ? "animate-marquee" : "animate-marquee-left"
         )}
       >
-        {arbitrumPartners
+        {filteredEcosystem
           .sort(() => Math.random() - 0.5)
-          .map((partner, i) => (
-            <Partner partner={partner} key={partner} index={i} />
+          .map((app, i) => (
+            <EcosystemApp app={app} key={app} index={i} />
           ))}
       </div>
       {/* Needed for infinity loop */}
@@ -94,8 +98,8 @@ const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
           to === "left" ? "animate-marquee2" : "animate-marquee-left2"
         )}
       >
-        {arbitrumPartners.map((partner, i) => (
-          <Partner partner={partner} key={partner} index={i} />
+        {filteredEcosystem.map((app, i) => (
+          <EcosystemApp app={app} key={app} index={i} />
         ))}
       </div>
     </div>
@@ -309,9 +313,8 @@ export default function Build() {
                   Everything you need is on Treasure
                 </p>
                 <p className="text-sm text-night-700 sm:text-base">
-                  The Arbitrum ecosystem is vast and reaches beyond Treasure.
-                  It’s home to other great dapps, protocols, social platforms
-                  and has everything you need to build.
+                  The Treasure ecosystem is full of rich apps, developer tools,
+                  and games. And we're just getting started.
                 </p>
                 <div>
                   <CTAButton as="link" to="/ecosystem">
@@ -320,9 +323,9 @@ export default function Build() {
                 </div>
               </div>
               <div className="col-span-3 flex flex-col justify-evenly space-y-5 rounded-xl md:order-2 lg:space-y-10">
-                <PartnerMarquee />
-                <PartnerMarquee to="right" />
-                <PartnerMarquee />
+                <AppMarquee />
+                <AppMarquee to="right" />
+                <AppMarquee />
               </div>
             </div>
           </div>
