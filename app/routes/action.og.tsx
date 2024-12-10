@@ -3,11 +3,6 @@ import { badRequest } from "remix-utils";
 import { contenfulDeliverySdk } from "~/utils/client.server";
 
 import { generateOgImage } from "~/utils/og.server";
-import type { SitemapFunction } from "remix-sitemap";
-
-export const sitemap: SitemapFunction = () => ({
-  exclude: true,
-});
 
 export const OG_IMAGE_WIDTH = 1200;
 export const OG_IMAGE_HEIGHT = 620;

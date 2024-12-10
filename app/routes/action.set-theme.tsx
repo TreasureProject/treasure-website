@@ -3,11 +3,6 @@ import { json, redirect } from "@remix-run/node";
 
 import { getThemeSession } from "~/utils/theme.server";
 import { isTheme, Theme } from "~/utils/theme-provider";
-import type { SitemapFunction } from "remix-sitemap";
-
-export const sitemap: SitemapFunction = () => ({
-  exclude: true,
-});
 
 export const action = async ({ request }: ActionArgs) => {
   const themeSession = await getThemeSession(request);

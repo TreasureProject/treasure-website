@@ -1,11 +1,6 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { getTotalSupply, getUtilization } from "~/utils/stats";
-import type { SitemapFunction } from "remix-sitemap";
-
-export const sitemap: SitemapFunction = () => ({
-  exclude: true,
-});
 
 const fallback = 48_352_024;
 

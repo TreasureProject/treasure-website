@@ -2,11 +2,6 @@ import type { ActionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { badRequest } from "remix-utils";
 import { contenfulDeliverySdk } from "~/utils/client.server";
-import type { SitemapFunction } from "remix-sitemap";
-
-export const sitemap: SitemapFunction = () => ({
-  exclude: true,
-});
 
 const BASE_URL = "https://treasure.lol/blog";
 
