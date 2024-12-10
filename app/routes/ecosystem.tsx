@@ -1,18 +1,39 @@
 import { Badge } from "~/components/Badge";
 
+import { Icon } from "@radix-ui/react-select";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import { useSearchParams } from "@remix-run/react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "~/components/Dropdown";
+import { Layout } from "~/components/Layout";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/Select";
+import Button from "~/components/new-landing/Button";
+import { ecosystem } from "~/data/ecosystem";
 import type { RootLoaderData } from "~/root";
+import { commonHeaders } from "~/utils/misc.server";
 import {
   generateTitle,
   genericImagePath,
   getSocialMetas,
   getUrl,
 } from "~/utils/seo";
-import { commonHeaders } from "~/utils/misc.server";
-import { Layout } from "~/components/Layout";
-import ecosystemApps from "~/data/ecosystem.json";
 
 export const headers: HeadersFunction = commonHeaders;
+
+// extract type from ecosystem, remove duplicates
+const extractTypeFromEcosystem = [...new Set(ecosystem.map((app) => app.type))];
 
 export const meta: MetaFunction = ({ parentsData }) => {
   const {
@@ -32,7 +53,7 @@ const Card = ({ app }: { app: App }) => {
   return (
     <a
       className="flex flex-col rounded-lg border-2 border-honey-300 bg-honey-50 px-4 py-3 leading-normal transition-all  hover:border-honey-500 hover:bg-white md:px-9 md:py-8"
-      href={"https://" + (app.gameUrl ? app.gameUrl : app.url)}
+      href={`https://${app.gameUrl ? app.gameUrl : app.url}`}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -40,7 +61,7 @@ const Card = ({ app }: { app: App }) => {
         <img
           className="flex w-[64px] flex-row bg-honey-100"
           src={app.image}
-          alt={app.name + " Logo"}
+          alt={`${app.name} Logo`}
         />
 
         <div className="flex flex-col items-end">
@@ -75,6 +96,16 @@ type App = {
 };
 
 export default function Team() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const type = searchParams.get("type") || "all";
+  const search = searchParams.get("search") || "";
+
+  const filteredEcosystem = (
+    type === "all"
+      ? ecosystem
+      : ecosystem.filter((app) => app.type.toLowerCase() === type.toLowerCase())
+  ).filter((app) => app.name.toLowerCase().includes(search.toLowerCase()));
+
   return (
     <Layout>
       <main>
@@ -98,14 +129,66 @@ export default function Team() {
             </a>
           </div>
         </div>
-        <div className="relative space-y-16 bg-honey-100 py-16 sm:py-24">
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+        <div className="relative max-w-3xl space-y-4 bg-honey-100 py-16 px-8 sm:py-24 sm:px-6 lg:max-w-9xl lg:px-12">
+          <div className="flex items-center justify-end gap-4">
+            <input
+              id="search"
+              name="search"
+              placeholder="Search"
+              value={search}
+              onChange={(e) => {
+                const params = new URLSearchParams(searchParams);
+                params.set("search", e.target.value);
+                setSearchParams(params, {
+                  preventScrollReset: true,
+                });
+              }}
+              className="h-9 w-[250px] rounded-lg border-2 border-honey-700 bg-honey-100 px-3 text-sm font-semibold text-night-800 placeholder:font-normal placeholder:text-night-500 focus-within:border-honey-900 focus-within:outline-none focus-visible:outline-none"
+            />
+            <Select
+              defaultValue={type}
+              onValueChange={(type) => {
+                const params = new URLSearchParams(searchParams);
+                params.set("type", type);
+                setSearchParams(params, {
+                  preventScrollReset: true,
+                });
+              }}
+            >
+              <SelectTrigger className="w-max space-x-1.5 border-honey-500 bg-honey-300 text-night-900">
+                <SelectValue placeholder="Select a type" />
+              </SelectTrigger>
+              <SelectContent
+                align="end"
+                className="border-honey-500 bg-honey-200 p-2 text-new-night-700 shadow-honey-100/10"
+              >
+                <SelectItem key="all" value="all">
+                  All
+                </SelectItem>
+                {extractTypeFromEcosystem.map((type) => {
+                  return (
+                    <SelectItem key={type} value={type.toLowerCase()}>
+                      {type}
+                    </SelectItem>
+                  );
+                })}
+              </SelectContent>
+            </Select>
+          </div>
+
+          {filteredEcosystem.length > 0 ? (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-4 lg:grid-cols-3 xl:grid-cols-4">
-              {ecosystemApps.map((app) => (
+              {filteredEcosystem.map((app) => (
                 <Card key={app.name} app={app} />
               ))}
             </div>
-          </div>
+          ) : (
+            <div className="flex h-full flex-col items-center justify-center">
+              <p className="text-lg font-bold text-new-night-700">
+                No apps found
+              </p>
+            </div>
+          )}
         </div>
       </main>
     </Layout>
