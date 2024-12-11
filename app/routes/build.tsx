@@ -66,8 +66,8 @@ const EcosystemApp = ({
   index: number;
 }) => {
   return (
-    <div key={app.name} className="mx-3 w-16 lg:mx-4">
-      <img src={app.image} alt={`App ${index}`} />
+    <div key={app.name} className="mx-3 w-16 select-none lg:mx-4">
+      <img src={app.image} alt={`App ${index}`} className="rounded-md" />
     </div>
   );
 };
