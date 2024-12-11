@@ -9,7 +9,7 @@ import { CTAButton } from "~/components/Button";
 import { NewCard } from "~/components/Card";
 import { Tweet } from "~/components/Reviews";
 import { NewTreasureStats } from "~/components/TreasureStats";
-import { arbitrumPartners, builderTweets } from "~/const";
+import { ecosystem } from "~/data/ecosystem";
 import LogomarkImg from "@/img/resources/treasure/logomark.png";
 import BgHeroImg from "@/img/bg-hero.jpg";
 import Balancer from "react-wrap-balancer";
@@ -23,8 +23,8 @@ import GamingExperiencesImg from "@/img/illustrations/Gaming_Experiences.webp";
 import GamingExperiencesMobileImg from "@/img/illustrations/Gaming_Experiences-mobile.webp";
 
 // Icons
-import GameBuildersProgramIcon from "@/img/icons/Badge_Diamond.webp";
 import OpenSourceIcon from "@/img/icons/Badge_Open_Source.svg";
+import UsersIcon from "@/img/icons/Users.svg";
 import InfraIcon from "@/img/icons/Infra.svg";
 import InteropIcon from "@/img/icons/Interop.svg";
 import DocIcon from "@/img/icons/Docs.svg";
@@ -58,21 +58,25 @@ export const meta: MetaFunction = ({ parentsData }) => {
 
 export const headers: HeadersFunction = commonHeaders;
 
-const Partner = ({
-  partner,
+const EcosystemApp = ({
+  app,
   index,
 }: {
-  partner: (typeof arbitrumPartners)[number];
+  app: (typeof ecosystem)[number];
   index: number;
 }) => {
   return (
-    <div key={partner} className="mx-3 w-16 lg:mx-4">
-      <img src={partner} alt={`Partner ${index}`} />
+    <div key={app.name} className="mx-3 w-16 select-none lg:mx-4">
+      <img src={app.image} alt={`App ${index}`} className="rounded-md" />
     </div>
   );
 };
 
-const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
+const AppMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
+  const filteredEcosystem = ecosystem.filter(
+    (app) => app.type.toLowerCase() != "game"
+  );
+
   return (
     <div className="relative flex flex-1 overflow-x-hidden [-webkit-mask-image:linear-gradient(to_right,#0000,#000_30%,#000_70%,#0000)]">
       <div
@@ -81,10 +85,10 @@ const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
           to === "left" ? "animate-marquee" : "animate-marquee-left"
         )}
       >
-        {arbitrumPartners
+        {filteredEcosystem
           .sort(() => Math.random() - 0.5)
-          .map((partner, i) => (
-            <Partner partner={partner} key={partner} index={i} />
+          .map((app, i) => (
+            <EcosystemApp app={app} key={app.name} index={i} />
           ))}
       </div>
       {/* Needed for infinity loop */}
@@ -94,8 +98,8 @@ const PartnerMarquee = ({ to = "left" }: { to?: "left" | "right" }) => {
           to === "left" ? "animate-marquee2" : "animate-marquee-left2"
         )}
       >
-        {arbitrumPartners.map((partner, i) => (
-          <Partner partner={partner} key={partner} index={i} />
+        {filteredEcosystem.map((app, i) => (
+          <EcosystemApp app={app} key={app.name} index={i} />
         ))}
       </div>
     </div>
@@ -150,13 +154,15 @@ export default function Build() {
               <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-12">
                 <div className="text-center">
                   <p className="pt-16 text-xl font-bold text-honey-200 sm:pt-24 sm:text-4xl">
-                    Build with Treasure
+                    Build on Treasure
                   </p>
                   <div className="mt-4 text-night-300 sm:text-xl">
                     <p>
                       <Balancer>
-                        Empowering developers to reach their full potential and
-                        bring on-chain games to the masses.
+                        The next generation of games will be onchain and
+                        player-driven.
+                        <br className="hidden lg:inline-block" /> And you're
+                        going to build it.
                       </Balancer>
                     </p>
                   </div>
@@ -165,22 +171,23 @@ export default function Build() {
               <div className="mx-auto mt-10 max-w-md px-6 sm:max-w-3xl lg:max-w-9xl lg:px-12">
                 <div className="grid grid-cols-4 grid-rows-2 gap-1 rounded-xl bg-[#101827]">
                   <a
-                    href="https://treasure.deform.cc/ecosystem-application"
+                    href="https://docs.treasure.lol?utm_source=marketing_site"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative col-span-4 rounded-tl-lg bg-[#131D2E] px-8 py-7 transition-colors duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-3"
                   >
                     <div className="flex flex-col items-start">
                       <img
-                        src={GameBuildersProgramIcon}
+                        src={OpenSourceIcon}
                         className="h-12"
                         alt="Game Partner Icon"
                       />
                       <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                        Join Treasure's Builders Program
+                        Developer Docs
                       </p>
                       <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
-                        Let’s partner to grow together over the long-term
+                        Dive into Treasure's documentation to get started
+                        quickly
                       </p>
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
@@ -193,7 +200,7 @@ export default function Build() {
                   >
                     <div className="flex flex-col items-start">
                       <img
-                        src={OpenSourceIcon}
+                        src={UsersIcon}
                         className="h-12"
                         alt="Open Source Icon"
                       />
@@ -201,13 +208,13 @@ export default function Build() {
                         Open Source
                       </p>
                       <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
-                        Shared code to help you bring your ideas to life
+                        Contribute to the ecosystem and go from 0 to 1
                       </p>
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </a>
                   <a
-                    href="https://go.treasure.lol/litepaper"
+                    href="https://treasurescan.io?utm_source=marketing_site"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative col-span-4 rounded-tr-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-4 lg:col-end-5"
@@ -219,42 +226,46 @@ export default function Build() {
                         alt="Documentation Icon"
                       />
                       <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                        Litepaper
+                        Block Explorer
                       </p>
                       <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
-                        Learn about our vision to unlock a new frontier for
-                        developers
+                        Explore transactions, contracts, tokens, and more on
+                        Treasurescan
                       </p>
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </a>
                   <Link
-                    to="https://portal.treasure.lol//"
+                    to="https://app.treasure.lol/chain/overview?utm_source=marketing_site"
                     target="_blank"
                     rel="noopener noreferrer"
                     prefetch="intent"
                     className="relative col-span-4 rounded-bl-lg bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-1 lg:col-end-2"
                   >
                     <div className="flex flex-col items-start">
-                      <img src={InfraIcon} className="h-12" alt="Chain Icon" />
+                      <img
+                        src={InteropIcon}
+                        className="h-12"
+                        alt="Chain Icon"
+                      />
                       <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
-                        Treasure Chain
+                        Treasure
                       </p>
                       <p className="lg:text-md mt-1.5 text-sm text-night-500 md:text-base md:leading-6 2xl:text-lg">
-                        Explore and build on the Treasure Chain L2
+                        Explore and build on the Treasure L2
                       </p>
                     </div>
                     <ArrowTopRightOnSquareIcon className="absolute top-7 right-8 h-4 w-4 fill-night-600 [&>path]:stroke-night-600 [&>path]:stroke-[1]" />
                   </Link>
                   <Link
-                    to="https://docs.treasure.lol/tdk/introduction"
+                    to="https://docs.treasure.lol/tdk?utm_source=marketing_site"
                     target="_blank"
                     rel="noopener noreferrer"
                     prefetch="intent"
                     className="relative col-span-4 bg-[#131D2E] px-8 py-7 duration-500 hover:bg-[#182438] sm:col-span-2 lg:col-start-2 lg:col-end-4"
                   >
                     <div className="flex flex-col items-start">
-                      <img src={InteropIcon} className="h-12" alt="TDK Icon" />
+                      <img src={InfraIcon} className="h-12" alt="TDK Icon" />
                       <p className="mt-3 text-lg font-bold text-honey-200 sm:text-2xl">
                         Treasure Development Kit
                       </p>
@@ -290,6 +301,36 @@ export default function Build() {
             </div>
           </div>
         </motion.section>
+        <section
+          id="ecosystem"
+          aria-labelledby="ecosystem"
+          className="relative bg-honey-200 py-16 sm:py-24"
+        >
+          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
+            <div className="grid grid-cols-1 rounded-2.5xl border-2 border-new-honey-1100 bg-new-honey-600 p-6 sm:grid-cols-7 sm:p-10">
+              <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
+                <p className="text-2xl font-bold text-new-ruby-900 xl:text-4xl">
+                  Everything you need is on Treasure
+                </p>
+                <p className="text-sm text-night-700 sm:text-base">
+                  The Treasure ecosystem is full of rich apps, developer tools,
+                  and games. And we're just getting started.
+                </p>
+                <div>
+                  <CTAButton as="link" to="/ecosystem">
+                    Explore the Ecosystem
+                  </CTAButton>
+                </div>
+              </div>
+              <div className="col-span-3 flex flex-col justify-evenly space-y-5 rounded-xl md:order-2 lg:space-y-10">
+                <AppMarquee />
+                <AppMarquee to="right" />
+                <AppMarquee />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*
         <NewTreasureStats type="secondary" />
         <section
           id="information"
@@ -497,7 +538,6 @@ export default function Build() {
             </motion.span>
           </motion.div>
         </section>
-        {/*
         <section
           id="powered-by-treasure-games-list"
           aria-labelledby="powered-by-treasure-games-list"
@@ -568,7 +608,6 @@ export default function Build() {
             </div>
           </div>
         </section>
-        */}
         <section
           id="reviews"
           aria-labelledby="reviews-title"
@@ -593,36 +632,6 @@ export default function Build() {
           </div>
         </section>
         <section
-          id="arbitrum-partners"
-          aria-labelledby="arbitrum-partners"
-          className="relative bg-night-900 py-16 sm:py-24"
-        >
-          <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
-            <div className="grid grid-cols-1 rounded-2.5xl border-2 border-[#1D232E] bg-[#131D2E] p-6 sm:grid-cols-7 sm:p-10">
-              <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
-                <p className="text-2xl font-bold text-honey-200 xl:text-4xl">
-                  You’re in good company on Arbitrum
-                </p>
-                <p className="text-sm text-night-500 sm:text-base">
-                  The Arbitrum ecosystem is vast and reaches beyond Treasure.
-                  It’s home to other great dapps, protocols, social platforms
-                  and has everything you need to build.
-                </p>
-                <div>
-                  <CTAButton as="a" href="https://portal.arbitrum.io/">
-                    Explore Arbitrum
-                  </CTAButton>
-                </div>
-              </div>
-              <div className="col-span-3 flex flex-col justify-evenly space-y-5 rounded-xl md:order-2 lg:space-y-10">
-                <PartnerMarquee />
-                <PartnerMarquee to="right" />
-                <PartnerMarquee />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
           id="cta"
           aria-labelledby="cta"
           className="relative bg-honey-200 py-16 sm:py-24"
@@ -632,7 +641,7 @@ export default function Build() {
               <div className="relative flex flex-col justify-between overflow-hidden rounded-2.5xl border-2 border-honey-300 bg-honey-50 bg-[linear-gradient(to_right,#101827ed_30%,#10182790),url('/img/bg-hero.jpg')] bg-cover bg-center bg-no-repeat p-10">
                 <div className="space-y-2.5">
                   <p className="text-2xl font-bold text-honey-100 sm:text-4xl">
-                    Build with Treasure
+                    Build on Treasure
                   </p>
                   <p className="text-sm text-night-100 sm:text-lg">
                     Apply to join Treasure's Builders Program to supercharge
@@ -664,7 +673,7 @@ export default function Build() {
               </NewCard>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </Layout>
   );

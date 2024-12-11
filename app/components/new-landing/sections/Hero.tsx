@@ -19,10 +19,7 @@ const Hero = () => {
           </p>
           <div className="flex gap-4">
             <Button as="a" color="ruby" href={LINKS.APP}>
-              Start Playing
-            </Button>
-            <Button as="a" color="honey" href={LINKS.LITEPAPER}>
-              Read Litepaper
+              Launch App
             </Button>
           </div>
         </div>

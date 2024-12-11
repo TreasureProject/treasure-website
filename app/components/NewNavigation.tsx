@@ -40,29 +40,19 @@ const dropdownItems: DropDownItems[] = [
     label: "About",
     items: [
       {
-        label: "About Us",
-        type: "internal",
-        target: "/about",
+        label: "About Treasure",
+        type: "external",
+        target: LINKS.ABOUT,
       },
       {
         label: "What is MAGIC?",
         type: "external",
         target: LINKS.WHAT_IS_MAGIC,
       },
-      // {
-      //   label: "Infrastructure",
-      //   type: "internal",
-      //   target: "/infrastructure",
-      // },
       {
-        label: "Team",
+        label: "Contributors",
         type: "internal",
         target: "/team",
-      },
-      {
-        label: "Careers",
-        type: "external",
-        target: LINKS.CAREERS,
       },
       {
         label: "Brand Assets",
@@ -72,22 +62,17 @@ const dropdownItems: DropDownItems[] = [
     ],
   },
   {
-    label: "Play",
+    label: "Games",
     target: LINKS.APP,
     type: "external",
-  },
-  {
-    label: "Build",
-    target: "/build",
-    type: "internal",
   },
   {
     label: "Ecosystem",
     items: [
       {
-        label: "Treasure App",
-        type: "external",
-        target: LINKS.APP,
+        label: "Ecosystem Apps",
+        type: "internal",
+        target: "/ecosystem",
       },
       {
         label: "Treasure Market",
@@ -100,11 +85,16 @@ const dropdownItems: DropDownItems[] = [
         target: LINKS.MAGICSWAP,
       },
       {
-        label: "Developer Documentation",
+        label: "Docs",
         type: "external",
         target: LINKS.DOCUMENTATION,
       },
     ],
+  },
+  {
+    label: "Build",
+    target: "/build",
+    type: "internal",
   },
   {
     label: "Community",
@@ -160,7 +150,7 @@ const NewNavigation = () => {
   return (
     <div
       className={twMerge(
-        "fixed top-0 left-1/2 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6",
+        "fixed left-1/2 top-0 z-[999] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6",
         openHamburger && "bg-new-night-1200 lg:bg-transparent",
         !visible && "pointer-events-none opacity-0"
       )}
@@ -180,7 +170,7 @@ const NewNavigation = () => {
                   >
                     {item.label}
                     <ChevronDownIcon className="w-3 transition-transform group-hover:-rotate-180" />
-                    <div className="absolute top-0 left-0 hidden pt-[72px] group-hover:block">
+                    <div className="absolute left-0 top-0 hidden pt-[72px] group-hover:block">
                       <div className="rounded-lg border border-new-night-800 bg-new-night-1000/80 p-2 backdrop-blur-2xl lg:backdrop-blur-lg">
                         {item.items &&
                           item.items.map((item, index) => (
@@ -256,7 +246,7 @@ const NewNavigation = () => {
             </a>
           </div>
           <Button as="a" color="ruby" href={LINKS.APP}>
-            Start Playing
+            Launch App
           </Button>
         </div>
         <button
@@ -311,7 +301,7 @@ const NewNavigation = () => {
                               <ChevronDownIcon className="w-4 text-new-night-400 transition-transform group-data-[state=open]:-rotate-180" />
                             </RA.Trigger>
                           </RA.Header>
-                          <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                          <RA.Content className="space-y-1 overflow-hidden pt-2 data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
                             {item.items.map((item, index) => (
                               <Link
                                 to={item.target}
@@ -344,10 +334,7 @@ const NewNavigation = () => {
             </div>
             <div className="space-y-2 border-t border-white/5 p-6 pb-0 sm:p-8">
               <Button as="a" color="ruby" href={LINKS.APP}>
-                Start Playing{" "}
-              </Button>
-              <Button color="honey" to="/build">
-                Start Building
+                Launch App{" "}
               </Button>
               {/* <Button color="honey">Read Litepaper</Button> */}
               <div className="flex items-center gap-4 pt-2 text-new-night-100">

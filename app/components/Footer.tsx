@@ -63,7 +63,7 @@ export const Footer = () => {
             </Link>
             <Menu as="div" className="relative mt-4 inline-block text-left">
               <div>
-                <Menu.Button className="inline-flex w-full justify-center rounded-md border border-honey-400/50 bg-honey-900 bg-opacity-20 px-4 py-2 text-sm font-medium text-night-800 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:bg-opacity-30 hover:text-night-900 dark:border-night-600 dark:bg-night-900 dark:text-white dark:text-night-200">
+                <Menu.Button className="inline-flex w-full justify-center rounded-md border border-honey-400/50 bg-honey-900 bg-opacity-20 px-4 py-2 text-sm font-medium text-night-800 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:bg-opacity-30 hover:text-night-900 dark:border-night-600 dark:bg-night-900 dark:text-night-200">
                   <LanguageIcon className="h-5 w-5" />
                   <ChevronDownIcon
                     className="ml-2 -mr-1 h-5 w-5"

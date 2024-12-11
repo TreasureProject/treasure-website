@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 
-import BACKGROUND_IMAGE from "~/../public/img/new-landing/bridgeworld/BW_WorldMap_shrouded_blurred_with_mask.webp";
+import BW_LOGO from "~/../public/img/new-landing/bridgeworld/logo-bw.svg";
+import BACKGROUND_IMAGE from "~/../public/img/new-landing/bridgeworld/bg-bw.webp";
 import ISLAND_IMAGE from "~/../public/img/new-landing/bridgeworld/Bridgeworld_Meem_Portal_Island.webp";
 import ROCK_1_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_1.webp";
 import ROCK_2_IMAGE from "~/../public/img/new-landing/bridgeworld/Floating_Rock_2.webp";
@@ -106,16 +107,18 @@ const Bridgeworld = () => {
         <div className="right-0 top-1/2 z-10 space-y-20 pr-20 xl:absolute xl:max-w-lg xl:-translate-y-1/2 xl:pb-48">
           <div className="absolute left-0 top-0 z-10 max-w-[560px] space-y-7 xl:relative">
             <div>
-              <h1 className="text-lg font-bold leading-[105%] text-new-night-100 md:text-2xl">
+              <h1 className="mb-4 text-lg font-bold leading-[105%] text-new-night-100 md:text-2xl">
                 Welcome to
               </h1>
-              <h1 className="text-3xl font-bold leading-[105%] text-new-night-100 md:text-5xl">
-                Bridgeworld
-              </h1>
+              <img
+                src={BW_LOGO}
+                alt="Bridgeworld"
+                className="inline-block h-[96px]"
+              />
             </div>
             <p className="font-medium leading-[150%]">
-              Bridgeworld is the center of the Treasure multiverse that connects
-              our ecosystem’s loved IP together.
+              Bridgeworld is the center of our multiverse that connects the
+              Treasure ecosystem.
             </p>
             <Button
               as="a"
@@ -123,7 +126,7 @@ const Bridgeworld = () => {
               color="ruby"
               href={LINKS.BRIDGEWORLD}
             >
-              Explore Bridgeworld
+              Enter Bridgeworld
             </Button>
           </div>
           <div className="p absolute bottom-0 left-0 z-10 w-full max-w-[560px] space-y-6 xl:relative">
@@ -135,7 +138,7 @@ const Bridgeworld = () => {
               </div>
             </div>
             <p className="font-medium leading-[150%]">
-              $MAGIC flows throughout Treasure to power and connect our gaming
+              MAGIC is the native token of Treasure that powers the entire
               network.
             </p>
             <div className="flex gap-6">
@@ -145,7 +148,7 @@ const Bridgeworld = () => {
                 className="w-max"
                 color="ruby"
               >
-                Get $MAGIC
+                Get MAGIC
               </Button>
               <Button
                 as="a"
@@ -154,7 +157,6 @@ const Bridgeworld = () => {
                 href={LINKS.WHAT_IS_MAGIC}
               >
                 Learn More
-                <ChevronRightIcon className="w-4" />
               </Button>
             </div>
           </div>

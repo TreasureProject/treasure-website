@@ -1,21 +1,5 @@
 import React from "react";
 import { PartnersBottom } from "../misc/Svgs";
-import type { partners } from "~/const";
-
-const Partner = ({ partner }: { partner: (typeof partners)[number] }) => {
-  return (
-    <div
-      key={partner.name}
-      className="max-w-24 mx-2 flex h-24 w-max items-center  justify-center rounded-lg bg-new-ruby-1000 px-7 py-3 sm:mx-3 md:mx-4"
-    >
-      <img
-        src={partner.image}
-        alt={partner.name}
-        className="h-full max-h-14 max-w-[160px] object-contain object-center"
-      />
-    </div>
-  );
-};
 
 const Partners = () => {
   return (

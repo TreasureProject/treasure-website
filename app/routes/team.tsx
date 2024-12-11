@@ -162,7 +162,7 @@ export default function Team() {
   return (
     <Layout>
       <main>
-        <div className="relative bg-honey-200 pt-32 pb-16 sm:pt-48 sm:pb-24">
+        <div className="relative bg-honey-200 pb-16 pt-32 sm:pb-24 sm:pt-48">
           <div className="mx-auto max-w-md px-8 text-center sm:max-w-xl sm:px-6 lg:px-12">
             <Badge name="Team" bgColor="bg-honey-100" />
             <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-ruby-900 sm:text-5xl">
@@ -191,9 +191,6 @@ export default function Team() {
               key={team}
               className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
             >
-              {/* <p className="mb-4 text-center text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-                {team}
-              </p> */}
               <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
                 {members.map((member) => (
                   <TeamCard key={member.name} member={member} />
@@ -201,23 +198,6 @@ export default function Team() {
               </div>
             </div>
           ))}
-          {/* {teams.map((team) => (
-						<div
-							key={team}
-							className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12"
-						>
-							<p className="mb-4 text-left text-2xl font-bold text-night-900 sm:mt-0 sm:text-4xl md:mb-8">
-								{team}
-							</p>
-							<div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-5">
-								{teamMembers
-									.filter((member) => member.team === team)
-									.map((member) => (
-										<TeamCard key={member.name} member={member} />
-									))}
-							</div>
-						</div>
-					))} */}
         </div>
         <div className="relative bg-honey-200 py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">

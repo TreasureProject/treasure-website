@@ -183,14 +183,14 @@ export default function Resources() {
                     <span className="font-bold text-night-100">"NFT"</span>)
                     used in the Platform and applicable Games, and provides
                     information about the applicable fungible token used by the
-                    Platform, including the main token $MAGIC (collectively{" "}
+                    Platform, including the main token MAGIC (collectively{" "}
                     <span className="font-bold text-night-100">“Tokens”</span>).
                     NFTs and Tokens are collectively referred to in these Terms
                     as{" "}
                     <span className="font-bold text-night-100">
                       "Digital Assets"
                     </span>
-                    . More information about the $MAGIC Tokens can be found at{" "}
+                    . More information about the MAGIC Tokens can be found at{" "}
                     <a
                       href="https://docs.treasure.lol/getting-started/what-is-magic"
                       className="text-honey-900 underline"
@@ -487,12 +487,12 @@ export default function Resources() {
                   </h4>
                   <p>
                     You acknowledge and consent to the risk that the price of
-                    any NFT purchased on the Platform and the value of any
-                    $MAGIC in relation to other cryptocurrencies may be
-                    influenced by activity outside of the control of Treasure.
-                    Treasure does not represent, guarantee, or warrant the
-                    value, title, validity, accuracy or fairness of the price of
-                    any Digital Asset available through the Platform.
+                    any NFT purchased on the Platform and the value of any MAGIC
+                    in relation to other cryptocurrencies may be influenced by
+                    activity outside of the control of Treasure. Treasure does
+                    not represent, guarantee, or warrant the value, title,
+                    validity, accuracy or fairness of the price of any Digital
+                    Asset available through the Platform.
                   </p>
                 </div>
 
@@ -717,7 +717,7 @@ export default function Resources() {
                     OUT OF OR RELATED TO THE PLATFORM OR ANY DIGITAL ASSET,
                     INCLUDING, WITHOUT LIMITATION: (I) PARTICIPATION IN OR THE
                     OUTCOME OF A TRANSACTION MADE USING THE PLATFORM, OR (II)
-                    ANY TRANSACTION RELATED TO AN NFT OR $MAGIC (INCLUDING THOSE
+                    ANY TRANSACTION RELATED TO AN NFT OR MAGIC (INCLUDING THOSE
                     UTILIZING A THIRD-PARTY SERVICE).
                   </p>
                   <p>
