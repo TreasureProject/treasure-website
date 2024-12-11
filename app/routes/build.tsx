@@ -309,7 +309,7 @@ export default function Build() {
           <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:max-w-9xl lg:px-12">
             <div className="grid grid-cols-1 rounded-2.5xl border-2 border-new-honey-1100 bg-new-honey-600 p-6 sm:grid-cols-7 sm:p-10">
               <div className="order-last col-span-4 mt-4 flex flex-col justify-center space-y-4 px-4 sm:mt-0 sm:space-y-6 sm:px-14 xl:space-y-8 xl:px-20">
-                <p className="text-2xl font-bold text-new-ruby-800 xl:text-4xl">
+                <p className="text-2xl font-bold text-new-ruby-900 xl:text-4xl">
                   Everything you need is on Treasure
                 </p>
                 <p className="text-sm text-night-700 sm:text-base">
