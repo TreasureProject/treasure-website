@@ -169,6 +169,15 @@ export const ecosystem = [
     image: "/img/ecosystem/rainbow.webp",
   },
   {
+    name: "Realms of Alurya",
+    type: "Game",
+    description:
+      "Realms of Alurya is an action RPG set in a rich, diverse fantasy world. Explore diverse biomes, conquer dungeons, and undertake great adventures against powerful monsters to collect NFTs.",
+    url: "realmsofalurya.com",
+    gameUrl: "app.treasure.lol/games/realms-of-alurya",
+    image: "/img/ecosystem/realms-of-alurya.webp",
+  },
+  {
     name: "Safe",
     type: "Wallet",
     description:
@@ -201,15 +210,6 @@ export const ecosystem = [
     url: "smolbound.com",
     gameUrl: "app.treasure.lol/games/smolbound",
     image: "/img/ecosystem/smolbound.webp",
-  },
-  {
-    name: "Realms of Alurya",
-    type: "Game",
-    description:
-      "Realms of Alurya is an action RPG set in a rich, diverse fantasy world. Explore diverse biomes, conquer dungeons, and undertake great adventures against powerful monsters to collect NFTs.",
-    url: "realmsofalurya.com",
-    gameUrl: "app.treasure.lol/games/realms-of-alurya",
-    image: "/img/ecosystem/realms-of-alurya.webp",
   },
   {
     name: "thirdweb",
