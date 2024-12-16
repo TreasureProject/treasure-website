@@ -203,13 +203,13 @@ export const ecosystem = [
     image: "/img/ecosystem/smolbound.webp",
   },
   {
-    name: "Synergy Land",
+    name: "Realms of Alurya",
     type: "Game",
     description:
-      "Synergy Land is an Action RPG set in an explorable fantasy world. Explore dungeons and undertake great adventures against powerful creatures to collect unique NFTs.",
-    url: "synergyland.live",
-    gameUrl: "app.treasure.lol/games/synergy-land",
-    image: "/img/ecosystem/synergy-land.webp",
+      "Realms of Alurya is an action RPG set in a rich, diverse fantasy world. Explore diverse biomes, conquer dungeons, and undertake great adventures against powerful monsters to collect NFTs.",
+    url: "realmsofalurya.com",
+    gameUrl: "app.treasure.lol/games/realms-of-alurya",
+    image: "/img/ecosystem/realms-of-alurya.webp",
   },
   {
     name: "thirdweb",
