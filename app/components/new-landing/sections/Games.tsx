@@ -1,56 +1,56 @@
-import { useEffect, useRef, useState } from "react";
 import { Link } from "@remix-run/react";
+import { useEffect, useRef, useState } from "react";
+import { Keyboard } from "swiper/modules";
 import type { SwiperClass } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard } from "swiper/modules";
 
-import BITMATES_COVER from "public/img/new-landing/game-covers/Bitmates_Game_Cover.webp";
 import BITMATES_BACKGROUND from "public/img/new-landing/game-backgrounds/Bitmates_Game_Background.webp";
+import BITMATES_COVER from "public/img/new-landing/game-covers/Bitmates_Game_Cover.webp";
 
-import BRIDGEWORLD_COVER from "public/img/new-landing/game-covers/Bridgeworld_Game_Cover.webp";
 import BRIDGEWORLD_BACKGROUND from "public/img/new-landing/game-backgrounds/Bridgeworld_Game_Background.webp";
+import BRIDGEWORLD_COVER from "public/img/new-landing/game-covers/Bridgeworld_Game_Cover.webp";
 
-import CALAMITY_COVER from "public/img/new-landing/game-covers/Calamity_Game_Cover.webp";
 import CALAMITY_BACKGROUND from "public/img/new-landing/game-backgrounds/Calamity_Game_Background.webp";
+import CALAMITY_COVER from "public/img/new-landing/game-covers/Calamity_Game_Cover.webp";
 
-import DREAMRUNNER_COVER from "public/img/new-landing/game-covers/Dreamrunner_Game_Cover.webp";
 import DREAMRUNNER_BACKGROUND from "public/img/new-landing/game-backgrounds/Dreamrunner_Game_Background.webp";
+import DREAMRUNNER_COVER from "public/img/new-landing/game-covers/Dreamrunner_Game_Cover.webp";
 
-import KOTE_COVER from "public/img/new-landing/game-covers/KOTE_Game_Cover.webp";
 import KOTE_BACKGROUND from "public/img/new-landing/game-backgrounds/KOTE_Game_Background.webp";
+import KOTE_COVER from "public/img/new-landing/game-covers/KOTE_Game_Cover.webp";
 
-import REALM_COVER from "public/img/new-landing/game-covers/Realm_Game_Cover.webp";
 import REALM_BACKGROUND from "public/img/new-landing/game-backgrounds/Realm_Game_Background.webp";
+import REALM_COVER from "public/img/new-landing/game-covers/Realm_Game_Cover.webp";
 
-import SMITHONIA_CARDS_COVER from "public/img/new-landing/game-covers/Smithonia_Game_Cover.webp";
 import SMITHONIA_CARDS_BACKGROUND from "public/img/new-landing/game-backgrounds/Smithonia_Game_Background.webp";
+import SMITHONIA_CARDS_COVER from "public/img/new-landing/game-covers/Smithonia_Game_Cover.webp";
 
-import SMOLBOUND_CARDS_COVER from "public/img/new-landing/game-covers/Smolbound_Game_Cover.webp";
 import SMOLBOUND_CARDS_BACKGROUND from "public/img/new-landing/game-backgrounds/Smolbound_Game_Background.webp";
+import SMOLBOUND_CARDS_COVER from "public/img/new-landing/game-covers/Smolbound_Game_Cover.webp";
 
-import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Synergy_Land_Cover.webp";
 import SYNERGY_LAND_BACKGROUND from "public/img/new-landing/game-backgrounds/Synergy_Land_Game_Background.webp";
+import SYNERGY_LAND_COVER from "public/img/new-landing/game-covers/Realms_of_Alurya_Game_Cover.webp";
 
-import THE_BEACON_COVER from "public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
 import THE_BEACON_BACKGROUND from "public/img/new-landing/game-backgrounds/The_Beacon_Game_Background.webp";
+import THE_BEACON_COVER from "public/img/new-landing/game-covers/The_Beacon_Game_Cover.webp";
 
-import UNCHAINED_COVER from "public/img/new-landing/game-covers/Unchained_Game_Cover.webp";
 import UNCHAINED_BACKGROUND from "public/img/new-landing/game-backgrounds/Unchained_Game_Background.webp";
+import UNCHAINED_COVER from "public/img/new-landing/game-covers/Unchained_Game_Cover.webp";
 
-import VARIANCE_COVER from "public/img/new-landing/game-covers/Variance_Game_Cover.webp";
 import VARIANCE_BACKGROUND from "public/img/new-landing/game-backgrounds/Variance_Game_Background.webp";
+import VARIANCE_COVER from "public/img/new-landing/game-covers/Variance_Game_Cover.webp";
 
-import WANDERERS_COVER from "public/img/new-landing/game-covers/Wanderers_Game_Cover.webp";
 import WANDERERS_BACKGROUND from "public/img/new-landing/game-backgrounds/Wanderers_Game_Background.webp";
+import WANDERERS_COVER from "public/img/new-landing/game-covers/Wanderers_Game_Cover.webp";
 
-import ZEEVERSE_COVER from "public/img/new-landing/game-covers/Zeeverse_Game_Cover.webp";
 import ZEEVERSE_BACKGROUND from "public/img/new-landing/game-backgrounds/Zeeverse_Game_Background.webp";
+import ZEEVERSE_COVER from "public/img/new-landing/game-covers/Zeeverse_Game_Cover.webp";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { ChevronRightIcon } from "../misc/Icons";
 import { GamesGrid } from "../misc/Svgs";
 import { LINKS } from "../misc/const";
-import { AnimatePresence, motion } from "framer-motion";
 
 const games = [
   {
@@ -126,10 +126,10 @@ const games = [
     link: "https://app.treasure.lol/games/unchained",
   },
   {
-    name: "Synergy Land",
+    name: "Realms of Alurya",
     cover: SYNERGY_LAND_COVER,
     background: SYNERGY_LAND_BACKGROUND,
-    link: "https://app.treasure.lol/games/synergy-land",
+    link: "https://app.treasure.lol/games/realms-of-alurya",
   },
 ] as const;
 
