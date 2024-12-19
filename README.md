@@ -7,7 +7,7 @@ If you're a builder who wants to add or update your project on the [Treasure Eco
 2. Create a new branch for your changes.
 3. Update the `app/data/ecosystem.ts` with your project information. All fields are required. Each entry should follow this format:
 
-    ```json
+    ```ts
     {
         name: "The Beacon",
         type: "Game",
