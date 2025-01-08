@@ -62,7 +62,7 @@ const FooterLinks = [
       {
         title: "About",
         url: "/about",
-        external: false,
+        external: true,
       },
       {
         title: "Brand Assets",
